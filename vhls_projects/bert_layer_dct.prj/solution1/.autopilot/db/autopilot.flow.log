@@ -1,0 +1,1190 @@
+INFO-FLOW: Workspace /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1 opened at Thu Jul 20 07:31:47 EDT 2023
+Execute     set_part xc7z020clg484-1 
+Execute       ap_part_info -name xc7z020clg484-1 -data single -quiet 
+Command       ap_part_info done; 2.47 sec.
+Execute       ap_part_info -name xc7z020clg484-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.19 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.77 sec.
+Execute     create_clock -period 10 
+Execute       config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling kernel.cpp as C++
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         is_encrypted kernel.cpp 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "kernel.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp" 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E kernel.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp
+Command         clang done; 1.61 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 4.27 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp"  -o "/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/useless.bc
+Command         clang done; 3.68 sec.
+INFO-FLOW: Done: GCC PP time: 9.6 seconds per iteration
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp std=gnu++98 -directive=/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 3.66 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp std=gnu++98 -directive=/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 3.69 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.kernel.pp.0.cpp.diag.yml /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.kernel.pp.0.cpp.out.log 2> /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.kernel.pp.0.cpp.err.log 
+Command         ap_eval done; 3.89 sec.
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp std=gnu++98 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/tidy-3.1.kernel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/tidy-3.1.kernel.pp.0.cpp.out.log 2> /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/tidy-3.1.kernel.pp.0.cpp.err.log 
+Command           ap_eval done; 7.13 sec.
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.kernel.pp.0.cpp.out.log 2> /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.kernel.pp.0.cpp.err.log 
+Command           ap_eval done; 2.9 sec.
+Command         tidy_31 done; 10.59 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 18.2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 5.71 sec.
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.bc" 
+INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.bc
+Command         clang done; 3.86 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.g.bc -hls-opt -except-internalize top -L/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g 
+Command         llvm-ld done; 3.28 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1060.680 ; gain = 530.188 ; free physical = 265765 ; free virtual = 362784
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1060.680 ; gain = 530.188 ; free physical = 265765 ; free virtual = 362784
+Execute         get_config_sdx -target 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.pp.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.pp.0.bc -f 
+Command           transform done; 0.87 sec.
+Execute           llvm-ld /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/lib -lfloatconversion -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.0 
+Command           llvm-ld done; 2.86 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top top -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.0.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 16.25 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1316.680 ; gain = 786.188 ; free physical = 265483 ; free virtual = 362548
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.1.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 39, 41>' into 'pow_reduce::pow_traits<float>::log_range_reduction<39>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:164) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 41, 44>' into 'pow_reduce::pow_traits<float>::log_range_reduction<39>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:167) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 44, 39>' into 'pow_reduce::pow_traits<float>::log_range_reduction<39>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:170) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:334) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<float>' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:373) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<float>' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:375) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<float>::log_range_reduction<39>' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<float>::exp_Z1P_m_1' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:641) automatically.
+INFO: [XFORM 203-602] Inlining function 'powf' into 'std::pow' (/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:349) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'generic_copysign<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_copysign<double>' into 'generic_fabs<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_fabs.h:13) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'generic_nan<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_nan.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:209) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:210) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:219) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:237) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp_traits<double>::exp_Z1P_m_1' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:322) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_fabs<double>' into 'explog_based::generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_nan<double>' into 'explog_based::generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::expm1' into 'explog_based::generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:90) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::exp' into 'top' (kernel.cpp:189) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::pow' into 'top' (kernel.cpp:401) automatically.
+INFO: [XFORM 203-602] Inlining function 'tanh' into 'top' (kernel.cpp:407) automatically.
+Command           transform done; 20.61 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] kernel.cpp:188: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command           transform done; 0.69 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 1325.133 ; gain = 794.641 ; free physical = 265353 ; free virtual = 362434
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.g.1.bc to /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.1.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 39, 41>' into 'pow_reduce::pow_traits<float>::log_range_reduction<39>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:164) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 41, 44>' into 'pow_reduce::pow_traits<float>::log_range_reduction<39>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:167) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 44, 39>' into 'pow_reduce::pow_traits<float>::log_range_reduction<39>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:170) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:334) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<float>' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:373) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<float>' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:375) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<float>::log_range_reduction<39>' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<float>::exp_Z1P_m_1' into 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:641) automatically.
+INFO: [XFORM 203-602] Inlining function 'powf' into 'std::pow' (/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:349) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'generic_copysign<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_copysign<double>' into 'generic_fabs<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_fabs.h:13) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'generic_nan<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_nan.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:209) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:210) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:219) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:237) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp_traits<double>::exp_Z1P_m_1' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:322) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_fabs<double>' into 'explog_based::generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_nan<double>' into 'explog_based::generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::expm1' into 'explog_based::generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:90) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::exp' into 'top' (kernel.cpp:189) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::pow' into 'top' (kernel.cpp:401) automatically.
+INFO: [XFORM 203-602] Inlining function 'tanh' into 'top' (kernel.cpp:407) automatically.
+Command           transform done; 22.65 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:186:50) to (kernel.cpp:186:42) in function 'top'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:211:50) to (kernel.cpp:211:42) in function 'top'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:283:53) to (kernel.cpp:283:44) in function 'top'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:335:53) to (kernel.cpp:335:44) in function 'top'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:350:53) to (kernel.cpp:350:44) in function 'top'... converting 19 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:393:54) to (kernel.cpp:393:45) in function 'top'... converting 37 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (kernel.cpp:447:53) to (kernel.cpp:447:44) in function 'top'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:320:19) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:690:3) in function 'pow_reduce::pow_generic<float>'... converting 24 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:108:8) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:114:3) in function 'explog_based::generic_tanh<double>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:83:10) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_double.cpp:9:11) in function 'explog_based::generic_tanh<double>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:185:19) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:368:3) in function 'exp_reduce_::exp_generic<double>'... converting 12 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:320)...3 expression(s) balanced.
+Command           transform done; 1.62 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:48 ; elapsed = 00:01:54 . Memory (MB): peak = 1540.684 ; gain = 1010.191 ; free physical = 265405 ; free virtual = 362512
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.2.bc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'pow_reduce::pow_generic<float>' to 'pow_generic<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:320)
+WARNING: [XFORM 203-631] Renaming function 'explog_based::generic_tanh<double>' to 'generic_tanh<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:57)
+WARNING: [XFORM 203-631] Renaming function 'exp_reduce_::exp_generic<double>' to 'exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:185)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_Q.V' (kernel.cpp:63:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_K.V' (kernel.cpp:93:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_V.V' (kernel.cpp:123:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_context.V' (kernel.cpp:130:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_Q_i.V' (kernel.cpp:138:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_K_i.V' (kernel.cpp:145:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_V_i.V' (kernel.cpp:152:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_attention.V' (kernel.cpp:181:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_attn_exp' (kernel.cpp:190:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_attn_sum' (kernel.cpp:207:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_attn_sfm.V' (kernel.cpp:216:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_context_i.V' (kernel.cpp:241:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_sf_context.V' (kernel.cpp:247:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_ds_outp.V' (kernel.cpp:278:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_res_outp' (kernel.cpp:290:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_ln_mean' (kernel.cpp:309:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_ln_var' (kernel.cpp:331:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_ln_outp.V' (kernel.cpp:346:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'attn_ln_outp.V' (kernel.cpp:358:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'ffn_ds1_outp.V' (kernel.cpp:388:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'ffn_gelu_outp.V' (kernel.cpp:412:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'ffn_ds2_outp.V' (kernel.cpp:442:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'ffn_res_outp' (kernel.cpp:454:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'ffn_ln_mean' (kernel.cpp:473:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'ffn_ln_var' (kernel.cpp:495:5)
+Command           transform done; 22.9 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:10 ; elapsed = 00:02:17 . Memory (MB): peak = 1549.117 ; gain = 1018.625 ; free physical = 265234 ; free virtual = 362349
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 88.62 sec.
+Command       elaborate done; 133.37 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'top' ...
+Execute         ap_set_top_model top 
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<float>' to 'pow_generic_float_s'.
+WARNING: [SYN 201-103] Legalizing function name 'exp_generic<double>' to 'exp_generic_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'generic_tanh<double>' to 'generic_tanh_double_s'.
+Execute         get_model_list top -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model top 
+Execute         preproc_iomode -model generic_tanh<double> 
+Execute         preproc_iomode -model exp_generic<double> 
+Execute         preproc_iomode -model pow_generic<float> 
+Execute         get_model_list top -filter all-wo-channel 
+INFO-FLOW: Model list for configure: pow_generic<float> exp_generic<double> generic_tanh<double> top
+INFO-FLOW: Configuring Module : pow_generic<float> ...
+Execute         set_default_model pow_generic<float> 
+Execute         apply_spec_resource_limit pow_generic<float> 
+INFO-FLOW: Configuring Module : exp_generic<double> ...
+Execute         set_default_model exp_generic<double> 
+Execute         apply_spec_resource_limit exp_generic<double> 
+INFO-FLOW: Configuring Module : generic_tanh<double> ...
+Execute         set_default_model generic_tanh<double> 
+Execute         apply_spec_resource_limit generic_tanh<double> 
+INFO-FLOW: Configuring Module : top ...
+Execute         set_default_model top 
+Execute         apply_spec_resource_limit top 
+INFO-FLOW: Model list for preprocess: pow_generic<float> exp_generic<double> generic_tanh<double> top
+INFO-FLOW: Preprocessing Module: pow_generic<float> ...
+Execute         set_default_model pow_generic<float> 
+Execute         cdfg_preprocess -model pow_generic<float> 
+Execute         rtl_gen_preprocess pow_generic<float> 
+INFO-FLOW: Preprocessing Module: exp_generic<double> ...
+Execute         set_default_model exp_generic<double> 
+Execute         cdfg_preprocess -model exp_generic<double> 
+Execute         rtl_gen_preprocess exp_generic<double> 
+INFO-FLOW: Preprocessing Module: generic_tanh<double> ...
+Execute         set_default_model generic_tanh<double> 
+Execute         cdfg_preprocess -model generic_tanh<double> 
+Execute         rtl_gen_preprocess generic_tanh<double> 
+INFO-FLOW: Preprocessing Module: top ...
+Execute         set_default_model top 
+Execute         cdfg_preprocess -model top 
+Execute         rtl_gen_preprocess top 
+INFO-FLOW: Model list for synthesis: pow_generic<float> exp_generic<double> generic_tanh<double> top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pow_generic<float> 
+Execute         schedule -model pow_generic<float> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<float>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 23.
+WARNING: [SCHED 204-21] Estimated clock period (9.38625ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'pow_generic_float_s' consists of the following:
+	'mul' operation of DSP[159] ('r.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [156]  (3.36 ns)
+	'add' operation of DSP[159] ('ret.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [159]  (3.02 ns)
+	'icmp' operation ('icmp_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [163]  (2.32 ns)
+	'select' operation ('select_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [165]  (0 ns)
+	'select' operation ('r_exp.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [166]  (0.687 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.28 sec.
+INFO: [HLS 200-111]  Elapsed time: 137.15 seconds; current allocated memory: 658.586 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.verbose.sched.rpt 
+Command         syn_report done; 0.11 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.sched.adb -f 
+Command         db_write done; 0.11 sec.
+INFO-FLOW: Finish scheduling pow_generic<float>.
+Execute         set_default_model pow_generic<float> 
+Execute         bind -model pow_generic<float> 
+BIND OPTION: model=pow_generic<float>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 659.635 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.verbose.bind.rpt 
+Command         syn_report done; 0.23 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.bind.adb -f 
+Command         db_write done; 0.11 sec.
+INFO-FLOW: Finish binding pow_generic<float>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'exp_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model exp_generic<double> 
+Execute         schedule -model exp_generic<double> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'exp_generic<double>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 20.
+WARNING: [SCHED 204-21] Estimated clock period (9.514ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'exp_generic_double_s' consists of the following:
+	'mul' operation of DSP[53] ('r.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [50]  (3.36 ns)
+	'add' operation of DSP[53] ('ret.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [53]  (3.02 ns)
+	'icmp' operation ('icmp_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [57]  (2.43 ns)
+	'select' operation ('select_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [59]  (0 ns)
+	'select' operation ('r_exp.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [60]  (0.7 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.23 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.59 seconds; current allocated memory: 660.338 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.verbose.sched.rpt 
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.sched.adb -f 
+INFO-FLOW: Finish scheduling exp_generic<double>.
+Execute         set_default_model exp_generic<double> 
+Execute         bind -model exp_generic<double> 
+BIND OPTION: model=exp_generic<double>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 661.085 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.verbose.bind.rpt 
+Command         syn_report done; 0.16 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.bind.adb -f 
+INFO-FLOW: Finish binding exp_generic<double>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_tanh_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model generic_tanh<double> 
+Execute         schedule -model generic_tanh<double> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 661.619 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.verbose.sched.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.sched.adb -f 
+INFO-FLOW: Finish scheduling generic_tanh<double>.
+Execute         set_default_model generic_tanh<double> 
+Execute         bind -model generic_tanh<double> 
+BIND OPTION: model=generic_tanh<double>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 662.244 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.verbose.bind.rpt 
+Command         syn_report done; 0.29 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.bind.adb -f 
+INFO-FLOW: Finish binding generic_tanh<double>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model top 
+Execute         schedule -model top 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 1.06 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.45 seconds; current allocated memory: 667.313 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.verbose.sched.rpt 
+Command         syn_report done; 1.35 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.sched.adb -f 
+Command         db_write done; 1.02 sec.
+INFO-FLOW: Finish scheduling top.
+Execute         set_default_model top 
+Execute         bind -model top 
+BIND OPTION: model=top
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.91 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.28 seconds; current allocated memory: 675.825 MB.
+Execute         syn_report -verbosereport -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.verbose.bind.rpt 
+Command         syn_report done; 2.14 sec.
+Execute         db_write -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.bind.adb -f 
+Command         db_write done; 1 sec.
+INFO-FLOW: Finish binding top.
+Execute         get_model_list top -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess pow_generic<float> 
+Execute         rtl_gen_preprocess exp_generic<double> 
+Execute         rtl_gen_preprocess generic_tanh<double> 
+Execute         rtl_gen_preprocess top 
+INFO-FLOW: Model list for RTL generation: pow_generic<float> exp_generic<double> generic_tanh<double> top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model pow_generic<float> -vendor xilinx -mg_file /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo_7' to 'pow_generic_floatbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo_6' to 'pow_generic_floatcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo_9' to 'pow_generic_floatdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo_10' to 'pow_generic_floateOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo_8' to 'pow_generic_floatfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo_11' to 'pow_generic_floatg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_float_s_pow_reduce_anonymo' to 'pow_generic_floathbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_41ns_6ns_47_2_1' to 'top_mul_41ns_6ns_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_44ns_6ns_50_3_1' to 'top_mul_44ns_6ns_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_45ns_9s_52_2_1' to 'top_mul_45ns_9s_5kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_25ns_43s_67_2_1' to 'top_mul_25ns_43s_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_26ns_43s_67_2_1' to 'top_mul_26ns_43s_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_mul_25s_6ns_25_1_1' to 'top_mul_mul_25s_6ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mac_muladd_13ns_13s_16s_25_1_1' to 'top_mac_muladd_13ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_mul_18ns_18ns_36_1_1' to 'top_mul_mul_18ns_pcA' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_13ocq': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_25ns_43s_lbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_26ns_43s_mb6': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_41ns_6ns_ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_44ns_6ns_jbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_45ns_9s_5kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_mul_18ns_pcA': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_mul_25s_6ncg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_float_s'.
+Command         create_rtl_model done; 0.23 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.4 seconds; current allocated memory: 678.922 MB.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pow_generic<float> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/systemc/pow_generic_float_s -synmodules pow_generic<float> exp_generic<double> generic_tanh<double> top 
+Execute         gen_rtl pow_generic<float> -style xilinx -f -lang vhdl -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/vhdl/pow_generic_float_s 
+Execute         gen_rtl pow_generic<float> -style xilinx -f -lang vlog -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/verilog/pow_generic_float_s 
+Execute         syn_report -csynth -model pow_generic<float> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/pow_generic_float_s_csynth.rpt 
+Execute         syn_report -rtlxml -model pow_generic<float> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/pow_generic_float_s_csynth.xml 
+Execute         syn_report -verbosereport -model pow_generic<float> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.verbose.rpt 
+Command         syn_report done; 0.28 sec.
+Execute         db_write -model pow_generic<float> -f -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.adb 
+Command         db_write done; 0.23 sec.
+Execute         gen_tb_info pow_generic<float> -p /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'exp_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model exp_generic<double> -vendor xilinx -mg_file /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_exp_Z1_array_s' to 'exp_generic_doublqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_f_Z3_array_V' to 'exp_generic_doublrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_f_Z2_array_V' to 'exp_generic_doublsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_72ns_13s_84_5_1' to 'top_mul_72ns_13s_tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_36ns_43ns_79_2_1' to 'top_mul_36ns_43nsudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_44ns_49ns_93_2_1' to 'top_mul_44ns_49nsvdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mul_50ns_50ns_100_2_1' to 'top_mul_50ns_50nswdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_mac_muladd_16ns_16s_19s_31_1_1' to 'top_mac_muladd_16xdS' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_16xdS': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_36ns_43nsudo': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_44ns_49nsvdy': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_50ns_50nswdI': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_72ns_13s_tde': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'exp_generic_double_s'.
+Command         create_rtl_model done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.93 seconds; current allocated memory: 684.477 MB.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         gen_rtl exp_generic<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/systemc/exp_generic_double_s -synmodules pow_generic<float> exp_generic<double> generic_tanh<double> top 
+Execute         gen_rtl exp_generic<double> -style xilinx -f -lang vhdl -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/vhdl/exp_generic_double_s 
+Execute         gen_rtl exp_generic<double> -style xilinx -f -lang vlog -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/verilog/exp_generic_double_s 
+Execute         syn_report -csynth -model exp_generic<double> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/exp_generic_double_s_csynth.rpt 
+Execute         syn_report -rtlxml -model exp_generic<double> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/exp_generic_double_s_csynth.xml 
+Execute         syn_report -verbosereport -model exp_generic<double> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.verbose.rpt 
+Command         syn_report done; 0.2 sec.
+Execute         db_write -model exp_generic<double> -f -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.adb 
+Command         db_write done; 0.23 sec.
+Execute         gen_tb_info exp_generic<double> -p /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_tanh_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model generic_tanh<double> -vendor xilinx -mg_file /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'top_dadddsub_64ns_64ns_64_5_full_dsp_1' to 'top_dadddsub_64nsyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_dmul_64ns_64ns_64_6_max_dsp_1' to 'top_dmul_64ns_64nzec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_ddiv_64ns_64ns_64_31_1' to 'top_ddiv_64ns_64nAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_dcmp_64ns_64ns_1_2_1' to 'top_dcmp_64ns_64nBew' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_dadddsub_64nsyd2': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_dcmp_64ns_64nBew': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_ddiv_64ns_64nAem': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_dmul_64ns_64nzec': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_tanh_double_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.72 seconds; current allocated memory: 688.618 MB.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         gen_rtl generic_tanh<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/systemc/generic_tanh_double_s -synmodules pow_generic<float> exp_generic<double> generic_tanh<double> top 
+Execute         gen_rtl generic_tanh<double> -style xilinx -f -lang vhdl -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/vhdl/generic_tanh_double_s 
+Execute         gen_rtl generic_tanh<double> -style xilinx -f -lang vlog -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/verilog/generic_tanh_double_s 
+Execute         syn_report -csynth -model generic_tanh<double> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/generic_tanh_double_s_csynth.rpt 
+Execute         syn_report -rtlxml -model generic_tanh<double> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/generic_tanh_double_s_csynth.xml 
+Execute         syn_report -verbosereport -model generic_tanh<double> -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.verbose.rpt 
+Command         syn_report done; 0.29 sec.
+Execute         db_write -model generic_tanh<double> -f -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.adb 
+Command         db_write done; 0.23 sec.
+Execute         gen_tb_info generic_tanh<double> -p /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model top -vendor xilinx -mg_file /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v1_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v2_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v3_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v4_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v5_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v6_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v7_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v8_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v9_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v10_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v11_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v12_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'top_attn_sf_context_V' to 'top_attn_sf_conteCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_attn_sf_attention_V' to 'top_attn_sf_attenDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_attn_sf_attn_exp' to 'top_attn_sf_attn_Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_attn_sf_attn_sum' to 'top_attn_sf_attn_Ffa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_attn_sf_attn_sfm_V' to 'top_attn_sf_attn_Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_attn_sf_context_i_V' to 'top_attn_sf_conteHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'top_faddfsub_32nsIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_fmul_32ns_32ns_32_4_max_dsp_1' to 'top_fmul_32ns_32nJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_fdiv_32ns_32ns_32_16_1' to 'top_fdiv_32ns_32nKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_fptrunc_64ns_32_2_1' to 'top_fptrunc_64ns_Lf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_fpext_32ns_64_2_1' to 'top_fpext_32ns_64Mgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_fexp_32ns_32ns_32_9_full_dsp_1' to 'top_fexp_32ns_32nNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_dadd_64ns_64ns_64_5_full_dsp_1' to 'top_dadd_64ns_64nOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_dsqrt_64ns_64ns_64_31_1' to 'top_dsqrt_64ns_64PgM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_dadd_64ns_64nOgC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_ddiv_64ns_64nAem': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_dmul_64ns_64nzec': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_dsqrt_64ns_64PgM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_faddfsub_32nsIfE': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_fdiv_32ns_32nKfY': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_fexp_32ns_32nNgs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_fmul_32ns_32nJfO': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_fpext_32ns_64Mgi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_fptrunc_64ns_Lf8': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top'.
+Command         create_rtl_model done; 0.97 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.61 seconds; current allocated memory: 702.371 MB.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         gen_rtl top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/systemc/top -synmodules pow_generic<float> exp_generic<double> generic_tanh<double> top 
+Execute         gen_rtl top -istop -style xilinx -f -lang vhdl -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/vhdl/top 
+Command         gen_rtl done; 0.52 sec.
+Execute         gen_rtl top -istop -style xilinx -f -lang vlog -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/verilog/top 
+Command         gen_rtl done; 0.26 sec.
+Execute         syn_report -csynth -model top -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/top_csynth.rpt 
+Command         syn_report done; 0.26 sec.
+Execute         syn_report -rtlxml -model top -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/syn/report/top_csynth.xml 
+Command         syn_report done; 0.24 sec.
+Execute         syn_report -verbosereport -model top -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.verbose.rpt 
+Command         syn_report done; 2.4 sec.
+Execute         db_write -model top -f -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.adb 
+Command         db_write done; 1.9 sec.
+Execute         gen_tb_info top -p /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top 
+Execute         export_constraint_db -f -tool general -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.constraint.tcl 
+Execute         syn_report -designview -model top -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.design.xml 
+Command         syn_report done; 0.68 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model top -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model top -o /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks top 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain top 
+INFO-FLOW: Model list for RTL component generation: pow_generic<float> exp_generic<double> generic_tanh<double> top
+INFO-FLOW: Handling components in module [pow_generic_float_s] ... 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.compgen.tcl 
+INFO-FLOW: Found component top_mul_41ns_6ns_ibs.
+INFO-FLOW: Append model top_mul_41ns_6ns_ibs
+INFO-FLOW: Found component top_mul_44ns_6ns_jbC.
+INFO-FLOW: Append model top_mul_44ns_6ns_jbC
+INFO-FLOW: Found component top_mul_45ns_9s_5kbM.
+INFO-FLOW: Append model top_mul_45ns_9s_5kbM
+INFO-FLOW: Found component top_mul_25ns_43s_lbW.
+INFO-FLOW: Append model top_mul_25ns_43s_lbW
+INFO-FLOW: Found component top_mul_26ns_43s_mb6.
+INFO-FLOW: Append model top_mul_26ns_43s_mb6
+INFO-FLOW: Found component top_mul_mul_25s_6ncg.
+INFO-FLOW: Append model top_mul_mul_25s_6ncg
+INFO-FLOW: Found component top_mac_muladd_13ocq.
+INFO-FLOW: Append model top_mac_muladd_13ocq
+INFO-FLOW: Found component top_mul_mul_18ns_pcA.
+INFO-FLOW: Append model top_mul_mul_18ns_pcA
+INFO-FLOW: Found component pow_generic_floatbkb.
+INFO-FLOW: Append model pow_generic_floatbkb
+INFO-FLOW: Found component pow_generic_floatcud.
+INFO-FLOW: Append model pow_generic_floatcud
+INFO-FLOW: Found component pow_generic_floatdEe.
+INFO-FLOW: Append model pow_generic_floatdEe
+INFO-FLOW: Found component pow_generic_floateOg.
+INFO-FLOW: Append model pow_generic_floateOg
+INFO-FLOW: Found component pow_generic_floatfYi.
+INFO-FLOW: Append model pow_generic_floatfYi
+INFO-FLOW: Found component pow_generic_floatg8j.
+INFO-FLOW: Append model pow_generic_floatg8j
+INFO-FLOW: Found component pow_generic_floathbi.
+INFO-FLOW: Append model pow_generic_floathbi
+INFO-FLOW: Handling components in module [exp_generic_double_s] ... 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.compgen.tcl 
+INFO-FLOW: Found component top_mul_72ns_13s_tde.
+INFO-FLOW: Append model top_mul_72ns_13s_tde
+INFO-FLOW: Found component top_mul_36ns_43nsudo.
+INFO-FLOW: Append model top_mul_36ns_43nsudo
+INFO-FLOW: Found component top_mul_44ns_49nsvdy.
+INFO-FLOW: Append model top_mul_44ns_49nsvdy
+INFO-FLOW: Found component top_mul_50ns_50nswdI.
+INFO-FLOW: Append model top_mul_50ns_50nswdI
+INFO-FLOW: Found component top_mac_muladd_16xdS.
+INFO-FLOW: Append model top_mac_muladd_16xdS
+INFO-FLOW: Found component exp_generic_doublqcK.
+INFO-FLOW: Append model exp_generic_doublqcK
+INFO-FLOW: Found component exp_generic_doublrcU.
+INFO-FLOW: Append model exp_generic_doublrcU
+INFO-FLOW: Found component exp_generic_doublsc4.
+INFO-FLOW: Append model exp_generic_doublsc4
+INFO-FLOW: Handling components in module [generic_tanh_double_s] ... 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.compgen.tcl 
+INFO-FLOW: Found component top_dadddsub_64nsyd2.
+INFO-FLOW: Append model top_dadddsub_64nsyd2
+INFO-FLOW: Found component top_dmul_64ns_64nzec.
+INFO-FLOW: Append model top_dmul_64ns_64nzec
+INFO-FLOW: Found component top_ddiv_64ns_64nAem.
+INFO-FLOW: Append model top_ddiv_64ns_64nAem
+INFO-FLOW: Found component top_dcmp_64ns_64nBew.
+INFO-FLOW: Append model top_dcmp_64ns_64nBew
+INFO-FLOW: Handling components in module [top] ... 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.tcl 
+INFO-FLOW: Found component top_faddfsub_32nsIfE.
+INFO-FLOW: Append model top_faddfsub_32nsIfE
+INFO-FLOW: Found component top_fmul_32ns_32nJfO.
+INFO-FLOW: Append model top_fmul_32ns_32nJfO
+INFO-FLOW: Found component top_fdiv_32ns_32nKfY.
+INFO-FLOW: Append model top_fdiv_32ns_32nKfY
+INFO-FLOW: Found component top_fptrunc_64ns_Lf8.
+INFO-FLOW: Append model top_fptrunc_64ns_Lf8
+INFO-FLOW: Found component top_fpext_32ns_64Mgi.
+INFO-FLOW: Append model top_fpext_32ns_64Mgi
+INFO-FLOW: Found component top_fexp_32ns_32nNgs.
+INFO-FLOW: Append model top_fexp_32ns_32nNgs
+INFO-FLOW: Found component top_dadd_64ns_64nOgC.
+INFO-FLOW: Append model top_dadd_64ns_64nOgC
+INFO-FLOW: Found component top_dsqrt_64ns_64PgM.
+INFO-FLOW: Append model top_dsqrt_64ns_64PgM
+INFO-FLOW: Found component top_attn_sf_Q_V.
+INFO-FLOW: Append model top_attn_sf_Q_V
+INFO-FLOW: Found component top_attn_sf_Q_i_V.
+INFO-FLOW: Append model top_attn_sf_Q_i_V
+INFO-FLOW: Found component top_attn_sf_attenDeQ.
+INFO-FLOW: Append model top_attn_sf_attenDeQ
+INFO-FLOW: Found component top_attn_sf_attn_Ee0.
+INFO-FLOW: Append model top_attn_sf_attn_Ee0
+INFO-FLOW: Found component top_attn_sf_attn_Ffa.
+INFO-FLOW: Append model top_attn_sf_attn_Ffa
+INFO-FLOW: Found component top_attn_sf_attn_Gfk.
+INFO-FLOW: Append model top_attn_sf_attn_Gfk
+INFO-FLOW: Found component top_attn_res_outp.
+INFO-FLOW: Append model top_attn_res_outp
+INFO-FLOW: Found component top_ffn_ds1_outp_V.
+INFO-FLOW: Append model top_ffn_ds1_outp_V
+INFO-FLOW: Append model pow_generic_float_s
+INFO-FLOW: Append model exp_generic_double_s
+INFO-FLOW: Append model generic_tanh_double_s
+INFO-FLOW: Append model top
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: top_mul_41ns_6ns_ibs top_mul_44ns_6ns_jbC top_mul_45ns_9s_5kbM top_mul_25ns_43s_lbW top_mul_26ns_43s_mb6 top_mul_mul_25s_6ncg top_mac_muladd_13ocq top_mul_mul_18ns_pcA pow_generic_floatbkb pow_generic_floatcud pow_generic_floatdEe pow_generic_floateOg pow_generic_floatfYi pow_generic_floatg8j pow_generic_floathbi top_mul_72ns_13s_tde top_mul_36ns_43nsudo top_mul_44ns_49nsvdy top_mul_50ns_50nswdI top_mac_muladd_16xdS exp_generic_doublqcK exp_generic_doublrcU exp_generic_doublsc4 top_dadddsub_64nsyd2 top_dmul_64ns_64nzec top_ddiv_64ns_64nAem top_dcmp_64ns_64nBew top_faddfsub_32nsIfE top_fmul_32ns_32nJfO top_fdiv_32ns_32nKfY top_fptrunc_64ns_Lf8 top_fpext_32ns_64Mgi top_fexp_32ns_32nNgs top_dadd_64ns_64nOgC top_dsqrt_64ns_64PgM top_attn_sf_Q_V top_attn_sf_Q_i_V top_attn_sf_attenDeQ top_attn_sf_attn_Ee0 top_attn_sf_attn_Ffa top_attn_sf_attn_Gfk top_attn_res_outp top_ffn_ds1_outp_V pow_generic_float_s exp_generic_double_s generic_tanh_double_s top
+INFO-FLOW: To file: write model top_mul_41ns_6ns_ibs
+INFO-FLOW: To file: write model top_mul_44ns_6ns_jbC
+INFO-FLOW: To file: write model top_mul_45ns_9s_5kbM
+INFO-FLOW: To file: write model top_mul_25ns_43s_lbW
+INFO-FLOW: To file: write model top_mul_26ns_43s_mb6
+INFO-FLOW: To file: write model top_mul_mul_25s_6ncg
+INFO-FLOW: To file: write model top_mac_muladd_13ocq
+INFO-FLOW: To file: write model top_mul_mul_18ns_pcA
+INFO-FLOW: To file: write model pow_generic_floatbkb
+INFO-FLOW: To file: write model pow_generic_floatcud
+INFO-FLOW: To file: write model pow_generic_floatdEe
+INFO-FLOW: To file: write model pow_generic_floateOg
+INFO-FLOW: To file: write model pow_generic_floatfYi
+INFO-FLOW: To file: write model pow_generic_floatg8j
+INFO-FLOW: To file: write model pow_generic_floathbi
+INFO-FLOW: To file: write model top_mul_72ns_13s_tde
+INFO-FLOW: To file: write model top_mul_36ns_43nsudo
+INFO-FLOW: To file: write model top_mul_44ns_49nsvdy
+INFO-FLOW: To file: write model top_mul_50ns_50nswdI
+INFO-FLOW: To file: write model top_mac_muladd_16xdS
+INFO-FLOW: To file: write model exp_generic_doublqcK
+INFO-FLOW: To file: write model exp_generic_doublrcU
+INFO-FLOW: To file: write model exp_generic_doublsc4
+INFO-FLOW: To file: write model top_dadddsub_64nsyd2
+INFO-FLOW: To file: write model top_dmul_64ns_64nzec
+INFO-FLOW: To file: write model top_ddiv_64ns_64nAem
+INFO-FLOW: To file: write model top_dcmp_64ns_64nBew
+INFO-FLOW: To file: write model top_faddfsub_32nsIfE
+INFO-FLOW: To file: write model top_fmul_32ns_32nJfO
+INFO-FLOW: To file: write model top_fdiv_32ns_32nKfY
+INFO-FLOW: To file: write model top_fptrunc_64ns_Lf8
+INFO-FLOW: To file: write model top_fpext_32ns_64Mgi
+INFO-FLOW: To file: write model top_fexp_32ns_32nNgs
+INFO-FLOW: To file: write model top_dadd_64ns_64nOgC
+INFO-FLOW: To file: write model top_dsqrt_64ns_64PgM
+INFO-FLOW: To file: write model top_attn_sf_Q_V
+INFO-FLOW: To file: write model top_attn_sf_Q_i_V
+INFO-FLOW: To file: write model top_attn_sf_attenDeQ
+INFO-FLOW: To file: write model top_attn_sf_attn_Ee0
+INFO-FLOW: To file: write model top_attn_sf_attn_Ffa
+INFO-FLOW: To file: write model top_attn_sf_attn_Gfk
+INFO-FLOW: To file: write model top_attn_res_outp
+INFO-FLOW: To file: write model top_ffn_ds1_outp_V
+INFO-FLOW: To file: write model pow_generic_float_s
+INFO-FLOW: To file: write model exp_generic_double_s
+INFO-FLOW: To file: write model generic_tanh_double_s
+INFO-FLOW: To file: write model top
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         syn_report -model top -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 105.11 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_41ns_6ns_ibs_MulnS_0'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_44ns_6ns_jbC_MulnS_1'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_45ns_9s_5kbM_MulnS_2'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_25ns_43s_lbW_MulnS_3'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_26ns_43s_mb6_MulnS_4'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floatbkb_rom' using distributed ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floatcud_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floatdEe_rom' using distributed ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floateOg_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floatfYi_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floatg8j_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_floathbi_rom' using distributed ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.86 sec.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_72ns_13s_tde_MulnS_5'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_36ns_43nsudo_MulnS_6'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_44ns_49nsvdy_MulnS_7'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'top_mul_50ns_50nswdI_MulnS_8'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'exp_generic_doublqcK_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'exp_generic_doublrcU_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'exp_generic_doublsc4_rom' using auto ROMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.47 sec.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.2 sec.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_sf_Q_V_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_sf_Q_i_V_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_sf_attenDeQ_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_sf_attn_Ee0_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_sf_attn_Ffa_ram (RAM)' using distributed RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_sf_attn_Gfk_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_attn_res_outp_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'top_ffn_ds1_outp_V_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.73 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=top xml_exists=0
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.12 sec.
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.24 sec.
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.26 sec.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.compgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.constraint.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=38
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=18
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=47 #gSsdmPorts=38
+Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.compgen.dataonly.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.constraint.tcl 
+Execute         sc_get_clocks top 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_dadd_3_full_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_dadddsub_3_full_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_dcmp_0_no_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_ddiv_29_no_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_dmul_4_max_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_dsqrt_29_no_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_faddfsub_3_full_dsp_32_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_fdiv_14_no_dsp_32_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_fexp_7_full_dsp_32_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/impl/misc/top_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/pow_generic_float_s.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/exp_generic_double_s.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/generic_tanh_double_s.tbgen.tcl 
+Execute         source /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/top.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/jz2292/project/transformer/heterocl_file/vhls_projects/bert_layer_dct.prj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:28 ; elapsed = 00:02:46 . Memory (MB): peak = 1668.684 ; gain = 1138.191 ; free physical = 264932 ; free virtual = 362087
+INFO: [VHDL 208-304] Generating VHDL RTL for top.
+INFO: [VLOG 209-307] Generating Verilog RTL for top.
+Command       autosyn done; 29.39 sec.
+Command     csynth_design done; 162.77 sec.
+Execute     cleanup_all 

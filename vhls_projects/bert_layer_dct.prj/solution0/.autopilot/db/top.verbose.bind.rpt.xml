@@ -1,0 +1,110 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'top'" level="0">
+<item name = "Date">Thu Jul 20 07:18:55 2023
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">bert_layer_dct.prj</item>
+<item name = "Solution">solution0</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 9.514 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">515206387, 517934323, 5.152 sec, 5.179 sec, 515206387, 517934323, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_generic_tanh_double_s_fu_2175">generic_tanh_double_s, 1, 75, 10.000 ns, 0.750 us, 1, 75, none</column>
+<column name="grp_pow_generic_float_s_fu_2186">pow_generic_float_s, 22, 22, 0.220 us, 0.220 us, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- l_attn_sf_Q_x">42504216, 42504216, 3542018, -, -, 12, no</column>
+<column name=" + l_y">3542016, 3542016, 4612, -, -, 768, no</column>
+<column name="  ++ l_attn_sf_r1">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_attn_sf_K_x_0">42504216, 42504216, 3542018, -, -, 12, no</column>
+<column name=" + l_y_0">3542016, 3542016, 4612, -, -, 768, no</column>
+<column name="  ++ l_attn_sf_r11">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_attn_sf_V_x_1">42504216, 42504216, 3542018, -, -, 12, no</column>
+<column name=" + l_y_1">3542016, 3542016, 4612, -, -, 768, no</column>
+<column name="  ++ l_attn_sf_r12">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_attn_sf_context_x_2">9240, 9240, 770, -, -, 12, no</column>
+<column name=" + l_y_2">768, 768, 1, -, -, 768, no</column>
+<column name="- l_attn_sf_mutihead_loop_i">1062696, 1062696, 88558, -, -, 12, no</column>
+<column name=" + l_attn_sf_Q_i_x_3">1560, 1560, 130, -, -, 12, no</column>
+<column name="  ++ l_y_3">128, 128, 2, -, -, 64, no</column>
+<column name=" + l_attn_sf_K_i_x_4">1560, 1560, 130, -, -, 12, no</column>
+<column name="  ++ l_y_4">128, 128, 2, -, -, 64, no</column>
+<column name=" + l_attn_sf_V_i_x_5">1560, 1560, 130, -, -, 12, no</column>
+<column name="  ++ l_y_5">128, 128, 2, -, -, 64, no</column>
+<column name=" + l_attn_sf_attention_x_6">37320, 37320, 3110, -, -, 12, no</column>
+<column name="  ++ l_y_6">3108, 3108, 259, -, -, 12, no</column>
+<column name="   +++ l_attn_sf_r2">256, 256, 4, -, -, 64, no</column>
+<column name=" + l_attn_sf_attn_exp_x_7">2328, 2328, 194, -, -, 12, no</column>
+<column name="  ++ l_y_7">192, 192, 16, -, -, 12, no</column>
+<column name=" + l_attn_sf_attn_sum_x_8">1032, 1032, 86, -, -, 12, no</column>
+<column name="  ++ l_attn_sf_r3">84, 84, 7, -, -, 12, no</column>
+<column name=" + l_attn_sf_attn_sfm_x_9">3204, 3204, 267, -, -, 12, no</column>
+<column name="  ++ l_y_8">264, 264, 22, -, -, 12, no</column>
+<column name=" + l_attn_sf_context_i_x_10">38424, 38424, 3202, -, -, 12, no</column>
+<column name="  ++ l_y_9">3200, 3200, 50, -, -, 64, no</column>
+<column name="   +++ l_attn_sf_r4">48, 48, 4, -, -, 12, no</column>
+<column name=" + l_attn_sf_ct_m">1560, 1560, 130, -, -, 12, no</column>
+<column name="  ++ l_attn_sf_ct_n">128, 128, 2, -, -, 64, no</column>
+<column name="- l_attn_ds_outp_x_11">42504216, 42504216, 3542018, -, -, 12, no</column>
+<column name=" + l_y_10">3542016, 3542016, 4612, -, -, 768, no</column>
+<column name="  ++ l_attn_ds_r">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_attn_res_outp_x_12">55320, 55320, 4610, -, -, 12, no</column>
+<column name=" + l_y_11">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_attn_ln_mean_x_13">64716, 64716, 5393, -, -, 12, no</column>
+<column name=" + l_attn_ln_r">5376, 5376, 7, -, -, 768, no</column>
+<column name="- l_attn_ln_var_x_14">101652, 101652, 8471, -, -, 12, no</column>
+<column name=" + l_attn_ln_r1">8448, 8448, 11, -, -, 768, no</column>
+<column name="- l_attn_ln_outp_x_15">589932, 589932, 49161, -, -, 12, no</column>
+<column name=" + l_y_12">49152, 49152, 64, -, -, 768, no</column>
+<column name="- l_attn_ln_outp_linear_x_16">175128, 175128, 14594, -, -, 12, no</column>
+<column name=" + l_y_13">14592, 14592, 19, -, -, 768, no</column>
+<column name="- l_ffn_ds1_outp_x_17">170016792, 170016792, 14168066, -, -, 12, no</column>
+<column name=" + l_y_14">14168064, 14168064, 4612, -, -, 3072, no</column>
+<column name="  ++ l_ffn_ds1_r">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_ffn_gelu_outp_x_18">2285592, 5013528, 190466 ~ 417794, -, -, 12, no</column>
+<column name=" + l_y_15">190464, 417792, 62 ~ 136, -, -, 3072, no</column>
+<column name="- l_ffn_ds2_outp_x_19">169906200, 169906200, 14158850, -, -, 12, no</column>
+<column name=" + l_y_16">14158848, 14158848, 18436, -, -, 768, no</column>
+<column name="  ++ l_ffn_ds2_r">18432, 18432, 6, -, -, 3072, no</column>
+<column name="- l_ffn_res_outp_x_20">55320, 55320, 4610, -, -, 12, no</column>
+<column name=" + l_y_17">4608, 4608, 6, -, -, 768, no</column>
+<column name="- l_ffn_ln_mean_x_21">64716, 64716, 5393, -, -, 12, no</column>
+<column name=" + l_ffn_ln_r">5376, 5376, 7, -, -, 768, no</column>
+<column name="- l_ffn_ln_var_x_22">101652, 101652, 8471, -, -, 12, no</column>
+<column name=" + l_ffn_ln_r1">8448, 8448, 11, -, -, 768, no</column>
+<column name="- l_ffn_ln_outp_x_23">589932, 589932, 49161, -, -, 12, no</column>
+<column name=" + l_y_18">49152, 49152, 64, -, -, 768, no</column>
+<column name="- l_ffn_ln_outp_linear_x_24">110616, 110616, 9218, -, -, 12, no</column>
+<column name=" + l_y_19">9216, 9216, 12, -, -, 768, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

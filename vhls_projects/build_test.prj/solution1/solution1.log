@@ -1,0 +1,206 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275680 ; free virtual = 365962
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275680 ; free virtual = 365962
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275674 ; free virtual = 365957
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275671 ; free virtual = 365954
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275647 ; free virtual = 365930
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275663 ; free virtual = 365945
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 41.75 seconds; current allocated memory: 121.350 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 122.095 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_7' to 'ap_none'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275669 ; free virtual = 365951
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275669 ; free virtual = 365951
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275669 ; free virtual = 365951
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275668 ; free virtual = 365951
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275649 ; free virtual = 365932
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 275656 ; free virtual = 365939
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 49.07 seconds; current allocated memory: 121.344 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 122.083 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_0_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_1_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_2_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_3_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_4_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_5_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/v0_6_7' to 'ap_none'.
