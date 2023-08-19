@@ -1,4 +1,0 @@
-top_fadd_32ns_32nbkb
-top_fmul_32ns_32ncud
-top_B
-top

@@ -1,0 +1,309 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
+  **** SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+  **** IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /opt/xilinx/2022.1/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'jz2292' on host 'en-ec-zhang-21.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Sat Aug 05 09:56:27 EDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/jz2292/project/transformer/heterocl_file/gemm_systolic_12_768.prj'
+Sourcing Tcl script 'run.tcl'
+INFO: [HLS 200-1510] Running: open_project out.prj -reset 
+INFO: [HLS 200-10] Opening and resetting project '/home/jz2292/project/transformer/heterocl_file/gemm_systolic_12_768.prj/out.prj'.
+WARNING: [HLS 200-40] No /home/jz2292/project/transformer/heterocl_file/gemm_systolic_12_768.prj/out.prj/vivado_hls.app file found.
+INFO: [HLS 200-1510] Running: set_top systolic 
+INFO: [HLS 200-1510] Running: add_files kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb host.cpp -cflags -std=gnu++0x 
+INFO: [HLS 200-10] Adding test bench file 'host.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/home/jz2292/project/transformer/heterocl_file/gemm_systolic_12_768.prj/out.prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 459.148 MB.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 20.28 seconds. CPU system time: 1.99 seconds. Elapsed time: 25.33 seconds; current allocated memory: 459.148 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'l_i1' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:39:8)
+INFO: [HLS 214-291] Loop 'l_j_inner' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:40:20)
+INFO: [HLS 214-186] Unrolling loop 'l_i1' (kernel.cpp:39:8) in function 'systolic' completely with a factor of 12 (kernel.cpp:21:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner' (kernel.cpp:40:20) in function 'systolic' completely with a factor of 12 (kernel.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to 'v0': Complete partitioning on dimension 1. (kernel.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to 'v1': Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to 'v3': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:21:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.28 seconds. CPU system time: 0.59 seconds. Elapsed time: 6.16 seconds; current allocated memory: 459.148 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 459.148 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 459.148 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 459.148 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.83 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.85 seconds; current allocated memory: 523.148 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i' (kernel.cpp:29:21) in function 'systolic'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_gemm_j_outer' (kernel.cpp:36:28) in function 'systolic' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.76 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.79 seconds; current allocated memory: 523.148 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'systolic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic_Pipeline_l_bias_i_l_j' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i_l_j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'l_bias_i_l_j'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.67 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.78 seconds; current allocated memory: 523.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 523.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic_Pipeline_l_k' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k'.
+WARNING: [HLS 200-880] The II Violation in module 'systolic_Pipeline_l_k' (loop 'l_k'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v15_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' and 'load' operation ('v15_load', kernel.cpp:46) on local variable 'v15'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'systolic_Pipeline_l_k' (loop 'l_k'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v15_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' and 'load' operation ('v15_load', kernel.cpp:46) on local variable 'v15'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'systolic_Pipeline_l_k' (loop 'l_k'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v15_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' and 'load' operation ('v15_load', kernel.cpp:46) on local variable 'v15'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'systolic_Pipeline_l_k' consists of the following:	'fadd' operation ('v16', kernel.cpp:46) [1335]  (7.26 ns)
+	'store' operation ('v15_35_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' [1980]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.18 seconds; current allocated memory: 523.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.4 seconds. CPU system time: 0 seconds. Elapsed time: 1.44 seconds; current allocated memory: 523.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.69 seconds. CPU system time: 0 seconds. Elapsed time: 1.75 seconds; current allocated memory: 523.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 523.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic_Pipeline_l_bias_i_l_j' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'systolic_Pipeline_l_bias_i_l_j' pipeline 'l_bias_i_l_j' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'systolic_Pipeline_l_bias_i_l_j' is 5493 from HDL expression: ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter13 == 1'b1))
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_4_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'systolic_Pipeline_l_bias_i_l_j'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.77 seconds; current allocated memory: 523.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic_Pipeline_l_k' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'systolic_Pipeline_l_k' pipeline 'l_k' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'systolic_Pipeline_l_k'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.63 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.83 seconds; current allocated memory: 587.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_10_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_11_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'systolic' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'systolic' is 6096 from HDL expression: (1'b1 == ap_CS_fsm_state6)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'systolic'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.33 seconds. CPU system time: 0.11 seconds. Elapsed time: 4.1 seconds; current allocated memory: 587.148 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.45 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.89 seconds; current allocated memory: 587.148 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 16.67 seconds. CPU system time: 0.04 seconds. Elapsed time: 16.86 seconds; current allocated memory: 651.148 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for systolic.
+INFO: [VLOG 209-307] Generating Verilog RTL for systolic.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 113.07 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 55.71 seconds. CPU system time: 2.97 seconds. Elapsed time: 64.93 seconds; current allocated memory: 192.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 60.78 seconds. Total CPU system time: 4.64 seconds. Total elapsed time: 78.18 seconds; peak allocated memory: 651.148 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sat Aug  5 09:57:43 2023...

@@ -1,234 +1,219 @@
-import heterocl as hcl
 import numpy as np
 import time
+import allo
+from allo.ir.types import float32
 from golden_bert_layer import *
 
-# config
-inp_num=12
-inp_len=768
-inp_size=(inp_num, inp_len)
-head_num = 12
-head_dim = int(inp_len/head_num)
-GELU_dim = 3072
 
-dtype=hcl.Float()
-hcl.init(dtype)
+def top():
+    # config
+    inp_num=12
+    inp_len=768
+    head_num = 12
+    head_len = 64
+    gelu_len = 3072
 
-def top(target = None):
-    inp = hcl.placeholder(inp_size, "inp")
-    Wq = hcl.placeholder((inp_len, inp_len), "Wq")
-    Wk = hcl.placeholder((inp_len, inp_len), "Wk")
-    Wv = hcl.placeholder((inp_len, inp_len), "Wv")
-    Bq = hcl.placeholder((inp_len, ), "Bq")
-    Bk = hcl.placeholder((inp_len, ), "Bk")
-    Bv = hcl.placeholder((inp_len, ), "Bv")
-    output_dense_w = hcl.placeholder((inp_len, inp_len), "output_dense_w")
-    output_dense_b = hcl.placeholder((inp_len, ), "output_dense_b")
-    ffn_w1 = hcl.placeholder((GELU_dim, inp_len), "ffn_w1")
-    ffn_b1 = hcl.placeholder((GELU_dim,), "ffn_b1")
-    ffn_w2 = hcl.placeholder((inp_len, GELU_dim), "ffn_w2")
-    ffn_b2 = hcl.placeholder((inp_len, ), "ffn_b2")
-    gamma1 = hcl.placeholder((inp_len, ), "gamma1")
-    beta1 = hcl.placeholder((inp_len, ), "beta1")
-    gamma2 = hcl.placeholder((inp_len, ), "gamma2")
-    beta2 = hcl.placeholder((inp_len, ), "beta2")
-    outp = hcl.placeholder(inp_size, "outp")
+    def Linear_layer_qkvc(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
+        outp: float32[inp_num, inp_len] = 0.0
+        for i, j in allo.grid(inp_num, inp_len, name="gemm"):
+            for k in allo.reduction(inp_len):
+                outp[i, j] += inp[i, k] * W[j, k]
+        for i, j in allo.grid(inp_num, inp_len, name="bias"):
+            outp[i, j] += B[j]
+        return outp
+
+    def Attention_layer(Q_h: float32[inp_num, head_len], K_h: float32[inp_num, head_len]) -> float32[inp_num, inp_num]:
+        outp: float32[inp_num, inp_num] = 0.0
+        for i, j in allo.grid(inp_num, inp_num, name="gemm"):
+            for k in allo.reduction(head_len):
+                    outp[i, j] += Q_h[i, k] * K_h[j, k]
+        for i, j in allo.grid(inp_num, inp_num, name="norm"):
+            outp[i, j] /= 8.0
+        return outp
     
-    #define bert_layer
-    def Bert_layer(inp, Wq, Bq, Wk, Bk, Wv, Bv, output_dense_w, output_dense_b,
-                   ffn_w1, ffn_b1, ffn_w2, ffn_b2, gamma1, beta1, gamma2, beta2):
+    def Softmax_layer(inp: float32[inp_num, inp_num]) -> float32[inp_num, inp_num]:
+        outp: float32[inp_num, inp_num]
+        inp_sumRow: float32[inp_num] = 0.0
 
-        #define Linear_layer inp * W.T + B
-        def Linear_layer(inp, W, B, name="ll_"):
-            r = hcl.reduce_axis(0, inp.shape[1], name+"r") 
-            outp = hcl.compute((inp.shape[0], W.shape[0]),
-                    lambda x, y: hcl.sum(inp[x, r] * W[y, r], axis=r, dtype=dtype) + B[y], name+"outp")
-            return outp
+        for i, j in allo.grid(inp_num, inp_num, name="exp_sum"):
+            inp[i, j] = allo.exp(inp[i, j])
+            inp_sumRow[i] += inp[i, j]
 
-        #define Residual layer
-        def Res_layer(inp1, inp2, name="res_"):
-            outp = hcl.compute(inp_size, lambda x, y: inp1[x, y] + inp2[x, y], name+"outp")
-            return outp
+        for i, j in allo.grid(inp_num, inp_num, name="update"):
+            outp[i, j] = inp[i, j] / inp_sumRow[i]
+        return outp
+    
+    def Context_layer(Attn: float32[inp_num, inp_num], V_h: float32[inp_num, head_len]) -> float32[inp_num, head_len]:
+        outp: float32[inp_num, head_len] = 0.0
+        for i, j in allo.grid(inp_num, head_len, name="gemm"):
+                for k in allo.reduction(inp_num):
+                        outp[i, j] += Attn[i, k] * V_h[k, j]
+        return outp
 
-        #define self_attention_layer
-        def Self_attention(inp, Wq, Bq, Wk, Bk, Wv, Bv, name="sf_"):
-            # project Q, K, V
-            r1 = hcl.reduce_axis(0, inp_len, name+"r1") 
-            Q = hcl.compute(inp_size,
-                    lambda x, y: hcl.sum(inp[x, r1] * Wq[y, r1], axis=r1, dtype=dtype) + Bq[y], name+"Q")
-            K = hcl.compute(inp_size,
-                    lambda x, y: hcl.sum(inp[x, r1] * Wk[y, r1], axis=r1, dtype=dtype) + Bk[y], name+"K")
-            V = hcl.compute(inp_size,
-                    lambda x, y: hcl.sum(inp[x, r1] * Wv[y, r1], axis=r1, dtype=dtype) + Bv[y], name+"V")
-
-            # compute mutihead context 
-            def mutihead_loop(context, i):
-                # split Q, K, V
-                Q_i = hcl.compute((inp_size[0], head_dim),
-                        lambda x, y: Q[x, i*head_dim + y], name+"Q_i")
-                K_i = hcl.compute((inp_size[0], head_dim),
-                        lambda x, y: K[x, i*head_dim + y], name+"K_i")
-                V_i = hcl.compute((inp_size[0], head_dim),
-                        lambda x, y: V[x, i*head_dim + y], name+"V_i")
-                    
-                # compute attention
-                r2 = hcl.reduce_axis(0, head_dim, name+"r2")
-                attention = hcl.compute((inp_size[0], inp_size[0]),
-                        lambda x, y: hcl.sum(Q_i[x, r2] * K_i[y, r2], axis=r2, dtype=dtype)/hcl.sqrt(head_dim), name+"attention")
-                
-                # attention softmax
-                attention_exp = hcl.compute(attention.shape, 
-                        lambda x, y: hcl.exp(attention[x, y]), name+"attn_exp")
-                r3 = hcl.reduce_axis(0, inp_size[0], name+"r3")
-                attention_sum = hcl.compute((attention.shape[0], ), 
-                        lambda x: hcl.sum(attention_exp[x, r3], axis=r3, dtype=dtype), name+"attn_sum")
-                attention_sfm = hcl.compute(attention.shape, 
-                        lambda x, y: attention_exp[x, y]/attention_sum[x], name+"attn_sfm")
-                    
-                # compute context
-                r4 = hcl.reduce_axis(0, inp_size[0], name+"r4")
-                context_i = hcl.compute((inp_size[0], head_dim),
-                        lambda x, y: hcl.sum(attention_sfm[x, r4] * V_i[r4, y], axis=r4, dtype=dtype), name+"context_i")      
-                with hcl.for_(0, inp_size[0], name = name+"ct_m") as ct_m:
-                    with hcl.for_(0, head_dim, name = name+"ct_n") as ct_n:
-                        context[ct_m, head_dim*i+ct_n] = context_i[ct_m, ct_n]
+    def Self_attention(inp: float32[inp_num, inp_len], 
+                        Wq: float32[inp_len, inp_len], Bq: float32[inp_len], 
+                        Wk: float32[inp_len, inp_len], Bk: float32[inp_len], 
+                        Wv: float32[inp_len, inp_len], Bv: float32[inp_len]) -> float32[inp_num, inp_len]:
                         
-        #     def mutihead_loop(context, i):
-        #         # compute attention
-        #         r2 = hcl.reduce_axis(0, head_dim, name+"r2")
-        #         attention = hcl.compute((inp_size[0], inp_size[0]),
-        #                 lambda x, y: hcl.sum(Q[x, i*head_dim+r2] * K[y, i*head_dim+r2], axis=r2, dtype=dtype)/hcl.sqrt(head_dim), name+"attention")
-                
-        #         # attention softmax
-        #         hcl.update(attention, lambda x, y: hcl.exp(attention[x, y]), name+"att_exp")
-        #         r3 = hcl.reduce_axis(0, inp_size[0], name+"r3")
-        #         attention_sum = hcl.compute((inp_size[0], ), 
-        #                 lambda x: hcl.sum(attention[x, r3], axis=r3, dtype=dtype), name+"att_sum")
-        #         hcl.update(attention, lambda x, y: attention[x, y]/attention_sum[x], name+"att_softmax")
-                    
-        #         # compute context
-        #         with hcl.for_(0, inp_size[0], name = name+"ct_m") as ct_m:
-        #             with hcl.for_(0, head_dim, name = name+"ct_n") as ct_n:
-        #                 with hcl.for_(0, inp_size[0], name = name+"ct_k") as ct_k:
-        #                         context[ct_m, head_dim*i+ct_n] += attention[ct_m, ct_k] * V[ct_k, i*head_dim+ct_n]
-            
-            context =  hcl.compute(inp_size, lambda x, y: 0, name+"context")
-            hcl.mutate((head_num, ), lambda i: mutihead_loop(context, i), name+"mutihead_loop")
-            return context
-                
-        #define Layernorm_layer
-        def Layer_norm(inp, gamma, beta, name="ln_"):
-            r = hcl.reduce_axis(0, inp_size[1], name+"r")
-            mean = hcl.compute((inp_size[0], ), 
-                    lambda x: hcl.sum(inp[x, r], axis=r, dtype=dtype) / inp.shape[1], name+"mean")
-            var = hcl.compute((inp_size[0], ), 
-                    lambda x: hcl.sum(inp[x, r]*inp[x, r], axis=r, dtype=dtype) / inp.shape[1] - mean[x]*mean[x], 
-                    name+"var")
-            outp = hcl.compute(inp_size, 
-                    lambda x, y: (inp[x, y]-mean[x])/hcl.sqrt(var[x] + 1e-5), name+"outp")
-            hcl.update(outp, 
-                    lambda x, y: outp[x, y] * gamma[y] + beta[y], name+"outp_linear")
-            return outp
-    
-        #define gelu_layer
-        def GELU(inp, name="gelu_"):
-            outp = hcl.compute(inp.shape, 
-                    lambda x, y: 0.5 * inp[x,y] * (1 + hcl.tanh(hcl.sqrt(2 / 3.141593) * (inp[x,y] + 0.044715 * hcl.power(inp[x,y], 3)))),
-                    name+"outp")
-            return outp
+        # project Q, K, V
+        Q = Linear_layer_qkvc(inp, Wq, Bq)
+        K = Linear_layer_qkvc(inp, Wk, Bk)
+        V = Linear_layer_qkvc(inp, Wv, Bv)
+        Context: float32[inp_num, inp_len]
+
+        for h in range(head_num):
+            Q_h: float32[inp_num, head_len]
+            K_h: float32[inp_num, head_len]
+            V_h: float32[inp_num, head_len]
+
+            for i, j in allo.grid(inp_num, head_len, name="mh_separate"):
+                Q_h[i, j] = Q[i, h*64 + j]
+                K_h[i, j] = K[i, h*64 + j]
+                V_h[i, j] = V[i, h*64 + j]
+            Attn = Attention_layer(Q_h, K_h)
+            Attn = Softmax_layer(Attn)
+            C_h = Context_layer(Attn, V_h)
+
+            for i, j in allo.grid(inp_num, head_len, name="mh_merge"):
+                Context[i, h*64 + j] = C_h[i, j]
         
+        return Context
+
+    def Res_layer(inp1: float32[inp_num, inp_len], inp2: float32[inp_num, inp_len]) -> float32[inp_num, inp_len]:
+        outp: float32[inp_num, inp_len]
+        for i, j in allo.grid(inp_num, inp_len):
+            outp[i, j] = inp1[i, j] + inp2[i, j]
+        return outp
+
+    def Layer_norm(inp: float32[inp_num, inp_len], gamma: float32[inp_len], beta: float32[inp_len]) -> float32[inp_num, inp_len]:
+        outp: float32[inp_num, inp_len]
+        mean: float32[inp_num] = 0.0
+        mean2: float32[inp_num] = 0.0
+        var: float32[inp_num]
+
+        for i, j in allo.grid(inp_num, inp_len, name="sum"):
+            mean[i] += inp[i, j]
+            mean2[i] += inp[i, j] * inp[i, j]
+
+        for i in allo.grid(inp_num, name="mean_var"):
+            mean[i] = mean[i]/float(inp_len)
+            mean2[i] = mean2[i]/float(inp_len)
+            var[i] = mean2[i] - mean[i] * mean[i]
+
+        for i, j in allo.grid(inp_num, inp_len, name="norm"):
+            outp[i, j] = gamma[j] * (inp[i, j] - mean[i]) / allo.sqrt(var[i] + 0.00001) + beta[j]
+
+        return outp
+    
+    def Linear_layer_ds1(inp: float32[inp_num, inp_len], W: float32[gelu_len, inp_len], B: float32[gelu_len]) -> float32[inp_num, gelu_len]:
+        outp: float32[inp_num, gelu_len] = 0.0
+        for i, j in allo.grid(inp_num, gelu_len, name="gemm"):
+            for k in allo.reduction(inp_len):
+                outp[i, j] += inp[i, k] * W[j, k]
+        for i, j in allo.grid(inp_num, gelu_len, name="bias"):
+            outp[i, j] += B[j]
+        return outp
+    
+    def Gelu_layer(inp: float32[inp_num, gelu_len]) -> float32[inp_num, gelu_len]:
+        outp: float32[inp_num, gelu_len]
+        for i, j in allo.grid(inp_num, gelu_len):
+            outp[i, j] = 0.5 * inp[i, j] * (1.0 + allo.tanh(0.797885 * (inp[i, j] + 0.044715 * allo.power(inp[i, j], 3.0))))
+        return outp
+
+    def Linear_layer_ds2(inp: float32[inp_num, gelu_len], W: float32[inp_len, gelu_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
+        outp: float32[inp_num, inp_len] = 0.0
+        for i, j in allo.grid(inp_num, inp_len, name="gemm"):
+            for k in allo.reduction(gelu_len):
+                outp[i, j] += inp[i, k] * W[j, k]
+        for i, j in allo.grid(inp_num, inp_len, name="bias"):
+            outp[i, j] += B[j]
+        return outp
+    
+    def Bert_layer(inp: float32[inp_num, inp_len], 
+                    Wq: float32[inp_len, inp_len], Bq: float32[inp_len], 
+                    Wk: float32[inp_len, inp_len], Bk: float32[inp_len], 
+                    Wv: float32[inp_len, inp_len], Bv: float32[inp_len],
+                    output_dense_w: float32[inp_len, inp_len], output_dense_b: float32[inp_len],
+                    ffn_w1: float32[gelu_len, inp_len], ffn_b1: float32[gelu_len], 
+                    ffn_w2: float32[inp_len, gelu_len], ffn_b2: float32[inp_len], 
+                    gamma1: float32[inp_len], beta1: float32[inp_len], 
+                    gamma2: float32[inp_len], beta2: float32[inp_len]) -> float32[inp_num, inp_len]:
         # 1. Bert Attention
         # 1.1 self attention
-        attn_sf_outp = Self_attention(inp, Wq, Bq, Wk, Bk, Wv, Bv, "attn_sf_")
+        attn_sf_outp = Self_attention(inp, Wq, Bq, Wk, Bk, Wv, Bv)
         # 1.2 output dense
-        attn_ds_outp = Linear_layer(attn_sf_outp, output_dense_w, output_dense_b, "attn_ds_")
+        attn_ds_outp = Linear_layer_qkvc(attn_sf_outp, output_dense_w, output_dense_b)
         # 1.3 Residual layer
-        attn_res_outp = Res_layer(attn_ds_outp, inp, "attn_res_")
+        attn_res_outp = Res_layer(attn_ds_outp, inp)
         # 1.4 layer norm
-        attn_ln_outp = Layer_norm(attn_res_outp, gamma1, beta1, "attn_ln_")
+        attn_ln_outp = Layer_norm(attn_res_outp, gamma1, beta1)
         # 2. Feed Forward Network
         # 2.1 ffn dense 1
-        ffn_ds1_outp = Linear_layer(attn_ln_outp, ffn_w1, ffn_b1, "ffn_ds1_")
+        ffn_ds1_outp = Linear_layer_ds1(attn_ln_outp, ffn_w1, ffn_b1)
         # 2.2 gelu layer
-        ffn_gelu_outp = GELU(ffn_ds1_outp, "ffn_gelu_")
+        ffn_gelu_outp = Gelu_layer(ffn_ds1_outp)
         # 2.3 ffn dense 2
-        ffn_ds2_outp = Linear_layer(ffn_gelu_outp, ffn_w2, ffn_b2, "ffn_ds2_")
+        ffn_ds2_outp = Linear_layer_ds2(ffn_gelu_outp, ffn_w2, ffn_b2)
         # 2.4 Residual layer
-        ffn_res_outp = Res_layer(ffn_ds2_outp, attn_ln_outp, "ffn_res_")
+        ffn_res_outp = Res_layer(ffn_ds2_outp, attn_ln_outp)
         # 2.5 layer norm
-        ffn_ln_outp = Layer_norm(ffn_res_outp, gamma2, beta2, "ffn_ln_")
+        ffn_ln_outp = Layer_norm(ffn_res_outp, gamma2, beta2)
         return ffn_ln_outp
 
-    s = hcl.create_schedule([inp, Wq, Bq, Wk, Bk, Wv, Bv, output_dense_w, output_dense_b,
-                             ffn_w1, ffn_b1, ffn_w2, ffn_b2, gamma1, beta1, gamma2, beta2], Bert_layer)
-    f = hcl.build(s, target=target)
-    return f
+    s = allo.customize(Bert_layer)
+    return s
 
 if __name__ == '__main__':
-    f = top()
+    target = "vhls"
+    s = top()
 
-    inp = from_file('./params/input.txt', inp_size)
-    # params
-    params = Params()
-    # q, k, v projection
-    params.Wq = from_file("./params/q_w.txt", (inp_len, inp_len))
-    params.Bq = from_file("./params/q_b.txt", (inp_len,))
-    params.Wk = from_file("./params/k_w.txt", (inp_len, inp_len))
-    params.Bk = from_file("./params/k_b.txt", (inp_len,))
-    params.Wv = from_file("./params/v_w.txt", (inp_len, inp_len))
-    params.Bv = from_file("./params/v_b.txt", (inp_len,))
-    # ouput dense
-    params.output_dense_w = from_file("./params/out_dense_w.txt", (inp_len, inp_len))
-    params.output_dense_b = from_file("./params/out_dense_b.txt", (inp_len,))
-    # feed forward
-    params.ffn_w1 = from_file("./params/ffn_w1.txt", (GELU_dim, inp_len))
-    params.ffn_b1 = from_file("./params/ffn_b1.txt", (GELU_dim,))
-    params.ffn_w2 = from_file("./params/ffn_w2.txt", (inp_len, GELU_dim))
-    params.ffn_b2 = from_file("./params/ffn_b2.txt", (inp_len,))
-    # layer norm
-    params.gamma1 = from_file("./params/out_ln_gamma.txt", (inp_len,))
-    params.beta1 = from_file("./params/out_ln_beta.txt", (inp_len,))
-    params.gamma2 = from_file("./params/ffn_ln_gamma.txt", (inp_len,))
-    params.beta2 = from_file("./params/ffn_ln_beta.txt", (inp_len,))
+    if(target=="vhls"):
+        f = s.build(target=target)
+        print(f)
+        mod = s.build(target="vhls", mode="csyn", project="bert_layer.prj")
+        mod()
 
-    #initialize hcl params
-    hcl_inp = hcl.asarray(inp, dtype=dtype)
-    hcl_Wq = hcl.asarray(params.Wq, dtype=dtype)
-    hcl_Wk = hcl.asarray(params.Wk, dtype=dtype)
-    hcl_Wv = hcl.asarray(params.Wv, dtype=dtype)
-    hcl_Bq = hcl.asarray(params.Bq, dtype=dtype)
-    hcl_Bk = hcl.asarray(params.Bk, dtype=dtype)
-    hcl_Bv = hcl.asarray(params.Bv, dtype=dtype)
-    hcl_output_dense_w = hcl.asarray(params.output_dense_w, dtype=dtype)
-    hcl_output_dense_b = hcl.asarray(params.output_dense_b, dtype=dtype)
-    hcl_ffn_w1 = hcl.asarray(params.ffn_w1, dtype=dtype)
-    hcl_ffn_b1 = hcl.asarray(params.ffn_b1, dtype=dtype)
-    hcl_ffn_w2 = hcl.asarray(params.ffn_w2, dtype=dtype)
-    hcl_ffn_b2 = hcl.asarray(params.ffn_b2, dtype=dtype)
-    hcl_gamma1 = hcl.asarray(params.gamma1, dtype=dtype)
-    hcl_beta1 = hcl.asarray(params.beta1, dtype=dtype)
-    hcl_gamma2 = hcl.asarray(params.gamma2, dtype=dtype)
-    hcl_beta2 = hcl.asarray(params.beta2, dtype=dtype)
-    hcl_outp = hcl.asarray(np.zeros(inp_size), dtype=dtype)
-    #hcl computation
-    begin = time.time()
-    f(hcl_inp, hcl_Wq, hcl_Bq, hcl_Wk, hcl_Bk, hcl_Wv, hcl_Bv, 
-      hcl_output_dense_w, hcl_output_dense_b,
-      hcl_ffn_w1, hcl_ffn_b1, hcl_ffn_w2, hcl_ffn_b2, 
-      hcl_gamma1, hcl_beta1, hcl_gamma2, hcl_beta2, hcl_outp)
-    end = time.time()
-    print("llvm running time: {} sec".format(end - begin))
-    print("test: \n", hcl_outp.asnumpy())
-    to_file(hcl_outp.asnumpy(), './results/bl_test_output.txt')
+    else:
+        f = s.build(target=target) 
+        inp = from_file('./params/input.txt', (12, 768))
+        # params
+        params = Params()
+        # q, k, v projection
+        params.Wq = from_file("./params/q_w.txt", (768, 768))
+        params.Bq = from_file("./params/q_b.txt", (768,))
+        params.Wk = from_file("./params/k_w.txt", (768, 768))
+        params.Bk = from_file("./params/k_b.txt", (768,))
+        params.Wv = from_file("./params/v_w.txt", (768, 768))
+        params.Bv = from_file("./params/v_b.txt", (768,))
+        # ouput dense
+        params.output_dense_w = from_file("./params/out_dense_w.txt", (768, 768))
+        params.output_dense_b = from_file("./params/out_dense_b.txt", (768,))
+        # feed forward
+        params.ffn_w1 = from_file("./params/ffn_w1.txt", (3072, 768))
+        params.ffn_b1 = from_file("./params/ffn_b1.txt", (3072,))
+        params.ffn_w2 = from_file("./params/ffn_w2.txt", (768, 3072))
+        params.ffn_b2 = from_file("./params/ffn_b2.txt", (768,))
+        # layer norm
+        params.gamma1 = from_file("./params/out_ln_gamma.txt", (768,))
+        params.beta1 = from_file("./params/out_ln_beta.txt", (768,))
+        params.gamma2 = from_file("./params/ffn_ln_gamma.txt", (768,))
+        params.beta2 = from_file("./params/ffn_ln_beta.txt", (768,))
 
-    # python computation
-    outp = bert_layer(inp, params)
-    print("golden: \n", outp)
-    to_file(outp, './results/bl_golden_output.txt')
+        # allo computation
+        begin = time.time()
+        test_outp = f(inp, params.Wq, params.Bq, params.Wk, params.Bk, params.Wv, params.Bv, 
+                        params.output_dense_w, params.output_dense_b,
+                        params.ffn_w1, params.ffn_b1, params.ffn_w2, params.ffn_b2, 
+                        params.gamma1, params.beta1, params.gamma2, params.beta2)
+        end = time.time()
+        print("Runtime: {} sec".format(end - begin))
+        print("test: \n", test_outp)
+        to_file(test_outp, './results/bl_test_output.txt')
 
-    #check
-    np.testing.assert_allclose(hcl_outp.asnumpy(), outp, rtol=1e-02)
+        # python computation
+        golden_outp = bert_layer(inp, params)
+        print("golden: \n", golden_outp)
+        to_file(golden_outp, './results/bl_golden_output.txt')
 
-    
-    
-
+        #check
+        np.testing.assert_allclose(test_outp, golden_outp, rtol=2e-02)

@@ -7,8 +7,8 @@
 source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'jz2292' on host 'en-ec-zhang-21.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Sat Jul 15 00:30:11 EDT 2023
+INFO: [HLS 200-10] For user 'jz2292' on host 'en-ec-zhang-21.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Fri Jul 28 02:49:30 EDT 2023
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
 INFO: [HLS 200-10] In directory '/home/jz2292/project/transformer/heterocl_file'
 ERROR [AP-1] Could not read script 'run.tcl'.
-INFO: [Common 17-206] Exiting vivado_hls at Sat Jul 15 00:30:11 2023...
+INFO: [Common 17-206] Exiting vivado_hls at Fri Jul 28 02:49:30 2023...

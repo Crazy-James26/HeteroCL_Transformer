@@ -7,7 +7,7 @@ head_num = 12
 def from_file(filename, shape):
     with open(filename, 'r') as f:
         data = f.read().split('\n')
-    data = [float(x) for x in data if x]
+    data = [np.float32(x) for x in data if x]
     data = np.array(data)
     data = data.reshape(shape)
     return data

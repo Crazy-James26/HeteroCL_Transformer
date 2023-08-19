@@ -1,0 +1,757 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210213 ; free virtual = 325283
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210213 ; free virtual = 325284
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210214 ; free virtual = 325284
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210214 ; free virtual = 325284
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'l_gemm_k' (kernel.cpp:35) in function 'systolic' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'l_i1' (kernel.cpp:37) in function 'systolic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'l_j1' (kernel.cpp:38) in function 'systolic' completely with a factor of 12.
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v1' (kernel.cpp:18) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210191 ; free virtual = 325261
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210193 ; free virtual = 325264
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'systolic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_gemm_k'.
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:44) and wire read on port 'v3_0_0' (kernel.cpp:42).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:44) and wire read on port 'v3_0_0' (kernel.cpp:42).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:44) and wire read on port 'v3_0_0' (kernel.cpp:42).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:44) and wire read on port 'v3_0_0' (kernel.cpp:42).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 9.
+WARNING: [SCHED 204-21] Estimated clock period (12.958ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'systolic' consists of the following:
+	'fmul' operation ('v', kernel.cpp:41) [865]  (5.7 ns)
+	'fadd' operation ('v1', kernel.cpp:43) [867]  (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 53.27 seconds; current allocated memory: 130.325 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.79 seconds; current allocated memory: 137.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_9_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210213 ; free virtual = 325284
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210213 ; free virtual = 325284
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210214 ; free virtual = 325285
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210209 ; free virtual = 325280
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'l_gemm_k' (kernel.cpp:36) in function 'systolic' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'l_i1' (kernel.cpp:38) in function 'systolic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'l_j1' (kernel.cpp:39) in function 'systolic' completely with a factor of 12.
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v1' (kernel.cpp:18) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210192 ; free virtual = 325263
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i' (kernel.cpp:29:42) in function 'systolic'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 210192 ; free virtual = 325263
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'systolic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i_l_j'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_gemm_k'.
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 9.
+WARNING: [SCHED 204-21] Estimated clock period (12.958ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'systolic' consists of the following:
+	'fmul' operation ('v', kernel.cpp:42) [863]  (5.7 ns)
+	'fadd' operation ('v1', kernel.cpp:44) [865]  (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 53.57 seconds; current allocated memory: 133.100 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.78 seconds; current allocated memory: 140.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 210250 ; free virtual = 325355
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 210250 ; free virtual = 325355
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 210250 ; free virtual = 325356
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 210250 ; free virtual = 325356
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'l_gemm_k' (kernel.cpp:36) in function 'systolic' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'l_i1' (kernel.cpp:38) in function 'systolic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'l_j1' (kernel.cpp:39) in function 'systolic' completely with a factor of 12.
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v1' (kernel.cpp:18) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 210226 ; free virtual = 325332
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i' (kernel.cpp:29:42) in function 'systolic'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:51 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 210227 ; free virtual = 325333
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'systolic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i_l_j'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_gemm_k'.
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 9.
+WARNING: [SCHED 204-21] Estimated clock period (12.958ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'systolic' consists of the following:
+	'fmul' operation ('v', kernel.cpp:42) [863]  (5.7 ns)
+	'fadd' operation ('v1', kernel.cpp:44) [865]  (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 59.06 seconds; current allocated memory: 133.101 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.79 seconds; current allocated memory: 140.144 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 191997 ; free virtual = 322251
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 191997 ; free virtual = 322251
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 191997 ; free virtual = 322251
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 191997 ; free virtual = 322251
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'l_gemm_k' (kernel.cpp:36) in function 'systolic' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'l_i1' (kernel.cpp:38) in function 'systolic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'l_j1' (kernel.cpp:39) in function 'systolic' completely with a factor of 12.
+INFO: [XFORM 203-101] Partitioning array 'v0' (kernel.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v1' (kernel.cpp:18) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v3' (kernel.cpp:20) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 191975 ; free virtual = 322229
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i' (kernel.cpp:29:42) in function 'systolic'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1057.715 ; gain = 527.219 ; free physical = 191975 ; free virtual = 322229
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'systolic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i_l_j'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_gemm_k'.
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+WARNING: [SCHED 204-68] The II Violation in module 'systolic' (Loop: l_gemm_k): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between wire write on port 'v3_0_0' (kernel.cpp:45) and wire read on port 'v3_0_0' (kernel.cpp:43).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 9.
+WARNING: [SCHED 204-21] Estimated clock period (12.958ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'systolic' consists of the following:
+	'fmul' operation ('v', kernel.cpp:42) [863]  (5.7 ns)
+	'fadd' operation ('v1', kernel.cpp:44) [865]  (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 51.69 seconds; current allocated memory: 133.068 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.74 seconds; current allocated memory: 140.126 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v0_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_0_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_1_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_2_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_3_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_4_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_5_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_6_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_7_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'systolic/v3_8_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500]

@@ -1,163 +1,181 @@
-import heterocl as hcl
 import numpy as np
+import allo
+from allo.ir.types import float32
+import math
 
-def Matmul(m, n, k, dtype=hcl.Float(), target=None):
-    inp1 = hcl.placeholder((m, k), dtype=dtype, name="inp1")
-    inp2 = hcl.placeholder((k, n), dtype=dtype, name="inp2")
+def Matmul(m, n, k):
+    def kernel(A: float32[m, k], B: float32[k, n]) -> float32[m, n]:
+        C: float32[m, n] = 0.0
+        for i, j in allo.grid(m, n):
+            for l in allo.reduction(k):
+                C[i, j] += A[i, l] * B[l, j]
+        return C
 
-    def kernel(inp1, inp2):
-        r = hcl.reduce_axis(0, inp1.shape[1], 'k')
-        return hcl.compute((inp1.shape[0], inp2.shape[1]),
-                lambda x, y: hcl.sum(inp1[x, r] * inp2[r, y],
-                                     axis=r, dtype=dtype), "outp")
-
-    s = hcl.create_schedule([inp1, inp2], kernel)
-    f = hcl.build(s, target=target)
+    s = allo.customize(kernel)
+    f = s.build()
+    print(s.module)
     return f
 
 
-def Softmax(m, n, dtype=hcl.Float(), target=None):
-    inp = hcl.placeholder((m, n), dtype=dtype, name="inp")
+def Softmax(m, n):    
+    def kernel(input: float32[m, n]) -> float32[m, n]:
+        output: float32[m, n] = 0.0
+        inp_sumRow: float32[m] = 0.0
+
+        for i, j in allo.grid(m,n):
+            input[i, j] = allo.exp(input[i, j])
+            inp_sumRow[i] += input[i, j]
+
+        for i, j in allo.grid(m,n):
+            output[i, j] = input[i, j] / inp_sumRow[i]
+        return output
     
-    def kernel(inp):
-        hcl.update(inp, lambda x, y: hcl.exp(inp[x, y]), "inp_exp")
-
-        r = hcl.reduce_axis(0, inp.shape[1], 'n')
-        inp_sum = hcl.compute((inp.shape[0], ), lambda x: hcl.sum(inp[x, r], axis=r, dtype=dtype), "inp_sum")
-
-        outp = hcl.compute(inp.shape, lambda x, y: inp[x, y]/inp_sum[x], "outp")
-        return outp
-        
-    s = hcl.create_schedule([inp], kernel)
-    f = hcl.build(s, target=target)
+    s = allo.customize(kernel)
+    f = s.build()
+    print(s.module)
     return f
 
 
-def Layernorm(m, n, linear=True, dtype=hcl.Float(), target=None):
-    inp = hcl.placeholder((m, n), dtype=dtype, name="inp")
-    gamma = hcl.scalar("gamma")
-    beta = hcl.scalar("beta")
+def Layernorm(m, n):
+    def kernel(input: float32[m, n], gamma: float32[n], beta: float32[n]) -> float32[m,n]:
+        output: float32[m, n] = 0.0
+        mean: float32[m] = 0.0
+        mean2: float32[m] = 0.0
+        var: float32[m] = 0.0
 
-    def kernel(inp, gamma, beta):
-        r = hcl.reduce_axis(0, inp.shape[1], 'n')
-        mean = hcl.compute((inp.shape[0], ), 
-                lambda x: hcl.sum(inp[x, r], axis=r, dtype=dtype) / inp.shape[1], 
-                "mean")
-        var = hcl.compute((inp.shape[0], ), 
-                lambda x: hcl.sum(inp[x, r]*inp[x, r], axis=r, dtype=dtype) / inp.shape[1] - mean[x]*mean[x], 
-                "var")
-        outp = hcl.compute(inp.shape, lambda x, y: (inp[x, y]-mean[x])/hcl.sqrt(var[x] + 1e-5), 
-                           "outp_norm")
-        with hcl.if_(linear):
-            hcl.update(outp, lambda x, y: outp[x, y] * gamma.v + beta.v, "outp_linear")
-        return outp
+        for i in range(m):
+            for j in range(n):
+                mean[i] += input[i, j]
+                mean2[i] += input[i, j] * input[i, j]
+            mean[i] = mean[i]/float(n)
+            mean2[i] = mean2[i]/float(n)
+            var[i] = mean2[i] - mean[i] * mean[i]
 
-    s = hcl.create_schedule([inp, gamma, beta], kernel)
-    f = hcl.build(s, target=target)
+        for i, j in allo.grid(m, n):
+            output[i, j] = gamma[j] * (input[i, j] - mean[i]) / allo.sqrt(var[i] + 0.00001) + beta[j]
+
+        return output
+    
+    s = allo.customize(kernel)
+    f = s.build()
     return f
 
 
-def GELU(m, n, dtype=hcl.Float(), target=None):
-    inp = hcl.placeholder((m, n), dtype=dtype, name="inp")
-
-    def kernel(inp):
-        outp = hcl.compute(inp.shape, 
-                lambda x, y: 0.5 * inp[x,y] * (1 + hcl.tanh(hcl.sqrt(2 / 3.141593) * (inp[x,y] + 0.044715 * hcl.power(inp[x,y], 3)))),
-                "outp")
-        return outp
-
-    s = hcl.create_schedule([inp], kernel)
-    f = hcl.build(s, target=target)
+def GELU(m, n):
+    def kernel(input: float32[m, n]) -> float32[m, n]:
+        output: float32[m, n] = 0.0
+        for i, j in allo.grid(m, n):
+            output[i,j] = 0.5 * input[i, j] * (1.0 + allo.tanh(allo.sqrt(2.0 / 3.1415926) * (input[i, j] + 0.044715 * allo.power(input[i, j], 3.0))))
+        return output
+    
+    s = allo.customize(kernel)
+    f = s.build()
+    print(s.module)
     return f
 
 
-def GELU_pwl(m, n, dtype=hcl.Float(), target=None):
-    inp = hcl.placeholder((m, n), dtype=dtype, name="inp")
-    outp = hcl.placeholder((m, n), dtype=dtype, name="outp")
-
-    def kernel(inp, outp):
-        def gelu_update(i, j):
-            with hcl.if_(inp[i, j] < -3):
-                outp[i, j] = 0
-            with hcl.elif_(inp[i, j] < -1):
-                outp[i, j] = -0.0773 * (inp[i, j]+3) - 0.004
-            with hcl.elif_(inp[i, j] < 0):
-                outp[i, j] = 0.1587 * inp[i, j]
-            with hcl.elif_(inp[i, j] < 1):
-                outp[i, j] = 0.8413 * inp[i, j]
-            with hcl.elif_(inp[i, j] < 3):
-                outp[i, j] = 1.0773 * (inp[i, j]-1) + 0.8413
-            with hcl.else_():
-                outp[i, j] = inp[i, j]
-
-        hcl.mutate(inp.shape, lambda x, y: gelu_update(x, y)) 
-        
-    s = hcl.create_schedule([inp, outp], kernel)
-    f = hcl.build(s, target=target)
+def GELU_approx(m, n):
+    def kernel(input: float32[m, n]) -> float32[m,n]:
+        output: float32[m, n] = 0.0
+        for i, j in allo.grid(m,n):
+            if(input[i, j] < -3.0):
+                output[i, j] = 0.0
+            elif(input[i, j] < -1.0):
+                output[i, j] = -0.0773 * (input[i, j]+3.0) - 0.004
+            elif(input[i, j] < 0.0):
+                output[i, j] = 0.1587 * input[i, j]
+            elif(input[i, j] < 1.0):
+                output[i, j] = 0.8413 * input[i, j]
+            elif(input[i, j] < 3.0):
+                output[i, j] = 1.0773 * (input[i, j]-1.0) + 0.8413
+            else:
+                output[i, j] = input[i, j]
+        return output
+    s = allo.customize(kernel)
+    f = s.build()
     return f
 
-def kernel_test(ktype, dtype, m=1, n=1, k=None, gamma=1, beta=0, target=None):
-    hcl.init(dtype)
-
+def kernel_test(ktype, m, n, k, target=None):
     if ktype == "Matmul":
-        f = Matmul(m, n, k, dtype, target)
-        np_1 = np.random.uniform(-1, 1, size=(m, k))
-        np_2 = np.random.uniform(-1, 1, size=(k, n))
+        f = Matmul(m, n, k)
+        np_1 = np.float32(np.random.uniform(-1, 1, size = (m, k)))
+        np_2 = np.float32(np.random.uniform(-1, 1, size = (k, n)))
         np_3 = np.matmul(np_1, np_2)
+        np_4 = np.float32(np.zeros((m, n)))
 
-        hcl_m1 = hcl.asarray(np_1, dtype=dtype)
-        hcl_m2 = hcl.asarray(np_2, dtype=dtype)
-        hcl_m3 = hcl.asarray(np.zeros((m, n)), dtype=dtype)
-        f(hcl_m1, hcl_m2, hcl_m3)
-        print("golden ouput is: \n", np_3)
-        print("Test ouput is: \n", hcl_m3.asnumpy())
-        np.testing.assert_allclose(hcl_m3.asnumpy(), np_3, rtol=1e-03)
-    
+        f(np_1, np_2, np_4)
+        print("Golden ouput is: \n", np_3)
+        print("Test ouput is: \n", np_4)
+        np.testing.assert_allclose(np_4, np_3, rtol=1e-03)
+
     elif ktype == "Softmax":
-        f = Softmax(m, n, dtype, target)
-        np_1 = np.random.uniform(-1, 1, size=(m, n))
+        f = Softmax(m, n)
+        np_1 = np.float32(np.random.uniform(-1, 1, size=(m, n)))
         np_2 = np.exp(np_1) / np.sum(np.exp(np_1), axis=-1, keepdims=True)
+        np_3 = np.float32(np.zeros((m,n)))
 
-        hcl_m1 = hcl.asarray(np_1, dtype=dtype)
-        hcl_m2 = hcl.asarray(np.zeros((m, n)), dtype=dtype)
-        f(hcl_m1, hcl_m2)
+        np_3 = f(np_1)
         print("Test input is: \n", np_1)
         print("golden output is: \n", np_2)
-        print("Test ouput is: \n", hcl_m2.asnumpy())
-        np.testing.assert_allclose(hcl_m2.asnumpy(), np_2, rtol=1e-03)
+        print("Test ouput is: \n", np_3)
+        np.testing.assert_allclose(np_3, np_2, rtol=1e-03)
         
     elif ktype == "Layernorm":
-        f = Layernorm(m, n, True, dtype, target)
-        np_1 = np.random.uniform(-1, 1, size=(m, n))
-        gamma = 2
-        beta = 1
-        
+        f = Layernorm(m, n)
+        np_1 = np.float32(np.random.uniform(-1, 1, size=(m, n)))
+        gamma = np.float32(np.random.uniform(-1, 1, size=(n, )))
+        beta = np.float32(np.random.uniform(-1, 1, size=(n, )))
+
         mean = np.mean(np_1, axis=-1, keepdims=True)
         var = np.var(np_1, axis=-1, keepdims=True)
-        np_2 = ((np_1 - mean) / np.sqrt(var + 1e-5)) * gamma + beta
-        
-        hcl_m1 = hcl.asarray(np_1, dtype=dtype)        
-        hcl_m2 = hcl.asarray(np.zeros((m, n)), dtype=dtype)
-        f(hcl_m1, gamma, beta, hcl_m2)
+        np_2 = (np_1 - mean) / np.sqrt(var + 1e-5)
+        np_2 = np_2 * gamma + beta
+        np_3 = np.float32(np.zeros((m, n)))
+
+        f(np_1, gamma, beta, np_3)
 
         print("Test input is: \n", np_1)
         print("golden output is: \n", np_2)
-        print("Test ouput is: \n", hcl_m2.asnumpy())
-        np.testing.assert_allclose(hcl_m2.asnumpy(), np_2, rtol=1e-03)
+        print("Test ouput is: \n", np_3)
+        np.testing.assert_allclose(np_3, np_2, rtol=1e-03)
 
     elif ktype == "GELU":
-        f = GELU(m, n, dtype, target)
-        np_1 = np.random.uniform(-10, 10, size=(m, n))
+        f = GELU(m, n)
+        np_1 = np.float32(np.random.uniform(-1, 1, size=(m, n)))
         np_2 = 0.5 * np_1 * (1 + np.tanh(np.sqrt(2 / np.pi) * (np_1 + 0.044715 * np.power(np_1, 3))))
-        # if gamma is not None and beta is not None:
-        #     np_2 = np_2 * gamma + beta
-
-        hcl_m1 = hcl.asarray(np_1, dtype=dtype)
-        hcl_m2 = hcl.asarray(np.zeros((m, n)), dtype=dtype)
-        f(hcl_m1, hcl_m2)
+        np_3 = np.float32(np.zeros((m, n)))
+        
+        f(np_1, np_3)
         print("Test input is: \n", np_1)
         print("golden output is: \n", np_2)
-        print("Test ouput is: \n", hcl_m2.asnumpy())
-        np.testing.assert_allclose(hcl_m2.asnumpy(), np_2, rtol=1e-03)
+        print("Test ouput is: \n", np_3)
+        np.testing.assert_allclose(np_3, np_2, rtol=1e-03)
+
+    elif ktype == "GELU_approx":
+        f = GELU_approx(m, n)
+        np_1 = np.float32(np.random.uniform(-10, 10, size=(m, n)))
+        np_2 = np.float32(np.zeros((m, n)))
+        for i in range(m):
+            for j in range(n):
+                if(np_1[i, j] < -3):
+                    np_2[i, j] = 0
+                elif(np_1[i, j] < -1):
+                    np_2[i, j] = -0.0773 * (np_1[i, j]+3) - 0.004
+                elif(np_1[i, j] < 0):
+                    np_2[i, j] = 0.1587 * np_1[i, j]
+                elif(np_1[i, j] < 1):
+                    np_2[i, j] = 0.8413 * np_1[i, j]
+                elif(np_1[i, j] < 3):
+                    np_2[i, j] = 1.0773 * (np_1[i, j]-1) + 0.8413
+                else:
+                    np_2[i, j] = np_1[i, j]
+
+        np_3 = np.float32(np.zeros((m, n)))
         
-kernel_test("Matmul", hcl.Float(), 3, 3, 3)
+        f(np_1, np_3)
+        print("Test input is: \n", np_1)
+        print("golden output is: \n", np_2)
+        print("Test ouput is: \n", np_3)
+        np.testing.assert_allclose(np_3, np_2, rtol=1e-03)
+        
+kernel_test("Softmax", m=4, n=4, k=4)
