@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity PE38 is
+entity PE181 is
 port (
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
@@ -36,7 +36,7 @@ port (
 end;
 
 
-architecture behav of PE38 is 
+architecture behav of PE181 is 
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
@@ -165,7 +165,7 @@ architecture behav of PE38 is
 
 
 begin
-    gemm_systolic_arrbkb_U390 : component gemm_systolic_arrbkb
+    gemm_systolic_arrbkb_U1386 : component gemm_systolic_arrbkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -180,7 +180,7 @@ begin
         ce => grp_fu_150_ce,
         dout => grp_fu_150_p2);
 
-    gemm_systolic_arrcud_U391 : component gemm_systolic_arrcud
+    gemm_systolic_arrcud_U1387 : component gemm_systolic_arrcud
     generic map (
         ID => 1,
         NUM_STAGE => 4,

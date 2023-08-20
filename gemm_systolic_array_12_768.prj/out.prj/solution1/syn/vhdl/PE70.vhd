@@ -165,7 +165,7 @@ architecture behav of PE70 is
 
 
 begin
-    gemm_systolic_arrbkb_U616 : component gemm_systolic_arrbkb
+    gemm_systolic_arrbkb_U609 : component gemm_systolic_arrbkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -180,7 +180,7 @@ begin
         ce => grp_fu_150_ce,
         dout => grp_fu_150_p2);
 
-    gemm_systolic_arrcud_U617 : component gemm_systolic_arrcud
+    gemm_systolic_arrcud_U610 : component gemm_systolic_arrcud
     generic map (
         ID => 1,
         NUM_STAGE => 4,
