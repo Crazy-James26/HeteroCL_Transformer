@@ -127,13 +127,13 @@ struct init_block_B_proc : public sc_module {
     sc_signal< sc_logic > block_B_loader_11_V_blk_n;
     sc_signal< sc_lv<6> > jj_0_i_0_read_reg_542;
     sc_signal< bool > ap_block_state1;
-    sc_signal< sc_lv<10> > add_ln40_fu_513_p2;
-    sc_signal< sc_lv<10> > add_ln40_reg_550;
+    sc_signal< sc_lv<10> > add_ln41_fu_513_p2;
+    sc_signal< sc_lv<10> > add_ln41_reg_550;
     sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_lv<1> > icmp_ln40_fu_507_p2;
+    sc_signal< sc_lv<1> > icmp_ln41_fu_507_p2;
     sc_signal< sc_lv<10> > k3_0_i_0_i_reg_496;
     sc_signal< bool > ap_block_state3;
-    sc_signal< sc_lv<64> > zext_ln43_fu_526_p1;
+    sc_signal< sc_lv<64> > zext_ln44_fu_526_p1;
     sc_signal< sc_lv<16> > tmp_s_fu_519_p3;
     sc_signal< sc_lv<3> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -175,7 +175,7 @@ struct init_block_B_proc : public sc_module {
     void thread_B_8_ce0();
     void thread_B_9_address0();
     void thread_B_9_ce0();
-    void thread_add_ln40_fu_513_p2();
+    void thread_add_ln41_fu_513_p2();
     void thread_ap_CS_fsm_state1();
     void thread_ap_CS_fsm_state2();
     void thread_ap_CS_fsm_state3();
@@ -220,11 +220,11 @@ struct init_block_B_proc : public sc_module {
     void thread_block_B_loader_9_V_blk_n();
     void thread_block_B_loader_9_V_din();
     void thread_block_B_loader_9_V_write();
-    void thread_icmp_ln40_fu_507_p2();
+    void thread_icmp_ln41_fu_507_p2();
     void thread_jj_0_i_0_blk_n();
     void thread_jj_0_i_0_read();
     void thread_tmp_s_fu_519_p3();
-    void thread_zext_ln43_fu_526_p1();
+    void thread_zext_ln44_fu_526_p1();
     void thread_ap_NS_fsm();
 };
 

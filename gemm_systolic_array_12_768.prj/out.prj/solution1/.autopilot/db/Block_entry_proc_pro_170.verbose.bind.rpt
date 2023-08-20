@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Block_entry_proc_pro_170'
 ================================================================
-* Date:           Sat Aug 19 05:51:08 2023
+* Date:           Sun Aug 20 05:08:25 2023
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        out.prj
@@ -75,7 +75,7 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %block_C_9_91180, float 0.000000e+00)" [gemm_systolic_array.cpp:54]   --->   Operation 2 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %block_C_9_91180, float 0.000000e+00)" [gemm_systolic_array.cpp:55]   --->   Operation 2 'write' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 3 'ret' <Predicate = true> <Delay = 0.00>
 
 
@@ -97,7 +97,7 @@ Port [ block_C_9_91180]:  wired=1; compound=0; hidden=0; nouse=0; global=0; stat
 
 <LifeTime>
 <method=bitvector/>
-write_ln54 (write) [ 00]
+write_ln55 (write) [ 00]
 ret_ln0    (ret  ) [ 00]
 </LifeTime>
 
@@ -131,7 +131,7 @@ ret_ln0    (ret  ) [ 00]
 </bind>
 </comp>
 
-<comp id="6" class="1004" name="write_ln54_write_fu_6">
+<comp id="6" class="1004" name="write_ln55_write_fu_6">
 <pin_list>
 <pin id="7" dir="0" index="0" bw="0" slack="0"/>
 <pin id="8" dir="0" index="1" bw="32" slack="0"/>
@@ -140,7 +140,7 @@ ret_ln0    (ret  ) [ 00]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln54/1 "/>
+<opset="write_ln55/1 "/>
 </bind>
 </comp>
 
@@ -174,7 +174,7 @@ ret_ln0    (ret  ) [ 00]
 |----------|-----------------------|
 | Operation|    Functional Unit    |
 |----------|-----------------------|
-|   write  | write_ln54_write_fu_6 |
+|   write  | write_ln55_write_fu_6 |
 |----------|-----------------------|
 |   Total  |                       |
 |----------|-----------------------|

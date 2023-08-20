@@ -17,14 +17,17 @@
 namespace ap_rtl {
 
 struct PE50 : public sc_module {
-    // Port declarations 22
+    // Port declarations 25
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
+    sc_in< sc_logic > start_full_n;
     sc_out< sc_logic > ap_done;
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
+    sc_out< sc_logic > start_out;
+    sc_out< sc_logic > start_write;
     sc_in< sc_lv<32> > A_in_V_dout;
     sc_in< sc_logic > A_in_V_empty_n;
     sc_out< sc_logic > A_in_V_read;
@@ -50,11 +53,14 @@ struct PE50 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    gemm_systolic_arrbkb<1,5,32,32,32>* gemm_systolic_arrbkb_U476;
-    gemm_systolic_arrcud<1,4,32,32,32>* gemm_systolic_arrcud_U477;
+    gemm_systolic_arrbkb<1,5,32,32,32>* gemm_systolic_arrbkb_U469;
+    gemm_systolic_arrcud<1,4,32,32,32>* gemm_systolic_arrcud_U470;
+    sc_signal< sc_logic > real_start;
+    sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<7> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
+    sc_signal< sc_logic > internal_ap_ready;
     sc_signal< sc_logic > A_in_V_blk_n;
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;
@@ -119,8 +125,8 @@ struct PE50 : public sc_module {
     static const sc_lv<7> ap_ST_fsm_pp0_stage3;
     static const sc_lv<7> ap_ST_fsm_pp0_stage4;
     static const sc_lv<7> ap_ST_fsm_state11;
-    static const sc_lv<32> ap_const_lv32_0;
     static const bool ap_const_boolean_1;
+    static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<32> ap_const_lv32_1;
     static const bool ap_const_boolean_0;
     static const sc_lv<1> ap_const_lv1_0;
@@ -189,7 +195,11 @@ struct PE50 : public sc_module {
     void thread_grp_fu_150_ce();
     void thread_grp_fu_156_ce();
     void thread_icmp_ln8_fu_162_p2();
+    void thread_internal_ap_ready();
     void thread_k_fu_168_p2();
+    void thread_real_start();
+    void thread_start_out();
+    void thread_start_write();
     void thread_ap_NS_fsm();
 };
 

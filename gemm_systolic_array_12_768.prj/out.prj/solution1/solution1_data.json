@@ -383,7 +383,6 @@
       "impl\/vhdl\/init_block_A_proc.vhd",
       "impl\/vhdl\/init_block_B_proc.vhd",
       "impl\/vhdl\/PE.vhd",
-      "impl\/vhdl\/PE38.vhd",
       "impl\/vhdl\/PE39.vhd",
       "impl\/vhdl\/PE40.vhd",
       "impl\/vhdl\/PE41.vhd",
@@ -526,6 +525,7 @@
       "impl\/vhdl\/PE178.vhd",
       "impl\/vhdl\/PE179.vhd",
       "impl\/vhdl\/PE180.vhd",
+      "impl\/vhdl\/PE181.vhd",
       "impl\/vhdl\/start_for_datafloeOg.vhd",
       "impl\/vhdl\/start_for_systolidEe.vhd",
       "impl\/vhdl\/systolic_array.vhd",
@@ -835,7 +835,6 @@
       "impl\/verilog\/init_block_A_proc.v",
       "impl\/verilog\/init_block_B_proc.v",
       "impl\/verilog\/PE.v",
-      "impl\/verilog\/PE38.v",
       "impl\/verilog\/PE39.v",
       "impl\/verilog\/PE40.v",
       "impl\/verilog\/PE41.v",
@@ -978,6 +977,7 @@
       "impl\/verilog\/PE178.v",
       "impl\/verilog\/PE179.v",
       "impl\/verilog\/PE180.v",
+      "impl\/verilog\/PE181.v",
       "impl\/verilog\/start_for_datafloeOg.v",
       "impl\/verilog\/start_for_systolidEe.v",
       "impl\/verilog\/systolic_array.v",
@@ -990,11 +990,11 @@
       "impl\/misc\/gemm_systolic_array_ap_fadd_3_full_dsp_32_ip.tcl",
       "impl\/misc\/gemm_systolic_array_ap_fmul_2_max_dsp_32_ip.tcl"
     ],
-    "DesignXml": "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array.prj\/out.prj\/solution1\/.autopilot\/db\/gemm_systolic_array.design.xml",
-    "DebugDir": "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array.prj\/out.prj\/solution1\/.debug",
+    "DesignXml": "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array_12_768.prj\/out.prj\/solution1\/.autopilot\/db\/gemm_systolic_array.design.xml",
+    "DebugDir": "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array_12_768.prj\/out.prj\/solution1\/.debug",
     "ProtoInst": [
-      "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array.prj\/out.prj\/solution1\/.debug\/systolic.protoinst",
-      "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array.prj\/out.prj\/solution1\/.debug\/gemm_systolic_array.protoinst"
+      "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array_12_768.prj\/out.prj\/solution1\/.debug\/systolic.protoinst",
+      "\/home\/jz2292\/project\/transformer\/heterocl_file\/gemm_systolic_array_12_768.prj\/out.prj\/solution1\/.debug\/gemm_systolic_array.protoinst"
     ]
   },
   "SubcoreInfo": {
@@ -18885,16 +18885,8 @@
               "InstanceName": "systolic_array_U0",
               "Instances": [
                 {
-                  "ModuleName": "PE38",
-                  "InstanceName": "PE38_U0"
-                },
-                {
                   "ModuleName": "PE39",
                   "InstanceName": "PE39_U0"
-                },
-                {
-                  "ModuleName": "PE50",
-                  "InstanceName": "PE50_U0"
                 },
                 {
                   "ModuleName": "PE40",
@@ -18903,10 +18895,6 @@
                 {
                   "ModuleName": "PE51",
                   "InstanceName": "PE51_U0"
-                },
-                {
-                  "ModuleName": "PE62",
-                  "InstanceName": "PE62_U0"
                 },
                 {
                   "ModuleName": "PE41",
@@ -18919,10 +18907,6 @@
                 {
                   "ModuleName": "PE63",
                   "InstanceName": "PE63_U0"
-                },
-                {
-                  "ModuleName": "PE74",
-                  "InstanceName": "PE74_U0"
                 },
                 {
                   "ModuleName": "PE42",
@@ -18939,10 +18923,6 @@
                 {
                   "ModuleName": "PE75",
                   "InstanceName": "PE75_U0"
-                },
-                {
-                  "ModuleName": "PE86",
-                  "InstanceName": "PE86_U0"
                 },
                 {
                   "ModuleName": "PE43",
@@ -18963,10 +18943,6 @@
                 {
                   "ModuleName": "PE87",
                   "InstanceName": "PE87_U0"
-                },
-                {
-                  "ModuleName": "PE98",
-                  "InstanceName": "PE98_U0"
                 },
                 {
                   "ModuleName": "PE44",
@@ -18991,10 +18967,6 @@
                 {
                   "ModuleName": "PE99",
                   "InstanceName": "PE99_U0"
-                },
-                {
-                  "ModuleName": "PE110",
-                  "InstanceName": "PE110_U0"
                 },
                 {
                   "ModuleName": "PE45",
@@ -19023,10 +18995,6 @@
                 {
                   "ModuleName": "PE111",
                   "InstanceName": "PE111_U0"
-                },
-                {
-                  "ModuleName": "PE122",
-                  "InstanceName": "PE122_U0"
                 },
                 {
                   "ModuleName": "PE46",
@@ -19059,10 +19027,6 @@
                 {
                   "ModuleName": "PE123",
                   "InstanceName": "PE123_U0"
-                },
-                {
-                  "ModuleName": "PE134",
-                  "InstanceName": "PE134_U0"
                 },
                 {
                   "ModuleName": "PE47",
@@ -19099,10 +19063,6 @@
                 {
                   "ModuleName": "PE135",
                   "InstanceName": "PE135_U0"
-                },
-                {
-                  "ModuleName": "PE146",
-                  "InstanceName": "PE146_U0"
                 },
                 {
                   "ModuleName": "PE48",
@@ -19143,10 +19103,6 @@
                 {
                   "ModuleName": "PE147",
                   "InstanceName": "PE147_U0"
-                },
-                {
-                  "ModuleName": "PE158",
-                  "InstanceName": "PE158_U0"
                 },
                 {
                   "ModuleName": "PE49",
@@ -19193,8 +19149,8 @@
                   "InstanceName": "PE159_U0"
                 },
                 {
-                  "ModuleName": "PE170",
-                  "InstanceName": "PE170_U0"
+                  "ModuleName": "PE50",
+                  "InstanceName": "PE50_U0"
                 },
                 {
                   "ModuleName": "PE61",
@@ -19241,6 +19197,10 @@
                   "InstanceName": "PE171_U0"
                 },
                 {
+                  "ModuleName": "PE62",
+                  "InstanceName": "PE62_U0"
+                },
+                {
                   "ModuleName": "PE73",
                   "InstanceName": "PE73_U0"
                 },
@@ -19281,6 +19241,10 @@
                   "InstanceName": "PE172_U0"
                 },
                 {
+                  "ModuleName": "PE74",
+                  "InstanceName": "PE74_U0"
+                },
+                {
                   "ModuleName": "PE85",
                   "InstanceName": "PE85_U0"
                 },
@@ -19317,6 +19281,10 @@
                   "InstanceName": "PE173_U0"
                 },
                 {
+                  "ModuleName": "PE86",
+                  "InstanceName": "PE86_U0"
+                },
+                {
                   "ModuleName": "PE97",
                   "InstanceName": "PE97_U0"
                 },
@@ -19349,6 +19317,10 @@
                   "InstanceName": "PE174_U0"
                 },
                 {
+                  "ModuleName": "PE98",
+                  "InstanceName": "PE98_U0"
+                },
+                {
                   "ModuleName": "PE109",
                   "InstanceName": "PE109_U0"
                 },
@@ -19377,6 +19349,10 @@
                   "InstanceName": "PE175_U0"
                 },
                 {
+                  "ModuleName": "PE110",
+                  "InstanceName": "PE110_U0"
+                },
+                {
                   "ModuleName": "PE121",
                   "InstanceName": "PE121_U0"
                 },
@@ -19401,6 +19377,10 @@
                   "InstanceName": "PE176_U0"
                 },
                 {
+                  "ModuleName": "PE122",
+                  "InstanceName": "PE122_U0"
+                },
+                {
                   "ModuleName": "PE133",
                   "InstanceName": "PE133_U0"
                 },
@@ -19421,6 +19401,10 @@
                   "InstanceName": "PE177_U0"
                 },
                 {
+                  "ModuleName": "PE134",
+                  "InstanceName": "PE134_U0"
+                },
+                {
                   "ModuleName": "PE145",
                   "InstanceName": "PE145_U0"
                 },
@@ -19437,6 +19421,10 @@
                   "InstanceName": "PE178_U0"
                 },
                 {
+                  "ModuleName": "PE146",
+                  "InstanceName": "PE146_U0"
+                },
+                {
                   "ModuleName": "PE157",
                   "InstanceName": "PE157_U0"
                 },
@@ -19449,12 +19437,24 @@
                   "InstanceName": "PE179_U0"
                 },
                 {
+                  "ModuleName": "PE158",
+                  "InstanceName": "PE158_U0"
+                },
+                {
                   "ModuleName": "PE169",
                   "InstanceName": "PE169_U0"
                 },
                 {
                   "ModuleName": "PE180",
                   "InstanceName": "PE180_U0"
+                },
+                {
+                  "ModuleName": "PE170",
+                  "InstanceName": "PE170_U0"
+                },
+                {
+                  "ModuleName": "PE181",
+                  "InstanceName": "PE181_U0"
                 },
                 {
                   "ModuleName": "PE",
@@ -21685,13 +21685,6 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "PE38": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "PE39": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -22680,6 +22673,13 @@
         "isOneStateSeq": "0"
       },
       "PE180": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "PE181": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -27030,35 +27030,6 @@
           "URAM": "0"
         }
       },
-      "PE38": {
-        "Latency": {
-          "LatencyBest": "3845",
-          "LatencyAvg": "3845",
-          "LatencyWorst": "3845",
-          "PipelineII": "3845",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "9.336"
-        },
-        "Loops": [{
-            "Name": "PE_LOOP",
-            "TripCount": "768",
-            "Latency": "3843",
-            "PipelineII": "5",
-            "PipelineDepth": "9"
-          }],
-        "Area": {
-          "DSP48E": "5",
-          "FF": "476",
-          "LUT": "872",
-          "BRAM_18K": "0",
-          "URAM": "0"
-        }
-      },
       "PE39": {
         "Latency": {
           "LatencyBest": "3845",
@@ -27372,8 +27343,8 @@
           }],
         "Area": {
           "DSP48E": "5",
-          "FF": "477",
-          "LUT": "881",
+          "FF": "476",
+          "LUT": "872",
           "BRAM_18K": "0",
           "URAM": "0"
         }
@@ -27401,8 +27372,8 @@
           }],
         "Area": {
           "DSP48E": "5",
-          "FF": "476",
-          "LUT": "872",
+          "FF": "477",
+          "LUT": "881",
           "BRAM_18K": "0",
           "URAM": "0"
         }
@@ -31177,6 +31148,35 @@
           "URAM": "0"
         }
       },
+      "PE181": {
+        "Latency": {
+          "LatencyBest": "3845",
+          "LatencyAvg": "3845",
+          "LatencyWorst": "3845",
+          "PipelineII": "3845",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.336"
+        },
+        "Loops": [{
+            "Name": "PE_LOOP",
+            "TripCount": "768",
+            "Latency": "3843",
+            "PipelineII": "5",
+            "PipelineDepth": "9"
+          }],
+        "Area": {
+          "DSP48E": "5",
+          "FF": "476",
+          "LUT": "872",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
       "PE": {
         "Latency": {
           "LatencyBest": "3845",
@@ -34488,7 +34488,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2023-08-19 06:05:58 EDT",
+    "Time": "2023-08-20 05:23:42 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2.1"
   }

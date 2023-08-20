@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'PE49'
 ================================================================
-* Date:           Sat Aug 19 05:59:24 2023
+* Date:           Sun Aug 20 05:16:59 2023
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        out.prj
@@ -58,10 +58,10 @@
 |FIFO             |        -|      -|       -|      -|    -|
 |Instance         |        -|      5|     348|    711|    -|
 |Memory           |        -|      -|       -|      -|    -|
-|Multiplexer      |        -|      -|       -|    131|    -|
-|Register         |        -|      -|     129|      -|    -|
+|Multiplexer      |        -|      -|       -|    122|    -|
+|Register         |        -|      -|     128|      -|    -|
 +-----------------+---------+-------+--------+-------+-----+
-|Total            |        0|      5|     477|    881|    0|
+|Total            |        0|      5|     476|    872|    0|
 +-----------------+---------+-------+--------+-------+-----+
 |Available        |      280|    220|  106400|  53200|    0|
 +-----------------+---------+-------+--------+-------+-----+
@@ -73,8 +73,8 @@
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
     |          Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
-    |gemm_systolic_arrbkb_U469  |gemm_systolic_arrbkb  |        0|      2|  205|  390|    0|
-    |gemm_systolic_arrcud_U470  |gemm_systolic_arrcud  |        0|      3|  143|  321|    0|
+    |gemm_systolic_arrbkb_U462  |gemm_systolic_arrbkb  |        0|      2|  205|  390|    0|
+    |gemm_systolic_arrcud_U463  |gemm_systolic_arrcud  |        0|      3|  143|  321|    0|
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
     |Total                      |                      |        0|      5|  348|  711|    0|
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
@@ -118,9 +118,8 @@
     |ap_enable_reg_pp0_iter1       |   9|          2|    1|          2|
     |ap_phi_mux_k_0_phi_fu_143_p4  |   9|          2|   10|         20|
     |k_0_reg_139                   |   9|          2|   10|         20|
-    |real_start                    |   9|          2|    1|          2|
     +------------------------------+----+-----------+-----+-----------+
-    |Total                         | 131|         28|   60|        126|
+    |Total                         | 122|         26|   59|        124|
     +------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -135,12 +134,11 @@
     |icmp_ln8_reg_174_pp0_iter1_reg  |   1|   0|    1|          0|
     |k_0_reg_139                     |  10|   0|   10|          0|
     |k_reg_178                       |  10|   0|   10|          0|
-    |start_once_reg                  |   1|   0|    1|          0|
     |tmp_97_reg_189                  |  32|   0|   32|          0|
     |tmp_reg_183                     |  32|   0|   32|          0|
     |tmp_s_reg_195                   |  32|   0|   32|          0|
     +--------------------------------+----+----+-----+-----------+
-    |Total                           | 129|   0|  129|          0|
+    |Total                           | 128|   0|  128|          0|
     +--------------------------------+----+----+-----+-----------+
 
 
@@ -155,13 +153,10 @@
 |ap_clk          |  in |    1| ap_ctrl_hs |     PE49     | return value |
 |ap_rst          |  in |    1| ap_ctrl_hs |     PE49     | return value |
 |ap_start        |  in |    1| ap_ctrl_hs |     PE49     | return value |
-|start_full_n    |  in |    1| ap_ctrl_hs |     PE49     | return value |
 |ap_done         | out |    1| ap_ctrl_hs |     PE49     | return value |
 |ap_continue     |  in |    1| ap_ctrl_hs |     PE49     | return value |
 |ap_idle         | out |    1| ap_ctrl_hs |     PE49     | return value |
 |ap_ready        | out |    1| ap_ctrl_hs |     PE49     | return value |
-|start_out       | out |    1| ap_ctrl_hs |     PE49     | return value |
-|start_write     | out |    1| ap_ctrl_hs |     PE49     | return value |
 |A_in_V_dout     |  in |   32|   ap_fifo  |    A_in_V    |    pointer   |
 |A_in_V_empty_n  |  in |    1|   ap_fifo  |    A_in_V    |    pointer   |
 |A_in_V_read     | out |    1|   ap_fifo  |    A_in_V    |    pointer   |

@@ -56,7 +56,7 @@ struct Block_entry_proc_pro_67 : public sc_module {
     sc_signal< sc_lv<32> > grp_fu_51_p2;
     sc_signal< sc_lv<32> > tmp_i_0_6_4_i_reg_71;
     sc_signal< sc_logic > ap_CS_fsm_state7;
-    sc_signal< sc_lv<64> > zext_ln54_fu_56_p1;
+    sc_signal< sc_lv<64> > zext_ln55_fu_56_p1;
     sc_signal< sc_logic > ap_CS_fsm_state8;
     sc_signal< sc_logic > ap_CS_fsm_state3;
     sc_signal< sc_lv<8> > ap_NS_fsm;
@@ -95,7 +95,7 @@ struct Block_entry_proc_pro_67 : public sc_module {
     void thread_ap_ready();
     void thread_jj_0_i_0_blk_n();
     void thread_jj_0_i_0_read();
-    void thread_zext_ln54_fu_56_p1();
+    void thread_zext_ln55_fu_56_p1();
     void thread_ap_NS_fsm();
 };
 

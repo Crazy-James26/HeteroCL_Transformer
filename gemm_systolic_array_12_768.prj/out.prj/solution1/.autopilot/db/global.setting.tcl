@@ -42,7 +42,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg484:-1
 set SourceFiles {sc {} c {../../systolic_array.cpp ../../gemm_systolic_array.cpp}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile /home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj/out.prj/solution1/solution1.directive
+set DirectiveFile /home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj/out.prj/solution1/solution1.directive
 set TBFiles {verilog ../../gemm_systolic_array_tb.cpp bc ../../gemm_systolic_array_tb.cpp vhdl ../../gemm_systolic_array_tb.cpp sc ../../gemm_systolic_array_tb.cpp cas ../../gemm_systolic_array_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

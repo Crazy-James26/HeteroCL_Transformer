@@ -104,8 +104,8 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "B_out_V_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "C_out", "Type" : "OVld", "Direction" : "IO", "DependentProc" : "0", "DependentChan" : "0"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gemm_systolic_arrbkb_U917", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gemm_systolic_arrcud_U918", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gemm_systolic_arrbkb_U910", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gemm_systolic_arrcud_U911", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

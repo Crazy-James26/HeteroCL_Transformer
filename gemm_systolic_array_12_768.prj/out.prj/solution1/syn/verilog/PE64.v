@@ -146,7 +146,7 @@ gemm_systolic_arrbkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-gemm_systolic_arrbkb_U574(
+gemm_systolic_arrbkb_U567(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(C_out_i),
@@ -161,7 +161,7 @@ gemm_systolic_arrcud #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-gemm_systolic_arrcud_U575(
+gemm_systolic_arrcud_U568(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(A_in_V_dout),

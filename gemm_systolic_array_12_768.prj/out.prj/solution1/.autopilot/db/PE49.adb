@@ -168,7 +168,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -253,7 +253,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -302,7 +302,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -351,7 +351,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -401,7 +401,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -450,7 +450,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -499,7 +499,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -514,7 +514,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>gemm_systolic_arrcud_U470</rtlName>
+              <rtlName>gemm_systolic_arrcud_U463</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -548,7 +548,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -597,7 +597,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -612,7 +612,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>gemm_systolic_arrbkb_U469</rtlName>
+              <rtlName>gemm_systolic_arrbkb_U462</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -646,7 +646,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -698,7 +698,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -748,7 +748,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -798,7 +798,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -846,7 +846,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array.prj</first>
+                  <first>/home/jz2292/project/transformer/heterocl_file/gemm_systolic_array_12_768.prj</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1810,7 +1810,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>gemm_systolic_arrbkb_U469 (gemm_systolic_arrbkb)</first>
+          <first>gemm_systolic_arrbkb_U462 (gemm_systolic_arrbkb)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -1829,7 +1829,7 @@
           </second>
         </item>
         <item>
-          <first>gemm_systolic_arrcud_U470 (gemm_systolic_arrcud)</first>
+          <first>gemm_systolic_arrcud_U463 (gemm_systolic_arrcud)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2045,7 +2045,7 @@
         <item_version>0</item_version>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>11</count>
+        <count>10</count>
         <item_version>0</item_version>
         <item>
           <first>A_in_V_blk_n</first>
@@ -2277,32 +2277,9 @@
             </item>
           </second>
         </item>
-        <item>
-          <first>real_start</first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Size)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(2Count)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>9</second>
-            </item>
-          </second>
-        </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>12</count>
+        <count>11</count>
         <item_version>0</item_version>
         <item>
           <first>ap_CS_fsm</first>
@@ -2457,25 +2434,6 @@
           </second>
         </item>
         <item>
-          <first>start_once_reg</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
-            </item>
-          </second>
-        </item>
-        <item>
           <first>tmp_97_reg_189</first>
           <second>
             <count>3</count>
@@ -2537,14 +2495,14 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>gemm_systolic_arrbkb_U469</first>
+          <first>gemm_systolic_arrbkb_U462</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>gemm_systolic_arrcud_U470</first>
+          <first>gemm_systolic_arrcud_U463</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -2555,7 +2513,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>gemm_systolic_arrbkb_U469 (gemm_systolic_arrbkb)</first>
+          <first>gemm_systolic_arrbkb_U462 (gemm_systolic_arrbkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2563,7 +2521,7 @@
           </second>
         </item>
         <item>
-          <first>gemm_systolic_arrcud_U470 (gemm_systolic_arrcud)</first>
+          <first>gemm_systolic_arrcud_U463 (gemm_systolic_arrcud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

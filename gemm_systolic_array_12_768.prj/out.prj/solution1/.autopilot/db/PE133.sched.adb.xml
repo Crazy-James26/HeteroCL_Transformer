@@ -87,7 +87,7 @@
 
 <Node id="6" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2334, i32 0, i32 0, [1 x i8]* @p_str2335, [1 x i8]* @p_str2336, [1 x i8]* @p_str2337, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2338, [1 x i8]* @p_str2339)
+:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2245, i32 0, i32 0, [1 x i8]* @p_str2246, [1 x i8]* @p_str2247, [1 x i8]* @p_str2248, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2249, [1 x i8]* @p_str2250)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -102,7 +102,7 @@
 
 <Node id="7" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:1  %empty_2002 = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2327, i32 0, i32 0, [1 x i8]* @p_str2328, [1 x i8]* @p_str2329, [1 x i8]* @p_str2330, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2331, [1 x i8]* @p_str2332)
+:1  %empty_2002 = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2238, i32 0, i32 0, [1 x i8]* @p_str2239, [1 x i8]* @p_str2240, [1 x i8]* @p_str2241, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2242, [1 x i8]* @p_str2243)
 
 ]]></Node>
 <StgValue><ssdm name="empty_2002"/></StgValue>
@@ -117,7 +117,7 @@
 
 <Node id="8" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:2  %empty_2003 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str906, i32 0, i32 0, [1 x i8]* @p_str907, [1 x i8]* @p_str908, [1 x i8]* @p_str909, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str910, [1 x i8]* @p_str911)
+:2  %empty_2003 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str901, i32 0, i32 0, [1 x i8]* @p_str902, [1 x i8]* @p_str903, [1 x i8]* @p_str904, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str905, [1 x i8]* @p_str906)
 
 ]]></Node>
 <StgValue><ssdm name="empty_2003"/></StgValue>
@@ -132,7 +132,7 @@
 
 <Node id="9" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:3  %empty_2004 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str899, i32 0, i32 0, [1 x i8]* @p_str900, [1 x i8]* @p_str901, [1 x i8]* @p_str902, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str903, [1 x i8]* @p_str904)
+:3  %empty_2004 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str894, i32 0, i32 0, [1 x i8]* @p_str895, [1 x i8]* @p_str896, [1 x i8]* @p_str897, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str898, [1 x i8]* @p_str899)
 
 ]]></Node>
 <StgValue><ssdm name="empty_2004"/></StgValue>

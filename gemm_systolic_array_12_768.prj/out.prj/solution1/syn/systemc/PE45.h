@@ -50,8 +50,8 @@ struct PE45 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    gemm_systolic_arrbkb<1,5,32,32,32>* gemm_systolic_arrbkb_U441;
-    gemm_systolic_arrcud<1,4,32,32,32>* gemm_systolic_arrcud_U442;
+    gemm_systolic_arrbkb<1,5,32,32,32>* gemm_systolic_arrbkb_U434;
+    gemm_systolic_arrcud<1,4,32,32,32>* gemm_systolic_arrcud_U435;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<7> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;

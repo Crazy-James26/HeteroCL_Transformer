@@ -37,20 +37,20 @@ const sc_lv<32> PE161::ap_const_lv32_3 = "11";
 const sc_lv<32> PE161::ap_const_lv32_6 = "110";
 
 PE161::PE161(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    gemm_systolic_arrbkb_U1253 = new gemm_systolic_arrbkb<1,5,32,32,32>("gemm_systolic_arrbkb_U1253");
-    gemm_systolic_arrbkb_U1253->clk(ap_clk);
-    gemm_systolic_arrbkb_U1253->reset(ap_rst);
-    gemm_systolic_arrbkb_U1253->din0(C_out_i);
-    gemm_systolic_arrbkb_U1253->din1(tmp_s_reg_195);
-    gemm_systolic_arrbkb_U1253->ce(grp_fu_150_ce);
-    gemm_systolic_arrbkb_U1253->dout(grp_fu_150_p2);
-    gemm_systolic_arrcud_U1254 = new gemm_systolic_arrcud<1,4,32,32,32>("gemm_systolic_arrcud_U1254");
-    gemm_systolic_arrcud_U1254->clk(ap_clk);
-    gemm_systolic_arrcud_U1254->reset(ap_rst);
-    gemm_systolic_arrcud_U1254->din0(A_in_V_dout);
-    gemm_systolic_arrcud_U1254->din1(B_in_V_dout);
-    gemm_systolic_arrcud_U1254->ce(grp_fu_156_ce);
-    gemm_systolic_arrcud_U1254->dout(grp_fu_156_p2);
+    gemm_systolic_arrbkb_U1246 = new gemm_systolic_arrbkb<1,5,32,32,32>("gemm_systolic_arrbkb_U1246");
+    gemm_systolic_arrbkb_U1246->clk(ap_clk);
+    gemm_systolic_arrbkb_U1246->reset(ap_rst);
+    gemm_systolic_arrbkb_U1246->din0(C_out_i);
+    gemm_systolic_arrbkb_U1246->din1(tmp_s_reg_195);
+    gemm_systolic_arrbkb_U1246->ce(grp_fu_150_ce);
+    gemm_systolic_arrbkb_U1246->dout(grp_fu_150_p2);
+    gemm_systolic_arrcud_U1247 = new gemm_systolic_arrcud<1,4,32,32,32>("gemm_systolic_arrcud_U1247");
+    gemm_systolic_arrcud_U1247->clk(ap_clk);
+    gemm_systolic_arrcud_U1247->reset(ap_rst);
+    gemm_systolic_arrcud_U1247->din0(A_in_V_dout);
+    gemm_systolic_arrcud_U1247->din1(B_in_V_dout);
+    gemm_systolic_arrcud_U1247->ce(grp_fu_156_ce);
+    gemm_systolic_arrcud_U1247->dout(grp_fu_156_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -413,8 +413,8 @@ PE161::~PE161() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete gemm_systolic_arrbkb_U1253;
-    delete gemm_systolic_arrcud_U1254;
+    delete gemm_systolic_arrbkb_U1246;
+    delete gemm_systolic_arrcud_U1247;
 }
 
 void PE161::thread_ap_clk_no_reset_() {

@@ -63,7 +63,7 @@ architecture behav of Block_entry_proc_pro_53 is
     signal tmp_i_0_7_6_i_reg_71 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
-    signal zext_ln54_fu_56_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal zext_ln55_fu_56_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_CS_fsm_state8 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state8 : signal is "none";
     signal ap_CS_fsm_state3 : STD_LOGIC;
@@ -139,7 +139,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((jj_0_i_0_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
-                C_7_6_addr_reg_61 <= zext_ln54_fu_56_p1(6 - 1 downto 0);
+                C_7_6_addr_reg_61 <= zext_ln55_fu_56_p1(6 - 1 downto 0);
             end if;
         end if;
     end process;
@@ -188,12 +188,12 @@ begin
         end case;
     end process;
 
-    C_7_6_address0_assign_proc : process(ap_CS_fsm_state1, C_7_6_addr_reg_61, zext_ln54_fu_56_p1, ap_CS_fsm_state8)
+    C_7_6_address0_assign_proc : process(ap_CS_fsm_state1, C_7_6_addr_reg_61, zext_ln55_fu_56_p1, ap_CS_fsm_state8)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
             C_7_6_address0 <= C_7_6_addr_reg_61;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state1)) then 
-            C_7_6_address0 <= zext_ln54_fu_56_p1(6 - 1 downto 0);
+            C_7_6_address0 <= zext_ln55_fu_56_p1(6 - 1 downto 0);
         else 
             C_7_6_address0 <= "XXXXXX";
         end if; 
@@ -281,5 +281,5 @@ begin
         end if; 
     end process;
 
-    zext_ln54_fu_56_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(jj_0_i_0_dout),64));
+    zext_ln55_fu_56_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(jj_0_i_0_dout),64));
 end behav;

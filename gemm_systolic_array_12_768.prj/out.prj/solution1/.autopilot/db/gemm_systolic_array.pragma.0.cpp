@@ -19168,7 +19168,9 @@ void gemm_systolic_array(d_type A[M][K], d_type B[K][N], d_type C[M][N]){_ssdm_S
  hls::stream<d_type> block_B_loader[block_N];
 #pragma HLS STREAM variable=&block_A_loader depth=2
 #pragma HLS STREAM variable=&block_B_loader depth=2
+
  d_type block_C[block_M][block_N];
+#pragma HLS ARRAY_PARTITION variable = &C
 
  block_gemm:
  for(int ii = 0; ii < M/block_M; ii++){
@@ -19183,7 +19185,6 @@ void gemm_systolic_array(d_type A[M][K], d_type B[K][N], d_type C[M][N]){_ssdm_S
  block_C[i][j] = 0;
     }
    }
-
 
    init_block_A:
    for(int k = 0; k < K; k++){
@@ -19213,7 +19214,4 @@ void gemm_systolic_array(d_type A[M][K], d_type B[K][N], d_type C[M][N]){_ssdm_S
    }
   }
  }
-
-
-
 }

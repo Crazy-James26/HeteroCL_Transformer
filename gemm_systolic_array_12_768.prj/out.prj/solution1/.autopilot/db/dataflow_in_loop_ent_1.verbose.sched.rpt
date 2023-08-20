@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dataflow_in_loop_ent_1'
 ================================================================
-* Date:           Sat Aug 19 05:50:24 2023
+* Date:           Sun Aug 20 05:07:40 2023
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        out.prj
@@ -75,7 +75,7 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.63>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(i7* %jj_0_i_0_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str11, [1 x i8]* @p_str12, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str13, [11 x i8]* @ScalarProp_str)"   --->   Operation 2 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(i7* %jj_0_i_0_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str11, [1 x i8]* @p_str12, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str13, [11 x i8]* @ScalarProp_str)"   --->   Operation 2 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%jj_0_i_0_read = call i7 @_ssdm_op_Read.ap_auto.i7(i7 %jj_0_i_0)"   --->   Operation 3 'read' 'jj_0_i_0_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 4 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i7P(i7* %jj_0_i_0_out, i7 %jj_0_i_0_read)"   --->   Operation 4 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 7> <Depth = 2> <FIFO>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 5 'ret' <Predicate = true> <Delay = 0.00>

@@ -19,7 +19,7 @@
 
 <Node id="3" bw="32" op_0_bw="32" op_1_bw="7" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-entry:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(i7* %jj_0_i_0_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str11, [1 x i8]* @p_str12, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str13, [11 x i8]* @ScalarProp_str)
+entry:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(i7* %jj_0_i_0_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str10, [1 x i8]* @p_str11, [1 x i8]* @p_str12, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str13, [11 x i8]* @ScalarProp_str)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -94,7 +94,7 @@ entry:3  ret void
 </dataflow>
 <dataflow id="15" from="StgValue_13" to="empty" fromId="13" toId="2">
 </dataflow>
-<dataflow id="17" from="p_str9" to="empty" fromId="16" toId="2">
+<dataflow id="17" from="p_str8" to="empty" fromId="16" toId="2">
 </dataflow>
 <dataflow id="18" from="StgValue_13" to="empty" fromId="13" toId="2">
 </dataflow>

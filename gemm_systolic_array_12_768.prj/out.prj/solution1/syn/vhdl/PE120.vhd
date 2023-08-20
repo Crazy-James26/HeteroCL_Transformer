@@ -165,7 +165,7 @@ architecture behav of PE120 is
 
 
 begin
-    gemm_systolic_arrbkb_U966 : component gemm_systolic_arrbkb
+    gemm_systolic_arrbkb_U959 : component gemm_systolic_arrbkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -180,7 +180,7 @@ begin
         ce => grp_fu_150_ce,
         dout => grp_fu_150_p2);
 
-    gemm_systolic_arrcud_U967 : component gemm_systolic_arrcud
+    gemm_systolic_arrcud_U960 : component gemm_systolic_arrcud
     generic map (
         ID => 1,
         NUM_STAGE => 4,

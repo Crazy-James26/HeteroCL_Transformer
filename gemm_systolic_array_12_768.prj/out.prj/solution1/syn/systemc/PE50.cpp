@@ -21,8 +21,8 @@ const sc_lv<7> PE50::ap_ST_fsm_pp0_stage2 = "1000";
 const sc_lv<7> PE50::ap_ST_fsm_pp0_stage3 = "10000";
 const sc_lv<7> PE50::ap_ST_fsm_pp0_stage4 = "100000";
 const sc_lv<7> PE50::ap_ST_fsm_state11 = "1000000";
-const sc_lv<32> PE50::ap_const_lv32_0 = "00000000000000000000000000000000";
 const bool PE50::ap_const_boolean_1 = true;
+const sc_lv<32> PE50::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<32> PE50::ap_const_lv32_1 = "1";
 const bool PE50::ap_const_boolean_0 = false;
 const sc_lv<1> PE50::ap_const_lv1_0 = "0";
@@ -37,20 +37,20 @@ const sc_lv<32> PE50::ap_const_lv32_3 = "11";
 const sc_lv<32> PE50::ap_const_lv32_6 = "110";
 
 PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    gemm_systolic_arrbkb_U476 = new gemm_systolic_arrbkb<1,5,32,32,32>("gemm_systolic_arrbkb_U476");
-    gemm_systolic_arrbkb_U476->clk(ap_clk);
-    gemm_systolic_arrbkb_U476->reset(ap_rst);
-    gemm_systolic_arrbkb_U476->din0(C_out_i);
-    gemm_systolic_arrbkb_U476->din1(tmp_s_reg_195);
-    gemm_systolic_arrbkb_U476->ce(grp_fu_150_ce);
-    gemm_systolic_arrbkb_U476->dout(grp_fu_150_p2);
-    gemm_systolic_arrcud_U477 = new gemm_systolic_arrcud<1,4,32,32,32>("gemm_systolic_arrcud_U477");
-    gemm_systolic_arrcud_U477->clk(ap_clk);
-    gemm_systolic_arrcud_U477->reset(ap_rst);
-    gemm_systolic_arrcud_U477->din0(A_in_V_dout);
-    gemm_systolic_arrcud_U477->din1(B_in_V_dout);
-    gemm_systolic_arrcud_U477->ce(grp_fu_156_ce);
-    gemm_systolic_arrcud_U477->dout(grp_fu_156_p2);
+    gemm_systolic_arrbkb_U469 = new gemm_systolic_arrbkb<1,5,32,32,32>("gemm_systolic_arrbkb_U469");
+    gemm_systolic_arrbkb_U469->clk(ap_clk);
+    gemm_systolic_arrbkb_U469->reset(ap_rst);
+    gemm_systolic_arrbkb_U469->din0(C_out_i);
+    gemm_systolic_arrbkb_U469->din1(tmp_s_reg_195);
+    gemm_systolic_arrbkb_U469->ce(grp_fu_150_ce);
+    gemm_systolic_arrbkb_U469->dout(grp_fu_150_p2);
+    gemm_systolic_arrcud_U470 = new gemm_systolic_arrcud<1,4,32,32,32>("gemm_systolic_arrcud_U470");
+    gemm_systolic_arrcud_U470->clk(ap_clk);
+    gemm_systolic_arrcud_U470->reset(ap_rst);
+    gemm_systolic_arrcud_U470->din0(A_in_V_dout);
+    gemm_systolic_arrcud_U470->din1(B_in_V_dout);
+    gemm_systolic_arrcud_U470->ce(grp_fu_156_ce);
+    gemm_systolic_arrcud_U470->dout(grp_fu_156_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -208,7 +208,7 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_ap_block_pp0_stage4_subdone);
 
     SC_METHOD(thread_ap_block_state1);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
 
     SC_METHOD(thread_ap_block_state10_pp0_stage3_iter1);
@@ -246,7 +246,7 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_idle_pp0 );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( ap_start );
+    sensitive << ( real_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_idle_pp0);
@@ -262,7 +262,7 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_enable_reg_pp0_iter1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( internal_ap_ready );
 
     SC_METHOD(thread_grp_fu_150_ce);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
@@ -292,11 +292,26 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_block_pp0_stage0_11001 );
     sensitive << ( ap_phi_mux_k_0_phi_fu_143_p4 );
 
+    SC_METHOD(thread_internal_ap_ready);
+    sensitive << ( ap_CS_fsm_state11 );
+
     SC_METHOD(thread_k_fu_168_p2);
     sensitive << ( ap_phi_mux_k_0_phi_fu_143_p4 );
 
-    SC_METHOD(thread_ap_NS_fsm);
+    SC_METHOD(thread_real_start);
     sensitive << ( ap_start );
+    sensitive << ( start_full_n );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_start_out);
+    sensitive << ( real_start );
+
+    SC_METHOD(thread_start_write);
+    sensitive << ( real_start );
+    sensitive << ( start_once_reg );
+
+    SC_METHOD(thread_ap_NS_fsm);
+    sensitive << ( real_start );
     sensitive << ( ap_done_reg );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
@@ -310,6 +325,7 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_block_pp0_stage1_subdone );
     sensitive << ( ap_block_pp0_stage2_subdone );
 
+    start_once_reg = SC_LOGIC_0;
     ap_done_reg = SC_LOGIC_0;
     ap_CS_fsm = "0000001";
     ap_enable_reg_pp0_iter0 = SC_LOGIC_0;
@@ -325,10 +341,13 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
     sc_trace(mVcdFile, ap_start, "(port)ap_start");
+    sc_trace(mVcdFile, start_full_n, "(port)start_full_n");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
     sc_trace(mVcdFile, ap_continue, "(port)ap_continue");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
     sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
+    sc_trace(mVcdFile, start_out, "(port)start_out");
+    sc_trace(mVcdFile, start_write, "(port)start_write");
     sc_trace(mVcdFile, A_in_V_dout, "(port)A_in_V_dout");
     sc_trace(mVcdFile, A_in_V_empty_n, "(port)A_in_V_empty_n");
     sc_trace(mVcdFile, A_in_V_read, "(port)A_in_V_read");
@@ -346,9 +365,12 @@ PE50::PE50(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, C_out_o_ap_vld, "(port)C_out_o_ap_vld");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
+    sc_trace(mVcdFile, real_start, "real_start");
+    sc_trace(mVcdFile, start_once_reg, "start_once_reg");
     sc_trace(mVcdFile, ap_done_reg, "ap_done_reg");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
+    sc_trace(mVcdFile, internal_ap_ready, "internal_ap_ready");
     sc_trace(mVcdFile, A_in_V_blk_n, "A_in_V_blk_n");
     sc_trace(mVcdFile, ap_CS_fsm_pp0_stage0, "ap_CS_fsm_pp0_stage0");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter0, "ap_enable_reg_pp0_iter0");
@@ -413,8 +435,8 @@ PE50::~PE50() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete gemm_systolic_arrbkb_U476;
-    delete gemm_systolic_arrcud_U477;
+    delete gemm_systolic_arrbkb_U469;
+    delete gemm_systolic_arrcud_U470;
 }
 
 void PE50::thread_ap_clk_no_reset_() {
@@ -440,7 +462,7 @@ void PE50::thread_ap_clk_no_reset_() {
              esl_seteq<1,1,1>(ap_const_logic_1, ap_condition_pp0_exit_iter0_state2.read()))) {
             ap_enable_reg_pp0_iter0 = ap_const_logic_0;
         } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                    !(esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
+                    !(esl_seteq<1,1,1>(ap_const_logic_0, real_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
             ap_enable_reg_pp0_iter0 = ap_const_logic_1;
         }
     }
@@ -453,7 +475,7 @@ void PE50::thread_ap_clk_no_reset_() {
               esl_seteq<1,1,1>(ap_block_pp0_stage3_subdone.read(), ap_const_boolean_0)))) {
             ap_enable_reg_pp0_iter1 = ap_enable_reg_pp0_iter0.read();
         } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                    !(esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
+                    !(esl_seteq<1,1,1>(ap_const_logic_0, real_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
             ap_enable_reg_pp0_iter1 = ap_const_logic_0;
         }
     }
@@ -463,8 +485,18 @@ void PE50::thread_ap_clk_no_reset_() {
          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()))) {
         k_0_reg_139 = k_reg_178.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                !(esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
+                !(esl_seteq<1,1,1>(ap_const_logic_0, real_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
         k_0_reg_139 = ap_const_lv10_0;
+    }
+    if ( ap_rst.read() == ap_const_logic_1) {
+        start_once_reg = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_0, internal_ap_ready.read()))) {
+            start_once_reg = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, internal_ap_ready.read())) {
+            start_once_reg = ap_const_logic_0;
+        }
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
         icmp_ln8_reg_174 = icmp_ln8_fu_162_p2.read();
@@ -704,7 +736,7 @@ void PE50::thread_ap_block_pp0_stage4_subdone() {
 }
 
 void PE50::thread_ap_block_state1() {
-    ap_block_state1 = (esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
+    ap_block_state1 = (esl_seteq<1,1,1>(ap_const_logic_0, real_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1));
 }
 
 void PE50::thread_ap_block_state10_pp0_stage3_iter1() {
@@ -768,7 +800,7 @@ void PE50::thread_ap_enable_pp0() {
 }
 
 void PE50::thread_ap_idle() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) && 
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, real_start.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()))) {
         ap_idle = ap_const_logic_1;
     } else {
@@ -797,11 +829,7 @@ void PE50::thread_ap_phi_mux_k_0_phi_fu_143_p4() {
 }
 
 void PE50::thread_ap_ready() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read())) {
-        ap_ready = ap_const_logic_1;
-    } else {
-        ap_ready = ap_const_logic_0;
-    }
+    ap_ready = internal_ap_ready.read();
 }
 
 void PE50::thread_grp_fu_150_ce() {
@@ -840,14 +868,44 @@ void PE50::thread_icmp_ln8_fu_162_p2() {
     icmp_ln8_fu_162_p2 = (!ap_phi_mux_k_0_phi_fu_143_p4.read().is_01() || !ap_const_lv10_300.is_01())? sc_lv<1>(): sc_lv<1>(ap_phi_mux_k_0_phi_fu_143_p4.read() == ap_const_lv10_300);
 }
 
+void PE50::thread_internal_ap_ready() {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read())) {
+        internal_ap_ready = ap_const_logic_1;
+    } else {
+        internal_ap_ready = ap_const_logic_0;
+    }
+}
+
 void PE50::thread_k_fu_168_p2() {
     k_fu_168_p2 = (!ap_phi_mux_k_0_phi_fu_143_p4.read().is_01() || !ap_const_lv10_1.is_01())? sc_lv<10>(): (sc_biguint<10>(ap_phi_mux_k_0_phi_fu_143_p4.read()) + sc_biguint<10>(ap_const_lv10_1));
+}
+
+void PE50::thread_real_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_full_n.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()))) {
+        real_start = ap_const_logic_0;
+    } else {
+        real_start = ap_start.read();
+    }
+}
+
+void PE50::thread_start_out() {
+    start_out = real_start.read();
+}
+
+void PE50::thread_start_write() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_0, start_once_reg.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, real_start.read()))) {
+        start_write = ap_const_logic_1;
+    } else {
+        start_write = ap_const_logic_0;
+    }
 }
 
 void PE50::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && !(esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && !(esl_seteq<1,1,1>(ap_const_logic_0, real_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1)))) {
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state1;

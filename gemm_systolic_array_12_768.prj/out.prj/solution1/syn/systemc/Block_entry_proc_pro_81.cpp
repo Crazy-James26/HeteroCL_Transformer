@@ -45,7 +45,7 @@ Block_entry_proc_pro_81::Block_entry_proc_pro_81(sc_module_name name) : sc_modul
     SC_METHOD(thread_C_5_2_address0);
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( C_5_2_addr_reg_61 );
-    sensitive << ( zext_ln54_fu_56_p1 );
+    sensitive << ( zext_ln55_fu_56_p1 );
     sensitive << ( ap_CS_fsm_state8 );
 
     SC_METHOD(thread_C_5_2_ce0);
@@ -105,7 +105,7 @@ Block_entry_proc_pro_81::Block_entry_proc_pro_81(sc_module_name name) : sc_modul
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( jj_0_i_0_empty_n );
 
-    SC_METHOD(thread_zext_ln54_fu_56_p1);
+    SC_METHOD(thread_zext_ln55_fu_56_p1);
     sensitive << ( jj_0_i_0_dout );
 
     SC_METHOD(thread_ap_NS_fsm);
@@ -157,7 +157,7 @@ Block_entry_proc_pro_81::Block_entry_proc_pro_81(sc_module_name name) : sc_modul
     sc_trace(mVcdFile, grp_fu_51_p2, "grp_fu_51_p2");
     sc_trace(mVcdFile, tmp_i_0_5_2_i_reg_71, "tmp_i_0_5_2_i_reg_71");
     sc_trace(mVcdFile, ap_CS_fsm_state7, "ap_CS_fsm_state7");
-    sc_trace(mVcdFile, zext_ln54_fu_56_p1, "zext_ln54_fu_56_p1");
+    sc_trace(mVcdFile, zext_ln55_fu_56_p1, "zext_ln55_fu_56_p1");
     sc_trace(mVcdFile, ap_CS_fsm_state8, "ap_CS_fsm_state8");
     sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
@@ -197,7 +197,7 @@ void Block_entry_proc_pro_81::thread_ap_clk_no_reset_() {
         }
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && !(esl_seteq<1,1,1>(ap_const_logic_0, ap_start.read()) || esl_seteq<1,1,1>(ap_done_reg.read(), ap_const_logic_1) || esl_seteq<1,1,1>(ap_const_logic_0, jj_0_i_0_empty_n.read())))) {
-        C_5_2_addr_reg_61 =  (sc_lv<6>) (zext_ln54_fu_56_p1.read());
+        C_5_2_addr_reg_61 =  (sc_lv<6>) (zext_ln55_fu_56_p1.read());
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
         C_5_2_load_reg_66 = C_5_2_q0.read();
@@ -211,7 +211,7 @@ void Block_entry_proc_pro_81::thread_C_5_2_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read())) {
         C_5_2_address0 = C_5_2_addr_reg_61.read();
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
-        C_5_2_address0 =  (sc_lv<6>) (zext_ln54_fu_56_p1.read());
+        C_5_2_address0 =  (sc_lv<6>) (zext_ln55_fu_56_p1.read());
     } else {
         C_5_2_address0 = "XXXXXX";
     }
@@ -306,8 +306,8 @@ void Block_entry_proc_pro_81::thread_jj_0_i_0_read() {
     }
 }
 
-void Block_entry_proc_pro_81::thread_zext_ln54_fu_56_p1() {
-    zext_ln54_fu_56_p1 = esl_zext<64,6>(jj_0_i_0_dout.read());
+void Block_entry_proc_pro_81::thread_zext_ln55_fu_56_p1() {
+    zext_ln55_fu_56_p1 = esl_zext<64,6>(jj_0_i_0_dout.read());
 }
 
 void Block_entry_proc_pro_81::thread_ap_NS_fsm() {

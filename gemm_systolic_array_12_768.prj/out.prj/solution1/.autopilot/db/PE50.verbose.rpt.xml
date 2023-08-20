@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'PE50'" level="0">
-<item name = "Date">Sat Aug 19 05:59:24 2023
+<item name = "Date">Sun Aug 20 05:17:00 2023
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">out.prj</item>
@@ -52,8 +52,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, 5, 348, 711, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 122, -</column>
-<column name="Register">-, -, 128, -, -</column>
+<column name="Multiplexer">-, -, -, 131, -</column>
+<column name="Register">-, -, 129, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 2, ~0, 1, 0</specialColumn>
 </table>
@@ -62,8 +62,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="gemm_systolic_arrbkb_U476">gemm_systolic_arrbkb, 0, 2, 205, 390, 0</column>
-<column name="gemm_systolic_arrcud_U477">gemm_systolic_arrcud, 0, 3, 143, 321, 0</column>
+<column name="gemm_systolic_arrbkb_U469">gemm_systolic_arrbkb, 0, 2, 205, 390, 0</column>
+<column name="gemm_systolic_arrcud_U470">gemm_systolic_arrcud, 0, 3, 143, 321, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -102,6 +102,7 @@
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
 <column name="ap_phi_mux_k_0_phi_fu_143_p4">9, 2, 10, 20</column>
 <column name="k_0_reg_139">9, 2, 10, 20</column>
+<column name="real_start">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -114,6 +115,7 @@
 <column name="icmp_ln8_reg_174_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="k_0_reg_139">10, 0, 10, 0</column>
 <column name="k_reg_178">10, 0, 10, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
 <column name="tmp_96_reg_189">32, 0, 32, 0</column>
 <column name="tmp_reg_183">32, 0, 32, 0</column>
 <column name="tmp_s_reg_195">32, 0, 32, 0</column>
@@ -129,10 +131,13 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, PE50, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, PE50, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, PE50, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, PE50, return value</column>
 <column name="A_in_V_dout">in, 32, ap_fifo, A_in_V, pointer</column>
 <column name="A_in_V_empty_n">in, 1, ap_fifo, A_in_V, pointer</column>
 <column name="A_in_V_read">out, 1, ap_fifo, A_in_V, pointer</column>

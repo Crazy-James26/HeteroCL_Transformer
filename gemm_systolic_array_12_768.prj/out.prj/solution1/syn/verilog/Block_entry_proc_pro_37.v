@@ -69,7 +69,7 @@ wire    ap_CS_fsm_state2;
 wire   [31:0] grp_fu_51_p2;
 reg   [31:0] tmp_i_0_8_i_reg_71;
 wire    ap_CS_fsm_state7;
-wire   [63:0] zext_ln54_fu_56_p1;
+wire   [63:0] zext_ln55_fu_56_p1;
 wire    ap_CS_fsm_state8;
 wire    ap_CS_fsm_state3;
 reg   [7:0] ap_NS_fsm;
@@ -117,7 +117,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((~((jj_0_i_0_empty_n == 1'b0) | (ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        C_8_10_addr_reg_61 <= zext_ln54_fu_56_p1;
+        C_8_10_addr_reg_61 <= zext_ln55_fu_56_p1;
     end
 end
 
@@ -137,7 +137,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
         C_8_10_address0 = C_8_10_addr_reg_61;
     end else if ((1'b1 == ap_CS_fsm_state1)) begin
-        C_8_10_address0 = zext_ln54_fu_56_p1;
+        C_8_10_address0 = zext_ln55_fu_56_p1;
     end else begin
         C_8_10_address0 = 'bx;
     end
@@ -251,6 +251,6 @@ always @ (*) begin
     ap_block_state1 = ((jj_0_i_0_empty_n == 1'b0) | (ap_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign zext_ln54_fu_56_p1 = jj_0_i_0_dout;
+assign zext_ln55_fu_56_p1 = jj_0_i_0_dout;
 
 endmodule //Block_entry_proc_pro_37

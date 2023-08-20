@@ -22,7 +22,7 @@
 entry:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %block_C_2_7320, float 0.000000e+00)
 
 ]]></Node>
-<StgValue><ssdm name="write_ln54"/></StgValue>
+<StgValue><ssdm name="write_ln55"/></StgValue>
 </operation>
 
 <operation id="3" st_id="1" stage="1" lat="1">

@@ -19168,7 +19168,9 @@ _ssdm_SpecArrayPartition( C, 2, "CYCLIC", block_N, "");
  hls::stream<d_type> block_B_loader[block_N];
 _ssdm_SpecStream( block_A_loader, 0, 2, "");
 _ssdm_SpecStream( block_B_loader, 0, 2, "");
+
  d_type block_C[block_M][block_N];
+_ssdm_SpecArrayPartition( C, 1, "complete", 0, "");
 
  block_gemm:
  for(int ii = 0; ii < M/block_M; ii++){
@@ -19183,7 +19185,6 @@ _ssdm_Unroll(0,0,0, "");
  block_C[i][j] = 0;
     }
    }
-
 
    init_block_A:
    for(int k = 0; k < K; k++){
@@ -19213,7 +19214,4 @@ _ssdm_Unroll(0,0,0, "");
    }
   }
  }
-
-
-
 }

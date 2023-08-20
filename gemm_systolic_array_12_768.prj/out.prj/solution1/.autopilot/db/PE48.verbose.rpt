@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'PE48'
 ================================================================
-* Date:           Sat Aug 19 05:59:23 2023
+* Date:           Sun Aug 20 05:16:58 2023
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        out.prj
@@ -73,8 +73,8 @@
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
     |          Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
-    |gemm_systolic_arrbkb_U462  |gemm_systolic_arrbkb  |        0|      2|  205|  390|    0|
-    |gemm_systolic_arrcud_U463  |gemm_systolic_arrcud  |        0|      3|  143|  321|    0|
+    |gemm_systolic_arrbkb_U455  |gemm_systolic_arrbkb  |        0|      2|  205|  390|    0|
+    |gemm_systolic_arrcud_U456  |gemm_systolic_arrcud  |        0|      3|  143|  321|    0|
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
     |Total                      |                      |        0|      5|  348|  711|    0|
     +---------------------------+----------------------+---------+-------+-----+-----+-----+
@@ -224,10 +224,10 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.76>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2194, i32 0, i32 0, [1 x i8]* @p_str2195, [1 x i8]* @p_str2196, [1 x i8]* @p_str2197, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2198, [1 x i8]* @p_str2199)"   --->   Operation 12 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty_1712 = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2187, i32 0, i32 0, [1 x i8]* @p_str2188, [1 x i8]* @p_str2189, [1 x i8]* @p_str2190, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2191, [1 x i8]* @p_str2192)"   --->   Operation 13 'specinterface' 'empty_1712' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty_1713 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str260, i32 0, i32 0, [1 x i8]* @p_str261, [1 x i8]* @p_str262, [1 x i8]* @p_str263, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str264, [1 x i8]* @p_str265)"   --->   Operation 14 'specinterface' 'empty_1713' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty_1714 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str253, i32 0, i32 0, [1 x i8]* @p_str254, [1 x i8]* @p_str255, [1 x i8]* @p_str256, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str257, [1 x i8]* @p_str258)"   --->   Operation 15 'specinterface' 'empty_1714' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2105, i32 0, i32 0, [1 x i8]* @p_str2106, [1 x i8]* @p_str2107, [1 x i8]* @p_str2108, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2109, [1 x i8]* @p_str2110)"   --->   Operation 12 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty_1712 = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2098, i32 0, i32 0, [1 x i8]* @p_str2099, [1 x i8]* @p_str2100, [1 x i8]* @p_str2101, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2102, [1 x i8]* @p_str2103)"   --->   Operation 13 'specinterface' 'empty_1712' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty_1713 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str254, i32 0, i32 0, [1 x i8]* @p_str255, [1 x i8]* @p_str256, [1 x i8]* @p_str257, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str258, [1 x i8]* @p_str259)"   --->   Operation 14 'specinterface' 'empty_1713' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty_1714 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str247, i32 0, i32 0, [1 x i8]* @p_str248, [1 x i8]* @p_str249, [1 x i8]* @p_str250, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str251, [1 x i8]* @p_str252)"   --->   Operation 15 'specinterface' 'empty_1714' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (1.76ns)   --->   "br label %1" [systolic_array.cpp:8]   --->   Operation 16 'br' <Predicate = true> <Delay = 1.76>
 
 State 2 <SV = 1> <Delay = 9.33>
@@ -405,7 +405,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2194"/></StgValue>
+<StgValue><ssdm name="p_str2105"/></StgValue>
 </bind>
 </comp>
 
@@ -414,7 +414,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2195"/></StgValue>
+<StgValue><ssdm name="p_str2106"/></StgValue>
 </bind>
 </comp>
 
@@ -423,7 +423,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2196"/></StgValue>
+<StgValue><ssdm name="p_str2107"/></StgValue>
 </bind>
 </comp>
 
@@ -432,7 +432,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2197"/></StgValue>
+<StgValue><ssdm name="p_str2108"/></StgValue>
 </bind>
 </comp>
 
@@ -459,7 +459,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2198"/></StgValue>
+<StgValue><ssdm name="p_str2109"/></StgValue>
 </bind>
 </comp>
 
@@ -468,7 +468,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2199"/></StgValue>
+<StgValue><ssdm name="p_str2110"/></StgValue>
 </bind>
 </comp>
 
@@ -477,7 +477,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2187"/></StgValue>
+<StgValue><ssdm name="p_str2098"/></StgValue>
 </bind>
 </comp>
 
@@ -486,7 +486,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2188"/></StgValue>
+<StgValue><ssdm name="p_str2099"/></StgValue>
 </bind>
 </comp>
 
@@ -495,7 +495,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2189"/></StgValue>
+<StgValue><ssdm name="p_str2100"/></StgValue>
 </bind>
 </comp>
 
@@ -504,7 +504,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2190"/></StgValue>
+<StgValue><ssdm name="p_str2101"/></StgValue>
 </bind>
 </comp>
 
@@ -513,7 +513,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2191"/></StgValue>
+<StgValue><ssdm name="p_str2102"/></StgValue>
 </bind>
 </comp>
 
@@ -522,7 +522,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2192"/></StgValue>
+<StgValue><ssdm name="p_str2103"/></StgValue>
 </bind>
 </comp>
 
@@ -531,7 +531,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str260"/></StgValue>
+<StgValue><ssdm name="p_str254"/></StgValue>
 </bind>
 </comp>
 
@@ -540,7 +540,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str261"/></StgValue>
+<StgValue><ssdm name="p_str255"/></StgValue>
 </bind>
 </comp>
 
@@ -549,7 +549,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str262"/></StgValue>
+<StgValue><ssdm name="p_str256"/></StgValue>
 </bind>
 </comp>
 
@@ -558,7 +558,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str263"/></StgValue>
+<StgValue><ssdm name="p_str257"/></StgValue>
 </bind>
 </comp>
 
@@ -567,7 +567,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str264"/></StgValue>
+<StgValue><ssdm name="p_str258"/></StgValue>
 </bind>
 </comp>
 
@@ -576,7 +576,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str265"/></StgValue>
+<StgValue><ssdm name="p_str259"/></StgValue>
 </bind>
 </comp>
 
@@ -585,7 +585,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str253"/></StgValue>
+<StgValue><ssdm name="p_str247"/></StgValue>
 </bind>
 </comp>
 
@@ -594,7 +594,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str254"/></StgValue>
+<StgValue><ssdm name="p_str248"/></StgValue>
 </bind>
 </comp>
 
@@ -603,7 +603,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str255"/></StgValue>
+<StgValue><ssdm name="p_str249"/></StgValue>
 </bind>
 </comp>
 
@@ -612,7 +612,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str256"/></StgValue>
+<StgValue><ssdm name="p_str250"/></StgValue>
 </bind>
 </comp>
 
@@ -621,7 +621,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str257"/></StgValue>
+<StgValue><ssdm name="p_str251"/></StgValue>
 </bind>
 </comp>
 
@@ -630,7 +630,7 @@ ret_ln16         (ret              ) [ 000000000000]
 <pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str258"/></StgValue>
+<StgValue><ssdm name="p_str252"/></StgValue>
 </bind>
 </comp>
 

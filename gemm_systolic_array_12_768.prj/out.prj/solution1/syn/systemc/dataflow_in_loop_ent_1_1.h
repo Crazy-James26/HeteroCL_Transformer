@@ -621,7 +621,7 @@ struct dataflow_in_loop_ent_1_1 : public sc_module {
     sc_signal< sc_logic > jj_0_i_0_c143_blk_n;
     sc_signal< sc_logic > jj_0_i_0_c144_blk_n;
     sc_signal< bool > ap_block_state1;
-    sc_signal< sc_lv<6> > trunc_ln20_fu_2789_p1;
+    sc_signal< sc_lv<6> > trunc_ln22_fu_2789_p1;
     sc_signal< sc_lv<1> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -1072,7 +1072,7 @@ struct dataflow_in_loop_ent_1_1 : public sc_module {
     void thread_jj_0_i_0_c_din();
     void thread_jj_0_i_0_c_write();
     void thread_jj_0_i_0_read();
-    void thread_trunc_ln20_fu_2789_p1();
+    void thread_trunc_ln22_fu_2789_p1();
     void thread_ap_NS_fsm();
 };
 

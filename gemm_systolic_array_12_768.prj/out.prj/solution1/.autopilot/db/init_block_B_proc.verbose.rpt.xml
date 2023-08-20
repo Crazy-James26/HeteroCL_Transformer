@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'init_block_B_proc'" level="0">
-<item name = "Date">Sat Aug 19 05:59:16 2023
+<item name = "Date">Sun Aug 20 05:16:49 2023
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">out.prj</item>
@@ -78,8 +78,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln40_fu_513_p2">+, 0, 0, 14, 10, 1</column>
-<column name="icmp_ln40_fu_507_p2">icmp, 0, 0, 13, 10, 10</column>
+<column name="add_ln41_fu_513_p2">+, 0, 0, 14, 10, 1</column>
+<column name="icmp_ln41_fu_507_p2">icmp, 0, 0, 13, 10, 10</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3">or, 0, 0, 2, 1, 1</column>
 </table>
@@ -106,7 +106,7 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln40_reg_550">10, 0, 10, 0</column>
+<column name="add_ln41_reg_550">10, 0, 10, 0</column>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="jj_0_i_0_read_reg_542">6, 0, 6, 0</column>
