@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vivado HLS Report for 'init_block_A_proc637_1'
+================================================================
+* Date:           Thu Aug 31 03:12:02 2023
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.888 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       25|       25| 0.250 us | 0.250 us |   25|   25|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- init_block_A  |       24|       24|         2|          -|          -|    12|    no    |
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     56|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     84|    -|
+|Register         |        -|      -|      17|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      17|    140|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |add_ln157_fu_261_p2   |     +    |      0|  0|  15|           7|           7|
+    |k_fu_251_p2           |     +    |      0|  0|  13|           4|           1|
+    |sub_ln157_fu_239_p2   |     -    |      0|  0|  15|           7|           7|
+    |icmp_ln154_fu_245_p2  |   icmp   |      0|  0|   9|           4|           4|
+    |ap_block_state1       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3       |    or    |      0|  0|   2|           1|           1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0|  56|          24|          21|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  21|          4|    1|          4|
+    |ap_done                   |   9|          2|    1|          2|
+    |block_A_loader_0_V_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_1_V_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_2_V_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_3_V_blk_n  |   9|          2|    1|          2|
+    |ii_0_i_blk_n              |   9|          2|    1|          2|
+    |k_0_i_i_reg_204           |   9|          2|    4|          8|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  84|         18|   11|         24|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+---+----+-----+-----------+
+    |        Name       | FF| LUT| Bits| Const Bits|
+    +-------------------+---+----+-----+-----------+
+    |ap_CS_fsm          |  3|   0|    3|          0|
+    |ap_done_reg        |  1|   0|    1|          0|
+    |k_0_i_i_reg_204    |  4|   0|    4|          0|
+    |k_reg_282          |  4|   0|    4|          0|
+    |sub_ln157_reg_274  |  5|   0|    7|          2|
+    +-------------------+---+----+-----+-----------+
+    |Total              | 17|   0|   19|          2|
+    +-------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++---------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ap_done                    | out |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ap_continue                |  in |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs | init_block_A_proc637.1 | return value |
+|ii_0_i_dout                |  in |    2|   ap_fifo  |         ii_0_i         |    pointer   |
+|ii_0_i_empty_n             |  in |    1|   ap_fifo  |         ii_0_i         |    pointer   |
+|ii_0_i_read                | out |    1|   ap_fifo  |         ii_0_i         |    pointer   |
+|A_0_address0               | out |    6|  ap_memory |           A_0          |     array    |
+|A_0_ce0                    | out |    1|  ap_memory |           A_0          |     array    |
+|A_0_q0                     |  in |   32|  ap_memory |           A_0          |     array    |
+|block_A_loader_0_V_din     | out |   32|   ap_fifo  |   block_A_loader_0_V   |    pointer   |
+|block_A_loader_0_V_full_n  |  in |    1|   ap_fifo  |   block_A_loader_0_V   |    pointer   |
+|block_A_loader_0_V_write   | out |    1|   ap_fifo  |   block_A_loader_0_V   |    pointer   |
+|A_1_address0               | out |    6|  ap_memory |           A_1          |     array    |
+|A_1_ce0                    | out |    1|  ap_memory |           A_1          |     array    |
+|A_1_q0                     |  in |   32|  ap_memory |           A_1          |     array    |
+|block_A_loader_1_V_din     | out |   32|   ap_fifo  |   block_A_loader_1_V   |    pointer   |
+|block_A_loader_1_V_full_n  |  in |    1|   ap_fifo  |   block_A_loader_1_V   |    pointer   |
+|block_A_loader_1_V_write   | out |    1|   ap_fifo  |   block_A_loader_1_V   |    pointer   |
+|A_2_address0               | out |    6|  ap_memory |           A_2          |     array    |
+|A_2_ce0                    | out |    1|  ap_memory |           A_2          |     array    |
+|A_2_q0                     |  in |   32|  ap_memory |           A_2          |     array    |
+|block_A_loader_2_V_din     | out |   32|   ap_fifo  |   block_A_loader_2_V   |    pointer   |
+|block_A_loader_2_V_full_n  |  in |    1|   ap_fifo  |   block_A_loader_2_V   |    pointer   |
+|block_A_loader_2_V_write   | out |    1|   ap_fifo  |   block_A_loader_2_V   |    pointer   |
+|A_3_address0               | out |    6|  ap_memory |           A_3          |     array    |
+|A_3_ce0                    | out |    1|  ap_memory |           A_3          |     array    |
+|A_3_q0                     |  in |   32|  ap_memory |           A_3          |     array    |
+|block_A_loader_3_V_din     | out |   32|   ap_fifo  |   block_A_loader_3_V   |    pointer   |
+|block_A_loader_3_V_full_n  |  in |    1|   ap_fifo  |   block_A_loader_3_V   |    pointer   |
+|block_A_loader_3_V_write   | out |    1|   ap_fifo  |   block_A_loader_3_V   |    pointer   |
++---------------------------+-----+-----+------------+------------------------+--------------+
+

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Bert_layer.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_Bert_layer_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer//AESL_inst_Bert_layer_activity">
+         <obj_property name="label">AESL_inst_Bert_layer_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_Bert_layer_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_Bert_layer_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer//AESL_inst_Bert_layer_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer//AESL_inst_Bert_layer_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer//AESL_inst_Bert_layer_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_Gelu_layer_fu_134_activity">
+            <obj_property name="label">grp_Gelu_layer_fu_134_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Gelu_layer_fu_134_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Gelu_layer_fu_134_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_Gelu_layer_fu_134_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_Gelu_layer_fu_134_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_Gelu_layer_fu_134_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/grp_pow_generic_double_s_fu_166_activity">
+               <obj_property name="label">grp_pow_generic_double_s_fu_166_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pow_generic_double_s_fu_166_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pow_generic_double_s_fu_166_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/grp_pow_generic_double_s_fu_166_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/grp_pow_generic_double_s_fu_166_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/grp_pow_generic_double_s_fu_166_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_generic_tanh_float_s_fu_195_activity">
+               <obj_property name="label">grp_generic_tanh_float_s_fu_195_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_generic_tanh_float_s_fu_195_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_generic_tanh_float_s_fu_195_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_generic_tanh_float_s_fu_195_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_generic_tanh_float_s_fu_195_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_generic_tanh_float_s_fu_195_activity.dataflowTxTooltipData</obj_property>
+               <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/grp_exp_generic_double_s_fu_89_activity">
+                  <obj_property name="label">grp_exp_generic_double_s_fu_89_activity</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">grp_exp_generic_double_s_fu_89_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_exp_generic_double_s_fu_89_activity</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/grp_exp_generic_double_s_fu_89_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/grp_exp_generic_double_s_fu_89_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/grp_exp_generic_double_s_fu_89_activity.dataflowTxTooltipData</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Self_attention_fu_170_activity">
+            <obj_property name="label">grp_Self_attention_fu_170_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Self_attention_fu_170_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Self_attention_fu_170_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Self_attention_fu_170_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Self_attention_fu_170_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Self_attention_fu_170_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/grp_Softmax_layer_fu_247_activity">
+               <obj_property name="label">grp_Softmax_layer_fu_247_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_Softmax_layer_fu_247_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_Softmax_layer_fu_247_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/grp_Softmax_layer_fu_247_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/grp_Softmax_layer_fu_247_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/grp_Softmax_layer_fu_247_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/grp_Attention_layer_fu_253_activity">
+               <obj_property name="label">grp_Attention_layer_fu_253_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_Attention_layer_fu_253_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_Attention_layer_fu_253_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/grp_Attention_layer_fu_253_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/grp_Attention_layer_fu_253_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/grp_Attention_layer_fu_253_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/grp_Context_layer_fu_260_activity">
+               <obj_property name="label">grp_Context_layer_fu_260_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_Context_layer_fu_260_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_Context_layer_fu_260_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/grp_Context_layer_fu_260_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/grp_Context_layer_fu_260_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/grp_Context_layer_fu_260_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/grp_Layer_norm_fu_178_activity">
+            <obj_property name="label">grp_Layer_norm_fu_178_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Layer_norm_fu_178_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Layer_norm_fu_178_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/grp_Layer_norm_fu_178_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/grp_Layer_norm_fu_178_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/grp_Layer_norm_fu_178_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/grp_Linear_layer_ds1_fu_191_activity">
+            <obj_property name="label">grp_Linear_layer_ds1_fu_191_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Linear_layer_ds1_fu_191_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Linear_layer_ds1_fu_191_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/grp_Linear_layer_ds1_fu_191_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/grp_Linear_layer_ds1_fu_191_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/grp_Linear_layer_ds1_fu_191_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/grp_Res_layer_fu_201_activity">
+            <obj_property name="label">grp_Res_layer_fu_201_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Res_layer_fu_201_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Res_layer_fu_201_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/grp_Res_layer_fu_201_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/grp_Res_layer_fu_201_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/grp_Res_layer_fu_201_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/grp_Linear_layer_ds2_fu_209_activity">
+            <obj_property name="label">grp_Linear_layer_ds2_fu_209_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Linear_layer_ds2_fu_209_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Linear_layer_ds2_fu_209_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/grp_Linear_layer_ds2_fu_209_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/grp_Linear_layer_ds2_fu_209_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/grp_Linear_layer_ds2_fu_209_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/grp_Linear_layer_qkv_fu_219_activity">
+            <obj_property name="label">grp_Linear_layer_qkv_fu_219_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Linear_layer_qkv_fu_219_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Linear_layer_qkv_fu_219_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/grp_Linear_layer_qkv_fu_219_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/grp_Linear_layer_qkv_fu_219_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/grp_Linear_layer_qkv_fu_219_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/grp_Linear_layer_ds0_fu_235_activity">
+            <obj_property name="label">grp_Linear_layer_ds0_fu_235_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Linear_layer_ds0_fu_235_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Linear_layer_ds0_fu_235_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/grp_Linear_layer_ds0_fu_235_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/grp_Linear_layer_ds0_fu_235_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/grp_Linear_layer_ds0_fu_235_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer//AESL_inst_Bert_layer_activity">
+      <obj_property name="ElementShortName">AESL_inst_Bert_layer_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_Bert_layer_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_Bert_layer_group">
+      <obj_property name="label">AESL_inst_Bert_layer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_Gelu_layer_fu_134_activity">
+         <obj_property name="ElementShortName">grp_Gelu_layer_fu_134_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Gelu_layer_fu_134_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Self_attention_fu_170_activity">
+         <obj_property name="ElementShortName">grp_Self_attention_fu_170_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Self_attention_fu_170_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/grp_Layer_norm_fu_178_activity">
+         <obj_property name="ElementShortName">grp_Layer_norm_fu_178_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Layer_norm_fu_178_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/grp_Linear_layer_ds1_fu_191_activity">
+         <obj_property name="ElementShortName">grp_Linear_layer_ds1_fu_191_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Linear_layer_ds1_fu_191_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/grp_Res_layer_fu_201_activity">
+         <obj_property name="ElementShortName">grp_Res_layer_fu_201_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Res_layer_fu_201_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/grp_Linear_layer_ds2_fu_209_activity">
+         <obj_property name="ElementShortName">grp_Linear_layer_ds2_fu_209_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Linear_layer_ds2_fu_209_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/grp_Linear_layer_qkv_fu_219_activity">
+         <obj_property name="ElementShortName">grp_Linear_layer_qkv_fu_219_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Linear_layer_qkv_fu_219_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/grp_Linear_layer_ds0_fu_235_activity">
+         <obj_property name="ElementShortName">grp_Linear_layer_ds0_fu_235_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Linear_layer_ds0_fu_235_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_Bert_layer_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Gelu_layer_fu_134_group">
+         <obj_property name="label">grp_Gelu_layer_fu_134</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/grp_pow_generic_double_s_fu_166_activity">
+            <obj_property name="ElementShortName">grp_pow_generic_double_s_fu_166_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pow_generic_double_s_fu_166_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_generic_tanh_float_s_fu_195_activity">
+            <obj_property name="ElementShortName">grp_generic_tanh_float_s_fu_195_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_generic_tanh_float_s_fu_195_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_Gelu_layer_fu_134_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pow_generic_double_s_fu_166_group">
+            <obj_property name="label">grp_pow_generic_double_s_fu_166</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pow_generic_double_s_fu_166_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_pow_generic_double_s_fu_166/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_generic_tanh_float_s_fu_195_group">
+            <obj_property name="label">grp_generic_tanh_float_s_fu_195</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/grp_exp_generic_double_s_fu_89_activity">
+               <obj_property name="ElementShortName">grp_exp_generic_double_s_fu_89_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_exp_generic_double_s_fu_89_activity</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_generic_tanh_float_s_fu_195_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_exp_generic_double_s_fu_89_group">
+               <obj_property name="label">grp_exp_generic_double_s_fu_89</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="grp_exp_generic_double_s_fu_89_Handshake_group">
+                  <obj_property name="label">Block-level handshake</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/ap_start">
+                     <obj_property name="ElementShortName">ap_start</obj_property>
+                     <obj_property name="ObjectShortName">ap_start</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Gelu_layer_fu_134/grp_generic_tanh_float_s_fu_195/grp_exp_generic_double_s_fu_89/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Self_attention_fu_170_group">
+         <obj_property name="label">grp_Self_attention_fu_170</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/grp_Softmax_layer_fu_247_activity">
+            <obj_property name="ElementShortName">grp_Softmax_layer_fu_247_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Softmax_layer_fu_247_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/grp_Attention_layer_fu_253_activity">
+            <obj_property name="ElementShortName">grp_Attention_layer_fu_253_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Attention_layer_fu_253_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/grp_Context_layer_fu_260_activity">
+            <obj_property name="ElementShortName">grp_Context_layer_fu_260_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Context_layer_fu_260_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_Self_attention_fu_170_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_Softmax_layer_fu_247_group">
+            <obj_property name="label">grp_Softmax_layer_fu_247</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_Softmax_layer_fu_247_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Softmax_layer_fu_247/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_Attention_layer_fu_253_group">
+            <obj_property name="label">grp_Attention_layer_fu_253</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_Attention_layer_fu_253_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Attention_layer_fu_253/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_Context_layer_fu_260_group">
+            <obj_property name="label">grp_Context_layer_fu_260</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_Context_layer_fu_260_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Self_attention_fu_170/grp_Context_layer_fu_260/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Layer_norm_fu_178_group">
+         <obj_property name="label">grp_Layer_norm_fu_178</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Layer_norm_fu_178_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Layer_norm_fu_178/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Linear_layer_ds1_fu_191_group">
+         <obj_property name="label">grp_Linear_layer_ds1_fu_191</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Linear_layer_ds1_fu_191_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds1_fu_191/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Res_layer_fu_201_group">
+         <obj_property name="label">grp_Res_layer_fu_201</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Res_layer_fu_201_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Res_layer_fu_201/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Linear_layer_ds2_fu_209_group">
+         <obj_property name="label">grp_Linear_layer_ds2_fu_209</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Linear_layer_ds2_fu_209_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds2_fu_209/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Linear_layer_qkv_fu_219_group">
+         <obj_property name="label">grp_Linear_layer_qkv_fu_219</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Linear_layer_qkv_fu_219_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_qkv_fu_219/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Linear_layer_ds0_fu_235_group">
+         <obj_property name="label">grp_Linear_layer_ds0_fu_235</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Linear_layer_ds0_fu_235_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Bert_layer_top/AESL_inst_Bert_layer/grp_Linear_layer_ds0_fu_235/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

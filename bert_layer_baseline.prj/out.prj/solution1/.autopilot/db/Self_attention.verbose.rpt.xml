@@ -1,0 +1,197 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Self_attention'" level="0">
+<item name = "Date">Thu Aug 31 04:04:00 2023
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">out.prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.684 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2801281, 2801281, 28.013 ms, 28.013 ms, 2801281, 2801281, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Softmax_layer_fu_247">Softmax_layer, 5259, 5259, 52.590 us, 52.590 us, 5259, 5259, none</column>
+<column name="grp_Attention_layer_fu_253">Attention_layer, 112107, 112107, 1.121 ms, 1.121 ms, 112107, 112107, none</column>
+<column name="grp_Context_layer_fu_260">Context_layer, 112946, 112946, 1.129 ms, 1.129 ms, 112946, 112946, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- l_S_h_0_h">2801280, 2801280, 233440, -, -, 12, no</column>
+<column name=" + l_mh_separate_i7">1560, 1560, 130, -, -, 12, no</column>
+<column name="  ++ l_j7">128, 128, 2, -, -, 64, no</column>
+<column name=" + l_mh_merge_i8">1560, 1560, 130, -, -, 12, no</column>
+<column name="  ++ l_j8">128, 128, 2, -, -, 64, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 256, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 19, 2872, 5080, 0</column>
+<column name="Memory">10, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, -, 332, -</column>
+<column name="Register">-, -, 120, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">3, 8, 2, 10, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_Attention_layer_fu_253">Attention_layer, 0, 5, 636, 1247, 0</column>
+<column name="grp_Context_layer_fu_260">Context_layer, 0, 5, 602, 1062, 0</column>
+<column name="grp_Softmax_layer_fu_247">Softmax_layer, 0, 9, 1634, 2771, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="Q_h_U">Self_attention_Q_h, 2, 0, 0, 0, 768, 32, 1, 24576</column>
+<column name="K_h_U">Self_attention_Q_h, 2, 0, 0, 0, 768, 32, 1, 24576</column>
+<column name="V_h_U">Self_attention_Q_h, 2, 0, 0, 0, 768, 32, 1, 24576</column>
+<column name="v80_U">Self_attention_Q_h, 2, 0, 0, 0, 768, 32, 1, 24576</column>
+<column name="v78_U">Self_attention_v78, 1, 0, 0, 0, 144, 32, 1, 4608</column>
+<column name="v79_U">Self_attention_v78, 1, 0, 0, 0, 144, 32, 1, 4608</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln145_1_fu_366_p2">+, 0, 0, 21, 15, 15</column>
+<column name="add_ln145_fu_357_p2">+, 0, 0, 14, 10, 10</column>
+<column name="add_ln146_fu_382_p2">+, 0, 0, 13, 11, 11</column>
+<column name="add_ln161_fu_467_p2">+, 0, 0, 13, 11, 11</column>
+<column name="add_ln162_1_fu_486_p2">+, 0, 0, 21, 15, 15</column>
+<column name="add_ln162_fu_477_p2">+, 0, 0, 14, 10, 10</column>
+<column name="h_fu_273_p2">+, 0, 0, 13, 4, 1</column>
+<column name="i7_fu_293_p2">+, 0, 0, 13, 4, 1</column>
+<column name="i8_fu_399_p2">+, 0, 0, 13, 4, 1</column>
+<column name="j7_fu_351_p2">+, 0, 0, 15, 7, 1</column>
+<column name="j8_fu_457_p2">+, 0, 0, 15, 7, 1</column>
+<column name="sub_ln145_fu_323_p2">-, 0, 0, 21, 15, 15</column>
+<column name="sub_ln162_fu_429_p2">-, 0, 0, 21, 15, 15</column>
+<column name="icmp_ln139_fu_267_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln143_fu_287_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln144_fu_345_p2">icmp, 0, 0, 11, 7, 8</column>
+<column name="icmp_ln159_fu_393_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln160_fu_451_p2">icmp, 0, 0, 11, 7, 8</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="K_h_address0">15, 3, 10, 30</column>
+<column name="K_h_ce0">15, 3, 1, 3</column>
+<column name="Q_h_address0">15, 3, 10, 30</column>
+<column name="Q_h_ce0">15, 3, 1, 3</column>
+<column name="V_h_address0">15, 3, 10, 30</column>
+<column name="V_h_ce0">15, 3, 1, 3</column>
+<column name="ap_NS_fsm">59, 14, 1, 14</column>
+<column name="h_0_reg_192">9, 2, 4, 8</column>
+<column name="i7_0_reg_203">9, 2, 4, 8</column>
+<column name="i8_0_reg_225">9, 2, 4, 8</column>
+<column name="j7_0_reg_214">9, 2, 7, 14</column>
+<column name="j8_0_reg_236">9, 2, 7, 14</column>
+<column name="v78_address0">15, 3, 8, 24</column>
+<column name="v78_ce0">15, 3, 1, 3</column>
+<column name="v78_d0">15, 3, 32, 96</column>
+<column name="v78_we0">15, 3, 1, 3</column>
+<column name="v79_address0">15, 3, 8, 24</column>
+<column name="v79_ce0">15, 3, 1, 3</column>
+<column name="v79_we0">9, 2, 1, 2</column>
+<column name="v80_address0">15, 3, 10, 30</column>
+<column name="v80_ce0">15, 3, 1, 3</column>
+<column name="v80_we0">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln146_reg_550">11, 0, 11, 0</column>
+<column name="add_ln162_1_reg_586">15, 0, 15, 0</column>
+<column name="ap_CS_fsm">13, 0, 13, 0</column>
+<column name="grp_Attention_layer_fu_253_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Context_layer_fu_260_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Softmax_layer_fu_247_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_0_reg_192">4, 0, 4, 0</column>
+<column name="h_reg_498">4, 0, 4, 0</column>
+<column name="i7_0_reg_203">4, 0, 4, 0</column>
+<column name="i7_reg_512">4, 0, 4, 0</column>
+<column name="i8_0_reg_225">4, 0, 4, 0</column>
+<column name="i8_reg_558">4, 0, 4, 0</column>
+<column name="j7_0_reg_214">7, 0, 7, 0</column>
+<column name="j7_reg_530">7, 0, 7, 0</column>
+<column name="j8_0_reg_236">7, 0, 7, 0</column>
+<column name="j8_reg_576">7, 0, 7, 0</column>
+<column name="shl_ln_reg_503">4, 0, 10, 6</column>
+<column name="sub_ln145_reg_517">7, 0, 15, 8</column>
+<column name="sub_ln162_reg_563">7, 0, 15, 8</column>
+<column name="zext_ln144_1_reg_522">4, 0, 11, 7</column>
+<column name="zext_ln160_1_reg_568">4, 0, 11, 7</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="v65_address0">out, 14, ap_memory, v65, array</column>
+<column name="v65_ce0">out, 1, ap_memory, v65, array</column>
+<column name="v65_q0">in, 32, ap_memory, v65, array</column>
+<column name="v66_address0">out, 14, ap_memory, v66, array</column>
+<column name="v66_ce0">out, 1, ap_memory, v66, array</column>
+<column name="v66_q0">in, 32, ap_memory, v66, array</column>
+<column name="v67_address0">out, 14, ap_memory, v67, array</column>
+<column name="v67_ce0">out, 1, ap_memory, v67, array</column>
+<column name="v67_q0">in, 32, ap_memory, v67, array</column>
+<column name="v68_address0">out, 14, ap_memory, v68, array</column>
+<column name="v68_ce0">out, 1, ap_memory, v68, array</column>
+<column name="v68_we0">out, 1, ap_memory, v68, array</column>
+<column name="v68_d0">out, 32, ap_memory, v68, array</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,225 @@
+
+
+================================================================
+== Vivado HLS Report for 'PE128'
+================================================================
+* Date:           Wed Aug 30 10:30:58 2023
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 9.336 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3845|     3845| 38.450 us | 38.450 us |  3845|  3845|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PE_LOOP  |     3843|     3843|         9|          5|          1|   768|    yes   |
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 5, D = 9, States = { 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 11 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 2 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str1790, i32 0, i32 0, [1 x i8]* @p_str1791, [1 x i8]* @p_str1792, [1 x i8]* @p_str1793, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str1794, [1 x i8]* @p_str1795)"   --->   Operation 12 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty_2027 = call i32 (...)* @_ssdm_op_SpecInterface(float* %B_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str1783, i32 0, i32 0, [1 x i8]* @p_str1784, [1 x i8]* @p_str1785, [1 x i8]* @p_str1786, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str1787, [1 x i8]* @p_str1788)"   --->   Operation 13 'specinterface' 'empty_2027' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty_2028 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str866, i32 0, i32 0, [1 x i8]* @p_str867, [1 x i8]* @p_str868, [1 x i8]* @p_str869, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str870, [1 x i8]* @p_str871)"   --->   Operation 14 'specinterface' 'empty_2028' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty_2029 = call i32 (...)* @_ssdm_op_SpecInterface(float* %A_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str859, i32 0, i32 0, [1 x i8]* @p_str860, [1 x i8]* @p_str861, [1 x i8]* @p_str862, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str863, [1 x i8]* @p_str864)"   --->   Operation 15 'specinterface' 'empty_2029' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.76ns)   --->   "br label %1" [systolic_array.cpp:8]   --->   Operation 16 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 9.33>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%k_0 = phi i10 [ 0, %0 ], [ %k, %PE_LOOP ]"   --->   Operation 17 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.77ns)   --->   "%icmp_ln8 = icmp eq i10 %k_0, -256" [systolic_array.cpp:8]   --->   Operation 18 'icmp' 'icmp_ln8' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty_2030 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 768, i64 768, i64 768)"   --->   Operation 19 'speclooptripcount' 'empty_2030' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.73ns)   --->   "%k = add i10 %k_0, 1" [systolic_array.cpp:8]   --->   Operation 20 'add' 'k' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %icmp_ln8, label %2, label %PE_LOOP" [systolic_array.cpp:8]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (3.63ns)   --->   "%tmp = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %A_in_V)" [systolic_array.cpp:10]   --->   Operation 22 'read' 'tmp' <Predicate = (!icmp_ln8)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 23 [1/1] (3.63ns)   --->   "%tmp_161 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %B_in_V)" [systolic_array.cpp:11]   --->   Operation 23 'read' 'tmp_161' <Predicate = (!icmp_ln8)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 24 [4/4] (5.70ns)   --->   "%tmp_s = fmul float %tmp, %tmp_161" [systolic_array.cpp:12]   --->   Operation 24 'fmul' 'tmp_s' <Predicate = (!icmp_ln8)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.70>
+ST_3 : Operation 25 [3/4] (5.70ns)   --->   "%tmp_s = fmul float %tmp, %tmp_161" [systolic_array.cpp:12]   --->   Operation 25 'fmul' 'tmp_s' <Predicate = (!icmp_ln8)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %A_out_V, float %tmp)" [systolic_array.cpp:13]   --->   Operation 26 'write' <Predicate = (!icmp_ln8)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 27 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %B_out_V, float %tmp_161)" [systolic_array.cpp:14]   --->   Operation 27 'write' <Predicate = (!icmp_ln8)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 4 <SV = 3> <Delay = 5.70>
+ST_4 : Operation 28 [2/4] (5.70ns)   --->   "%tmp_s = fmul float %tmp, %tmp_161" [systolic_array.cpp:12]   --->   Operation 28 'fmul' 'tmp_s' <Predicate = (!icmp_ln8)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.70>
+ST_5 : Operation 29 [1/4] (5.70ns)   --->   "%tmp_s = fmul float %tmp, %tmp_161" [systolic_array.cpp:12]   --->   Operation 29 'fmul' 'tmp_s' <Predicate = (!icmp_ln8)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%C_out_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %C_out)" [systolic_array.cpp:12]   --->   Operation 30 'read' 'C_out_read' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_6 : Operation 31 [5/5] (7.25ns)   --->   "%tmp_1 = fadd float %C_out_read, %tmp_s" [systolic_array.cpp:12]   --->   Operation 31 'fadd' 'tmp_1' <Predicate = (!icmp_ln8)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 32 [4/5] (7.25ns)   --->   "%tmp_1 = fadd float %C_out_read, %tmp_s" [systolic_array.cpp:12]   --->   Operation 32 'fadd' 'tmp_1' <Predicate = (!icmp_ln8)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 33 [3/5] (7.25ns)   --->   "%tmp_1 = fadd float %C_out_read, %tmp_s" [systolic_array.cpp:12]   --->   Operation 33 'fadd' 'tmp_1' <Predicate = (!icmp_ln8)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 34 [2/5] (7.25ns)   --->   "%tmp_1 = fadd float %C_out_read, %tmp_s" [systolic_array.cpp:12]   --->   Operation 34 'fadd' 'tmp_1' <Predicate = (!icmp_ln8)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str) nounwind" [systolic_array.cpp:8]   --->   Operation 35 'specloopname' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_58 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str)" [systolic_array.cpp:8]   --->   Operation 36 'specregionbegin' 'tmp_58' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [systolic_array.cpp:9]   --->   Operation 37 'specpipeline' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_10 : Operation 38 [1/5] (7.25ns)   --->   "%tmp_1 = fadd float %C_out_read, %tmp_s" [systolic_array.cpp:12]   --->   Operation 38 'fadd' 'tmp_1' <Predicate = (!icmp_ln8)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %C_out, float %tmp_1)" [systolic_array.cpp:12]   --->   Operation 39 'write' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%empty_2031 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str, i32 %tmp_58)" [systolic_array.cpp:15]   --->   Operation 40 'specregionend' 'empty_2031' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "br label %1" [systolic_array.cpp:8]   --->   Operation 41 'br' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+
+State 11 <SV = 2> <Delay = 0.00>
+ST_11 : Operation 42 [1/1] (0.00ns)   --->   "ret void" [systolic_array.cpp:16]   --->   Operation 42 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', systolic_array.cpp:8) [12]  (1.77 ns)
+
+ <State 2>: 9.34ns
+The critical path consists of the following:
+	fifo read on port 'A_in_V' (systolic_array.cpp:10) [21]  (3.63 ns)
+	'fmul' operation ('tmp_s', systolic_array.cpp:12) [23]  (5.7 ns)
+
+ <State 3>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', systolic_array.cpp:12) [23]  (5.7 ns)
+
+ <State 4>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', systolic_array.cpp:12) [23]  (5.7 ns)
+
+ <State 5>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', systolic_array.cpp:12) [23]  (5.7 ns)
+
+ <State 6>: 7.26ns
+The critical path consists of the following:
+	wire read on port 'C_out' (systolic_array.cpp:12) [24]  (0 ns)
+	'fadd' operation ('tmp_1', systolic_array.cpp:12) [25]  (7.26 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', systolic_array.cpp:12) [25]  (7.26 ns)
+
+ <State 8>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', systolic_array.cpp:12) [25]  (7.26 ns)
+
+ <State 9>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', systolic_array.cpp:12) [25]  (7.26 ns)
+
+ <State 10>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', systolic_array.cpp:12) [25]  (7.26 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

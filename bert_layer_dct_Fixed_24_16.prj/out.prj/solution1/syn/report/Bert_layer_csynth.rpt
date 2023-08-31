@@ -1,0 +1,275 @@
+
+
+================================================================
+== Vivado HLS Report for 'Bert_layer'
+================================================================
+* Date:           Thu Aug 31 04:11:22 2023
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 9.514 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+    |    Latency (cycles)   |   Latency (absolute)  |        Interval       | Pipeline|
+    |    min    |    max    |    min    |    max    |    min    |    max    |   Type  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+    |  516664292|  518876132| 5.167 sec | 5.189 sec |  516664292|  518876132|   none  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+------------------+-----------+-----------+-----------+-----------+-----------+-----------+---------+
+        |                             |                  |    Latency (cycles)   |   Latency (absolute)  |        Interval       | Pipeline|
+        |           Instance          |      Module      |    min    |    max    |    min    |    max    |    min    |    max    |   Type  |
+        +-----------------------------+------------------+-----------+-----------+-----------+-----------+-----------+-----------+---------+
+        |grp_Gelu_layer_fu_134        |Gelu_layer        |    4349977|    6561817| 43.500 ms | 65.618 ms |    4349977|    6561817|   none  |
+        |grp_Self_attention_fu_170    |Self_attention    |    1045933|    1045933| 10.459 ms | 10.459 ms |    1045933|    1045933|   none  |
+        |grp_Layer_norm_fu_178        |Layer_norm        |     452093|     452093|  4.521 ms |  4.521 ms |     452093|     452093|   none  |
+        |grp_Linear_layer_ds1_fu_191  |Linear_layer_ds1  |  170238052|  170238052| 1.702 sec | 1.702 sec |  170238052|  170238052|   none  |
+        |grp_Res_layer_fu_201         |Res_layer         |      55321|      55321|  0.553 ms |  0.553 ms |      55321|      55321|   none  |
+        |grp_Linear_layer_ds2_fu_209  |Linear_layer_ds2  |  169924683|  169924683| 1.699 sec | 1.699 sec |  169924683|  169924683|   none  |
+        |grp_Linear_layer_qkv_fu_219  |Linear_layer_qkv  |   42522699|   42522699| 0.425 sec | 0.425 sec |   42522699|   42522699|   none  |
+        |grp_Linear_layer_ds0_fu_235  |Linear_layer_ds0  |   42522699|   42522699| 0.425 sec | 0.425 sec |   42522699|   42522699|   none  |
+        +-----------------------------+------------------+-----------+-----------+-----------+-----------+-----------+-----------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |      189|    197|   31261|  36702|    0|
+|Memory           |      456|      -|       0|      0|    0|
+|Multiplexer      |        -|      -|       -|    834|    -|
+|Register         |        -|      -|      32|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |      645|    197|   31293|  37536|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |      230|     89|      29|     70|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+------------------+---------+-------+-------+-------+-----+
+    |           Instance          |      Module      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +-----------------------------+------------------+---------+-------+-------+-------+-----+
+    |grp_Gelu_layer_fu_134        |Gelu_layer        |       82|    147|  23310|  19301|    0|
+    |grp_Layer_norm_fu_178        |Layer_norm        |        0|      8|   3204|   5505|    0|
+    |grp_Linear_layer_ds0_fu_235  |Linear_layer_ds0  |        0|      5|    306|    644|    0|
+    |grp_Linear_layer_ds1_fu_191  |Linear_layer_ds1  |       96|      5|    615|   1983|    0|
+    |grp_Linear_layer_ds2_fu_209  |Linear_layer_ds2  |        0|      5|    319|    673|    0|
+    |grp_Linear_layer_qkv_fu_219  |Linear_layer_qkv  |        0|      5|    306|    644|    0|
+    |grp_Res_layer_fu_201         |Res_layer         |        0|      0|    337|   1319|    0|
+    |grp_Self_attention_fu_170    |Self_attention    |       11|     22|   2864|   6633|    0|
+    +-----------------------------+------------------+---------+-------+-------+-------+-----+
+    |Total                        |                  |      189|    197|  31261|  36702|    0|
+    +-----------------------------+------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +----------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |  Memory  |        Module        | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +----------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |v260_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v261_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v262_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v263_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v264_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v266_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v269_V_U  |Bert_layer_v260_V     |       24|  0|   0|    0|   9216|   24|     1|       221184|
+    |v265_U    |Bert_layer_v265       |       32|  0|   0|    0|   9216|   32|     1|       294912|
+    |v270_U    |Bert_layer_v265       |       32|  0|   0|    0|   9216|   32|     1|       294912|
+    |v267_U    |Bert_layer_v267       |      128|  0|   0|    0|  36864|   32|     1|      1179648|
+    |v268_V_U  |Linear_layer_ds1_qcK  |       96|  0|   0|    0|  36864|   24|     1|       884736|
+    +----------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total     |                      |      456|  0|   0|    0| 156672|  288|    11|      4202496|
+    +----------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-------------------------------------+-----+-----------+-----+-----------+
+    |                 Name                | LUT | Input Size| Bits| Total Bits|
+    +-------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                            |  117|         25|    1|         25|
+    |grp_Layer_norm_fu_178_v135_q0        |   15|          3|   32|         96|
+    |grp_Layer_norm_fu_178_v136_q0        |   15|          3|   32|         96|
+    |grp_Layer_norm_fu_178_v137_q0        |   15|          3|   32|         96|
+    |grp_Linear_layer_qkv_fu_219_v1_V_q0  |   21|          4|   24|         96|
+    |grp_Linear_layer_qkv_fu_219_v2_V_q0  |   21|          4|   24|         96|
+    |grp_Linear_layer_qkv_fu_219_v3_V_q0  |   21|          4|   24|         96|
+    |grp_Res_layer_fu_201_v124_V_q0       |   15|          3|   24|         72|
+    |grp_Res_layer_fu_201_v125_V_q0       |   15|          3|   24|         72|
+    |v242_V_address0                      |   15|          3|   14|         42|
+    |v242_V_ce0                           |   15|          3|    1|          3|
+    |v243_V_ce0                           |    9|          2|    1|          2|
+    |v244_V_ce0                           |    9|          2|    1|          2|
+    |v245_V_ce0                           |    9|          2|    1|          2|
+    |v246_V_ce0                           |    9|          2|    1|          2|
+    |v247_V_ce0                           |    9|          2|    1|          2|
+    |v248_V_ce0                           |    9|          2|    1|          2|
+    |v255_ce0                             |    9|          2|    1|          2|
+    |v256_ce0                             |    9|          2|    1|          2|
+    |v257_ce0                             |    9|          2|    1|          2|
+    |v258_ce0                             |    9|          2|    1|          2|
+    |v259_V_ce0                           |    9|          2|    1|          2|
+    |v259_V_we0                           |    9|          2|    1|          2|
+    |v260_V_address0                      |   15|          3|   14|         42|
+    |v260_V_ce0                           |   15|          3|    1|          3|
+    |v260_V_we0                           |    9|          2|    1|          2|
+    |v261_V_address0                      |   15|          3|   14|         42|
+    |v261_V_ce0                           |   15|          3|    1|          3|
+    |v261_V_we0                           |    9|          2|    1|          2|
+    |v262_V_address0                      |   15|          3|   14|         42|
+    |v262_V_ce0                           |   15|          3|    1|          3|
+    |v262_V_we0                           |    9|          2|    1|          2|
+    |v263_V_address0                      |   15|          3|   14|         42|
+    |v263_V_ce0                           |   15|          3|    1|          3|
+    |v263_V_we0                           |    9|          2|    1|          2|
+    |v264_V_address0                      |   15|          3|   14|         42|
+    |v264_V_ce0                           |   15|          3|    1|          3|
+    |v264_V_we0                           |    9|          2|    1|          2|
+    |v265_address0                        |   15|          3|   14|         42|
+    |v265_ce0                             |   15|          3|    1|          3|
+    |v265_we0                             |    9|          2|    1|          2|
+    |v266_V_address0                      |   21|          4|   14|         56|
+    |v266_V_ce0                           |   21|          4|    1|          4|
+    |v266_V_we0                           |    9|          2|    1|          2|
+    |v267_address0                        |   15|          3|   16|         48|
+    |v267_ce0                             |   15|          3|    1|          3|
+    |v267_we0                             |    9|          2|    1|          2|
+    |v268_V_address0                      |   15|          3|   16|         48|
+    |v268_V_ce0                           |   15|          3|    1|          3|
+    |v268_V_we0                           |    9|          2|    1|          2|
+    |v269_V_address0                      |   15|          3|   14|         42|
+    |v269_V_ce0                           |   15|          3|    1|          3|
+    |v269_V_we0                           |    9|          2|    1|          2|
+    |v270_address0                        |   15|          3|   14|         42|
+    |v270_ce0                             |   15|          3|    1|          3|
+    |v270_we0                             |    9|          2|    1|          2|
+    +-------------------------------------+-----+-----------+-----+-----------+
+    |Total                                |  834|        172|  424|       1358|
+    +-------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------+----+----+-----+-----------+
+    |                   Name                   | FF | LUT| Bits| Const Bits|
+    +------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                 |  24|   0|   24|          0|
+    |grp_Gelu_layer_fu_134_ap_start_reg        |   1|   0|    1|          0|
+    |grp_Layer_norm_fu_178_ap_start_reg        |   1|   0|    1|          0|
+    |grp_Linear_layer_ds0_fu_235_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Linear_layer_ds1_fu_191_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Linear_layer_ds2_fu_209_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Linear_layer_qkv_fu_219_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Res_layer_fu_201_ap_start_reg         |   1|   0|    1|          0|
+    |grp_Self_attention_fu_170_ap_start_reg    |   1|   0|    1|          0|
+    +------------------------------------------+----+----+-----+-----------+
+    |Total                                     |  32|   0|   32|          0|
+    +------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs |  Bert_layer  | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs |  Bert_layer  | return value |
+|ap_start         |  in |    1| ap_ctrl_hs |  Bert_layer  | return value |
+|ap_done          | out |    1| ap_ctrl_hs |  Bert_layer  | return value |
+|ap_idle          | out |    1| ap_ctrl_hs |  Bert_layer  | return value |
+|ap_ready         | out |    1| ap_ctrl_hs |  Bert_layer  | return value |
+|v242_V_address0  | out |   14|  ap_memory |    v242_V    |     array    |
+|v242_V_ce0       | out |    1|  ap_memory |    v242_V    |     array    |
+|v242_V_q0        |  in |   24|  ap_memory |    v242_V    |     array    |
+|v243_V_address0  | out |   20|  ap_memory |    v243_V    |     array    |
+|v243_V_ce0       | out |    1|  ap_memory |    v243_V    |     array    |
+|v243_V_q0        |  in |   24|  ap_memory |    v243_V    |     array    |
+|v244_V_address0  | out |   10|  ap_memory |    v244_V    |     array    |
+|v244_V_ce0       | out |    1|  ap_memory |    v244_V    |     array    |
+|v244_V_q0        |  in |   24|  ap_memory |    v244_V    |     array    |
+|v245_V_address0  | out |   20|  ap_memory |    v245_V    |     array    |
+|v245_V_ce0       | out |    1|  ap_memory |    v245_V    |     array    |
+|v245_V_q0        |  in |   24|  ap_memory |    v245_V    |     array    |
+|v246_V_address0  | out |   10|  ap_memory |    v246_V    |     array    |
+|v246_V_ce0       | out |    1|  ap_memory |    v246_V    |     array    |
+|v246_V_q0        |  in |   24|  ap_memory |    v246_V    |     array    |
+|v247_V_address0  | out |   20|  ap_memory |    v247_V    |     array    |
+|v247_V_ce0       | out |    1|  ap_memory |    v247_V    |     array    |
+|v247_V_q0        |  in |   24|  ap_memory |    v247_V    |     array    |
+|v248_V_address0  | out |   10|  ap_memory |    v248_V    |     array    |
+|v248_V_ce0       | out |    1|  ap_memory |    v248_V    |     array    |
+|v248_V_q0        |  in |   24|  ap_memory |    v248_V    |     array    |
+|v249_V_address0  | out |   20|  ap_memory |    v249_V    |     array    |
+|v249_V_ce0       | out |    1|  ap_memory |    v249_V    |     array    |
+|v249_V_q0        |  in |   24|  ap_memory |    v249_V    |     array    |
+|v250_V_address0  | out |   10|  ap_memory |    v250_V    |     array    |
+|v250_V_ce0       | out |    1|  ap_memory |    v250_V    |     array    |
+|v250_V_q0        |  in |   24|  ap_memory |    v250_V    |     array    |
+|v251_V_address0  | out |   22|  ap_memory |    v251_V    |     array    |
+|v251_V_ce0       | out |    1|  ap_memory |    v251_V    |     array    |
+|v251_V_q0        |  in |   24|  ap_memory |    v251_V    |     array    |
+|v252_V_address0  | out |   12|  ap_memory |    v252_V    |     array    |
+|v252_V_ce0       | out |    1|  ap_memory |    v252_V    |     array    |
+|v252_V_q0        |  in |   24|  ap_memory |    v252_V    |     array    |
+|v253_V_address0  | out |   22|  ap_memory |    v253_V    |     array    |
+|v253_V_ce0       | out |    1|  ap_memory |    v253_V    |     array    |
+|v253_V_q0        |  in |   24|  ap_memory |    v253_V    |     array    |
+|v254_V_address0  | out |   10|  ap_memory |    v254_V    |     array    |
+|v254_V_ce0       | out |    1|  ap_memory |    v254_V    |     array    |
+|v254_V_q0        |  in |   24|  ap_memory |    v254_V    |     array    |
+|v255_address0    | out |   10|  ap_memory |     v255     |     array    |
+|v255_ce0         | out |    1|  ap_memory |     v255     |     array    |
+|v255_q0          |  in |   32|  ap_memory |     v255     |     array    |
+|v256_address0    | out |   10|  ap_memory |     v256     |     array    |
+|v256_ce0         | out |    1|  ap_memory |     v256     |     array    |
+|v256_q0          |  in |   32|  ap_memory |     v256     |     array    |
+|v257_address0    | out |   10|  ap_memory |     v257     |     array    |
+|v257_ce0         | out |    1|  ap_memory |     v257     |     array    |
+|v257_q0          |  in |   32|  ap_memory |     v257     |     array    |
+|v258_address0    | out |   10|  ap_memory |     v258     |     array    |
+|v258_ce0         | out |    1|  ap_memory |     v258     |     array    |
+|v258_q0          |  in |   32|  ap_memory |     v258     |     array    |
+|v259_V_address0  | out |   14|  ap_memory |    v259_V    |     array    |
+|v259_V_ce0       | out |    1|  ap_memory |    v259_V    |     array    |
+|v259_V_we0       | out |    1|  ap_memory |    v259_V    |     array    |
+|v259_V_d0        | out |   24|  ap_memory |    v259_V    |     array    |
++-----------------+-----+-----+------------+--------------+--------------+
+

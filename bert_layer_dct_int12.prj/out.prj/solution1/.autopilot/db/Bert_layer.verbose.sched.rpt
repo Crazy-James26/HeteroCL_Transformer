@@ -1,0 +1,1384 @@
+
+
+================================================================
+== Vivado HLS Report for 'Bert_layer'
+================================================================
+* Date:           Thu Aug 31 05:17:51 2023
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 9.634 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+    |    Latency (cycles)   |   Latency (absolute)  |        Interval       | Pipeline|
+    |    min    |    max    |    min    |    max    |    min    |    max    |   Type  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+    |  619442932|  621654772| 6.194 sec | 6.217 sec |  619442932|  621654772|   none  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+-----------------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) |    Iteration    |  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |     Latency     |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+-----------------+-----------+-----------+------+----------+
+        |- l_S_i_j_0_i38  |  4239384|  6451224| 353282 ~ 537602 |          -|          -|    12|    no    |
+        | + l_j37         |   353280|   537600|    115 ~ 175    |          -|          -|  3072|    no    |
+        +-----------------+---------+---------+-----------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 136
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 132 18 
+18 --> 19 17 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 98 
+98 --> 99 
+99 --> 100 
+100 --> 101 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 111 
+111 --> 112 
+112 --> 113 
+113 --> 114 
+114 --> 115 
+115 --> 116 
+116 --> 117 
+117 --> 118 
+118 --> 119 
+119 --> 120 
+120 --> 121 
+121 --> 122 
+122 --> 123 
+123 --> 124 
+124 --> 125 
+125 --> 126 
+126 --> 127 
+127 --> 128 
+128 --> 129 
+129 --> 130 
+130 --> 131 
+131 --> 18 
+132 --> 133 
+133 --> 134 
+134 --> 135 
+135 --> 136 
+136 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.81>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%v570 = alloca [9216 x float], align 4" [kernel.cpp:926]   --->   Operation 137 'alloca' 'v570' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%v571 = alloca [9216 x float], align 4" [kernel.cpp:928]   --->   Operation 138 'alloca' 'v571' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%v572 = alloca [9216 x float], align 4" [kernel.cpp:930]   --->   Operation 139 'alloca' 'v572' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%v573 = alloca [9216 x float], align 4" [kernel.cpp:932]   --->   Operation 140 'alloca' 'v573' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%v574 = alloca [9216 x float], align 4" [kernel.cpp:934]   --->   Operation 141 'alloca' 'v574' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%v575 = alloca [9216 x float], align 4" [kernel.cpp:936]   --->   Operation 142 'alloca' 'v575' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%v576 = alloca [9216 x float], align 4" [kernel.cpp:938]   --->   Operation 143 'alloca' 'v576' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%v577 = alloca [36864 x float], align 4" [kernel.cpp:940]   --->   Operation 144 'alloca' 'v577' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36864> <RAM>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%v578 = alloca [36864 x float], align 4" [kernel.cpp:942]   --->   Operation 145 'alloca' 'v578' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36864> <RAM>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%v579 = alloca [9216 x float], align 4" [kernel.cpp:944]   --->   Operation 146 'alloca' 'v579' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%v580 = alloca [9216 x float], align 4" [kernel.cpp:946]   --->   Operation 147 'alloca' 'v580' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [2/2] (1.81ns)   --->   "call fastcc void @Linear_layer_qkv([9216 x float]* %v552, [589824 x float]* %v553, [768 x float]* %v554, [9216 x float]* %v570) nounwind" [kernel.cpp:927]   --->   Operation 148 'call' <Predicate = true> <Delay = 1.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 149 [1/2] (0.00ns)   --->   "call fastcc void @Linear_layer_qkv([9216 x float]* %v552, [589824 x float]* %v553, [768 x float]* %v554, [9216 x float]* %v570) nounwind" [kernel.cpp:927]   --->   Operation 149 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.81>
+ST_3 : Operation 150 [2/2] (1.81ns)   --->   "call fastcc void @Linear_layer_qkv([9216 x float]* %v552, [589824 x float]* %v555, [768 x float]* %v556, [9216 x float]* %v571) nounwind" [kernel.cpp:929]   --->   Operation 150 'call' <Predicate = true> <Delay = 1.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 151 [1/2] (0.00ns)   --->   "call fastcc void @Linear_layer_qkv([9216 x float]* %v552, [589824 x float]* %v555, [768 x float]* %v556, [9216 x float]* %v571) nounwind" [kernel.cpp:929]   --->   Operation 151 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.81>
+ST_5 : Operation 152 [2/2] (1.81ns)   --->   "call fastcc void @Linear_layer_qkv([9216 x float]* %v552, [589824 x float]* %v557, [768 x float]* %v558, [9216 x float]* %v572) nounwind" [kernel.cpp:931]   --->   Operation 152 'call' <Predicate = true> <Delay = 1.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 153 [1/2] (0.00ns)   --->   "call fastcc void @Linear_layer_qkv([9216 x float]* %v552, [589824 x float]* %v557, [768 x float]* %v558, [9216 x float]* %v572) nounwind" [kernel.cpp:931]   --->   Operation 153 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 154 [2/2] (0.00ns)   --->   "call fastcc void @Self_attention([9216 x float]* %v570, [9216 x float]* %v571, [9216 x float]* %v572, [9216 x float]* %v573) nounwind" [kernel.cpp:933]   --->   Operation 154 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 155 [1/2] (0.00ns)   --->   "call fastcc void @Self_attention([9216 x float]* %v570, [9216 x float]* %v571, [9216 x float]* %v572, [9216 x float]* %v573) nounwind" [kernel.cpp:933]   --->   Operation 155 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 156 [2/2] (0.00ns)   --->   "call fastcc void @Linear_layer_ds0([9216 x float]* %v573, [589824 x float]* %v559, [768 x float]* %v560, [9216 x float]* %v574) nounwind" [kernel.cpp:935]   --->   Operation 156 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 157 [1/2] (0.00ns)   --->   "call fastcc void @Linear_layer_ds0([9216 x float]* %v573, [589824 x float]* %v559, [768 x float]* %v560, [9216 x float]* %v574) nounwind" [kernel.cpp:935]   --->   Operation 157 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 1.76>
+ST_11 : Operation 158 [2/2] (1.76ns)   --->   "call fastcc void @Res_layer([9216 x float]* %v574, [9216 x float]* %v552, [9216 x float]* %v575) nounwind" [kernel.cpp:937]   --->   Operation 158 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 159 [1/2] (0.00ns)   --->   "call fastcc void @Res_layer([9216 x float]* %v574, [9216 x float]* %v552, [9216 x float]* %v575) nounwind" [kernel.cpp:937]   --->   Operation 159 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 1.76>
+ST_13 : Operation 160 [2/2] (1.76ns)   --->   "call fastcc void @Layer_norm([9216 x float]* %v575, [768 x float]* %v565, [768 x float]* %v566, [9216 x float]* %v576) nounwind" [kernel.cpp:939]   --->   Operation 160 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 161 [1/2] (0.00ns)   --->   "call fastcc void @Layer_norm([9216 x float]* %v575, [768 x float]* %v565, [768 x float]* %v566, [9216 x float]* %v576) nounwind" [kernel.cpp:939]   --->   Operation 161 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 162 [2/2] (0.00ns)   --->   "call fastcc void @Linear_layer_ds1([9216 x float]* %v576, [2359296 x float]* %v561, [3072 x float]* %v562, [36864 x float]* %v577) nounwind" [kernel.cpp:941]   --->   Operation 162 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 1.76>
+ST_16 : Operation 163 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([9216 x float]* %v552) nounwind, !map !116"   --->   Operation 163 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 164 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([589824 x float]* %v553) nounwind, !map !123"   --->   Operation 164 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 165 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v554) nounwind, !map !128"   --->   Operation 165 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 166 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([589824 x float]* %v555) nounwind, !map !133"   --->   Operation 166 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 167 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v556) nounwind, !map !137"   --->   Operation 167 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 168 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([589824 x float]* %v557) nounwind, !map !141"   --->   Operation 168 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v558) nounwind, !map !145"   --->   Operation 169 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 170 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([589824 x float]* %v559) nounwind, !map !149"   --->   Operation 170 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 171 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v560) nounwind, !map !153"   --->   Operation 171 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 172 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2359296 x float]* %v561) nounwind, !map !157"   --->   Operation 172 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 173 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3072 x float]* %v562) nounwind, !map !163"   --->   Operation 173 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 174 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2359296 x float]* %v563) nounwind, !map !168"   --->   Operation 174 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 175 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v564) nounwind, !map !173"   --->   Operation 175 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 176 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v565) nounwind, !map !177"   --->   Operation 176 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 177 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v566) nounwind, !map !181"   --->   Operation 177 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 178 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v567) nounwind, !map !185"   --->   Operation 178 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 179 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([768 x float]* %v568) nounwind, !map !189"   --->   Operation 179 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 180 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([9216 x float]* %v569) nounwind, !map !193"   --->   Operation 180 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 181 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @Bert_layer_str) nounwind"   --->   Operation 181 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 182 [1/2] (0.00ns)   --->   "call fastcc void @Linear_layer_ds1([9216 x float]* %v576, [2359296 x float]* %v561, [3072 x float]* %v562, [36864 x float]* %v577) nounwind" [kernel.cpp:941]   --->   Operation 182 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 183 [1/1] (1.76ns)   --->   "br label %1" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 183 'br' <Predicate = true> <Delay = 1.76>
+
+State 17 <SV = 16> <Delay = 2.07>
+ST_17 : Operation 184 [1/1] (0.00ns)   --->   "%i38_0_i = phi i4 [ 0, %0 ], [ %i38, %l_S_i_j_0_i38_end ]"   --->   Operation 184 'phi' 'i38_0_i' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 185 [1/1] (1.30ns)   --->   "%icmp_ln767 = icmp eq i4 %i38_0_i, -4" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 185 'icmp' 'icmp_ln767' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 186 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 12, i64 12, i64 12) nounwind"   --->   Operation 186 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 187 [1/1] (1.73ns)   --->   "%i38 = add i4 %i38_0_i, 1" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 187 'add' 'i38' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 188 [1/1] (0.00ns)   --->   "br i1 %icmp_ln767, label %Gelu_layer.exit, label %l_S_i_j_0_i38_begin" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 188 'br' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 189 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str81) nounwind" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 189 'specloopname' <Predicate = (!icmp_ln767)> <Delay = 0.00>
+ST_17 : Operation 190 [1/1] (0.00ns)   --->   "%tmp_52_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str81) nounwind" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 190 'specregionbegin' 'tmp_52_i' <Predicate = (!icmp_ln767)> <Delay = 0.00>
+ST_17 : Operation 191 [1/1] (0.00ns)   --->   "%tmp = call i16 @_ssdm_op_BitConcatenate.i16.i4.i12(i4 %i38_0_i, i12 0)" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 191 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln767)> <Delay = 0.00>
+ST_17 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln769 = zext i16 %tmp to i17" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 192 'zext' 'zext_ln769' <Predicate = (!icmp_ln767)> <Delay = 0.00>
+ST_17 : Operation 193 [1/1] (0.00ns)   --->   "%tmp_s = call i14 @_ssdm_op_BitConcatenate.i14.i4.i10(i4 %i38_0_i, i10 0)" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 193 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln767)> <Delay = 0.00>
+ST_17 : Operation 194 [1/1] (0.00ns)   --->   "%zext_ln769_1 = zext i14 %tmp_s to i17" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 194 'zext' 'zext_ln769_1' <Predicate = (!icmp_ln767)> <Delay = 0.00>
+ST_17 : Operation 195 [1/1] (2.07ns)   --->   "%sub_ln769 = sub i17 %zext_ln769, %zext_ln769_1" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 195 'sub' 'sub_ln769' <Predicate = (!icmp_ln767)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 196 [1/1] (1.76ns)   --->   "br label %2" [kernel.cpp:768->kernel.cpp:943]   --->   Operation 196 'br' <Predicate = (!icmp_ln767)> <Delay = 1.76>
+ST_17 : Operation 197 [2/2] (0.00ns)   --->   "call fastcc void @Linear_layer_ds2([36864 x float]* %v578, [2359296 x float]* %v563, [768 x float]* %v564, [9216 x float]* %v579) nounwind" [kernel.cpp:945]   --->   Operation 197 'call' <Predicate = (icmp_ln767)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 5.36>
+ST_18 : Operation 198 [1/1] (0.00ns)   --->   "%j37_0_i = phi i12 [ 0, %l_S_i_j_0_i38_begin ], [ %j37, %3 ]"   --->   Operation 198 'phi' 'j37_0_i' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 199 [1/1] (1.99ns)   --->   "%icmp_ln768 = icmp eq i12 %j37_0_i, -1024" [kernel.cpp:768->kernel.cpp:943]   --->   Operation 199 'icmp' 'icmp_ln768' <Predicate = true> <Delay = 1.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 200 [1/1] (0.00ns)   --->   "%empty_473 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3072, i64 3072, i64 3072) nounwind"   --->   Operation 200 'speclooptripcount' 'empty_473' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 201 [1/1] (1.54ns)   --->   "%j37 = add i12 %j37_0_i, 1" [kernel.cpp:768->kernel.cpp:943]   --->   Operation 201 'add' 'j37' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 202 [1/1] (0.00ns)   --->   "br i1 %icmp_ln768, label %l_S_i_j_0_i38_end, label %3" [kernel.cpp:768->kernel.cpp:943]   --->   Operation 202 'br' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 203 [1/1] (0.00ns)   --->   "%zext_ln769_2 = zext i12 %j37_0_i to i17" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 203 'zext' 'zext_ln769_2' <Predicate = (!icmp_ln768)> <Delay = 0.00>
+ST_18 : Operation 204 [1/1] (2.10ns)   --->   "%add_ln769 = add i17 %sub_ln769, %zext_ln769_2" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 204 'add' 'add_ln769' <Predicate = (!icmp_ln768)> <Delay = 2.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 205 [1/1] (0.00ns)   --->   "%sext_ln769 = sext i17 %add_ln769 to i64" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 205 'sext' 'sext_ln769' <Predicate = (!icmp_ln768)> <Delay = 0.00>
+ST_18 : Operation 206 [1/1] (0.00ns)   --->   "%v577_addr = getelementptr [36864 x float]* %v577, i64 0, i64 %sext_ln769" [kernel.cpp:769->kernel.cpp:943]   --->   Operation 206 'getelementptr' 'v577_addr' <Predicate = (!icmp_ln768)> <Delay = 0.00>
+ST_18 : Operation 207 [2/2] (3.25ns)   --->   "%v466 = load float* %v577_addr, align 4" [kernel.cpp:770->kernel.cpp:943]   --->   Operation 207 'load' 'v466' <Predicate = (!icmp_ln768)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36864> <RAM>
+ST_18 : Operation 208 [1/1] (0.00ns)   --->   "%empty_474 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str81, i32 %tmp_52_i) nounwind" [kernel.cpp:780->kernel.cpp:943]   --->   Operation 208 'specregionend' 'empty_474' <Predicate = (icmp_ln768)> <Delay = 0.00>
+ST_18 : Operation 209 [1/1] (0.00ns)   --->   "br label %1" [kernel.cpp:767->kernel.cpp:943]   --->   Operation 209 'br' <Predicate = (icmp_ln768)> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 7.69>
+ST_19 : Operation 210 [1/2] (3.25ns)   --->   "%v466 = load float* %v577_addr, align 4" [kernel.cpp:770->kernel.cpp:943]   --->   Operation 210 'load' 'v466' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36864> <RAM>
+ST_19 : Operation 211 [2/2] (4.43ns)   --->   "%x_assign = fpext float %v466 to double" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 211 'fpext' 'x_assign' <Predicate = true> <Delay = 4.43> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 4.43>
+ST_20 : Operation 212 [1/2] (4.43ns)   --->   "%x_assign = fpext float %v466 to double" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 212 'fpext' 'x_assign' <Predicate = true> <Delay = 4.43> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 8.37>
+ST_21 : Operation 213 [72/72] (8.37ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 213 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.37> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 8.75>
+ST_22 : Operation 214 [71/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 214 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 8.75>
+ST_23 : Operation 215 [70/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 215 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 8.75>
+ST_24 : Operation 216 [69/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 216 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 8.75>
+ST_25 : Operation 217 [68/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 217 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 8.75>
+ST_26 : Operation 218 [67/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 218 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 8.75>
+ST_27 : Operation 219 [66/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 219 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 8.75>
+ST_28 : Operation 220 [65/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 220 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 8.75>
+ST_29 : Operation 221 [64/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 221 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 8.75>
+ST_30 : Operation 222 [63/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 222 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 8.75>
+ST_31 : Operation 223 [62/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 223 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 8.75>
+ST_32 : Operation 224 [61/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 224 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 8.75>
+ST_33 : Operation 225 [60/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 225 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 33> <Delay = 8.75>
+ST_34 : Operation 226 [59/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 226 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 34> <Delay = 8.75>
+ST_35 : Operation 227 [58/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 227 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 8.75>
+ST_36 : Operation 228 [57/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 228 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 36> <Delay = 8.75>
+ST_37 : Operation 229 [56/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 229 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 38 <SV = 37> <Delay = 8.75>
+ST_38 : Operation 230 [55/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 230 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 38> <Delay = 8.75>
+ST_39 : Operation 231 [54/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 231 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 8.75>
+ST_40 : Operation 232 [53/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 232 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 41 <SV = 40> <Delay = 8.75>
+ST_41 : Operation 233 [52/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 233 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 42 <SV = 41> <Delay = 8.75>
+ST_42 : Operation 234 [51/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 234 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 43 <SV = 42> <Delay = 8.75>
+ST_43 : Operation 235 [50/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 235 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 43> <Delay = 8.75>
+ST_44 : Operation 236 [49/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 236 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 44> <Delay = 8.75>
+ST_45 : Operation 237 [48/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 237 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 46 <SV = 45> <Delay = 8.75>
+ST_46 : Operation 238 [47/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 238 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 46> <Delay = 8.75>
+ST_47 : Operation 239 [46/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 239 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 47> <Delay = 8.75>
+ST_48 : Operation 240 [45/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 240 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 48> <Delay = 8.75>
+ST_49 : Operation 241 [44/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 241 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 50 <SV = 49> <Delay = 8.75>
+ST_50 : Operation 242 [43/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 242 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 51 <SV = 50> <Delay = 8.75>
+ST_51 : Operation 243 [42/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 243 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 52 <SV = 51> <Delay = 8.75>
+ST_52 : Operation 244 [41/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 244 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 53 <SV = 52> <Delay = 8.75>
+ST_53 : Operation 245 [40/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 245 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 54 <SV = 53> <Delay = 8.75>
+ST_54 : Operation 246 [39/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 246 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 55 <SV = 54> <Delay = 8.75>
+ST_55 : Operation 247 [38/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 247 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 56 <SV = 55> <Delay = 8.75>
+ST_56 : Operation 248 [37/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 248 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 57 <SV = 56> <Delay = 8.75>
+ST_57 : Operation 249 [36/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 249 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 58 <SV = 57> <Delay = 8.75>
+ST_58 : Operation 250 [35/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 250 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 59 <SV = 58> <Delay = 8.75>
+ST_59 : Operation 251 [34/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 251 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 59> <Delay = 8.75>
+ST_60 : Operation 252 [33/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 252 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 61 <SV = 60> <Delay = 8.75>
+ST_61 : Operation 253 [32/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 253 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 62 <SV = 61> <Delay = 8.75>
+ST_62 : Operation 254 [31/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 254 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 63 <SV = 62> <Delay = 8.75>
+ST_63 : Operation 255 [30/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 255 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 63> <Delay = 8.75>
+ST_64 : Operation 256 [29/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 256 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 65 <SV = 64> <Delay = 8.75>
+ST_65 : Operation 257 [28/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 257 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 66 <SV = 65> <Delay = 8.75>
+ST_66 : Operation 258 [27/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 258 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 67 <SV = 66> <Delay = 8.75>
+ST_67 : Operation 259 [26/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 259 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 68 <SV = 67> <Delay = 8.75>
+ST_68 : Operation 260 [25/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 260 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 69 <SV = 68> <Delay = 8.75>
+ST_69 : Operation 261 [24/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 261 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 70 <SV = 69> <Delay = 8.75>
+ST_70 : Operation 262 [23/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 262 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 70> <Delay = 8.75>
+ST_71 : Operation 263 [22/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 263 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 72 <SV = 71> <Delay = 8.75>
+ST_72 : Operation 264 [21/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 264 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 73 <SV = 72> <Delay = 8.75>
+ST_73 : Operation 265 [20/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 265 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 73> <Delay = 8.75>
+ST_74 : Operation 266 [19/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 266 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 75 <SV = 74> <Delay = 8.75>
+ST_75 : Operation 267 [18/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 267 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 76 <SV = 75> <Delay = 8.75>
+ST_76 : Operation 268 [17/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 268 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 76> <Delay = 8.75>
+ST_77 : Operation 269 [16/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 269 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 77> <Delay = 8.75>
+ST_78 : Operation 270 [15/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 270 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 79 <SV = 78> <Delay = 8.75>
+ST_79 : Operation 271 [14/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 271 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 80 <SV = 79> <Delay = 8.75>
+ST_80 : Operation 272 [13/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 272 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 81 <SV = 80> <Delay = 8.75>
+ST_81 : Operation 273 [12/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 273 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 82 <SV = 81> <Delay = 8.75>
+ST_82 : Operation 274 [11/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 274 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 83 <SV = 82> <Delay = 8.75>
+ST_83 : Operation 275 [10/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 275 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 84 <SV = 83> <Delay = 8.75>
+ST_84 : Operation 276 [9/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 276 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 85 <SV = 84> <Delay = 8.75>
+ST_85 : Operation 277 [8/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 277 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 86 <SV = 85> <Delay = 8.75>
+ST_86 : Operation 278 [7/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 278 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 87 <SV = 86> <Delay = 8.75>
+ST_87 : Operation 279 [6/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 279 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 88 <SV = 87> <Delay = 8.75>
+ST_88 : Operation 280 [5/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 280 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 89 <SV = 88> <Delay = 8.75>
+ST_89 : Operation 281 [4/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 281 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 90 <SV = 89> <Delay = 8.75>
+ST_90 : Operation 282 [3/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 282 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 91 <SV = 90> <Delay = 8.75>
+ST_91 : Operation 283 [2/72] (8.75ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 283 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 92 <SV = 91> <Delay = 3.66>
+ST_92 : Operation 284 [1/72] (3.66ns)   --->   "%tmp_i_i_i = call fastcc double @"pow_generic<double>"(double %x_assign) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943]   --->   Operation 284 'call' 'tmp_i_i_i' <Predicate = true> <Delay = 3.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 93 <SV = 92> <Delay = 5.20>
+ST_93 : Operation 285 [2/2] (5.20ns)   --->   "%v468 = fptrunc double %tmp_i_i_i to float" [kernel.cpp:771->kernel.cpp:943]   --->   Operation 285 'fptrunc' 'v468' <Predicate = true> <Delay = 5.20> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 94 <SV = 93> <Delay = 5.20>
+ST_94 : Operation 286 [1/2] (5.20ns)   --->   "%v468 = fptrunc double %tmp_i_i_i to float" [kernel.cpp:771->kernel.cpp:943]   --->   Operation 286 'fptrunc' 'v468' <Predicate = true> <Delay = 5.20> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 95 <SV = 94> <Delay = 4.43>
+ST_95 : Operation 287 [2/2] (4.43ns)   --->   "%tmp_i = fpext float %v468 to double" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 287 'fpext' 'tmp_i' <Predicate = true> <Delay = 4.43> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 96 <SV = 95> <Delay = 4.43>
+ST_96 : Operation 288 [1/2] (4.43ns)   --->   "%tmp_i = fpext float %v468 to double" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 288 'fpext' 'tmp_i' <Predicate = true> <Delay = 4.43> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 97 <SV = 96> <Delay = 7.78>
+ST_97 : Operation 289 [6/6] (7.78ns)   --->   "%tmp_23_i = fmul double %tmp_i, 4.471500e-02" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 289 'dmul' 'tmp_23_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 98 <SV = 97> <Delay = 7.78>
+ST_98 : Operation 290 [5/6] (7.78ns)   --->   "%tmp_23_i = fmul double %tmp_i, 4.471500e-02" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 290 'dmul' 'tmp_23_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 99 <SV = 98> <Delay = 7.78>
+ST_99 : Operation 291 [4/6] (7.78ns)   --->   "%tmp_23_i = fmul double %tmp_i, 4.471500e-02" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 291 'dmul' 'tmp_23_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 100 <SV = 99> <Delay = 7.78>
+ST_100 : Operation 292 [3/6] (7.78ns)   --->   "%tmp_23_i = fmul double %tmp_i, 4.471500e-02" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 292 'dmul' 'tmp_23_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 101 <SV = 100> <Delay = 7.78>
+ST_101 : Operation 293 [2/6] (7.78ns)   --->   "%tmp_23_i = fmul double %tmp_i, 4.471500e-02" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 293 'dmul' 'tmp_23_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 102 <SV = 101> <Delay = 7.78>
+ST_102 : Operation 294 [1/6] (7.78ns)   --->   "%tmp_23_i = fmul double %tmp_i, 4.471500e-02" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 294 'dmul' 'tmp_23_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 103 <SV = 102> <Delay = 5.20>
+ST_103 : Operation 295 [2/2] (5.20ns)   --->   "%v469 = fptrunc double %tmp_23_i to float" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 295 'fptrunc' 'v469' <Predicate = true> <Delay = 5.20> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 104 <SV = 103> <Delay = 5.20>
+ST_104 : Operation 296 [1/2] (5.20ns)   --->   "%v469 = fptrunc double %tmp_23_i to float" [kernel.cpp:772->kernel.cpp:943]   --->   Operation 296 'fptrunc' 'v469' <Predicate = true> <Delay = 5.20> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 105 <SV = 104> <Delay = 7.25>
+ST_105 : Operation 297 [5/5] (7.25ns)   --->   "%v470 = fadd float %v466, %v469" [kernel.cpp:773->kernel.cpp:943]   --->   Operation 297 'fadd' 'v470' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 106 <SV = 105> <Delay = 7.25>
+ST_106 : Operation 298 [4/5] (7.25ns)   --->   "%v470 = fadd float %v466, %v469" [kernel.cpp:773->kernel.cpp:943]   --->   Operation 298 'fadd' 'v470' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 107 <SV = 106> <Delay = 7.25>
+ST_107 : Operation 299 [3/5] (7.25ns)   --->   "%v470 = fadd float %v466, %v469" [kernel.cpp:773->kernel.cpp:943]   --->   Operation 299 'fadd' 'v470' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 108 <SV = 107> <Delay = 7.25>
+ST_108 : Operation 300 [2/5] (7.25ns)   --->   "%v470 = fadd float %v466, %v469" [kernel.cpp:773->kernel.cpp:943]   --->   Operation 300 'fadd' 'v470' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 109 <SV = 108> <Delay = 7.25>
+ST_109 : Operation 301 [1/5] (7.25ns)   --->   "%v470 = fadd float %v466, %v469" [kernel.cpp:773->kernel.cpp:943]   --->   Operation 301 'fadd' 'v470' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 110 <SV = 109> <Delay = 4.43>
+ST_110 : Operation 302 [2/2] (4.43ns)   --->   "%tmp_24_i = fpext float %v470 to double" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 302 'fpext' 'tmp_24_i' <Predicate = true> <Delay = 4.43> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 111 <SV = 110> <Delay = 4.43>
+ST_111 : Operation 303 [1/2] (4.43ns)   --->   "%tmp_24_i = fpext float %v470 to double" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 303 'fpext' 'tmp_24_i' <Predicate = true> <Delay = 4.43> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 112 <SV = 111> <Delay = 7.78>
+ST_112 : Operation 304 [6/6] (7.78ns)   --->   "%tmp_25_i = fmul double %tmp_24_i, 7.978850e-01" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 304 'dmul' 'tmp_25_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 113 <SV = 112> <Delay = 7.78>
+ST_113 : Operation 305 [5/6] (7.78ns)   --->   "%tmp_25_i = fmul double %tmp_24_i, 7.978850e-01" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 305 'dmul' 'tmp_25_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 114 <SV = 113> <Delay = 7.78>
+ST_114 : Operation 306 [4/6] (7.78ns)   --->   "%tmp_25_i = fmul double %tmp_24_i, 7.978850e-01" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 306 'dmul' 'tmp_25_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 115 <SV = 114> <Delay = 7.78>
+ST_115 : Operation 307 [3/6] (7.78ns)   --->   "%tmp_25_i = fmul double %tmp_24_i, 7.978850e-01" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 307 'dmul' 'tmp_25_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 116 <SV = 115> <Delay = 7.78>
+ST_116 : Operation 308 [2/6] (7.78ns)   --->   "%tmp_25_i = fmul double %tmp_24_i, 7.978850e-01" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 308 'dmul' 'tmp_25_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 117 <SV = 116> <Delay = 7.78>
+ST_117 : Operation 309 [1/6] (7.78ns)   --->   "%tmp_25_i = fmul double %tmp_24_i, 7.978850e-01" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 309 'dmul' 'tmp_25_i' <Predicate = true> <Delay = 7.78> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 5> <II = 1> <Delay = 7.78> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 118 <SV = 117> <Delay = 5.20>
+ST_118 : Operation 310 [2/2] (5.20ns)   --->   "%v471 = fptrunc double %tmp_25_i to float" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 310 'fptrunc' 'v471' <Predicate = true> <Delay = 5.20> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 119 <SV = 118> <Delay = 5.20>
+ST_119 : Operation 311 [1/2] (5.20ns)   --->   "%v471 = fptrunc double %tmp_25_i to float" [kernel.cpp:774->kernel.cpp:943]   --->   Operation 311 'fptrunc' 'v471' <Predicate = true> <Delay = 5.20> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 120 <SV = 119> <Delay = 7.25>
+ST_120 : Operation 312 [2/2] (7.25ns)   --->   "%v472 = call fastcc float @"generic_tanh<float>"(float %v471) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/tanhfloat.cpp:8->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:448->kernel.cpp:776->kernel.cpp:943]   --->   Operation 312 'call' 'v472' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 121 <SV = 120> <Delay = 2.89>
+ST_121 : Operation 313 [1/2] (2.89ns)   --->   "%v472 = call fastcc float @"generic_tanh<float>"(float %v471) nounwind" [/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/tanhfloat.cpp:8->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:448->kernel.cpp:776->kernel.cpp:943]   --->   Operation 313 'call' 'v472' <Predicate = true> <Delay = 2.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 122 <SV = 121> <Delay = 7.25>
+ST_122 : Operation 314 [5/5] (7.25ns)   --->   "%v473 = fadd float %v472, 1.000000e+00" [kernel.cpp:776->kernel.cpp:943]   --->   Operation 314 'fadd' 'v473' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 123 <SV = 122> <Delay = 7.25>
+ST_123 : Operation 315 [4/4] (5.70ns)   --->   "%v467 = fmul float %v466, 5.000000e-01" [kernel.cpp:770->kernel.cpp:943]   --->   Operation 315 'fmul' 'v467' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_123 : Operation 316 [4/5] (7.25ns)   --->   "%v473 = fadd float %v472, 1.000000e+00" [kernel.cpp:776->kernel.cpp:943]   --->   Operation 316 'fadd' 'v473' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 124 <SV = 123> <Delay = 7.25>
+ST_124 : Operation 317 [3/4] (5.70ns)   --->   "%v467 = fmul float %v466, 5.000000e-01" [kernel.cpp:770->kernel.cpp:943]   --->   Operation 317 'fmul' 'v467' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_124 : Operation 318 [3/5] (7.25ns)   --->   "%v473 = fadd float %v472, 1.000000e+00" [kernel.cpp:776->kernel.cpp:943]   --->   Operation 318 'fadd' 'v473' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 125 <SV = 124> <Delay = 7.25>
+ST_125 : Operation 319 [2/4] (5.70ns)   --->   "%v467 = fmul float %v466, 5.000000e-01" [kernel.cpp:770->kernel.cpp:943]   --->   Operation 319 'fmul' 'v467' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_125 : Operation 320 [2/5] (7.25ns)   --->   "%v473 = fadd float %v472, 1.000000e+00" [kernel.cpp:776->kernel.cpp:943]   --->   Operation 320 'fadd' 'v473' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 126 <SV = 125> <Delay = 7.25>
+ST_126 : Operation 321 [1/4] (5.70ns)   --->   "%v467 = fmul float %v466, 5.000000e-01" [kernel.cpp:770->kernel.cpp:943]   --->   Operation 321 'fmul' 'v467' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_126 : Operation 322 [1/5] (7.25ns)   --->   "%v473 = fadd float %v472, 1.000000e+00" [kernel.cpp:776->kernel.cpp:943]   --->   Operation 322 'fadd' 'v473' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 127 <SV = 126> <Delay = 5.70>
+ST_127 : Operation 323 [4/4] (5.70ns)   --->   "%v474 = fmul float %v467, %v473" [kernel.cpp:777->kernel.cpp:943]   --->   Operation 323 'fmul' 'v474' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 128 <SV = 127> <Delay = 5.70>
+ST_128 : Operation 324 [3/4] (5.70ns)   --->   "%v474 = fmul float %v467, %v473" [kernel.cpp:777->kernel.cpp:943]   --->   Operation 324 'fmul' 'v474' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 129 <SV = 128> <Delay = 5.70>
+ST_129 : Operation 325 [2/4] (5.70ns)   --->   "%v474 = fmul float %v467, %v473" [kernel.cpp:777->kernel.cpp:943]   --->   Operation 325 'fmul' 'v474' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 130 <SV = 129> <Delay = 5.70>
+ST_130 : Operation 326 [1/4] (5.70ns)   --->   "%v474 = fmul float %v467, %v473" [kernel.cpp:777->kernel.cpp:943]   --->   Operation 326 'fmul' 'v474' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 131 <SV = 130> <Delay = 3.25>
+ST_131 : Operation 327 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str82) nounwind" [kernel.cpp:768->kernel.cpp:943]   --->   Operation 327 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_131 : Operation 328 [1/1] (0.00ns)   --->   "%v578_addr = getelementptr [36864 x float]* %v578, i64 0, i64 %sext_ln769" [kernel.cpp:778->kernel.cpp:943]   --->   Operation 328 'getelementptr' 'v578_addr' <Predicate = true> <Delay = 0.00>
+ST_131 : Operation 329 [1/1] (3.25ns)   --->   "store float %v474, float* %v578_addr, align 4" [kernel.cpp:778->kernel.cpp:943]   --->   Operation 329 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36864> <RAM>
+ST_131 : Operation 330 [1/1] (0.00ns)   --->   "br label %2" [kernel.cpp:768->kernel.cpp:943]   --->   Operation 330 'br' <Predicate = true> <Delay = 0.00>
+
+State 132 <SV = 17> <Delay = 0.00>
+ST_132 : Operation 331 [1/2] (0.00ns)   --->   "call fastcc void @Linear_layer_ds2([36864 x float]* %v578, [2359296 x float]* %v563, [768 x float]* %v564, [9216 x float]* %v579) nounwind" [kernel.cpp:945]   --->   Operation 331 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 133 <SV = 18> <Delay = 1.76>
+ST_133 : Operation 332 [2/2] (1.76ns)   --->   "call fastcc void @Res_layer([9216 x float]* %v579, [9216 x float]* %v576, [9216 x float]* %v580) nounwind" [kernel.cpp:947]   --->   Operation 332 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 134 <SV = 19> <Delay = 0.00>
+ST_134 : Operation 333 [1/2] (0.00ns)   --->   "call fastcc void @Res_layer([9216 x float]* %v579, [9216 x float]* %v576, [9216 x float]* %v580) nounwind" [kernel.cpp:947]   --->   Operation 333 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 135 <SV = 20> <Delay = 1.76>
+ST_135 : Operation 334 [2/2] (1.76ns)   --->   "call fastcc void @Layer_norm([9216 x float]* %v580, [768 x float]* %v567, [768 x float]* %v568, [9216 x float]* %v569) nounwind" [kernel.cpp:948]   --->   Operation 334 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 136 <SV = 21> <Delay = 0.00>
+ST_136 : Operation 335 [1/2] (0.00ns)   --->   "call fastcc void @Layer_norm([9216 x float]* %v580, [768 x float]* %v567, [768 x float]* %v568, [9216 x float]* %v569) nounwind" [kernel.cpp:948]   --->   Operation 335 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_136 : Operation 336 [1/1] (0.00ns)   --->   "ret void" [kernel.cpp:949]   --->   Operation 336 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.81ns
+The critical path consists of the following:
+	'alloca' operation ('v570', kernel.cpp:926) [65]  (0 ns)
+	'call' operation ('call_ln927', kernel.cpp:927) to 'Linear_layer_qkv' [76]  (1.81 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.81ns
+The critical path consists of the following:
+	'call' operation ('call_ln929', kernel.cpp:929) to 'Linear_layer_qkv' [77]  (1.81 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 1.81ns
+The critical path consists of the following:
+	'call' operation ('call_ln931', kernel.cpp:931) to 'Linear_layer_qkv' [78]  (1.81 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln937', kernel.cpp:937) to 'Res_layer' [81]  (1.77 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln939', kernel.cpp:939) to 'Layer_norm' [82]  (1.77 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i38') with incoming values : ('i38', kernel.cpp:767->kernel.cpp:943) [86]  (1.77 ns)
+
+ <State 17>: 2.08ns
+The critical path consists of the following:
+	'phi' operation ('i38') with incoming values : ('i38', kernel.cpp:767->kernel.cpp:943) [86]  (0 ns)
+	'sub' operation ('sub_ln769', kernel.cpp:769->kernel.cpp:943) [98]  (2.08 ns)
+
+ <State 18>: 5.36ns
+The critical path consists of the following:
+	'phi' operation ('j37') with incoming values : ('j37', kernel.cpp:768->kernel.cpp:943) [101]  (0 ns)
+	'add' operation ('add_ln769', kernel.cpp:769->kernel.cpp:943) [109]  (2.11 ns)
+	'getelementptr' operation ('v577_addr', kernel.cpp:769->kernel.cpp:943) [111]  (0 ns)
+	'load' operation ('v466', kernel.cpp:770->kernel.cpp:943) on array 'v577', kernel.cpp:940 [113]  (3.25 ns)
+
+ <State 19>: 7.69ns
+The critical path consists of the following:
+	'load' operation ('v466', kernel.cpp:770->kernel.cpp:943) on array 'v577', kernel.cpp:940 [113]  (3.25 ns)
+	'fpext' operation ('x', /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) [115]  (4.44 ns)
+
+ <State 20>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('x', /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) [115]  (4.44 ns)
+
+ <State 21>: 8.37ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.37 ns)
+
+ <State 22>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 23>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 24>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 25>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 26>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 27>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 28>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 29>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 30>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 31>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 32>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 33>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 34>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 35>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 36>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 37>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 38>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 39>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 40>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 41>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 42>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 43>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 44>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 45>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 46>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 47>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 48>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 49>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 50>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 51>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 52>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 53>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 54>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 55>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 56>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 57>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 58>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 59>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 60>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 61>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 62>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 63>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 64>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 65>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 66>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 67>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 68>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 69>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 70>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 71>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 72>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 73>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 74>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 75>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 76>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 77>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 78>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 79>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 80>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 81>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 82>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 83>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 84>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 85>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 86>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 87>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 88>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 89>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 90>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 91>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (8.75 ns)
+
+ <State 92>: 3.67ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i_i', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/powdouble.cpp:7->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377->kernel.cpp:771->kernel.cpp:943) to 'pow_generic<double>' [116]  (3.67 ns)
+
+ <State 93>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('v468', kernel.cpp:771->kernel.cpp:943) [117]  (5.2 ns)
+
+ <State 94>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('v468', kernel.cpp:771->kernel.cpp:943) [117]  (5.2 ns)
+
+ <State 95>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_i', kernel.cpp:772->kernel.cpp:943) [118]  (4.44 ns)
+
+ <State 96>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_i', kernel.cpp:772->kernel.cpp:943) [118]  (4.44 ns)
+
+ <State 97>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_23_i', kernel.cpp:772->kernel.cpp:943) [119]  (7.79 ns)
+
+ <State 98>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_23_i', kernel.cpp:772->kernel.cpp:943) [119]  (7.79 ns)
+
+ <State 99>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_23_i', kernel.cpp:772->kernel.cpp:943) [119]  (7.79 ns)
+
+ <State 100>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_23_i', kernel.cpp:772->kernel.cpp:943) [119]  (7.79 ns)
+
+ <State 101>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_23_i', kernel.cpp:772->kernel.cpp:943) [119]  (7.79 ns)
+
+ <State 102>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_23_i', kernel.cpp:772->kernel.cpp:943) [119]  (7.79 ns)
+
+ <State 103>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('v469', kernel.cpp:772->kernel.cpp:943) [120]  (5.2 ns)
+
+ <State 104>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('v469', kernel.cpp:772->kernel.cpp:943) [120]  (5.2 ns)
+
+ <State 105>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v470', kernel.cpp:773->kernel.cpp:943) [121]  (7.26 ns)
+
+ <State 106>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v470', kernel.cpp:773->kernel.cpp:943) [121]  (7.26 ns)
+
+ <State 107>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v470', kernel.cpp:773->kernel.cpp:943) [121]  (7.26 ns)
+
+ <State 108>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v470', kernel.cpp:773->kernel.cpp:943) [121]  (7.26 ns)
+
+ <State 109>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v470', kernel.cpp:773->kernel.cpp:943) [121]  (7.26 ns)
+
+ <State 110>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_24_i', kernel.cpp:774->kernel.cpp:943) [122]  (4.44 ns)
+
+ <State 111>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_24_i', kernel.cpp:774->kernel.cpp:943) [122]  (4.44 ns)
+
+ <State 112>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25_i', kernel.cpp:774->kernel.cpp:943) [123]  (7.79 ns)
+
+ <State 113>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25_i', kernel.cpp:774->kernel.cpp:943) [123]  (7.79 ns)
+
+ <State 114>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25_i', kernel.cpp:774->kernel.cpp:943) [123]  (7.79 ns)
+
+ <State 115>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25_i', kernel.cpp:774->kernel.cpp:943) [123]  (7.79 ns)
+
+ <State 116>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25_i', kernel.cpp:774->kernel.cpp:943) [123]  (7.79 ns)
+
+ <State 117>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25_i', kernel.cpp:774->kernel.cpp:943) [123]  (7.79 ns)
+
+ <State 118>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('v471', kernel.cpp:774->kernel.cpp:943) [124]  (5.2 ns)
+
+ <State 119>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('v471', kernel.cpp:774->kernel.cpp:943) [124]  (5.2 ns)
+
+ <State 120>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('v472', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/tanhfloat.cpp:8->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:448->kernel.cpp:776->kernel.cpp:943) to 'generic_tanh<float>' [125]  (7.26 ns)
+
+ <State 121>: 2.9ns
+The critical path consists of the following:
+	'call' operation ('v472', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/c/tanhfloat.cpp:8->/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:448->kernel.cpp:776->kernel.cpp:943) to 'generic_tanh<float>' [125]  (2.9 ns)
+
+ <State 122>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v473', kernel.cpp:776->kernel.cpp:943) [126]  (7.26 ns)
+
+ <State 123>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v473', kernel.cpp:776->kernel.cpp:943) [126]  (7.26 ns)
+
+ <State 124>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v473', kernel.cpp:776->kernel.cpp:943) [126]  (7.26 ns)
+
+ <State 125>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v473', kernel.cpp:776->kernel.cpp:943) [126]  (7.26 ns)
+
+ <State 126>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('v473', kernel.cpp:776->kernel.cpp:943) [126]  (7.26 ns)
+
+ <State 127>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('v474', kernel.cpp:777->kernel.cpp:943) [127]  (5.7 ns)
+
+ <State 128>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('v474', kernel.cpp:777->kernel.cpp:943) [127]  (5.7 ns)
+
+ <State 129>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('v474', kernel.cpp:777->kernel.cpp:943) [127]  (5.7 ns)
+
+ <State 130>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('v474', kernel.cpp:777->kernel.cpp:943) [127]  (5.7 ns)
+
+ <State 131>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('v578_addr', kernel.cpp:778->kernel.cpp:943) [112]  (0 ns)
+	'store' operation ('store_ln778', kernel.cpp:778->kernel.cpp:943) of variable 'v474', kernel.cpp:777->kernel.cpp:943 on array 'v578', kernel.cpp:942 [128]  (3.25 ns)
+
+ <State 132>: 0ns
+The critical path consists of the following:
+
+ <State 133>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln947', kernel.cpp:947) to 'Res_layer' [135]  (1.77 ns)
+
+ <State 134>: 0ns
+The critical path consists of the following:
+
+ <State 135>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln948', kernel.cpp:948) to 'Layer_norm' [136]  (1.77 ns)
+
+ <State 136>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

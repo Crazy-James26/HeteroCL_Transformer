@@ -12,7 +12,8 @@ def top():
     head_num = 12
     head_len = 64
     gelu_len = 3072
-    Max_size = 12
+    block_size1 = 12
+    block_size2 = 4
 
     def Linear_layer_qkv(
         inp: float32[inp_num, inp_len],
@@ -27,12 +28,12 @@ def top():
         return outp
 
     s_qkv = allo.customize(Linear_layer_qkv)
-    s_qkv.partition(s_qkv.inp, partition_type=2, dim=1, factor=Max_size)
-    s_qkv.partition(s_qkv.W, partition_type=2, dim=1, factor=Max_size)
-    s_qkv.partition(s_qkv.outp, partition_type=2, dim=0, factor=Max_size)
+    s_qkv.partition(s_qkv.inp, partition_type=2, dim=1, factor=block_size1)
+    s_qkv.partition(s_qkv.W, partition_type=2, dim=1, factor=block_size1)
+    # s_qkv.partition(s_qkv.outp, partition_type=2, dim=0, factor=block_size1)
     loops = s_qkv.get_loops()
     s_qkv.pipeline(loops.bias.j)
-    s_qkv.split(loops.gemm.j, Max_size)
+    s_qkv.split(loops.gemm.j, block_size1)
     loops = s_qkv.get_loops()
     s_qkv.reorder(
         loops.gemm["j.outer"], loops.gemm.k, loops.gemm.i, loops.gemm["j.inner"]
@@ -51,12 +52,17 @@ def top():
         return outp
 
     s_attn = allo.customize(Attention_layer)
-    # s_attn.partition(s_attn.Q_h, partition_type=2, dim=1, factor=Max_size)
-    # s_attn.partition(s_attn.K_h, partition_type=2, dim=1, factor=Max_size)
-    # s_attn.partition(s_attn.outp, partition_type=2, dim=0, factor=Max_size)
+    # s_attn.partition(s_attn.Q_h, partition_type=2, dim=1, factor=block_size2)
+    # s_attn.partition(s_attn.K_h, partition_type=2, dim=1, factor=block_size2)
+    # s_attn.partition(s_attn.outp, partition_type=2, dim=0, factor=block_size2)
     loops = s_attn.get_loops()
     s_attn.pipeline(loops.norm.j)
-    s_attn.reorder(loops.gemm.k, loops.gemm.i, loops.gemm.j)
+    s_attn.split(loops.gemm.i, block_size2)
+    s_attn.split(loops.gemm.j, block_size2)
+    loops = s_attn.get_loops()
+    s_attn.reorder(
+        loops.gemm["i.outer"], loops.gemm["j.outer"], loops.gemm.k, loops.gemm["i.inner"], loops.gemm["j.inner"]
+    )
     s_attn.pipeline(loops.gemm.k)
 
     def Softmax_layer(inp: float32[inp_num, inp_num]) -> float32[inp_num, inp_num]:
@@ -72,7 +78,7 @@ def top():
         return outp
 
     s_sfm = allo.customize(Softmax_layer)
-    # s_sfm.partition(s_sfm.inp, partition_type=2, dim=0, factor=Max_size)
+    # s_sfm.partition(s_sfm.inp, partition_type=2, dim=0, factor=block_size2)
     loops = s_sfm.get_loops()
     s_sfm.pipeline(loops.exp_sum.j)
     s_sfm.pipeline(loops.update.j)
@@ -86,14 +92,15 @@ def top():
         return outp
 
     s_cont = allo.customize(Context_layer)
-    # s_cont.partition(s_cont.Attn, partition_type=2, dim=1, factor=Max_size)
-    # s_cont.partition(s_cont.V_h, partition_type=2, dim=2, factor=Max_size)
-    # s_cont.partition(s_cont.outp, partition_type=2, dim=0, factor=Max_size)
+    # s_cont.partition(s_cont.Attn, partition_type=2, dim=1, factor=block_size2)
+    # s_cont.partition(s_cont.V_h, partition_type=2, dim=2, factor=block_size2)
+    # s_cont.partition(s_cont.outp, partition_type=2, dim=0, factor=block_size2)
     loops = s_cont.get_loops()
-    s_cont.split(loops.gemm.j, Max_size)
+    s_cont.split(loops.gemm.i, block_size2)
+    s_cont.split(loops.gemm.j, block_size2)
     loops = s_cont.get_loops()
     s_cont.reorder(
-        loops.gemm["j.outer"], loops.gemm.k, loops.gemm.i, loops.gemm["j.inner"]
+        loops.gemm["i.outer"], loops.gemm["j.outer"], loops.gemm.k, loops.gemm["i.inner"], loops.gemm["j.inner"]
     )
     s_cont.pipeline(loops.gemm.k)
 
@@ -123,9 +130,9 @@ def top():
         return Context
 
     s_sfa = allo.customize(Self_attention)
-    s_sfa.partition(s_sfa.Q, partition_type=2, dim=0, factor=Max_size)
-    s_sfa.partition(s_sfa.K, partition_type=2, dim=0, factor=Max_size)
-    s_sfa.partition(s_sfa.V, partition_type=2, dim=0, factor=Max_size)
+    s_sfa.partition(s_sfa.Q, partition_type=2, dim=0, factor=block_size1)
+    s_sfa.partition(s_sfa.K, partition_type=2, dim=0, factor=block_size1)
+    s_sfa.partition(s_sfa.V, partition_type=2, dim=0, factor=block_size1)
     s_sfa.compose(s_attn)
     s_sfa.compose(s_sfm)
     s_sfa.compose(s_cont)
@@ -145,12 +152,12 @@ def top():
         return outp
 
     s_ds0 = allo.customize(Linear_layer_ds0)
-    s_ds0.partition(s_ds0.inp, partition_type=2, dim=1, factor=Max_size)
-    s_ds0.partition(s_ds0.W, partition_type=2, dim=1, factor=Max_size)
-    s_ds0.partition(s_ds0.outp, partition_type=2, dim=0, factor=Max_size)
+    s_ds0.partition(s_ds0.inp, partition_type=2, dim=1, factor=block_size1)
+    s_ds0.partition(s_ds0.W, partition_type=2, dim=1, factor=block_size1)
+    # s_ds0.partition(s_ds0.outp, partition_type=2, dim=0, factor=block_size1)
     loops = s_ds0.get_loops()
     s_ds0.pipeline(loops.bias.j)
-    s_ds0.split(loops.gemm.j, Max_size)
+    s_ds0.split(loops.gemm.j, block_size1)
     loops = s_ds0.get_loops()
     s_ds0.reorder(
         loops.gemm["j.outer"], loops.gemm.k, loops.gemm.i, loops.gemm["j.inner"]
@@ -166,8 +173,8 @@ def top():
         return outp
 
     s_res0 = allo.customize(Res_layer0)
-    s_res0.partition(s_res0.inp1, partition_type=2, dim=0, factor=Max_size)
-    s_res0.partition(s_res0.inp2, partition_type=2, dim=1, factor=Max_size)
+    s_res0.partition(s_res0.inp1, partition_type=2, dim=0, factor=block_size1)
+    s_res0.partition(s_res0.inp2, partition_type=2, dim=1, factor=block_size1)
     s_res0.pipeline("j")
 
     def Layer_norm(
@@ -195,7 +202,7 @@ def top():
         return outp
 
     s_ln = allo.customize(Layer_norm)
-    s_ln.partition(s_ln.outp, partition_type=2, dim=1, factor=Max_size)
+    s_ln.partition(s_ln.outp, partition_type=2, dim=1, factor=block_size1)
     loops = s_ln.get_loops()
     s_ln.pipeline(loops.sum.j)
     s_ln.compute_at(loops.sum.i, loops.mean_var.i)
@@ -214,12 +221,12 @@ def top():
         return outp
 
     s_ds1 = allo.customize(Linear_layer_ds1)
-    s_ds1.partition(s_ds1.inp, partition_type=2, dim=1, factor=Max_size)
-    s_ds1.partition(s_ds1.W, partition_type=2, dim=1, factor=Max_size)
-    s_ds1.partition(s_ds1.outp, partition_type=2, dim=0, factor=Max_size)
+    s_ds1.partition(s_ds1.inp, partition_type=2, dim=1, factor=block_size1)
+    s_ds1.partition(s_ds1.W, partition_type=2, dim=1, factor=block_size1)
+    # s_ds1.partition(s_ds1.outp, partition_type=2, dim=0, factor=block_size1)
     loops = s_ds1.get_loops()
     s_ds1.pipeline(loops.bias.j)
-    s_ds1.split(loops.gemm.j, Max_size)
+    s_ds1.split(loops.gemm.j, block_size1)
     loops = s_ds1.get_loops()
     s_ds1.reorder(
         loops.gemm["j.outer"], loops.gemm.k, loops.gemm.i, loops.gemm["j.inner"]
@@ -242,7 +249,7 @@ def top():
         return outp
 
     s_gelu = allo.customize(Gelu_layer)
-    s_gelu.partition(s_gelu.inp, partition_type=2, dim=0, factor=Max_size)
+    s_gelu.partition(s_gelu.inp, partition_type=2, dim=0, factor=block_size1)
     s_gelu.pipeline("j")
 
     def Linear_layer_ds2(
@@ -258,12 +265,12 @@ def top():
         return outp
 
     s_ds2 = allo.customize(Linear_layer_ds2)
-    s_ds2.partition(s_ds2.inp, partition_type=2, dim=1, factor=Max_size)
-    s_ds2.partition(s_ds2.W, partition_type=2, dim=1, factor=Max_size)
-    s_ds2.partition(s_ds2.outp, partition_type=2, dim=0, factor=Max_size)
+    s_ds2.partition(s_ds2.inp, partition_type=2, dim=1, factor=block_size1)
+    s_ds2.partition(s_ds2.W, partition_type=2, dim=1, factor=block_size1)
+    # s_ds2.partition(s_ds2.outp, partition_type=2, dim=0, factor=block_size1)
     loops = s_ds2.get_loops()
     s_ds2.pipeline(loops.bias.j)
-    s_ds2.split(loops.gemm.j, Max_size)
+    s_ds2.split(loops.gemm.j, block_size1)
     loops = s_ds2.get_loops()
     s_ds2.reorder(
         loops.gemm["j.outer"], loops.gemm.k, loops.gemm.i, loops.gemm["j.inner"]
@@ -279,8 +286,8 @@ def top():
         return outp
 
     s_res1 = allo.customize(Res_layer1)
-    s_res1.partition(s_res1.inp1, partition_type=2, dim=0, factor=Max_size)
-    s_res1.partition(s_res1.inp2, partition_type=2, dim=1, factor=Max_size)
+    s_res1.partition(s_res1.inp1, partition_type=2, dim=0, factor=block_size1)
+    s_res1.partition(s_res1.inp2, partition_type=2, dim=1, factor=block_size1)
     s_res1.pipeline("j")
 
     def Bert_layer(
@@ -329,8 +336,8 @@ def top():
         return ffn_ln_outp
 
     s = allo.customize(Bert_layer)
-    s.partition(s.inp, partition_type=2, dim=1, factor=Max_size)
-    s.partition(s.ffn_ln_outp, partition_type=2, dim=1, factor=Max_size)
+    s.partition(s.inp, partition_type=2, dim=1, factor=block_size1)
+    s.partition(s.ffn_ln_outp, partition_type=2, dim=1, factor=block_size1)
     s.compose(s_qkv)
     s.compose(s_sfa)
     s.compose(s_ds0)
@@ -346,12 +353,13 @@ def top():
 if __name__ == "__main__":
     target = "vhls"
     s = top()
+    print(s.module)
 
     if(target=="vhls"):
         f = s.build(target=target)
         print(f)
-        # mod = s.build(target="vhls", mode="csyn", project="bert_layer_cct_buffer.prj")
-        # mod()
+        mod = s.build(target="vhls", mode="csyn", project="bert_layer_cct_fake_sa.prj")
+        mod()
 
     else:
         f = s.build(target=target)

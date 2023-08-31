@@ -13,7 +13,7 @@
 #include <math.h>
 #include <stdint.h>
 using namespace std;
-void systolic(
+void fake_systolic_array(
   float v0[12][12],
   float v1[12][12],
   float v2[12],

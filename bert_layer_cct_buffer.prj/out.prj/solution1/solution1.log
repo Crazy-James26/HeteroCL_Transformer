@@ -1,0 +1,625 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 188489 ; free virtual = 320838
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 1060.684 ; gain = 530.188 ; free physical = 188489 ; free virtual = 320839
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:52 ; elapsed = 00:01:58 . Memory (MB): peak = 1444.684 ; gain = 914.188 ; free physical = 188013 ; free virtual = 320409
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'std::exp' into 'Softmax_layer' (kernel.cpp:112) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::sqrt' into 'Layer_norm' (kernel.cpp:312) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:225) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:227) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:229) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:231) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:233) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:235) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:237) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:334) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:373) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:375) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:641) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow' into 'std::pow<float, double>' (/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_copysign<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_copysign<float>' into 'generic_fabs<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_fabs.h:13) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_nan<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_nan.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:209) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:210) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:219) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:237) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp_traits<double>::exp_Z1P_m_1' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:322) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_fabs<float>' into 'explog_based::generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_nan<float>' into 'explog_based::generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::expm1' into 'explog_based::generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:90) automatically.
+INFO: [XFORM 203-602] Inlining function 'tanhf' into 'std::tanh' (/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:448) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::pow<float, double>' into 'Gelu_layer' (kernel.cpp:373) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::tanh' into 'Gelu_layer' (kernel.cpp:378) automatically.
+INFO: [XFORM 203-602] Inlining function 'Gelu_layer' into 'Bert_layer' (kernel.cpp:465) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:03:19 ; elapsed = 00:03:26 . Memory (MB): peak = 1653.781 ; gain = 1123.285 ; free physical = 187639 ; free virtual = 320052
+INFO: [XFORM 203-602] Inlining function 'std::exp' into 'Softmax_layer' (kernel.cpp:112) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::sqrt' into 'Layer_norm' (kernel.cpp:312) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:225) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:227) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:229) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:231) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:233) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:235) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:237) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:334) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:373) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:375) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:641) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow' into 'std::pow<float, double>' (/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:377) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_copysign<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_copysign<float>' into 'generic_fabs<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_fabs.h:13) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_nan<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_nan.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:209) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:210) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:219) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:237) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp_traits<double>::exp_Z1P_m_1' into 'exp_reduce_::exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:322) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_fabs<float>' into 'explog_based::generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_nan<float>' into 'explog_based::generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::expm1' into 'explog_based::generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:90) automatically.
+INFO: [XFORM 203-602] Inlining function 'tanhf' into 'std::tanh' (/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:448) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::pow<float, double>' into 'Gelu_layer' (kernel.cpp:373) automatically.
+INFO: [XFORM 203-602] Inlining function 'std::tanh' into 'Gelu_layer' (kernel.cpp:378) automatically.
+INFO: [XFORM 203-602] Inlining function 'Gelu_layer' into 'Bert_layer' (kernel.cpp:465) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:320:19) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:407:5) in function 'pow_reduce::pow_generic<double>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:488:26) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:657:25) in function 'pow_reduce::pow_generic<double>'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:108:8) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:114:3) in function 'explog_based::generic_tanh<float>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:83:10) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:9:10) in function 'explog_based::generic_tanh<float>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:185:19) to (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:368:3) in function 'exp_reduce_::exp_generic<double>'... converting 12 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:320)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:04:49 ; elapsed = 00:04:57 . Memory (MB): peak = 1773.715 ; gain = 1243.219 ; free physical = 187352 ; free virtual = 319790
+INFO: [XFORM 203-541] Flattening a loop nest 'l_exp_sum_i2' (kernel.cpp:108:50) in function 'Softmax_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_update_i3' (kernel.cpp:120:49) in function 'Softmax_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_mh_separate_i_s' (kernel.cpp:176:60) in function 'Self_attention'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_mh_merge_i_m' (kernel.cpp:193:57) in function 'Self_attention'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_S_h_0_h' (kernel.cpp:172:44) in function 'Self_attention' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_i_j_0_i6' (kernel.cpp:251:50) in function 'Res_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_k_0_k' (kernel.cpp:33:47) in function 'Linear_layer_qkv'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_bias_i' (kernel.cpp:27:43) in function 'Linear_layer_qkv' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_k_0_k5' (kernel.cpp:402:52) in function 'Linear_layer_ds2'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_bias_i11' (kernel.cpp:396:51) in function 'Linear_layer_ds2' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_k_0_k4' (kernel.cpp:338:51) in function 'Linear_layer_ds1'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_bias_i9' (kernel.cpp:332:47) in function 'Linear_layer_ds1' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_k_0_k3' (kernel.cpp:220:51) in function 'Linear_layer_ds0'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_bias_i5' (kernel.cpp:214:47) in function 'Linear_layer_ds0' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_mean_var_i7' (kernel.cpp:277:51) in function 'Layer_norm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_norm_i8' (kernel.cpp:302:47) in function 'Layer_norm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_k_0_k2' (kernel.cpp:147:50) in function 'Context_layer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_gemm_i4' (kernel.cpp:141:47) in function 'Context_layer' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_i_j_0_i10' (kernel.cpp:368:54) in function 'Bert_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_k_0_k1' (kernel.cpp:75:50) in function 'Attention_layer'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'l_norm_i1' (kernel.cpp:69:47) in function 'Attention_layer' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-631] Renaming function 'pow_reduce::pow_generic<double>' to 'pow_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:320)
+WARNING: [XFORM 203-631] Renaming function 'explog_based::generic_tanh<float>' to 'generic_tanh<float>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_tanh.h:57)
+WARNING: [XFORM 203-631] Renaming function 'exp_reduce_::exp_generic<double>' to 'exp_generic<double>' (/wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:185)
+INFO: [HLS 200-472] Inferring partial write operation for 'inp_sumRow' (kernel.cpp:106:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'v42' (kernel.cpp:113:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'inp_sumRow' (kernel.cpp:117:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v43' (kernel.cpp:126:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'Q_h' (kernel.cpp:180:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'K_h' (kernel.cpp:182:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'V_h' (kernel.cpp:184:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v78' (kernel.cpp:197:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v118' (kernel.cpp:257:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v3' (kernel.cpp:24:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v7' (kernel.cpp:31:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'v7' (kernel.cpp:41:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v3' (kernel.cpp:47:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v3' (kernel.cpp:54:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v201' (kernel.cpp:393:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v205' (kernel.cpp:400:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'v205' (kernel.cpp:410:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v201' (kernel.cpp:416:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v201' (kernel.cpp:423:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v166' (kernel.cpp:329:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v170' (kernel.cpp:336:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'v170' (kernel.cpp:346:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v166' (kernel.cpp:352:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v166' (kernel.cpp:359:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v97' (kernel.cpp:211:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v101' (kernel.cpp:218:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'v101' (kernel.cpp:228:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v97' (kernel.cpp:234:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v97' (kernel.cpp:241:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean' (kernel.cpp:270:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean2' (kernel.cpp:274:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean' (kernel.cpp:292:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean2' (kernel.cpp:295:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'var' (kernel.cpp:300:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean' (kernel.cpp:283:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean2' (kernel.cpp:288:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v60' (kernel.cpp:138:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v64' (kernel.cpp:145:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'v64' (kernel.cpp:155:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v60' (kernel.cpp:161:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v246' (kernel.cpp:380:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v24' (kernel.cpp:66:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v28' (kernel.cpp:73:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'v28' (kernel.cpp:83:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'v24' (kernel.cpp:89:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'v24' (kernel.cpp:95:7)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:05:27 ; elapsed = 00:05:35 . Memory (MB): peak = 1773.715 ; gain = 1243.219 ; free physical = 187631 ; free virtual = 320077
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Bert_layer' ...
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'exp_generic<double>' to 'exp_generic_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'generic_tanh<float>' to 'generic_tanh_float_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_qkv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j_init'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_k_0_k_l_j'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop 'l_j_back'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_j1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 335.41 seconds; current allocated memory: 778.225 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 778.780 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Attention_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j_init1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_k_0_k1_l_j2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-61] Pipelining loop 'l_j_back1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_j3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 779.165 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 779.673 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Softmax_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_exp_sum_i2_l_j4'.
+WARNING: [SCHED 204-68] The II Violation in module 'Softmax_layer' (Loop: l_exp_sum_i2_l_j4): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('inp_sumRow_addr_1_write_ln117', kernel.cpp:117) of variable 'v52', kernel.cpp:116 on array 'inp_sumRow', kernel.cpp:104 and 'load' operation ('v51', kernel.cpp:115) on array 'inp_sumRow', kernel.cpp:104.
+WARNING: [SCHED 204-68] The II Violation in module 'Softmax_layer' (Loop: l_exp_sum_i2_l_j4): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('inp_sumRow_addr_1_write_ln117', kernel.cpp:117) of variable 'v52', kernel.cpp:116 on array 'inp_sumRow', kernel.cpp:104 and 'load' operation ('v51', kernel.cpp:115) on array 'inp_sumRow', kernel.cpp:104.
+WARNING: [SCHED 204-68] The II Violation in module 'Softmax_layer' (Loop: l_exp_sum_i2_l_j4): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('inp_sumRow_addr_1_write_ln117', kernel.cpp:117) of variable 'v52', kernel.cpp:116 on array 'inp_sumRow', kernel.cpp:104 and 'load' operation ('v51', kernel.cpp:115) on array 'inp_sumRow', kernel.cpp:104.
+WARNING: [SCHED 204-68] The II Violation in module 'Softmax_layer' (Loop: l_exp_sum_i2_l_j4): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('inp_sumRow_addr_1_write_ln117', kernel.cpp:117) of variable 'v52', kernel.cpp:116 on array 'inp_sumRow', kernel.cpp:104 and 'load' operation ('v51', kernel.cpp:115) on array 'inp_sumRow', kernel.cpp:104.
+WARNING: [SCHED 204-68] The II Violation in module 'Softmax_layer' (Loop: l_exp_sum_i2_l_j4): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'store' operation ('inp_sumRow_addr_1_write_ln117', kernel.cpp:117) of variable 'v52', kernel.cpp:116 on array 'inp_sumRow', kernel.cpp:104 and 'load' operation ('v51', kernel.cpp:115) on array 'inp_sumRow', kernel.cpp:104.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 6, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'l_update_i3_l_j5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 20.
+WARNING: [SCHED 204-21] Estimated clock period (9.578ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'Softmax_layer' consists of the following:
+	'load' operation ('v51', kernel.cpp:115) on array 'inp_sumRow', kernel.cpp:104 [49]  (2.32 ns)
+	'fadd' operation ('v52', kernel.cpp:116) [50]  (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 780.002 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 780.433 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Context_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j_init2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_k_0_k2_l_j6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-61] Pipelining loop 'l_j_back2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 780.761 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 781.198 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_mh_separate_i_s_l_j_s'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'l_mh_merge_i_m_l_j_m'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 781.511 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 781.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j_init3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_k_0_k3_l_j7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop 'l_j_back3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_j8'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 782.445 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 782.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Res_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_S_i_j_0_i6_l_j9'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 783.167 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 783.361 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_mean_var_i7_l_j10'.
+WARNING: [SCHED 204-68] The II Violation in module 'Layer_norm' (Loop: l_mean_var_i7_l_j10): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('mean_addr_1_write_ln283', kernel.cpp:283) of variable 'v137', kernel.cpp:282 on array 'mean', kernel.cpp:268 and 'load' operation ('v136', kernel.cpp:281) on array 'mean', kernel.cpp:268.
+WARNING: [SCHED 204-68] The II Violation in module 'Layer_norm' (Loop: l_mean_var_i7_l_j10): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('mean_addr_1_write_ln283', kernel.cpp:283) of variable 'v137', kernel.cpp:282 on array 'mean', kernel.cpp:268 and 'load' operation ('v136', kernel.cpp:281) on array 'mean', kernel.cpp:268.
+WARNING: [SCHED 204-68] The II Violation in module 'Layer_norm' (Loop: l_mean_var_i7_l_j10): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('mean_addr_1_write_ln283', kernel.cpp:283) of variable 'v137', kernel.cpp:282 on array 'mean', kernel.cpp:268 and 'load' operation ('v136', kernel.cpp:281) on array 'mean', kernel.cpp:268.
+WARNING: [SCHED 204-68] The II Violation in module 'Layer_norm' (Loop: l_mean_var_i7_l_j10): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('mean_addr_1_write_ln283', kernel.cpp:283) of variable 'v137', kernel.cpp:282 on array 'mean', kernel.cpp:268 and 'load' operation ('v136', kernel.cpp:281) on array 'mean', kernel.cpp:268.
+WARNING: [SCHED 204-68] The II Violation in module 'Layer_norm' (Loop: l_mean_var_i7_l_j10): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'store' operation ('mean_addr_1_write_ln283', kernel.cpp:283) of variable 'v137', kernel.cpp:282 on array 'mean', kernel.cpp:268 and 'load' operation ('v136', kernel.cpp:281) on array 'mean', kernel.cpp:268.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 6, Depth = 33.
+INFO: [SCHED 204-61] Pipelining loop 'l_norm_i8_l_j11'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 44.
+WARNING: [SCHED 204-21] Estimated clock period (9.578ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'Layer_norm' consists of the following:
+	'load' operation ('v136', kernel.cpp:281) on array 'mean', kernel.cpp:268 [64]  (2.32 ns)
+	'fadd' operation ('v137', kernel.cpp:282) [65]  (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 783.925 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 784.692 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j_init4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_k_0_k4_l_j12'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop 'l_j_back4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_j13'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 785.221 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 785.775 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 72.
+WARNING: [SCHED 204-21] Estimated clock period (9.514ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'pow_generic_double_s' consists of the following:
+	'mul' operation of DSP[262] ('r.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [259]  (3.36 ns)
+	'add' operation of DSP[262] ('ret.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [262]  (3.02 ns)
+	'icmp' operation ('icmp_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [266]  (2.43 ns)
+	'select' operation ('select_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [268]  (0 ns)
+	'select' operation ('r_exp.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_pow.h:592) [269]  (0.7 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.84 seconds; current allocated memory: 787.466 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 789.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'exp_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'exp_generic<double>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 20.
+WARNING: [SCHED 204-21] Estimated clock period (9.514ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'exp_generic_double_s' consists of the following:
+	'mul' operation of DSP[53] ('r.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [50]  (3.36 ns)
+	'add' operation of DSP[53] ('ret.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [53]  (3.02 ns)
+	'icmp' operation ('icmp_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [57]  (2.43 ns)
+	'select' operation ('select_ln805', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [59]  (0 ns)
+	'select' operation ('r_exp.V', /wrk/2019.sub/2019.2.1/continuous/2019_12_05_2729669/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:272) [60]  (0.7 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 790.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 790.811 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_tanh_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'generic_tanh<float>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 61.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 791.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 791.932 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j_init5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_k_0_k5_l_j15'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 15.
+INFO: [SCHED 204-61] Pipelining loop 'l_j_back5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'l_j16'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 792.511 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 793.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Bert_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_S_i_j_0_i10_l_j14'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 174.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 793.807 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.24 seconds; current allocated memory: 796.089 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_qkv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fadd_32ns_32ns_32_5_full_dsp_1' to 'Bert_layer_fadd_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fmul_32ns_32ns_32_4_max_dsp_1' to 'Bert_layer_fmul_3cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_qkv'.
+INFO: [HLS 200-111]  Elapsed time: 1.08 seconds; current allocated memory: 797.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Attention_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Attention_layer'.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 800.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Softmax_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Softmax_layer_inp_sumRow' to 'Softmax_layer_inpdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fdiv_32ns_32ns_32_16_1' to 'Bert_layer_fdiv_3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fexp_32ns_32ns_32_9_full_dsp_1' to 'Bert_layer_fexp_3fYi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fdiv_3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fexp_3fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Softmax_layer'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 803.540 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Context_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Context_layer'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 805.717 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 808.243 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Linear_layer_ds0_v101' to 'Linear_layer_ds0_g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds0'.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 810.982 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Res_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Res_layer'.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 813.321 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'Bert_layer_faddfshbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fptrunc_64ns_32_2_1' to 'Bert_layer_fptrunibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fpext_32ns_64_2_1' to 'Bert_layer_fpext_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fsqrt_32ns_32ns_32_12_1' to 'Bert_layer_fsqrt_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_dadd_64ns_64ns_64_5_full_dsp_1' to 'Bert_layer_dadd_6lbW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_dadd_6lbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_faddfshbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fdiv_3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fpext_jbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fptrunibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fsqrt_kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 815.763 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Linear_layer_ds1_v170' to 'Linear_layer_ds1_mb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds1'.
+INFO: [HLS 200-111]  Elapsed time: 0.66 seconds; current allocated memory: 819.088 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_20' to 'pow_generic_doublncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_19' to 'pow_generic_doublocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_16' to 'pow_generic_doublpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_17' to 'pow_generic_doublqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_9' to 'pow_generic_doublrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_12' to 'pow_generic_doublsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_13' to 'pow_generic_doubltde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_14' to 'pow_generic_doubludo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_15' to 'pow_generic_doublvdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_18' to 'pow_generic_doublwdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo' to 'pow_generic_doublxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_21' to 'pow_generic_doublyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_54s_6ns_54_2_1' to 'Bert_layer_mul_54zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_71ns_4ns_75_5_1' to 'Bert_layer_mul_71Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_73ns_6ns_79_5_1' to 'Bert_layer_mul_73Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_83ns_6ns_89_5_1' to 'Bert_layer_mul_83CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_92ns_6ns_98_5_1' to 'Bert_layer_mul_92DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_87ns_6ns_93_5_1' to 'Bert_layer_mul_87Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_82ns_6ns_88_5_1' to 'Bert_layer_mul_82Ffa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_77ns_6ns_83_5_1' to 'Bert_layer_mul_77Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_80ns_12s_90_5_1' to 'Bert_layer_mul_80Hfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_54ns_78s_131_5_1' to 'Bert_layer_mul_54IfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_55ns_78s_130_5_1' to 'Bert_layer_mul_55JfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_72ns_13s_83_5_1' to 'Bert_layer_mul_72KfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_43ns_36ns_79_2_1' to 'Bert_layer_mul_43Lf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_49ns_44ns_93_2_1' to 'Bert_layer_mul_49Mgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_50ns_50ns_100_2_1' to 'Bert_layer_mul_50Ngs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mac_muladd_16ns_16s_19s_31_1_1' to 'Bert_layer_mac_muOgC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'pow_generic_double_s' is 11389 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mac_muOgC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_43Lf8': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_49Mgi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_50Ngs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_54IfE': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_54zec': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_55JfO': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_71Aem': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_72KfY': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_73Bew': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_77Gfk': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_80Hfu': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_82Ffa': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_83CeG': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_87Ee0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_92DeQ': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 826.255 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'exp_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_exp_Z1_array_s' to 'exp_generic_doublPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_f_Z3_array_V' to 'exp_generic_doublQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_f_Z2_array_V' to 'exp_generic_doublRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_72ns_13s_84_5_1' to 'Bert_layer_mul_72Shg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_36ns_43ns_79_2_1' to 'Bert_layer_mul_36Thq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_mul_44ns_49ns_93_2_1' to 'Bert_layer_mul_44UhA' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mac_muOgC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_36Thq': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_44UhA': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_50Ngs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_mul_72Shg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'exp_generic_double_s'.
+INFO: [HLS 200-111]  Elapsed time: 1.29 seconds; current allocated memory: 833.838 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_tanh_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fsub_32ns_32ns_32_5_full_dsp_1' to 'Bert_layer_fsub_3VhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Bert_layer_fcmp_32ns_32ns_1_2_1' to 'Bert_layer_fcmp_3WhU' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_dadd_6lbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fcmp_3WhU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fdiv_3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fpext_jbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fptrunibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fsub_3VhK': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_tanh_float_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 838.963 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Linear_layer_ds2_v205' to 'Linear_layer_ds2_Xh4' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fadd_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Bert_layer_fmul_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds2'.
+INFO

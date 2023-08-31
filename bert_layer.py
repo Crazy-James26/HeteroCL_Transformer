@@ -13,7 +13,7 @@ def top():
     head_len = 64
     gelu_len = 3072
 
-    def Linear_layer_qkvc(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
+    def Linear_layer_qkv(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
         outp: float32[inp_num, inp_len] = 0.0
         for i, j in allo.grid(inp_num, inp_len, name="gemm"):
             for k in allo.reduction(inp_len):
@@ -50,15 +50,11 @@ def top():
                         outp[i, j] += Attn[i, k] * V_h[k, j]
         return outp
 
-    def Self_attention(inp: float32[inp_num, inp_len], 
-                        Wq: float32[inp_len, inp_len], Bq: float32[inp_len], 
-                        Wk: float32[inp_len, inp_len], Bk: float32[inp_len], 
-                        Wv: float32[inp_len, inp_len], Bv: float32[inp_len]) -> float32[inp_num, inp_len]:
-                        
-        # project Q, K, V
-        Q = Linear_layer_qkvc(inp, Wq, Bq)
-        K = Linear_layer_qkvc(inp, Wk, Bk)
-        V = Linear_layer_qkvc(inp, Wv, Bv)
+    def Self_attention(
+        Q: float32[inp_num, inp_len],
+        K: float32[inp_num, inp_len],
+        V: float32[inp_num, inp_len],
+    ) -> float32[inp_num, inp_len]:
         Context: float32[inp_num, inp_len]
 
         for h in range(head_num):
@@ -78,6 +74,17 @@ def top():
                 Context[i, h*64 + j] = C_h[i, j]
         
         return Context
+
+
+    def Linear_layer_ds0(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
+        outp: float32[inp_num, inp_len] = 0.0
+        for i, j in allo.grid(inp_num, inp_len, name="gemm"):
+            for k in allo.reduction(inp_len):
+                outp[i, j] += inp[i, k] * W[j, k]
+        for i, j in allo.grid(inp_num, inp_len, name="bias"):
+            outp[i, j] += B[j]
+        return outp
+    
 
     def Res_layer(inp1: float32[inp_num, inp_len], inp2: float32[inp_num, inp_len]) -> float32[inp_num, inp_len]:
         outp: float32[inp_num, inp_len]
@@ -139,10 +146,14 @@ def top():
                     gamma1: float32[inp_len], beta1: float32[inp_len], 
                     gamma2: float32[inp_len], beta2: float32[inp_len]) -> float32[inp_num, inp_len]:
         # 1. Bert Attention
+        # 1.0 project Q, K, V
+        Q = Linear_layer_qkv(inp, Wq, Bq)
+        K = Linear_layer_qkv(inp, Wk, Bk)
+        V = Linear_layer_qkv(inp, Wv, Bv)
         # 1.1 self attention
-        attn_sf_outp = Self_attention(inp, Wq, Bq, Wk, Bk, Wv, Bv)
+        attn_sf_outp = Self_attention(Q, K, V)
         # 1.2 output dense
-        attn_ds_outp = Linear_layer_qkvc(attn_sf_outp, output_dense_w, output_dense_b)
+        attn_ds_outp = Linear_layer_ds0(attn_sf_outp, output_dense_w, output_dense_b)
         # 1.3 Residual layer
         attn_res_outp = Res_layer(attn_ds_outp, inp)
         # 1.4 layer norm
@@ -164,13 +175,13 @@ def top():
     return s
 
 if __name__ == '__main__':
-    target = "vhls"
+    target = None
     s = top()
 
     if(target=="vhls"):
         f = s.build(target=target)
         print(f)
-        mod = s.build(target="vhls", mode="csyn", project="bert_layer.prj")
+        mod = s.build(target="vhls", mode="csyn", project="bert_layer_baseline.prj")
         mod()
 
     else:

@@ -1,0 +1,198 @@
+
+
+================================================================
+== Vivado HLS Report for 'init_block_A_proc'
+================================================================
+* Date:           Wed Aug 30 10:29:10 2023
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.888 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1537|     1537| 15.370 us | 15.370 us |  1537|  1537|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- init_block_A  |     1536|     1536|         2|          -|          -|   768|    no    |
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_11_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2448, i32 0, i32 0, [1 x i8]* @p_str2449, [1 x i8]* @p_str2450, [1 x i8]* @p_str2451, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2452, [1 x i8]* @p_str2453)"   --->   Operation 4 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%empty_764 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_10_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2441, i32 0, i32 0, [1 x i8]* @p_str2442, [1 x i8]* @p_str2443, [1 x i8]* @p_str2444, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2445, [1 x i8]* @p_str2446)"   --->   Operation 5 'specinterface' 'empty_764' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%empty_765 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_9_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2434, i32 0, i32 0, [1 x i8]* @p_str2435, [1 x i8]* @p_str2436, [1 x i8]* @p_str2437, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2438, [1 x i8]* @p_str2439)"   --->   Operation 6 'specinterface' 'empty_765' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%empty_766 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_8_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2427, i32 0, i32 0, [1 x i8]* @p_str2428, [1 x i8]* @p_str2429, [1 x i8]* @p_str2430, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2431, [1 x i8]* @p_str2432)"   --->   Operation 7 'specinterface' 'empty_766' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%empty_767 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_7_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2420, i32 0, i32 0, [1 x i8]* @p_str2421, [1 x i8]* @p_str2422, [1 x i8]* @p_str2423, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2424, [1 x i8]* @p_str2425)"   --->   Operation 8 'specinterface' 'empty_767' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty_768 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_6_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2413, i32 0, i32 0, [1 x i8]* @p_str2414, [1 x i8]* @p_str2415, [1 x i8]* @p_str2416, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2417, [1 x i8]* @p_str2418)"   --->   Operation 9 'specinterface' 'empty_768' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty_769 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_5_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2406, i32 0, i32 0, [1 x i8]* @p_str2407, [1 x i8]* @p_str2408, [1 x i8]* @p_str2409, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2410, [1 x i8]* @p_str2411)"   --->   Operation 10 'specinterface' 'empty_769' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty_770 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_4_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2399, i32 0, i32 0, [1 x i8]* @p_str2400, [1 x i8]* @p_str2401, [1 x i8]* @p_str2402, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2403, [1 x i8]* @p_str2404)"   --->   Operation 11 'specinterface' 'empty_770' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty_771 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_3_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2392, i32 0, i32 0, [1 x i8]* @p_str2393, [1 x i8]* @p_str2394, [1 x i8]* @p_str2395, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2396, [1 x i8]* @p_str2397)"   --->   Operation 12 'specinterface' 'empty_771' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty_772 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2385, i32 0, i32 0, [1 x i8]* @p_str2386, [1 x i8]* @p_str2387, [1 x i8]* @p_str2388, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2389, [1 x i8]* @p_str2390)"   --->   Operation 13 'specinterface' 'empty_772' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty_773 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2378, i32 0, i32 0, [1 x i8]* @p_str2379, [1 x i8]* @p_str2380, [1 x i8]* @p_str2381, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2382, [1 x i8]* @p_str2383)"   --->   Operation 14 'specinterface' 'empty_773' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty_774 = call i32 (...)* @_ssdm_op_SpecInterface(float* %block_A_loader_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str2371, i32 0, i32 0, [1 x i8]* @p_str2372, [1 x i8]* @p_str2373, [1 x i8]* @p_str2374, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str2375, [1 x i8]* @p_str2376)"   --->   Operation 15 'specinterface' 'empty_774' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.76ns)   --->   "br label %.preheader9.i.0"   --->   Operation 16 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%k_0_i_0 = phi i10 [ %add_ln33, %0 ], [ 0, %newFuncRoot ]" [gemm_systolic_array.cpp:33]   --->   Operation 17 'phi' 'k_0_i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.77ns)   --->   "%icmp_ln33 = icmp eq i10 %k_0_i_0, -256" [gemm_systolic_array.cpp:33]   --->   Operation 18 'icmp' 'icmp_ln33' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty_775 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 768, i64 768, i64 768) nounwind"   --->   Operation 19 'speclooptripcount' 'empty_775' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.73ns)   --->   "%add_ln33 = add i10 %k_0_i_0, 1" [gemm_systolic_array.cpp:33]   --->   Operation 20 'add' 'add_ln33' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %icmp_ln33, label %.preheader.i.0.preheader.exitStub, label %0" [gemm_systolic_array.cpp:33]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln36 = zext i10 %k_0_i_0 to i64" [gemm_systolic_array.cpp:36]   --->   Operation 22 'zext' 'zext_ln36' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%A_0_addr = getelementptr [768 x float]* %A_0, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 23 'getelementptr' 'A_0_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (3.25ns)   --->   "%tmp = load float* %A_0_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 24 'load' 'tmp' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%A_1_addr = getelementptr [768 x float]* %A_1, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 25 'getelementptr' 'A_1_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (3.25ns)   --->   "%tmp_36 = load float* %A_1_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 26 'load' 'tmp_36' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%A_2_addr = getelementptr [768 x float]* %A_2, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 27 'getelementptr' 'A_2_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 28 [2/2] (3.25ns)   --->   "%tmp_37 = load float* %A_2_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 28 'load' 'tmp_37' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%A_3_addr = getelementptr [768 x float]* %A_3, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 29 'getelementptr' 'A_3_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (3.25ns)   --->   "%tmp_38 = load float* %A_3_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 30 'load' 'tmp_38' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%A_4_addr = getelementptr [768 x float]* %A_4, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 31 'getelementptr' 'A_4_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (3.25ns)   --->   "%tmp_39 = load float* %A_4_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 32 'load' 'tmp_39' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%A_5_addr = getelementptr [768 x float]* %A_5, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 33 'getelementptr' 'A_5_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (3.25ns)   --->   "%tmp_40 = load float* %A_5_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 34 'load' 'tmp_40' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%A_6_addr = getelementptr [768 x float]* %A_6, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 35 'getelementptr' 'A_6_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (3.25ns)   --->   "%tmp_41 = load float* %A_6_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 36 'load' 'tmp_41' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%A_7_addr = getelementptr [768 x float]* %A_7, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 37 'getelementptr' 'A_7_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 38 [2/2] (3.25ns)   --->   "%tmp_42 = load float* %A_7_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 38 'load' 'tmp_42' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%A_8_addr = getelementptr [768 x float]* %A_8, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 39 'getelementptr' 'A_8_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 40 [2/2] (3.25ns)   --->   "%tmp_43 = load float* %A_8_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 40 'load' 'tmp_43' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%A_9_addr = getelementptr [768 x float]* %A_9, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 41 'getelementptr' 'A_9_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 42 [2/2] (3.25ns)   --->   "%tmp_44 = load float* %A_9_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 42 'load' 'tmp_44' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%A_10_addr = getelementptr [768 x float]* %A_10, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 43 'getelementptr' 'A_10_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 44 [2/2] (3.25ns)   --->   "%tmp_45 = load float* %A_10_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 44 'load' 'tmp_45' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%A_11_addr = getelementptr [768 x float]* %A_11, i64 0, i64 %zext_ln36" [gemm_systolic_array.cpp:36]   --->   Operation 45 'getelementptr' 'A_11_addr' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 46 [2/2] (3.25ns)   --->   "%tmp_46 = load float* %A_11_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 46 'load' 'tmp_46' <Predicate = (!icmp_ln33)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 47 'ret' <Predicate = (icmp_ln33)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.88>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str714) nounwind" [gemm_systolic_array.cpp:33]   --->   Operation 48 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/2] (3.25ns)   --->   "%tmp = load float* %A_0_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 49 'load' 'tmp' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 50 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_0_V, float %tmp)" [gemm_systolic_array.cpp:36]   --->   Operation 50 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 51 [1/2] (3.25ns)   --->   "%tmp_36 = load float* %A_1_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 51 'load' 'tmp_36' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 52 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_1_V, float %tmp_36)" [gemm_systolic_array.cpp:36]   --->   Operation 52 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 53 [1/2] (3.25ns)   --->   "%tmp_37 = load float* %A_2_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 53 'load' 'tmp_37' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 54 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_2_V, float %tmp_37)" [gemm_systolic_array.cpp:36]   --->   Operation 54 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 55 [1/2] (3.25ns)   --->   "%tmp_38 = load float* %A_3_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 55 'load' 'tmp_38' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 56 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_3_V, float %tmp_38)" [gemm_systolic_array.cpp:36]   --->   Operation 56 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 57 [1/2] (3.25ns)   --->   "%tmp_39 = load float* %A_4_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 57 'load' 'tmp_39' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 58 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_4_V, float %tmp_39)" [gemm_systolic_array.cpp:36]   --->   Operation 58 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 59 [1/2] (3.25ns)   --->   "%tmp_40 = load float* %A_5_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 59 'load' 'tmp_40' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 60 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_5_V, float %tmp_40)" [gemm_systolic_array.cpp:36]   --->   Operation 60 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 61 [1/2] (3.25ns)   --->   "%tmp_41 = load float* %A_6_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 61 'load' 'tmp_41' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 62 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_6_V, float %tmp_41)" [gemm_systolic_array.cpp:36]   --->   Operation 62 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 63 [1/2] (3.25ns)   --->   "%tmp_42 = load float* %A_7_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 63 'load' 'tmp_42' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 64 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_7_V, float %tmp_42)" [gemm_systolic_array.cpp:36]   --->   Operation 64 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 65 [1/2] (3.25ns)   --->   "%tmp_43 = load float* %A_8_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 65 'load' 'tmp_43' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 66 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_8_V, float %tmp_43)" [gemm_systolic_array.cpp:36]   --->   Operation 66 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 67 [1/2] (3.25ns)   --->   "%tmp_44 = load float* %A_9_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 67 'load' 'tmp_44' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 68 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_9_V, float %tmp_44)" [gemm_systolic_array.cpp:36]   --->   Operation 68 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 69 [1/2] (3.25ns)   --->   "%tmp_45 = load float* %A_10_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 69 'load' 'tmp_45' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 70 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_10_V, float %tmp_45)" [gemm_systolic_array.cpp:36]   --->   Operation 70 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 71 [1/2] (3.25ns)   --->   "%tmp_46 = load float* %A_11_addr, align 4" [gemm_systolic_array.cpp:36]   --->   Operation 71 'load' 'tmp_46' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 72 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %block_A_loader_11_V, float %tmp_46)" [gemm_systolic_array.cpp:36]   --->   Operation 72 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "br label %.preheader9.i.0" [gemm_systolic_array.cpp:33]   --->   Operation 73 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k_0_i_0', gemm_systolic_array.cpp:33) with incoming values : ('add_ln33', gemm_systolic_array.cpp:33) [39]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('k_0_i_0', gemm_systolic_array.cpp:33) with incoming values : ('add_ln33', gemm_systolic_array.cpp:33) [39]  (0 ns)
+	'getelementptr' operation ('A_0_addr', gemm_systolic_array.cpp:36) [47]  (0 ns)
+	'load' operation ('tmp', gemm_systolic_array.cpp:36) on array 'A_0' [48]  (3.25 ns)
+
+ <State 3>: 6.89ns
+The critical path consists of the following:
+	'load' operation ('tmp', gemm_systolic_array.cpp:36) on array 'A_0' [48]  (3.25 ns)
+	fifo write on port 'block_A_loader_0_V' (gemm_systolic_array.cpp:36) [49]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

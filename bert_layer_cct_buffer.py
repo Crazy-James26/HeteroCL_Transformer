@@ -12,7 +12,7 @@ def top():
     head_len = 64
     gelu_len = 3072
 
-    def Linear_layer_q(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
+    def Linear_layer_qkv(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
         outp: float32[inp_num, inp_len] = 0.0
         for i, j in allo.grid(inp_num, inp_len, name="gemm"):
             for k in allo.reduction(inp_len):
@@ -20,46 +20,14 @@ def top():
         for i, j in allo.grid(inp_num, inp_len, name="bias"):
             outp[i, j] += B[j]
         return outp
-    s_q = allo.customize(Linear_layer_q)
-    loops = s_q.get_loops()
-    s_q.reorder(loops.gemm.k, loops.gemm.j)
-    s_q.pipeline(loops.gemm.j)
-    s_q.pipeline(loops.bias.j)
-    s_q.compute_at(loops.gemm.i, loops.bias.i)
-    s_q.buffer_at(Linear_layer_q.outp, loops.bias.i)
+    s_qkv = allo.customize(Linear_layer_qkv)
+    loops = s_qkv.get_loops()
+    s_qkv.reorder(loops.gemm.k, loops.gemm.j)
+    s_qkv.pipeline(loops.gemm.j)
+    s_qkv.pipeline(loops.bias.j)
+    s_qkv.compute_at(loops.gemm.i, loops.bias.i)
+    s_qkv.buffer_at(s_qkv.outp, loops.bias.i)
 
-    def Linear_layer_k(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
-        outp: float32[inp_num, inp_len] = 0.0
-        for i, j in allo.grid(inp_num, inp_len, name="gemm"):
-            for k in allo.reduction(inp_len):
-                outp[i, j] += inp[i, k] * W[j, k]
-        for i, j in allo.grid(inp_num, inp_len, name="bias"):
-            outp[i, j] += B[j]
-        return outp
-    s_k = allo.customize(Linear_layer_k)
-    loops = s_k.get_loops()
-    s_k.reorder(loops.gemm.k, loops.gemm.j)
-    s_k.pipeline(loops.gemm.j)
-    s_k.pipeline(loops.bias.j)
-    s_k.compute_at(loops.gemm.i, loops.bias.i)
-    s_k.buffer_at(Linear_layer_k.outp, loops.bias.i)
-    
-
-    def Linear_layer_v(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
-        outp: float32[inp_num, inp_len] = 0.0
-        for i, j in allo.grid(inp_num, inp_len, name="gemm"):
-            for k in allo.reduction(inp_len):
-                outp[i, j] += inp[i, k] * W[j, k]
-        for i, j in allo.grid(inp_num, inp_len, name="bias"):
-            outp[i, j] += B[j]
-        return outp
-    s_v = allo.customize(Linear_layer_v)
-    loops = s_v.get_loops()
-    s_v.reorder(loops.gemm.k, loops.gemm.j)
-    s_v.pipeline(loops.gemm.j)
-    s_v.pipeline(loops.bias.j)
-    s_v.compute_at(loops.gemm.i, loops.bias.i)
-    s_v.buffer_at(Linear_layer_v.outp, loops.bias.i)
     
 
     def Attention_layer(Q_h: float32[inp_num, head_len], K_h: float32[inp_num, head_len]) -> float32[inp_num, inp_num]:
@@ -76,7 +44,7 @@ def top():
     s_attn.pipeline(loops.gemm.j)
     s_attn.pipeline(loops.norm.j)
     s_attn.compute_at(loops.gemm.i, loops.norm.i)
-    s_attn.buffer_at(Attention_layer.outp, loops.norm.i)
+    s_attn.buffer_at(s_attn.outp, loops.norm.i)
 
     def Softmax_layer(inp: float32[inp_num, inp_num]) -> float32[inp_num, inp_num]:
         outp: float32[inp_num, inp_num]
@@ -104,7 +72,7 @@ def top():
     loops = s_cont.get_loops()
     s_cont.reorder(loops.gemm.k, loops.gemm.j)
     s_cont.pipeline(loops.gemm.j)
-    s_cont.buffer_at(Context_layer.outp, loops.gemm.i)
+    s_cont.buffer_at(s_cont.outp, loops.gemm.i)
 
     def Self_attention(Q: float32[inp_num, inp_len], K: float32[inp_num, inp_len], V: float32[inp_num, inp_len],) -> float32[inp_num, inp_len]:
         Context: float32[inp_num, inp_len]
@@ -151,7 +119,7 @@ def top():
     s_ds0.pipeline(loops.gemm.j)
     s_ds0.pipeline(loops.bias.j)
     s_ds0.compute_at(loops.gemm.i, loops.bias.i)
-    s_ds0.buffer_at(Linear_layer_ds0.outp, loops.bias.i)
+    s_ds0.buffer_at(s_ds0.outp, loops.bias.i)
     # s_ds0.partition(Linear_layer_ds0.inp, partition_type=1, dim=2, factor=12)
     
     def Res_layer(inp1: float32[inp_num, inp_len], inp2: float32[inp_num, inp_len]) -> float32[inp_num, inp_len]:
@@ -202,7 +170,7 @@ def top():
     s_ds1.pipeline(loops.gemm.j)
     s_ds1.pipeline(loops.bias.j)
     s_ds1.compute_at(loops.gemm.i, loops.bias.i)
-    s_ds1.buffer_at(Linear_layer_ds1.outp, loops.bias.i)
+    s_ds1.buffer_at(s_ds1.outp, loops.bias.i)
     
     def Gelu_layer(inp: float32[inp_num, gelu_len]) -> float32[inp_num, gelu_len]:
         outp: float32[inp_num, gelu_len]
@@ -226,7 +194,7 @@ def top():
     s_ds2.pipeline(loops.gemm.j)
     s_ds2.pipeline(loops.bias.j)
     s_ds2.compute_at(loops.gemm.i, loops.bias.i)
-    s_ds2.buffer_at(Linear_layer_ds2.outp, loops.bias.i)
+    s_ds2.buffer_at(s_ds2.outp, loops.bias.i)
     
     def Bert_layer(inp: float32[inp_num, inp_len], 
                     Wq: float32[inp_len, inp_len], Bq: float32[inp_len], 
@@ -239,9 +207,9 @@ def top():
                     gamma2: float32[inp_len], beta2: float32[inp_len]) -> float32[inp_num, inp_len]:
         # 1. Bert Attention
         # 1.0 project Q, K, V
-        Q = Linear_layer_q(inp, Wq, Bq)
-        K = Linear_layer_k(inp, Wk, Bk)
-        V = Linear_layer_v(inp, Wv, Bv)
+        Q = Linear_layer_qkv(inp, Wq, Bq)
+        K = Linear_layer_qkv(inp, Wk, Bk)
+        V = Linear_layer_qkv(inp, Wv, Bv)
         # 1.1 self attention
         attn_sf_outp = Self_attention(Q, K, V)
         # 1.2 output dense
@@ -264,9 +232,7 @@ def top():
         return ffn_ln_outp
 
     s = allo.customize(Bert_layer)
-    s.compose(s_q)
-    s.compose(s_k)
-    s.compose(s_v)
+    s.compose(s_qkv)
     s.compose(s_sfa)
     s.compose(s_ds0)
     s.compose(s_res)

@@ -1,0 +1,191 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'systolic_array'" level="0">
+<item name = "Date">Wed Aug 30 10:32:38 2023
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">out.prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 9.336 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3891, 3891, 38.910 us, 38.910 us, 3846, 3846, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_PE39_fu_7178">PE39, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE40_fu_7188">PE40, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE51_fu_7198">PE51, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE41_fu_7208">PE41, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE52_fu_7218">PE52, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE63_fu_7228">PE63, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE42_fu_7238">PE42, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE53_fu_7248">PE53, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE64_fu_7258">PE64, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE75_fu_7268">PE75, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE43_fu_7278">PE43, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE54_fu_7288">PE54, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE65_fu_7298">PE65, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE76_fu_7308">PE76, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE87_fu_7318">PE87, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE44_fu_7328">PE44, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE55_fu_7338">PE55, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE66_fu_7348">PE66, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE77_fu_7358">PE77, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE88_fu_7368">PE88, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE99_fu_7378">PE99, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE45_fu_7388">PE45, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE56_fu_7398">PE56, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE67_fu_7408">PE67, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE78_fu_7418">PE78, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE89_fu_7428">PE89, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE100_fu_7438">PE100, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE111_fu_7448">PE111, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE46_fu_7458">PE46, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE57_fu_7468">PE57, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE68_fu_7478">PE68, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE79_fu_7488">PE79, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE90_fu_7498">PE90, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE101_fu_7508">PE101, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE112_fu_7518">PE112, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE123_fu_7528">PE123, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE47_fu_7538">PE47, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE58_fu_7548">PE58, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE69_fu_7558">PE69, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE80_fu_7568">PE80, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE91_fu_7578">PE91, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE102_fu_7588">PE102, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE113_fu_7598">PE113, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE124_fu_7608">PE124, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE135_fu_7618">PE135, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE48_fu_7628">PE48, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE59_fu_7638">PE59, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE70_fu_7648">PE70, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE81_fu_7658">PE81, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE92_fu_7668">PE92, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE103_fu_7678">PE103, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE114_fu_7688">PE114, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE125_fu_7698">PE125, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE136_fu_7708">PE136, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE147_fu_7718">PE147, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE49_fu_7728">PE49, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE60_fu_7738">PE60, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE71_fu_7748">PE71, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE82_fu_7758">PE82, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE93_fu_7768">PE93, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE104_fu_7778">PE104, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE115_fu_7788">PE115, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE126_fu_7798">PE126, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE137_fu_7808">PE137, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE148_fu_7818">PE148, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE159_fu_7828">PE159, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE50_fu_7838">PE50, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE61_fu_7848">PE61, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE72_fu_7858">PE72, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE83_fu_7868">PE83, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE94_fu_7878">PE94, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE105_fu_7888">PE105, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE116_fu_7898">PE116, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE127_fu_7908">PE127, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE138_fu_7918">PE138, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE149_fu_7928">PE149, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE160_fu_7938">PE160, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE171_fu_7948">PE171, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE62_fu_7958">PE62, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE73_fu_7968">PE73, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE84_fu_7978">PE84, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE95_fu_7988">PE95, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE106_fu_7998">PE106, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE117_fu_8008">PE117, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE128_fu_8018">PE128, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE139_fu_8028">PE139, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE150_fu_8038">PE150, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE161_fu_8048">PE161, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE172_fu_8058">PE172, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE74_fu_8068">PE74, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE85_fu_8078">PE85, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE96_fu_8088">PE96, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE107_fu_8098">PE107, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE118_fu_8108">PE118, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE129_fu_8118">PE129, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE140_fu_8128">PE140, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE151_fu_8138">PE151, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE162_fu_8148">PE162, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE173_fu_8158">PE173, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE86_fu_8168">PE86, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE97_fu_8178">PE97, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE108_fu_8188">PE108, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE119_fu_8198">PE119, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE130_fu_8208">PE130, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE141_fu_8218">PE141, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE152_fu_8228">PE152, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE163_fu_8238">PE163, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE174_fu_8248">PE174, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE98_fu_8258">PE98, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE109_fu_8268">PE109, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE120_fu_8278">PE120, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE131_fu_8288">PE131, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE142_fu_8298">PE142, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE153_fu_8308">PE153, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE164_fu_8318">PE164, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE175_fu_8328">PE175, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE110_fu_8338">PE110, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE121_fu_8348">PE121, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE132_fu_8358">PE132, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE143_fu_8368">PE143, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE154_fu_8378">PE154, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE165_fu_8388">PE165, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE176_fu_8398">PE176, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE122_fu_8408">PE122, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE133_fu_8418">PE133, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE144_fu_8428">PE144, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE155_fu_8438">PE155, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE166_fu_8448">PE166, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE177_fu_8458">PE177, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE134_fu_8468">PE134, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE145_fu_8478">PE145, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE156_fu_8488">PE156, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE167_fu_8498">PE167, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE178_fu_8508">PE178, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE146_fu_8518">PE146, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE157_fu_8528">PE157, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE168_fu_8538">PE168, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE179_fu_8548">PE179, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE158_fu_8558">PE158, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE169_fu_8568">PE169, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE180_fu_8578">PE180, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE170_fu_8588">PE170, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE181_fu_8598">PE181, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_PE_fu_8608">PE, 3845, 3845, 38.450 us, 38.450 us, 3845, 3845, none</column>
+<column name="grp_systolic_array_Loop_s_fu_8618">systolic_array_Loop_s, 770, 770, 7.700 us, 7.700 us, 770, 770, none</column>
+<column name="grp_systolic_array_Loop_1_fu_8694">systolic_array_Loop_1, 770, 770, 7.700 us, 7.700 us, 770, 770, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
