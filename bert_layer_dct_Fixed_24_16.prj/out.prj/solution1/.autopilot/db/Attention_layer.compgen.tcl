@@ -1,127 +1,33 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 5
-set name Bert_layer_fmul_3cud
-set corename simcore_fmul
-set op fmul
-set stage_num 4
-set max_latency -1
-set registered_input 1
-set impl_style max_dsp
-set Futype4reduceCEFanout 1
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 32
-set in0_signed 0
-set in1_width 32
-set in1_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 32
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_fmul] == "ap_gen_simcore_fmul"} {
-eval "ap_gen_simcore_fmul { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    style ${impl_style} \
-    Futype4reduceCEFanout ${Futype4reduceCEFanout} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_fmul, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op fmul
-set corename FMul
-if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
-if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
-eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    style ${impl_style} \
-    Futype4reduceCEFanout ${Futype4reduceCEFanout} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your platform lib"
-}
-}
-
-
 # Memory (RAM/ROM)  definition:
-set ID 7
+set ID 109
 set hasByteEnable 0
-set MemName Attention_layer_obkb
+set MemName Bert_layer_Attention_layer_outp_V_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 24
 set AddrRange 144
 set AddrWd 8
-set impl_style block
+set impl_style auto
 set TrueReset 0
-set HasInitializer 0
 set IsROM 0
-set ROMData {}
+set ROMData { }
+set HasInitializer 0
+set Initializer $ROMData
 set NumOfStage 2
-set MaxLatency -1
 set DelayBudget 3.254
-set ClkPeriod 10
-set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     eval "ap_gen_simcore_mem { \
     id ${ID} \
     name ${MemName} \
     corename ${CoreName}  \
-    op mem \
+    op mem  \
     hasByteEnable ${hasByteEnable} \
     reset_level 1 \
     sync_rst true \
     stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
     port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
@@ -130,7 +36,6 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     style ${impl_style} \
     true_reset ${TrueReset} \
     delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
     HasInitializer ${HasInitializer} \
     rom_data \{${ROMData}\} \
  } "
@@ -141,7 +46,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-  ::AP::rtl_comp_handler $MemName
+	::AP::rtl_comp_handler $MemName BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -152,12 +57,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
     id ${ID} \
     name ${MemName} \
     corename ${CoreName}  \
-    op mem \
+    op mem  \
     hasByteEnable ${hasByteEnable} \
     reset_level 1 \
     sync_rst true \
     stage_num ${NumOfStage}  \
-    registered_input ${RegisteredInput} \
     port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
@@ -166,7 +70,6 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
     style ${impl_style} \
     true_reset ${TrueReset} \
     delay_budget ${DelayBudget} \
-    clk_period ${ClkPeriod} \
     HasInitializer ${HasInitializer} \
     rom_data \{${ROMData}\} \
  } "
@@ -187,17 +90,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 8 \
-    name v23_V \
+    id 110 \
+    name v23 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename v23_V \
+    corename v23 \
     op interface \
-    ports { v23_V_address0 { O 10 vector } v23_V_ce0 { O 1 bit } v23_V_q0 { I 24 vector } } \
+    ports { v23_address0 { O 10 vector } v23_ce0 { O 1 bit } v23_q0 { I 24 vector } v23_address1 { O 10 vector } v23_ce1 { O 1 bit } v23_q1 { I 24 vector } v23_address2 { O 10 vector } v23_ce2 { O 1 bit } v23_q2 { I 24 vector } v23_address3 { O 10 vector } v23_ce3 { O 1 bit } v23_q3 { I 24 vector } v23_address4 { O 10 vector } v23_ce4 { O 1 bit } v23_q4 { I 24 vector } v23_address5 { O 10 vector } v23_ce5 { O 1 bit } v23_q5 { I 24 vector } v23_address6 { O 10 vector } v23_ce6 { O 1 bit } v23_q6 { I 24 vector } v23_address7 { O 10 vector } v23_ce7 { O 1 bit } v23_q7 { I 24 vector } v23_address8 { O 10 vector } v23_ce8 { O 1 bit } v23_q8 { I 24 vector } v23_address9 { O 10 vector } v23_ce9 { O 1 bit } v23_q9 { I 24 vector } v23_address10 { O 10 vector } v23_ce10 { O 1 bit } v23_q10 { I 24 vector } v23_address11 { O 10 vector } v23_ce11 { O 1 bit } v23_q11 { I 24 vector } v23_address12 { O 10 vector } v23_ce12 { O 1 bit } v23_q12 { I 24 vector } v23_address13 { O 10 vector } v23_ce13 { O 1 bit } v23_q13 { I 24 vector } v23_address14 { O 10 vector } v23_ce14 { O 1 bit } v23_q14 { I 24 vector } v23_address15 { O 10 vector } v23_ce15 { O 1 bit } v23_q15 { I 24 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'v23_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'v23'"
 }
 }
 
@@ -206,17 +109,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 9 \
-    name v24_V \
+    id 111 \
+    name v24 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename v24_V \
+    corename v24 \
     op interface \
-    ports { v24_V_address0 { O 10 vector } v24_V_ce0 { O 1 bit } v24_V_q0 { I 24 vector } } \
+    ports { v24_address0 { O 10 vector } v24_ce0 { O 1 bit } v24_q0 { I 24 vector } v24_address1 { O 10 vector } v24_ce1 { O 1 bit } v24_q1 { I 24 vector } v24_address2 { O 10 vector } v24_ce2 { O 1 bit } v24_q2 { I 24 vector } v24_address3 { O 10 vector } v24_ce3 { O 1 bit } v24_q3 { I 24 vector } v24_address4 { O 10 vector } v24_ce4 { O 1 bit } v24_q4 { I 24 vector } v24_address5 { O 10 vector } v24_ce5 { O 1 bit } v24_q5 { I 24 vector } v24_address6 { O 10 vector } v24_ce6 { O 1 bit } v24_q6 { I 24 vector } v24_address7 { O 10 vector } v24_ce7 { O 1 bit } v24_q7 { I 24 vector } v24_address8 { O 10 vector } v24_ce8 { O 1 bit } v24_q8 { I 24 vector } v24_address9 { O 10 vector } v24_ce9 { O 1 bit } v24_q9 { I 24 vector } v24_address10 { O 10 vector } v24_ce10 { O 1 bit } v24_q10 { I 24 vector } v24_address11 { O 10 vector } v24_ce11 { O 1 bit } v24_q11 { I 24 vector } v24_address12 { O 10 vector } v24_ce12 { O 1 bit } v24_q12 { I 24 vector } v24_address13 { O 10 vector } v24_ce13 { O 1 bit } v24_q13 { I 24 vector } v24_address14 { O 10 vector } v24_ce14 { O 1 bit } v24_q14 { I 24 vector } v24_address15 { O 10 vector } v24_ce15 { O 1 bit } v24_q15 { I 24 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'v24_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'v24'"
 }
 }
 
@@ -225,7 +128,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 10 \
+    id 112 \
     name v25 \
     reset_level 1 \
     sync_rst true \

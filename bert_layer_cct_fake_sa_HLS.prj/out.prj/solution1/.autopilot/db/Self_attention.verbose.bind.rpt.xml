@@ -1,11 +1,11 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'Self_attention'" level="0">
-<item name = "Date">Wed Aug 30 08:41:12 2023
+<section name = "Vitis HLS Report for 'Self_attention'" level="0">
+<item name = "Date">Sun Sep  3 06:46:14 2023
 </item>
-<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 13.058 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.844 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,23 +24,26 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">139861, 139861, 1.826 ms, 1.826 ms, 139861, 139861, none</column>
+<column name="">112249, 112249, 1.122 ms, 1.122 ms, 112249, 112249, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Attention_layer_fu_7385">Attention_layer, 4358, 4358, 56.907 us, 56.907 us, 4358, 4358, none</column>
-<column name="grp_Context_layer_fu_7413">Context_layer, 4260, 4260, 55.627 us, 55.627 us, 4260, 4260, none</column>
-<column name="grp_Softmax_layer_fu_7441">Softmax_layer, 1478, 1478, 19.300 us, 19.300 us, 1478, 1478, none</column>
+<column name="grp_Self_attention_Pipeline_l_mh_separate_i_s_l_j_s_fu_1162">Self_attention_Pipeline_l_mh_separate_i_s_l_j_s, 784, 784, 7.840 us, 7.840 us, 784, 784, no</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_110_1_fu_2043">Self_attention_Pipeline_VITIS_LOOP_110_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Attention_layer_fu_2048">Attention_layer, 2785, 2785, 27.850 us, 27.850 us, 2785, 2785, no</column>
+<column name="grp_Self_attention_Pipeline_l_update_i4_l_j3_fu_2076">Self_attention_Pipeline_l_update_i4_l_j3, 164, 164, 1.640 us, 1.640 us, 164, 164, no</column>
+<column name="grp_Self_attention_Pipeline_l_j2_fu_2101">Self_attention_Pipeline_l_j2, 63, 63, 0.630 us, 0.630 us, 63, 63, no</column>
+<column name="grp_Context_layer_fu_2127">Context_layer, 4036, 4036, 40.360 us, 40.360 us, 4036, 4036, no</column>
+<column name="grp_Self_attention_Pipeline_l_mh_merge_i_m_l_j_m_fu_2155">Self_attention_Pipeline_l_mh_merge_i_m_l_j_m, 771, 771, 7.710 us, 7.710 us, 771, 771, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- l_S_h_0_h">139860, 139860, 11655, -, -, 12, no</column>
-<column name=" + l_mh_separate_i_s_l_j_s">781, 781, 15, 1, 1, 768, yes</column>
-<column name=" + l_mh_merge_i_m_l_j_m">768, 768, 2, 1, 1, 768, yes</column>
+<column name="- l_S_h_0_h">112248, 112248, 9354, -, -, 12, no</column>
+<column name=" + l_exp_sum_i3">804, 804, 67, -, -, 12, no</column>
 </table>
 </item>
 </section>

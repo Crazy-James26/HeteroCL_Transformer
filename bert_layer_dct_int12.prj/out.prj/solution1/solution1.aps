@@ -1,22 +1,22 @@
 <AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <schedule model="Bert_layer"/>
+    </config>
     <name>
         <value string="solution1"/>
     </name>
     <project>
         <value string="out.prj"/>
     </project>
+    <flowTarget value="vivado"/>
     <targetInfo>
         <TargetInfo value="xc7z020:-clg484:-1"/>
     </targetInfo>
     <libraryList>
         <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
-        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" period="10" default="false"/>
+        <clock default="false" name="default" period="10"/>
     </clockList>
-    <config>
-        <schedule model="Bert_layer"/>
-    </config>
 </AutoPilot:solution>
 

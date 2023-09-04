@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vitis HLS Report for 'Self_attention_Pipeline_l_j_init2'
+================================================================
+* Date:           Sat Sep  2 22:24:16 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.743 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- l_j_init2  |       64|       64|         1|          1|          1|    64|       yes|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.74>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%j_init2 = alloca i32 1"   --->   Operation 4 'alloca' 'j_init2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 0, i7 %j_init2"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc20.i33"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%j_init2_1 = load i7 %j_init2" [kernel.cpp:143]   --->   Operation 7 'load' 'j_init2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.48ns)   --->   "%icmp_ln143 = icmp_eq  i7 %j_init2_1, i7 64" [kernel.cpp:143]   --->   Operation 8 'icmp' 'icmp_ln143' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.87ns)   --->   "%add_ln143 = add i7 %j_init2_1, i7 1" [kernel.cpp:143]   --->   Operation 10 'add' 'add_ln143' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln143 = br i1 %icmp_ln143, void %for.inc20.i33.split, void %for.inc43.i41.preheader.exitStub" [kernel.cpp:143]   --->   Operation 11 'br' 'br_ln143' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln143 = zext i7 %j_init2_1" [kernel.cpp:143]   --->   Operation 12 'zext' 'zext_ln143' <Predicate = (!icmp_ln143)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln144 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_35" [kernel.cpp:144]   --->   Operation 13 'specpipeline' 'specpipeline_ln144' <Predicate = (!icmp_ln143)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln143 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [kernel.cpp:143]   --->   Operation 14 'specloopname' 'specloopname_ln143' <Predicate = (!icmp_ln143)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%v64_addr = getelementptr i32 %v64, i64 0, i64 %zext_ln143" [kernel.cpp:145]   --->   Operation 15 'getelementptr' 'v64_addr' <Predicate = (!icmp_ln143)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (3.25ns)   --->   "%store_ln145 = store i32 0, i6 %v64_addr" [kernel.cpp:145]   --->   Operation 16 'store' 'store_ln145' <Predicate = (!icmp_ln143)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln143 = store i7 %add_ln143, i7 %j_init2" [kernel.cpp:143]   --->   Operation 17 'store' 'store_ln143' <Predicate = (!icmp_ln143)> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln143 = br void %for.inc20.i33" [kernel.cpp:143]   --->   Operation 18 'br' 'br_ln143' <Predicate = (!icmp_ln143)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 19 'ret' 'ret_ln0' <Predicate = (icmp_ln143)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.74ns
+The critical path consists of the following:
+	'alloca' operation ('j_init2') [2]  (0 ns)
+	'load' operation ('j_init2', kernel.cpp:143) on local variable 'j_init2' [6]  (0 ns)
+	'add' operation ('add_ln143', kernel.cpp:143) [9]  (1.87 ns)
+	'store' operation ('store_ln143', kernel.cpp:143) of variable 'add_ln143', kernel.cpp:143 on local variable 'j_init2' [17]  (1.59 ns)
+	blocking operation 1.28 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

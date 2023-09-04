@@ -1,0 +1,246 @@
+
+
+================================================================
+== Vitis HLS Report for 'init_block_B_proc_Pipeline_init_block_B'
+================================================================
+* Date:           Mon Sep  4 10:24:15 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.888 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      770|      770|  7.700 us|  7.700 us|  770|  770|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- init_block_B  |      768|      768|         2|          1|          1|   768|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     30|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    144|    -|
+|Register         |        -|    -|      13|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      13|    174|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln41_fu_364_p2                |         +|   0|  0|  13|          10|           1|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
+    |icmp_ln41_fu_358_p2               |      icmp|   0|  0|  11|          10|          10|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  30|          23|          15|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1     |   9|          2|    1|          2|
+    |ap_sig_allocacmp_k_5        |   9|          2|   10|         20|
+    |block_B_loader_0199_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_10209_blk_n  |   9|          2|    1|          2|
+    |block_B_loader_11210_blk_n  |   9|          2|    1|          2|
+    |block_B_loader_1200_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_2201_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_3202_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_4203_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_5204_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_6205_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_7206_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_8207_blk_n   |   9|          2|    1|          2|
+    |block_B_loader_9208_blk_n   |   9|          2|    1|          2|
+    |k_fu_88                     |   9|          2|   10|         20|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 144|         32|   34|         68|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |k_fu_88                  |  10|   0|   10|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  13|   0|   13|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++-------------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|  init_block_B_proc_Pipeline_init_block_B|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|  init_block_B_proc_Pipeline_init_block_B|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|  init_block_B_proc_Pipeline_init_block_B|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|  init_block_B_proc_Pipeline_init_block_B|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|  init_block_B_proc_Pipeline_init_block_B|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|  init_block_B_proc_Pipeline_init_block_B|  return value|
+|block_B_loader_0199_din              |  out|   32|     ap_fifo|                      block_B_loader_0199|       pointer|
+|block_B_loader_0199_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_0199|       pointer|
+|block_B_loader_0199_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_0199|       pointer|
+|block_B_loader_0199_full_n           |   in|    1|     ap_fifo|                      block_B_loader_0199|       pointer|
+|block_B_loader_0199_write            |  out|    1|     ap_fifo|                      block_B_loader_0199|       pointer|
+|block_B_loader_1200_din              |  out|   32|     ap_fifo|                      block_B_loader_1200|       pointer|
+|block_B_loader_1200_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_1200|       pointer|
+|block_B_loader_1200_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_1200|       pointer|
+|block_B_loader_1200_full_n           |   in|    1|     ap_fifo|                      block_B_loader_1200|       pointer|
+|block_B_loader_1200_write            |  out|    1|     ap_fifo|                      block_B_loader_1200|       pointer|
+|block_B_loader_2201_din              |  out|   32|     ap_fifo|                      block_B_loader_2201|       pointer|
+|block_B_loader_2201_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_2201|       pointer|
+|block_B_loader_2201_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_2201|       pointer|
+|block_B_loader_2201_full_n           |   in|    1|     ap_fifo|                      block_B_loader_2201|       pointer|
+|block_B_loader_2201_write            |  out|    1|     ap_fifo|                      block_B_loader_2201|       pointer|
+|block_B_loader_3202_din              |  out|   32|     ap_fifo|                      block_B_loader_3202|       pointer|
+|block_B_loader_3202_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_3202|       pointer|
+|block_B_loader_3202_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_3202|       pointer|
+|block_B_loader_3202_full_n           |   in|    1|     ap_fifo|                      block_B_loader_3202|       pointer|
+|block_B_loader_3202_write            |  out|    1|     ap_fifo|                      block_B_loader_3202|       pointer|
+|block_B_loader_4203_din              |  out|   32|     ap_fifo|                      block_B_loader_4203|       pointer|
+|block_B_loader_4203_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_4203|       pointer|
+|block_B_loader_4203_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_4203|       pointer|
+|block_B_loader_4203_full_n           |   in|    1|     ap_fifo|                      block_B_loader_4203|       pointer|
+|block_B_loader_4203_write            |  out|    1|     ap_fifo|                      block_B_loader_4203|       pointer|
+|block_B_loader_5204_din              |  out|   32|     ap_fifo|                      block_B_loader_5204|       pointer|
+|block_B_loader_5204_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_5204|       pointer|
+|block_B_loader_5204_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_5204|       pointer|
+|block_B_loader_5204_full_n           |   in|    1|     ap_fifo|                      block_B_loader_5204|       pointer|
+|block_B_loader_5204_write            |  out|    1|     ap_fifo|                      block_B_loader_5204|       pointer|
+|block_B_loader_6205_din              |  out|   32|     ap_fifo|                      block_B_loader_6205|       pointer|
+|block_B_loader_6205_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_6205|       pointer|
+|block_B_loader_6205_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_6205|       pointer|
+|block_B_loader_6205_full_n           |   in|    1|     ap_fifo|                      block_B_loader_6205|       pointer|
+|block_B_loader_6205_write            |  out|    1|     ap_fifo|                      block_B_loader_6205|       pointer|
+|block_B_loader_7206_din              |  out|   32|     ap_fifo|                      block_B_loader_7206|       pointer|
+|block_B_loader_7206_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_7206|       pointer|
+|block_B_loader_7206_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_7206|       pointer|
+|block_B_loader_7206_full_n           |   in|    1|     ap_fifo|                      block_B_loader_7206|       pointer|
+|block_B_loader_7206_write            |  out|    1|     ap_fifo|                      block_B_loader_7206|       pointer|
+|block_B_loader_8207_din              |  out|   32|     ap_fifo|                      block_B_loader_8207|       pointer|
+|block_B_loader_8207_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_8207|       pointer|
+|block_B_loader_8207_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_8207|       pointer|
+|block_B_loader_8207_full_n           |   in|    1|     ap_fifo|                      block_B_loader_8207|       pointer|
+|block_B_loader_8207_write            |  out|    1|     ap_fifo|                      block_B_loader_8207|       pointer|
+|block_B_loader_9208_din              |  out|   32|     ap_fifo|                      block_B_loader_9208|       pointer|
+|block_B_loader_9208_num_data_valid   |   in|    2|     ap_fifo|                      block_B_loader_9208|       pointer|
+|block_B_loader_9208_fifo_cap         |   in|    2|     ap_fifo|                      block_B_loader_9208|       pointer|
+|block_B_loader_9208_full_n           |   in|    1|     ap_fifo|                      block_B_loader_9208|       pointer|
+|block_B_loader_9208_write            |  out|    1|     ap_fifo|                      block_B_loader_9208|       pointer|
+|block_B_loader_10209_din             |  out|   32|     ap_fifo|                     block_B_loader_10209|       pointer|
+|block_B_loader_10209_num_data_valid  |   in|    2|     ap_fifo|                     block_B_loader_10209|       pointer|
+|block_B_loader_10209_fifo_cap        |   in|    2|     ap_fifo|                     block_B_loader_10209|       pointer|
+|block_B_loader_10209_full_n          |   in|    1|     ap_fifo|                     block_B_loader_10209|       pointer|
+|block_B_loader_10209_write           |  out|    1|     ap_fifo|                     block_B_loader_10209|       pointer|
+|block_B_loader_11210_din             |  out|   32|     ap_fifo|                     block_B_loader_11210|       pointer|
+|block_B_loader_11210_num_data_valid  |   in|    2|     ap_fifo|                     block_B_loader_11210|       pointer|
+|block_B_loader_11210_fifo_cap        |   in|    2|     ap_fifo|                     block_B_loader_11210|       pointer|
+|block_B_loader_11210_full_n          |   in|    1|     ap_fifo|                     block_B_loader_11210|       pointer|
+|block_B_loader_11210_write           |  out|    1|     ap_fifo|                     block_B_loader_11210|       pointer|
+|jj_cast                              |   in|    6|     ap_none|                                  jj_cast|        scalar|
+|B_0_address0                         |  out|   16|   ap_memory|                                      B_0|         array|
+|B_0_ce0                              |  out|    1|   ap_memory|                                      B_0|         array|
+|B_0_q0                               |   in|   32|   ap_memory|                                      B_0|         array|
+|B_1_address0                         |  out|   16|   ap_memory|                                      B_1|         array|
+|B_1_ce0                              |  out|    1|   ap_memory|                                      B_1|         array|
+|B_1_q0                               |   in|   32|   ap_memory|                                      B_1|         array|
+|B_2_address0                         |  out|   16|   ap_memory|                                      B_2|         array|
+|B_2_ce0                              |  out|    1|   ap_memory|                                      B_2|         array|
+|B_2_q0                               |   in|   32|   ap_memory|                                      B_2|         array|
+|B_3_address0                         |  out|   16|   ap_memory|                                      B_3|         array|
+|B_3_ce0                              |  out|    1|   ap_memory|                                      B_3|         array|
+|B_3_q0                               |   in|   32|   ap_memory|                                      B_3|         array|
+|B_4_address0                         |  out|   16|   ap_memory|                                      B_4|         array|
+|B_4_ce0                              |  out|    1|   ap_memory|                                      B_4|         array|
+|B_4_q0                               |   in|   32|   ap_memory|                                      B_4|         array|
+|B_5_address0                         |  out|   16|   ap_memory|                                      B_5|         array|
+|B_5_ce0                              |  out|    1|   ap_memory|                                      B_5|         array|
+|B_5_q0                               |   in|   32|   ap_memory|                                      B_5|         array|
+|B_6_address0                         |  out|   16|   ap_memory|                                      B_6|         array|
+|B_6_ce0                              |  out|    1|   ap_memory|                                      B_6|         array|
+|B_6_q0                               |   in|   32|   ap_memory|                                      B_6|         array|
+|B_7_address0                         |  out|   16|   ap_memory|                                      B_7|         array|
+|B_7_ce0                              |  out|    1|   ap_memory|                                      B_7|         array|
+|B_7_q0                               |   in|   32|   ap_memory|                                      B_7|         array|
+|B_8_address0                         |  out|   16|   ap_memory|                                      B_8|         array|
+|B_8_ce0                              |  out|    1|   ap_memory|                                      B_8|         array|
+|B_8_q0                               |   in|   32|   ap_memory|                                      B_8|         array|
+|B_9_address0                         |  out|   16|   ap_memory|                                      B_9|         array|
+|B_9_ce0                              |  out|    1|   ap_memory|                                      B_9|         array|
+|B_9_q0                               |   in|   32|   ap_memory|                                      B_9|         array|
+|B_10_address0                        |  out|   16|   ap_memory|                                     B_10|         array|
+|B_10_ce0                             |  out|    1|   ap_memory|                                     B_10|         array|
+|B_10_q0                              |   in|   32|   ap_memory|                                     B_10|         array|
+|B_11_address0                        |  out|   16|   ap_memory|                                     B_11|         array|
+|B_11_ce0                             |  out|    1|   ap_memory|                                     B_11|         array|
+|B_11_q0                              |   in|   32|   ap_memory|                                     B_11|         array|
++-------------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

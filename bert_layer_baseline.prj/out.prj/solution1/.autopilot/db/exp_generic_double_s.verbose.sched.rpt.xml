@@ -1,11 +1,11 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'exp_generic_double_s'" level="0">
-<item name = "Date">Thu Aug 31 04:03:54 2023
+<section name = "Vitis HLS Report for 'exp_generic_double_s'" level="0">
+<item name = "Date">Sat Sep  2 22:11:12 2023
 </item>
-<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 9.514 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 7.080 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">19, 19, 0.190 us, 0.190 us, 1, 1, function</column>
+<column name="">28, 28, 0.280 us, 0.280 us, 1, 1, yes</column>
 </table>
 </item>
 <item name = "Detail">

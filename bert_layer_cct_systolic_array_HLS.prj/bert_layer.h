@@ -22,13 +22,13 @@ void PE(hls::stream<float>& A_in, hls::stream<float>& A_out,
         hls::stream<float>& B_in, hls::stream<float>& B_out,
 	      float& C_out, int k_size);
 
-void systolic_array_k_768(hls::stream<float> A_loader[block_size1], hls::stream<float> B_loader[block_size1], float C[block_size1][block_size1]);
+void systolic_array_k_768(hls::stream<float> A_loader[block_size1], hls::stream<float> B_loader[block_size1], hls::stream<float> C_drainer[block_size1]);
 
-void systolic_array_k_3072(hls::stream<float> A_loader[block_size1], hls::stream<float> B_loader[block_size1], float C[block_size1][block_size1]);
+void systolic_array_k_3072(hls::stream<float> A_loader[block_size1], hls::stream<float> B_loader[block_size1], hls::stream<float> C_drainer[block_size1]);
 
-void systolic_array_k_64(hls::stream<float> A_loader[block_size2], hls::stream<float> B_loader[block_size2], float C[block_size2][block_size2]);
+void systolic_array_k_64(hls::stream<float> A_loader[block_size2], hls::stream<float> B_loader[block_size2], hls::stream<float> C_drainer[block_size2]);
 
-void systolic_array_k_12(hls::stream<float> A_loader[block_size2], hls::stream<float> B_loader[block_size2], float C[block_size2][block_size2]);
+void systolic_array_k_12(hls::stream<float> A_loader[block_size2], hls::stream<float> B_loader[block_size2], hls::stream<float> C_drainer[block_size2]);
 
 void gemm_systolic_array_qkv(float A[inp_num][inp_len], float B[inp_len][inp_len], float C[inp_num][inp_len]);
 

@@ -1,0 +1,193 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'systolic_array_k_3072'" level="0">
+<item name = "Date">Mon Sep  4 10:02:58 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">out.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.268 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">12319, 12319, 0.123 ms, 0.123 ms, 12297, 12297, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_systolic_array_k_3072_Loop_data_load_proc25_fu_2262">systolic_array_k_3072_Loop_data_load_proc25, 3074, 3074, 30.740 us, 30.740 us, 3074, 3074, no</column>
+<column name="grp_PE_435_fu_2338">PE_435, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_436_fu_2346">PE_436, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_447_fu_2354">PE_447, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_437_fu_2362">PE_437, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_448_fu_2370">PE_448, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_459_fu_2378">PE_459, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_438_fu_2386">PE_438, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_449_fu_2394">PE_449, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_460_fu_2402">PE_460, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_471_fu_2410">PE_471, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_439_fu_2418">PE_439, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_450_fu_2426">PE_450, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_461_fu_2434">PE_461, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_472_fu_2442">PE_472, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_483_fu_2450">PE_483, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_440_fu_2458">PE_440, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_451_fu_2466">PE_451, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_462_fu_2474">PE_462, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_473_fu_2482">PE_473, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_484_fu_2490">PE_484, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_495_fu_2498">PE_495, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_441_fu_2506">PE_441, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_452_fu_2514">PE_452, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_463_fu_2522">PE_463, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_474_fu_2530">PE_474, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_485_fu_2538">PE_485, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_496_fu_2546">PE_496, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_507_fu_2554">PE_507, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_442_fu_2562">PE_442, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_453_fu_2570">PE_453, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_464_fu_2578">PE_464, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_475_fu_2586">PE_475, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_486_fu_2594">PE_486, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_497_fu_2602">PE_497, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_508_fu_2610">PE_508, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_519_fu_2618">PE_519, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_443_fu_2626">PE_443, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_454_fu_2634">PE_454, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_465_fu_2642">PE_465, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_476_fu_2650">PE_476, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_487_fu_2658">PE_487, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_498_fu_2666">PE_498, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_509_fu_2674">PE_509, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_520_fu_2682">PE_520, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_531_fu_2690">PE_531, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_444_fu_2698">PE_444, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_455_fu_2706">PE_455, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_466_fu_2714">PE_466, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_477_fu_2722">PE_477, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_488_fu_2730">PE_488, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_499_fu_2738">PE_499, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_510_fu_2746">PE_510, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_521_fu_2754">PE_521, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_532_fu_2762">PE_532, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_543_fu_2770">PE_543, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_445_fu_2778">PE_445, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_456_fu_2786">PE_456, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_467_fu_2794">PE_467, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_478_fu_2802">PE_478, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_489_fu_2810">PE_489, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_500_fu_2818">PE_500, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_511_fu_2826">PE_511, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_522_fu_2834">PE_522, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_533_fu_2842">PE_533, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_544_fu_2850">PE_544, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_555_fu_2858">PE_555, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_446_fu_2866">PE_446, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_457_fu_2874">PE_457, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_468_fu_2882">PE_468, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_479_fu_2890">PE_479, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_490_fu_2898">PE_490, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_501_fu_2906">PE_501, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_512_fu_2914">PE_512, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_523_fu_2922">PE_523, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_534_fu_2930">PE_534, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_545_fu_2938">PE_545, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_556_fu_2946">PE_556, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_567_fu_2954">PE_567, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_458_fu_2962">PE_458, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_469_fu_2970">PE_469, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_480_fu_2978">PE_480, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_491_fu_2986">PE_491, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_502_fu_2994">PE_502, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_513_fu_3002">PE_513, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_524_fu_3010">PE_524, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_535_fu_3018">PE_535, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_546_fu_3026">PE_546, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_557_fu_3034">PE_557, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_568_fu_3042">PE_568, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_470_fu_3050">PE_470, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_481_fu_3058">PE_481, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_492_fu_3066">PE_492, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_503_fu_3074">PE_503, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_514_fu_3082">PE_514, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_525_fu_3090">PE_525, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_536_fu_3098">PE_536, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_547_fu_3106">PE_547, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_558_fu_3114">PE_558, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_569_fu_3122">PE_569, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_482_fu_3130">PE_482, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_493_fu_3138">PE_493, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_504_fu_3146">PE_504, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_515_fu_3154">PE_515, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_526_fu_3162">PE_526, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_537_fu_3170">PE_537, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_548_fu_3178">PE_548, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_559_fu_3186">PE_559, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_570_fu_3194">PE_570, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_494_fu_3202">PE_494, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_505_fu_3210">PE_505, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_516_fu_3218">PE_516, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_527_fu_3226">PE_527, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_538_fu_3234">PE_538, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_549_fu_3242">PE_549, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_560_fu_3250">PE_560, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_571_fu_3258">PE_571, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_506_fu_3266">PE_506, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_517_fu_3274">PE_517, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_528_fu_3282">PE_528, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_539_fu_3290">PE_539, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_550_fu_3298">PE_550, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_561_fu_3306">PE_561, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_572_fu_3314">PE_572, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_518_fu_3322">PE_518, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_529_fu_3330">PE_529, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_540_fu_3338">PE_540, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_551_fu_3346">PE_551, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_562_fu_3354">PE_562, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_573_fu_3362">PE_573, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_530_fu_3370">PE_530, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_541_fu_3378">PE_541, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_552_fu_3386">PE_552, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_563_fu_3394">PE_563, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_574_fu_3402">PE_574, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_542_fu_3410">PE_542, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_553_fu_3418">PE_553, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_564_fu_3426">PE_564, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_575_fu_3434">PE_575, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_554_fu_3442">PE_554, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_565_fu_3450">PE_565, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_576_fu_3458">PE_576, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_566_fu_3466">PE_566, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_577_fu_3474">PE_577, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="grp_PE_578_fu_3482">PE_578, 12296, 12296, 0.123 ms, 0.123 ms, 12296, 12296, no</column>
+<column name="call_ret_systolic_array_k_3072_Block_for_end114_proc_fu_3490">systolic_array_k_3072_Block_for_end114_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_systolic_array_k_3072_Loop_data_drain_AB_proc26_fu_3639">systolic_array_k_3072_Loop_data_drain_AB_proc26, 3074, 3074, 30.740 us, 30.740 us, 3074, 3074, no</column>
+<column name="grp_systolic_array_k_3072_Loop_data_drain_C_proc_fu_3667">systolic_array_k_3072_Loop_data_drain_C_proc, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

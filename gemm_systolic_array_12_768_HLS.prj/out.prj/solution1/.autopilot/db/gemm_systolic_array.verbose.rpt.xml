@@ -1,11 +1,11 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'gemm_systolic_array'" level="0">
-<item name = "Date">Wed Aug 30 10:41:52 2023
+<section name = "Vitis HLS Report for 'gemm_systolic_array'" level="0">
+<item name = "Date">Mon Sep  4 10:29:53 2023
 </item>
-<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 9.336 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.844 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,19 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">246194, 246194, 2.462 ms, 2.462 ms, 246194, 246194, none</column>
+<column name="">197412, 197412, 1.974 ms, 1.974 ms, 197413, 197413, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="dataflow_in_loop_U0">dataflow_in_loop, 3894, 3894, 38.940 us, 38.940 us, 3846, 3846, dataflow</column>
+<column name="dataflow_in_loop_VITIS_LOOP_20_1_U0">dataflow_in_loop_VITIS_LOOP_20_1, 3117, 3117, 31.170 us, 31.170 us, 3084, 3084, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">246193, 246193, 3896, -, -, 64, no</column>
+<column name="- VITIS_LOOP_20_1">197411, 197411, 3120, -, -, 64, no</column>
 </table>
 </item>
 </section>
@@ -47,26 +47,26 @@
 
 <section name = "Utilization Estimates" level="0">
 <item name = "Summary"><table name="" hasTotal="1">
-<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 45, -</column>
+<column name="Expression">-, -, 110, 34, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, 1008, 114260, 234965, -</column>
+<column name="Instance">-, 1008, 199698, 268104, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 18, -</column>
 <column name="Register">-, -, 14, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 458, 107, 441, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 458, 187, 504, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
-<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="dataflow_in_loop_U0">dataflow_in_loop, 0, 1008, 114260, 234965, 0</column>
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="dataflow_in_loop_VITIS_LOOP_20_1_U0">dataflow_in_loop_VITIS_LOOP_20_1, 0, 1008, 199698, 268104, 0</column>
 </table>
 </item>
-<item name = "DSP48E"><table name="" hasTotal="0">
+<item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
 </table>
 </item>
@@ -79,10 +79,10 @@
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
-<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="loop_dataflow_input_count">+, 0, 0, 15, 7, 1</column>
-<column name="loop_dataflow_output_count">+, 0, 0, 15, 7, 1</column>
-<column name="bound_minus_1">-, 0, 0, 15, 8, 1</column>
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="loop_dataflow_input_count">+, 0, 35, 11, 7, 1</column>
+<column name="loop_dataflow_output_count">+, 0, 35, 11, 7, 1</column>
+<column name="bound_minus_1">-, 0, 40, 12, 8, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

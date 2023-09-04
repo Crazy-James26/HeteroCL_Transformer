@@ -1,0 +1,29 @@
+<pragmas>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="154" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="173" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="systolic_array.cpp" line="8" pragmaType="pipeline" parentfunction="PE" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="systolic_array.cpp" line="28" pragmaType="dataflow" parentfunction="systolic_array" disable_start_propagation="0"/>
+<pragma file="systolic_array.cpp" line="59" pragmaType="unroll" parentfunction="systolic_array" factor="-1" skip_exit_check="0"/>
+<pragma file="systolic_array.cpp" line="61" pragmaType="pipeline" parentfunction="systolic_array" off="0" ii="1" rewind="0" style=""/>
+<pragma file="systolic_array.cpp" line="49" pragmaType="pipeline" parentfunction="systolic_array" off="0" ii="1" rewind="0" style=""/>
+<pragma file="systolic_array.cpp" line="40" pragmaType="unroll" parentfunction="systolic_array" factor="-1" skip_exit_check="0"/>
+<pragma file="systolic_array.cpp" line="42" pragmaType="unroll" parentfunction="systolic_array" factor="-1" skip_exit_check="0"/>
+<pragma file="systolic_array.cpp" line="30" pragmaType="pipeline" parentfunction="systolic_array" off="0" ii="1" rewind="0" style=""/>
+<pragma file="systolic_array.cpp" line="21" pragmaType="stream" parentfunction="systolic_array" depth="2" type="fifo" variable="A_fifo"/>
+<pragma file="systolic_array.cpp" line="22" pragmaType="stream" parentfunction="systolic_array" depth="2" type="fifo" variable="B_fifo"/>
+<pragma file="systolic_array.cpp" line="25" pragmaType="array_partition" parentfunction="systolic_array" dim="1" factor="12" mode="cyclic" dynamic="0" variable=""/>
+<pragma file="systolic_array.cpp" line="26" pragmaType="array_partition" parentfunction="systolic_array" dim="2" factor="12" mode="cyclic" dynamic="0" variable=""/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="103" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="gemm_systolic_array.cpp" line="20" pragmaType="loop_flatten" parentfunction="gemm_systolic_array" off="0"/>
+<pragma file="gemm_systolic_array.cpp" line="21" pragmaType="dataflow" parentfunction="gemm_systolic_array" disable_start_propagation="0"/>
+<pragma file="gemm_systolic_array.cpp" line="25" pragmaType="pipeline" parentfunction="gemm_systolic_array" off="0" ii="1" rewind="0" style=""/>
+<pragma file="gemm_systolic_array.cpp" line="38" pragmaType="unroll" parentfunction="gemm_systolic_array" factor="-1" skip_exit_check="0"/>
+<pragma file="gemm_systolic_array.cpp" line="40" pragmaType="pipeline" parentfunction="gemm_systolic_array" off="0" ii="1" rewind="0" style=""/>
+<pragma file="gemm_systolic_array.cpp" line="5" pragmaType="array_partition" parentfunction="gemm_systolic_array" dim="1" factor="12" mode="cyclic" dynamic="0" variable="A"/>
+<pragma file="gemm_systolic_array.cpp" line="6" pragmaType="array_partition" parentfunction="gemm_systolic_array" dim="2" factor="12" mode="cyclic" dynamic="0" variable="B"/>
+<pragma file="gemm_systolic_array.cpp" line="7" pragmaType="array_partition" parentfunction="gemm_systolic_array" dim="1" factor="12" mode="cyclic" dynamic="0" variable="C"/>
+<pragma file="gemm_systolic_array.cpp" line="11" pragmaType="stream" parentfunction="gemm_systolic_array" depth="2" type="fifo" variable="block_A_loader"/>
+<pragma file="gemm_systolic_array.cpp" line="12" pragmaType="stream" parentfunction="gemm_systolic_array" depth="2" type="fifo" variable="block_B_loader"/>
+<pragma file="gemm_systolic_array.cpp" line="15" pragmaType="stream" parentfunction="gemm_systolic_array" depth="2" type="fifo" variable="block_A_loader"/>
+</pragmas>

@@ -31,16 +31,16 @@ void gemm_systolic_array(d_type A[M][K], d_type B[K][N], d_type C[M][N]){
 
 			init_block_A:
 			for(int k = 0; k < K; k++){
+			#pragma HLS PIPELINE II=1
 				for(int i = 0; i < block_M; i++){
-				#pragma HLS UNROLL
 					block_A_loader[i].write(A[ii * block_M  + i][k]);
 				}
 			}
 
 			init_block_B:
 			for(int k = 0; k < K; k++){
+			#pragma HLS PIPELINE II=1
 				for(int j = 0; j < block_N; j++){
-				#pragma HLS UNROLL
 					block_B_loader[j].write(B[k][jj * block_N + j]);
 				}
 			}

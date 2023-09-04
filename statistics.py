@@ -42,7 +42,8 @@ def bert_layer_statistics():
 
                 resources = root_node.getElementsByTagName("AreaEstimates")[0].getElementsByTagName("Resources")[0]
                 BRAM_18K_num = resources.getElementsByTagName("BRAM_18K")[0]
-                DSP48E_num = resources.getElementsByTagName("DSP48E")[0]
+                # DSP48E_num = resources.getElementsByTagName("DSP48E")[0] # vitis 2019
+                DSP48E_num = resources.getElementsByTagName("DSP")[0] # vitis 2022
                 FF_num = resources.getElementsByTagName("FF")[0]
                 LUT_num = resources.getElementsByTagName("LUT")[0]
                 statistics[obj][layer]["BRAM_18K"] = BRAM_18K_num.childNodes[0].data
@@ -79,7 +80,8 @@ def bert_layer_statistics():
 
                 resources = root_node.getElementsByTagName("AreaEstimates")[0].getElementsByTagName("Resources")[0]
                 BRAM_18K_num = resources.getElementsByTagName("BRAM_18K")[0]
-                DSP48E_num = resources.getElementsByTagName("DSP48E")[0]
+                # DSP48E_num = resources.getElementsByTagName("DSP48E")[0] # vitis 2019
+                DSP48E_num = resources.getElementsByTagName("DSP")[0] # vitis 2022
                 FF_num = resources.getElementsByTagName("FF")[0]
                 LUT_num = resources.getElementsByTagName("LUT")[0]
                 statistics[obj][layer]["BRAM_18K"] = BRAM_18K_num.childNodes[0].data
@@ -96,7 +98,7 @@ def bert_layer_statistics():
                 statistics[obj][layer]["FF"] = " "
                 statistics[obj][layer]["LUT"] = " "
 
-    csv_path = "statistics.csv"
+    csv_path = "statistics_2022.csv"
     with open(csv_path, 'w') as f:
         writer=csv.writer(f)
         

@@ -1,11 +1,11 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'Self_attention'" level="0">
-<item name = "Date">Thu Aug 31 04:11:14 2023
+<section name = "Vitis HLS Report for 'Self_attention'" level="0">
+<item name = "Date">Sun Sep  3 07:20:23 2023
 </item>
-<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.670 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.352 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,25 +24,26 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1045933, 1045933, 10.459 ms, 10.459 ms, 1045933, 1045933, none</column>
+<column name="">42289, 42289, 0.423 ms, 0.423 ms, 42289, 42289, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Softmax_layer_fu_247">Softmax_layer, 5691, 5691, 56.910 us, 56.910 us, 5691, 5691, none</column>
-<column name="grp_Attention_layer_fu_253">Attention_layer, 39124, 39124, 0.391 ms, 0.391 ms, 39124, 39124, none</column>
-<column name="grp_Context_layer_fu_260">Context_layer, 39218, 39218, 0.392 ms, 0.392 ms, 39218, 39218, none</column>
+<column name="grp_Self_attention_Pipeline_l_mh_separate_i7_l_j7_fu_122">Self_attention_Pipeline_l_mh_separate_i7_l_j7, 771, 771, 7.710 us, 7.710 us, 771, 771, no</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_100_1_fu_136">Self_attention_Pipeline_VITIS_LOOP_100_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_131_1_VITIS_LOOP_132_2_fu_141">Self_attention_Pipeline_VITIS_LOOP_131_1_VITIS_LOOP_132_2, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
+<column name="grp_Attention_layer_fu_146">Attention_layer, 891, 891, 8.910 us, 8.910 us, 891, 891, no</column>
+<column name="grp_Self_attention_Pipeline_l_exp_sum_i4_fu_153">Self_attention_Pipeline_l_exp_sum_i4, 206, 206, 2.060 us, 2.060 us, 206, 206, no</column>
+<column name="grp_Self_attention_Pipeline_l_update_i5_fu_159">Self_attention_Pipeline_l_update_i5, 96, 96, 0.960 us, 0.960 us, 96, 96, no</column>
+<column name="grp_Self_attention_Pipeline_l_gemm_i6_l_j6_fu_177">Self_attention_Pipeline_l_gemm_i6_l_j6, 777, 777, 7.770 us, 7.770 us, 777, 777, no</column>
+<column name="grp_Self_attention_Pipeline_l_mh_merge_i8_l_j8_fu_195">Self_attention_Pipeline_l_mh_merge_i8_l_j8, 771, 771, 7.710 us, 7.710 us, 771, 771, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- l_S_h_0_h">1045932, 1045932, 87161, -, -, 12, no</column>
-<column name=" + l_mh_separate_i7">1560, 1560, 130, -, -, 12, no</column>
-<column name="  ++ l_j7">128, 128, 2, -, -, 64, no</column>
-<column name=" + l_mh_merge_i8">1560, 1560, 130, -, -, 12, no</column>
-<column name="  ++ l_j8">128, 128, 2, -, -, 64, no</column>
+<column name="- l_S_h_0_h">42288, 42288, 3524, -, -, 12, no</column>
 </table>
 </item>
 </section>
@@ -53,39 +54,67 @@
 
 <section name = "Utilization Estimates" level="0">
 <item name = "Summary"><table name="" hasTotal="1">
-<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 256, -</column>
+<column name="Expression">-, -, 0, 24, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, 22, 2744, 6045, 0</column>
-<column name="Memory">10, -, 0, 0, 0</column>
-<column name="Multiplexer">-, -, -, 332, -</column>
-<column name="Register">-, -, 120, -, -</column>
+<column name="Instance">1, 259, 23734, 22764, 0</column>
+<column name="Memory">86, -, 352, 66, 0</column>
+<column name="Multiplexer">-, -, -, 1815, -</column>
+<column name="Register">-, -, 29, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">3, 10, 2, 12, 0</specialColumn>
+<specialColumn name="Utilization (%)">31, 117, 22, 46, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
-<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_Attention_layer_fu_253">Attention_layer, 1, 8, 708, 2154, 0</column>
-<column name="grp_Context_layer_fu_260">Context_layer, 0, 5, 182, 369, 0</column>
-<column name="grp_Softmax_layer_fu_247">Softmax_layer, 0, 9, 1854, 3522, 0</column>
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_Attention_layer_fu_146">Attention_layer, 1, 208, 13904, 10863, 0</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_100_1_fu_136">Self_attention_Pipeline_VITIS_LOOP_100_1, 0, 0, 6, 49, 0</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_131_1_VITIS_LOOP_132_2_fu_141">Self_attention_Pipeline_VITIS_LOOP_131_1_VITIS_LOOP_132_2, 0, 0, 35, 160, 0</column>
+<column name="grp_Self_attention_Pipeline_l_exp_sum_i4_fu_153">Self_attention_Pipeline_l_exp_sum_i4, 0, 7, 2133, 1929, 0</column>
+<column name="grp_Self_attention_Pipeline_l_gemm_i6_l_j6_fu_177">Self_attention_Pipeline_l_gemm_i6_l_j6, 0, 0, 1563, 695, 0</column>
+<column name="grp_Self_attention_Pipeline_l_mh_merge_i8_l_j8_fu_195">Self_attention_Pipeline_l_mh_merge_i8_l_j8, 0, 0, 51, 201, 0</column>
+<column name="grp_Self_attention_Pipeline_l_mh_separate_i7_l_j7_fu_122">Self_attention_Pipeline_l_mh_separate_i7_l_j7, 0, 0, 57, 201, 0</column>
+<column name="grp_Self_attention_Pipeline_l_update_i5_fu_159">Self_attention_Pipeline_l_update_i5, 0, 0, 3818, 7775, 0</column>
+<column name="mul_40s_40s_72_2_1_U168">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U169">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U170">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U171">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U172">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U173">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U174">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U175">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U176">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U177">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_72_2_1_U178">mul_40s_40s_72_2_1, 0, 4, 197, 81, 0</column>
 </table>
 </item>
-<item name = "DSP48E"><table name="" hasTotal="0">
+<item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="v96_V_U">Attention_layer_obkb, 1, 0, 0, 0, 144, 24, 1, 3456</column>
-<column name="Q_h_V_U">Self_attention_Q_ibs, 2, 0, 0, 0, 768, 24, 1, 18432</column>
-<column name="K_h_V_U">Self_attention_Q_ibs, 2, 0, 0, 0, 768, 24, 1, 18432</column>
-<column name="V_h_V_U">Self_attention_Q_ibs, 2, 0, 0, 0, 768, 24, 1, 18432</column>
-<column name="v97_U">Self_attention_Q_ibs, 2, 0, 0, 0, 768, 24, 1, 18432</column>
-<column name="v95_U">Self_attention_v95, 1, 0, 0, 0, 144, 32, 1, 4608</column>
+<column name="Q_h_V_U">Self_attention_Q_h_V_RAM_1WNR_AUTO_1R1W, 30, 0, 0, 0, 768, 24, 1, 18432</column>
+<column name="K_h_V_U">Self_attention_Q_h_V_RAM_1WNR_AUTO_1R1W, 30, 0, 0, 0, 768, 24, 1, 18432</column>
+<column name="V_h_V_U">Self_attention_V_h_V_RAM_1WNR_AUTO_1R1W, 22, 0, 0, 0, 768, 24, 1, 18432</column>
+<column name="inp_sumRow_U">Self_attention_inp_sumRow_RAM_AUTO_1R1W, 0, 64, 6, 0, 12, 32, 1, 384</column>
+<column name="v95_U">Self_attention_v95_RAM_AUTO_1R1W, 2, 0, 0, 0, 144, 32, 1, 4608</column>
+<column name="v96_V_0_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_1_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_2_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_3_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_4_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_5_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_6_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_7_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_8_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_9_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_10_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v96_V_11_U">Self_attention_v96_V_0_RAM_AUTO_1R1W, 0, 24, 5, 0, 12, 24, 1, 288</column>
+<column name="v97_V_U">Self_attention_v97_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 768, 24, 1, 18432</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -93,76 +122,176 @@
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
-<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln165_1_fu_366_p2">+, 0, 0, 21, 15, 15</column>
-<column name="add_ln165_fu_357_p2">+, 0, 0, 14, 10, 10</column>
-<column name="add_ln181_fu_467_p2">+, 0, 0, 13, 11, 11</column>
-<column name="add_ln182_fu_477_p2">+, 0, 0, 14, 10, 10</column>
-<column name="add_ln203_1_fu_486_p2">+, 0, 0, 21, 15, 15</column>
-<column name="add_ln203_fu_382_p2">+, 0, 0, 13, 11, 11</column>
-<column name="h_fu_273_p2">+, 0, 0, 13, 4, 1</column>
-<column name="i7_fu_293_p2">+, 0, 0, 13, 4, 1</column>
-<column name="i8_fu_399_p2">+, 0, 0, 13, 4, 1</column>
-<column name="j7_fu_351_p2">+, 0, 0, 15, 7, 1</column>
-<column name="j8_fu_457_p2">+, 0, 0, 15, 7, 1</column>
-<column name="sub_ln165_fu_323_p2">-, 0, 0, 21, 15, 15</column>
-<column name="sub_ln203_fu_429_p2">-, 0, 0, 21, 15, 15</column>
-<column name="icmp_ln159_fu_267_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln163_fu_287_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln164_fu_345_p2">icmp, 0, 0, 11, 7, 8</column>
-<column name="icmp_ln179_fu_393_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln180_fu_451_p2">icmp, 0, 0, 11, 7, 8</column>
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln159_fu_217_p2">+, 0, 0, 13, 4, 1</column>
+<column name="icmp_ln159_fu_211_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="ap_block_state3_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="K_h_V_address0">15, 3, 10, 30</column>
-<column name="K_h_V_ce0">15, 3, 1, 3</column>
-<column name="Q_h_V_address0">15, 3, 10, 30</column>
-<column name="Q_h_V_ce0">15, 3, 1, 3</column>
-<column name="V_h_V_address0">15, 3, 10, 30</column>
-<column name="V_h_V_ce0">15, 3, 1, 3</column>
-<column name="ap_NS_fsm">59, 14, 1, 14</column>
-<column name="h_0_reg_192">9, 2, 4, 8</column>
-<column name="i7_0_reg_203">9, 2, 4, 8</column>
-<column name="i8_0_reg_225">9, 2, 4, 8</column>
-<column name="j7_0_reg_214">9, 2, 7, 14</column>
-<column name="j8_0_reg_236">9, 2, 7, 14</column>
-<column name="v95_address0">15, 3, 8, 24</column>
-<column name="v95_ce0">15, 3, 1, 3</column>
-<column name="v95_d0">15, 3, 32, 96</column>
-<column name="v95_we0">15, 3, 1, 3</column>
-<column name="v96_V_address0">15, 3, 8, 24</column>
-<column name="v96_V_ce0">15, 3, 1, 3</column>
-<column name="v96_V_we0">9, 2, 1, 2</column>
-<column name="v97_address0">15, 3, 10, 30</column>
-<column name="v97_ce0">15, 3, 1, 3</column>
-<column name="v97_we0">9, 2, 1, 2</column>
+<column name="K_h_V_address0">14, 3, 10, 30</column>
+<column name="K_h_V_ce0">14, 3, 1, 3</column>
+<column name="K_h_V_ce1">9, 2, 1, 2</column>
+<column name="K_h_V_ce10">9, 2, 1, 2</column>
+<column name="K_h_V_ce11">9, 2, 1, 2</column>
+<column name="K_h_V_ce12">9, 2, 1, 2</column>
+<column name="K_h_V_ce13">9, 2, 1, 2</column>
+<column name="K_h_V_ce14">9, 2, 1, 2</column>
+<column name="K_h_V_ce15">9, 2, 1, 2</column>
+<column name="K_h_V_ce2">9, 2, 1, 2</column>
+<column name="K_h_V_ce3">9, 2, 1, 2</column>
+<column name="K_h_V_ce4">9, 2, 1, 2</column>
+<column name="K_h_V_ce5">9, 2, 1, 2</column>
+<column name="K_h_V_ce6">9, 2, 1, 2</column>
+<column name="K_h_V_ce7">9, 2, 1, 2</column>
+<column name="K_h_V_ce8">9, 2, 1, 2</column>
+<column name="K_h_V_ce9">9, 2, 1, 2</column>
+<column name="K_h_V_we0">9, 2, 1, 2</column>
+<column name="Q_h_V_address0">14, 3, 10, 30</column>
+<column name="Q_h_V_ce0">14, 3, 1, 3</column>
+<column name="Q_h_V_ce1">9, 2, 1, 2</column>
+<column name="Q_h_V_ce10">9, 2, 1, 2</column>
+<column name="Q_h_V_ce11">9, 2, 1, 2</column>
+<column name="Q_h_V_ce12">9, 2, 1, 2</column>
+<column name="Q_h_V_ce13">9, 2, 1, 2</column>
+<column name="Q_h_V_ce14">9, 2, 1, 2</column>
+<column name="Q_h_V_ce15">9, 2, 1, 2</column>
+<column name="Q_h_V_ce2">9, 2, 1, 2</column>
+<column name="Q_h_V_ce3">9, 2, 1, 2</column>
+<column name="Q_h_V_ce4">9, 2, 1, 2</column>
+<column name="Q_h_V_ce5">9, 2, 1, 2</column>
+<column name="Q_h_V_ce6">9, 2, 1, 2</column>
+<column name="Q_h_V_ce7">9, 2, 1, 2</column>
+<column name="Q_h_V_ce8">9, 2, 1, 2</column>
+<column name="Q_h_V_ce9">9, 2, 1, 2</column>
+<column name="Q_h_V_we0">9, 2, 1, 2</column>
+<column name="V_h_V_address0">14, 3, 10, 30</column>
+<column name="V_h_V_ce0">14, 3, 1, 3</column>
+<column name="V_h_V_ce1">9, 2, 1, 2</column>
+<column name="V_h_V_ce10">9, 2, 1, 2</column>
+<column name="V_h_V_ce11">9, 2, 1, 2</column>
+<column name="V_h_V_ce2">9, 2, 1, 2</column>
+<column name="V_h_V_ce3">9, 2, 1, 2</column>
+<column name="V_h_V_ce4">9, 2, 1, 2</column>
+<column name="V_h_V_ce5">9, 2, 1, 2</column>
+<column name="V_h_V_ce6">9, 2, 1, 2</column>
+<column name="V_h_V_ce7">9, 2, 1, 2</column>
+<column name="V_h_V_ce8">9, 2, 1, 2</column>
+<column name="V_h_V_ce9">9, 2, 1, 2</column>
+<column name="V_h_V_we0">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">65, 14, 1, 14</column>
+<column name="grp_fu_253_ce">14, 3, 1, 3</column>
+<column name="grp_fu_253_p0">14, 3, 40, 120</column>
+<column name="grp_fu_253_p1">14, 3, 40, 120</column>
+<column name="grp_fu_257_ce">14, 3, 1, 3</column>
+<column name="grp_fu_257_p0">14, 3, 40, 120</column>
+<column name="grp_fu_257_p1">14, 3, 40, 120</column>
+<column name="grp_fu_261_ce">14, 3, 1, 3</column>
+<column name="grp_fu_261_p0">14, 3, 40, 120</column>
+<column name="grp_fu_261_p1">14, 3, 40, 120</column>
+<column name="grp_fu_265_ce">14, 3, 1, 3</column>
+<column name="grp_fu_265_p0">14, 3, 40, 120</column>
+<column name="grp_fu_265_p1">14, 3, 40, 120</column>
+<column name="grp_fu_269_ce">14, 3, 1, 3</column>
+<column name="grp_fu_269_p0">14, 3, 40, 120</column>
+<column name="grp_fu_269_p1">14, 3, 40, 120</column>
+<column name="grp_fu_273_ce">14, 3, 1, 3</column>
+<column name="grp_fu_273_p0">14, 3, 40, 120</column>
+<column name="grp_fu_273_p1">14, 3, 40, 120</column>
+<column name="grp_fu_277_ce">14, 3, 1, 3</column>
+<column name="grp_fu_277_p0">14, 3, 40, 120</column>
+<column name="grp_fu_277_p1">14, 3, 40, 120</column>
+<column name="grp_fu_281_ce">14, 3, 1, 3</column>
+<column name="grp_fu_281_p0">14, 3, 40, 120</column>
+<column name="grp_fu_281_p1">14, 3, 40, 120</column>
+<column name="grp_fu_285_ce">14, 3, 1, 3</column>
+<column name="grp_fu_285_p0">14, 3, 40, 120</column>
+<column name="grp_fu_285_p1">14, 3, 40, 120</column>
+<column name="grp_fu_289_ce">14, 3, 1, 3</column>
+<column name="grp_fu_289_p0">14, 3, 40, 120</column>
+<column name="grp_fu_289_p1">14, 3, 40, 120</column>
+<column name="grp_fu_293_ce">14, 3, 1, 3</column>
+<column name="grp_fu_293_p0">14, 3, 40, 120</column>
+<column name="grp_fu_293_p1">14, 3, 40, 120</column>
+<column name="grp_fu_297_ce">14, 3, 1, 3</column>
+<column name="grp_fu_297_p0">14, 3, 40, 120</column>
+<column name="grp_fu_297_p1">14, 3, 40, 120</column>
+<column name="grp_fu_301_ce">9, 2, 1, 2</column>
+<column name="grp_fu_305_ce">9, 2, 1, 2</column>
+<column name="grp_fu_309_ce">9, 2, 1, 2</column>
+<column name="grp_fu_313_ce">9, 2, 1, 2</column>
+<column name="grp_fu_317_ce">9, 2, 1, 2</column>
+<column name="grp_fu_320_ce">9, 2, 1, 2</column>
+<column name="h_fu_46">9, 2, 4, 8</column>
+<column name="inp_sumRow_address0">20, 4, 4, 16</column>
+<column name="inp_sumRow_ce0">20, 4, 1, 4</column>
+<column name="inp_sumRow_ce1">9, 2, 1, 2</column>
+<column name="inp_sumRow_d0">14, 3, 32, 96</column>
+<column name="inp_sumRow_we0">14, 3, 1, 3</column>
+<column name="v95_address0">20, 4, 8, 32</column>
+<column name="v95_address1">14, 3, 8, 24</column>
+<column name="v95_ce0">20, 4, 1, 4</column>
+<column name="v95_ce1">14, 3, 1, 3</column>
+<column name="v95_d0">14, 3, 32, 96</column>
+<column name="v95_we0">14, 3, 1, 3</column>
+<column name="v95_we1">9, 2, 1, 2</column>
+<column name="v96_V_0_address0">14, 3, 4, 12</column>
+<column name="v96_V_0_ce0">14, 3, 1, 3</column>
+<column name="v96_V_0_we0">9, 2, 1, 2</column>
+<column name="v96_V_10_address0">14, 3, 4, 12</column>
+<column name="v96_V_10_ce0">14, 3, 1, 3</column>
+<column name="v96_V_10_we0">9, 2, 1, 2</column>
+<column name="v96_V_11_address0">14, 3, 4, 12</column>
+<column name="v96_V_11_ce0">14, 3, 1, 3</column>
+<column name="v96_V_11_we0">9, 2, 1, 2</column>
+<column name="v96_V_1_address0">14, 3, 4, 12</column>
+<column name="v96_V_1_ce0">14, 3, 1, 3</column>
+<column name="v96_V_1_we0">9, 2, 1, 2</column>
+<column name="v96_V_2_address0">14, 3, 4, 12</column>
+<column name="v96_V_2_ce0">14, 3, 1, 3</column>
+<column name="v96_V_2_we0">9, 2, 1, 2</column>
+<column name="v96_V_3_address0">14, 3, 4, 12</column>
+<column name="v96_V_3_ce0">14, 3, 1, 3</column>
+<column name="v96_V_3_we0">9, 2, 1, 2</column>
+<column name="v96_V_4_address0">14, 3, 4, 12</column>
+<column name="v96_V_4_ce0">14, 3, 1, 3</column>
+<column name="v96_V_4_we0">9, 2, 1, 2</column>
+<column name="v96_V_5_address0">14, 3, 4, 12</column>
+<column name="v96_V_5_ce0">14, 3, 1, 3</column>
+<column name="v96_V_5_we0">9, 2, 1, 2</column>
+<column name="v96_V_6_address0">14, 3, 4, 12</column>
+<column name="v96_V_6_ce0">14, 3, 1, 3</column>
+<column name="v96_V_6_we0">9, 2, 1, 2</column>
+<column name="v96_V_7_address0">14, 3, 4, 12</column>
+<column name="v96_V_7_ce0">14, 3, 1, 3</column>
+<column name="v96_V_7_we0">9, 2, 1, 2</column>
+<column name="v96_V_8_address0">14, 3, 4, 12</column>
+<column name="v96_V_8_ce0">14, 3, 1, 3</column>
+<column name="v96_V_8_we0">9, 2, 1, 2</column>
+<column name="v96_V_9_address0">14, 3, 4, 12</column>
+<column name="v96_V_9_ce0">14, 3, 1, 3</column>
+<column name="v96_V_9_we0">9, 2, 1, 2</column>
+<column name="v97_V_address0">20, 4, 10, 40</column>
+<column name="v97_V_ce0">20, 4, 1, 4</column>
+<column name="v97_V_ce1">9, 2, 1, 2</column>
+<column name="v97_V_d0">14, 3, 24, 72</column>
+<column name="v97_V_we0">14, 3, 1, 3</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln203_1_reg_586">15, 0, 15, 0</column>
-<column name="add_ln203_reg_550">11, 0, 11, 0</column>
 <column name="ap_CS_fsm">13, 0, 13, 0</column>
-<column name="grp_Attention_layer_fu_253_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_Context_layer_fu_260_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_Softmax_layer_fu_247_ap_start_reg">1, 0, 1, 0</column>
-<column name="h_0_reg_192">4, 0, 4, 0</column>
-<column name="h_reg_498">4, 0, 4, 0</column>
-<column name="i7_0_reg_203">4, 0, 4, 0</column>
-<column name="i7_reg_512">4, 0, 4, 0</column>
-<column name="i8_0_reg_225">4, 0, 4, 0</column>
-<column name="i8_reg_558">4, 0, 4, 0</column>
-<column name="j7_0_reg_214">7, 0, 7, 0</column>
-<column name="j7_reg_530">7, 0, 7, 0</column>
-<column name="j8_0_reg_236">7, 0, 7, 0</column>
-<column name="j8_reg_576">7, 0, 7, 0</column>
-<column name="shl_ln_reg_503">4, 0, 10, 6</column>
-<column name="sub_ln165_reg_517">7, 0, 15, 8</column>
-<column name="sub_ln203_reg_563">7, 0, 15, 8</column>
-<column name="zext_ln164_1_reg_522">4, 0, 11, 7</column>
-<column name="zext_ln180_1_reg_568">4, 0, 11, 7</column>
+<column name="grp_Attention_layer_fu_146_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_100_1_fu_136_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_VITIS_LOOP_131_1_VITIS_LOOP_132_2_fu_141_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_l_exp_sum_i4_fu_153_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_l_gemm_i6_l_j6_fu_177_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_l_mh_merge_i8_l_j8_fu_195_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_l_mh_separate_i7_l_j7_fu_122_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Self_attention_Pipeline_l_update_i5_fu_159_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_fu_46">4, 0, 4, 0</column>
+<column name="tmp_s_reg_247">4, 0, 10, 6</column>
 </table>
 </item>
 </section>
@@ -178,19 +307,46 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, Self_attention, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, Self_attention, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, Self_attention, return value</column>
-<column name="v82_V_address0">out, 14, ap_memory, v82_V, array</column>
-<column name="v82_V_ce0">out, 1, ap_memory, v82_V, array</column>
-<column name="v82_V_q0">in, 24, ap_memory, v82_V, array</column>
-<column name="v83_V_address0">out, 14, ap_memory, v83_V, array</column>
-<column name="v83_V_ce0">out, 1, ap_memory, v83_V, array</column>
-<column name="v83_V_q0">in, 24, ap_memory, v83_V, array</column>
-<column name="v84_V_address0">out, 14, ap_memory, v84_V, array</column>
-<column name="v84_V_ce0">out, 1, ap_memory, v84_V, array</column>
-<column name="v84_V_q0">in, 24, ap_memory, v84_V, array</column>
-<column name="v85_V_address0">out, 14, ap_memory, v85_V, array</column>
-<column name="v85_V_ce0">out, 1, ap_memory, v85_V, array</column>
-<column name="v85_V_we0">out, 1, ap_memory, v85_V, array</column>
-<column name="v85_V_d0">out, 24, ap_memory, v85_V, array</column>
+<column name="grp_fu_845_p_din0">out, 40, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_845_p_din1">out, 40, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_845_p_dout0">in, 72, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_845_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_849_p_din0">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_849_p_din1">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_849_p_dout0">in, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_849_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_853_p_din0">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_853_p_din1">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_853_p_opcode">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_853_p_dout0">in, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_853_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_857_p_din0">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_857_p_din1">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_857_p_dout0">in, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_857_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_861_p_din0">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_861_p_din1">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_861_p_dout0">in, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_861_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_865_p_din0">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_865_p_dout0">in, 64, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_865_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_868_p_din0">out, 32, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_868_p_dout0">in, 64, ap_ctrl_hs, Self_attention, return value</column>
+<column name="grp_fu_868_p_ce">out, 1, ap_ctrl_hs, Self_attention, return value</column>
+<column name="v82_address0">out, 14, ap_memory, v82, array</column>
+<column name="v82_ce0">out, 1, ap_memory, v82, array</column>
+<column name="v82_q0">in, 24, ap_memory, v82, array</column>
+<column name="v83_address0">out, 14, ap_memory, v83, array</column>
+<column name="v83_ce0">out, 1, ap_memory, v83, array</column>
+<column name="v83_q0">in, 24, ap_memory, v83, array</column>
+<column name="v84_address0">out, 14, ap_memory, v84, array</column>
+<column name="v84_ce0">out, 1, ap_memory, v84, array</column>
+<column name="v84_q0">in, 24, ap_memory, v84, array</column>
+<column name="v85_address0">out, 14, ap_memory, v85, array</column>
+<column name="v85_ce0">out, 1, ap_memory, v85, array</column>
+<column name="v85_we0">out, 1, ap_memory, v85, array</column>
+<column name="v85_d0">out, 24, ap_memory, v85, array</column>
 </table>
 </item>
 </section>

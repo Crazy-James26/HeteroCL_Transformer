@@ -1,11 +1,11 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'systolic_array'" level="0">
-<item name = "Date">Wed Aug 30 10:32:31 2023
+<section name = "Vitis HLS Report for 'systolic_array'" level="0">
+<item name = "Date">Mon Sep  4 10:20:37 2023
 </item>
-<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 9.336 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.844 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3891, 3891, 38.910 us, 38.910 us, 3846, 3846, dataflow</column>
+<column name="">3106, 3106, 31.060 us, 31.060 us, 3084, 3084, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

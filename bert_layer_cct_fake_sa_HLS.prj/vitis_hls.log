@@ -1,0 +1,1589 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
+  **** SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+  **** IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /opt/xilinx/2022.1/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'jz2292' on host 'en-ec-zhang-21.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Sun Sep 03 06:38:14 EDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_fake_sa_HLS.prj'
+Sourcing Tcl script 'run.tcl'
+INFO: [HLS 200-1510] Running: open_project out.prj -reset 
+INFO: [HLS 200-10] Opening and resetting project '/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_fake_sa_HLS.prj/out.prj'.
+WARNING: [HLS 200-40] No /home/jz2292/project/transformer/heterocl_file/bert_layer_cct_fake_sa_HLS.prj/out.prj/solution1/solution1.aps file found.
+INFO: [HLS 200-1510] Running: set_top Bert_layer 
+INFO: [HLS 200-1510] Running: add_files kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb host.cpp -cflags -std=gnu++0x 
+INFO: [HLS 200-10] Adding test bench file 'host.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_fake_sa_HLS.prj/out.prj/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 21.6 seconds. CPU system time: 1.92 seconds. Elapsed time: 24.01 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'l_i14' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:429:9)
+INFO: [HLS 214-291] Loop 'l_j_inner5' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:430:21)
+INFO: [HLS 214-291] Loop 'l_i11' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:365:9)
+INFO: [HLS 214-291] Loop 'l_j_inner4' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:366:21)
+INFO: [HLS 214-291] Loop 'l_i6' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:245:8)
+INFO: [HLS 214-291] Loop 'l_j_inner3' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:246:21)
+INFO: [HLS 214-291] Loop 'l_i_inner1' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:157:14)
+INFO: [HLS 214-291] Loop 'l_j_inner2' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:158:23)
+INFO: [HLS 214-291] Loop 'l_i_inner' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:75:13)
+INFO: [HLS 214-291] Loop 'l_j_inner1' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:76:23)
+INFO: [HLS 214-291] Loop 'l_i1' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:39:8)
+INFO: [HLS 214-291] Loop 'l_j_inner' is marked as complete unroll implied by the pipeline pragma (kernel.cpp:40:20)
+INFO: [HLS 214-186] Unrolling loop 'l_i14' (kernel.cpp:429:9) in function 'Linear_layer_ds2' completely with a factor of 12 (kernel.cpp:411:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner5' (kernel.cpp:430:21) in function 'Linear_layer_ds2' completely with a factor of 12 (kernel.cpp:411:0)
+INFO: [HLS 214-186] Unrolling loop 'l_i11' (kernel.cpp:365:9) in function 'Linear_layer_ds1' completely with a factor of 12 (kernel.cpp:347:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner4' (kernel.cpp:366:21) in function 'Linear_layer_ds1' completely with a factor of 12 (kernel.cpp:347:0)
+INFO: [HLS 214-186] Unrolling loop 'l_i6' (kernel.cpp:245:8) in function 'Linear_layer_ds0' completely with a factor of 12 (kernel.cpp:227:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner3' (kernel.cpp:246:21) in function 'Linear_layer_ds0' completely with a factor of 12 (kernel.cpp:227:0)
+INFO: [HLS 214-186] Unrolling loop 'l_i_inner1' (kernel.cpp:157:14) in function 'Context_layer' completely with a factor of 4 (kernel.cpp:140:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner2' (kernel.cpp:158:23) in function 'Context_layer' completely with a factor of 4 (kernel.cpp:140:0)
+INFO: [HLS 214-186] Unrolling loop 'l_i_inner' (kernel.cpp:75:13) in function 'Attention_layer' completely with a factor of 4 (kernel.cpp:58:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner1' (kernel.cpp:76:23) in function 'Attention_layer' completely with a factor of 4 (kernel.cpp:58:0)
+INFO: [HLS 214-186] Unrolling loop 'l_i1' (kernel.cpp:39:8) in function 'Linear_layer_qkv' completely with a factor of 12 (kernel.cpp:21:0)
+INFO: [HLS 214-186] Unrolling loop 'l_j_inner' (kernel.cpp:40:20) in function 'Linear_layer_qkv' completely with a factor of 12 (kernel.cpp:21:0)
+INFO: [HLS 214-178] Inlining function 'std::exp(float)' into 'Softmax_layer(float (*) [12], float (*) [12])' (kernel.cpp:103:0)
+INFO: [HLS 214-178] Inlining function 'Softmax_layer(float (*) [12], float (*) [12])' into 'Self_attention(float (*) [768], float (*) [768], float (*) [768], float (*) [768])' (kernel.cpp:179:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'Layer_norm(float (*) [768], float*, float*, float (*) [768])' (kernel.cpp:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.143.152.162.172.182.192.202.212.279.289)' into 'fp_struct<double>::to_double() const (.140.149.159.169.179.189.199.209.276.286)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:523:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.140.149.159.169.179.189.199.209.276.286)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:538:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'pow' into '__gnu_cxx::__promote_2<float, double, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<double, std::__is_integer<double>::__value>::__type>::__type std::pow<float, double>(float, double)' (/opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:416:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.332.342.351.362.371.382.391.402.411.422)' into 'fp_struct<float>::to_float() const (.329.339.348.359.368.379.388.399.408.419)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.329.339.348.359.368.379.388.399.408.419)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_fabs<float>(float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_nan<float>(char const*)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_nan.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double exp_reduce_::exp_generic<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:186:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double exp_reduce_::exp_generic<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:186:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double exp_reduce_::exp_generic<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:186:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double exp_reduce_::exp_generic<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:186:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double exp_reduce_::exp_generic<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:186:0)
+INFO: [HLS 214-178] Inlining function 'exp_reduce_::exp_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double exp_reduce_::exp_generic<double>(double)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:186:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'exp_reduce_::expm1(float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float explog_based::generic_tanh<float>(float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:57:0)
+INFO: [HLS 214-178] Inlining function 'float generic_fabs<float>(float)' into 'float explog_based::generic_tanh<float>(float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:57:0)
+INFO: [HLS 214-178] Inlining function 'float generic_nan<float>(char const*)' into 'float explog_based::generic_tanh<float>(float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:57:0)
+INFO: [HLS 214-178] Inlining function 'exp_reduce_::expm1(float)' into 'float explog_based::generic_tanh<float>(float)' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:57:0)
+INFO: [HLS 214-178] Inlining function 'tanhf' into 'std::tanh(float)' (/opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:502:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<float, double, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<double, std::__is_integer<double>::__value>::__type>::__type std::pow<float, double>(float, double)' into 'Gelu_layer(float (*) [3072], float (*) [3072])' (kernel.cpp:383:0)
+INFO: [HLS 214-178] Inlining function 'std::tanh(float)' into 'Gelu_layer(float (*) [3072], float (*) [3072])' (kernel.cpp:383:0)
+INFO: [HLS 214-178] Inlining function 'Res_layer0(float (*) [768], float (*) [768], float (*) [768])' into 'Bert_layer(float (*) [768], float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [3072], float*, float*, float*, float*, float*, float (*) [768])' (kernel.cpp:484:0)
+INFO: [HLS 214-178] Inlining function 'Gelu_layer(float (*) [3072], float (*) [3072])' into 'Bert_layer(float (*) [768], float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [3072], float*, float*, float*, float*, float*, float (*) [768])' (kernel.cpp:484:0)
+INFO: [HLS 214-178] Inlining function 'Res_layer1(float (*) [768], float (*) [768], float (*) [768])' into 'Bert_layer(float (*) [768], float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [768], float*, float (*) [3072], float*, float*, float*, float*, float*, float (*) [768])' (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'Q_h': Cyclic partitioning with factor 4 on dimension 1. (kernel.cpp:192:11)
+INFO: [HLS 214-248] Applying array_partition to 'K_h': Cyclic partitioning with factor 4 on dimension 1. (kernel.cpp:193:11)
+INFO: [HLS 214-248] Applying array_partition to 'V_h': Cyclic partitioning with factor 4 on dimension 2. (kernel.cpp:194:11)
+INFO: [HLS 214-248] Applying array_partition to 'v84': Cyclic partitioning with factor 4 on dimension 1. Cyclic partitioning with factor 4 on dimension 2. (kernel.cpp:206:11)
+INFO: [HLS 214-248] Applying array_partition to 'v85': Cyclic partitioning with factor 4 on dimension 1. (kernel.cpp:208:11)
+INFO: [HLS 214-248] Applying array_partition to 'v86': Cyclic partitioning with factor 4 on dimension 1. Cyclic partitioning with factor 4 on dimension 2. (kernel.cpp:210:11)
+INFO: [HLS 214-248] Applying array_partition to 'v227': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:501:8)
+INFO: [HLS 214-248] Applying array_partition to 'v228': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:503:9)
+INFO: [HLS 214-248] Applying array_partition to 'v229': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:505:9)
+INFO: [HLS 214-248] Applying array_partition to 'v230': Complete partitioning on dimension 1. (kernel.cpp:507:9)
+INFO: [HLS 214-248] Applying array_partition to 'v231': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:509:9)
+INFO: [HLS 214-248] Applying array_partition to 'v233': Complete partitioning on dimension 1. (kernel.cpp:513:9)
+INFO: [HLS 214-248] Applying array_partition to 'v234': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:515:9)
+INFO: [HLS 214-248] Applying array_partition to 'v235': Complete partitioning on dimension 1. (kernel.cpp:517:9)
+INFO: [HLS 214-248] Applying array_partition to 'v236': Complete partitioning on dimension 1. Cyclic partitioning with factor 12 on dimension 2. (kernel.cpp:519:9)
+INFO: [HLS 214-248] Applying array_partition to 'v209': Complete partitioning on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v210': Cyclic partitioning with factor 12 on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v212': Cyclic partitioning with factor 12 on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v214': Cyclic partitioning with factor 12 on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v216': Cyclic partitioning with factor 12 on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v218': Cyclic partitioning with factor 12 on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v220': Cyclic partitioning with factor 12 on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 214-248] Applying array_partition to 'v226': Complete partitioning on dimension 1. (kernel.cpp:484:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 17.65 seconds. CPU system time: 1.42 seconds. Elapsed time: 19.7 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 115.81 seconds. CPU system time: 0.49 seconds. Elapsed time: 116.67 seconds; current allocated memory: 728.180 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 122.59 seconds. CPU system time: 0.3 seconds. Elapsed time: 123.24 seconds; current allocated memory: 952.184 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_149_2' (kernel.cpp:149) in function 'Context_layer' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_2' (kernel.cpp:67) in function 'Attention_layer' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_110_1' (kernel.cpp:110) in function 'Self_attention' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_290_1' (kernel.cpp:290) in function 'Layer_norm.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_294_2' (kernel.cpp:294) in function 'Layer_norm.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_290_1' (kernel.cpp:290) in function 'Layer_norm' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_294_2' (kernel.cpp:294) in function 'Layer_norm' automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:690:3) in function 'pow_reduce::pow_generic<double>'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:187:9) to (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:368:3) in function 'exp_reduce_::exp_generic<double>'... converting 10 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:18:3)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 139.05 seconds. CPU system time: 0.82 seconds. Elapsed time: 140.34 seconds; current allocated memory: 1.242 GB.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_mh_separate_i_s' (kernel.cpp:195:33) in function 'Self_attention'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_exp_sum_i3' (kernel.cpp:113:26) in function 'Self_attention' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_update_i4' (kernel.cpp:125:25) in function 'Self_attention'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_mh_merge_i_m' (kernel.cpp:212:30) in function 'Self_attention'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_S_h_0_h' (kernel.cpp:192:11) in function 'Self_attention' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i' (kernel.cpp:29:21) in function 'Linear_layer_qkv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_gemm_j_outer' (kernel.cpp:36:28) in function 'Linear_layer_qkv' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i13' (kernel.cpp:419:23) in function 'Linear_layer_ds2'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_gemm_j_outer5' (kernel.cpp:426:29) in function 'Linear_layer_ds2' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i10' (kernel.cpp:355:23) in function 'Linear_layer_ds1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_gemm_j_outer4' (kernel.cpp:362:29) in function 'Linear_layer_ds1' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_bias_i5' (kernel.cpp:235:22) in function 'Linear_layer_ds0'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_gemm_j_outer3' (kernel.cpp:242:29) in function 'Linear_layer_ds0' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'l_mean_var_i8' (kernel.cpp:298:27) in function 'Layer_norm.1' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'l_norm_i9' (kernel.cpp:323:23) in function 'Layer_norm.1' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'l_mean_var_i8' (kernel.cpp:298:27) in function 'Layer_norm' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'l_norm_i9' (kernel.cpp:323:23) in function 'Layer_norm' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_148_1' (kernel.cpp:148:29) in function 'Context_layer'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_j_outer2' (kernel.cpp:154:26) in function 'Context_layer' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_gemm_i_outer1' (kernel.cpp:153:29) in function 'Context_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_i_j_0_i7' (kernel.cpp:270:25) in function 'Bert_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_i_j_0_i12' (kernel.cpp:389:26) in function 'Bert_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_i_j_0_i15' (kernel.cpp:454:26) in function 'Bert_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_66_1' (kernel.cpp:66:28) in function 'Attention_layer'.
+WARNING: [HLS 200-960] Cannot flatten loop 'l_j_outer1' (kernel.cpp:72:26) in function 'Attention_layer' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'l_gemm_i_outer' (kernel.cpp:71:28) in function 'Attention_layer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_norm_i2' (kernel.cpp:90:23) in function 'Attention_layer'.
+INFO: [HLS 200-472] Inferring partial write operation for 'Q_h' (kernel.cpp:199:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'K_h' (kernel.cpp:201:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'V_h' (kernel.cpp:203:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'inp_sumRow' (kernel.cpp:111:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'v84' (kernel.cpp:118:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'inp_sumRow' (kernel.cpp:120:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'v85' (kernel.cpp:131:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'v74_0' (kernel.cpp:216:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'v3_0_0' (kernel.cpp:33:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'v3_0_0' (kernel.cpp:47:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'v187_0_0' (kernel.cpp:423:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'v187_0_0' (kernel.cpp:437:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'v157_0_0' (kernel.cpp:359:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'v157_0_0' (kernel.cpp:373:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'v93_0_0' (kernel.cpp:239:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'v93_0_0' (kernel.cpp:253:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean' (kernel.cpp:291:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean2' (kernel.cpp:295:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean' (kernel.cpp:313:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'mean2' (kernel.cpp:316:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'var' (kernel.cpp:321:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'v118_0' (kernel.cpp:337:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'v56_0_0' (kernel.cpp:150:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'v56_0_0' (kernel.cpp:166:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'v232' (kernel.cpp:276:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'v235' (kernel.cpp:401:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'v237' (kernel.cpp:460:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'v19_0_0' (kernel.cpp:68:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'v19_0_0' (kernel.cpp:84:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'v19_0_0' (kernel.cpp:95:19)
+INTERNAL-INFO: never seen llvm instruction 'fexp'(507)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 31.8 seconds. CPU system time: 0.71 seconds. Elapsed time: 32.85 seconds; current allocated memory: 1.836 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Bert_layer' ...
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'exp_generic<double>' to 'exp_generic_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'generic_tanh<float>' to 'generic_tanh_float_s'.
+WARNING: [SYN 201-103] Legalizing function name 'Layer_norm.1_Pipeline_VITIS_LOOP_290_1' to 'Layer_norm_1_Pipeline_VITIS_LOOP_290_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Layer_norm.1_Pipeline_VITIS_LOOP_294_2' to 'Layer_norm_1_Pipeline_VITIS_LOOP_294_2'.
+WARNING: [SYN 201-103] Legalizing function name 'Layer_norm.1_Pipeline_l_j6' to 'Layer_norm_1_Pipeline_l_j6'.
+WARNING: [SYN 201-103] Legalizing function name 'Layer_norm.1_Pipeline_l_j7' to 'Layer_norm_1_Pipeline_l_j7'.
+WARNING: [SYN 201-103] Legalizing function name 'Layer_norm.1' to 'Layer_norm_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_qkv_Pipeline_l_bias_i_l_j' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i_l_j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'l_bias_i_l_j'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.64 seconds. CPU system time: 0.1 seconds. Elapsed time: 2.41 seconds; current allocated memory: 1.836 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.836 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_qkv_Pipeline_l_k' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k'.
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_qkv_Pipeline_l_k' (loop 'l_k'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v15_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' and 'load' operation ('v15_load', kernel.cpp:46) on local variable 'v15'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_qkv_Pipeline_l_k' (loop 'l_k'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v15_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' and 'load' operation ('v15_load', kernel.cpp:46) on local variable 'v15'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_qkv_Pipeline_l_k' (loop 'l_k'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v15_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' and 'load' operation ('v15_load', kernel.cpp:46) on local variable 'v15'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Linear_layer_qkv_Pipeline_l_k' consists of the following:	'fadd' operation ('v16', kernel.cpp:46) [1194]  (7.26 ns)
+	'store' operation ('v15_35_write_ln46', kernel.cpp:46) of variable 'v16', kernel.cpp:46 on local variable 'v15' [1695]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.97 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.06 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.37 seconds. CPU system time: 0 seconds. Elapsed time: 1.41 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_qkv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.66 seconds. CPU system time: 0 seconds. Elapsed time: 1.71 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention_Pipeline_l_mh_separate_i_s_l_j_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln198) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_mh_separate_i_s_l_j_s'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16, loop 'l_mh_separate_i_s_l_j_s'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.44 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Attention_layer_Pipeline_VITIS_LOOP_66_1_VITIS_LOOP_67_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_66_1_VITIS_LOOP_67_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_66_1_VITIS_LOOP_67_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Attention_layer_Pipeline_l_k1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k1'.
+WARNING: [HLS 200-880] The II Violation in module 'Attention_layer_Pipeline_l_k1' (loop 'l_k1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v32_write_ln83', kernel.cpp:83) of variable 'v33', kernel.cpp:83 on local variable 'v32' and 'load' operation ('v32_load', kernel.cpp:83) on local variable 'v32'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Attention_layer_Pipeline_l_k1' (loop 'l_k1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v32_write_ln83', kernel.cpp:83) of variable 'v33', kernel.cpp:83 on local variable 'v32' and 'load' operation ('v32_load', kernel.cpp:83) on local variable 'v32'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Attention_layer_Pipeline_l_k1' (loop 'l_k1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v32_write_ln83', kernel.cpp:83) of variable 'v33', kernel.cpp:83 on local variable 'v32' and 'load' operation ('v32_load', kernel.cpp:83) on local variable 'v32'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k1'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Attention_layer_Pipeline_l_k1' consists of the following:	'fadd' operation ('v33', kernel.cpp:83) [165]  (7.26 ns)
+	'store' operation ('v32_3_write_ln83', kernel.cpp:83) of variable 'v33', kernel.cpp:83 on local variable 'v32' [226]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Attention_layer_Pipeline_l_norm_i2_l_j1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_norm_i2_l_j1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_norm_i2_l_j1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Attention_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention_Pipeline_VITIS_LOOP_110_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_110_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention_Pipeline_l_j2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j2'.
+WARNING: [HLS 200-880] The II Violation in module 'Self_attention_Pipeline_l_j2' (loop 'l_j2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v47_write_ln121', kernel.cpp:121) of variable 'v48', kernel.cpp:121 on local variable 'v47' and 'load' operation ('v47_load', kernel.cpp:121) on local variable 'v47'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Self_attention_Pipeline_l_j2' (loop 'l_j2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v47_write_ln121', kernel.cpp:121) of variable 'v48', kernel.cpp:121 on local variable 'v47' and 'load' operation ('v47_load', kernel.cpp:121) on local variable 'v47'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Self_attention_Pipeline_l_j2' (loop 'l_j2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v47_write_ln121', kernel.cpp:121) of variable 'v48', kernel.cpp:121 on local variable 'v47' and 'load' operation ('v47_load', kernel.cpp:121) on local variable 'v47'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 18, loop 'l_j2'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Self_attention_Pipeline_l_j2' consists of the following:	'fadd' operation ('v48', kernel.cpp:121) [152]  (7.26 ns)
+	'store' operation ('v47_write_ln121', kernel.cpp:121) of variable 'v48', kernel.cpp:121 on local variable 'v47' [160]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention_Pipeline_l_update_i4_l_j3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_update_i4_l_j3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 20, loop 'l_update_i4_l_j3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Context_layer_Pipeline_VITIS_LOOP_148_1_VITIS_LOOP_149_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_148_1_VITIS_LOOP_149_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_148_1_VITIS_LOOP_149_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Context_layer_Pipeline_l_k2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k2'.
+WARNING: [HLS 200-880] The II Violation in module 'Context_layer_Pipeline_l_k2' (loop 'l_k2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v69_write_ln165', kernel.cpp:165) of variable 'v70', kernel.cpp:165 on local variable 'v69' and 'load' operation ('v69_load', kernel.cpp:165) on local variable 'v69'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Context_layer_Pipeline_l_k2' (loop 'l_k2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v69_write_ln165', kernel.cpp:165) of variable 'v70', kernel.cpp:165 on local variable 'v69' and 'load' operation ('v69_load', kernel.cpp:165) on local variable 'v69'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Context_layer_Pipeline_l_k2' (loop 'l_k2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v69_write_ln165', kernel.cpp:165) of variable 'v70', kernel.cpp:165 on local variable 'v69' and 'load' operation ('v69_load', kernel.cpp:165) on local variable 'v69'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k2'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Context_layer_Pipeline_l_k2' consists of the following:	'fadd' operation ('v70', kernel.cpp:165) [167]  (7.26 ns)
+	'store' operation ('v69_3_write_ln165', kernel.cpp:165) of variable 'v70', kernel.cpp:165 on local variable 'v69' [228]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Context_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention_Pipeline_l_mh_merge_i_m_l_j_m' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_mh_merge_i_m_l_j_m'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'l_mh_merge_i_m_l_j_m'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Self_attention' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds0_Pipeline_l_bias_i5_l_j4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln239) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i5_l_j4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'l_bias_i5_l_j4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.89 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.95 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds0_Pipeline_l_k3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k3'.
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds0_Pipeline_l_k3' (loop 'l_k3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v105_write_ln252', kernel.cpp:252) of variable 'v106', kernel.cpp:252 on local variable 'v105' and 'load' operation ('v105_load', kernel.cpp:252) on local variable 'v105'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds0_Pipeline_l_k3' (loop 'l_k3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v105_write_ln252', kernel.cpp:252) of variable 'v106', kernel.cpp:252 on local variable 'v105' and 'load' operation ('v105_load', kernel.cpp:252) on local variable 'v105'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds0_Pipeline_l_k3' (loop 'l_k3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v105_write_ln252', kernel.cpp:252) of variable 'v106', kernel.cpp:252 on local variable 'v105' and 'load' operation ('v105_load', kernel.cpp:252) on local variable 'v105'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k3'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Linear_layer_ds0_Pipeline_l_k3' consists of the following:	'fadd' operation ('v106', kernel.cpp:252) [1179]  (7.26 ns)
+	'store' operation ('v105_35_write_ln252', kernel.cpp:252) of variable 'v106', kernel.cpp:252 on local variable 'v105' [1671]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.2 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.31 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.45 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.79 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.86 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln273) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_i_j_0_i7_l_j5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 21, loop 'l_S_i_j_0_i7_l_j5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.87 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_Pipeline_VITIS_LOOP_290_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_290_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_290_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_Pipeline_VITIS_LOOP_294_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_294_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_294_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_Pipeline_l_j6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j6'.
+WARNING: [HLS 200-880] The II Violation in module 'Layer_norm_Pipeline_l_j6' (loop 'l_j6'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' and 'load' operation ('v127_load', kernel.cpp:303) on local variable 'v127'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Layer_norm_Pipeline_l_j6' (loop 'l_j6'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' and 'load' operation ('v127_load', kernel.cpp:303) on local variable 'v127'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Layer_norm_Pipeline_l_j6' (loop 'l_j6'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' and 'load' operation ('v127_load', kernel.cpp:303) on local variable 'v127'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 34, loop 'l_j6'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Layer_norm_Pipeline_l_j6' consists of the following:	'fadd' operation ('v128', kernel.cpp:303) [40]  (7.26 ns)
+	'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' [57]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_Pipeline_l_j7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 33, loop 'l_j7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.899 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.899 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds1_Pipeline_l_bias_i10_l_j8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln359) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i10_l_j8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16, loop 'l_bias_i10_l_j8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds1_Pipeline_l_k4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k4'.
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds1_Pipeline_l_k4' (loop 'l_k4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v169_write_ln372', kernel.cpp:372) of variable 'v170', kernel.cpp:372 on local variable 'v169' and 'load' operation ('v169_load', kernel.cpp:372) on local variable 'v169'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds1_Pipeline_l_k4' (loop 'l_k4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v169_write_ln372', kernel.cpp:372) of variable 'v170', kernel.cpp:372 on local variable 'v169' and 'load' operation ('v169_load', kernel.cpp:372) on local variable 'v169'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds1_Pipeline_l_k4' (loop 'l_k4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v169_write_ln372', kernel.cpp:372) of variable 'v170', kernel.cpp:372 on local variable 'v169' and 'load' operation ('v169_load', kernel.cpp:372) on local variable 'v169'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k4'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Linear_layer_ds1_Pipeline_l_k4' consists of the following:	'fadd' operation ('v170', kernel.cpp:372) [1179]  (7.26 ns)
+	'store' operation ('v169_35_write_ln372', kernel.cpp:372) of variable 'v170', kernel.cpp:372 on local variable 'v169' [1671]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.24 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.42 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.49 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.74 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.82 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_32) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 86, function 'pow_generic<double>'
+WARNING: [HLS 200-871] Estimated clock period (7.42055ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'pow_generic_double_s' consists of the following:	'add' operation ('ret.V') [176]  (0 ns)
+	'sub' operation ('ret.V') [183]  (7.42 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.77 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.85 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.49 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'exp_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_48) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'exp_generic<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 29, function 'exp_generic<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.58 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.62 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_tanh_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'generic_tanh<float>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 73, function 'generic_tanh<float>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln392) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_i_j_0_i12_l_j9'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 216, loop 'l_S_i_j_0_i12_l_j9'
+WARNING: [HLS 200-871] Estimated clock period (7.42055ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9' consists of the following:	'call' operation ('tmp_69', /wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp:7) to 'pow_generic<double>' [504]  (7.42 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.13 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.19 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds2_Pipeline_l_bias_i13_l_j10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln423) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_bias_i13_l_j10'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'l_bias_i13_l_j10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.27 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds2_Pipeline_l_k5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_k5'.
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds2_Pipeline_l_k5' (loop 'l_k5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v199_write_ln436', kernel.cpp:436) of variable 'v200', kernel.cpp:436 on local variable 'v199' and 'load' operation ('v199_load', kernel.cpp:436) on local variable 'v199'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds2_Pipeline_l_k5' (loop 'l_k5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v199_write_ln436', kernel.cpp:436) of variable 'v200', kernel.cpp:436 on local variable 'v199' and 'load' operation ('v199_load', kernel.cpp:436) on local variable 'v199'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Linear_layer_ds2_Pipeline_l_k5' (loop 'l_k5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v199_write_ln436', kernel.cpp:436) of variable 'v200', kernel.cpp:436 on local variable 'v199' and 'load' operation ('v199_load', kernel.cpp:436) on local variable 'v199'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 15, loop 'l_k5'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Linear_layer_ds2_Pipeline_l_k5' consists of the following:	'fadd' operation ('v200', kernel.cpp:436) [1179]  (7.26 ns)
+	'store' operation ('v199_35_write_ln436', kernel.cpp:436) of variable 'v200', kernel.cpp:436 on local variable 'v199' [1671]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.17 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.43 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Linear_layer_ds2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.79 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.84 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln457) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_i_j_0_i15_l_j11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 21, loop 'l_S_i_j_0_i15_l_j11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.88 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.94 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_1_Pipeline_VITIS_LOOP_290_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_290_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_290_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_1_Pipeline_VITIS_LOOP_294_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_294_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_294_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_1_Pipeline_l_j6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j6'.
+WARNING: [HLS 200-880] The II Violation in module 'Layer_norm_1_Pipeline_l_j6' (loop 'l_j6'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' and 'load' operation ('v127_load', kernel.cpp:303) on local variable 'v127'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Layer_norm_1_Pipeline_l_j6' (loop 'l_j6'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' and 'load' operation ('v127_load', kernel.cpp:303) on local variable 'v127'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Layer_norm_1_Pipeline_l_j6' (loop 'l_j6'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' and 'load' operation ('v127_load', kernel.cpp:303) on local variable 'v127'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 34, loop 'l_j6'
+WARNING: [HLS 200-871] Estimated clock period (8.844ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Layer_norm_1_Pipeline_l_j6' consists of the following:	'fadd' operation ('v128', kernel.cpp:303) [40]  (7.26 ns)
+	'store' operation ('v127_write_ln303', kernel.cpp:303) of variable 'v128', kernel.cpp:303 on local variable 'v127' [57]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_1_Pipeline_l_j7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'l_j7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 33, loop 'l_j7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Layer_norm_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Bert_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.961 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.61 seconds; current allocated memory: 1.961 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_qkv_Pipeline_l_bias_i_l_j' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_qkv_Pipeline_l_bias_i_l_j' pipeline 'l_bias_i_l_j' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_qkv_Pipeline_l_bias_i_l_j' is 5493 from HDL expression: ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter13 == 1'b1))
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_4_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_qkv_Pipeline_l_bias_i_l_j'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.99 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.1 seconds; current allocated memory: 2.024 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_qkv_Pipeline_l_k' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_qkv_Pipeline_l_k' pipeline 'l_k' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_qkv_Pipeline_l_k'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.65 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.06 seconds; current allocated memory: 2.024 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_qkv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_qkv' is 6096 from HDL expression: (1'b1 == ap_CS_fsm_state6)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_qkv'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.06 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.21 seconds; current allocated memory: 2.024 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention_Pipeline_l_mh_separate_i_s_l_j_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Self_attention_Pipeline_l_mh_separate_i_s_l_j_s' pipeline 'l_mh_separate_i_s_l_j_s' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1210_32_1_1': 36 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_124_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_10_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention_Pipeline_l_mh_separate_i_s_l_j_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.3 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Attention_layer_Pipeline_VITIS_LOOP_66_1_VITIS_LOOP_67_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Attention_layer_Pipeline_VITIS_LOOP_66_1_VITIS_LOOP_67_2' pipeline 'VITIS_LOOP_66_1_VITIS_LOOP_67_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Attention_layer_Pipeline_VITIS_LOOP_66_1_VITIS_LOOP_67_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.7 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.82 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Attention_layer_Pipeline_l_k1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Attention_layer_Pipeline_l_k1' pipeline 'l_k1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Attention_layer_Pipeline_l_k1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.26 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Attention_layer_Pipeline_l_norm_i2_l_j1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Attention_layer_Pipeline_l_norm_i2_l_j1' pipeline 'l_norm_i2_l_j1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Attention_layer_Pipeline_l_norm_i2_l_j1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Attention_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Attention_layer/grp_fu_2337_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Attention_layer/grp_fu_2341_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Attention_layer/grp_fu_2345_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Attention_layer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.9 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention_Pipeline_VITIS_LOOP_110_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention_Pipeline_VITIS_LOOP_110_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.55 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention_Pipeline_l_j2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Self_attention_Pipeline_l_j2' pipeline 'l_j2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention_Pipeline_l_j2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention_Pipeline_l_update_i4_l_j3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Self_attention_Pipeline_l_update_i4_l_j3' pipeline 'l_update_i4_l_j3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention_Pipeline_l_update_i4_l_j3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Context_layer_Pipeline_VITIS_LOOP_148_1_VITIS_LOOP_149_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Context_layer_Pipeline_VITIS_LOOP_148_1_VITIS_LOOP_149_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Context_layer_Pipeline_l_k2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Context_layer_Pipeline_l_k2' pipeline 'l_k2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Context_layer_Pipeline_l_k2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Context_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Context_layer/grp_fu_2337_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Context_layer/grp_fu_2341_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Context_layer/grp_fu_2345_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Context_layer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention_Pipeline_l_mh_merge_i_m_l_j_m' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Self_attention_Pipeline_l_mh_merge_i_m_l_j_m' pipeline 'l_mh_merge_i_m_l_j_m' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention_Pipeline_l_mh_merge_i_m_l_j_m'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 2.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Self_attention' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Self_attention/grp_fu_5844_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Self_attention/grp_fu_5848_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Self_attention/grp_fu_5852_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Self_attention'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 2.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds0_Pipeline_l_bias_i5_l_j4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_ds0_Pipeline_l_bias_i5_l_j4' pipeline 'l_bias_i5_l_j4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_ds0_Pipeline_l_bias_i5_l_j4' is 5493 from HDL expression: ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter13 == 1'b1))
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_4_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds0_Pipeline_l_bias_i5_l_j4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.94 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.05 seconds; current allocated memory: 2.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds0_Pipeline_l_k3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_ds0_Pipeline_l_k3' pipeline 'l_k3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds0_Pipeline_l_k3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.68 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.8 seconds; current allocated memory: 2.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5844_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5848_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5852_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5876_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5880_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5884_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5888_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5892_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5896_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5900_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5904_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5908_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5912_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5916_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5920_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5924_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5928_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5932_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5936_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5940_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5944_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5948_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5952_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5956_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5960_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5964_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5968_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5972_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5976_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5980_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5984_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5988_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5992_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_5996_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds0/grp_fu_6000_p_opcode' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_ds0' is 6168 from HDL expression: (1'b1 == ap_CS_fsm_state6)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.6 seconds. CPU system time: 0.06 seconds. Elapsed time: 3.52 seconds; current allocated memory: 2.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5' pipeline 'l_S_i_j_0_i7_l_j5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1210_32_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_124_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_10_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.25 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.39 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_Pipeline_VITIS_LOOP_290_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_Pipeline_VITIS_LOOP_290_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.44 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_Pipeline_VITIS_LOOP_294_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_Pipeline_VITIS_LOOP_294_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_Pipeline_l_j6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Layer_norm_Pipeline_l_j6' pipeline 'l_j6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_Pipeline_l_j6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_Pipeline_l_j7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Layer_norm_Pipeline_l_j7' pipeline 'l_j7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_Pipeline_l_j7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.32 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Layer_norm/grp_fu_5844_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds1_Pipeline_l_bias_i10_l_j8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_ds1_Pipeline_l_bias_i10_l_j8' pipeline 'l_bias_i10_l_j8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_ds1_Pipeline_l_bias_i10_l_j8' is 5785 from HDL expression: ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter15 == 1'b1))
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_12ns_13ns_25_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_12ns_5ns_4_16_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds1_Pipeline_l_bias_i10_l_j8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds1_Pipeline_l_k4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_ds1_Pipeline_l_k4' pipeline 'l_k4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds1_Pipeline_l_k4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.68 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.79 seconds; current allocated memory: 2.211 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5844_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5848_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5852_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5876_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5880_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5884_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5888_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5892_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5896_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5900_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5904_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5908_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5912_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5916_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5920_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5924_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5928_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5932_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5936_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5940_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5944_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5948_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5952_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5956_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5960_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5964_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5968_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5972_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5976_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5980_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5984_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5988_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5992_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_5996_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds1/grp_fu_6000_p_opcode' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_ds1' is 6480 from HDL expression: (1'b1 == ap_CS_fsm_state6)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.64 seconds. CPU system time: 0.1 seconds. Elapsed time: 3.48 seconds; current allocated memory: 2.274 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pow_generic_double_s' pipeline 'pow_generic<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'pow_generic_double_s' is 12308 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_19s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_80ns_90_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_71s_71_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40ns_40ns_80_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43ns_36ns_79_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_100_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_54s_6ns_54_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_71ns_4ns_75_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_73ns_6ns_79_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77ns_6ns_83_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77s_54ns_130_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77s_55ns_130_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_82ns_6ns_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_83ns_6ns_89_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_87ns_6ns_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_92ns_6ns_98_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.57 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.91 seconds; current allocated memory: 2.274 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'exp_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'exp_generic_double_s_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_arncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'exp_generic_double_s_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_arraocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'exp_generic_double_s_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'exp_generic_double_s_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_arrapcA' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'exp_generic_double_s' pipeline 'exp_generic<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_19s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_71s_71_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43ns_36ns_79_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_100_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'exp_generic_double_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.35 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.49 seconds; current allocated memory: 2.274 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_tanh_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'generic_tanh_float_s' pipeline 'generic_tanh<float>' pipeline type 'function pipeline'
+WARNING: [RTGEN 206-101] RTL name 'fadd_32ns_32ns_32_5_full_dsp_1' is changed to 'fadd_32ns_32ns_32_5_full_dsp_1_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fmul_32ns_32ns_32_4_max_dsp_1' is changed to 'fmul_32ns_32ns_32_4_max_dsp_1_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fdiv_32ns_32ns_32_16_no_dsp_1' is changed to 'fdiv_32ns_32ns_32_16_no_dsp_1_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fptrunc_64ns_32_2_no_dsp_1' is changed to 'fptrunc_64ns_32_2_no_dsp_1_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fpext_32ns_64_2_no_dsp_1' is changed to 'fpext_32ns_64_2_no_dsp_1_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'dadd_64ns_64ns_64_7_full_dsp_1' is changed to 'dadd_64ns_64ns_64_7_full_dsp_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1_x': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_tanh_float_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.84 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.11 seconds; current allocated memory: 2.274 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9' pipeline 'l_S_i_j_0_i12_l_j9' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9' is 10721 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_12ns_13ns_25_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1212_32_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_124_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_12ns_5ns_12_16_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.95 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.1 seconds; current allocated memory: 2.274 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds2_Pipeline_l_bias_i13_l_j10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_ds2_Pipeline_l_bias_i13_l_j10' pipeline 'l_bias_i13_l_j10' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_ds2_Pipeline_l_bias_i13_l_j10' is 5493 from HDL expression: ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter13 == 1'b1))
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_4_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds2_Pipeline_l_bias_i13_l_j10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.13 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.25 seconds; current allocated memory: 2.336 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds2_Pipeline_l_k5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Linear_layer_ds2_Pipeline_l_k5' pipeline 'l_k5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds2_Pipeline_l_k5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.7 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.85 seconds; current allocated memory: 2.336 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Linear_layer_ds2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5844_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5848_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5852_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5876_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5880_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5884_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5888_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5892_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5896_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5900_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5904_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5908_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5912_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5916_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5920_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5924_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5928_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5932_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5936_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5940_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5944_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5948_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5952_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5956_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5960_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5964_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5968_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5972_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5976_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5980_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5984_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5988_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5992_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_5996_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Linear_layer_ds2/grp_fu_6000_p_opcode' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'Linear_layer_ds2' is 6216 from HDL expression: (1'b1 == ap_CS_fsm_state6)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Linear_layer_ds2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.53 seconds. CPU system time: 0.1 seconds. Elapsed time: 2.9 seconds; current allocated memory: 2.336 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11' pipeline 'l_S_i_j_0_i15_l_j11' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_10ns_11ns_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1210_32_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_124_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_10ns_5ns_10_14_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.28 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.43 seconds; current allocated memory: 2.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_1_Pipeline_VITIS_LOOP_290_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_1_Pipeline_VITIS_LOOP_290_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.46 seconds; current allocated memory: 2.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_1_Pipeline_VITIS_LOOP_294_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_1_Pipeline_VITIS_LOOP_294_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.17 seconds; current allocated memory: 2.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_1_Pipeline_l_j6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Layer_norm_1_Pipeline_l_j6' pipeline 'l_j6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_1_Pipeline_l_j6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 2.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_1_Pipeline_l_j7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Layer_norm_1_Pipeline_l_j7' pipeline 'l_j7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_1_Pipeline_l_j7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 2.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Layer_norm_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Layer_norm_1/grp_fu_5844_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Layer_norm_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 2.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Bert_layer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v209_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v210_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v211' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v212_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v213' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v214_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v215' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v216_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v217' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v218_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v219' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v220_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v221' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v222' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v223' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v224' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v225' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Bert_layer/v226_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Bert_layer' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'Bert_layer' is 6495 from HDL expression: (1'b1 == ap_CS_fsm_state16)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 35 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 36 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Bert_layer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.46 seconds. CPU system time: 0.12 seconds. Elapsed time: 4.3 seconds; current allocated memory: 2.461 GB.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_Self_attention_inp_sumRow_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_Self_attention_Q_h_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_Self_attention_v84_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_Self_attention_v85_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_Self_attention_v86_0_0_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROcud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Bert_layer_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_v227_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_v230_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_v232_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_v234_0_0_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'Bert_layer_v235_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 11.94 seconds. CPU system time: 0.51 seconds. Elapsed time: 15.36 seconds; current allocated memory: 2.461 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 13.21 seconds. CPU system time: 0.12 seconds. Elapsed time: 13.78 seconds; current allocated memory: 2.524 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Bert_layer.
+INFO: [VLOG 209-307] Generating Verilog RTL for Bert_layer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 113.07 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 557.13 seconds. CPU system time: 8.27 seconds. Elapsed time: 583.29 seconds; current allocated memory: 2.078 GB.
+INFO: [HLS 200-112] Total CPU user time: 561.68 seconds. Total CPU system time: 9.5 seconds. Total elapsed time: 591.39 seconds; peak allocated memory: 2.524 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep  3 06:48:05 2023...

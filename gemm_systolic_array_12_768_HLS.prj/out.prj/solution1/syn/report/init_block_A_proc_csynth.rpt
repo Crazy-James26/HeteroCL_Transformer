@@ -1,13 +1,13 @@
 
 
 ================================================================
-== Vivado HLS Report for 'init_block_A_proc'
+== Vitis HLS Report for 'init_block_A_proc'
 ================================================================
-* Date:           Wed Aug 30 10:37:40 2023
+* Date:           Mon Sep  4 10:24:15 2023
 
-* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
-* Solution:       solution1
+* Solution:       solution1 (Vivado IP Flow Target)
 * Product family: zynq
 * Target device:  xc7z020-clg484-1
 
@@ -20,17 +20,17 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  | 10.00 ns | 6.888 ns |   1.25 ns  |
+    |ap_clk  |  10.00 ns|  6.888 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+------+------+---------+
-    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
-    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
-    +---------+---------+-----------+-----------+------+------+---------+
-    |     1537|     1537| 15.370 us | 15.370 us |  1537|  1537|   none  |
-    +---------+---------+-----------+-----------+------+------+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      770|      770|  7.700 us|  7.700 us|  770|  770|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
@@ -41,7 +41,7 @@
         |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +----------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- init_block_A  |     1536|     1536|         2|          -|          -|   768|    no    |
+        |- init_block_A  |      768|      768|         2|          1|          1|   768|       yes|
         +----------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -50,29 +50,29 @@
 == Utilization Estimates
 ================================================================
 * Summary: 
-+-----------------+---------+-------+--------+-------+-----+
-|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
-+-----------------+---------+-------+--------+-------+-----+
-|DSP              |        -|      -|       -|      -|    -|
-|Expression       |        -|      -|       0|     31|    -|
-|FIFO             |        -|      -|       -|      -|    -|
-|Instance         |        -|      -|       -|      -|    -|
-|Memory           |        -|      -|       -|      -|    -|
-|Multiplexer      |        -|      -|       -|    147|    -|
-|Register         |        -|      -|      24|      -|    -|
-+-----------------+---------+-------+--------+-------+-----+
-|Total            |        0|      0|      24|    178|    0|
-+-----------------+---------+-------+--------+-------+-----+
-|Available        |      280|    220|  106400|  53200|    0|
-+-----------------+---------+-------+--------+-------+-----+
-|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
-+-----------------+---------+-------+--------+-------+-----+
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     32|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    153|    -|
+|Register         |        -|    -|      14|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      14|    185|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
     N/A
 
-    * DSP48E: 
+    * DSP: 
     N/A
 
     * Memory: 
@@ -82,51 +82,56 @@
     N/A
 
     * Expression: 
-    +---------------------+----------+-------+---+----+------------+------------+
-    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------+----------+-------+---+----+------------+------------+
-    |add_ln33_fu_489_p2   |     +    |      0|  0|  14|          10|           1|
-    |icmp_ln33_fu_483_p2  |   icmp   |      0|  0|  13|          10|          10|
-    |ap_block_state1      |    or    |      0|  0|   2|           1|           1|
-    |ap_block_state3      |    or    |      0|  0|   2|           1|           1|
-    +---------------------+----------+-------+---+----+------------+------------+
-    |Total                |          |      0|  0|  31|          22|          13|
-    +---------------------+----------+-------+---+----+------------+------------+
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln33_fu_352_p2                |         +|   0|  0|  13|          10|           1|
+    |ap_condition_294                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln33_fu_346_p2               |      icmp|   0|  0|  11|          10|          10|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  32|          24|          16|
+    +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +---------------------------+----+-----------+-----+-----------+
-    |            Name           | LUT| Input Size| Bits| Total Bits|
-    +---------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                  |  21|          4|    1|          4|
-    |ap_done                    |   9|          2|    1|          2|
-    |block_A_loader_0_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_10_V_blk_n  |   9|          2|    1|          2|
-    |block_A_loader_11_V_blk_n  |   9|          2|    1|          2|
-    |block_A_loader_1_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_2_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_3_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_4_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_5_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_6_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_7_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_8_V_blk_n   |   9|          2|    1|          2|
-    |block_A_loader_9_V_blk_n   |   9|          2|    1|          2|
-    |k_0_i_0_reg_472            |   9|          2|   10|         20|
-    +---------------------------+----+-----------+-----+-----------+
-    |Total                      | 147|         32|   24|         50|
-    +---------------------------+----+-----------+-----+-----------+
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_k_6     |   9|          2|   10|         20|
+    |block_A_loader_0_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_10_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_11_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_1_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_2_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_3_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_4_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_5_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_6_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_7_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_8_blk_n   |   9|          2|    1|          2|
+    |block_A_loader_9_blk_n   |   9|          2|    1|          2|
+    |k_fu_82                  |   9|          2|   10|         20|
+    |real_start               |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 153|         34|   35|         70|
+    +-------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +------------------+----+----+-----+-----------+
-    |       Name       | FF | LUT| Bits| Const Bits|
-    +------------------+----+----+-----+-----------+
-    |add_ln33_reg_514  |  10|   0|   10|          0|
-    |ap_CS_fsm         |   3|   0|    3|          0|
-    |ap_done_reg       |   1|   0|    1|          0|
-    |k_0_i_0_reg_472   |  10|   0|   10|          0|
-    +------------------+----+----+-----+-----------+
-    |Total             |  24|   0|   24|          0|
-    +------------------+----+----+-----+-----------+
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |k_fu_82                  |  10|   0|   10|          0|
+    |start_once_reg           |   1|   0|    1|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  14|   0|   14|          0|
+    +-------------------------+----+----+-----+-----------+
 
 
 
@@ -134,87 +139,114 @@
 == Interface
 ================================================================
 * Summary: 
-+----------------------------+-----+-----+------------+---------------------+--------------+
-|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
-+----------------------------+-----+-----+------------+---------------------+--------------+
-|ap_clk                      |  in |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|ap_rst                      |  in |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|ap_start                    |  in |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|ap_done                     | out |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|ap_continue                 |  in |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|ap_idle                     | out |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|ap_ready                    | out |    1| ap_ctrl_hs |  init_block_A_proc  | return value |
-|A_0_address0                | out |   10|  ap_memory |         A_0         |     array    |
-|A_0_ce0                     | out |    1|  ap_memory |         A_0         |     array    |
-|A_0_q0                      |  in |   32|  ap_memory |         A_0         |     array    |
-|block_A_loader_0_V_din      | out |   32|   ap_fifo  |  block_A_loader_0_V |    pointer   |
-|block_A_loader_0_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_0_V |    pointer   |
-|block_A_loader_0_V_write    | out |    1|   ap_fifo  |  block_A_loader_0_V |    pointer   |
-|A_1_address0                | out |   10|  ap_memory |         A_1         |     array    |
-|A_1_ce0                     | out |    1|  ap_memory |         A_1         |     array    |
-|A_1_q0                      |  in |   32|  ap_memory |         A_1         |     array    |
-|block_A_loader_1_V_din      | out |   32|   ap_fifo  |  block_A_loader_1_V |    pointer   |
-|block_A_loader_1_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_1_V |    pointer   |
-|block_A_loader_1_V_write    | out |    1|   ap_fifo  |  block_A_loader_1_V |    pointer   |
-|A_2_address0                | out |   10|  ap_memory |         A_2         |     array    |
-|A_2_ce0                     | out |    1|  ap_memory |         A_2         |     array    |
-|A_2_q0                      |  in |   32|  ap_memory |         A_2         |     array    |
-|block_A_loader_2_V_din      | out |   32|   ap_fifo  |  block_A_loader_2_V |    pointer   |
-|block_A_loader_2_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_2_V |    pointer   |
-|block_A_loader_2_V_write    | out |    1|   ap_fifo  |  block_A_loader_2_V |    pointer   |
-|A_3_address0                | out |   10|  ap_memory |         A_3         |     array    |
-|A_3_ce0                     | out |    1|  ap_memory |         A_3         |     array    |
-|A_3_q0                      |  in |   32|  ap_memory |         A_3         |     array    |
-|block_A_loader_3_V_din      | out |   32|   ap_fifo  |  block_A_loader_3_V |    pointer   |
-|block_A_loader_3_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_3_V |    pointer   |
-|block_A_loader_3_V_write    | out |    1|   ap_fifo  |  block_A_loader_3_V |    pointer   |
-|A_4_address0                | out |   10|  ap_memory |         A_4         |     array    |
-|A_4_ce0                     | out |    1|  ap_memory |         A_4         |     array    |
-|A_4_q0                      |  in |   32|  ap_memory |         A_4         |     array    |
-|block_A_loader_4_V_din      | out |   32|   ap_fifo  |  block_A_loader_4_V |    pointer   |
-|block_A_loader_4_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_4_V |    pointer   |
-|block_A_loader_4_V_write    | out |    1|   ap_fifo  |  block_A_loader_4_V |    pointer   |
-|A_5_address0                | out |   10|  ap_memory |         A_5         |     array    |
-|A_5_ce0                     | out |    1|  ap_memory |         A_5         |     array    |
-|A_5_q0                      |  in |   32|  ap_memory |         A_5         |     array    |
-|block_A_loader_5_V_din      | out |   32|   ap_fifo  |  block_A_loader_5_V |    pointer   |
-|block_A_loader_5_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_5_V |    pointer   |
-|block_A_loader_5_V_write    | out |    1|   ap_fifo  |  block_A_loader_5_V |    pointer   |
-|A_6_address0                | out |   10|  ap_memory |         A_6         |     array    |
-|A_6_ce0                     | out |    1|  ap_memory |         A_6         |     array    |
-|A_6_q0                      |  in |   32|  ap_memory |         A_6         |     array    |
-|block_A_loader_6_V_din      | out |   32|   ap_fifo  |  block_A_loader_6_V |    pointer   |
-|block_A_loader_6_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_6_V |    pointer   |
-|block_A_loader_6_V_write    | out |    1|   ap_fifo  |  block_A_loader_6_V |    pointer   |
-|A_7_address0                | out |   10|  ap_memory |         A_7         |     array    |
-|A_7_ce0                     | out |    1|  ap_memory |         A_7         |     array    |
-|A_7_q0                      |  in |   32|  ap_memory |         A_7         |     array    |
-|block_A_loader_7_V_din      | out |   32|   ap_fifo  |  block_A_loader_7_V |    pointer   |
-|block_A_loader_7_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_7_V |    pointer   |
-|block_A_loader_7_V_write    | out |    1|   ap_fifo  |  block_A_loader_7_V |    pointer   |
-|A_8_address0                | out |   10|  ap_memory |         A_8         |     array    |
-|A_8_ce0                     | out |    1|  ap_memory |         A_8         |     array    |
-|A_8_q0                      |  in |   32|  ap_memory |         A_8         |     array    |
-|block_A_loader_8_V_din      | out |   32|   ap_fifo  |  block_A_loader_8_V |    pointer   |
-|block_A_loader_8_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_8_V |    pointer   |
-|block_A_loader_8_V_write    | out |    1|   ap_fifo  |  block_A_loader_8_V |    pointer   |
-|A_9_address0                | out |   10|  ap_memory |         A_9         |     array    |
-|A_9_ce0                     | out |    1|  ap_memory |         A_9         |     array    |
-|A_9_q0                      |  in |   32|  ap_memory |         A_9         |     array    |
-|block_A_loader_9_V_din      | out |   32|   ap_fifo  |  block_A_loader_9_V |    pointer   |
-|block_A_loader_9_V_full_n   |  in |    1|   ap_fifo  |  block_A_loader_9_V |    pointer   |
-|block_A_loader_9_V_write    | out |    1|   ap_fifo  |  block_A_loader_9_V |    pointer   |
-|A_10_address0               | out |   10|  ap_memory |         A_10        |     array    |
-|A_10_ce0                    | out |    1|  ap_memory |         A_10        |     array    |
-|A_10_q0                     |  in |   32|  ap_memory |         A_10        |     array    |
-|block_A_loader_10_V_din     | out |   32|   ap_fifo  | block_A_loader_10_V |    pointer   |
-|block_A_loader_10_V_full_n  |  in |    1|   ap_fifo  | block_A_loader_10_V |    pointer   |
-|block_A_loader_10_V_write   | out |    1|   ap_fifo  | block_A_loader_10_V |    pointer   |
-|A_11_address0               | out |   10|  ap_memory |         A_11        |     array    |
-|A_11_ce0                    | out |    1|  ap_memory |         A_11        |     array    |
-|A_11_q0                     |  in |   32|  ap_memory |         A_11        |     array    |
-|block_A_loader_11_V_din     | out |   32|   ap_fifo  | block_A_loader_11_V |    pointer   |
-|block_A_loader_11_V_full_n  |  in |    1|   ap_fifo  | block_A_loader_11_V |    pointer   |
-|block_A_loader_11_V_write   | out |    1|   ap_fifo  | block_A_loader_11_V |    pointer   |
-+----------------------------+-----+-----+------------+---------------------+--------------+
++----------------------------------+-----+-----+------------+-------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++----------------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|start_full_n                      |   in|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|start_out                         |  out|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|start_write                       |  out|    1|  ap_ctrl_hs|  init_block_A_proc|  return value|
+|block_A_loader_0_din              |  out|   32|     ap_fifo|   block_A_loader_0|       pointer|
+|block_A_loader_0_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_0|       pointer|
+|block_A_loader_0_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_0|       pointer|
+|block_A_loader_0_full_n           |   in|    1|     ap_fifo|   block_A_loader_0|       pointer|
+|block_A_loader_0_write            |  out|    1|     ap_fifo|   block_A_loader_0|       pointer|
+|block_A_loader_1_din              |  out|   32|     ap_fifo|   block_A_loader_1|       pointer|
+|block_A_loader_1_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_1|       pointer|
+|block_A_loader_1_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_1|       pointer|
+|block_A_loader_1_full_n           |   in|    1|     ap_fifo|   block_A_loader_1|       pointer|
+|block_A_loader_1_write            |  out|    1|     ap_fifo|   block_A_loader_1|       pointer|
+|block_A_loader_2_din              |  out|   32|     ap_fifo|   block_A_loader_2|       pointer|
+|block_A_loader_2_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_2|       pointer|
+|block_A_loader_2_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_2|       pointer|
+|block_A_loader_2_full_n           |   in|    1|     ap_fifo|   block_A_loader_2|       pointer|
+|block_A_loader_2_write            |  out|    1|     ap_fifo|   block_A_loader_2|       pointer|
+|block_A_loader_3_din              |  out|   32|     ap_fifo|   block_A_loader_3|       pointer|
+|block_A_loader_3_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_3|       pointer|
+|block_A_loader_3_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_3|       pointer|
+|block_A_loader_3_full_n           |   in|    1|     ap_fifo|   block_A_loader_3|       pointer|
+|block_A_loader_3_write            |  out|    1|     ap_fifo|   block_A_loader_3|       pointer|
+|block_A_loader_4_din              |  out|   32|     ap_fifo|   block_A_loader_4|       pointer|
+|block_A_loader_4_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_4|       pointer|
+|block_A_loader_4_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_4|       pointer|
+|block_A_loader_4_full_n           |   in|    1|     ap_fifo|   block_A_loader_4|       pointer|
+|block_A_loader_4_write            |  out|    1|     ap_fifo|   block_A_loader_4|       pointer|
+|block_A_loader_5_din              |  out|   32|     ap_fifo|   block_A_loader_5|       pointer|
+|block_A_loader_5_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_5|       pointer|
+|block_A_loader_5_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_5|       pointer|
+|block_A_loader_5_full_n           |   in|    1|     ap_fifo|   block_A_loader_5|       pointer|
+|block_A_loader_5_write            |  out|    1|     ap_fifo|   block_A_loader_5|       pointer|
+|block_A_loader_6_din              |  out|   32|     ap_fifo|   block_A_loader_6|       pointer|
+|block_A_loader_6_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_6|       pointer|
+|block_A_loader_6_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_6|       pointer|
+|block_A_loader_6_full_n           |   in|    1|     ap_fifo|   block_A_loader_6|       pointer|
+|block_A_loader_6_write            |  out|    1|     ap_fifo|   block_A_loader_6|       pointer|
+|block_A_loader_7_din              |  out|   32|     ap_fifo|   block_A_loader_7|       pointer|
+|block_A_loader_7_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_7|       pointer|
+|block_A_loader_7_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_7|       pointer|
+|block_A_loader_7_full_n           |   in|    1|     ap_fifo|   block_A_loader_7|       pointer|
+|block_A_loader_7_write            |  out|    1|     ap_fifo|   block_A_loader_7|       pointer|
+|block_A_loader_8_din              |  out|   32|     ap_fifo|   block_A_loader_8|       pointer|
+|block_A_loader_8_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_8|       pointer|
+|block_A_loader_8_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_8|       pointer|
+|block_A_loader_8_full_n           |   in|    1|     ap_fifo|   block_A_loader_8|       pointer|
+|block_A_loader_8_write            |  out|    1|     ap_fifo|   block_A_loader_8|       pointer|
+|block_A_loader_9_din              |  out|   32|     ap_fifo|   block_A_loader_9|       pointer|
+|block_A_loader_9_num_data_valid   |   in|    2|     ap_fifo|   block_A_loader_9|       pointer|
+|block_A_loader_9_fifo_cap         |   in|    2|     ap_fifo|   block_A_loader_9|       pointer|
+|block_A_loader_9_full_n           |   in|    1|     ap_fifo|   block_A_loader_9|       pointer|
+|block_A_loader_9_write            |  out|    1|     ap_fifo|   block_A_loader_9|       pointer|
+|block_A_loader_10_din             |  out|   32|     ap_fifo|  block_A_loader_10|       pointer|
+|block_A_loader_10_num_data_valid  |   in|    2|     ap_fifo|  block_A_loader_10|       pointer|
+|block_A_loader_10_fifo_cap        |   in|    2|     ap_fifo|  block_A_loader_10|       pointer|
+|block_A_loader_10_full_n          |   in|    1|     ap_fifo|  block_A_loader_10|       pointer|
+|block_A_loader_10_write           |  out|    1|     ap_fifo|  block_A_loader_10|       pointer|
+|block_A_loader_11_din             |  out|   32|     ap_fifo|  block_A_loader_11|       pointer|
+|block_A_loader_11_num_data_valid  |   in|    2|     ap_fifo|  block_A_loader_11|       pointer|
+|block_A_loader_11_fifo_cap        |   in|    2|     ap_fifo|  block_A_loader_11|       pointer|
+|block_A_loader_11_full_n          |   in|    1|     ap_fifo|  block_A_loader_11|       pointer|
+|block_A_loader_11_write           |  out|    1|     ap_fifo|  block_A_loader_11|       pointer|
+|A_0_address0                      |  out|   10|   ap_memory|                A_0|         array|
+|A_0_ce0                           |  out|    1|   ap_memory|                A_0|         array|
+|A_0_q0                            |   in|   32|   ap_memory|                A_0|         array|
+|A_1_address0                      |  out|   10|   ap_memory|                A_1|         array|
+|A_1_ce0                           |  out|    1|   ap_memory|                A_1|         array|
+|A_1_q0                            |   in|   32|   ap_memory|                A_1|         array|
+|A_2_address0                      |  out|   10|   ap_memory|                A_2|         array|
+|A_2_ce0                           |  out|    1|   ap_memory|                A_2|         array|
+|A_2_q0                            |   in|   32|   ap_memory|                A_2|         array|
+|A_3_address0                      |  out|   10|   ap_memory|                A_3|         array|
+|A_3_ce0                           |  out|    1|   ap_memory|                A_3|         array|
+|A_3_q0                            |   in|   32|   ap_memory|                A_3|         array|
+|A_4_address0                      |  out|   10|   ap_memory|                A_4|         array|
+|A_4_ce0                           |  out|    1|   ap_memory|                A_4|         array|
+|A_4_q0                            |   in|   32|   ap_memory|                A_4|         array|
+|A_5_address0                      |  out|   10|   ap_memory|                A_5|         array|
+|A_5_ce0                           |  out|    1|   ap_memory|                A_5|         array|
+|A_5_q0                            |   in|   32|   ap_memory|                A_5|         array|
+|A_6_address0                      |  out|   10|   ap_memory|                A_6|         array|
+|A_6_ce0                           |  out|    1|   ap_memory|                A_6|         array|
+|A_6_q0                            |   in|   32|   ap_memory|                A_6|         array|
+|A_7_address0                      |  out|   10|   ap_memory|                A_7|         array|
+|A_7_ce0                           |  out|    1|   ap_memory|                A_7|         array|
+|A_7_q0                            |   in|   32|   ap_memory|                A_7|         array|
+|A_8_address0                      |  out|   10|   ap_memory|                A_8|         array|
+|A_8_ce0                           |  out|    1|   ap_memory|                A_8|         array|
+|A_8_q0                            |   in|   32|   ap_memory|                A_8|         array|
+|A_9_address0                      |  out|   10|   ap_memory|                A_9|         array|
+|A_9_ce0                           |  out|    1|   ap_memory|                A_9|         array|
+|A_9_q0                            |   in|   32|   ap_memory|                A_9|         array|
+|A_10_address0                     |  out|   10|   ap_memory|               A_10|         array|
+|A_10_ce0                          |  out|    1|   ap_memory|               A_10|         array|
+|A_10_q0                           |   in|   32|   ap_memory|               A_10|         array|
+|A_11_address0                     |  out|   10|   ap_memory|               A_11|         array|
+|A_11_ce0                          |  out|    1|   ap_memory|               A_11|         array|
+|A_11_q0                           |   in|   32|   ap_memory|               A_11|         array|
++----------------------------------+-----+-----+------------+-------------------+--------------+
 

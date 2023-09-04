@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vitis HLS Report for 'Block_entry_proc_proc255'
+================================================================
+* Date:           Mon Sep  4 10:23:06 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7|  70.000 ns|  70.000 ns|    7|    7|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.88>
+ST_1 : Operation 9 [1/1] (3.63ns)   --->   "%jj_read = read i6 @_ssdm_op_Read.ap_fifo.i6P0A, i6 %jj"   --->   Operation 9 'read' 'jj_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 3> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln20 = zext i6 %jj_read" [gemm_systolic_array.cpp:20]   --->   Operation 10 'zext' 'zext_ln20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%C_9_0_addr = getelementptr i32 %C_9_0, i64 0, i64 %zext_ln20" [gemm_systolic_array.cpp:55]   --->   Operation 11 'getelementptr' 'C_9_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (3.25ns)   --->   "%C_9_0_load = load i6 %C_9_0_addr" [gemm_systolic_array.cpp:55]   --->   Operation 12 'load' 'C_9_0_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 2 <SV = 1> <Delay = 3.63>
+ST_2 : Operation 13 [1/2] (3.25ns)   --->   "%C_9_0_load = load i6 %C_9_0_addr" [gemm_systolic_array.cpp:55]   --->   Operation 13 'load' 'C_9_0_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 14 [1/1] (3.63ns)   --->   "%block_C_108151_read = read i32 @_ssdm_op_Read.ap_auto.floatP0A, i32 %block_C_108151" [gemm_systolic_array.cpp:55]   --->   Operation 14 'read' 'block_C_108151_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+
+State 3 <SV = 2> <Delay = 7.25>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%bitcast_ln55 = bitcast i32 %C_9_0_load" [gemm_systolic_array.cpp:55]   --->   Operation 15 'bitcast' 'bitcast_ln55' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [5/5] (7.25ns)   --->   "%add96_9_i_i = fadd i32 %bitcast_ln55, i32 %block_C_108151_read" [gemm_systolic_array.cpp:55]   --->   Operation 16 'fadd' 'add96_9_i_i' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.25>
+ST_4 : Operation 17 [4/5] (7.25ns)   --->   "%add96_9_i_i = fadd i32 %bitcast_ln55, i32 %block_C_108151_read" [gemm_systolic_array.cpp:55]   --->   Operation 17 'fadd' 'add96_9_i_i' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.25>
+ST_5 : Operation 18 [3/5] (7.25ns)   --->   "%add96_9_i_i = fadd i32 %bitcast_ln55, i32 %block_C_108151_read" [gemm_systolic_array.cpp:55]   --->   Operation 18 'fadd' 'add96_9_i_i' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 19 [2/5] (7.25ns)   --->   "%add96_9_i_i = fadd i32 %bitcast_ln55, i32 %block_C_108151_read" [gemm_systolic_array.cpp:55]   --->   Operation 19 'fadd' 'add96_9_i_i' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 20 [1/5] (7.25ns)   --->   "%add96_9_i_i = fadd i32 %bitcast_ln55, i32 %block_C_108151_read" [gemm_systolic_array.cpp:55]   --->   Operation 20 'fadd' 'add96_9_i_i' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %jj, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %C_9_0, void @empty, i32 0, i32 0, void @empty_8, i32 4294967295, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%bitcast_ln55_36 = bitcast i32 %add96_9_i_i" [gemm_systolic_array.cpp:55]   --->   Operation 23 'bitcast' 'bitcast_ln55_36' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (3.25ns)   --->   "%store_ln55 = store i32 %bitcast_ln55_36, i6 %C_9_0_addr" [gemm_systolic_array.cpp:55]   --->   Operation 24 'store' 'store_ln55' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%ret_ln55 = ret" [gemm_systolic_array.cpp:55]   --->   Operation 25 'ret' 'ret_ln55' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.89ns
+The critical path consists of the following:
+	fifo read operation ('jj_read') on port 'jj' [5]  (3.63 ns)
+	'getelementptr' operation ('C_9_0_addr', gemm_systolic_array.cpp:55) [8]  (0 ns)
+	'load' operation ('C_9_0_load', gemm_systolic_array.cpp:55) on array 'C_9_0' [9]  (3.25 ns)
+
+ <State 2>: 3.63ns
+The critical path consists of the following:
+	wire read operation ('block_C_108151_read', gemm_systolic_array.cpp:55) on port 'block_C_108151' (gemm_systolic_array.cpp:55) [11]  (3.63 ns)
+
+ <State 3>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('add96_9_i_i', gemm_systolic_array.cpp:55) [12]  (7.26 ns)
+
+ <State 4>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('add96_9_i_i', gemm_systolic_array.cpp:55) [12]  (7.26 ns)
+
+ <State 5>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('add96_9_i_i', gemm_systolic_array.cpp:55) [12]  (7.26 ns)
+
+ <State 6>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('add96_9_i_i', gemm_systolic_array.cpp:55) [12]  (7.26 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('add96_9_i_i', gemm_systolic_array.cpp:55) [12]  (7.26 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln55', gemm_systolic_array.cpp:55) of variable 'bitcast_ln55_36', gemm_systolic_array.cpp:55 on array 'C_9_0' [14]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -175,7 +175,7 @@ def top():
     return s
 
 if __name__ == '__main__':
-    target = None
+    target = "FPGA"
     s = top()
 
     if(target=="vhls"):
@@ -183,6 +183,10 @@ if __name__ == '__main__':
         print(f)
         mod = s.build(target="vhls", mode="csyn", project="bert_layer_baseline.prj")
         mod()
+
+    elif(target=="FPGA"):
+        mod = s.build(target="vitis_hls", mode="debug", project="bert_layer_baseline_FPGA.prj")
+        print(mod.hls_code)
 
     else:
         f = s.build(target=target) 

@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vitis HLS Report for 'PE_57'
+================================================================
+* Date:           Mon Sep  4 10:25:35 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.844 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3083|     3083|  30.830 us|  30.830 us|  3083|  3083|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------+------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                  |                        |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |             Instance             |         Module         |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------------+------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_PE_57_Pipeline_PE_LOOP_fu_59  |PE_57_Pipeline_PE_LOOP  |     3080|     3080|  30.800 us|  30.800 us|  3080|  3080|       no|
+        +----------------------------------+------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    5|     497|    883|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     88|    -|
+|Register         |        -|    -|      70|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    5|     567|    973|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    2|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+------------------------+---------+----+-----+-----+-----+
+    |             Instance             |         Module         | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------+------------------------+---------+----+-----+-----+-----+
+    |grp_PE_57_Pipeline_PE_LOOP_fu_59  |PE_57_Pipeline_PE_LOOP  |        0|   5|  497|  883|    0|
+    +----------------------------------+------------------------+---------+----+-----+-----+-----+
+    |Total                             |                        |        0|   5|  497|  883|    0|
+    +----------------------------------+------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |A_fifo_4_10_write  |   9|          2|    1|          2|
+    |A_fifo_4_9_read    |   9|          2|    1|          2|
+    |B_fifo_9_4_read    |   9|          2|    1|          2|
+    |B_fifo_9_5_write   |   9|          2|    1|          2|
+    |C_out_in_blk_n     |   9|          2|    1|          2|
+    |C_out_out          |   9|          2|   32|         64|
+    |ap_NS_fsm          |  25|          5|    1|          5|
+    |ap_done            |   9|          2|    1|          2|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              |  88|         19|   39|         81|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+----+----+-----+-----------+
+    |                      Name                     | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------+----+----+-----+-----------+
+    |C_out_in_read_reg_83                           |  32|   0|   32|          0|
+    |C_out_out_preg                                 |  32|   0|   32|          0|
+    |ap_CS_fsm                                      |   4|   0|    4|          0|
+    |ap_done_reg                                    |   1|   0|    1|          0|
+    |grp_PE_57_Pipeline_PE_LOOP_fu_59_ap_start_reg  |   1|   0|    1|          0|
+    +-----------------------------------------------+----+----+-----+-----------+
+    |Total                                          |  70|   0|   70|          0|
+    +-----------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|         PE.57|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|         PE.57|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|         PE.57|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|         PE.57|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|         PE.57|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|         PE.57|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|         PE.57|  return value|
+|A_fifo_4_9_dout             |   in|   32|     ap_fifo|    A_fifo_4_9|       pointer|
+|A_fifo_4_9_num_data_valid   |   in|    2|     ap_fifo|    A_fifo_4_9|       pointer|
+|A_fifo_4_9_fifo_cap         |   in|    2|     ap_fifo|    A_fifo_4_9|       pointer|
+|A_fifo_4_9_empty_n          |   in|    1|     ap_fifo|    A_fifo_4_9|       pointer|
+|A_fifo_4_9_read             |  out|    1|     ap_fifo|    A_fifo_4_9|       pointer|
+|A_fifo_4_10_din             |  out|   32|     ap_fifo|   A_fifo_4_10|       pointer|
+|A_fifo_4_10_num_data_valid  |   in|    2|     ap_fifo|   A_fifo_4_10|       pointer|
+|A_fifo_4_10_fifo_cap        |   in|    2|     ap_fifo|   A_fifo_4_10|       pointer|
+|A_fifo_4_10_full_n          |   in|    1|     ap_fifo|   A_fifo_4_10|       pointer|
+|A_fifo_4_10_write           |  out|    1|     ap_fifo|   A_fifo_4_10|       pointer|
+|B_fifo_9_4_dout             |   in|   32|     ap_fifo|    B_fifo_9_4|       pointer|
+|B_fifo_9_4_num_data_valid   |   in|    2|     ap_fifo|    B_fifo_9_4|       pointer|
+|B_fifo_9_4_fifo_cap         |   in|    2|     ap_fifo|    B_fifo_9_4|       pointer|
+|B_fifo_9_4_empty_n          |   in|    1|     ap_fifo|    B_fifo_9_4|       pointer|
+|B_fifo_9_4_read             |  out|    1|     ap_fifo|    B_fifo_9_4|       pointer|
+|B_fifo_9_5_din              |  out|   32|     ap_fifo|    B_fifo_9_5|       pointer|
+|B_fifo_9_5_num_data_valid   |   in|    2|     ap_fifo|    B_fifo_9_5|       pointer|
+|B_fifo_9_5_fifo_cap         |   in|    2|     ap_fifo|    B_fifo_9_5|       pointer|
+|B_fifo_9_5_full_n           |   in|    1|     ap_fifo|    B_fifo_9_5|       pointer|
+|B_fifo_9_5_write            |  out|    1|     ap_fifo|    B_fifo_9_5|       pointer|
+|C_out_in_dout               |   in|   32|     ap_fifo|      C_out_in|       pointer|
+|C_out_in_num_data_valid     |   in|    5|     ap_fifo|      C_out_in|       pointer|
+|C_out_in_fifo_cap           |   in|    5|     ap_fifo|      C_out_in|       pointer|
+|C_out_in_empty_n            |   in|    1|     ap_fifo|      C_out_in|       pointer|
+|C_out_in_read               |  out|    1|     ap_fifo|      C_out_in|       pointer|
+|C_out_out                   |  out|   32|     ap_none|     C_out_out|       pointer|
++----------------------------+-----+-----+------------+--------------+--------------+
+

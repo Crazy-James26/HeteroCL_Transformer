@@ -1,0 +1,1094 @@
+<stg><name>Linear_layer_qkv_Pipeline_l_S_k_0_k</name>
+
+
+<trans_list>
+
+<trans id="73" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="74" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="75" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="78" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="2">
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="24" op_0_bw="32">
+<![CDATA[
+newFuncRoot:0 %v15_V = alloca i32 1
+
+]]></Node>
+<StgValue><ssdm name="v15_V"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="10" op_0_bw="32">
+<![CDATA[
+newFuncRoot:1 %k = alloca i32 1
+
+]]></Node>
+<StgValue><ssdm name="k"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="20" op_0_bw="20" op_1_bw="20">
+<![CDATA[
+newFuncRoot:2 %sub_ln32_read = read i20 @_ssdm_op_Read.ap_auto.i20, i20 %sub_ln32
+
+]]></Node>
+<StgValue><ssdm name="sub_ln32_read"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="14" op_0_bw="14" op_1_bw="14">
+<![CDATA[
+newFuncRoot:3 %sub_ln31_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %sub_ln31
+
+]]></Node>
+<StgValue><ssdm name="sub_ln31_read"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="14" op_0_bw="14" op_1_bw="14">
+<![CDATA[
+newFuncRoot:4 %tmp = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %empty
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="24" op_0_bw="24" op_1_bw="24">
+<![CDATA[
+newFuncRoot:5 %v3_load_read = read i24 @_ssdm_op_Read.ap_auto.i24, i24 %v3_load
+
+]]></Node>
+<StgValue><ssdm name="v3_load_read"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="64" op_0_bw="14">
+<![CDATA[
+newFuncRoot:6 %p_cast = zext i14 %tmp
+
+]]></Node>
+<StgValue><ssdm name="p_cast"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+newFuncRoot:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %v242, void @empty_14, i32 0, i32 0, void @empty_15, i32 4294967295, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+newFuncRoot:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %v243, void @empty_14, i32 0, i32 0, void @empty_15, i32 4294967295, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+newFuncRoot:9 %store_ln0 = store i10 0, i10 %k
+
+]]></Node>
+<StgValue><ssdm name="store_ln0"/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="0" op_0_bw="24" op_1_bw="24">
+<![CDATA[
+newFuncRoot:10 %store_ln0 = store i24 %v3_load_read, i24 %v15_V
+
+]]></Node>
+<StgValue><ssdm name="store_ln0"/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="0" op_0_bw="0">
+<![CDATA[
+newFuncRoot:11 %br_ln0 = br void %for.body21
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="10" op_0_bw="10" op_1_bw="0">
+<![CDATA[
+for.body21:0 %k_1 = load i10 %k
+
+]]></Node>
+<StgValue><ssdm name="k_1"/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="1" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+for.body21:3 %icmp_ln30 = icmp_eq  i10 %k_1, i10 768
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln30"/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="10" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+for.body21:5 %add_ln30 = add i10 %k_1, i10 1
+
+]]></Node>
+<StgValue><ssdm name="add_ln30"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+for.body21:6 %br_ln30 = br i1 %icmp_ln30, void %for.body21.split, void %for.inc42.exitStub
+
+]]></Node>
+<StgValue><ssdm name="br_ln30"/></StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="20" op_0_bw="10">
+<![CDATA[
+for.body21.split:1 %zext_ln31 = zext i10 %k_1
+
+]]></Node>
+<StgValue><ssdm name="zext_ln31"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="14" op_0_bw="10">
+<![CDATA[
+for.body21.split:2 %zext_ln31_1 = zext i10 %k_1
+
+]]></Node>
+<StgValue><ssdm name="zext_ln31_1"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="14" op_0_bw="14" op_1_bw="14">
+<![CDATA[
+for.body21.split:3 %add_ln31 = add i14 %sub_ln31_read, i14 %zext_ln31_1
+
+]]></Node>
+<StgValue><ssdm name="add_ln31"/></StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="64" op_0_bw="14">
+<![CDATA[
+for.body21.split:4 %zext_ln31_2 = zext i14 %add_ln31
+
+]]></Node>
+<StgValue><ssdm name="zext_ln31_2"/></StgValue>
+</operation>
+
+<operation id="28" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="14" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+for.body21.split:5 %v242_addr = getelementptr i24 %v242, i64 0, i64 %zext_ln31_2
+
+]]></Node>
+<StgValue><ssdm name="v242_addr"/></StgValue>
+</operation>
+
+<operation id="29" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="20" op_0_bw="20" op_1_bw="20">
+<![CDATA[
+for.body21.split:6 %add_ln32 = add i20 %sub_ln32_read, i20 %zext_ln31
+
+]]></Node>
+<StgValue><ssdm name="add_ln32"/></StgValue>
+</operation>
+
+<operation id="30" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="36" bw="64" op_0_bw="20">
+<![CDATA[
+for.body21.split:7 %zext_ln32 = zext i20 %add_ln32
+
+]]></Node>
+<StgValue><ssdm name="zext_ln32"/></StgValue>
+</operation>
+
+<operation id="31" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="20" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+for.body21.split:8 %v243_addr = getelementptr i24 %v243, i64 0, i64 %zext_ln32
+
+]]></Node>
+<StgValue><ssdm name="v243_addr"/></StgValue>
+</operation>
+
+<operation id="32" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="24" op_0_bw="14">
+<![CDATA[
+for.body21.split:10 %v10_V = load i14 %v242_addr
+
+]]></Node>
+<StgValue><ssdm name="v10_V"/></StgValue>
+</operation>
+
+<operation id="33" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="24" op_0_bw="20">
+<![CDATA[
+for.body21.split:11 %v11_V = load i20 %v243_addr
+
+]]></Node>
+<StgValue><ssdm name="v11_V"/></StgValue>
+</operation>
+
+<operation id="34" st_id="1" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="1" op_0_bw="10" op_1_bw="10">
+<![CDATA[
+for.body21.split:19 %ifzero = icmp_eq  i10 %add_ln30, i10 768
+
+]]></Node>
+<StgValue><ssdm name="ifzero"/></StgValue>
+</operation>
+
+<operation id="35" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+for.body21.split:20 %br_ln30 = br i1 %ifzero, void %ifFalse, void %ifTrue
+
+]]></Node>
+<StgValue><ssdm name="br_ln30"/></StgValue>
+</operation>
+
+<operation id="36" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="0" op_0_bw="10" op_1_bw="10" op_2_bw="0" op_3_bw="0">
+<![CDATA[
+ifFalse:0 %store_ln30 = store i10 %add_ln30, i10 %k
+
+]]></Node>
+<StgValue><ssdm name="store_ln30"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="3">
+
+<operation id="37" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="24" op_0_bw="14">
+<![CDATA[
+for.body21.split:10 %v10_V = load i14 %v242_addr
+
+]]></Node>
+<StgValue><ssdm name="v10_V"/></StgValue>
+</operation>
+
+<operation id="38" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="24" op_0_bw="20">
+<![CDATA[
+for.body21.split:11 %v11_V = load i20 %v243_addr
+
+]]></Node>
+<StgValue><ssdm name="v11_V"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="4">
+
+<operation id="39" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="41" bw="40" op_0_bw="40" op_1_bw="24" op_2_bw="16">
+<![CDATA[
+for.body21.split:12 %v12 = bitconcatenate i40 @_ssdm_op_BitConcatenate.i40.i24.i16, i24 %v10_V, i16 0
+
+]]></Node>
+<StgValue><ssdm name="v12"/></StgValue>
+</operation>
+
+<operation id="40" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="42" bw="40" op_0_bw="40" op_1_bw="24" op_2_bw="16">
+<![CDATA[
+for.body21.split:13 %v13_1 = bitconcatenate i40 @_ssdm_op_BitConcatenate.i40.i24.i16, i24 %v11_V, i16 0
+
+]]></Node>
+<StgValue><ssdm name="v13_1"/></StgValue>
+</operation>
+
+<operation id="41" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="72" op_0_bw="40">
+<![CDATA[
+for.body21.split:14 %sext_ln1316 = sext i40 %v12
+
+]]></Node>
+<StgValue><ssdm name="sext_ln1316"/></StgValue>
+</operation>
+
+<operation id="42" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="72" op_0_bw="40">
+<![CDATA[
+for.body21.split:15 %sext_ln1319 = sext i40 %v13_1
+
+]]></Node>
+<StgValue><ssdm name="sext_ln1319"/></StgValue>
+</operation>
+
+<operation id="43" st_id="3" stage="2" lat="2">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="72" op_0_bw="72" op_1_bw="72">
+<![CDATA[
+for.body21.split:16 %r_V_50 = mul i72 %sext_ln1319, i72 %sext_ln1316
+
+]]></Node>
+<StgValue><ssdm name="r_V_50"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="5">
+
+<operation id="44" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="14" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+for.body21:1 %v3_addr = getelementptr i24 %v3, i64 0, i64 %p_cast
+
+]]></Node>
+<StgValue><ssdm name="v3_addr"/></StgValue>
+</operation>
+
+<operation id="45" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<![CDATA[
+for.body21:2 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+
+]]></Node>
+<StgValue><ssdm name="specpipeline_ln0"/></StgValue>
+</operation>
+
+<operation id="46" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
+<![CDATA[
+for.body21:4 %empty_406 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 768, i64 768, i64 768
+
+]]></Node>
+<StgValue><ssdm name="empty_406"/></StgValue>
+</operation>
+
+<operation id="47" st_id="4" stage="1" lat="2">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="72" op_0_bw="72" op_1_bw="72">
+<![CDATA[
+for.body21.split:16 %r_V_50 = mul i72 %sext_ln1319, i72 %sext_ln1316
+
+]]></Node>
+<StgValue><ssdm name="r_V_50"/></StgValue>
+</operation>
+
+<operation id="48" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="24" op_0_bw="24" op_1_bw="72" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+for.body21.split:17 %v16 = partselect i24 @_ssdm_op_PartSelect.i24.i72.i32.i32, i72 %r_V_50, i32 48, i32 71
+
+]]></Node>
+<StgValue><ssdm name="v16"/></StgValue>
+</operation>
+
+<operation id="56" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln30" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="0">
+<![CDATA[
+for.inc42.exitStub:0 %ret_ln0 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="6">
+
+<operation id="49" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="24" op_0_bw="24" op_1_bw="0">
+<![CDATA[
+for.body21.split:0 %v15_V_load = load i24 %v15_V
+
+]]></Node>
+<StgValue><ssdm name="v15_V_load"/></StgValue>
+</operation>
+
+<operation id="50" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+for.body21.split:9 %specloopname_ln30 = specloopname void @_ssdm_op_SpecLoopName, void @empty_23
+
+]]></Node>
+<StgValue><ssdm name="specloopname_ln30"/></StgValue>
+</operation>
+
+<operation id="51" st_id="5" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="24" op_0_bw="24" op_1_bw="24">
+<![CDATA[
+for.body21.split:18 %v17_V = add i24 %v16, i24 %v15_V_load
+
+]]></Node>
+<StgValue><ssdm name="v17_V"/></StgValue>
+</operation>
+
+<operation id="52" st_id="5" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="ifzero" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="0" op_0_bw="24" op_1_bw="14">
+<![CDATA[
+ifTrue:0 %store_ln36 = store i24 %v17_V, i14 %v3_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln36"/></StgValue>
+</operation>
+
+<operation id="53" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="ifzero" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="0">
+<![CDATA[
+ifTrue:1 %br_ln0 = br void %ifFalse
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+
+<operation id="54" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="0" op_0_bw="24" op_1_bw="24" op_2_bw="0" op_3_bw="0">
+<![CDATA[
+ifFalse:1 %store_ln859 = store i24 %v17_V, i24 %v15_V
+
+]]></Node>
+<StgValue><ssdm name="store_ln859"/></StgValue>
+</operation>
+
+<operation id="55" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="0" op_0_bw="0">
+<![CDATA[
+ifFalse:2 %br_ln0 = br void %for.body21
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="79" name="v3_load" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="v3_load"/></StgValue>
+</port>
+<port id="80" name="v3" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="v3"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="81" name="empty" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="empty"/></StgValue>
+</port>
+<port id="82" name="sub_ln31" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="sub_ln31"/></StgValue>
+</port>
+<port id="83" name="v242" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="v242"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="84" name="sub_ln32" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="sub_ln32"/></StgValue>
+</port>
+<port id="85" name="v243" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="v243"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="87" from="StgValue_86" to="v15_V" fromId="86" toId="8">
+</dataflow>
+<dataflow id="88" from="StgValue_86" to="k" fromId="86" toId="9">
+</dataflow>
+<dataflow id="90" from="_ssdm_op_Read.ap_auto.i20" to="sub_ln32_read" fromId="89" toId="10">
+</dataflow>
+<dataflow id="91" from="sub_ln32" to="sub_ln32_read" fromId="84" toId="10">
+</dataflow>
+<dataflow id="93" from="_ssdm_op_Read.ap_auto.i14" to="sub_ln31_read" fromId="92" toId="11">
+</dataflow>
+<dataflow id="94" from="sub_ln31" to="sub_ln31_read" fromId="82" toId="11">
+</dataflow>
+<dataflow id="95" from="_ssdm_op_Read.ap_auto.i14" to="tmp" fromId="92" toId="12">
+</dataflow>
+<dataflow id="96" from="empty" to="tmp" fromId="81" toId="12">
+</dataflow>
+<dataflow id="98" from="_ssdm_op_Read.ap_auto.i24" to="v3_load_read" fromId="97" toId="13">
+</dataflow>
+<dataflow id="99" from="v3_load" to="v3_load_read" fromId="79" toId="13">
+</dataflow>
+<dataflow id="100" from="tmp" to="p_cast" fromId="12" toId="14">
+</dataflow>
+<dataflow id="102" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="101" toId="15">
+</dataflow>
+<dataflow id="103" from="v242" to="specinterface_ln0" fromId="83" toId="15">
+</dataflow>
+<dataflow id="105" from="empty_14" to="specinterface_ln0" fromId="104" toId="15">
+</dataflow>
+<dataflow id="107" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="108" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="110" from="empty_15" to="specinterface_ln0" fromId="109" toId="15">
+</dataflow>
+<dataflow id="112" from="StgValue_111" to="specinterface_ln0" fromId="111" toId="15">
+</dataflow>
+<dataflow id="113" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="114" from="empty_15" to="specinterface_ln0" fromId="109" toId="15">
+</dataflow>
+<dataflow id="115" from="empty_15" to="specinterface_ln0" fromId="109" toId="15">
+</dataflow>
+<dataflow id="116" from="empty_15" to="specinterface_ln0" fromId="109" toId="15">
+</dataflow>
+<dataflow id="117" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="118" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="119" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="120" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="121" from="empty_15" to="specinterface_ln0" fromId="109" toId="15">
+</dataflow>
+<dataflow id="122" from="empty_15" to="specinterface_ln0" fromId="109" toId="15">
+</dataflow>
+<dataflow id="123" from="StgValue_111" to="specinterface_ln0" fromId="111" toId="15">
+</dataflow>
+<dataflow id="124" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="15">
+</dataflow>
+<dataflow id="125" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="101" toId="16">
+</dataflow>
+<dataflow id="126" from="v243" to="specinterface_ln0" fromId="85" toId="16">
+</dataflow>
+<dataflow id="127" from="empty_14" to="specinterface_ln0" fromId="104" toId="16">
+</dataflow>
+<dataflow id="128" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="129" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="130" from="empty_15" to="specinterface_ln0" fromId="109" toId="16">
+</dataflow>
+<dataflow id="131" from="StgValue_111" to="specinterface_ln0" fromId="111" toId="16">
+</dataflow>
+<dataflow id="132" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="133" from="empty_15" to="specinterface_ln0" fromId="109" toId="16">
+</dataflow>
+<dataflow id="134" from="empty_15" to="specinterface_ln0" fromId="109" toId="16">
+</dataflow>
+<dataflow id="135" from="empty_15" to="specinterface_ln0" fromId="109" toId="16">
+</dataflow>
+<dataflow id="136" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="137" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="138" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="139" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="140" from="empty_15" to="specinterface_ln0" fromId="109" toId="16">
+</dataflow>
+<dataflow id="141" from="empty_15" to="specinterface_ln0" fromId="109" toId="16">
+</dataflow>
+<dataflow id="142" from="StgValue_111" to="specinterface_ln0" fromId="111" toId="16">
+</dataflow>
+<dataflow id="143" from="StgValue_106" to="specinterface_ln0" fromId="106" toId="16">
+</dataflow>
+<dataflow id="145" from="StgValue_144" to="store_ln0" fromId="144" toId="17">
+</dataflow>
+<dataflow id="146" from="k" to="store_ln0" fromId="9" toId="17">
+</dataflow>
+<dataflow id="147" from="v3_load_read" to="store_ln0" fromId="13" toId="18">
+</dataflow>
+<dataflow id="148" from="v15_V" to="store_ln0" fromId="8" toId="18">
+</dataflow>
+<dataflow id="149" from="k" to="k_1" fromId="9" toId="20">
+</dataflow>
+<dataflow id="150" from="k_1" to="icmp_ln30" fromId="20" toId="21">
+</dataflow>
+<dataflow id="152" from="StgValue_151" to="icmp_ln30" fromId="151" toId="21">
+</dataflow>
+<dataflow id="153" from="k_1" to="add_ln30" fromId="20" toId="22">
+</dataflow>
+<dataflow id="155" from="StgValue_154" to="add_ln30" fromId="154" toId="22">
+</dataflow>
+<dataflow id="156" from="icmp_ln30" to="br_ln30" fromId="21" toId="23">
+</dataflow>
+<dataflow id="157" from="k_1" to="zext_ln31" fromId="20" toId="24">
+</dataflow>
+<dataflow id="158" from="k_1" to="zext_ln31_1" fromId="20" toId="25">
+</dataflow>
+<dataflow id="159" from="sub_ln31_read" to="add_ln31" fromId="11" toId="26">
+</dataflow>
+<dataflow id="160" from="zext_ln31_1" to="add_ln31" fromId="25" toId="26">
+</dataflow>
+<dataflow id="161" from="add_ln31" to="zext_ln31_2" fromId="26" toId="27">
+</dataflow>
+<dataflow id="162" from="v242" to="v242_addr" fromId="83" toId="28">
+</dataflow>
+<dataflow id="164" from="StgValue_163" to="v242_addr" fromId="163" toId="28">
+</dataflow>
+<dataflow id="165" from="zext_ln31_2" to="v242_addr" fromId="27" toId="28">
+</dataflow>
+<dataflow id="166" from="sub_ln32_read" to="add_ln32" fromId="10" toId="29">
+</dataflow>
+<dataflow id="167" from="zext_ln31" to="add_ln32" fromId="24" toId="29">
+</dataflow>
+<dataflow id="168" from="add_ln32" to="zext_ln32" fromId="29" toId="30">
+</dataflow>
+<dataflow id="169" from="v243" to="v243_addr" fromId="85" toId="31">
+</dataflow>
+<dataflow id="170" from="StgValue_163" to="v243_addr" fromId="163" toId="31">
+</dataflow>
+<dataflow id="171" from="zext_ln32" to="v243_addr" fromId="30" toId="31">
+</dataflow>
+<dataflow id="172" from="v242_addr" to="v10_V" fromId="28" toId="32">
+</dataflow>
+<dataflow id="173" from="v243_addr" to="v11_V" fromId="31" toId="33">
+</dataflow>
+<dataflow id="174" from="add_ln30" to="ifzero" fromId="22" toId="34">
+</dataflow>
+<dataflow id="175" from="StgValue_151" to="ifzero" fromId="151" toId="34">
+</dataflow>
+<dataflow id="176" from="ifzero" to="br_ln30" fromId="34" toId="35">
+</dataflow>
+<dataflow id="177" from="add_ln30" to="store_ln30" fromId="22" toId="36">
+</dataflow>
+<dataflow id="178" from="k" to="store_ln30" fromId="9" toId="36">
+</dataflow>
+<dataflow id="179" from="v242_addr" to="v10_V" fromId="28" toId="37">
+</dataflow>
+<dataflow id="180" from="v243_addr" to="v11_V" fromId="31" toId="38">
+</dataflow>
+<dataflow id="182" from="_ssdm_op_BitConcatenate.i40.i24.i16" to="v12" fromId="181" toId="39">
+</dataflow>
+<dataflow id="183" from="v10_V" to="v12" fromId="37" toId="39">
+</dataflow>
+<dataflow id="185" from="StgValue_184" to="v12" fromId="184" toId="39">
+</dataflow>
+<dataflow id="186" from="_ssdm_op_BitConcatenate.i40.i24.i16" to="v13_1" fromId="181" toId="40">
+</dataflow>
+<dataflow id="187" from="v11_V" to="v13_1" fromId="38" toId="40">
+</dataflow>
+<dataflow id="188" from="StgValue_184" to="v13_1" fromId="184" toId="40">
+</dataflow>
+<dataflow id="189" from="v12" to="sext_ln1316" fromId="39" toId="41">
+</dataflow>
+<dataflow id="190" from="v13_1" to="sext_ln1319" fromId="40" toId="42">
+</dataflow>
+<dataflow id="191" from="sext_ln1319" to="r_V_50" fromId="42" toId="43">
+</dataflow>
+<dataflow id="192" from="sext_ln1316" to="r_V_50" fromId="41" toId="43">
+</dataflow>
+<dataflow id="193" from="v3" to="v3_addr" fromId="80" toId="44">
+</dataflow>
+<dataflow id="194" from="StgValue_163" to="v3_addr" fromId="163" toId="44">
+</dataflow>
+<dataflow id="195" from="p_cast" to="v3_addr" fromId="14" toId="44">
+</dataflow>
+<dataflow id="197" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="196" toId="45">
+</dataflow>
+<dataflow id="198" from="StgValue_111" to="specpipeline_ln0" fromId="111" toId="45">
+</dataflow>
+<dataflow id="199" from="StgValue_106" to="specpipeline_ln0" fromId="106" toId="45">
+</dataflow>
+<dataflow id="200" from="StgValue_86" to="specpipeline_ln0" fromId="86" toId="45">
+</dataflow>
+<dataflow id="201" from="StgValue_106" to="specpipeline_ln0" fromId="106" toId="45">
+</dataflow>
+<dataflow id="203" from="p_str" to="specpipeline_ln0" fromId="202" toId="45">
+</dataflow>
+<dataflow id="205" from="_ssdm_op_SpecLoopTripCount" to="empty_406" fromId="204" toId="46">
+</dataflow>
+<dataflow id="207" from="StgValue_206" to="empty_406" fromId="206" toId="46">
+</dataflow>
+<dataflow id="208" from="StgValue_206" to="empty_406" fromId="206" toId="46">
+</dataflow>
+<dataflow id="209" from="StgValue_206" to="empty_406" fromId="206" toId="46">
+</dataflow>
+<dataflow id="210" from="sext_ln1319" to="r_V_50" fromId="42" toId="47">
+</dataflow>
+<dataflow id="211" from="sext_ln1316" to="r_V_50" fromId="41" toId="47">
+</dataflow>
+<dataflow id="213" from="_ssdm_op_PartSelect.i24.i72.i32.i32" to="v16" fromId="212" toId="48">
+</dataflow>
+<dataflow id="214" from="r_V_50" to="v16" fromId="47" toId="48">
+</dataflow>
+<dataflow id="216" from="StgValue_215" to="v16" fromId="215" toId="48">
+</dataflow>
+<dataflow id="218" from="StgValue_217" to="v16" fromId="217" toId="48">
+</dataflow>
+<dataflow id="219" from="v15_V" to="v15_V_load" fromId="8" toId="49">
+</dataflow>
+<dataflow id="221" from="_ssdm_op_SpecLoopName" to="specloopname_ln30" fromId="220" toId="50">
+</dataflow>
+<dataflow id="223" from="empty_23" to="specloopname_ln30" fromId="222" toId="50">
+</dataflow>
+<dataflow id="224" from="v16" to="v17_V" fromId="48" toId="51">
+</dataflow>
+<dataflow id="225" from="v15_V_load" to="v17_V" fromId="49" toId="51">
+</dataflow>
+<dataflow id="226" from="v17_V" to="store_ln36" fromId="51" toId="52">
+</dataflow>
+<dataflow id="227" from="v3_addr" to="store_ln36" fromId="44" toId="52">
+</dataflow>
+<dataflow id="228" from="v17_V" to="store_ln859" fromId="51" toId="54">
+</dataflow>
+<dataflow id="229" from="v15_V" to="store_ln859" fromId="8" toId="54">
+</dataflow>
+<dataflow id="230" from="icmp_ln30" to="StgValue_2" fromId="21" toId="2">
+</dataflow>
+<dataflow id="231" from="icmp_ln30" to="StgValue_3" fromId="21" toId="3">
+</dataflow>
+<dataflow id="232" from="icmp_ln30" to="StgValue_4" fromId="21" toId="4">
+</dataflow>
+<dataflow id="233" from="icmp_ln30" to="StgValue_5" fromId="21" toId="5">
+</dataflow>
+<dataflow id="234" from="ifzero" to="StgValue_6" fromId="34" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

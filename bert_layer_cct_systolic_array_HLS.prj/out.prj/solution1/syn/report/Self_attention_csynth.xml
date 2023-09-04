@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2019.2.1</Version>
+<Version>2022.1.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -10,56 +10,58 @@
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>Self_attention</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>1.25</ClockUncertainty>
+<ClockUncertainty>2.70</ClockUncertainty>
+<FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>none</PipelineType>
+<PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>13.058</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.844</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>297001</Best-caseLatency>
-<Average-caseLatency>297001</Average-caseLatency>
-<Worst-caseLatency>297001</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.878 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.878 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.878 ms</Worst-caseRealTimeLatency>
-<Interval-min>297001</Interval-min>
-<Interval-max>297001</Interval-max>
+<Best-caseLatency>101893</Best-caseLatency>
+<Average-caseLatency>101893</Average-caseLatency>
+<Worst-caseLatency>101893</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.019 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.019 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.019 ms</Worst-caseRealTimeLatency>
+<Interval-min>101893</Interval-min>
+<Interval-max>101893</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <l_S_h_0_h>
 <TripCount>12</TripCount>
-<Latency>297000</Latency>
-<IterationLatency>24750</IterationLatency>
-<l_mh_separate_i_s_l_j_s>
-<TripCount>768</TripCount>
-<Latency>13056</Latency>
-<IterationLatency>17</IterationLatency>
-</l_mh_separate_i_s_l_j_s>
-<l_mh_merge_i_m_l_j_m>
-<TripCount>768</TripCount>
-<Latency>2304</Latency>
-<IterationLatency>3</IterationLatency>
-</l_mh_merge_i_m_l_j_m>
+<Latency>101892</Latency>
+<AbsoluteTimeLatency>1018920</AbsoluteTimeLatency>
+<IterationLatency>8491</IterationLatency>
+<InstanceList>
+</InstanceList>
+<l_exp_sum_i3>
+<TripCount>12</TripCount>
+<Latency>804</Latency>
+<AbsoluteTimeLatency>8040</AbsoluteTimeLatency>
+<IterationLatency>67</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_exp_sum_i3>
 </l_S_h_0_h>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>32</BRAM_18K>
-<DSP48E>231</DSP48E>
-<FF>38332</FF>
-<LUT>65847</LUT>
+<BRAM_18K>48</BRAM_18K>
+<DSP>184</DSP>
+<FF>47782</FF>
+<LUT>59487</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
-<DSP48E>220</DSP48E>
+<DSP>220</DSP>
 <FF>106400</FF>
 <LUT>53200</LUT>
 <URAM>0</URAM>
@@ -132,6 +134,149 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7462_p_din0</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7462_p_din1</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7462_p_dout0</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7462_p_ce</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7466_p_din0</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7466_p_din1</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7466_p_opcode</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7466_p_dout0</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7466_p_ce</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7470_p_din0</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7470_p_din1</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7470_p_dout0</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_7470_p_ce</name>
+<Object>Self_attention</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>v71_0_0_address0</name>

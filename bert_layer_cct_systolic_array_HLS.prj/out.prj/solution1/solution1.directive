@@ -1,2 +1,20 @@
-<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView"/>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="Bert_layer" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="Bert_layer"/>
+            </pragma>
+        </directive>
+        <directive functionName="Bert_layer" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="Bert_layer"/>
+            </pragma>
+        </directive>
+        <directive functionName="Bert_layer" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="Bert_layer"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
 

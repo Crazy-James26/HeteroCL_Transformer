@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2019.2.1</Version>
+<Version>2022.1.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -10,86 +10,50 @@
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>Linear_layer_ds1</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>1.25</ClockUncertainty>
+<ClockUncertainty>2.70</ClockUncertainty>
+<FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>none</PipelineType>
+<PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.552</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.157</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>170238052</Best-caseLatency>
-<Average-caseLatency>170238052</Average-caseLatency>
-<Worst-caseLatency>170238052</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.702 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.702 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.702 sec</Worst-caseRealTimeLatency>
-<Interval-min>170238052</Interval-min>
-<Interval-max>170238052</Interval-max>
+<Best-caseLatency>28753933</Best-caseLatency>
+<Average-caseLatency>28753933</Average-caseLatency>
+<Worst-caseLatency>28753933</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.288 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.288 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.288 sec</Worst-caseRealTimeLatency>
+<Interval-min>28753933</Interval-min>
+<Interval-max>28753933</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<Loop1>
-<TripCount>12</TripCount>
-<Latency>36888</Latency>
-<IterationLatency>3074</IterationLatency>
-<Loop1.1>
-<TripCount>3072</TripCount>
-<Latency>3072</Latency>
-<IterationLatency>1</IterationLatency>
-</Loop1.1>
-</Loop1>
-<Loop2>
-<TripCount>12</TripCount>
-<Latency>36888</Latency>
-<IterationLatency>3074</IterationLatency>
-<Loop2.1>
-<TripCount>3072</TripCount>
-<Latency>3072</Latency>
-<IterationLatency>1</IterationLatency>
-</Loop2.1>
-</Loop2>
-<l_gemm_i15>
-<TripCount>12</TripCount>
-<Latency>169943064</Latency>
-<IterationLatency>14161922</IterationLatency>
-<l_j14>
-<TripCount>3072</TripCount>
-<Latency>14161920</Latency>
-<IterationLatency>4610</IterationLatency>
-<l_S_k_0_k4>
-<TripCount>768</TripCount>
-<Latency>4608</Latency>
-<IterationLatency>6</IterationLatency>
-</l_S_k_0_k4>
-</l_j14>
-</l_gemm_i15>
-<l_bias_i16>
-<TripCount>12</TripCount>
-<Latency>221208</Latency>
-<IterationLatency>18434</IterationLatency>
-<l_j15>
-<TripCount>3072</TripCount>
-<Latency>18432</Latency>
-<IterationLatency>6</IterationLatency>
-</l_j15>
-</l_bias_i16>
+<l_gemm_i15_l_j14>
+<TripCount>36864</TripCount>
+<Latency>28680192</Latency>
+<AbsoluteTimeLatency>286801920</AbsoluteTimeLatency>
+<IterationLatency>778</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_gemm_i15_l_j14>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>96</BRAM_18K>
-<DSP48E>5</DSP48E>
-<FF>615</FF>
-<LUT>1983</LUT>
+<FF>1175</FF>
+<LUT>2297</LUT>
 <URAM>0</URAM>
+<DSP>0</DSP>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
-<DSP48E>220</DSP48E>
+<DSP>220</DSP>
 <FF>106400</FF>
 <LUT>53200</LUT>
 <URAM>0</URAM>
@@ -164,8 +128,52 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v176_V_address0</name>
-<Object>v176_V</Object>
+<name>grp_fu_845_p_din0</name>
+<Object>Linear_layer_ds1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>40</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_845_p_din1</name>
+<Object>Linear_layer_ds1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>40</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_845_p_dout0</name>
+<Object>Linear_layer_ds1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>72</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_845_p_ce</name>
+<Object>Linear_layer_ds1</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>v176_address0</name>
+<Object>v176</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -175,8 +183,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v176_V_ce0</name>
-<Object>v176_V</Object>
+<name>v176_ce0</name>
+<Object>v176</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -186,8 +194,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v176_V_q0</name>
-<Object>v176_V</Object>
+<name>v176_q0</name>
+<Object>v176</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -197,8 +205,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v177_V_address0</name>
-<Object>v177_V</Object>
+<name>v251_address0</name>
+<Object>v251</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -208,8 +216,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v177_V_ce0</name>
-<Object>v177_V</Object>
+<name>v251_ce0</name>
+<Object>v251</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -219,8 +227,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v177_V_q0</name>
-<Object>v177_V</Object>
+<name>v251_q0</name>
+<Object>v251</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -230,8 +238,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v178_V_address0</name>
-<Object>v178_V</Object>
+<name>v252_address0</name>
+<Object>v252</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -241,8 +249,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v178_V_ce0</name>
-<Object>v178_V</Object>
+<name>v252_ce0</name>
+<Object>v252</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -252,8 +260,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v178_V_q0</name>
-<Object>v178_V</Object>
+<name>v252_q0</name>
+<Object>v252</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

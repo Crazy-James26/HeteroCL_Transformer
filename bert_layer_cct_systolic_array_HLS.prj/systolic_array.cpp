@@ -16,13 +16,14 @@ void PE(hls::stream<float>& A_in, hls::stream<float>& A_out,
 
 void systolic_array_k_768(hls::stream<float> A_loader[block_size1], 
 					hls::stream<float> B_loader[block_size1], 
-					float C[block_size1][block_size1]) {
+					hls::stream<float> C_drainer[block_size1]) {
     hls::stream<float> A_fifo[block_size1][block_size1 + 1];
     hls::stream<float> B_fifo[block_size1][block_size1 + 1];
 
     #pragma HLS STREAM variable=A_fifo depth=2
     #pragma HLS STREAM variable=B_fifo depth=2
 
+    float C[block_size1][block_size1];
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size1 dim = 1
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size1 dim = 2
 
@@ -45,7 +46,7 @@ void systolic_array_k_768(hls::stream<float> A_loader[block_size1],
 		}
 	}
 
-	data_drain:for (int k = 0; k < inp_len; k++) {
+	data_drain_AB:for (int k = 0; k < inp_len; k++) {
 	#pragma HLS PIPELINE II=1
 		for (int m = 0; m < block_size1; m++) {
 			A_fifo[m][block_size1].read();
@@ -54,18 +55,26 @@ void systolic_array_k_768(hls::stream<float> A_loader[block_size1],
 			B_fifo[n][block_size1].read();
 		}
 	}
+
+	data_drain_C: for (int n = 0; n < block_size1; n++) {
+	#pragma HLS PIPELINE II=1
+		for (int m = 0; m < block_size1; m++) {
+			C_drainer[m].write(C[m][n]);
+		}
+	}
 }
 
 
 void systolic_array_k_3072(hls::stream<float> A_loader[block_size1], 
 					hls::stream<float> B_loader[block_size1], 
-					float C[block_size1][block_size1]) {
+					hls::stream<float> C_drainer[block_size1]) {
     hls::stream<float> A_fifo[block_size1][block_size1 + 1];
     hls::stream<float> B_fifo[block_size1][block_size1 + 1];
 
     #pragma HLS STREAM variable=A_fifo depth=2
     #pragma HLS STREAM variable=B_fifo depth=2
 
+    float C[block_size1][block_size1];
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size1 dim = 1
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size1 dim = 2
 
@@ -88,7 +97,7 @@ void systolic_array_k_3072(hls::stream<float> A_loader[block_size1],
 		}
 	}
 
-	data_drain:for (int k = 0; k < gelu_len; k++) {
+	data_drain_AB:for (int k = 0; k < gelu_len; k++) {
 	#pragma HLS PIPELINE II=1
 		for (int m = 0; m < block_size1; m++) {
 			A_fifo[m][block_size1].read();
@@ -97,18 +106,26 @@ void systolic_array_k_3072(hls::stream<float> A_loader[block_size1],
 			B_fifo[n][block_size1].read();
 		}
 	}
+
+	data_drain_C: for (int n = 0; n < block_size1; n++) {
+	#pragma HLS PIPELINE II=1
+		for (int m = 0; m < block_size1; m++) {
+			C_drainer[m].write(C[m][n]);
+		}
+	}
 }
 
 
 void systolic_array_k_64(hls::stream<float> A_loader[block_size2], 
 					hls::stream<float> B_loader[block_size2], 
-					float C[block_size2][block_size2]) {
+					hls::stream<float> C_drainer[block_size2]) {
     hls::stream<float> A_fifo[block_size2][block_size2 + 1];
     hls::stream<float> B_fifo[block_size2][block_size2 + 1];
 
     #pragma HLS STREAM variable=A_fifo depth=2
     #pragma HLS STREAM variable=B_fifo depth=2
 
+    float C[block_size2][block_size2];
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size2 dim = 1
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size2 dim = 2
 
@@ -131,7 +148,7 @@ void systolic_array_k_64(hls::stream<float> A_loader[block_size2],
 		}
 	}
 
-	data_drain:for (int k = 0; k < head_len; k++) {
+	data_drain_AB:for (int k = 0; k < head_len; k++) {
 	#pragma HLS PIPELINE II=1
 		for (int m = 0; m < block_size2; m++) {
 			A_fifo[m][block_size2].read();
@@ -140,18 +157,26 @@ void systolic_array_k_64(hls::stream<float> A_loader[block_size2],
 			B_fifo[n][block_size2].read();
 		}
 	}
+
+	data_drain_C: for (int n = 0; n < block_size2; n++) {
+	#pragma HLS PIPELINE II=1
+		for (int m = 0; m < block_size2; m++) {
+			C_drainer[m].write(C[m][n]);
+		}
+	}
 }
 
 
 void systolic_array_k_12(hls::stream<float> A_loader[block_size2], 
 					hls::stream<float> B_loader[block_size2], 
-					float C[block_size2][block_size2]) {
+					hls::stream<float> C_drainer[block_size2]) {
     hls::stream<float> A_fifo[block_size2][block_size2 + 1];
     hls::stream<float> B_fifo[block_size2][block_size2 + 1];
 
     #pragma HLS STREAM variable=A_fifo depth=2
     #pragma HLS STREAM variable=B_fifo depth=2
 
+    float C[block_size2][block_size2];
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size2 dim = 1
     #pragma HLS ARRAY_PARTITION variable = C cyclic factor = block_size2 dim = 2
 
@@ -174,13 +199,20 @@ void systolic_array_k_12(hls::stream<float> A_loader[block_size2],
 		}
 	}
 
-	data_drain:for (int k = 0; k < inp_num; k++) {
+	data_drain_AB:for (int k = 0; k < inp_num; k++) {
 	#pragma HLS PIPELINE II=1
 		for (int m = 0; m < block_size2; m++) {
 			A_fifo[m][block_size2].read();
 		}
 		for (int n = 0; n < block_size2; n++) {
 			B_fifo[n][block_size2].read();
+		}
+	}
+
+	data_drain_C: for (int n = 0; n < block_size2; n++) {
+	#pragma HLS PIPELINE II=1
+		for (int m = 0; m < block_size2; m++) {
+			C_drainer[m].write(C[m][n]);
 		}
 	}
 }

@@ -217,15 +217,6 @@ def test_systolic_array_2():
         
     s = allo.customize(systolic_array)
     print(s.module)
-
-    # mod = s.build()
-    # A = np.float32(np.random.uniform(size=(M, K)))
-    # B = np.float32(np.random.uniform(size=(K, N)))
-    # allo_C = np.float32(np.zeros((M, N)))
-    # mod(A, B, allo_C)
-    # np_C = A @ B
-    # np.testing.assert_allclose(allo_C, np_C, atol=1e-3) # pass
-    
     loops = s.get_loops()
     s.partition(s.A, dim=1)
     s.partition(s.B, dim=2)
@@ -250,6 +241,11 @@ def test_systolic_array_2():
     s.to(s.B_fifo_1_2, "data_drain", fifo_depth=2)
     code = s.build(target="vhls").hls_code
     print(code)
+
+
+
+
+
     # mod = s.build(target="vhls", mode="csyn", project="gemm_systolic_array_2_2.prj")
     # mod()
 
@@ -261,11 +257,8 @@ def idea_systolic_array():
     K = 2
 
     def systolic_array(A: float32[M, K], B: float32[K, N], C: float32[M, N]):
-
-        # A_fifo: float32[M, N + 1, K]
-        # B_fifo: float32[N, M + 1, K]
-        A_fifo: float32[M, 3, K]
-        B_fifo: float32[N, 3, K]
+        A_fifo: float32[M, N + 1, K]
+        B_fifo: float32[N, M + 1, K]
         
         for k in range(K, name="data_load"):
             for m in range(M):
@@ -273,7 +266,6 @@ def idea_systolic_array():
             for n in range(M):
                 B_fifo[n, 0, k] = B[k, n]
 
-        
         for m, n in allo.grid(M, N, name="PEs"):
             a: float32
             b: float32
@@ -283,7 +275,6 @@ def idea_systolic_array():
                 C[m, n] += a * b
                 A_fifo[m, n + 1, k] = a
                 B_fifo[n, m + 1, k] = b
-
 
         A_drain: float32[M]
         B_drain: float32[N]
@@ -295,15 +286,6 @@ def idea_systolic_array():
         
     s = allo.customize(systolic_array)
     print(s.module)
-    
-    # mod = s.build()
-    # A = np.float32(np.random.uniform(size=(M, K)))
-    # B = np.float32(np.random.uniform(size=(K, N)))
-    # allo_C = np.float32(np.zeros((M, N)))
-    # mod(A, B, allo_C)
-    # np_C = A @ B
-    # np.testing.assert_allclose(allo_C, np_C, atol=1e-3)  # pass
-
     loops = s.get_loops()
     s.partition(s.A, dim=1)
     s.partition(s.B, dim=2)
@@ -312,13 +294,12 @@ def idea_systolic_array():
     s.pipeline(loops.data_drain.k)
     s.unroll(loops.PEs.m)
     s.unroll(loops.PEs.n)
-    s.to(s.A_fifo, "PEs", fifo_depth=2,  dim=[1, 2])
-    s.to(s.B_fifo, "PEs", fifo_depth=2,  dim=[1, 2])
+    pe_xy = s.unfold(loops.PEs)
+    s.to(s.A_fifo, pe_xy, fifo_depth=2, direction=0) # horizontal
+    s.to(s.B_fifo, pe_xy, fifo_depth=2, direction=1) # vertical
     s.pipeline(loops.PEs.k)
     code = s.build(target="vhls").hls_code
     print(code)
-    # mod = s.build(target="vhls", mode="csyn", project="gemm_systolic_array_2_2.prj")
-    # mod()
 
 # test_systolic_array_1()
 # test_systolic_array_2()

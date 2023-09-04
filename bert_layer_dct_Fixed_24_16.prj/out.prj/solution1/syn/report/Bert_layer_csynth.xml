@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2019.2.1</Version>
+<Version>2022.1.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -10,39 +10,58 @@
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>Bert_layer</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>1.25</ClockUncertainty>
+<ClockUncertainty>2.70</ClockUncertainty>
+<FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>none</PipelineType>
+<PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>9.514</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.352</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>516664292</Best-caseLatency>
-<Average-caseLatency>517327844</Average-caseLatency>
-<Worst-caseLatency>518876132</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.167 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.173 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>5.189 sec</Worst-caseRealTimeLatency>
-<Interval-min>516664293</Interval-min>
-<Interval-max>518876133</Interval-max>
+<Best-caseLatency>86122060</Best-caseLatency>
+<Average-caseLatency>86122060</Average-caseLatency>
+<Worst-caseLatency>86122060</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.861 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.861 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.861 sec</Worst-caseRealTimeLatency>
+<Interval-min>86122061</Interval-min>
+<Interval-max>86122061</Interval-max>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<l_gemm_i9_l_j9>
+<TripCount>9216</TripCount>
+<Latency>7170048</Latency>
+<AbsoluteTimeLatency>71700480</AbsoluteTimeLatency>
+<IterationLatency>778</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_gemm_i9_l_j9>
+<l_gemm_i18_l_j17>
+<TripCount>9216</TripCount>
+<Latency>28403712</Latency>
+<AbsoluteTimeLatency>284037120</AbsoluteTimeLatency>
+<IterationLatency>3082</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_gemm_i18_l_j17>
+</SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>645</BRAM_18K>
-<DSP48E>197</DSP48E>
-<FF>31293</FF>
-<LUT>37536</LUT>
+<BRAM_18K>674</BRAM_18K>
+<DSP>397</DSP>
+<FF>61568</FF>
+<LUT>59554</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
-<DSP48E>220</DSP48E>
+<DSP>220</DSP>
 <FF>106400</FF>
 <LUT>53200</LUT>
 <URAM>0</URAM>
@@ -117,8 +136,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>v242_V_address0</name>
-<Object>v242_V</Object>
+<name>v242_address0</name>
+<Object>v242</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -129,8 +148,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v242_V_ce0</name>
-<Object>v242_V</Object>
+<name>v242_ce0</name>
+<Object>v242</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -141,8 +160,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v242_V_q0</name>
-<Object>v242_V</Object>
+<name>v242_q0</name>
+<Object>v242</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -153,8 +172,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v243_V_address0</name>
-<Object>v243_V</Object>
+<name>v243_address0</name>
+<Object>v243</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -165,8 +184,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v243_V_ce0</name>
-<Object>v243_V</Object>
+<name>v243_ce0</name>
+<Object>v243</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -177,8 +196,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v243_V_q0</name>
-<Object>v243_V</Object>
+<name>v243_q0</name>
+<Object>v243</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -189,8 +208,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v244_V_address0</name>
-<Object>v244_V</Object>
+<name>v244_address0</name>
+<Object>v244</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -201,8 +220,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v244_V_ce0</name>
-<Object>v244_V</Object>
+<name>v244_ce0</name>
+<Object>v244</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -213,8 +232,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v244_V_q0</name>
-<Object>v244_V</Object>
+<name>v244_q0</name>
+<Object>v244</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -225,8 +244,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v245_V_address0</name>
-<Object>v245_V</Object>
+<name>v245_address0</name>
+<Object>v245</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -237,8 +256,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v245_V_ce0</name>
-<Object>v245_V</Object>
+<name>v245_ce0</name>
+<Object>v245</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -249,8 +268,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v245_V_q0</name>
-<Object>v245_V</Object>
+<name>v245_q0</name>
+<Object>v245</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -261,8 +280,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v246_V_address0</name>
-<Object>v246_V</Object>
+<name>v246_address0</name>
+<Object>v246</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -273,8 +292,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v246_V_ce0</name>
-<Object>v246_V</Object>
+<name>v246_ce0</name>
+<Object>v246</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -285,8 +304,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v246_V_q0</name>
-<Object>v246_V</Object>
+<name>v246_q0</name>
+<Object>v246</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -297,8 +316,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v247_V_address0</name>
-<Object>v247_V</Object>
+<name>v247_address0</name>
+<Object>v247</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -309,8 +328,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v247_V_ce0</name>
-<Object>v247_V</Object>
+<name>v247_ce0</name>
+<Object>v247</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -321,8 +340,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v247_V_q0</name>
-<Object>v247_V</Object>
+<name>v247_q0</name>
+<Object>v247</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -333,8 +352,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v248_V_address0</name>
-<Object>v248_V</Object>
+<name>v248_address0</name>
+<Object>v248</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -345,8 +364,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v248_V_ce0</name>
-<Object>v248_V</Object>
+<name>v248_ce0</name>
+<Object>v248</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -357,8 +376,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v248_V_q0</name>
-<Object>v248_V</Object>
+<name>v248_q0</name>
+<Object>v248</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -369,8 +388,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v249_V_address0</name>
-<Object>v249_V</Object>
+<name>v249_address0</name>
+<Object>v249</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -381,8 +400,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v249_V_ce0</name>
-<Object>v249_V</Object>
+<name>v249_ce0</name>
+<Object>v249</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -393,8 +412,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v249_V_q0</name>
-<Object>v249_V</Object>
+<name>v249_q0</name>
+<Object>v249</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -405,8 +424,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v250_V_address0</name>
-<Object>v250_V</Object>
+<name>v250_address0</name>
+<Object>v250</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -417,8 +436,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v250_V_ce0</name>
-<Object>v250_V</Object>
+<name>v250_ce0</name>
+<Object>v250</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -429,8 +448,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v250_V_q0</name>
-<Object>v250_V</Object>
+<name>v250_q0</name>
+<Object>v250</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -441,8 +460,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v251_V_address0</name>
-<Object>v251_V</Object>
+<name>v251_address0</name>
+<Object>v251</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -453,8 +472,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v251_V_ce0</name>
-<Object>v251_V</Object>
+<name>v251_ce0</name>
+<Object>v251</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -465,8 +484,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v251_V_q0</name>
-<Object>v251_V</Object>
+<name>v251_q0</name>
+<Object>v251</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -477,8 +496,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v252_V_address0</name>
-<Object>v252_V</Object>
+<name>v252_address0</name>
+<Object>v252</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -489,8 +508,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v252_V_ce0</name>
-<Object>v252_V</Object>
+<name>v252_ce0</name>
+<Object>v252</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -501,8 +520,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v252_V_q0</name>
-<Object>v252_V</Object>
+<name>v252_q0</name>
+<Object>v252</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -513,8 +532,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v253_V_address0</name>
-<Object>v253_V</Object>
+<name>v253_address0</name>
+<Object>v253</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -525,8 +544,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v253_V_ce0</name>
-<Object>v253_V</Object>
+<name>v253_ce0</name>
+<Object>v253</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -537,8 +556,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v253_V_q0</name>
-<Object>v253_V</Object>
+<name>v253_q0</name>
+<Object>v253</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -549,8 +568,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v254_V_address0</name>
-<Object>v254_V</Object>
+<name>v254_address0</name>
+<Object>v254</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -561,8 +580,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v254_V_ce0</name>
-<Object>v254_V</Object>
+<name>v254_ce0</name>
+<Object>v254</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -573,8 +592,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v254_V_q0</name>
-<Object>v254_V</Object>
+<name>v254_q0</name>
+<Object>v254</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -594,7 +613,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v255_ce0</name>
@@ -606,7 +625,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v255_q0</name>
@@ -618,7 +637,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v256_address0</name>
@@ -630,7 +649,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v256_ce0</name>
@@ -642,7 +661,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v256_q0</name>
@@ -654,7 +673,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v257_address0</name>
@@ -666,7 +685,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v257_ce0</name>
@@ -678,7 +697,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v257_q0</name>
@@ -690,7 +709,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v258_address0</name>
@@ -702,7 +721,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v258_ce0</name>
@@ -714,7 +733,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v258_q0</name>
@@ -726,11 +745,11 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v259_V_address0</name>
-<Object>v259_V</Object>
+<name>v259_address0</name>
+<Object>v259</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -741,8 +760,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v259_V_ce0</name>
-<Object>v259_V</Object>
+<name>v259_ce0</name>
+<Object>v259</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -753,8 +772,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v259_V_we0</name>
-<Object>v259_V</Object>
+<name>v259_we0</name>
+<Object>v259</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -765,8 +784,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>v259_V_d0</name>
-<Object>v259_V</Object>
+<name>v259_d0</name>
+<Object>v259</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

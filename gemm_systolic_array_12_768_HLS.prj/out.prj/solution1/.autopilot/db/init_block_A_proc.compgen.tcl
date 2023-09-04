@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 293 \
+    id 1 \
     name A_0 \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 295 \
+    id 3 \
     name A_1 \
     reset_level 1 \
     sync_rst true \
@@ -49,7 +49,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 297 \
+    id 5 \
     name A_2 \
     reset_level 1 \
     sync_rst true \
@@ -68,7 +68,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 299 \
+    id 7 \
     name A_3 \
     reset_level 1 \
     sync_rst true \
@@ -87,7 +87,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 301 \
+    id 9 \
     name A_4 \
     reset_level 1 \
     sync_rst true \
@@ -106,7 +106,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 303 \
+    id 11 \
     name A_5 \
     reset_level 1 \
     sync_rst true \
@@ -125,7 +125,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 305 \
+    id 13 \
     name A_6 \
     reset_level 1 \
     sync_rst true \
@@ -144,7 +144,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 307 \
+    id 15 \
     name A_7 \
     reset_level 1 \
     sync_rst true \
@@ -163,7 +163,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 309 \
+    id 17 \
     name A_8 \
     reset_level 1 \
     sync_rst true \
@@ -182,7 +182,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 311 \
+    id 19 \
     name A_9 \
     reset_level 1 \
     sync_rst true \
@@ -201,7 +201,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 313 \
+    id 21 \
     name A_10 \
     reset_level 1 \
     sync_rst true \
@@ -220,7 +220,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 315 \
+    id 23 \
     name A_11 \
     reset_level 1 \
     sync_rst true \
@@ -238,180 +238,180 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 294 \
-    name block_A_loader_0_V \
+    id 2 \
+    name block_A_loader_0 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_0_V \
+    corename dc_block_A_loader_0 \
     op interface \
-    ports { block_A_loader_0_V_din { O 32 vector } block_A_loader_0_V_full_n { I 1 bit } block_A_loader_0_V_write { O 1 bit } } \
+    ports { block_A_loader_0_din { O 32 vector } block_A_loader_0_num_data_valid { I 2 vector } block_A_loader_0_fifo_cap { I 2 vector } block_A_loader_0_full_n { I 1 bit } block_A_loader_0_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 296 \
-    name block_A_loader_1_V \
+    id 4 \
+    name block_A_loader_1 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_1_V \
+    corename dc_block_A_loader_1 \
     op interface \
-    ports { block_A_loader_1_V_din { O 32 vector } block_A_loader_1_V_full_n { I 1 bit } block_A_loader_1_V_write { O 1 bit } } \
+    ports { block_A_loader_1_din { O 32 vector } block_A_loader_1_num_data_valid { I 2 vector } block_A_loader_1_fifo_cap { I 2 vector } block_A_loader_1_full_n { I 1 bit } block_A_loader_1_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 298 \
-    name block_A_loader_2_V \
+    id 6 \
+    name block_A_loader_2 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_2_V \
+    corename dc_block_A_loader_2 \
     op interface \
-    ports { block_A_loader_2_V_din { O 32 vector } block_A_loader_2_V_full_n { I 1 bit } block_A_loader_2_V_write { O 1 bit } } \
+    ports { block_A_loader_2_din { O 32 vector } block_A_loader_2_num_data_valid { I 2 vector } block_A_loader_2_fifo_cap { I 2 vector } block_A_loader_2_full_n { I 1 bit } block_A_loader_2_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 300 \
-    name block_A_loader_3_V \
+    id 8 \
+    name block_A_loader_3 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_3_V \
+    corename dc_block_A_loader_3 \
     op interface \
-    ports { block_A_loader_3_V_din { O 32 vector } block_A_loader_3_V_full_n { I 1 bit } block_A_loader_3_V_write { O 1 bit } } \
+    ports { block_A_loader_3_din { O 32 vector } block_A_loader_3_num_data_valid { I 2 vector } block_A_loader_3_fifo_cap { I 2 vector } block_A_loader_3_full_n { I 1 bit } block_A_loader_3_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 302 \
-    name block_A_loader_4_V \
+    id 10 \
+    name block_A_loader_4 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_4_V \
+    corename dc_block_A_loader_4 \
     op interface \
-    ports { block_A_loader_4_V_din { O 32 vector } block_A_loader_4_V_full_n { I 1 bit } block_A_loader_4_V_write { O 1 bit } } \
+    ports { block_A_loader_4_din { O 32 vector } block_A_loader_4_num_data_valid { I 2 vector } block_A_loader_4_fifo_cap { I 2 vector } block_A_loader_4_full_n { I 1 bit } block_A_loader_4_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 304 \
-    name block_A_loader_5_V \
+    id 12 \
+    name block_A_loader_5 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_5_V \
+    corename dc_block_A_loader_5 \
     op interface \
-    ports { block_A_loader_5_V_din { O 32 vector } block_A_loader_5_V_full_n { I 1 bit } block_A_loader_5_V_write { O 1 bit } } \
+    ports { block_A_loader_5_din { O 32 vector } block_A_loader_5_num_data_valid { I 2 vector } block_A_loader_5_fifo_cap { I 2 vector } block_A_loader_5_full_n { I 1 bit } block_A_loader_5_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 306 \
-    name block_A_loader_6_V \
+    id 14 \
+    name block_A_loader_6 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_6_V \
+    corename dc_block_A_loader_6 \
     op interface \
-    ports { block_A_loader_6_V_din { O 32 vector } block_A_loader_6_V_full_n { I 1 bit } block_A_loader_6_V_write { O 1 bit } } \
+    ports { block_A_loader_6_din { O 32 vector } block_A_loader_6_num_data_valid { I 2 vector } block_A_loader_6_fifo_cap { I 2 vector } block_A_loader_6_full_n { I 1 bit } block_A_loader_6_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 308 \
-    name block_A_loader_7_V \
+    id 16 \
+    name block_A_loader_7 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_7_V \
+    corename dc_block_A_loader_7 \
     op interface \
-    ports { block_A_loader_7_V_din { O 32 vector } block_A_loader_7_V_full_n { I 1 bit } block_A_loader_7_V_write { O 1 bit } } \
+    ports { block_A_loader_7_din { O 32 vector } block_A_loader_7_num_data_valid { I 2 vector } block_A_loader_7_fifo_cap { I 2 vector } block_A_loader_7_full_n { I 1 bit } block_A_loader_7_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 310 \
-    name block_A_loader_8_V \
+    id 18 \
+    name block_A_loader_8 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_8_V \
+    corename dc_block_A_loader_8 \
     op interface \
-    ports { block_A_loader_8_V_din { O 32 vector } block_A_loader_8_V_full_n { I 1 bit } block_A_loader_8_V_write { O 1 bit } } \
+    ports { block_A_loader_8_din { O 32 vector } block_A_loader_8_num_data_valid { I 2 vector } block_A_loader_8_fifo_cap { I 2 vector } block_A_loader_8_full_n { I 1 bit } block_A_loader_8_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 312 \
-    name block_A_loader_9_V \
+    id 20 \
+    name block_A_loader_9 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_9_V \
+    corename dc_block_A_loader_9 \
     op interface \
-    ports { block_A_loader_9_V_din { O 32 vector } block_A_loader_9_V_full_n { I 1 bit } block_A_loader_9_V_write { O 1 bit } } \
+    ports { block_A_loader_9_din { O 32 vector } block_A_loader_9_num_data_valid { I 2 vector } block_A_loader_9_fifo_cap { I 2 vector } block_A_loader_9_full_n { I 1 bit } block_A_loader_9_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 314 \
-    name block_A_loader_10_V \
+    id 22 \
+    name block_A_loader_10 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_10_V \
+    corename dc_block_A_loader_10 \
     op interface \
-    ports { block_A_loader_10_V_din { O 32 vector } block_A_loader_10_V_full_n { I 1 bit } block_A_loader_10_V_write { O 1 bit } } \
+    ports { block_A_loader_10_din { O 32 vector } block_A_loader_10_num_data_valid { I 2 vector } block_A_loader_10_fifo_cap { I 2 vector } block_A_loader_10_full_n { I 1 bit } block_A_loader_10_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 316 \
-    name block_A_loader_11_V \
+    id 24 \
+    name block_A_loader_11 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_block_A_loader_11_V \
+    corename dc_block_A_loader_11 \
     op interface \
-    ports { block_A_loader_11_V_din { O 32 vector } block_A_loader_11_V_full_n { I 1 bit } block_A_loader_11_V_write { O 1 bit } } \
+    ports { block_A_loader_11_din { O 32 vector } block_A_loader_11_num_data_valid { I 2 vector } block_A_loader_11_fifo_cap { I 2 vector } block_A_loader_11_full_n { I 1 bit } block_A_loader_11_write { O 1 bit } } \
 } "
 }
 
@@ -476,6 +476,27 @@ if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_end
     cg_default_interface_gen_bundle_end
     AESL_LIB_XILADAPTER::native_axis_end
+}
+
+
+# flow_control definition:
+set InstName gemm_systolic_array_flow_control_loop_pipe_U
+set CompName gemm_systolic_array_flow_control_loop_pipe
+set name flow_control_loop_pipe
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
+    name ${name} \
+    prefix gemm_systolic_array_ \
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $CompName BINDTYPE interface TYPE internal_upc_flow_control INSTNAME $InstName
 }
 
 

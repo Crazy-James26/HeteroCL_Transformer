@@ -1,11 +1,11 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'Bert_layer'" level="0">
-<item name = "Date">Thu Aug 31 04:03:58 2023
+<section name = "Vitis HLS Report for 'Bert_layer'" level="0">
+<item name = "Date">Sat Sep  2 22:11:20 2023
 </item>
-<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 9.514 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.352 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,28 +24,36 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1198035100, 1200246940, 11.980 sec, 12.002 sec, 1198035100, 1200246940, none</column>
+<column name="">426102783, 426102783, 4.261 sec, 4.261 sec, 426102784, 426102784, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_pow_generic_double_s_fu_226">pow_generic_double_s, 71, 71, 0.710 us, 0.710 us, 1, 1, function</column>
-<column name="grp_generic_tanh_float_s_fu_255">generic_tanh_float_s, 1, 61, 10.000 ns, 0.610 us, 1, 61, none</column>
-<column name="grp_Self_attention_fu_266">Self_attention, 2801281, 2801281, 28.013 ms, 28.013 ms, 2801281, 2801281, none</column>
-<column name="grp_Layer_norm_fu_274">Layer_norm, 424445, 424445, 4.244 ms, 4.244 ms, 424445, 424445, none</column>
-<column name="grp_Linear_layer_ds1_fu_287">Linear_layer_ds1, 396767307, 396767307, 3.968 sec, 3.968 sec, 396767307, 396767307, none</column>
-<column name="grp_Linear_layer_ds2_fu_297">Linear_layer_ds2, 396463179, 396463179, 3.965 sec, 3.965 sec, 396463179, 396463179, none</column>
-<column name="grp_Linear_layer_qkv_fu_307">Linear_layer_qkv, 99191883, 99191883, 0.992 sec, 0.992 sec, 99191883, 99191883, none</column>
-<column name="grp_Linear_layer_ds0_fu_323">Linear_layer_ds0, 99191883, 99191883, 0.992 sec, 0.992 sec, 99191883, 99191883, none</column>
-<column name="grp_Res_layer_fu_333">Res_layer, 73753, 73753, 0.738 ms, 0.738 ms, 73753, 73753, none</column>
+<column name="grp_Linear_layer_qkv_fu_302">Linear_layer_qkv, 35527694, 35527694, 0.355 sec, 0.355 sec, 35527694, 35527694, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_174_1_VITIS_LOOP_175_2_fu_318">Bert_layer_Pipeline_VITIS_LOOP_174_1_VITIS_LOOP_175_2, 9218, 9218, 92.180 us, 92.180 us, 9218, 9218, no</column>
+<column name="grp_Self_attention_fu_324">Self_attention, 44881, 44881, 0.449 ms, 0.449 ms, 44881, 44881, no</column>
+<column name="grp_Bert_layer_Pipeline_l_bias_i10_l_j10_fu_332">Bert_layer_Pipeline_l_bias_i10_l_j10, 9225, 9225, 92.250 us, 92.250 us, 9225, 9225, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_281_1_VITIS_LOOP_282_2_fu_339">Bert_layer_Pipeline_VITIS_LOOP_281_1_VITIS_LOOP_282_2, 36866, 36866, 0.369 ms, 0.369 ms, 36866, 36866, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_k_0_k3_fu_344">Bert_layer_Pipeline_l_S_k_0_k3, 3848, 3848, 38.480 us, 38.480 us, 3848, 3848, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_i_j_0_i11_l_j11_fu_356">Bert_layer_Pipeline_l_S_i_j_0_i11_l_j11, 9225, 9225, 92.250 us, 92.250 us, 9225, 9225, no</column>
+<column name="grp_Layer_norm_fu_364">Layer_norm, 56254, 56254, 0.563 ms, 0.563 ms, 56254, 56254, no</column>
+<column name="grp_Bert_layer_Pipeline_l_bias_i16_l_j15_fu_374">Bert_layer_Pipeline_l_bias_i16_l_j15, 36873, 36873, 0.369 ms, 0.369 ms, 36873, 36873, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_334_1_VITIS_LOOP_335_2_fu_381">Bert_layer_Pipeline_VITIS_LOOP_334_1_VITIS_LOOP_335_2, 9218, 9218, 92.180 us, 92.180 us, 9218, 9218, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_k_0_k4_fu_386">Bert_layer_Pipeline_l_S_k_0_k4, 3848, 3848, 38.480 us, 38.480 us, 3848, 3848, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_i_j_0_i17_l_j16_fu_398">Bert_layer_Pipeline_l_S_i_j_0_i17_l_j16, 37067, 37067, 0.371 ms, 0.371 ms, 37067, 37067, no</column>
+<column name="grp_Bert_layer_Pipeline_l_bias_i19_l_j18_fu_434">Bert_layer_Pipeline_l_bias_i19_l_j18, 9225, 9225, 92.250 us, 92.250 us, 9225, 9225, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_k_0_k5_fu_441">Bert_layer_Pipeline_l_S_k_0_k5, 15368, 15368, 0.154 ms, 0.154 ms, 15368, 15368, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_i_j_0_i11_l_j117_fu_453">Bert_layer_Pipeline_l_S_i_j_0_i11_l_j117, 9225, 9225, 92.250 us, 92.250 us, 9225, 9225, no</column>
+<column name="grp_Layer_norm_1_fu_460">Layer_norm_1, 56254, 56254, 0.563 ms, 0.563 ms, 56254, 56254, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- l_S_i_j_0_i17">4239384, 6451224, 353282 ~ 537602, -, -, 12, no</column>
-<column name=" + l_j16">353280, 537600, 115 ~ 175, -, -, 3072, no</column>
+<column name="- l_gemm_i9_l_j9">35509248, 35509248, 3853, -, -, 9216, no</column>
+<column name="- l_gemm_i15_l_j14">142036992, 142036992, 3853, -, -, 36864, no</column>
+<column name="- l_gemm_i18_l_j17">141677568, 141677568, 15373, -, -, 9216, no</column>
 </table>
 </item>
 </section>

@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2019.2.1</Version>
+<Version>2022.1.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -10,71 +10,66 @@
 <Part>xc7z020-clg484-1</Part>
 <TopModelName>Bert_layer</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>1.25</ClockUncertainty>
+<ClockUncertainty>2.70</ClockUncertainty>
+<FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>none</PipelineType>
+<PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>9.514</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.352</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1198035100</Best-caseLatency>
-<Average-caseLatency>1198698652</Average-caseLatency>
-<Worst-caseLatency>1200246940</Worst-caseLatency>
-<Best-caseRealTimeLatency>11.980 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>11.987 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>12.002 sec</Worst-caseRealTimeLatency>
-<Interval-min>1198035101</Interval-min>
-<Interval-max>1200246941</Interval-max>
+<Best-caseLatency>426102783</Best-caseLatency>
+<Average-caseLatency>426102783</Average-caseLatency>
+<Worst-caseLatency>426102783</Worst-caseLatency>
+<Best-caseRealTimeLatency>4.261 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>4.261 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>4.261 sec</Worst-caseRealTimeLatency>
+<Interval-min>426102784</Interval-min>
+<Interval-max>426102784</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<l_S_i_j_0_i17>
-<TripCount>12</TripCount>
-<Latency>
-<range>
-<min>4239384</min>
-<max>6451224</max>
-</range>
-</Latency>
-<IterationLatency>
-<range>
-<min>353282</min>
-<max>537602</max>
-</range>
-</IterationLatency>
-<l_j16>
-<TripCount>3072</TripCount>
-<Latency>
-<range>
-<min>353280</min>
-<max>537600</max>
-</range>
-</Latency>
-<IterationLatency>
-<range>
-<min>115</min>
-<max>175</max>
-</range>
-</IterationLatency>
-</l_j16>
-</l_S_i_j_0_i17>
+<l_gemm_i9_l_j9>
+<TripCount>9216</TripCount>
+<Latency>35509248</Latency>
+<AbsoluteTimeLatency>355092480</AbsoluteTimeLatency>
+<IterationLatency>3853</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_gemm_i9_l_j9>
+<l_gemm_i15_l_j14>
+<TripCount>36864</TripCount>
+<Latency>142036992</Latency>
+<AbsoluteTimeLatency>1420369920</AbsoluteTimeLatency>
+<IterationLatency>3853</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_gemm_i15_l_j14>
+<l_gemm_i18_l_j17>
+<TripCount>9216</TripCount>
+<Latency>141677568</Latency>
+<AbsoluteTimeLatency>1416775680</AbsoluteTimeLatency>
+<IterationLatency>15373</IterationLatency>
+<InstanceList>
+</InstanceList>
+</l_gemm_i18_l_j17>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>636</BRAM_18K>
-<DSP48E>200</DSP48E>
-<FF>32695</FF>
-<LUT>36018</LUT>
+<BRAM_18K>665</BRAM_18K>
+<DSP>212</DSP>
+<FF>59148</FF>
+<LUT>54254</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
-<DSP48E>220</DSP48E>
+<DSP>220</DSP>
 <FF>106400</FF>
 <LUT>53200</LUT>
 <URAM>0</URAM>
@@ -158,7 +153,7 @@
 <Dir>out</Dir>
 <Bits>14</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v202_ce0</name>
@@ -170,7 +165,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v202_q0</name>
@@ -182,7 +177,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v203_address0</name>
@@ -194,7 +189,7 @@
 <Dir>out</Dir>
 <Bits>20</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v203_ce0</name>
@@ -206,7 +201,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v203_q0</name>
@@ -218,7 +213,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v204_address0</name>
@@ -230,7 +225,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v204_ce0</name>
@@ -242,7 +237,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v204_q0</name>
@@ -254,7 +249,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v205_address0</name>
@@ -266,7 +261,7 @@
 <Dir>out</Dir>
 <Bits>20</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v205_ce0</name>
@@ -278,7 +273,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v205_q0</name>
@@ -290,7 +285,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v206_address0</name>
@@ -302,7 +297,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v206_ce0</name>
@@ -314,7 +309,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v206_q0</name>
@@ -326,7 +321,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v207_address0</name>
@@ -338,7 +333,7 @@
 <Dir>out</Dir>
 <Bits>20</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v207_ce0</name>
@@ -350,7 +345,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v207_q0</name>
@@ -362,7 +357,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v208_address0</name>
@@ -374,7 +369,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v208_ce0</name>
@@ -386,7 +381,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v208_q0</name>
@@ -398,7 +393,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v209_address0</name>
@@ -410,7 +405,7 @@
 <Dir>out</Dir>
 <Bits>20</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v209_ce0</name>
@@ -422,7 +417,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v209_q0</name>
@@ -434,7 +429,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v210_address0</name>
@@ -446,7 +441,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v210_ce0</name>
@@ -458,7 +453,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v210_q0</name>
@@ -470,7 +465,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v211_address0</name>
@@ -482,7 +477,7 @@
 <Dir>out</Dir>
 <Bits>22</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v211_ce0</name>
@@ -494,7 +489,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v211_q0</name>
@@ -506,7 +501,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v212_address0</name>
@@ -518,7 +513,7 @@
 <Dir>out</Dir>
 <Bits>12</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v212_ce0</name>
@@ -530,7 +525,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v212_q0</name>
@@ -542,7 +537,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v213_address0</name>
@@ -554,7 +549,7 @@
 <Dir>out</Dir>
 <Bits>22</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v213_ce0</name>
@@ -566,7 +561,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v213_q0</name>
@@ -578,7 +573,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v214_address0</name>
@@ -590,7 +585,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v214_ce0</name>
@@ -602,7 +597,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v214_q0</name>
@@ -614,7 +609,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v215_address0</name>
@@ -626,7 +621,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v215_ce0</name>
@@ -638,7 +633,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v215_q0</name>
@@ -650,7 +645,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v216_address0</name>
@@ -662,7 +657,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v216_ce0</name>
@@ -674,7 +669,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v216_q0</name>
@@ -686,7 +681,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v217_address0</name>
@@ -698,7 +693,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v217_ce0</name>
@@ -710,7 +705,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v217_q0</name>
@@ -722,7 +717,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v218_address0</name>
@@ -734,7 +729,7 @@
 <Dir>out</Dir>
 <Bits>10</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v218_ce0</name>
@@ -746,7 +741,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v218_q0</name>
@@ -758,7 +753,7 @@
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v219_address0</name>
@@ -770,7 +765,7 @@
 <Dir>out</Dir>
 <Bits>14</Bits>
 <Attribute>address</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v219_ce0</name>
@@ -782,7 +777,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v219_we0</name>
@@ -794,7 +789,7 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>v219_d0</name>
@@ -806,7 +801,7 @@
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
-<CType>float</CType>
+<CType>int</CType>
 </RtlPorts>
 </InterfaceSummary>
 
