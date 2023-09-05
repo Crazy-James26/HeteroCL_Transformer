@@ -179,7 +179,7 @@ Bert_layer_fadd_32ns_32ns_32_5_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_5_full_dsp_1_U1090(
+fadd_32ns_32ns_32_5_full_dsp_1_U1014(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(ap_sig_allocacmp_C_out_out_0_load),
@@ -194,7 +194,7 @@ Bert_layer_fmul_32ns_32ns_32_4_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_4_max_dsp_1_U1091(
+fmul_32ns_32ns_32_4_max_dsp_1_U1015(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_80_p0),

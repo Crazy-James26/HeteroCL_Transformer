@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'init_block_AB_proc'" level="0">
-<item name = "Date">Mon Sep  4 10:09:24 2023
+<item name = "Date">Mon Sep  4 23:50:30 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_init_block_AB_proc_Pipeline_init_block_AB_fu_100">init_block_AB_proc_Pipeline_init_block_AB, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_init_block_AB_proc_Pipeline_init_block_AB_fu_160">init_block_AB_proc_Pipeline_init_block_AB, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,7 +52,7 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 10, 169, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 128, -</column>
+<column name="Multiplexer">-, -, -, 182, -</column>
 <column name="Register">-, -, 10, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_init_block_AB_proc_Pipeline_init_block_AB_fu_100">init_block_AB_proc_Pipeline_init_block_AB, 0, 0, 10, 169, 0</column>
+<column name="grp_init_block_AB_proc_Pipeline_init_block_AB_fu_160">init_block_AB_proc_Pipeline_init_block_AB, 0, 0, 10, 169, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -94,7 +94,13 @@
 <column name="block_B_loader_16_write">9, 2, 1, 2</column>
 <column name="block_B_loader_27_write">9, 2, 1, 2</column>
 <column name="block_B_loader_38_write">9, 2, 1, 2</column>
+<column name="ii_c1_blk_n">9, 2, 1, 2</column>
+<column name="ii_c2_blk_n">9, 2, 1, 2</column>
+<column name="ii_c3_blk_n">9, 2, 1, 2</column>
 <column name="ii_c_blk_n">9, 2, 1, 2</column>
+<column name="jj_c4_blk_n">9, 2, 1, 2</column>
+<column name="jj_c5_blk_n">9, 2, 1, 2</column>
+<column name="jj_c6_blk_n">9, 2, 1, 2</column>
 <column name="jj_c_blk_n">9, 2, 1, 2</column>
 <column name="real_start">9, 2, 1, 2</column>
 </table>
@@ -103,10 +109,10 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="grp_init_block_AB_proc_Pipeline_init_block_AB_fu_100_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_init_block_AB_proc_Pipeline_init_block_AB_fu_160_ap_start_reg">1, 0, 1, 0</column>
 <column name="start_once_reg">1, 0, 1, 0</column>
-<column name="tmp_reg_164">2, 0, 8, 6</column>
-<column name="tmp_s_reg_169">2, 0, 8, 6</column>
+<column name="tmp_reg_224">2, 0, 8, 6</column>
+<column name="tmp_s_reg_229">2, 0, 8, 6</column>
 </table>
 </item>
 </section>
@@ -197,11 +203,41 @@
 <column name="ii_c_fifo_cap">in, 3, ap_fifo, ii_c, pointer</column>
 <column name="ii_c_full_n">in, 1, ap_fifo, ii_c, pointer</column>
 <column name="ii_c_write">out, 1, ap_fifo, ii_c, pointer</column>
+<column name="ii_c1_din">out, 2, ap_fifo, ii_c1, pointer</column>
+<column name="ii_c1_num_data_valid">in, 3, ap_fifo, ii_c1, pointer</column>
+<column name="ii_c1_fifo_cap">in, 3, ap_fifo, ii_c1, pointer</column>
+<column name="ii_c1_full_n">in, 1, ap_fifo, ii_c1, pointer</column>
+<column name="ii_c1_write">out, 1, ap_fifo, ii_c1, pointer</column>
+<column name="ii_c2_din">out, 2, ap_fifo, ii_c2, pointer</column>
+<column name="ii_c2_num_data_valid">in, 3, ap_fifo, ii_c2, pointer</column>
+<column name="ii_c2_fifo_cap">in, 3, ap_fifo, ii_c2, pointer</column>
+<column name="ii_c2_full_n">in, 1, ap_fifo, ii_c2, pointer</column>
+<column name="ii_c2_write">out, 1, ap_fifo, ii_c2, pointer</column>
+<column name="ii_c3_din">out, 2, ap_fifo, ii_c3, pointer</column>
+<column name="ii_c3_num_data_valid">in, 3, ap_fifo, ii_c3, pointer</column>
+<column name="ii_c3_fifo_cap">in, 3, ap_fifo, ii_c3, pointer</column>
+<column name="ii_c3_full_n">in, 1, ap_fifo, ii_c3, pointer</column>
+<column name="ii_c3_write">out, 1, ap_fifo, ii_c3, pointer</column>
 <column name="jj_c_din">out, 2, ap_fifo, jj_c, pointer</column>
 <column name="jj_c_num_data_valid">in, 3, ap_fifo, jj_c, pointer</column>
 <column name="jj_c_fifo_cap">in, 3, ap_fifo, jj_c, pointer</column>
 <column name="jj_c_full_n">in, 1, ap_fifo, jj_c, pointer</column>
 <column name="jj_c_write">out, 1, ap_fifo, jj_c, pointer</column>
+<column name="jj_c4_din">out, 2, ap_fifo, jj_c4, pointer</column>
+<column name="jj_c4_num_data_valid">in, 3, ap_fifo, jj_c4, pointer</column>
+<column name="jj_c4_fifo_cap">in, 3, ap_fifo, jj_c4, pointer</column>
+<column name="jj_c4_full_n">in, 1, ap_fifo, jj_c4, pointer</column>
+<column name="jj_c4_write">out, 1, ap_fifo, jj_c4, pointer</column>
+<column name="jj_c5_din">out, 2, ap_fifo, jj_c5, pointer</column>
+<column name="jj_c5_num_data_valid">in, 3, ap_fifo, jj_c5, pointer</column>
+<column name="jj_c5_fifo_cap">in, 3, ap_fifo, jj_c5, pointer</column>
+<column name="jj_c5_full_n">in, 1, ap_fifo, jj_c5, pointer</column>
+<column name="jj_c5_write">out, 1, ap_fifo, jj_c5, pointer</column>
+<column name="jj_c6_din">out, 2, ap_fifo, jj_c6, pointer</column>
+<column name="jj_c6_num_data_valid">in, 3, ap_fifo, jj_c6, pointer</column>
+<column name="jj_c6_fifo_cap">in, 3, ap_fifo, jj_c6, pointer</column>
+<column name="jj_c6_full_n">in, 1, ap_fifo, jj_c6, pointer</column>
+<column name="jj_c6_write">out, 1, ap_fifo, jj_c6, pointer</column>
 </table>
 </item>
 </section>

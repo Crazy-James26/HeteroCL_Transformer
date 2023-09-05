@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Self_attention_Pipeline_l_norm_i2_l_j1'" level="0">
-<item name = "Date">Mon Sep  4 10:10:05 2023
+<item name = "Date">Mon Sep  4 23:51:25 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.975 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.746 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -50,23 +50,19 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 85, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 0, 100, -</column>
+<column name="Instance">-, -, 0, 20, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 72, -</column>
-<column name="Register">-, -, 1319, 576, -</column>
+<column name="Register">-, -, 447, 160, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, 1, 1, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_42_32_1_1_U4191">mux_42_32_1_1, 0, 0, 0, 20, 0</column>
-<column name="mux_42_32_1_1_U4192">mux_42_32_1_1, 0, 0, 0, 20, 0</column>
-<column name="mux_42_32_1_1_U4193">mux_42_32_1_1, 0, 0, 0, 20, 0</column>
-<column name="mux_42_32_1_1_U4194">mux_42_32_1_1, 0, 0, 0, 20, 0</column>
-<column name="mux_42_32_1_1_U4195">mux_42_32_1_1, 0, 0, 0, 20, 0</column>
+<column name="mux_42_32_1_1_U2847">mux_42_32_1_1, 0, 0, 0, 20, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -83,15 +79,15 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln48_1_fu_395_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln48_fu_407_p2">+, 0, 0, 13, 4, 1</column>
-<column name="add_ln49_fu_463_p2">+, 0, 0, 13, 4, 1</column>
-<column name="add_ln51_fu_503_p2">+, 0, 0, 7, 4, 4</column>
-<column name="sub_ln51_fu_494_p2">-, 0, 0, 7, 4, 4</column>
-<column name="icmp_ln48_fu_389_p2">icmp, 0, 0, 11, 8, 8</column>
-<column name="icmp_ln49_fu_413_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="select_ln48_1_fu_427_p3">select, 0, 0, 4, 1, 4</column>
-<column name="select_ln48_fu_419_p3">select, 0, 0, 4, 1, 1</column>
+<column name="add_ln46_1_fu_169_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln46_fu_181_p2">+, 0, 0, 13, 4, 1</column>
+<column name="add_ln47_fu_223_p2">+, 0, 0, 13, 4, 1</column>
+<column name="add_ln49_fu_271_p2">+, 0, 0, 7, 6, 6</column>
+<column name="sub_ln49_fu_262_p2">-, 0, 0, 7, 6, 6</column>
+<column name="icmp_ln46_fu_163_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="icmp_ln47_fu_187_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="select_ln46_1_fu_201_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln46_fu_193_p3">select, 0, 0, 4, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -102,9 +98,9 @@
 <column name="ap_sig_allocacmp_i2_load">9, 2, 4, 8</column>
 <column name="ap_sig_allocacmp_indvar_flatten19_load">9, 2, 8, 16</column>
 <column name="ap_sig_allocacmp_j1_load">9, 2, 4, 8</column>
-<column name="i2_fu_86">9, 2, 4, 8</column>
-<column name="indvar_flatten19_fu_90">9, 2, 8, 16</column>
-<column name="j1_fu_82">9, 2, 4, 8</column>
+<column name="i2_fu_64">9, 2, 4, 8</column>
+<column name="indvar_flatten19_fu_68">9, 2, 8, 16</column>
+<column name="j1_fu_60">9, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -124,49 +120,23 @@
 <column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter6_reg">1, 0, 1, 0</column>
-<column name="i2_fu_86">4, 0, 4, 0</column>
-<column name="indvar_flatten19_fu_90">8, 0, 8, 0</column>
-<column name="j1_fu_82">4, 0, 4, 0</column>
-<column name="lshr_ln2_reg_638">2, 0, 2, 0</column>
-<column name="p_cast12_mid2_v_reg_624">2, 0, 2, 0</column>
-<column name="trunc_ln48_reg_619">2, 0, 2, 0</column>
-<column name="trunc_ln49_reg_630">2, 0, 2, 0</column>
-<column name="v36_reg_739">32, 0, 32, 0</column>
-<column name="v37_reg_744">32, 0, 32, 0</column>
-<column name="v84_10_addr_reg_703">4, 0, 4, 0</column>
-<column name="v84_11_addr_reg_709">4, 0, 4, 0</column>
-<column name="v84_12_addr_reg_715">4, 0, 4, 0</column>
-<column name="v84_13_addr_reg_721">4, 0, 4, 0</column>
-<column name="v84_14_addr_reg_727">4, 0, 4, 0</column>
-<column name="v84_15_addr_reg_733">4, 0, 4, 0</column>
-<column name="v84_1_addr_reg_649">4, 0, 4, 0</column>
-<column name="v84_2_addr_reg_655">4, 0, 4, 0</column>
-<column name="v84_3_addr_reg_661">4, 0, 4, 0</column>
-<column name="v84_4_addr_reg_667">4, 0, 4, 0</column>
-<column name="v84_5_addr_reg_673">4, 0, 4, 0</column>
-<column name="v84_6_addr_reg_679">4, 0, 4, 0</column>
-<column name="v84_7_addr_reg_685">4, 0, 4, 0</column>
-<column name="v84_8_addr_reg_691">4, 0, 4, 0</column>
-<column name="v84_9_addr_reg_697">4, 0, 4, 0</column>
-<column name="v84_addr_reg_643">4, 0, 4, 0</column>
-<column name="trunc_ln48_reg_619">64, 32, 2, 0</column>
-<column name="trunc_ln49_reg_630">64, 32, 2, 0</column>
-<column name="v84_10_addr_reg_703">64, 32, 4, 0</column>
-<column name="v84_11_addr_reg_709">64, 32, 4, 0</column>
-<column name="v84_12_addr_reg_715">64, 32, 4, 0</column>
-<column name="v84_13_addr_reg_721">64, 32, 4, 0</column>
-<column name="v84_14_addr_reg_727">64, 32, 4, 0</column>
-<column name="v84_15_addr_reg_733">64, 32, 4, 0</column>
-<column name="v84_1_addr_reg_649">64, 32, 4, 0</column>
-<column name="v84_2_addr_reg_655">64, 32, 4, 0</column>
-<column name="v84_3_addr_reg_661">64, 32, 4, 0</column>
-<column name="v84_4_addr_reg_667">64, 32, 4, 0</column>
-<column name="v84_5_addr_reg_673">64, 32, 4, 0</column>
-<column name="v84_6_addr_reg_679">64, 32, 4, 0</column>
-<column name="v84_7_addr_reg_685">64, 32, 4, 0</column>
-<column name="v84_8_addr_reg_691">64, 32, 4, 0</column>
-<column name="v84_9_addr_reg_697">64, 32, 4, 0</column>
-<column name="v84_addr_reg_643">64, 32, 4, 0</column>
+<column name="i2_fu_64">4, 0, 4, 0</column>
+<column name="indvar_flatten19_fu_68">8, 0, 8, 0</column>
+<column name="j1_fu_60">4, 0, 4, 0</column>
+<column name="p_cast9_mid2_v_reg_333">2, 0, 2, 0</column>
+<column name="select_ln46_reg_323">4, 0, 4, 0</column>
+<column name="trunc_ln46_reg_328">2, 0, 2, 0</column>
+<column name="v36_reg_363">32, 0, 32, 0</column>
+<column name="v37_reg_368">32, 0, 32, 0</column>
+<column name="v84_1_addr_reg_345">6, 0, 6, 0</column>
+<column name="v84_2_addr_reg_351">6, 0, 6, 0</column>
+<column name="v84_3_addr_reg_357">6, 0, 6, 0</column>
+<column name="v84_addr_reg_339">6, 0, 6, 0</column>
+<column name="trunc_ln46_reg_328">64, 32, 2, 0</column>
+<column name="v84_1_addr_reg_345">64, 32, 6, 0</column>
+<column name="v84_2_addr_reg_351">64, 32, 6, 0</column>
+<column name="v84_3_addr_reg_357">64, 32, 6, 0</column>
+<column name="v84_addr_reg_339">64, 32, 6, 0</column>
 </table>
 </item>
 </section>
@@ -182,122 +152,38 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
-<column name="grp_fu_2399_p_din0">out, 32, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
-<column name="grp_fu_2399_p_din1">out, 32, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
-<column name="grp_fu_2399_p_dout0">in, 32, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
-<column name="grp_fu_2399_p_ce">out, 1, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
-<column name="v84_15_address0">out, 4, ap_memory, v84_15, array</column>
-<column name="v84_15_ce0">out, 1, ap_memory, v84_15, array</column>
-<column name="v84_15_we0">out, 1, ap_memory, v84_15, array</column>
-<column name="v84_15_d0">out, 32, ap_memory, v84_15, array</column>
-<column name="v84_15_address1">out, 4, ap_memory, v84_15, array</column>
-<column name="v84_15_ce1">out, 1, ap_memory, v84_15, array</column>
-<column name="v84_15_q1">in, 32, ap_memory, v84_15, array</column>
-<column name="v84_14_address0">out, 4, ap_memory, v84_14, array</column>
-<column name="v84_14_ce0">out, 1, ap_memory, v84_14, array</column>
-<column name="v84_14_we0">out, 1, ap_memory, v84_14, array</column>
-<column name="v84_14_d0">out, 32, ap_memory, v84_14, array</column>
-<column name="v84_14_address1">out, 4, ap_memory, v84_14, array</column>
-<column name="v84_14_ce1">out, 1, ap_memory, v84_14, array</column>
-<column name="v84_14_q1">in, 32, ap_memory, v84_14, array</column>
-<column name="v84_13_address0">out, 4, ap_memory, v84_13, array</column>
-<column name="v84_13_ce0">out, 1, ap_memory, v84_13, array</column>
-<column name="v84_13_we0">out, 1, ap_memory, v84_13, array</column>
-<column name="v84_13_d0">out, 32, ap_memory, v84_13, array</column>
-<column name="v84_13_address1">out, 4, ap_memory, v84_13, array</column>
-<column name="v84_13_ce1">out, 1, ap_memory, v84_13, array</column>
-<column name="v84_13_q1">in, 32, ap_memory, v84_13, array</column>
-<column name="v84_12_address0">out, 4, ap_memory, v84_12, array</column>
-<column name="v84_12_ce0">out, 1, ap_memory, v84_12, array</column>
-<column name="v84_12_we0">out, 1, ap_memory, v84_12, array</column>
-<column name="v84_12_d0">out, 32, ap_memory, v84_12, array</column>
-<column name="v84_12_address1">out, 4, ap_memory, v84_12, array</column>
-<column name="v84_12_ce1">out, 1, ap_memory, v84_12, array</column>
-<column name="v84_12_q1">in, 32, ap_memory, v84_12, array</column>
-<column name="v84_11_address0">out, 4, ap_memory, v84_11, array</column>
-<column name="v84_11_ce0">out, 1, ap_memory, v84_11, array</column>
-<column name="v84_11_we0">out, 1, ap_memory, v84_11, array</column>
-<column name="v84_11_d0">out, 32, ap_memory, v84_11, array</column>
-<column name="v84_11_address1">out, 4, ap_memory, v84_11, array</column>
-<column name="v84_11_ce1">out, 1, ap_memory, v84_11, array</column>
-<column name="v84_11_q1">in, 32, ap_memory, v84_11, array</column>
-<column name="v84_10_address0">out, 4, ap_memory, v84_10, array</column>
-<column name="v84_10_ce0">out, 1, ap_memory, v84_10, array</column>
-<column name="v84_10_we0">out, 1, ap_memory, v84_10, array</column>
-<column name="v84_10_d0">out, 32, ap_memory, v84_10, array</column>
-<column name="v84_10_address1">out, 4, ap_memory, v84_10, array</column>
-<column name="v84_10_ce1">out, 1, ap_memory, v84_10, array</column>
-<column name="v84_10_q1">in, 32, ap_memory, v84_10, array</column>
-<column name="v84_9_address0">out, 4, ap_memory, v84_9, array</column>
-<column name="v84_9_ce0">out, 1, ap_memory, v84_9, array</column>
-<column name="v84_9_we0">out, 1, ap_memory, v84_9, array</column>
-<column name="v84_9_d0">out, 32, ap_memory, v84_9, array</column>
-<column name="v84_9_address1">out, 4, ap_memory, v84_9, array</column>
-<column name="v84_9_ce1">out, 1, ap_memory, v84_9, array</column>
-<column name="v84_9_q1">in, 32, ap_memory, v84_9, array</column>
-<column name="v84_8_address0">out, 4, ap_memory, v84_8, array</column>
-<column name="v84_8_ce0">out, 1, ap_memory, v84_8, array</column>
-<column name="v84_8_we0">out, 1, ap_memory, v84_8, array</column>
-<column name="v84_8_d0">out, 32, ap_memory, v84_8, array</column>
-<column name="v84_8_address1">out, 4, ap_memory, v84_8, array</column>
-<column name="v84_8_ce1">out, 1, ap_memory, v84_8, array</column>
-<column name="v84_8_q1">in, 32, ap_memory, v84_8, array</column>
-<column name="v84_7_address0">out, 4, ap_memory, v84_7, array</column>
-<column name="v84_7_ce0">out, 1, ap_memory, v84_7, array</column>
-<column name="v84_7_we0">out, 1, ap_memory, v84_7, array</column>
-<column name="v84_7_d0">out, 32, ap_memory, v84_7, array</column>
-<column name="v84_7_address1">out, 4, ap_memory, v84_7, array</column>
-<column name="v84_7_ce1">out, 1, ap_memory, v84_7, array</column>
-<column name="v84_7_q1">in, 32, ap_memory, v84_7, array</column>
-<column name="v84_6_address0">out, 4, ap_memory, v84_6, array</column>
-<column name="v84_6_ce0">out, 1, ap_memory, v84_6, array</column>
-<column name="v84_6_we0">out, 1, ap_memory, v84_6, array</column>
-<column name="v84_6_d0">out, 32, ap_memory, v84_6, array</column>
-<column name="v84_6_address1">out, 4, ap_memory, v84_6, array</column>
-<column name="v84_6_ce1">out, 1, ap_memory, v84_6, array</column>
-<column name="v84_6_q1">in, 32, ap_memory, v84_6, array</column>
-<column name="v84_5_address0">out, 4, ap_memory, v84_5, array</column>
-<column name="v84_5_ce0">out, 1, ap_memory, v84_5, array</column>
-<column name="v84_5_we0">out, 1, ap_memory, v84_5, array</column>
-<column name="v84_5_d0">out, 32, ap_memory, v84_5, array</column>
-<column name="v84_5_address1">out, 4, ap_memory, v84_5, array</column>
-<column name="v84_5_ce1">out, 1, ap_memory, v84_5, array</column>
-<column name="v84_5_q1">in, 32, ap_memory, v84_5, array</column>
-<column name="v84_4_address0">out, 4, ap_memory, v84_4, array</column>
-<column name="v84_4_ce0">out, 1, ap_memory, v84_4, array</column>
-<column name="v84_4_we0">out, 1, ap_memory, v84_4, array</column>
-<column name="v84_4_d0">out, 32, ap_memory, v84_4, array</column>
-<column name="v84_4_address1">out, 4, ap_memory, v84_4, array</column>
-<column name="v84_4_ce1">out, 1, ap_memory, v84_4, array</column>
-<column name="v84_4_q1">in, 32, ap_memory, v84_4, array</column>
-<column name="v84_3_address0">out, 4, ap_memory, v84_3, array</column>
-<column name="v84_3_ce0">out, 1, ap_memory, v84_3, array</column>
-<column name="v84_3_we0">out, 1, ap_memory, v84_3, array</column>
-<column name="v84_3_d0">out, 32, ap_memory, v84_3, array</column>
-<column name="v84_3_address1">out, 4, ap_memory, v84_3, array</column>
-<column name="v84_3_ce1">out, 1, ap_memory, v84_3, array</column>
-<column name="v84_3_q1">in, 32, ap_memory, v84_3, array</column>
-<column name="v84_2_address0">out, 4, ap_memory, v84_2, array</column>
-<column name="v84_2_ce0">out, 1, ap_memory, v84_2, array</column>
-<column name="v84_2_we0">out, 1, ap_memory, v84_2, array</column>
-<column name="v84_2_d0">out, 32, ap_memory, v84_2, array</column>
-<column name="v84_2_address1">out, 4, ap_memory, v84_2, array</column>
-<column name="v84_2_ce1">out, 1, ap_memory, v84_2, array</column>
-<column name="v84_2_q1">in, 32, ap_memory, v84_2, array</column>
-<column name="v84_1_address0">out, 4, ap_memory, v84_1, array</column>
-<column name="v84_1_ce0">out, 1, ap_memory, v84_1, array</column>
-<column name="v84_1_we0">out, 1, ap_memory, v84_1, array</column>
-<column name="v84_1_d0">out, 32, ap_memory, v84_1, array</column>
-<column name="v84_1_address1">out, 4, ap_memory, v84_1, array</column>
-<column name="v84_1_ce1">out, 1, ap_memory, v84_1, array</column>
-<column name="v84_1_q1">in, 32, ap_memory, v84_1, array</column>
-<column name="v84_address0">out, 4, ap_memory, v84, array</column>
+<column name="grp_fu_633_p_din0">out, 32, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
+<column name="grp_fu_633_p_din1">out, 32, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
+<column name="grp_fu_633_p_dout0">in, 32, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
+<column name="grp_fu_633_p_ce">out, 1, ap_ctrl_hs, Self_attention_Pipeline_l_norm_i2_l_j1, return value</column>
+<column name="v84_address0">out, 6, ap_memory, v84, array</column>
 <column name="v84_ce0">out, 1, ap_memory, v84, array</column>
 <column name="v84_we0">out, 1, ap_memory, v84, array</column>
 <column name="v84_d0">out, 32, ap_memory, v84, array</column>
-<column name="v84_address1">out, 4, ap_memory, v84, array</column>
+<column name="v84_address1">out, 6, ap_memory, v84, array</column>
 <column name="v84_ce1">out, 1, ap_memory, v84, array</column>
 <column name="v84_q1">in, 32, ap_memory, v84, array</column>
+<column name="v84_1_address0">out, 6, ap_memory, v84_1, array</column>
+<column name="v84_1_ce0">out, 1, ap_memory, v84_1, array</column>
+<column name="v84_1_we0">out, 1, ap_memory, v84_1, array</column>
+<column name="v84_1_d0">out, 32, ap_memory, v84_1, array</column>
+<column name="v84_1_address1">out, 6, ap_memory, v84_1, array</column>
+<column name="v84_1_ce1">out, 1, ap_memory, v84_1, array</column>
+<column name="v84_1_q1">in, 32, ap_memory, v84_1, array</column>
+<column name="v84_2_address0">out, 6, ap_memory, v84_2, array</column>
+<column name="v84_2_ce0">out, 1, ap_memory, v84_2, array</column>
+<column name="v84_2_we0">out, 1, ap_memory, v84_2, array</column>
+<column name="v84_2_d0">out, 32, ap_memory, v84_2, array</column>
+<column name="v84_2_address1">out, 6, ap_memory, v84_2, array</column>
+<column name="v84_2_ce1">out, 1, ap_memory, v84_2, array</column>
+<column name="v84_2_q1">in, 32, ap_memory, v84_2, array</column>
+<column name="v84_3_address0">out, 6, ap_memory, v84_3, array</column>
+<column name="v84_3_ce0">out, 1, ap_memory, v84_3, array</column>
+<column name="v84_3_we0">out, 1, ap_memory, v84_3, array</column>
+<column name="v84_3_d0">out, 32, ap_memory, v84_3, array</column>
+<column name="v84_3_address1">out, 6, ap_memory, v84_3, array</column>
+<column name="v84_3_ce1">out, 1, ap_memory, v84_3, array</column>
+<column name="v84_3_q1">in, 32, ap_memory, v84_3, array</column>
 </table>
 </item>
 </section>

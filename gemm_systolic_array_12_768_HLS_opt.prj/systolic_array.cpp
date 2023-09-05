@@ -55,10 +55,9 @@ void systolic_array(hls::stream<d_type> A_loader[block_M], hls::stream<d_type> B
 		}
 	}
 
-	data_drain_C: for (int m = 0; m < block_M; m++) {
-	#pragma HLS UNROLL
-		for (int n = 0; n < block_N; n++) {
-		#pragma HLS PIPELINE II=1
+	data_drain_C: for (int n = 0; n < block_N; n++) {
+	#pragma HLS PIPELINE II=1
+		for (int m = 0; m < block_M; m++) {
 			C_drainer[m].write(C[m][n]);
 		}
 	}

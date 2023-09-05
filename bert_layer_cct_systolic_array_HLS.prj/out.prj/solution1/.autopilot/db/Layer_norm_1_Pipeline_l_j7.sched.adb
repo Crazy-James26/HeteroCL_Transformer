@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>62</coreId>
+						<coreId>59753280</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>sub_ln256</name>
+						<name>sub_ln247</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>48135680</coreId>
+						<coreId>62</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4058675872</coreId>
+						<coreId>4222263952</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4057455432</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4041157312</coreId>
+						<coreId>1818304628</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4028135392</coreId>
+						<coreId>4222263904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4042034464</coreId>
+						<coreId>4222263904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4068038080</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4054640992</coreId>
+						<coreId>4181938688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1818304628</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>233651600</coreId>
+						<coreId>4216973792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4074990656</coreId>
+						<coreId>256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4205642648</coreId>
+						<coreId>4191749232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4202555904</coreId>
+						<coreId>4217766928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4224098032</coreId>
+						<coreId>4217766576</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544367980</coreId>
+						<coreId>4183317104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4202555904</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -646,7 +646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4059235392</coreId>
+						<coreId>4185335328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -682,7 +682,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4212677760</coreId>
+						<coreId>542329856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -722,7 +722,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -764,7 +764,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4199043088</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -807,7 +807,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>42033424</coreId>
+						<coreId>1936942413</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -850,7 +850,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4205642336</coreId>
+						<coreId>4218443008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -875,7 +875,7 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>sub_ln256_read</name>
+						<name>sub_ln247_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -893,7 +893,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4047932816</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -936,7 +936,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>66038544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -979,7 +979,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4049188768</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1006,7 +1006,7 @@
 						<name>j7_2</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1022,7 +1022,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -1035,7 +1035,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>42033296</coreId>
+						<coreId>4222688080</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1060,10 +1060,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>icmp_ln253</name>
+						<name>icmp_ln244</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1079,7 +1079,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -1092,7 +1092,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1117,10 +1117,10 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>add_ln253</name>
+						<name>add_ln244</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1136,7 +1136,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -1149,7 +1149,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4190731728</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1174,10 +1174,10 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>br_ln253</name>
+						<name>br_ln244</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1193,7 +1193,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -1206,7 +1206,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4210595848</coreId>
+						<coreId>4211834544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1232,10 +1232,10 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>zext_ln253</name>
+						<name>zext_ln244</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1251,7 +1251,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -1264,7 +1264,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4053791792</coreId>
+						<coreId>156521360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1288,10 +1288,10 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>zext_ln256</name>
+						<name>zext_ln247</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>247</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1307,7 +1307,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>256</second>
+										<second>247</second>
 									</item>
 								</second>
 							</item>
@@ -1320,7 +1320,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4191445712</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1344,10 +1344,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>add_ln256</name>
+						<name>add_ln247</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>247</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1363,7 +1363,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>256</second>
+										<second>247</second>
 									</item>
 								</second>
 							</item>
@@ -1376,7 +1376,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>657612595</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1401,10 +1401,10 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>zext_ln256_2</name>
+						<name>zext_ln247_2</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>247</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1420,7 +1420,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>256</second>
+										<second>247</second>
 									</item>
 								</second>
 							</item>
@@ -1433,7 +1433,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>66037328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1460,7 +1460,7 @@
 						<name>v115_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>247</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1476,7 +1476,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>256</second>
+										<second>247</second>
 									</item>
 								</second>
 							</item>
@@ -1489,7 +1489,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4051591680</coreId>
+						<coreId>454659392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1518,7 +1518,7 @@
 						<name>v224_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>246</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1534,7 +1534,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>255</second>
+										<second>246</second>
 									</item>
 								</second>
 							</item>
@@ -1547,7 +1547,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4047799712</coreId>
+						<coreId>50316304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1576,7 +1576,7 @@
 						<name>v224_load</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>246</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1592,7 +1592,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>255</second>
+										<second>246</second>
 									</item>
 								</second>
 							</item>
@@ -1605,7 +1605,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4194068032</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1632,7 +1632,7 @@
 						<name>v143</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>246</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1648,7 +1648,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>255</second>
+										<second>246</second>
 									</item>
 								</second>
 							</item>
@@ -1661,7 +1661,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>55683808</coreId>
+						<coreId>4217891632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1688,7 +1688,7 @@
 						<name>v144</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>247</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1704,7 +1704,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>256</second>
+										<second>247</second>
 									</item>
 								</second>
 							</item>
@@ -1717,7 +1717,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>4217891024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1744,7 +1744,7 @@
 						<name>v146</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>258</lineNumber>
+						<lineNumber>249</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1760,7 +1760,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>258</second>
+										<second>249</second>
 									</item>
 								</second>
 							</item>
@@ -1773,7 +1773,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>263708544</coreId>
+						<coreId>24001568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1801,7 +1801,7 @@
 						<name>v147</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>259</lineNumber>
+						<lineNumber>250</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1817,7 +1817,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>259</second>
+										<second>250</second>
 									</item>
 								</second>
 							</item>
@@ -1830,7 +1830,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4209342160</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1858,7 +1858,7 @@
 						<name>v151</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>263</lineNumber>
+						<lineNumber>254</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1874,7 +1874,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>263</second>
+										<second>254</second>
 									</item>
 								</second>
 							</item>
@@ -1887,7 +1887,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1314013527</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1915,7 +1915,7 @@
 						<name>v225_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>264</lineNumber>
+						<lineNumber>255</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1931,7 +1931,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>264</second>
+										<second>255</second>
 									</item>
 								</second>
 							</item>
@@ -1944,7 +1944,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>13108832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1973,7 +1973,7 @@
 						<name>v225_load</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>264</lineNumber>
+						<lineNumber>255</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1989,7 +1989,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>264</second>
+										<second>255</second>
 									</item>
 								</second>
 							</item>
@@ -2002,7 +2002,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>63045360</coreId>
+						<coreId>43667072</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2029,7 +2029,7 @@
 						<name>v152</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>264</lineNumber>
+						<lineNumber>255</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2045,7 +2045,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>264</second>
+										<second>255</second>
 									</item>
 								</second>
 							</item>
@@ -2058,7 +2058,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>63045360</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2085,7 +2085,7 @@
 						<name>v153</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>265</lineNumber>
+						<lineNumber>256</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2101,7 +2101,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>265</second>
+										<second>256</second>
 									</item>
 								</second>
 							</item>
@@ -2114,7 +2114,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2139,10 +2139,10 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>bitcast_ln266</name>
+						<name>bitcast_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2158,7 +2158,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2171,7 +2171,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>55684120</coreId>
+						<coreId>61310112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2195,10 +2195,10 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>_ln266</name>
+						<name>_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2214,7 +2214,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2227,7 +2227,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>41973824</coreId>
+						<coreId>4186825904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2277,7 +2277,7 @@
 						<name>v226_10_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2293,7 +2293,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2306,7 +2306,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>22178592</coreId>
+						<coreId>4173404240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2332,10 +2332,10 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>v226_10_addr_write_ln266</name>
+						<name>v226_10_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2351,7 +2351,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2364,7 +2364,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4216598944</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2389,10 +2389,10 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2408,7 +2408,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2421,7 +2421,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>144</coreId>
+						<coreId>43665856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2448,7 +2448,7 @@
 						<name>v226_9_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2464,7 +2464,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2477,7 +2477,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4218411344</coreId>
+						<coreId>4027154368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2503,10 +2503,10 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>v226_9_addr_write_ln266</name>
+						<name>v226_9_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2522,7 +2522,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2535,7 +2535,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>60171808</coreId>
+						<coreId>4186826624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2560,10 +2560,10 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2579,7 +2579,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2592,7 +2592,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>56770384</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2619,7 +2619,7 @@
 						<name>v226_8_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2635,7 +2635,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2648,7 +2648,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>33826784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2674,10 +2674,10 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>v226_8_addr_write_ln266</name>
+						<name>v226_8_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2693,7 +2693,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2706,7 +2706,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4162581200</coreId>
+						<coreId>33825632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2731,10 +2731,10 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2750,7 +2750,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2763,7 +2763,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4166593488</coreId>
+						<coreId>4204433584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2790,7 +2790,7 @@
 						<name>v226_7_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2806,7 +2806,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2819,7 +2819,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4218411216</coreId>
+						<coreId>4204434640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2845,10 +2845,10 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>v226_7_addr_write_ln266</name>
+						<name>v226_7_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2864,7 +2864,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2877,7 +2877,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4212029984</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2902,10 +2902,10 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2921,7 +2921,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2934,7 +2934,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>144</coreId>
+						<coreId>15947200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2961,7 +2961,7 @@
 						<name>v226_6_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2977,7 +2977,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -2990,7 +2990,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>11049648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -3016,10 +3016,10 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>v226_6_addr_write_ln266</name>
+						<name>v226_6_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3035,7 +3035,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3048,7 +3048,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4227669312</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3073,10 +3073,10 @@
 					<Obj>
 						<type>0</type>
 						<id>87</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3092,7 +3092,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3105,7 +3105,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3132,7 +3132,7 @@
 						<name>v226_5_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3148,7 +3148,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3161,7 +3161,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>65976064</coreId>
+						<coreId>150875200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -3187,10 +3187,10 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>v226_5_addr_write_ln266</name>
+						<name>v226_5_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3206,7 +3206,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3219,7 +3219,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>29956688</coreId>
+						<coreId>53128832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3244,10 +3244,10 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3263,7 +3263,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3276,7 +3276,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4199864352</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3303,7 +3303,7 @@
 						<name>v226_4_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3319,7 +3319,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3332,7 +3332,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>4169273504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -3358,10 +3358,10 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>v226_4_addr_write_ln266</name>
+						<name>v226_4_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3377,7 +3377,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3390,7 +3390,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4208623312</coreId>
+						<coreId>6870272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3415,10 +3415,10 @@
 					<Obj>
 						<type>0</type>
 						<id>95</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3434,7 +3434,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3447,7 +3447,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>808595300</coreId>
+						<coreId>189602752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3474,7 +3474,7 @@
 						<name>v226_3_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3490,7 +3490,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3503,7 +3503,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4048717472</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -3529,10 +3529,10 @@
 					<Obj>
 						<type>0</type>
 						<id>98</id>
-						<name>v226_3_addr_write_ln266</name>
+						<name>v226_3_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3548,7 +3548,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3561,7 +3561,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>55176960</coreId>
+						<coreId>4028988720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3586,10 +3586,10 @@
 					<Obj>
 						<type>0</type>
 						<id>99</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3605,7 +3605,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3618,7 +3618,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1314013527</coreId>
+						<coreId>4028988112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3645,7 +3645,7 @@
 						<name>v226_2_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3661,7 +3661,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3674,7 +3674,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1314013527</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -3700,10 +3700,10 @@
 					<Obj>
 						<type>0</type>
 						<id>102</id>
-						<name>v226_2_addr_write_ln266</name>
+						<name>v226_2_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3719,7 +3719,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3732,7 +3732,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3757,10 +3757,10 @@
 					<Obj>
 						<type>0</type>
 						<id>103</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3776,7 +3776,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3789,7 +3789,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>144</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3816,7 +3816,7 @@
 						<name>v226_1_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3832,7 +3832,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3845,7 +3845,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>64754288</coreId>
+						<coreId>4093641176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -3871,10 +3871,10 @@
 					<Obj>
 						<type>0</type>
 						<id>106</id>
-						<name>v226_1_addr_write_ln266</name>
+						<name>v226_1_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3890,7 +3890,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3903,7 +3903,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4210031424</coreId>
+						<coreId>4226312528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3928,10 +3928,10 @@
 					<Obj>
 						<type>0</type>
 						<id>107</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3947,7 +3947,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -3960,7 +3960,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4210031424</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3987,7 +3987,7 @@
 						<name>v226_0_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4003,7 +4003,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -4016,7 +4016,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4056057296</coreId>
+						<coreId>1881171304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -4042,10 +4042,10 @@
 					<Obj>
 						<type>0</type>
 						<id>110</id>
-						<name>v226_0_addr_write_ln266</name>
+						<name>v226_0_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4061,7 +4061,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -4074,7 +4074,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4194646848</coreId>
+						<coreId>4028724352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4099,10 +4099,10 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4118,7 +4118,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -4131,7 +4131,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4056060608</coreId>
+						<coreId>4180606800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4158,7 +4158,7 @@
 						<name>v226_11_addr</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4174,7 +4174,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -4187,7 +4187,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4040409440</coreId>
+						<coreId>4206089056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -4213,10 +4213,10 @@
 					<Obj>
 						<type>0</type>
 						<id>114</id>
-						<name>v226_11_addr_write_ln266</name>
+						<name>v226_11_addr_write_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4232,7 +4232,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -4245,7 +4245,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4176084816</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4270,10 +4270,10 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>br_ln266</name>
+						<name>br_ln257</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>266</lineNumber>
+						<lineNumber>257</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4289,7 +4289,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>266</second>
+										<second>257</second>
 									</item>
 								</second>
 							</item>
@@ -4302,7 +4302,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4194647160</coreId>
+						<coreId>4226311312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4326,10 +4326,10 @@
 					<Obj>
 						<type>0</type>
 						<id>117</id>
-						<name>j7_write_ln253</name>
+						<name>j7_write_ln244</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4345,7 +4345,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -4358,7 +4358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4165367904</coreId>
+						<coreId>4188309296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4385,10 +4385,10 @@
 					<Obj>
 						<type>0</type>
 						<id>118</id>
-						<name>br_ln253</name>
+						<name>br_ln244</name>
 						<fileName>bert_layer.cpp</fileName>
 						<fileDirectory>/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>244</lineNumber>
 						<contextFuncName>Layer_norm</contextFuncName>
 						<contextNormFuncName>Layer_norm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4404,7 +4404,7 @@
 											<first>bert_layer.cpp</first>
 											<second>Layer_norm</second>
 										</first>
-										<second>253</second>
+										<second>244</second>
 									</item>
 								</second>
 							</item>
@@ -4417,7 +4417,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4172113616</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4459,7 +4459,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4226208048</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4504,7 +4504,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4174832144</coreId>
+						<coreId>191884624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4535,7 +4535,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -4566,7 +4566,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4044276712</coreId>
+						<coreId>4204500592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -4597,7 +4597,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>448</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -4628,7 +4628,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>4182467424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -4659,7 +4659,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4068396304</coreId>
+						<coreId>320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4690,7 +4690,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4068203552</coreId>
+						<coreId>4363360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4721,7 +4721,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4205528112</coreId>
+						<coreId>43846448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4752,7 +4752,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4035885456</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4783,7 +4783,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4066156384</coreId>
+						<coreId>4173613120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4814,7 +4814,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4029626048</coreId>
+						<coreId>4168539424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4845,7 +4845,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4049921152</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4876,7 +4876,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4191582080</coreId>
+						<coreId>24133328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4907,7 +4907,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4065891904</coreId>
+						<coreId>24133936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4938,7 +4938,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4038968688</coreId>
+						<coreId>24134432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -4969,7 +4969,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4076864688</coreId>
+						<coreId>1718558834</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -5003,7 +5003,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4064167952</coreId>
+					<coreId>1868770936</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5040,7 +5040,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967040</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5074,7 +5074,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>320</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5122,7 +5122,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>55683680</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5155,7 +5155,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4218411344</coreId>
+					<coreId>139154912</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5188,7 +5188,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4052828240</coreId>
+					<coreId>33826240</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5221,7 +5221,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4183507232</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5254,7 +5254,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4212029984</coreId>
+					<coreId>4169273664</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5287,7 +5287,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>65976064</coreId>
+					<coreId>150874752</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5320,7 +5320,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>560</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5353,7 +5353,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4048717472</coreId>
+					<coreId>62</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5386,7 +5386,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1314013527</coreId>
+					<coreId>4191558032</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5419,7 +5419,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>64754288</coreId>
+					<coreId>39918560</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5452,7 +5452,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4044276272</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5485,7 +5485,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>30255712</coreId>
+					<coreId>191884624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5518,7 +5518,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4224098048</coreId>
+					<coreId>4191558048</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5550,7 +5550,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>55683808</coreId>
+					<coreId>43845232</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

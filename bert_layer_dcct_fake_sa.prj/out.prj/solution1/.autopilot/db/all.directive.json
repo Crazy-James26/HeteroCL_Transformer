@@ -1,3 +1,18 @@
-{
-  
-}
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "Bert_layer",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/jz2292\/project\/transformer\/heterocl_file\/bert_layer_dcct_fake_sa.prj\/run.tcl",
+          "sourceLine": "36",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "Bert_layer"
+              }]
+          }
+        }]
+    }]}

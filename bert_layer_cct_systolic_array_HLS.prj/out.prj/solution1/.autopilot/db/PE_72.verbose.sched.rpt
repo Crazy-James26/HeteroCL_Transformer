@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'PE_72'
 ================================================================
-* Date:           Mon Sep  4 09:30:26 2023
+* Date:           Mon Sep  4 23:06:41 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -96,10 +96,10 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 3.35>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%k_05 = alloca i32 1"   --->   Operation 14 'alloca' 'k_05' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%C_out_out_0 = alloca i32 1"   --->   Operation 15 'alloca' 'C_out_out_0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_9_6, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_9_5, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_5_10, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_5_9, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_9_6, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_9_5, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_5_10, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_5_9, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln7 = store i10 0, i10 %k_05" [systolic_array.cpp:7]   --->   Operation 20 'store' 'store_ln7' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln7 = br void %for.inc" [systolic_array.cpp:7]   --->   Operation 21 'br' 'br_ln7' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%k = load i10 %k_05" [systolic_array.cpp:7]   --->   Operation 22 'load' 'k' <Predicate = true> <Delay = 0.00>
@@ -117,17 +117,17 @@ ST_2 : Operation 31 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op
 
 State 3 <SV = 2> <Delay = 5.70>
 ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = bitcast i32 %A_fifo_5_9_read" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 32 'bitcast' 'tmp' <Predicate = (!icmp_ln7)> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_150 = bitcast i32 %B_fifo_9_5_read" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 33 'bitcast' 'tmp_150' <Predicate = (!icmp_ln7)> <Delay = 0.00>
-ST_3 : Operation 34 [4/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_150" [systolic_array.cpp:11]   --->   Operation 34 'fmul' 'mul' <Predicate = (!icmp_ln7)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_104 = bitcast i32 %B_fifo_9_5_read" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 33 'bitcast' 'tmp_104' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_3 : Operation 34 [4/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_104" [systolic_array.cpp:11]   --->   Operation 34 'fmul' 'mul' <Predicate = (!icmp_ln7)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 5.70>
-ST_4 : Operation 35 [3/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_150" [systolic_array.cpp:11]   --->   Operation 35 'fmul' 'mul' <Predicate = (!icmp_ln7)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 35 [3/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_104" [systolic_array.cpp:11]   --->   Operation 35 'fmul' 'mul' <Predicate = (!icmp_ln7)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 5.70>
-ST_5 : Operation 36 [2/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_150" [systolic_array.cpp:11]   --->   Operation 36 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [2/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_104" [systolic_array.cpp:11]   --->   Operation 36 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 5.70>
-ST_6 : Operation 37 [1/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_150" [systolic_array.cpp:11]   --->   Operation 37 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 37 [1/4] (5.70ns)   --->   "%mul = fmul i32 %tmp, i32 %tmp_104" [systolic_array.cpp:11]   --->   Operation 37 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 7.25>
 ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%C_out_out_0_load = load i32 %C_out_out_0" [systolic_array.cpp:11]   --->   Operation 38 'load' 'C_out_out_0_load' <Predicate = true> <Delay = 0.00>
@@ -145,8 +145,8 @@ State 10 <SV = 9> <Delay = 7.25>
 ST_10 : Operation 42 [2/5] (7.25ns)   --->   "%add = fadd i32 %C_out_out_0_load, i32 %mul" [systolic_array.cpp:11]   --->   Operation 42 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 7.25>
-ST_11 : Operation 43 [1/1] (0.00ns)   --->   "%specpipeline_ln8 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [systolic_array.cpp:8]   --->   Operation 43 'specpipeline' 'specpipeline_ln8' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%specloopname_ln7 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [systolic_array.cpp:7]   --->   Operation 44 'specloopname' 'specloopname_ln7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 43 [1/1] (0.00ns)   --->   "%specpipeline_ln8 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_31" [systolic_array.cpp:8]   --->   Operation 43 'specpipeline' 'specpipeline_ln8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%specloopname_ln7 = specloopname void @_ssdm_op_SpecLoopName, void @empty_42" [systolic_array.cpp:7]   --->   Operation 44 'specloopname' 'specloopname_ln7' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 45 [1/5] (7.25ns)   --->   "%add = fadd i32 %C_out_out_0_load, i32 %mul" [systolic_array.cpp:11]   --->   Operation 45 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_11 : Operation 46 [1/1] (0.00ns)   --->   "%store_ln7 = store i32 %add, i32 %C_out_out_0" [systolic_array.cpp:7]   --->   Operation 46 'store' 'store_ln7' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln7 = br void %for.inc" [systolic_array.cpp:7]   --->   Operation 47 'br' 'br_ln7' <Predicate = true> <Delay = 0.00>

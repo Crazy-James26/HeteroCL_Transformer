@@ -1,12 +1,11 @@
 set SynModuleInfo {
   {SRCNAME Bert_layer_Pipeline_l_bias_i_l_j MODELNAME Bert_layer_Pipeline_l_bias_i_l_j RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i_l_j
     SUBMODULES {
-      {MODELNAME Bert_layer_urem_10ns_5ns_4_14_1 RTLNAME Bert_layer_urem_10ns_5ns_4_14_1 BINDTYPE op TYPE urem IMPL auto LATENCY 13 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_mul_mul_10ns_11ns_21_4_1 RTLNAME Bert_layer_mul_mul_10ns_11ns_21_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_flow_control_loop_pipe_sequential_init RTLNAME Bert_layer_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME Bert_layer_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME init_block_AB_proc35 MODELNAME init_block_AB_proc35 RTLNAME Bert_layer_init_block_AB_proc35}
+  {SRCNAME init_block_AB_proc70_Pipeline_init_block_AB MODELNAME init_block_AB_proc70_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc70_Pipeline_init_block_AB}
+  {SRCNAME init_block_AB_proc70 MODELNAME init_block_AB_proc70 RTLNAME Bert_layer_init_block_AB_proc70}
   {SRCNAME systolic_array_k_768_Loop_data_load_proc15 MODELNAME systolic_array_k_768_Loop_data_load_proc15 RTLNAME Bert_layer_systolic_array_k_768_Loop_data_load_proc15
     SUBMODULES {
       {MODELNAME Bert_layer_flow_control_loop_pipe RTLNAME Bert_layer_flow_control_loop_pipe BINDTYPE interface TYPE internal_upc_flow_control INSTNAME Bert_layer_flow_control_loop_pipe_U}
@@ -340,13 +339,30 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_PE_145_U0 RTLNAME Bert_layer_start_for_PE_145_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME store_block_C_proc36_Pipeline_store_block_C MODELNAME store_block_C_proc36_Pipeline_store_block_C RTLNAME Bert_layer_store_block_C_proc36_Pipeline_store_block_C
-    SUBMODULES {
-      {MODELNAME Bert_layer_mux_1264_32_1_1 RTLNAME Bert_layer_mux_1264_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_urem_64s_5ns_64_68_1 RTLNAME Bert_layer_urem_64s_5ns_64_68_1 BINDTYPE op TYPE urem IMPL auto LATENCY 67 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME store_block_C_proc36 MODELNAME store_block_C_proc36 RTLNAME Bert_layer_store_block_C_proc36}
+  {SRCNAME VITIS_LOOP_40_4_proc_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc MODELNAME VITIS_LOOP_40_4_proc RTLNAME Bert_layer_VITIS_LOOP_40_4_proc}
+  {SRCNAME VITIS_LOOP_40_4_proc71_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc71_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc71_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc71 MODELNAME VITIS_LOOP_40_4_proc71 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc71}
+  {SRCNAME VITIS_LOOP_40_4_proc72_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc72_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc72_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc72 MODELNAME VITIS_LOOP_40_4_proc72 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc72}
+  {SRCNAME VITIS_LOOP_40_4_proc73_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc73_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc73_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc73 MODELNAME VITIS_LOOP_40_4_proc73 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc73}
+  {SRCNAME VITIS_LOOP_40_4_proc74_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc74_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc74_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc74 MODELNAME VITIS_LOOP_40_4_proc74 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc74}
+  {SRCNAME VITIS_LOOP_40_4_proc75_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc75_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc75_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc75 MODELNAME VITIS_LOOP_40_4_proc75 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc75}
+  {SRCNAME VITIS_LOOP_40_4_proc76_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc76_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc76_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc76 MODELNAME VITIS_LOOP_40_4_proc76 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc76}
+  {SRCNAME VITIS_LOOP_40_4_proc77_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc77_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc77_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc77 MODELNAME VITIS_LOOP_40_4_proc77 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc77}
+  {SRCNAME VITIS_LOOP_40_4_proc78_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc78_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc78_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc78 MODELNAME VITIS_LOOP_40_4_proc78 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc78}
+  {SRCNAME VITIS_LOOP_40_4_proc79_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc79_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc79_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc79 MODELNAME VITIS_LOOP_40_4_proc79 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc79}
+  {SRCNAME VITIS_LOOP_40_4_proc80_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc80_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc80_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc80 MODELNAME VITIS_LOOP_40_4_proc80 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc80}
+  {SRCNAME VITIS_LOOP_40_4_proc81_Pipeline_VITIS_LOOP_40_4 MODELNAME VITIS_LOOP_40_4_proc81_Pipeline_VITIS_LOOP_40_4 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc81_Pipeline_VITIS_LOOP_40_4}
+  {SRCNAME VITIS_LOOP_40_4_proc81 MODELNAME VITIS_LOOP_40_4_proc81 RTLNAME Bert_layer_VITIS_LOOP_40_4_proc81}
   {SRCNAME dataflow_in_loop_VITIS_LOOP_20_1 MODELNAME dataflow_in_loop_VITIS_LOOP_20_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_20_1
     SUBMODULES {
       {MODELNAME Bert_layer_fifo_w32_d2_S_x RTLNAME Bert_layer_fifo_w32_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
@@ -355,15 +371,10 @@ set SynModuleInfo {
     }
   }
   {SRCNAME gemm_systolic_array_qkv MODELNAME gemm_systolic_array_qkv RTLNAME Bert_layer_gemm_systolic_array_qkv}
-  {SRCNAME Bert_layer_Pipeline_l_bias_i_l_j31 MODELNAME Bert_layer_Pipeline_l_bias_i_l_j31 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i_l_j31}
-  {SRCNAME Bert_layer_Pipeline_l_bias_i_l_j32 MODELNAME Bert_layer_Pipeline_l_bias_i_l_j32 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i_l_j32}
-  {SRCNAME Self_attention_Pipeline_l_mh_separate_i_s_l_j_s MODELNAME Self_attention_Pipeline_l_mh_separate_i_s_l_j_s RTLNAME Bert_layer_Self_attention_Pipeline_l_mh_separate_i_s_l_j_s
-    SUBMODULES {
-      {MODELNAME Bert_layer_urem_10ns_5ns_10_14_1 RTLNAME Bert_layer_urem_10ns_5ns_10_14_1 BINDTYPE op TYPE urem IMPL auto LATENCY 13 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_mux_1210_32_1_1 RTLNAME Bert_layer_mux_1210_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME Self_attention_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2 MODELNAME Self_attention_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2 RTLNAME Bert_layer_Self_attention_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2}
+  {SRCNAME Bert_layer_Pipeline_l_bias_i_l_j37 MODELNAME Bert_layer_Pipeline_l_bias_i_l_j37 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i_l_j37}
+  {SRCNAME Bert_layer_Pipeline_l_bias_i_l_j38 MODELNAME Bert_layer_Pipeline_l_bias_i_l_j38 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i_l_j38}
+  {SRCNAME Self_attention_Pipeline_l_mh_separate_i_s_l_j_s MODELNAME Self_attention_Pipeline_l_mh_separate_i_s_l_j_s RTLNAME Bert_layer_Self_attention_Pipeline_l_mh_separate_i_s_l_j_s}
+  {SRCNAME Self_attention_Pipeline_VITIS_LOOP_38_1_VITIS_LOOP_39_2 MODELNAME Self_attention_Pipeline_VITIS_LOOP_38_1_VITIS_LOOP_39_2 RTLNAME Bert_layer_Self_attention_Pipeline_VITIS_LOOP_38_1_VITIS_LOOP_39_2}
   {SRCNAME init_block_AB_proc_Pipeline_init_block_AB MODELNAME init_block_AB_proc_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc_Pipeline_init_block_AB}
   {SRCNAME init_block_AB_proc MODELNAME init_block_AB_proc RTLNAME Bert_layer_init_block_AB_proc}
   {SRCNAME systolic_array_k_64_Loop_data_load_proc17 MODELNAME systolic_array_k_64_Loop_data_load_proc17 RTLNAME Bert_layer_systolic_array_k_64_Loop_data_load_proc17}
@@ -418,12 +429,14 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_PE_593_U0 RTLNAME Bert_layer_start_for_PE_593_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME store_block_C_proc_Pipeline_store_block_C MODELNAME store_block_C_proc_Pipeline_store_block_C RTLNAME Bert_layer_store_block_C_proc_Pipeline_store_block_C
-    SUBMODULES {
-      {MODELNAME Bert_layer_mux_42_32_1_1 RTLNAME Bert_layer_mux_42_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME store_block_C_proc MODELNAME store_block_C_proc RTLNAME Bert_layer_store_block_C_proc}
+  {SRCNAME VITIS_LOOP_86_4_proc_Pipeline_VITIS_LOOP_86_4 MODELNAME VITIS_LOOP_86_4_proc_Pipeline_VITIS_LOOP_86_4 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc_Pipeline_VITIS_LOOP_86_4}
+  {SRCNAME VITIS_LOOP_86_4_proc MODELNAME VITIS_LOOP_86_4_proc RTLNAME Bert_layer_VITIS_LOOP_86_4_proc}
+  {SRCNAME VITIS_LOOP_86_4_proc27_Pipeline_VITIS_LOOP_86_4 MODELNAME VITIS_LOOP_86_4_proc27_Pipeline_VITIS_LOOP_86_4 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc27_Pipeline_VITIS_LOOP_86_4}
+  {SRCNAME VITIS_LOOP_86_4_proc27 MODELNAME VITIS_LOOP_86_4_proc27 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc27}
+  {SRCNAME VITIS_LOOP_86_4_proc28_Pipeline_VITIS_LOOP_86_4 MODELNAME VITIS_LOOP_86_4_proc28_Pipeline_VITIS_LOOP_86_4 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc28_Pipeline_VITIS_LOOP_86_4}
+  {SRCNAME VITIS_LOOP_86_4_proc28 MODELNAME VITIS_LOOP_86_4_proc28 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc28}
+  {SRCNAME VITIS_LOOP_86_4_proc29_Pipeline_VITIS_LOOP_86_4 MODELNAME VITIS_LOOP_86_4_proc29_Pipeline_VITIS_LOOP_86_4 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc29_Pipeline_VITIS_LOOP_86_4}
+  {SRCNAME VITIS_LOOP_86_4_proc29 MODELNAME VITIS_LOOP_86_4_proc29 RTLNAME Bert_layer_VITIS_LOOP_86_4_proc29}
   {SRCNAME dataflow_in_loop_VITIS_LOOP_66_1 MODELNAME dataflow_in_loop_VITIS_LOOP_66_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_66_1
     SUBMODULES {
       {MODELNAME Bert_layer_fifo_w32_d2_S_x1 RTLNAME Bert_layer_fifo_w32_d2_S_x1 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
@@ -431,19 +444,23 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_systolic_array_k_64_U0 RTLNAME Bert_layer_start_for_systolic_array_k_64_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME dataflow_parent_loop_proc37 MODELNAME dataflow_parent_loop_proc37 RTLNAME Bert_layer_dataflow_parent_loop_proc37}
+  {SRCNAME dataflow_parent_loop_proc82 MODELNAME dataflow_parent_loop_proc82 RTLNAME Bert_layer_dataflow_parent_loop_proc82}
   {SRCNAME gemm_systolic_array_attn MODELNAME gemm_systolic_array_attn RTLNAME Bert_layer_gemm_systolic_array_attn}
-  {SRCNAME Self_attention_Pipeline_l_norm_i2_l_j1 MODELNAME Self_attention_Pipeline_l_norm_i2_l_j1 RTLNAME Bert_layer_Self_attention_Pipeline_l_norm_i2_l_j1}
-  {SRCNAME Self_attention_Pipeline_VITIS_LOOP_68_1 MODELNAME Self_attention_Pipeline_VITIS_LOOP_68_1 RTLNAME Bert_layer_Self_attention_Pipeline_VITIS_LOOP_68_1}
+  {SRCNAME Self_attention_Pipeline_l_norm_i2_l_j1 MODELNAME Self_attention_Pipeline_l_norm_i2_l_j1 RTLNAME Bert_layer_Self_attention_Pipeline_l_norm_i2_l_j1
+    SUBMODULES {
+      {MODELNAME Bert_layer_mux_42_32_1_1 RTLNAME Bert_layer_mux_42_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME Self_attention_Pipeline_VITIS_LOOP_65_1 MODELNAME Self_attention_Pipeline_VITIS_LOOP_65_1 RTLNAME Bert_layer_Self_attention_Pipeline_VITIS_LOOP_65_1}
   {SRCNAME Self_attention_Pipeline_l_j2 MODELNAME Self_attention_Pipeline_l_j2 RTLNAME Bert_layer_Self_attention_Pipeline_l_j2
     SUBMODULES {
       {MODELNAME Bert_layer_fexp_32ns_32ns_32_10_full_dsp_1 RTLNAME Bert_layer_fexp_32ns_32ns_32_10_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 9 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME Self_attention_Pipeline_l_update_i4_l_j3 MODELNAME Self_attention_Pipeline_l_update_i4_l_j3 RTLNAME Bert_layer_Self_attention_Pipeline_l_update_i4_l_j3}
-  {SRCNAME Self_attention_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2 MODELNAME Self_attention_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2 RTLNAME Bert_layer_Self_attention_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2}
-  {SRCNAME init_block_AB_proc27_Pipeline_init_block_AB MODELNAME init_block_AB_proc27_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc27_Pipeline_init_block_AB}
-  {SRCNAME init_block_AB_proc27 MODELNAME init_block_AB_proc27 RTLNAME Bert_layer_init_block_AB_proc27}
+  {SRCNAME Self_attention_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2 MODELNAME Self_attention_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2 RTLNAME Bert_layer_Self_attention_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2}
+  {SRCNAME init_block_AB_proc30_Pipeline_init_block_AB MODELNAME init_block_AB_proc30_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc30_Pipeline_init_block_AB}
+  {SRCNAME init_block_AB_proc30 MODELNAME init_block_AB_proc30 RTLNAME Bert_layer_init_block_AB_proc30}
   {SRCNAME systolic_array_k_12_Loop_data_load_proc19 MODELNAME systolic_array_k_12_Loop_data_load_proc19 RTLNAME Bert_layer_systolic_array_k_12_Loop_data_load_proc19}
   {SRCNAME PE.595 MODELNAME PE_595 RTLNAME Bert_layer_PE_595}
   {SRCNAME PE.596 MODELNAME PE_596 RTLNAME Bert_layer_PE_596}
@@ -492,9 +509,15 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_PE_609_U0 RTLNAME Bert_layer_start_for_PE_609_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME store_block_C_proc28_Pipeline_store_block_C MODELNAME store_block_C_proc28_Pipeline_store_block_C RTLNAME Bert_layer_store_block_C_proc28_Pipeline_store_block_C}
-  {SRCNAME store_block_C_proc28 MODELNAME store_block_C_proc28 RTLNAME Bert_layer_store_block_C_proc28}
-  {SRCNAME dataflow_in_loop_VITIS_LOOP_111_1 MODELNAME dataflow_in_loop_VITIS_LOOP_111_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_111_1
+  {SRCNAME VITIS_LOOP_132_4_proc_Pipeline_VITIS_LOOP_132_4 MODELNAME VITIS_LOOP_132_4_proc_Pipeline_VITIS_LOOP_132_4 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc_Pipeline_VITIS_LOOP_132_4}
+  {SRCNAME VITIS_LOOP_132_4_proc MODELNAME VITIS_LOOP_132_4_proc RTLNAME Bert_layer_VITIS_LOOP_132_4_proc}
+  {SRCNAME VITIS_LOOP_132_4_proc31_Pipeline_VITIS_LOOP_132_4 MODELNAME VITIS_LOOP_132_4_proc31_Pipeline_VITIS_LOOP_132_4 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc31_Pipeline_VITIS_LOOP_132_4}
+  {SRCNAME VITIS_LOOP_132_4_proc31 MODELNAME VITIS_LOOP_132_4_proc31 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc31}
+  {SRCNAME VITIS_LOOP_132_4_proc32_Pipeline_VITIS_LOOP_132_4 MODELNAME VITIS_LOOP_132_4_proc32_Pipeline_VITIS_LOOP_132_4 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc32_Pipeline_VITIS_LOOP_132_4}
+  {SRCNAME VITIS_LOOP_132_4_proc32 MODELNAME VITIS_LOOP_132_4_proc32 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc32}
+  {SRCNAME VITIS_LOOP_132_4_proc33_Pipeline_VITIS_LOOP_132_4 MODELNAME VITIS_LOOP_132_4_proc33_Pipeline_VITIS_LOOP_132_4 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc33_Pipeline_VITIS_LOOP_132_4}
+  {SRCNAME VITIS_LOOP_132_4_proc33 MODELNAME VITIS_LOOP_132_4_proc33 RTLNAME Bert_layer_VITIS_LOOP_132_4_proc33}
+  {SRCNAME dataflow_in_loop_VITIS_LOOP_112_1 MODELNAME dataflow_in_loop_VITIS_LOOP_112_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_112_1
     SUBMODULES {
       {MODELNAME Bert_layer_fifo_w32_d2_S_x3 RTLNAME Bert_layer_fifo_w32_d2_S_x3 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME Bert_layer_fifo_w2_d3_S_x RTLNAME Bert_layer_fifo_w2_d3_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
@@ -510,15 +533,13 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_Self_attention_inp_sumRow_RAM_AUTO_1R1W RTLNAME Bert_layer_Self_attention_inp_sumRow_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_Self_attention_Q_h_RAM_AUTO_1R1W RTLNAME Bert_layer_Self_attention_Q_h_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_Self_attention_v84_RAM_AUTO_1R1W RTLNAME Bert_layer_Self_attention_v84_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_Self_attention_v84_4_RAM_1WNR_AUTO_1R1W RTLNAME Bert_layer_Self_attention_v84_4_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_Self_attention_v85_RAM_AUTO_1R1W RTLNAME Bert_layer_Self_attention_v85_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_Self_attention_v86_RAM_AUTO_1R1W RTLNAME Bert_layer_Self_attention_v86_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_Self_attention_v86_4_RAM_1WNR_AUTO_1R1W RTLNAME Bert_layer_Self_attention_v86_4_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME Bert_layer_Pipeline_l_bias_i5_l_j4 MODELNAME Bert_layer_Pipeline_l_bias_i5_l_j4 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i5_l_j4}
-  {SRCNAME init_block_AB_proc29_Pipeline_init_block_AB MODELNAME init_block_AB_proc29_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc29_Pipeline_init_block_AB}
-  {SRCNAME init_block_AB_proc29 MODELNAME init_block_AB_proc29 RTLNAME Bert_layer_init_block_AB_proc29}
+  {SRCNAME init_block_AB_proc34_Pipeline_init_block_AB MODELNAME init_block_AB_proc34_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc34_Pipeline_init_block_AB}
+  {SRCNAME init_block_AB_proc34 MODELNAME init_block_AB_proc34 RTLNAME Bert_layer_init_block_AB_proc34}
   {SRCNAME systolic_array_k_768.2_Loop_data_load_proc21 MODELNAME systolic_array_k_768_2_Loop_data_load_proc21 RTLNAME Bert_layer_systolic_array_k_768_2_Loop_data_load_proc21}
   {SRCNAME PE.147 MODELNAME PE_147 RTLNAME Bert_layer_PE_147}
   {SRCNAME PE.148 MODELNAME PE_148 RTLNAME Bert_layer_PE_148}
@@ -839,9 +860,31 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_PE_289_U0 RTLNAME Bert_layer_start_for_PE_289_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME store_block_C_proc30_Pipeline_store_block_C MODELNAME store_block_C_proc30_Pipeline_store_block_C RTLNAME Bert_layer_store_block_C_proc30_Pipeline_store_block_C}
-  {SRCNAME store_block_C_proc30 MODELNAME store_block_C_proc30 RTLNAME Bert_layer_store_block_C_proc30}
-  {SRCNAME dataflow_in_loop_VITIS_LOOP_156_1 MODELNAME dataflow_in_loop_VITIS_LOOP_156_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_156_1
+  {SRCNAME VITIS_LOOP_179_4_proc_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc MODELNAME VITIS_LOOP_179_4_proc RTLNAME Bert_layer_VITIS_LOOP_179_4_proc}
+  {SRCNAME VITIS_LOOP_179_4_proc35_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc35_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc35_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc35 MODELNAME VITIS_LOOP_179_4_proc35 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc35}
+  {SRCNAME VITIS_LOOP_179_4_proc36_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc36_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc36_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc36 MODELNAME VITIS_LOOP_179_4_proc36 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc36}
+  {SRCNAME VITIS_LOOP_179_4_proc37_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc37_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc37_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc37 MODELNAME VITIS_LOOP_179_4_proc37 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc37}
+  {SRCNAME VITIS_LOOP_179_4_proc38_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc38_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc38_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc38 MODELNAME VITIS_LOOP_179_4_proc38 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc38}
+  {SRCNAME VITIS_LOOP_179_4_proc39_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc39_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc39_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc39 MODELNAME VITIS_LOOP_179_4_proc39 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc39}
+  {SRCNAME VITIS_LOOP_179_4_proc40_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc40_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc40_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc40 MODELNAME VITIS_LOOP_179_4_proc40 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc40}
+  {SRCNAME VITIS_LOOP_179_4_proc41_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc41_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc41_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc41 MODELNAME VITIS_LOOP_179_4_proc41 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc41}
+  {SRCNAME VITIS_LOOP_179_4_proc42_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc42_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc42_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc42 MODELNAME VITIS_LOOP_179_4_proc42 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc42}
+  {SRCNAME VITIS_LOOP_179_4_proc43_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc43_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc43_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc43 MODELNAME VITIS_LOOP_179_4_proc43 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc43}
+  {SRCNAME VITIS_LOOP_179_4_proc44_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc44_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc44_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc44 MODELNAME VITIS_LOOP_179_4_proc44 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc44}
+  {SRCNAME VITIS_LOOP_179_4_proc45_Pipeline_VITIS_LOOP_179_4 MODELNAME VITIS_LOOP_179_4_proc45_Pipeline_VITIS_LOOP_179_4 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc45_Pipeline_VITIS_LOOP_179_4}
+  {SRCNAME VITIS_LOOP_179_4_proc45 MODELNAME VITIS_LOOP_179_4_proc45 RTLNAME Bert_layer_VITIS_LOOP_179_4_proc45}
+  {SRCNAME dataflow_in_loop_VITIS_LOOP_158_1 MODELNAME dataflow_in_loop_VITIS_LOOP_158_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_158_1
     SUBMODULES {
       {MODELNAME Bert_layer_fifo_w32_d2_S_x5 RTLNAME Bert_layer_fifo_w32_d2_S_x5 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME Bert_layer_fifo_w6_d3_S_x RTLNAME Bert_layer_fifo_w6_d3_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
@@ -850,19 +893,14 @@ set SynModuleInfo {
   }
   {SRCNAME gemm_systolic_array_ds0 MODELNAME gemm_systolic_array_ds0 RTLNAME Bert_layer_gemm_systolic_array_ds0}
   {SRCNAME Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5 MODELNAME Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5 RTLNAME Bert_layer_Bert_layer_Pipeline_l_S_i_j_0_i7_l_j5}
-  {SRCNAME Layer_norm_Pipeline_VITIS_LOOP_219_1 MODELNAME Layer_norm_Pipeline_VITIS_LOOP_219_1 RTLNAME Bert_layer_Layer_norm_Pipeline_VITIS_LOOP_219_1}
-  {SRCNAME Layer_norm_Pipeline_VITIS_LOOP_223_2 MODELNAME Layer_norm_Pipeline_VITIS_LOOP_223_2 RTLNAME Bert_layer_Layer_norm_Pipeline_VITIS_LOOP_223_2}
+  {SRCNAME Layer_norm_Pipeline_VITIS_LOOP_210_1 MODELNAME Layer_norm_Pipeline_VITIS_LOOP_210_1 RTLNAME Bert_layer_Layer_norm_Pipeline_VITIS_LOOP_210_1}
+  {SRCNAME Layer_norm_Pipeline_VITIS_LOOP_214_2 MODELNAME Layer_norm_Pipeline_VITIS_LOOP_214_2 RTLNAME Bert_layer_Layer_norm_Pipeline_VITIS_LOOP_214_2}
   {SRCNAME Layer_norm_Pipeline_l_j6 MODELNAME Layer_norm_Pipeline_l_j6 RTLNAME Bert_layer_Layer_norm_Pipeline_l_j6}
   {SRCNAME Layer_norm_Pipeline_l_j7 MODELNAME Layer_norm_Pipeline_l_j7 RTLNAME Bert_layer_Layer_norm_Pipeline_l_j7}
   {SRCNAME Layer_norm MODELNAME Layer_norm RTLNAME Bert_layer_Layer_norm}
-  {SRCNAME Bert_layer_Pipeline_l_bias_i10_l_j8 MODELNAME Bert_layer_Pipeline_l_bias_i10_l_j8 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i10_l_j8
-    SUBMODULES {
-      {MODELNAME Bert_layer_urem_12ns_5ns_4_16_1 RTLNAME Bert_layer_urem_12ns_5ns_4_16_1 BINDTYPE op TYPE urem IMPL auto LATENCY 15 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_mul_mul_12ns_13ns_25_4_1 RTLNAME Bert_layer_mul_mul_12ns_13ns_25_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME init_block_AB_proc31_Pipeline_init_block_AB MODELNAME init_block_AB_proc31_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc31_Pipeline_init_block_AB}
-  {SRCNAME init_block_AB_proc31 MODELNAME init_block_AB_proc31 RTLNAME Bert_layer_init_block_AB_proc31}
+  {SRCNAME Bert_layer_Pipeline_l_bias_i10_l_j8 MODELNAME Bert_layer_Pipeline_l_bias_i10_l_j8 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i10_l_j8}
+  {SRCNAME init_block_AB_proc46_Pipeline_init_block_AB MODELNAME init_block_AB_proc46_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc46_Pipeline_init_block_AB}
+  {SRCNAME init_block_AB_proc46 MODELNAME init_block_AB_proc46 RTLNAME Bert_layer_init_block_AB_proc46}
   {SRCNAME systolic_array_k_768.3_Loop_data_load_proc23 MODELNAME systolic_array_k_768_3_Loop_data_load_proc23 RTLNAME Bert_layer_systolic_array_k_768_3_Loop_data_load_proc23}
   {SRCNAME PE.291 MODELNAME PE_291 RTLNAME Bert_layer_PE_291}
   {SRCNAME PE.292 MODELNAME PE_292 RTLNAME Bert_layer_PE_292}
@@ -1183,9 +1221,31 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_PE_433_U0 RTLNAME Bert_layer_start_for_PE_433_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME store_block_C_proc32_Pipeline_store_block_C MODELNAME store_block_C_proc32_Pipeline_store_block_C RTLNAME Bert_layer_store_block_C_proc32_Pipeline_store_block_C}
-  {SRCNAME store_block_C_proc32 MODELNAME store_block_C_proc32 RTLNAME Bert_layer_store_block_C_proc32}
-  {SRCNAME dataflow_in_loop_VITIS_LOOP_202_1 MODELNAME dataflow_in_loop_VITIS_LOOP_202_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_202_1
+  {SRCNAME VITIS_LOOP_225_4_proc_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc MODELNAME VITIS_LOOP_225_4_proc RTLNAME Bert_layer_VITIS_LOOP_225_4_proc}
+  {SRCNAME VITIS_LOOP_225_4_proc47_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc47_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc47_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc47 MODELNAME VITIS_LOOP_225_4_proc47 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc47}
+  {SRCNAME VITIS_LOOP_225_4_proc48_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc48_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc48_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc48 MODELNAME VITIS_LOOP_225_4_proc48 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc48}
+  {SRCNAME VITIS_LOOP_225_4_proc49_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc49_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc49_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc49 MODELNAME VITIS_LOOP_225_4_proc49 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc49}
+  {SRCNAME VITIS_LOOP_225_4_proc50_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc50_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc50_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc50 MODELNAME VITIS_LOOP_225_4_proc50 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc50}
+  {SRCNAME VITIS_LOOP_225_4_proc51_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc51_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc51_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc51 MODELNAME VITIS_LOOP_225_4_proc51 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc51}
+  {SRCNAME VITIS_LOOP_225_4_proc52_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc52_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc52_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc52 MODELNAME VITIS_LOOP_225_4_proc52 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc52}
+  {SRCNAME VITIS_LOOP_225_4_proc53_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc53_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc53_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc53 MODELNAME VITIS_LOOP_225_4_proc53 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc53}
+  {SRCNAME VITIS_LOOP_225_4_proc54_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc54_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc54_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc54 MODELNAME VITIS_LOOP_225_4_proc54 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc54}
+  {SRCNAME VITIS_LOOP_225_4_proc55_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc55_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc55_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc55 MODELNAME VITIS_LOOP_225_4_proc55 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc55}
+  {SRCNAME VITIS_LOOP_225_4_proc56_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc56_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc56_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc56 MODELNAME VITIS_LOOP_225_4_proc56 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc56}
+  {SRCNAME VITIS_LOOP_225_4_proc57_Pipeline_VITIS_LOOP_225_4 MODELNAME VITIS_LOOP_225_4_proc57_Pipeline_VITIS_LOOP_225_4 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc57_Pipeline_VITIS_LOOP_225_4}
+  {SRCNAME VITIS_LOOP_225_4_proc57 MODELNAME VITIS_LOOP_225_4_proc57 RTLNAME Bert_layer_VITIS_LOOP_225_4_proc57}
+  {SRCNAME dataflow_in_loop_VITIS_LOOP_205_1 MODELNAME dataflow_in_loop_VITIS_LOOP_205_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_205_1
     SUBMODULES {
       {MODELNAME Bert_layer_fifo_w32_d2_S_x7 RTLNAME Bert_layer_fifo_w32_d2_S_x7 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME Bert_layer_fifo_w8_d3_S RTLNAME Bert_layer_fifo_w8_d3_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
@@ -1242,13 +1302,11 @@ set SynModuleInfo {
   {SRCNAME Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9 MODELNAME Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9 RTLNAME Bert_layer_Bert_layer_Pipeline_l_S_i_j_0_i12_l_j9
     SUBMODULES {
       {MODELNAME Bert_layer_dmul_64ns_64ns_64_7_max_dsp_1 RTLNAME Bert_layer_dmul_64ns_64ns_64_7_max_dsp_1 BINDTYPE op TYPE dmul IMPL maxdsp LATENCY 6 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_urem_12ns_5ns_12_16_1 RTLNAME Bert_layer_urem_12ns_5ns_12_16_1 BINDTYPE op TYPE urem IMPL auto LATENCY 15 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_mux_1212_32_1_1 RTLNAME Bert_layer_mux_1212_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME Bert_layer_Pipeline_l_bias_i13_l_j10 MODELNAME Bert_layer_Pipeline_l_bias_i13_l_j10 RTLNAME Bert_layer_Bert_layer_Pipeline_l_bias_i13_l_j10}
-  {SRCNAME init_block_AB_proc33_Pipeline_init_block_AB MODELNAME init_block_AB_proc33_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc33_Pipeline_init_block_AB}
-  {SRCNAME init_block_AB_proc33 MODELNAME init_block_AB_proc33 RTLNAME Bert_layer_init_block_AB_proc33}
+  {SRCNAME init_block_AB_proc58_Pipeline_init_block_AB MODELNAME init_block_AB_proc58_Pipeline_init_block_AB RTLNAME Bert_layer_init_block_AB_proc58_Pipeline_init_block_AB}
+  {SRCNAME init_block_AB_proc58 MODELNAME init_block_AB_proc58 RTLNAME Bert_layer_init_block_AB_proc58}
   {SRCNAME systolic_array_k_3072_Loop_data_load_proc25 MODELNAME systolic_array_k_3072_Loop_data_load_proc25 RTLNAME Bert_layer_systolic_array_k_3072_Loop_data_load_proc25}
   {SRCNAME PE.435 MODELNAME PE_435 RTLNAME Bert_layer_PE_435}
   {SRCNAME PE.436 MODELNAME PE_436 RTLNAME Bert_layer_PE_436}
@@ -1569,9 +1627,31 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_start_for_PE_577_U0 RTLNAME Bert_layer_start_for_PE_577_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
     }
   }
-  {SRCNAME store_block_C_proc34_Pipeline_store_block_C MODELNAME store_block_C_proc34_Pipeline_store_block_C RTLNAME Bert_layer_store_block_C_proc34_Pipeline_store_block_C}
-  {SRCNAME store_block_C_proc34 MODELNAME store_block_C_proc34 RTLNAME Bert_layer_store_block_C_proc34}
-  {SRCNAME dataflow_in_loop_VITIS_LOOP_247_1 MODELNAME dataflow_in_loop_VITIS_LOOP_247_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_247_1
+  {SRCNAME VITIS_LOOP_271_4_proc_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc MODELNAME VITIS_LOOP_271_4_proc RTLNAME Bert_layer_VITIS_LOOP_271_4_proc}
+  {SRCNAME VITIS_LOOP_271_4_proc59_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc59_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc59_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc59 MODELNAME VITIS_LOOP_271_4_proc59 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc59}
+  {SRCNAME VITIS_LOOP_271_4_proc60_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc60_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc60_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc60 MODELNAME VITIS_LOOP_271_4_proc60 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc60}
+  {SRCNAME VITIS_LOOP_271_4_proc61_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc61_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc61_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc61 MODELNAME VITIS_LOOP_271_4_proc61 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc61}
+  {SRCNAME VITIS_LOOP_271_4_proc62_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc62_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc62_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc62 MODELNAME VITIS_LOOP_271_4_proc62 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc62}
+  {SRCNAME VITIS_LOOP_271_4_proc63_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc63_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc63_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc63 MODELNAME VITIS_LOOP_271_4_proc63 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc63}
+  {SRCNAME VITIS_LOOP_271_4_proc64_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc64_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc64_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc64 MODELNAME VITIS_LOOP_271_4_proc64 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc64}
+  {SRCNAME VITIS_LOOP_271_4_proc65_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc65_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc65_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc65 MODELNAME VITIS_LOOP_271_4_proc65 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc65}
+  {SRCNAME VITIS_LOOP_271_4_proc66_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc66_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc66_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc66 MODELNAME VITIS_LOOP_271_4_proc66 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc66}
+  {SRCNAME VITIS_LOOP_271_4_proc67_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc67_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc67_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc67 MODELNAME VITIS_LOOP_271_4_proc67 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc67}
+  {SRCNAME VITIS_LOOP_271_4_proc68_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc68_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc68_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc68 MODELNAME VITIS_LOOP_271_4_proc68 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc68}
+  {SRCNAME VITIS_LOOP_271_4_proc69_Pipeline_VITIS_LOOP_271_4 MODELNAME VITIS_LOOP_271_4_proc69_Pipeline_VITIS_LOOP_271_4 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc69_Pipeline_VITIS_LOOP_271_4}
+  {SRCNAME VITIS_LOOP_271_4_proc69 MODELNAME VITIS_LOOP_271_4_proc69 RTLNAME Bert_layer_VITIS_LOOP_271_4_proc69}
+  {SRCNAME dataflow_in_loop_VITIS_LOOP_251_1 MODELNAME dataflow_in_loop_VITIS_LOOP_251_1 RTLNAME Bert_layer_dataflow_in_loop_VITIS_LOOP_251_1
     SUBMODULES {
       {MODELNAME Bert_layer_fifo_w32_d2_S_x9 RTLNAME Bert_layer_fifo_w32_d2_S_x9 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME Bert_layer_fifo_w6_d3_S_x0 RTLNAME Bert_layer_fifo_w6_d3_S_x0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
@@ -1580,8 +1660,8 @@ set SynModuleInfo {
   }
   {SRCNAME gemm_systolic_array_ds2 MODELNAME gemm_systolic_array_ds2 RTLNAME Bert_layer_gemm_systolic_array_ds2}
   {SRCNAME Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11 MODELNAME Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11 RTLNAME Bert_layer_Bert_layer_Pipeline_l_S_i_j_0_i15_l_j11}
-  {SRCNAME Layer_norm.1_Pipeline_VITIS_LOOP_219_1 MODELNAME Layer_norm_1_Pipeline_VITIS_LOOP_219_1 RTLNAME Bert_layer_Layer_norm_1_Pipeline_VITIS_LOOP_219_1}
-  {SRCNAME Layer_norm.1_Pipeline_VITIS_LOOP_223_2 MODELNAME Layer_norm_1_Pipeline_VITIS_LOOP_223_2 RTLNAME Bert_layer_Layer_norm_1_Pipeline_VITIS_LOOP_223_2}
+  {SRCNAME Layer_norm.1_Pipeline_VITIS_LOOP_210_1 MODELNAME Layer_norm_1_Pipeline_VITIS_LOOP_210_1 RTLNAME Bert_layer_Layer_norm_1_Pipeline_VITIS_LOOP_210_1}
+  {SRCNAME Layer_norm.1_Pipeline_VITIS_LOOP_214_2 MODELNAME Layer_norm_1_Pipeline_VITIS_LOOP_214_2 RTLNAME Bert_layer_Layer_norm_1_Pipeline_VITIS_LOOP_214_2}
   {SRCNAME Layer_norm.1_Pipeline_l_j6 MODELNAME Layer_norm_1_Pipeline_l_j6 RTLNAME Bert_layer_Layer_norm_1_Pipeline_l_j6}
   {SRCNAME Layer_norm.1_Pipeline_l_j7 MODELNAME Layer_norm_1_Pipeline_l_j7 RTLNAME Bert_layer_Layer_norm_1_Pipeline_l_j7}
   {SRCNAME Layer_norm.1 MODELNAME Layer_norm_1 RTLNAME Bert_layer_Layer_norm_1}
@@ -1595,10 +1675,8 @@ set SynModuleInfo {
       {MODELNAME Bert_layer_dadd_64ns_64ns_64_7_full_dsp_1 RTLNAME Bert_layer_dadd_64ns_64ns_64_7_full_dsp_1 BINDTYPE op TYPE dadd IMPL fulldsp LATENCY 6 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_v227_RAM_AUTO_1R1W RTLNAME Bert_layer_v227_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_v230_RAM_AUTO_1R1W RTLNAME Bert_layer_v230_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_v231_12_RAM_1WNR_AUTO_1R1W RTLNAME Bert_layer_v231_12_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_v232_RAM_AUTO_1R1W RTLNAME Bert_layer_v232_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_v234_RAM_AUTO_1R1W RTLNAME Bert_layer_v234_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME Bert_layer_v234_12_RAM_1WNR_AUTO_1R1W RTLNAME Bert_layer_v234_12_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME Bert_layer_v235_RAM_AUTO_1R1W RTLNAME Bert_layer_v235_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }

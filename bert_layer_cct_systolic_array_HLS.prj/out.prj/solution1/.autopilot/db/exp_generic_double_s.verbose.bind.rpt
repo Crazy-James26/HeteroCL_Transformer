@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'exp_generic_double_s'
 ================================================================
-* Date:           Mon Sep  4 09:51:50 2023
+* Date:           Mon Sep  4 23:31:20 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -182,10 +182,10 @@ ST_9 : Operation 85 [2/5] (6.97ns)   --->   "%r_V_41 = mul i71 %sext_ln1270, i71
 
 State 10 <SV = 9> <Delay = 6.97>
 ST_10 : Operation 86 [1/5] (6.97ns)   --->   "%r_V_41 = mul i71 %sext_ln1270, i71 1636647506585939924452"   --->   Operation 86 'mul' 'r_V_41' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_17 = partselect i58 @_ssdm_op_PartSelect.i58.i71.i32.i32, i71 %r_V_41, i32 13, i32 70"   --->   Operation 87 'partselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_s = partselect i58 @_ssdm_op_PartSelect.i58.i71.i32.i32, i71 %r_V_41, i32 13, i32 70"   --->   Operation 87 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
 
 State 11 <SV = 10> <Delay = 6.64>
-ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%and_ln = bitconcatenate i59 @_ssdm_op_BitConcatenate.i59.i58.i1, i58 %tmp_17, i1 0"   --->   Operation 88 'bitconcatenate' 'and_ln' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%and_ln = bitconcatenate i59 @_ssdm_op_BitConcatenate.i59.i58.i1, i58 %tmp_s, i1 0"   --->   Operation 88 'bitconcatenate' 'and_ln' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 89 [1/1] (3.39ns)   --->   "%m_diff_V = sub i59 %trunc_ln813, i59 %and_ln"   --->   Operation 89 'sub' 'm_diff_V' <Predicate = true> <Delay = 3.39> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.39> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_11 : Operation 90 [1/1] (0.00ns)   --->   "%m_diff_hi_V = partselect i8 @_ssdm_op_PartSelect.i8.i59.i32.i32, i59 %m_diff_V, i32 51, i32 58"   --->   Operation 90 'partselect' 'm_diff_hi_V' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 91 [1/1] (0.00ns)   --->   "%Z2_V = partselect i8 @_ssdm_op_PartSelect.i8.i59.i32.i32, i59 %m_diff_V, i32 43, i32 50"   --->   Operation 91 'partselect' 'Z2_V' <Predicate = true> <Delay = 0.00>
@@ -298,12 +298,12 @@ ST_28 : Operation 163 [1/1] (4.72ns)   --->   "%add_ln1347_9 = add i106 %trunc_l
 ST_28 : Operation 164 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i107.i32, i107 %ret_V_40, i32 106"   --->   Operation 164 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
 ST_28 : Operation 165 [1/1] (1.67ns)   --->   "%r_exp_V = add i13 %ret_V_42, i13 8191"   --->   Operation 165 'add' 'r_exp_V' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_28 : Operation 166 [1/1] (0.69ns)   --->   "%r_exp_V_4 = select i1 %tmp, i13 %ret_V_42, i13 %r_exp_V" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:332]   --->   Operation 166 'select' 'r_exp_V_4' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_28 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_118 = partselect i3 @_ssdm_op_PartSelect.i3.i13.i32.i32, i13 %r_exp_V_4, i32 10, i32 12"   --->   Operation 167 'partselect' 'tmp_118' <Predicate = true> <Delay = 0.00>
-ST_28 : Operation 168 [1/1] (1.13ns)   --->   "%icmp_ln1035 = icmp_sgt  i3 %tmp_118, i3 0"   --->   Operation 168 'icmp' 'icmp_ln1035' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_25 = partselect i3 @_ssdm_op_PartSelect.i3.i13.i32.i32, i13 %r_exp_V_4, i32 10, i32 12"   --->   Operation 167 'partselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 168 [1/1] (1.13ns)   --->   "%icmp_ln1035 = icmp_sgt  i3 %tmp_25, i3 0"   --->   Operation 168 'icmp' 'icmp_ln1035' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_28 : Operation 169 [1/1] (0.00ns)   --->   "%trunc_ln186 = trunc i13 %r_exp_V_4"   --->   Operation 169 'trunc' 'trunc_ln186' <Predicate = (!icmp_ln1019)> <Delay = 0.00>
 
 State 29 <SV = 28> <Delay = 4.91>
-ST_29 : Operation 170 [1/1] (0.00ns)   --->   "%specpipeline_ln187 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_20" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:187]   --->   Operation 170 'specpipeline' 'specpipeline_ln187' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 170 [1/1] (0.00ns)   --->   "%specpipeline_ln187 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_31" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:187]   --->   Operation 170 'specpipeline' 'specpipeline_ln187' <Predicate = true> <Delay = 0.00>
 ST_29 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node x_is_NaN)   --->   "%xor_ln1023 = xor i1 %icmp_ln1019_6, i1 1"   --->   Operation 171 'xor' 'xor_ln1023' <Predicate = (icmp_ln1019)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_29 : Operation 172 [1/1] (0.97ns) (out node of the LUT)   --->   "%x_is_NaN = and i1 %icmp_ln1019, i1 %xor_ln1023" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:18]   --->   Operation 172 'and' 'x_is_NaN' <Predicate = (icmp_ln1019)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_29 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node select_ln214_1)   --->   "%xor_ln970 = xor i1 %p_Result_26, i1 1"   --->   Operation 173 'xor' 'xor_ln970' <Predicate = (icmp_ln1019)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -313,13 +313,13 @@ ST_29 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node select_ln21
 ST_29 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node select_ln214_1)   --->   "%select_ln214 = select i1 %x_is_NaN, i64 nan, i64 inf" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:214]   --->   Operation 177 'select' 'select_ln214' <Predicate = (icmp_ln1019)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_29 : Operation 178 [1/1] (1.48ns) (out node of the LUT)   --->   "%select_ln214_1 = select i1 %or_ln214, i64 %select_ln214, i64 0" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:214]   --->   Operation 178 'select' 'select_ln214_1' <Predicate = (icmp_ln1019)> <Delay = 1.48> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_29 : Operation 179 [1/1] (0.97ns)   --->   "%or_ln338 = or i1 %icmp_ln1654, i1 %icmp_ln1035" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:338]   --->   Operation 179 'or' 'or_ln338' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_29 : Operation 180 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%tmp_119 = bitselect i1 @_ssdm_op_BitSelect.i1.i54.i32, i54 %select_ln253, i32 53"   --->   Operation 180 'bitselect' 'tmp_119' <Predicate = (!icmp_ln1019)> <Delay = 0.00>
-ST_29 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%select_ln339 = select i1 %tmp_119, i64 0, i64 inf" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:339]   --->   Operation 181 'select' 'select_ln339' <Predicate = (!icmp_ln1019)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_29 : Operation 180 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%tmp_26 = bitselect i1 @_ssdm_op_BitSelect.i1.i54.i32, i54 %select_ln253, i32 53"   --->   Operation 180 'bitselect' 'tmp_26' <Predicate = (!icmp_ln1019)> <Delay = 0.00>
+ST_29 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%select_ln339 = select i1 %tmp_26, i64 0, i64 inf" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:339]   --->   Operation 181 'select' 'select_ln339' <Predicate = (!icmp_ln1019)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_29 : Operation 182 [1/1] (2.09ns)   --->   "%icmp_ln1039 = icmp_slt  i13 %r_exp_V_4, i13 7170"   --->   Operation 182 'icmp' 'icmp_ln1039' <Predicate = true> <Delay = 2.09> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_29 : Operation 183 [1/1] (1.63ns)   --->   "%out_exp_V = add i11 %trunc_ln186, i11 1023"   --->   Operation 183 'add' 'out_exp_V' <Predicate = (!icmp_ln1019)> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_29 : Operation 184 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%tmp_s = partselect i52 @_ssdm_op_PartSelect.i52.i106.i32.i32, i106 %add_ln1347_9, i32 54, i32 105"   --->   Operation 184 'partselect' 'tmp_s' <Predicate = (!icmp_ln1019 & tmp)> <Delay = 0.00>
-ST_29 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%tmp_4 = partselect i52 @_ssdm_op_PartSelect.i52.i105.i32.i32, i105 %add_ln1347_8, i32 53, i32 104"   --->   Operation 185 'partselect' 'tmp_4' <Predicate = (!icmp_ln1019 & !tmp)> <Delay = 0.00>
-ST_29 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%p_Result_30 = select i1 %tmp, i52 %tmp_s, i52 %tmp_4" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:332]   --->   Operation 186 'select' 'p_Result_30' <Predicate = (!icmp_ln1019)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_29 : Operation 184 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%tmp_7 = partselect i52 @_ssdm_op_PartSelect.i52.i106.i32.i32, i106 %add_ln1347_9, i32 54, i32 105"   --->   Operation 184 'partselect' 'tmp_7' <Predicate = (!icmp_ln1019 & tmp)> <Delay = 0.00>
+ST_29 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%tmp_8 = partselect i52 @_ssdm_op_PartSelect.i52.i105.i32.i32, i105 %add_ln1347_8, i32 53, i32 104"   --->   Operation 185 'partselect' 'tmp_8' <Predicate = (!icmp_ln1019 & !tmp)> <Delay = 0.00>
+ST_29 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%p_Result_30 = select i1 %tmp, i52 %tmp_7, i52 %tmp_8" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:332]   --->   Operation 186 'select' 'p_Result_30' <Predicate = (!icmp_ln1019)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_29 : Operation 187 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%p_Result_31 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i1.i11.i52, i1 0, i11 %out_exp_V, i52 %p_Result_30"   --->   Operation 187 'bitconcatenate' 'p_Result_31' <Predicate = (!icmp_ln1019)> <Delay = 0.00>
 ST_29 : Operation 188 [1/1] (0.00ns) (grouped into LUT with out node select_ln1035)   --->   "%bitcast_ln526 = bitcast i64 %p_Result_31" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:526]   --->   Operation 188 'bitcast' 'bitcast_ln526' <Predicate = (!icmp_ln1019)> <Delay = 0.00>
 ST_29 : Operation 189 [1/1] (0.00ns) (grouped into LUT with out node and_ln1035_1)   --->   "%and_ln338 = and i1 %icmp_ln338, i1 %or_ln338" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_exp_.h:338]   --->   Operation 189 'and' 'and_ln338' <Predicate = (!icmp_ln1019)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -412,7 +412,7 @@ select_ln1002                                                      (select      
 ret_V_42                                                           (select        ) [ 010000111111111111111111111110]
 sext_ln1270                                                        (sext          ) [ 010000011110000000000000000000]
 r_V_41                                                             (mul           ) [ 000000000000000000000000000000]
-tmp_17                                                             (partselect    ) [ 010000000001000000000000000000]
+tmp_s                                                              (partselect    ) [ 010000000001000000000000000000]
 and_ln                                                             (bitconcatenate) [ 000000000000000000000000000000]
 m_diff_V                                                           (sub           ) [ 000000000000000000000000000000]
 m_diff_hi_V                                                        (partselect    ) [ 010000000000111111111100000000]
@@ -478,7 +478,7 @@ add_ln1347_9                                                       (add         
 tmp                                                                (bitselect     ) [ 010000000000000000000000000001]
 r_exp_V                                                            (add           ) [ 000000000000000000000000000000]
 r_exp_V_4                                                          (select        ) [ 010000000000000000000000000001]
-tmp_118                                                            (partselect    ) [ 000000000000000000000000000000]
+tmp_25                                                             (partselect    ) [ 000000000000000000000000000000]
 icmp_ln1035                                                        (icmp          ) [ 010000000000000000000000000001]
 trunc_ln186                                                        (trunc         ) [ 010000000000000000000000000001]
 specpipeline_ln187                                                 (specpipeline  ) [ 000000000000000000000000000000]
@@ -491,12 +491,12 @@ or_ln214                                                           (or          
 select_ln214                                                       (select        ) [ 000000000000000000000000000000]
 select_ln214_1                                                     (select        ) [ 000000000000000000000000000000]
 or_ln338                                                           (or            ) [ 000000000000000000000000000000]
-tmp_119                                                            (bitselect     ) [ 000000000000000000000000000000]
+tmp_26                                                             (bitselect     ) [ 000000000000000000000000000000]
 select_ln339                                                       (select        ) [ 000000000000000000000000000000]
 icmp_ln1039                                                        (icmp          ) [ 000000000000000000000000000000]
 out_exp_V                                                          (add           ) [ 000000000000000000000000000000]
-tmp_s                                                              (partselect    ) [ 000000000000000000000000000000]
-tmp_4                                                              (partselect    ) [ 000000000000000000000000000000]
+tmp_7                                                              (partselect    ) [ 000000000000000000000000000000]
+tmp_8                                                              (partselect    ) [ 000000000000000000000000000000]
 p_Result_30                                                        (select        ) [ 000000000000000000000000000000]
 p_Result_31                                                        (bitconcatenate) [ 000000000000000000000000000000]
 bitcast_ln526                                                      (bitcast       ) [ 000000000000000000000000000000]
@@ -1322,7 +1322,7 @@ ret_ln368                                                          (ret         
 <pin id="177" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_20"/></StgValue>
+<StgValue><ssdm name="empty_31"/></StgValue>
 </bind>
 </comp>
 
@@ -2112,7 +2112,7 @@ ret_ln368                                                          (ret         
 </bind>
 </comp>
 
-<comp id="542" class="1004" name="tmp_17_fu_542">
+<comp id="542" class="1004" name="tmp_s_fu_542">
 <pin_list>
 <pin id="543" dir="0" index="0" bw="58" slack="0"/>
 <pin id="544" dir="0" index="1" bw="71" slack="0"/>
@@ -2122,7 +2122,7 @@ ret_ln368                                                          (ret         
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_17/10 "/>
+<opset="tmp_s/10 "/>
 </bind>
 </comp>
 
@@ -2819,7 +2819,7 @@ ret_ln368                                                          (ret         
 </bind>
 </comp>
 
-<comp id="887" class="1004" name="tmp_118_fu_887">
+<comp id="887" class="1004" name="tmp_25_fu_887">
 <pin_list>
 <pin id="888" dir="0" index="0" bw="3" slack="0"/>
 <pin id="889" dir="0" index="1" bw="13" slack="0"/>
@@ -2829,7 +2829,7 @@ ret_ln368                                                          (ret         
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_118/28 "/>
+<opset="tmp_25/28 "/>
 </bind>
 </comp>
 
@@ -2966,7 +2966,7 @@ ret_ln368                                                          (ret         
 </bind>
 </comp>
 
-<comp id="958" class="1004" name="tmp_119_fu_958">
+<comp id="958" class="1004" name="tmp_26_fu_958">
 <pin_list>
 <pin id="959" dir="0" index="0" bw="1" slack="0"/>
 <pin id="960" dir="0" index="1" bw="54" slack="28"/>
@@ -2975,7 +2975,7 @@ ret_ln368                                                          (ret         
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_119/29 "/>
+<opset="tmp_26/29 "/>
 </bind>
 </comp>
 
@@ -3016,7 +3016,7 @@ ret_ln368                                                          (ret         
 </bind>
 </comp>
 
-<comp id="983" class="1004" name="tmp_s_fu_983">
+<comp id="983" class="1004" name="tmp_7_fu_983">
 <pin_list>
 <pin id="984" dir="0" index="0" bw="52" slack="0"/>
 <pin id="985" dir="0" index="1" bw="106" slack="1"/>
@@ -3026,11 +3026,11 @@ ret_ln368                                                          (ret         
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_s/29 "/>
+<opset="tmp_7/29 "/>
 </bind>
 </comp>
 
-<comp id="992" class="1004" name="tmp_4_fu_992">
+<comp id="992" class="1004" name="tmp_8_fu_992">
 <pin_list>
 <pin id="993" dir="0" index="0" bw="52" slack="0"/>
 <pin id="994" dir="0" index="1" bw="105" slack="1"/>
@@ -3040,7 +3040,7 @@ ret_ln368                                                          (ret         
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_4/29 "/>
+<opset="tmp_8/29 "/>
 </bind>
 </comp>
 
@@ -3460,13 +3460,13 @@ ret_ln368                                                          (ret         
 </bind>
 </comp>
 
-<comp id="1224" class="1005" name="tmp_17_reg_1224">
+<comp id="1224" class="1005" name="tmp_s_reg_1224">
 <pin_list>
 <pin id="1225" dir="0" index="0" bw="58" slack="1"/>
 <pin id="1226" dir="1" index="1" bw="58" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_17 "/>
+<opset="tmp_s "/>
 </bind>
 </comp>
 
@@ -4683,7 +4683,7 @@ ret_ln368                                                          (ret         
 	State 8
 	State 9
 	State 10
-		tmp_17 : 1
+		tmp_s : 1
 	State 11
 		m_diff_V : 1
 		m_diff_hi_V : 2
@@ -4745,7 +4745,7 @@ ret_ln368                                                          (ret         
 		add_ln1347_9 : 1
 		tmp : 2
 		r_exp_V_4 : 3
-		tmp_118 : 4
+		tmp_25 : 4
 		icmp_ln1035 : 5
 		trunc_ln186 : 4
 	State 29
@@ -4850,13 +4850,13 @@ ret_ln368                                                          (ret         
 | bitselect|    p_Result_29_fu_426   |    0    |    0    |    0    |
 |          |    p_Result_s_fu_495    |    0    |    0    |    0    |
 |          |        tmp_fu_867       |    0    |    0    |    0    |
-|          |      tmp_119_fu_958     |    0    |    0    |    0    |
+|          |      tmp_26_fu_958      |    0    |    0    |    0    |
 |----------|-------------------------|---------|---------|---------|
 |          |     es_exp_V_fu_271     |    0    |    0    |    0    |
 |          |      m_fix_l_fu_406     |    0    |    0    |    0    |
 |          |    m_fix_hi_V_fu_416    |    0    |    0    |    0    |
 |          |     trunc_ln_fu_486     |    0    |    0    |    0    |
-|          |      tmp_17_fu_542      |    0    |    0    |    0    |
+|          |       tmp_s_fu_542      |    0    |    0    |    0    |
 |          |    m_diff_hi_V_fu_564   |    0    |    0    |    0    |
 |          |       Z2_V_fu_574       |    0    |    0    |    0    |
 |          |       Z3_V_fu_584       |    0    |    0    |    0    |
@@ -4867,9 +4867,9 @@ ret_ln368                                                          (ret         
 |          |   trunc_ln813_2_fu_732  |    0    |    0    |    0    |
 |          |   exp_Z1P_m_1_V_fu_774  |    0    |    0    |    0    |
 |          |    exp_Z1_hi_V_fu_784   |    0    |    0    |    0    |
-|          |      tmp_118_fu_887     |    0    |    0    |    0    |
-|          |       tmp_s_fu_983      |    0    |    0    |    0    |
-|          |       tmp_4_fu_992      |    0    |    0    |    0    |
+|          |      tmp_25_fu_887      |    0    |    0    |    0    |
+|          |       tmp_7_fu_983      |    0    |    0    |    0    |
+|          |       tmp_8_fu_992      |    0    |    0    |    0    |
 |----------|-------------------------|---------|---------|---------|
 |          |     es_sig_V_fu_281     |    0    |    0    |    0    |
 |          |    p_Result_27_fu_307   |    0    |    0    |    0    |
@@ -4972,9 +4972,9 @@ N/A
 | table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_addr_reg_1292 |    8   |
 |table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_addr_1_reg_1256|    8   |
 | table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_addr_reg_1251 |    8   |
-|                              tmp_17_reg_1224                              |   58   |
 |                              tmp_18_reg_1303                              |   40   |
 |                                tmp_reg_1386                               |    1   |
+|                               tmp_s_reg_1224                              |   58   |
 |                          trunc_ln1347_3_reg_1371                          |   56   |
 |                           trunc_ln1347_reg_1366                           |   57   |
 |                            trunc_ln186_reg_1403                           |   11   |

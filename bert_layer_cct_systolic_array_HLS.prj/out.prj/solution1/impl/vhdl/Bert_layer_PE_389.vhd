@@ -201,7 +201,7 @@ attribute shreg_extract : string;
 
 
 begin
-    fadd_32ns_32ns_32_5_full_dsp_1_U9321 : component Bert_layer_fadd_32ns_32ns_32_5_full_dsp_1
+    fadd_32ns_32ns_32_5_full_dsp_1_U6561 : component Bert_layer_fadd_32ns_32ns_32_5_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -216,7 +216,7 @@ begin
         ce => grp_fu_76_ce,
         dout => grp_fu_76_p2);
 
-    fmul_32ns_32ns_32_4_max_dsp_1_U9322 : component Bert_layer_fmul_32ns_32ns_32_4_max_dsp_1
+    fmul_32ns_32ns_32_4_max_dsp_1_U6562 : component Bert_layer_fmul_32ns_32ns_32_4_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,

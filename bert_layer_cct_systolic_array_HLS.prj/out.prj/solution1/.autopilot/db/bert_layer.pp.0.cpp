@@ -41232,7 +41232,6 @@ void Linear_layer_qkv(
 #pragma HLS array_partition variable=v1 cyclic dim=1 factor=12
 
 #pragma HLS array_partition variable=v3 complete dim=1
-#pragma HLS array_partition variable=v3 cyclic dim=2 factor=12
 
  l_bias_i: for (int i = 0; i < 12; i++) {
     l_j: for (int j = 0; j < 768; j++) {
@@ -41256,10 +41255,9 @@ void Attention_layer(
 #pragma HLS array_partition variable=v18 cyclic dim=1 factor=4
 
 #pragma HLS array_partition variable=v19 cyclic dim=1 factor=4
-#pragma HLS array_partition variable=v19 cyclic dim=2 factor=4
 
- VITIS_LOOP_40_1: for (int v20 = 0; v20 < 12; v20++) {
-    VITIS_LOOP_41_2: for (int v21 = 0; v21 < 12; v21++) {
+ VITIS_LOOP_38_1: for (int v20 = 0; v20 < 12; v20++) {
+    VITIS_LOOP_39_2: for (int v21 = 0; v21 < 12; v21++) {
       v19[v20][v21] = 0.000000;
     }
   }
@@ -41281,12 +41279,11 @@ void Softmax_layer(
   float v39[12][12]
 ) {
 #pragma HLS array_partition variable=v38 cyclic dim=1 factor=4
-#pragma HLS array_partition variable=v38 cyclic dim=2 factor=4
 
 #pragma HLS array_partition variable=v39 cyclic dim=1 factor=4
 
  float inp_sumRow[12];
-  VITIS_LOOP_68_1: for (int v41 = 0; v41 < 12; v41++) {
+  VITIS_LOOP_65_1: for (int v41 = 0; v41 < 12; v41++) {
     inp_sumRow[v41] = 0.000000;
   }
   l_exp_sum_i3: for (int i3 = 0; i3 < 12; i3++) {
@@ -41322,10 +41319,9 @@ void Context_layer(
 #pragma HLS array_partition variable=v55 cyclic dim=2 factor=4
 
 #pragma HLS array_partition variable=v56 cyclic dim=1 factor=4
-#pragma HLS array_partition variable=v56 cyclic dim=2 factor=4
 
- VITIS_LOOP_106_1: for (int v57 = 0; v57 < 12; v57++) {
-    VITIS_LOOP_107_2: for (int v58 = 0; v58 < 64; v58++) {
+ VITIS_LOOP_102_1: for (int v57 = 0; v57 < 12; v57++) {
+    VITIS_LOOP_103_2: for (int v58 = 0; v58 < 64; v58++) {
       v56[v57][v58] = 0.000000;
     }
   }
@@ -41341,13 +41337,10 @@ void Self_attention(
   float v74[12][768]
 ) {
 #pragma HLS array_partition variable=v71 complete dim=1
-#pragma HLS array_partition variable=v71 cyclic dim=2 factor=12
 
 #pragma HLS array_partition variable=v72 complete dim=1
-#pragma HLS array_partition variable=v72 cyclic dim=2 factor=12
 
 #pragma HLS array_partition variable=v73 complete dim=1
-#pragma HLS array_partition variable=v73 cyclic dim=2 factor=12
 
 #pragma HLS array_partition variable=v74 complete dim=1
 
@@ -41393,7 +41386,6 @@ void Linear_layer_ds0(
 #pragma HLS array_partition variable=v91 cyclic dim=1 factor=12
 
 #pragma HLS array_partition variable=v93 complete dim=1
-#pragma HLS array_partition variable=v93 cyclic dim=2 factor=12
 
  l_bias_i5: for (int i5 = 0; i5 < 12; i5++) {
     l_j4: for (int j4 = 0; j4 < 768; j4++) {
@@ -41413,7 +41405,6 @@ void Res_layer0(
   float v109[12][768]
 ) {
 #pragma HLS array_partition variable=v107 complete dim=1
-#pragma HLS array_partition variable=v107 cyclic dim=2 factor=12
 
 #pragma HLS array_partition variable=v108 complete dim=1
 
@@ -41437,11 +41428,11 @@ void Layer_norm(
 #pragma HLS array_partition variable=v118 complete dim=1
 
  float mean[12];
-  VITIS_LOOP_219_1: for (int v120 = 0; v120 < 12; v120++) {
+  VITIS_LOOP_210_1: for (int v120 = 0; v120 < 12; v120++) {
     mean[v120] = 0.000000;
   }
   float mean2[12];
-  VITIS_LOOP_223_2: for (int v122 = 0; v122 < 12; v122++) {
+  VITIS_LOOP_214_2: for (int v122 = 0; v122 < 12; v122++) {
     mean2[v122] = 0.000000;
   }
   float var[12];
@@ -41500,7 +41491,6 @@ void Linear_layer_ds1(
 #pragma HLS array_partition variable=v155 cyclic dim=1 factor=12
 
 #pragma HLS array_partition variable=v157 complete dim=1
-#pragma HLS array_partition variable=v157 cyclic dim=2 factor=12
 
  l_bias_i10: for (int i10 = 0; i10 < 12; i10++) {
     l_j8: for (int j8 = 0; j8 < 3072; j8++) {
@@ -41519,7 +41509,6 @@ void Gelu_layer(
   float v172[12][3072]
 ) {
 #pragma HLS array_partition variable=v171 complete dim=1
-#pragma HLS array_partition variable=v171 cyclic dim=2 factor=12
 
 #pragma HLS array_partition variable=v172 complete dim=1
 
@@ -41551,7 +41540,6 @@ void Linear_layer_ds2(
 #pragma HLS array_partition variable=v185 cyclic dim=1 factor=12
 
 #pragma HLS array_partition variable=v187 complete dim=1
-#pragma HLS array_partition variable=v187 cyclic dim=2 factor=12
 
  l_bias_i13: for (int i13 = 0; i13 < 12; i13++) {
     l_j10: for (int j10 = 0; j10 < 768; j10++) {
@@ -41571,7 +41559,6 @@ void Res_layer1(
   float v203[12][768]
 ) {
 #pragma HLS array_partition variable=v201 complete dim=1
-#pragma HLS array_partition variable=v201 cyclic dim=2 factor=12
 
 #pragma HLS array_partition variable=v202 complete dim=1
 
@@ -41608,7 +41595,7 @@ __attribute__((sdx_kernel("Bert_layer", 0))) void Bert_layer(
 ) {
 #line 39 "/home/jz2292/project/transformer/heterocl_file/bert_layer_cct_systolic_array_HLS.prj/run.tcl"
 #pragma HLSDIRECTIVE TOP name=Bert_layer
-# 387 "bert_layer.cpp"
+# 374 "bert_layer.cpp"
 
 #pragma HLS array_partition variable=v209 complete dim=1
 

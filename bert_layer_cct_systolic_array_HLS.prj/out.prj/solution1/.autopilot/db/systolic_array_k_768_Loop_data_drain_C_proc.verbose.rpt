@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'systolic_array_k_768_Loop_data_drain_C_proc'
 ================================================================
-* Date:           Mon Sep  4 10:08:54 2023
+* Date:           Mon Sep  4 23:49:33 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -73,18 +73,18 @@
     +----------------------+----------------+---------+----+---+----+-----+
     |       Instance       |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +----------------------+----------------+---------+----+---+----+-----+
-    |mux_124_32_1_1_U1282  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1283  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1284  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1285  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1286  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1287  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1288  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1289  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1290  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1291  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1292  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
-    |mux_124_32_1_1_U1293  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1206  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1207  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1208  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1209  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1210  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1211  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1212  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1213  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1214  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1215  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1216  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_124_32_1_1_U1217  |mux_124_32_1_1  |        0|   0|  0|  65|    0|
     +----------------------+----------------+---------+----+---+----+-----+
     |Total                 |                |        0|   0|  0| 780|    0|
     +----------------------+----------------+---------+----+---+----+-----+
@@ -154,7 +154,7 @@
     |tmp_28_i_reg_1786        |  32|   0|   32|          0|
     |tmp_29_i_reg_1791        |  32|   0|   32|          0|
     |tmp_30_i_reg_1796        |  32|   0|   32|          0|
-    |tmp_i_107_reg_1746       |  32|   0|   32|          0|
+    |tmp_i_108_reg_1746       |  32|   0|   32|          0|
     |tmp_i_reg_1741           |  32|   0|   32|          0|
     +-------------------------+----+----+-----+-----------+
     |Total                    | 391|   0|  391|          0|
@@ -424,18 +424,18 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 6.41>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%n = alloca i32 1"   --->   Operation 5 'alloca' 'n' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_0, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_1, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_2, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_3, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_4, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_5, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_6, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_7, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_8, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_9, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_10, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_11, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_0, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_1, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_2, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_3, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_4, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_5, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_6, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_7, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_8, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_9, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_10, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %block_C_drainer_11, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (3.63ns)   --->   "%p_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read143"   --->   Operation 18 'read' 'p_read_1' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
 ST_1 : Operation 19 [1/1] (3.63ns)   --->   "%p_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read142"   --->   Operation 19 'read' 'p_read_2' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
 ST_1 : Operation 20 [1/1] (3.63ns)   --->   "%p_read_3 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read141"   --->   Operation 20 'read' 'p_read_3' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
@@ -588,7 +588,7 @@ ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_s
 ST_1 : Operation 167 [1/1] (1.73ns)   --->   "%add_ln59 = add i4 %n_1, i4 1" [systolic_array.cpp:59]   --->   Operation 167 'add' 'add_ln59' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%br_ln59 = br i1 %icmp_ln59, void %for.inc131.i, void %systolic_array_k_768_Loop_data_drain_C_proc.exit" [systolic_array.cpp:59]   --->   Operation 168 'br' 'br_ln59' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 169 [1/1] (2.78ns)   --->   "%tmp_i = mux i32 @_ssdm_op_Mux.ap_auto.12float.i4, i32 %p_read144, i32 %p_read_143, i32 %p_read_142, i32 %p_read_141, i32 %p_read_140, i32 %p_read_139, i32 %p_read_138, i32 %p_read_137, i32 %p_read_136, i32 %p_read_135, i32 %p_read_134, i32 %p_read_133, i4 %n_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 169 'mux' 'tmp_i' <Predicate = (!icmp_ln59)> <Delay = 2.78> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 170 [1/1] (2.78ns)   --->   "%tmp_i_107 = mux i32 @_ssdm_op_Mux.ap_auto.12float.i4, i32 %p_read_132, i32 %p_read_131, i32 %p_read_130, i32 %p_read_129, i32 %p_read_128, i32 %p_read_127, i32 %p_read_126, i32 %p_read_125, i32 %p_read_124, i32 %p_read_123, i32 %p_read_122, i32 %p_read_121, i4 %n_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 170 'mux' 'tmp_i_107' <Predicate = (!icmp_ln59)> <Delay = 2.78> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 170 [1/1] (2.78ns)   --->   "%tmp_i_108 = mux i32 @_ssdm_op_Mux.ap_auto.12float.i4, i32 %p_read_132, i32 %p_read_131, i32 %p_read_130, i32 %p_read_129, i32 %p_read_128, i32 %p_read_127, i32 %p_read_126, i32 %p_read_125, i32 %p_read_124, i32 %p_read_123, i32 %p_read_122, i32 %p_read_121, i4 %n_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 170 'mux' 'tmp_i_108' <Predicate = (!icmp_ln59)> <Delay = 2.78> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 171 [1/1] (2.78ns)   --->   "%tmp_21_i = mux i32 @_ssdm_op_Mux.ap_auto.12float.i4, i32 %p_read_120, i32 %p_read_119, i32 %p_read_118, i32 %p_read_117, i32 %p_read_116, i32 %p_read_115, i32 %p_read_114, i32 %p_read_113, i32 %p_read_112, i32 %p_read_111, i32 %p_read_110, i32 %p_read_109, i4 %n_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 171 'mux' 'tmp_21_i' <Predicate = (!icmp_ln59)> <Delay = 2.78> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 172 [1/1] (2.78ns)   --->   "%tmp_22_i = mux i32 @_ssdm_op_Mux.ap_auto.12float.i4, i32 %p_read_108, i32 %p_read_107, i32 %p_read_106, i32 %p_read_105, i32 %p_read_104, i32 %p_read_103, i32 %p_read_102, i32 %p_read_101, i32 %p_read_100, i32 %p_read_99, i32 %p_read_98, i32 %p_read_97, i4 %n_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 172 'mux' 'tmp_22_i' <Predicate = (!icmp_ln59)> <Delay = 2.78> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 173 [1/1] (2.78ns)   --->   "%tmp_23_i = mux i32 @_ssdm_op_Mux.ap_auto.12float.i4, i32 %p_read_96, i32 %p_read_95, i32 %p_read_94, i32 %p_read_93, i32 %p_read_92, i32 %p_read_91, i32 %p_read_90, i32 %p_read_89, i32 %p_read_88, i32 %p_read_87, i32 %p_read_86, i32 %p_read_85, i4 %n_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 173 'mux' 'tmp_23_i' <Predicate = (!icmp_ln59)> <Delay = 2.78> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
@@ -603,11 +603,11 @@ ST_1 : Operation 181 [1/1] (1.58ns)   --->   "%store_ln59 = store i4 %add_ln59, 
 ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 209 'ret' 'ret_ln0' <Predicate = (icmp_ln59)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 3.63>
-ST_2 : Operation 182 [1/1] (0.00ns)   --->   "%specpipeline_ln60 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [systolic_array.cpp:60]   --->   Operation 182 'specpipeline' 'specpipeline_ln60' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 183 [1/1] (0.00ns)   --->   "%specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_38" [systolic_array.cpp:61]   --->   Operation 183 'specloopname' 'specloopname_ln61' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 182 [1/1] (0.00ns)   --->   "%specpipeline_ln60 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_31" [systolic_array.cpp:60]   --->   Operation 182 'specpipeline' 'specpipeline_ln60' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 183 [1/1] (0.00ns)   --->   "%specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_39" [systolic_array.cpp:61]   --->   Operation 183 'specloopname' 'specloopname_ln61' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 184 [1/1] (0.00ns)   --->   "%bitcast_ln174 = bitcast i32 %tmp_i" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 184 'bitcast' 'bitcast_ln174' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 185 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %block_C_drainer_0, i32 %bitcast_ln174" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 185 'write' 'write_ln174' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
-ST_2 : Operation 186 [1/1] (0.00ns)   --->   "%bitcast_ln174_1 = bitcast i32 %tmp_i_107" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 186 'bitcast' 'bitcast_ln174_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 186 [1/1] (0.00ns)   --->   "%bitcast_ln174_1 = bitcast i32 %tmp_i_108" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 186 'bitcast' 'bitcast_ln174_1' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 187 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %block_C_drainer_1, i32 %bitcast_ln174_1" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 187 'write' 'write_ln174' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
 ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%bitcast_ln174_2 = bitcast i32 %tmp_21_i" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 188 'bitcast' 'bitcast_ln174_2' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 189 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %block_C_drainer_2, i32 %bitcast_ln174_2" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 189 'write' 'write_ln174' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
@@ -970,7 +970,7 @@ empty             (speclooptripcount) [ 000]
 add_ln59          (add              ) [ 000]
 br_ln59           (br               ) [ 000]
 tmp_i             (mux              ) [ 011]
-tmp_i_107         (mux              ) [ 011]
+tmp_i_108         (mux              ) [ 011]
 tmp_21_i          (mux              ) [ 011]
 tmp_22_i          (mux              ) [ 011]
 tmp_23_i          (mux              ) [ 011]
@@ -2442,7 +2442,7 @@ ret_ln0           (ret              ) [ 000]
 <pin id="317" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_30"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </bind>
 </comp>
 
@@ -2460,7 +2460,7 @@ ret_ln0           (ret              ) [ 000]
 <pin id="321" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_20"/></StgValue>
+<StgValue><ssdm name="empty_31"/></StgValue>
 </bind>
 </comp>
 
@@ -2559,7 +2559,7 @@ ret_ln0           (ret              ) [ 000]
 <pin id="343" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_38"/></StgValue>
+<StgValue><ssdm name="empty_39"/></StgValue>
 </bind>
 </comp>
 
@@ -4538,7 +4538,7 @@ ret_ln0           (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="1348" class="1004" name="tmp_i_107_fu_1348">
+<comp id="1348" class="1004" name="tmp_i_108_fu_1348">
 <pin_list>
 <pin id="1349" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1350" dir="0" index="1" bw="32" slack="0"/>
@@ -4558,7 +4558,7 @@ ret_ln0           (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="mux(1196) " fcode="mux"/>
-<opset="tmp_i_107/1 "/>
+<opset="tmp_i_108/1 "/>
 </bind>
 </comp>
 
@@ -4966,13 +4966,13 @@ ret_ln0           (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="1746" class="1005" name="tmp_i_107_reg_1746">
+<comp id="1746" class="1005" name="tmp_i_108_reg_1746">
 <pin_list>
 <pin id="1747" dir="0" index="0" bw="32" slack="1"/>
 <pin id="1748" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_i_107 "/>
+<opset="tmp_i_108 "/>
 </bind>
 </comp>
 
@@ -6317,7 +6317,7 @@ ret_ln0           (ret              ) [ 000]
 		add_ln59 : 2
 		br_ln59 : 3
 		tmp_i : 2
-		tmp_i_107 : 2
+		tmp_i_108 : 2
 		tmp_21_i : 2
 		tmp_22_i : 2
 		tmp_23_i : 2
@@ -6353,7 +6353,7 @@ ret_ln0           (ret              ) [ 000]
 | Operation|      Functional Unit      |    FF   |   LUT   |
 |----------|---------------------------|---------|---------|
 |          |       tmp_i_fu_1318       |    0    |    65   |
-|          |     tmp_i_107_fu_1348     |    0    |    65   |
+|          |     tmp_i_108_fu_1348     |    0    |    65   |
 |          |      tmp_21_i_fu_1378     |    0    |    65   |
 |          |      tmp_22_i_fu_1408     |    0    |    65   |
 |          |      tmp_23_i_fu_1438     |    0    |    65   |
@@ -6548,7 +6548,7 @@ N/A
 | tmp_28_i_reg_1786|   32   |
 | tmp_29_i_reg_1791|   32   |
 | tmp_30_i_reg_1796|   32   |
-|tmp_i_107_reg_1746|   32   |
+|tmp_i_108_reg_1746|   32   |
 |  tmp_i_reg_1741  |   32   |
 +------------------+--------+
 |       Total      |   388  |

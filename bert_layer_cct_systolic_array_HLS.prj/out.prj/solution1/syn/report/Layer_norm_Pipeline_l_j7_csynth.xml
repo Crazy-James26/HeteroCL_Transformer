@@ -327,8 +327,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sub_ln256</name>
-<Object>sub_ln256</Object>
+<name>sub_ln247</name>
+<Object>sub_ln247</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

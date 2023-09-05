@@ -43,7 +43,4 @@ void gemm_systolic_array(d_type A[M][K], d_type B[K][N], d_type C[M][N]){
 			}
 		}
 	}
-
-
-
 }

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Self_attention_Pipeline_l_mh_merge_i_m_l_j_m'
 ================================================================
-* Date:           Mon Sep  4 10:10:55 2023
+* Date:           Mon Sep  4 23:52:30 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.907 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.940 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      771|      771|  7.710 us|  7.710 us|  771|  771|       no|
+    |      772|      772|  7.720 us|  7.720 us|  772|  772|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                        |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |        Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- l_mh_merge_i_m_l_j_m  |      769|      769|         3|          1|          1|   768|       yes|
+        |- l_mh_merge_i_m_l_j_m  |      770|      770|         4|          1|          1|   768|       yes|
         +------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     88|    -|
+|Expression       |        -|    -|       0|    103|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|    -|       0|    100|    -|
+|Instance         |        -|    -|       0|     20|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     72|    -|
-|Register         |        -|    -|      84|      -|    -|
+|Register         |        -|    -|     205|     64|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|      84|    260|    0|
+|Total            |        0|    0|     205|    259|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -73,13 +73,9 @@
     +---------------------+---------------+---------+----+---+----+-----+
     |       Instance      |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+---------------+---------+----+---+----+-----+
-    |mux_42_32_1_1_U4726  |mux_42_32_1_1  |        0|   0|  0|  20|    0|
-    |mux_42_32_1_1_U4727  |mux_42_32_1_1  |        0|   0|  0|  20|    0|
-    |mux_42_32_1_1_U4728  |mux_42_32_1_1  |        0|   0|  0|  20|    0|
-    |mux_42_32_1_1_U4729  |mux_42_32_1_1  |        0|   0|  0|  20|    0|
-    |mux_42_32_1_1_U4730  |mux_42_32_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_32_1_1_U3283  |mux_42_32_1_1  |        0|   0|  0|  20|    0|
     +---------------------+---------------+---------+----+---+----+-----+
-    |Total                |               |        0|   0|  0| 100|    0|
+    |Total                |               |        0|   0|  0|  20|    0|
     +---------------------+---------------+---------+----+---+----+-----+
 
     * DSP: 
@@ -95,17 +91,18 @@
     +--------------------------+----------+----+---+----+------------+------------+
     |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------+----------+----+---+----+------------+------------+
-    |add_ln154_1_fu_534_p2     |         +|   0|  0|  13|          10|           1|
-    |add_ln154_fu_546_p2       |         +|   0|  0|  13|           4|           1|
-    |add_ln155_fu_630_p2       |         +|   0|  0|  14|           7|           1|
-    |add_ln158_fu_719_p2       |         +|   0|  0|  13|          10|          10|
-    |icmp_ln154_fu_528_p2      |      icmp|   0|  0|  11|          10|          10|
-    |icmp_ln155_fu_552_p2      |      icmp|   0|  0|  11|           7|           8|
-    |select_ln154_1_fu_566_p3  |    select|   0|  0|   4|           1|           4|
-    |select_ln154_fu_558_p3    |    select|   0|  0|   7|           1|           1|
+    |add_ln147_1_fu_352_p2     |         +|   0|  0|  13|          10|           1|
+    |add_ln147_fu_364_p2       |         +|   0|  0|  13|           4|           1|
+    |add_ln148_fu_406_p2       |         +|   0|  0|  14|           7|           1|
+    |add_ln150_fu_437_p2       |         +|   0|  0|  15|           8|           8|
+    |add_ln151_fu_467_p2       |         +|   0|  0|  13|          10|          10|
+    |icmp_ln147_fu_346_p2      |      icmp|   0|  0|  11|          10|          10|
+    |icmp_ln148_fu_370_p2      |      icmp|   0|  0|  11|           7|           8|
+    |select_ln147_1_fu_384_p3  |    select|   0|  0|   4|           1|           4|
+    |select_ln147_fu_376_p3    |    select|   0|  0|   7|           1|           1|
     |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
     +--------------------------+----------+----+---+----+------------+------------+
-    |Total                     |          |   0|  0|  88|          51|          38|
+    |Total                     |          |   0|  0| 103|          59|          46|
     +--------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -117,35 +114,38 @@
     |ap_sig_allocacmp_i_m_load               |   9|          2|    4|          8|
     |ap_sig_allocacmp_indvar_flatten50_load  |   9|          2|   10|         20|
     |ap_sig_allocacmp_j_m_load               |   9|          2|    7|         14|
-    |i_m_fu_132                              |   9|          2|    4|          8|
-    |indvar_flatten50_fu_136                 |   9|          2|   10|         20|
-    |j_m_fu_128                              |   9|          2|    7|         14|
+    |i_m_fu_106                              |   9|          2|    4|          8|
+    |indvar_flatten50_fu_110                 |   9|          2|   10|         20|
+    |j_m_fu_102                              |   9|          2|    7|         14|
     +----------------------------------------+----+-----------+-----+-----------+
     |Total                                   |  72|         16|   44|         88|
     +----------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------------+----+----+-----+-----------+
-    |                 Name                 | FF | LUT| Bits| Const Bits|
-    +--------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                             |   1|   0|    1|          0|
-    |ap_done_reg                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1               |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2               |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter1_reg      |   1|   0|    1|          0|
-    |i_m_fu_132                            |   4|   0|    4|          0|
-    |indvar_flatten50_fu_136               |  10|   0|   10|          0|
-    |j_m_fu_128                            |   7|   0|    7|          0|
-    |select_ln154_1_reg_775                |   4|   0|    4|          0|
-    |select_ln154_1_reg_775_pp0_iter1_reg  |   4|   0|    4|          0|
-    |select_ln154_reg_770                  |   7|   0|    7|          0|
-    |select_ln154_reg_770_pp0_iter1_reg    |   7|   0|    7|          0|
-    |trunc_ln154_reg_779                   |   2|   0|    2|          0|
-    |trunc_ln155_reg_784                   |   2|   0|    2|          0|
-    |v89_reg_872                           |  32|   0|   32|          0|
-    +--------------------------------------+----+----+-----+-----------+
-    |Total                                 |  84|   0|   84|          0|
-    +--------------------------------------+----+----+-----+-----------+
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg   |   1|   0|    1|          0|
+    |i_m_fu_106                         |   4|   0|    4|          0|
+    |indvar_flatten50_fu_110            |  10|   0|   10|          0|
+    |j_m_fu_102                         |   7|   0|    7|          0|
+    |p_cast18_mid2_v_reg_533            |   2|   0|    2|          0|
+    |select_ln147_1_reg_524             |   4|   0|    4|          0|
+    |select_ln147_reg_518               |   7|   0|    7|          0|
+    |trunc_ln147_reg_528                |   2|   0|    2|          0|
+    |trunc_ln147_reg_528_pp0_iter1_reg  |   2|   0|    2|          0|
+    |v89_reg_558                        |  32|   0|   32|          0|
+    |select_ln147_1_reg_524             |  64|  32|    4|          0|
+    |select_ln147_reg_518               |  64|  32|    7|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 205|  64|   88|          0|
+    +-----------------------------------+----+----+-----+-----------+
 
 
 
@@ -162,55 +162,19 @@
 |ap_done          |  out|    1|  ap_ctrl_hs|  Self_attention_Pipeline_l_mh_merge_i_m_l_j_m|  return value|
 |ap_idle          |  out|    1|  ap_ctrl_hs|  Self_attention_Pipeline_l_mh_merge_i_m_l_j_m|  return value|
 |ap_ready         |  out|    1|  ap_ctrl_hs|  Self_attention_Pipeline_l_mh_merge_i_m_l_j_m|  return value|
-|v86_address0     |  out|    6|   ap_memory|                                           v86|         array|
+|v86_address0     |  out|    8|   ap_memory|                                           v86|         array|
 |v86_ce0          |  out|    1|   ap_memory|                                           v86|         array|
 |v86_q0           |   in|   32|   ap_memory|                                           v86|         array|
-|v86_1_address0   |  out|    6|   ap_memory|                                         v86_1|         array|
+|v86_1_address0   |  out|    8|   ap_memory|                                         v86_1|         array|
 |v86_1_ce0        |  out|    1|   ap_memory|                                         v86_1|         array|
 |v86_1_q0         |   in|   32|   ap_memory|                                         v86_1|         array|
-|v86_2_address0   |  out|    6|   ap_memory|                                         v86_2|         array|
+|v86_2_address0   |  out|    8|   ap_memory|                                         v86_2|         array|
 |v86_2_ce0        |  out|    1|   ap_memory|                                         v86_2|         array|
 |v86_2_q0         |   in|   32|   ap_memory|                                         v86_2|         array|
-|v86_3_address0   |  out|    6|   ap_memory|                                         v86_3|         array|
+|v86_3_address0   |  out|    8|   ap_memory|                                         v86_3|         array|
 |v86_3_ce0        |  out|    1|   ap_memory|                                         v86_3|         array|
 |v86_3_q0         |   in|   32|   ap_memory|                                         v86_3|         array|
-|v86_4_address0   |  out|    6|   ap_memory|                                         v86_4|         array|
-|v86_4_ce0        |  out|    1|   ap_memory|                                         v86_4|         array|
-|v86_4_q0         |   in|   32|   ap_memory|                                         v86_4|         array|
-|v86_5_address0   |  out|    6|   ap_memory|                                         v86_5|         array|
-|v86_5_ce0        |  out|    1|   ap_memory|                                         v86_5|         array|
-|v86_5_q0         |   in|   32|   ap_memory|                                         v86_5|         array|
-|v86_6_address0   |  out|    6|   ap_memory|                                         v86_6|         array|
-|v86_6_ce0        |  out|    1|   ap_memory|                                         v86_6|         array|
-|v86_6_q0         |   in|   32|   ap_memory|                                         v86_6|         array|
-|v86_7_address0   |  out|    6|   ap_memory|                                         v86_7|         array|
-|v86_7_ce0        |  out|    1|   ap_memory|                                         v86_7|         array|
-|v86_7_q0         |   in|   32|   ap_memory|                                         v86_7|         array|
-|v86_8_address0   |  out|    6|   ap_memory|                                         v86_8|         array|
-|v86_8_ce0        |  out|    1|   ap_memory|                                         v86_8|         array|
-|v86_8_q0         |   in|   32|   ap_memory|                                         v86_8|         array|
-|v86_9_address0   |  out|    6|   ap_memory|                                         v86_9|         array|
-|v86_9_ce0        |  out|    1|   ap_memory|                                         v86_9|         array|
-|v86_9_q0         |   in|   32|   ap_memory|                                         v86_9|         array|
-|v86_10_address0  |  out|    6|   ap_memory|                                        v86_10|         array|
-|v86_10_ce0       |  out|    1|   ap_memory|                                        v86_10|         array|
-|v86_10_q0        |   in|   32|   ap_memory|                                        v86_10|         array|
-|v86_11_address0  |  out|    6|   ap_memory|                                        v86_11|         array|
-|v86_11_ce0       |  out|    1|   ap_memory|                                        v86_11|         array|
-|v86_11_q0        |   in|   32|   ap_memory|                                        v86_11|         array|
-|v86_12_address0  |  out|    6|   ap_memory|                                        v86_12|         array|
-|v86_12_ce0       |  out|    1|   ap_memory|                                        v86_12|         array|
-|v86_12_q0        |   in|   32|   ap_memory|                                        v86_12|         array|
-|v86_13_address0  |  out|    6|   ap_memory|                                        v86_13|         array|
-|v86_13_ce0       |  out|    1|   ap_memory|                                        v86_13|         array|
-|v86_13_q0        |   in|   32|   ap_memory|                                        v86_13|         array|
-|v86_14_address0  |  out|    6|   ap_memory|                                        v86_14|         array|
-|v86_14_ce0       |  out|    1|   ap_memory|                                        v86_14|         array|
-|v86_14_q0        |   in|   32|   ap_memory|                                        v86_14|         array|
-|v86_15_address0  |  out|    6|   ap_memory|                                        v86_15|         array|
-|v86_15_ce0       |  out|    1|   ap_memory|                                        v86_15|         array|
-|v86_15_q0        |   in|   32|   ap_memory|                                        v86_15|         array|
-|tmp_151          |   in|   10|     ap_none|                                       tmp_151|        scalar|
+|tmp              |   in|   10|     ap_none|                                           tmp|        scalar|
 |v74_0_address0   |  out|   10|   ap_memory|                                         v74_0|         array|
 |v74_0_ce0        |  out|    1|   ap_memory|                                         v74_0|         array|
 |v74_0_we0        |  out|    1|   ap_memory|                                         v74_0|         array|

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Layer_norm'" level="0">
-<item name = "Date">Mon Sep  4 10:15:52 2023
+<item name = "Date">Mon Sep  4 23:58:36 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_219_1_fu_145">Layer_norm_Pipeline_VITIS_LOOP_219_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_223_2_fu_151">Layer_norm_Pipeline_VITIS_LOOP_223_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_210_1_fu_145">Layer_norm_Pipeline_VITIS_LOOP_210_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_214_2_fu_151">Layer_norm_Pipeline_VITIS_LOOP_214_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
 <column name="grp_Layer_norm_Pipeline_l_j6_fu_157">Layer_norm_Pipeline_l_j6, 3103, 3103, 31.030 us, 31.030 us, 3103, 3103, no</column>
 <column name="grp_Layer_norm_Pipeline_l_j7_fu_170">Layer_norm_Pipeline_l_j7, 801, 801, 8.010 us, 8.010 us, 801, 801, no</column>
 </table>
@@ -67,8 +67,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_219_1_fu_145">Layer_norm_Pipeline_VITIS_LOOP_219_1, 0, 0, 6, 49, 0</column>
-<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_223_2_fu_151">Layer_norm_Pipeline_VITIS_LOOP_223_2, 0, 0, 6, 49, 0</column>
+<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_210_1_fu_145">Layer_norm_Pipeline_VITIS_LOOP_210_1, 0, 0, 6, 49, 0</column>
+<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_214_2_fu_151">Layer_norm_Pipeline_VITIS_LOOP_214_2, 0, 0, 6, 49, 0</column>
 <column name="grp_Layer_norm_Pipeline_l_j6_fu_157">Layer_norm_Pipeline_l_j6, 0, 0, 493, 392, 0</column>
 <column name="grp_Layer_norm_Pipeline_l_j7_fu_170">Layer_norm_Pipeline_l_j7, 0, 0, 447, 143, 0</column>
 </table>
@@ -90,12 +90,12 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln227_fu_245_p2">+, 0, 0, 13, 4, 1</column>
-<column name="add_ln252_fu_301_p2">+, 0, 0, 13, 4, 1</column>
-<column name="sub_ln230_fu_285_p2">-, 0, 0, 17, 14, 14</column>
-<column name="sub_ln256_fu_336_p2">-, 0, 0, 17, 14, 14</column>
-<column name="icmp_ln227_fu_239_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln252_fu_295_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="add_ln218_fu_245_p2">+, 0, 0, 13, 4, 1</column>
+<column name="add_ln243_fu_301_p2">+, 0, 0, 13, 4, 1</column>
+<column name="sub_ln221_fu_285_p2">-, 0, 0, 17, 14, 14</column>
+<column name="sub_ln247_fu_336_p2">-, 0, 0, 17, 14, 14</column>
+<column name="icmp_ln218_fu_239_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln243_fu_295_p2">icmp, 0, 0, 9, 4, 4</column>
 <column name="ap_block_state2_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
@@ -135,8 +135,8 @@
 <column name="add4_reg_417">64, 0, 64, 0</column>
 <column name="ap_CS_fsm">36, 0, 36, 0</column>
 <column name="conv_reg_412">64, 0, 64, 0</column>
-<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_219_1_fu_145_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_223_2_fu_151_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_210_1_fu_145_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Layer_norm_Pipeline_VITIS_LOOP_214_2_fu_151_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_Layer_norm_Pipeline_l_j6_fu_157_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_Layer_norm_Pipeline_l_j7_fu_170_ap_start_reg">1, 0, 1, 0</column>
 <column name="i8_2_reg_350">4, 0, 4, 0</column>
@@ -145,8 +145,8 @@
 <column name="i9_fu_98">4, 0, 4, 0</column>
 <column name="mean2_load_reg_377">32, 0, 32, 0</column>
 <column name="reg_225">32, 0, 32, 0</column>
-<column name="sub_ln230_reg_382">6, 0, 14, 8</column>
-<column name="sub_ln256_reg_432">6, 0, 14, 8</column>
+<column name="sub_ln221_reg_382">6, 0, 14, 8</column>
+<column name="sub_ln247_reg_432">6, 0, 14, 8</column>
 <column name="v2_reg_427">32, 0, 32, 0</column>
 <column name="v_reg_422">32, 0, 32, 0</column>
 </table>
@@ -164,39 +164,39 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7474_p_din0">out, 64, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7474_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7474_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7477_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7477_p_dout0">in, 64, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7477_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7480_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7480_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7480_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7480_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7484_p_din0">out, 64, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7484_p_din1">out, 64, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7484_p_opcode">out, 2, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7484_p_dout0">in, 64, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7484_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7466_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7466_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7466_p_opcode">out, 2, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7466_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7466_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7462_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7462_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7462_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7462_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7470_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7470_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7470_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7470_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7488_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7488_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7488_p_opcode">out, 2, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7488_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
-<column name="grp_fu_7488_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1402_p_din0">out, 64, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1402_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1402_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1405_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1405_p_dout0">in, 64, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1405_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1408_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1408_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1408_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1408_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1412_p_din0">out, 64, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1412_p_din1">out, 64, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1412_p_opcode">out, 2, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1412_p_dout0">in, 64, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1412_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1394_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1394_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1394_p_opcode">out, 2, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1394_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1394_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1390_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1390_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1390_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1390_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1398_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1398_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1398_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1398_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1416_p_din0">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1416_p_din1">out, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1416_p_opcode">out, 2, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1416_p_dout0">in, 32, ap_ctrl_hs, Layer_norm, return value</column>
+<column name="grp_fu_1416_p_ce">out, 1, ap_ctrl_hs, Layer_norm, return value</column>
 <column name="v115_address0">out, 14, ap_memory, v115, array</column>
 <column name="v115_ce0">out, 1, ap_memory, v115, array</column>
 <column name="v115_q0">in, 32, ap_memory, v115, array</column>

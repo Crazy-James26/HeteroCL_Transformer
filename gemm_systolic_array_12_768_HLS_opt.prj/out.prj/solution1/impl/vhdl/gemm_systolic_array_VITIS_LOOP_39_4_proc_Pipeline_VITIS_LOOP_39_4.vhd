@@ -148,7 +148,7 @@ attribute shreg_extract : string;
 
 
 begin
-    fadd_32ns_32ns_32_5_full_dsp_1_U1855 : component gemm_systolic_array_fadd_32ns_32ns_32_5_full_dsp_1
+    fadd_32ns_32ns_32_5_full_dsp_1_U2143 : component gemm_systolic_array_fadd_32ns_32ns_32_5_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 5,

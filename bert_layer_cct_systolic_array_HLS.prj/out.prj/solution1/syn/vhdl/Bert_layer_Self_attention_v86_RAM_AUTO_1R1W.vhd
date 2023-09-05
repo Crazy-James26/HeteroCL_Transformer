@@ -12,8 +12,8 @@ entity Bert_layer_Self_attention_v86_RAM_AUTO_1R1W is
     generic(
             MEM_TYPE    : string := "auto"; 
             DataWidth     : integer := 32; 
-            AddressWidth     : integer := 6; 
-            AddressRange    : integer := 48
+            AddressWidth     : integer := 8; 
+            AddressRange    : integer := 192
     ); 
     port (
           address0     : in std_logic_vector(AddressWidth-1 downto 0); 

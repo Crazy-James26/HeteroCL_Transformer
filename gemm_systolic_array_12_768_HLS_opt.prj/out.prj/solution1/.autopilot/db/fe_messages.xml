@@ -32,9 +32,6 @@
         <args ARG_PragmaFunction="systolic_array" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="systolic_array.cpp:59:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="systolic_array" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="systolic_array.cpp:61:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="systolic_array" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="gemm_systolic_array.cpp:34:19" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
@@ -83,6 +80,9 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="gemm_systolic_array.cpp:29:22" msg_body="Loop 'VITIS_LOOP_29_3' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_29_3"/>
     </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="systolic_array.cpp:60:19" msg_body="Loop 'VITIS_LOOP_60_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_60_6"/>
+    </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="systolic_array.cpp:50:19" msg_body="Loop 'VITIS_LOOP_50_4' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_50_4"/>
     </msg>
@@ -104,8 +104,8 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="gemm_systolic_array.cpp:3:0" msg_body="Unrolling loop 'store_block_C' (gemm_systolic_array.cpp:37:4) in function 'gemm_systolic_array' completely with a factor of 12">
         <args Factor="12" LoopLoc="gemm_systolic_array.cpp:37:4" LoopName="store_block_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="systolic_array.cpp:17:0" msg_body="Unrolling loop 'data_drain_C' (systolic_array.cpp:58:16) in function 'systolic_array' completely with a factor of 12">
-        <args Factor="12" LoopLoc="systolic_array.cpp:58:16" LoopName="data_drain_C"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="systolic_array.cpp:17:0" msg_body="Unrolling loop 'VITIS_LOOP_60_6' (systolic_array.cpp:60:19) in function 'systolic_array' completely with a factor of 12">
+        <args Factor="12" LoopLoc="systolic_array.cpp:60:19" LoopName="VITIS_LOOP_60_6"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="systolic_array.cpp:17:0" msg_body="Unrolling loop 'VITIS_LOOP_50_4' (systolic_array.cpp:50:19) in function 'systolic_array' completely with a factor of 12">
         <args Factor="12" LoopLoc="systolic_array.cpp:50:19" LoopName="VITIS_LOOP_50_4"/>

@@ -7,8 +7,8 @@
 module Bert_layer_Self_attention_v86_RAM_AUTO_1R1W (address0, ce0, d0, we0, q0, address1, ce1, q1,  reset,clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 6;
-parameter AddressRange = 48;
+parameter AddressWidth = 8;
+parameter AddressRange = 192;
 
 input[AddressWidth-1:0] address0;
 input ce0;
