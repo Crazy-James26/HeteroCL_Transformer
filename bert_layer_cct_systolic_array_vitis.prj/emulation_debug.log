@@ -1,0 +1,45 @@
+INFO: [HW-EMU 01] Hardware emulation runs simulation underneath. Using a large data set will result in long simulation times. It is recommended that a small dataset is used for faster execution. The flow uses approximate models for Global memories and interconnect and hence the performance data generated is approximate.
+INFO::[ Vitis-EM 22 ] [Time elapsed: 6 minute(s) 51 seconds, Emulation time: 0.0390495 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 58.000 KB              WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 12 minute(s) 0 seconds, Emulation time: 0.0690555 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 93.000 KB              WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 17 minute(s) 12 seconds, Emulation time: 0.0990615 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 129.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 20 minute(s) 32 seconds, Emulation time: 0.118065 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 151.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 25 minute(s) 13 seconds, Emulation time: 0.145071 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 183.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 30 minute(s) 57 seconds, Emulation time: 0.178077 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 221.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 35 minute(s) 7 seconds, Emulation time: 0.202082 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 249.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 44 minute(s) 0 seconds, Emulation time: 0.253092 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 309.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 46 minute(s) 5 seconds, Emulation time: 0.265095 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 323.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 51 minute(s) 18 seconds, Emulation time: 0.295101 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 358.000 KB             WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 55 minute(s) 19 seconds, Emulation time: 0.318105 ms]
+Data transfer between kernel(s) and global memory(s)
+Bert_layer_1:m_axi_gmem-HBM[0]          RD = 385.000 KB             WR = 0.000 KB        
+

@@ -1,0 +1,13 @@
+Tue Sep  5 00:14:09 2023: Server was asked to start on port: '38309'
+Tue Sep  5 00:14:09 2023: Server is using token UUID: '12cc815f-76bb-4824-afa5-3a02e83e486d'
+Tue Sep  5 00:14:09 2023: Attempting to start server on port '38309'
+Tue Sep  5 00:14:09 2023: XRC main fifo: created main fifo '/tmp/xrcmain12cc815f-76bb-4824-afa5-3a02e83e486d', fd read = 13
+Tue Sep  5 00:14:09 2023: Running Rule Check Server
+Tue Sep  5 00:14:09 2023: Version 1.6.1
+Tue Sep  5 00:14:09 2023: Rule Check Server: Accepted socket connection from client
+Tue Sep  5 00:14:09 2023: EXCHANGE_TOKEN received, server token: 12cc815f-76bb-4824-afa5-3a02e83e486d, passed token: 12cc815f-76bb-4824-afa5-3a02e83e486d
+Tue Sep  5 00:14:09 2023: SESSION_MGR: creating session with session uuid: 'c197971d-aecb-4d63-93ba-020a43b7dc2d' and name 'v++_link_Bert_layer.link'
+Tue Sep  5 00:16:01 2023: Rule Check Server: Accepted socket connection from client
+Tue Sep  5 00:17:26 2023: Rule Check Server: Accepted socket connection from client
+Tue Sep  5 03:15:54 2023: Rule Check Server: Accepted socket connection from client
+Tue Sep  5 03:58:17 2023: SESSION_MGR: closing session for UUID 'c197971d-aecb-4d63-93ba-020a43b7dc2d' with name 'v++_link_Bert_layer.link'

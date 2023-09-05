@@ -11,6 +11,11 @@ def top():
     head_num = 12
     head_len = 64
     gelu_len = 3072
+    # inp_num=6
+    # inp_len=12
+    # head_num = 2
+    # head_len = 16
+    # gelu_len = 16
 
     def Linear_layer_qkv(inp: float32[inp_num, inp_len], W: float32[inp_len, inp_len], B: float32[inp_len]) -> float32[inp_num, inp_len]:
         outp: float32[inp_num, inp_len] = 0.0
@@ -243,7 +248,7 @@ def top():
     return s
 
 if __name__ == '__main__':
-    target = "vhls"
+    target = "vitis_hls"
     s = top()
 
     if(target=="vhls"):
@@ -252,7 +257,15 @@ if __name__ == '__main__':
         mod = s.build(target="vhls", mode="csyn", project="bert_layer_cct_buffer.prj")
         mod()
 
+    elif target=="vitis_hls":
+        f = s.build(target=target)
+        print(f)
+        mod = s.build(target="vitis_hls", mode="debug", project="bert_layer_cct_buffer_vitis.prj")
+        # mod()
+
     else:
+        allo.passes.generate_input_output_buffers(s.top_func, flatten=True)
+        print(s.module)
         f = s.build(target=target) 
         inp = from_file('./params/input.txt', (12, 768))
         # params
@@ -282,7 +295,7 @@ if __name__ == '__main__':
         test_outp = f(inp, params.Wq, params.Bq, params.Wk, params.Bk, params.Wv, params.Bv, 
                         params.output_dense_w, params.output_dense_b,
                         params.ffn_w1, params.ffn_b1, params.ffn_w2, params.ffn_b2, 
-                        params.gamma1, params.beta1, params.gamma2, params.beta2)
+                        params.gamma1, params.beta1, params.gamma2, params.beta2).reshape((12, 768))
         print("test: \n", test_outp)
         to_file(test_outp, './results/bl_test_output.txt')
 

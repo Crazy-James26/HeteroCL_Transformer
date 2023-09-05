@@ -1,0 +1,12 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/Bert_layer
+	Log files: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/Bert_layer
+INFO: [v++ 60-1548] Creating build summary session with primary output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo.compile_summary, at Tue Sep  5 00:09:47 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Sep  5 00:09:47 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/Bert_layer/v++_compile_Bert_layer_guidance.html', at Tue Sep  5 00:09:49 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-242] Creating kernel: 'Bert_layer'

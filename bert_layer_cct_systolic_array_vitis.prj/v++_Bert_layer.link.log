@@ -1,0 +1,472 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link
+	Log files: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary, at Tue Sep  5 00:14:08 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Sep  5 00:14:08 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html', at Tue Sep  5 00:14:09 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [00:15:59] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Sep  5 00:16:01 2023
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [00:16:08] build_xd_ip_db started: /opt/xilinx/2022.1/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/hw.hpfm -clkid 0 -ip /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/iprepo/xilinx_com_hls_Bert_layer_1_0,Bert_layer -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [00:16:16] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2726.656 ; gain = 0.000 ; free physical = 39709 ; free virtual = 199525
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [00:16:16] cfgen started: /opt/xilinx/2022.1/Vitis/2022.1/bin/cfgen -dmclkid 0 -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: Bert_layer, num: 1  {Bert_layer_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v220 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v221 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v222 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v223 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v224 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v225 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v226 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v227 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v228 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v229 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v230 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v231 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v232 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v233 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v234 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v235 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v236 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v237 to HBM[0]
+INFO: [SYSTEM_LINK 82-37] [00:16:29] cfgen finished successfully
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2726.656 ; gain = 0.000 ; free physical = 39711 ; free virtual = 199527
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [00:16:29] cf2bd started: /opt/xilinx/2022.1/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.xsd --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [00:16:34] cf2bd finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2726.656 ; gain = 0.000 ; free physical = 39701 ; free virtual = 199523
+INFO: [v++ 60-1441] [00:16:34] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2431.340 ; gain = 0.000 ; free physical = 39744 ; free virtual = 199566
+INFO: [v++ 60-1443] [00:16:34] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/sdsl.dat -rtd /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw.rtd -nofilter /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw_full.rtd -xclbin /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [00:16:44] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2431.340 ; gain = 0.000 ; free physical = 39745 ; free virtual = 199570
+INFO: [v++ 60-1443] [00:16:44] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [00:16:47] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:03 . Memory (MB): peak = 2431.340 ; gain = 0.000 ; free physical = 39515 ; free virtual = 199340
+INFO: [v++ 60-1443] [00:16:47] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/.ipcache -s --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --log_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link --report_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link --config /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini -k /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link --no-info --iprepo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0 --messageDb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link/vpl.pb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+
+****** vpl v2022.1.2 (64-bit)
+  **** SW Build 3602371 on 2022-08-02-23:13:43
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [VPL 60-1032] Extracting hardware platform to /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform
+[00:17:27] Run vpl: Step create_project: Started
+Creating Vivado project.
+[00:17:34] Run vpl: Step create_project: Completed
+[00:17:34] Run vpl: Step create_bd: Started
+[00:18:23] Run vpl: Step create_bd: Completed
+[00:18:23] Run vpl: Step update_bd: Started
+[00:18:24] Run vpl: Step update_bd: Completed
+[00:18:24] Run vpl: Step generate_target: Started
+[00:19:22] Run vpl: Step generate_target: Completed
+[00:19:22] Run vpl: Step config_hw_runs: Started
+[00:20:08] Run vpl: Step config_hw_runs: Completed
+[00:20:08] Run vpl: Step synth: Started
+[00:20:39] Block-level synthesis in progress, 0 of 134 jobs complete, 8 jobs running.
+[00:21:09] Block-level synthesis in progress, 0 of 134 jobs complete, 8 jobs running.
+[00:21:39] Block-level synthesis in progress, 0 of 134 jobs complete, 8 jobs running.
+[00:22:09] Block-level synthesis in progress, 8 of 134 jobs complete, 6 jobs running.
+[00:22:40] Block-level synthesis in progress, 11 of 134 jobs complete, 8 jobs running.
+[00:23:10] Block-level synthesis in progress, 12 of 134 jobs complete, 8 jobs running.
+[00:23:40] Block-level synthesis in progress, 17 of 134 jobs complete, 4 jobs running.
+[00:24:10] Block-level synthesis in progress, 19 of 134 jobs complete, 7 jobs running.
+[00:24:40] Block-level synthesis in progress, 20 of 134 jobs complete, 8 jobs running.
+[00:25:11] Block-level synthesis in progress, 23 of 134 jobs complete, 5 jobs running.
+[00:25:41] Block-level synthesis in progress, 25 of 134 jobs complete, 6 jobs running.
+[00:26:11] Block-level synthesis in progress, 28 of 134 jobs complete, 6 jobs running.
+[00:26:41] Block-level synthesis in progress, 30 of 134 jobs complete, 7 jobs running.
+[00:27:11] Block-level synthesis in progress, 33 of 134 jobs complete, 6 jobs running.
+[00:27:42] Block-level synthesis in progress, 36 of 134 jobs complete, 5 jobs running.
+[00:28:12] Block-level synthesis in progress, 39 of 134 jobs complete, 6 jobs running.
+[00:28:42] Block-level synthesis in progress, 40 of 134 jobs complete, 7 jobs running.
+[00:29:13] Block-level synthesis in progress, 42 of 134 jobs complete, 6 jobs running.
+[00:29:43] Block-level synthesis in progress, 44 of 134 jobs complete, 6 jobs running.
+[00:30:13] Block-level synthesis in progress, 48 of 134 jobs complete, 6 jobs running.
+[00:30:44] Block-level synthesis in progress, 51 of 134 jobs complete, 5 jobs running.
+[00:31:14] Block-level synthesis in progress, 55 of 134 jobs complete, 4 jobs running.
+[00:31:44] Block-level synthesis in progress, 58 of 134 jobs complete, 5 jobs running.
+[00:32:15] Block-level synthesis in progress, 62 of 134 jobs complete, 5 jobs running.
+[00:32:45] Block-level synthesis in progress, 69 of 134 jobs complete, 3 jobs running.
+[00:33:15] Block-level synthesis in progress, 75 of 134 jobs complete, 6 jobs running.
+[00:33:46] Block-level synthesis in progress, 86 of 134 jobs complete, 1 job running.
+[00:34:16] Block-level synthesis in progress, 94 of 134 jobs complete, 2 jobs running.
+[00:34:46] Block-level synthesis in progress, 97 of 134 jobs complete, 8 jobs running.
+[00:35:17] Block-level synthesis in progress, 98 of 134 jobs complete, 8 jobs running.
+[00:35:47] Block-level synthesis in progress, 102 of 134 jobs complete, 4 jobs running.
+[00:36:17] Block-level synthesis in progress, 109 of 134 jobs complete, 4 jobs running.
+[00:36:48] Block-level synthesis in progress, 115 of 134 jobs complete, 6 jobs running.
+[00:37:18] Block-level synthesis in progress, 115 of 134 jobs complete, 8 jobs running.
+[00:37:49] Block-level synthesis in progress, 117 of 134 jobs complete, 6 jobs running.
+[00:38:19] Block-level synthesis in progress, 123 of 134 jobs complete, 6 jobs running.
+[00:38:50] Block-level synthesis in progress, 123 of 134 jobs complete, 8 jobs running.
+[00:39:20] Block-level synthesis in progress, 123 of 134 jobs complete, 8 jobs running.
+[00:39:51] Block-level synthesis in progress, 131 of 134 jobs complete, 2 jobs running.
+[00:40:21] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:40:52] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:41:22] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:41:52] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:42:23] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:42:53] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:43:24] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:43:54] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:44:25] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:44:55] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:45:26] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:45:56] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:46:27] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:46:57] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:47:28] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:47:58] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:48:29] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:48:59] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:49:30] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:50:00] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:50:31] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:51:01] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:51:32] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:52:02] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:52:32] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:53:03] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:53:33] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:54:04] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:54:34] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:55:05] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:55:35] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:56:06] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:56:36] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:57:07] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:57:37] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:58:08] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:58:38] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:59:09] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[00:59:39] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:00:10] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:00:40] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:01:11] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:01:41] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:02:12] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:02:42] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:03:13] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:03:43] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:04:14] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:04:44] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:05:15] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:05:45] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:06:16] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:06:46] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:07:17] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:07:47] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:08:18] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:08:48] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:09:19] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:09:49] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:10:20] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:10:50] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:11:20] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:11:51] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:12:21] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:12:52] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:13:22] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:13:53] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:14:23] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:14:54] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:15:25] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:15:55] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:16:25] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:16:56] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:17:26] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:17:57] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:18:27] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:18:58] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:19:28] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:19:59] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:20:29] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:21:00] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:21:30] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:22:01] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:22:31] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:23:02] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:23:32] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:24:03] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:24:33] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:25:04] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:25:34] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:26:05] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:26:35] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:27:06] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:27:36] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:28:07] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:28:37] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:29:08] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:29:38] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:30:09] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:30:39] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:31:10] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:31:40] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:32:11] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:32:41] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:33:12] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:33:42] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:34:13] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:34:43] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:35:14] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:35:44] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:36:15] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:36:45] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:37:16] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:37:46] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:38:17] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:38:47] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:39:17] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:39:48] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:40:18] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:40:49] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:41:19] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:41:50] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:42:20] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:42:51] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:43:21] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:43:52] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:44:22] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:44:53] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:45:23] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:45:54] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:46:24] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:46:55] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:47:25] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:47:56] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:48:26] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:48:57] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:49:27] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:49:58] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:50:28] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:50:59] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:51:29] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:52:00] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:52:30] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:53:01] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:53:31] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:54:02] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:54:32] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:55:03] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:55:33] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:56:04] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:56:34] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:57:05] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:57:35] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:58:06] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:58:36] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:59:07] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[01:59:37] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:00:08] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:00:38] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:01:09] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:01:39] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:02:10] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:02:40] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:03:10] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:03:41] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:04:11] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:04:42] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:05:12] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:05:43] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:06:13] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:06:44] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:07:14] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:07:45] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:08:15] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:08:46] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:09:16] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:09:47] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:10:17] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:10:48] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:11:18] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:11:49] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:12:19] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:12:50] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:13:20] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:13:51] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:14:21] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:14:52] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:15:22] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:15:53] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:16:23] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:16:54] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:17:24] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:17:55] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:18:25] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:18:56] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:19:26] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:19:57] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:20:27] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:20:57] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:21:28] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:21:58] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:22:29] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:22:59] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:23:30] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:24:00] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:24:31] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:25:01] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:25:32] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:26:02] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:26:33] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:27:03] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:27:34] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:28:04] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:28:35] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:29:05] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:29:36] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:30:06] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:30:37] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:31:07] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:31:38] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:32:08] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:32:39] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:33:09] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:33:40] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:34:10] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:34:41] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:35:11] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:35:41] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:36:12] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:36:42] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:37:13] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:37:43] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:38:14] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:38:44] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:39:15] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:39:45] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:40:16] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:40:46] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:41:17] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:41:48] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:42:18] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:42:48] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:43:19] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:43:49] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:44:20] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:44:50] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:45:21] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:45:51] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:46:22] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:46:52] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:47:23] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:47:53] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:48:24] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:48:54] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:49:25] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:49:55] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:50:26] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:50:57] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:51:27] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:51:58] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:52:28] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:52:59] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:53:29] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:54:00] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:54:30] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:55:01] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:55:31] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:56:02] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:56:32] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:57:03] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:57:33] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:58:04] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:58:34] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:59:05] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[02:59:35] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:00:06] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:00:36] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:01:07] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:01:37] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:02:08] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:02:38] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:03:09] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:03:39] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:04:10] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:04:40] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:05:11] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:05:41] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:06:12] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:06:42] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:07:13] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:07:43] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:08:14] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:08:44] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:09:15] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:09:45] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:10:16] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:10:46] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:11:17] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:11:47] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:12:18] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:12:48] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:13:19] Block-level synthesis in progress, 133 of 134 jobs complete, 1 job running.
+[03:13:49] Block-level synthesis in progress, 134 of 134 jobs complete, 0 jobs running.
+[03:14:20] Top-level synthesis in progress.
+[03:14:50] Top-level synthesis in progress.
+[03:15:21] Top-level synthesis in progress.
+[03:15:39] Run vpl: Step synth: Completed
+[03:15:39] Run vpl: Step impl: Started
+[03:44:08] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 03h 27m 19s 
+
+[03:44:08] Starting logic optimization..
+[03:47:12] Phase 1 Retarget
+[03:47:42] Phase 2 Constant propagation
+[03:48:13] Phase 3 Sweep
+[03:49:45] Phase 4 BUFG optimization
+[03:50:15] Phase 5 Shift Register Optimization
+[03:50:46] Phase 6 Post Processing Netlist
+[03:55:51] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 11m 42s 
+
+[03:55:51] Starting logic placement..
+[03:58:15] Run vpl: Step impl: Failed
+[03:58:16] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while processing /scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1 :
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Pblock pblock_dynamic_region (This design requires more RAMB18 and RAMB36/FIFO cells than are available in Pblock 'pblock_dynamic_region'. This design requires 15406 of such cell types but only 3552 compatible sites are available in Pblock 'pblock_dynamic_region'. Please consider increasing the span of Pblock 'pblock_dynamic_region' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 15797 of such cell types but only 4032 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Pblock pblock_dynamic_region (This design requires more RAMB36/FIFO cells than are available in Pblock 'pblock_dynamic_region'. This design requires 7702 of such cell types but only 1776 compatible sites are available in Pblock 'pblock_dynamic_region'. Please consider increasing the span of Pblock 'pblock_dynamic_region' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 7895 of such cell types but only 2016 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36E2 over-utilized in Pblock pblock_dynamic_region (This design requires more RAMB36E2 cells than are available in Pblock 'pblock_dynamic_region'. This design requires 7702 of such cell types but only 1776 compatible sites are available in Pblock 'pblock_dynamic_region'. Please consider increasing the span of Pblock 'pblock_dynamic_region' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36E2 over-utilized in Top Level Design (This design requires more RAMB36E2 cells than are available in the target device. This design requires 7895 of such cell types but only 2016 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [VPL 4-23] Error(s) found during DRC. Placer not run.
+ERROR: [VPL 60-773] In '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/runme.log', caught Tcl error:  problem implementing dynamic region, impl_1: place_design ERROR, please look at the run log file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+WARNING: [VPL 60-732] Link warning: No monitor points found for BD automation.
+WARNING: [VPL 60-732] Link warning: The available BRAMs may not be sufficient to accommodate the kernels
+ERROR: [VPL 60-704] Integration error, problem implementing dynamic region, impl_1: place_design ERROR, please look at the run log file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_cct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [03:58:17] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:03:09 ; elapsed = 03:41:29 . Memory (MB): peak = 2431.340 ; gain = 0.000 ; free physical = 30954 ; free virtual = 195145
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.
