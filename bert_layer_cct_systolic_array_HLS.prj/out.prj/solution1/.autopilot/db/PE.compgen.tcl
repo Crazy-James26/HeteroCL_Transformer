@@ -22,7 +22,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 252 \
+    id 176 \
     name A_fifo_0_0 \
     type fifo \
     dir I \
@@ -37,7 +37,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 253 \
+    id 177 \
     name A_fifo_0_1 \
     type fifo \
     dir O \
@@ -52,7 +52,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 254 \
+    id 178 \
     name B_fifo_0_0 \
     type fifo \
     dir I \
@@ -67,7 +67,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 255 \
+    id 179 \
     name B_fifo_0_1 \
     type fifo \
     dir O \

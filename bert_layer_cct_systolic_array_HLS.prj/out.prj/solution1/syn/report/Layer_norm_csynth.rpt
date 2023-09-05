@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Layer_norm'
 ================================================================
-* Date:           Mon Sep  4 10:15:52 2023
+* Date:           Mon Sep  4 23:58:36 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -38,8 +38,8 @@
         |                                                 |                                      |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
         |                     Instance                    |                Module                |   min   |   max   |    min    |    max    |  min |  max |   Type  |
         +-------------------------------------------------+--------------------------------------+---------+---------+-----------+-----------+------+------+---------+
-        |grp_Layer_norm_Pipeline_VITIS_LOOP_219_1_fu_145  |Layer_norm_Pipeline_VITIS_LOOP_219_1  |       14|       14|   0.140 us|   0.140 us|    14|    14|       no|
-        |grp_Layer_norm_Pipeline_VITIS_LOOP_223_2_fu_151  |Layer_norm_Pipeline_VITIS_LOOP_223_2  |       14|       14|   0.140 us|   0.140 us|    14|    14|       no|
+        |grp_Layer_norm_Pipeline_VITIS_LOOP_210_1_fu_145  |Layer_norm_Pipeline_VITIS_LOOP_210_1  |       14|       14|   0.140 us|   0.140 us|    14|    14|       no|
+        |grp_Layer_norm_Pipeline_VITIS_LOOP_214_2_fu_151  |Layer_norm_Pipeline_VITIS_LOOP_214_2  |       14|       14|   0.140 us|   0.140 us|    14|    14|       no|
         |grp_Layer_norm_Pipeline_l_j6_fu_157              |Layer_norm_Pipeline_l_j6              |     3103|     3103|  31.030 us|  31.030 us|  3103|  3103|       no|
         |grp_Layer_norm_Pipeline_l_j7_fu_170              |Layer_norm_Pipeline_l_j7              |      801|      801|   8.010 us|   8.010 us|   801|   801|       no|
         +-------------------------------------------------+--------------------------------------+---------+---------+-----------+-----------+------+------+---------+
@@ -82,8 +82,8 @@
     +-------------------------------------------------+--------------------------------------+---------+----+-----+-----+-----+
     |                     Instance                    |                Module                | BRAM_18K| DSP|  FF | LUT | URAM|
     +-------------------------------------------------+--------------------------------------+---------+----+-----+-----+-----+
-    |grp_Layer_norm_Pipeline_VITIS_LOOP_219_1_fu_145  |Layer_norm_Pipeline_VITIS_LOOP_219_1  |        0|   0|    6|   49|    0|
-    |grp_Layer_norm_Pipeline_VITIS_LOOP_223_2_fu_151  |Layer_norm_Pipeline_VITIS_LOOP_223_2  |        0|   0|    6|   49|    0|
+    |grp_Layer_norm_Pipeline_VITIS_LOOP_210_1_fu_145  |Layer_norm_Pipeline_VITIS_LOOP_210_1  |        0|   0|    6|   49|    0|
+    |grp_Layer_norm_Pipeline_VITIS_LOOP_214_2_fu_151  |Layer_norm_Pipeline_VITIS_LOOP_214_2  |        0|   0|    6|   49|    0|
     |grp_Layer_norm_Pipeline_l_j6_fu_157              |Layer_norm_Pipeline_l_j6              |        0|   0|  493|  392|    0|
     |grp_Layer_norm_Pipeline_l_j7_fu_170              |Layer_norm_Pipeline_l_j7              |        0|   0|  447|  143|    0|
     +-------------------------------------------------+--------------------------------------+---------+----+-----+-----+-----+
@@ -111,12 +111,12 @@
     +---------------------------------+----------+----+---+----+------------+------------+
     |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+----+---+----+------------+------------+
-    |add_ln227_fu_245_p2              |         +|   0|  0|  13|           4|           1|
-    |add_ln252_fu_301_p2              |         +|   0|  0|  13|           4|           1|
-    |sub_ln230_fu_285_p2              |         -|   0|  0|  17|          14|          14|
-    |sub_ln256_fu_336_p2              |         -|   0|  0|  17|          14|          14|
-    |icmp_ln227_fu_239_p2             |      icmp|   0|  0|   9|           4|           4|
-    |icmp_ln252_fu_295_p2             |      icmp|   0|  0|   9|           4|           4|
+    |add_ln218_fu_245_p2              |         +|   0|  0|  13|           4|           1|
+    |add_ln243_fu_301_p2              |         +|   0|  0|  13|           4|           1|
+    |sub_ln221_fu_285_p2              |         -|   0|  0|  17|          14|          14|
+    |sub_ln247_fu_336_p2              |         -|   0|  0|  17|          14|          14|
+    |icmp_ln218_fu_239_p2             |      icmp|   0|  0|   9|           4|           4|
+    |icmp_ln243_fu_295_p2             |      icmp|   0|  0|   9|           4|           4|
     |ap_block_state2_on_subcall_done  |        or|   0|  0|   2|           1|           1|
     +---------------------------------+----------+----+---+----+------------+------------+
     |Total                            |          |   0|  0|  80|          45|          39|
@@ -164,8 +164,8 @@
     |add4_reg_417                                                  |  64|   0|   64|          0|
     |ap_CS_fsm                                                     |  36|   0|   36|          0|
     |conv_reg_412                                                  |  64|   0|   64|          0|
-    |grp_Layer_norm_Pipeline_VITIS_LOOP_219_1_fu_145_ap_start_reg  |   1|   0|    1|          0|
-    |grp_Layer_norm_Pipeline_VITIS_LOOP_223_2_fu_151_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Layer_norm_Pipeline_VITIS_LOOP_210_1_fu_145_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Layer_norm_Pipeline_VITIS_LOOP_214_2_fu_151_ap_start_reg  |   1|   0|    1|          0|
     |grp_Layer_norm_Pipeline_l_j6_fu_157_ap_start_reg              |   1|   0|    1|          0|
     |grp_Layer_norm_Pipeline_l_j7_fu_170_ap_start_reg              |   1|   0|    1|          0|
     |i8_2_reg_350                                                  |   4|   0|    4|          0|
@@ -174,8 +174,8 @@
     |i9_fu_98                                                      |   4|   0|    4|          0|
     |mean2_load_reg_377                                            |  32|   0|   32|          0|
     |reg_225                                                       |  32|   0|   32|          0|
-    |sub_ln230_reg_382                                             |   6|   0|   14|          8|
-    |sub_ln256_reg_432                                             |   6|   0|   14|          8|
+    |sub_ln221_reg_382                                             |   6|   0|   14|          8|
+    |sub_ln247_reg_432                                             |   6|   0|   14|          8|
     |v2_reg_427                                                    |  32|   0|   32|          0|
     |v_reg_422                                                     |  32|   0|   32|          0|
     +--------------------------------------------------------------+----+----+-----+-----------+
@@ -197,39 +197,39 @@
 |ap_done               |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
 |ap_idle               |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
 |ap_ready              |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7474_p_din0    |  out|   64|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7474_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7474_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7477_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7477_p_dout0   |   in|   64|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7477_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7480_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7480_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7480_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7480_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7484_p_din0    |  out|   64|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7484_p_din1    |  out|   64|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7484_p_opcode  |  out|    2|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7484_p_dout0   |   in|   64|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7484_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7466_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7466_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7466_p_opcode  |  out|    2|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7466_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7466_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7462_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7462_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7462_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7462_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7470_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7470_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7470_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7470_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7488_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7488_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7488_p_opcode  |  out|    2|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7488_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
-|grp_fu_7488_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1402_p_din0    |  out|   64|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1402_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1402_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1405_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1405_p_dout0   |   in|   64|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1405_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1408_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1408_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1408_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1408_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1412_p_din0    |  out|   64|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1412_p_din1    |  out|   64|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1412_p_opcode  |  out|    2|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1412_p_dout0   |   in|   64|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1412_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1394_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1394_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1394_p_opcode  |  out|    2|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1394_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1394_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1390_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1390_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1390_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1390_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1398_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1398_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1398_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1398_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1416_p_din0    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1416_p_din1    |  out|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1416_p_opcode  |  out|    2|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1416_p_dout0   |   in|   32|  ap_ctrl_hs|    Layer_norm|  return value|
+|grp_fu_1416_p_ce      |  out|    1|  ap_ctrl_hs|    Layer_norm|  return value|
 |v115_address0         |  out|   14|   ap_memory|          v115|         array|
 |v115_ce0              |  out|    1|   ap_memory|          v115|         array|
 |v115_q0               |   in|   32|   ap_memory|          v115|         array|

@@ -138,7 +138,7 @@ gemm_systolic_array_fadd_32ns_32ns_32_5_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_5_full_dsp_1_U1855(
+fadd_32ns_32ns_32_5_full_dsp_1_U2143(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_75_p0),

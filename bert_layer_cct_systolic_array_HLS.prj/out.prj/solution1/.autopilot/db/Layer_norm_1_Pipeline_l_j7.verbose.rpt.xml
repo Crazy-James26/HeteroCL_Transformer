@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Layer_norm_1_Pipeline_l_j7'" level="0">
-<item name = "Date">Mon Sep  4 10:26:59 2023
+<item name = "Date">Tue Sep  5 00:12:15 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln253_fu_349_p2">+, 0, 0, 13, 10, 1</column>
-<column name="add_ln256_fu_359_p2">+, 0, 0, 17, 14, 14</column>
-<column name="icmp_ln253_fu_343_p2">icmp, 0, 0, 11, 10, 10</column>
+<column name="add_ln244_fu_349_p2">+, 0, 0, 13, 10, 1</column>
+<column name="add_ln247_fu_359_p2">+, 0, 0, 17, 14, 14</column>
+<column name="icmp_ln244_fu_343_p2">icmp, 0, 0, 11, 10, 10</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -159,7 +159,7 @@
 <column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
-<column name="bitcast_ln266_reg_493">32, 0, 32, 0</column>
+<column name="bitcast_ln257_reg_493">32, 0, 32, 0</column>
 <column name="j7_2_reg_412">10, 0, 10, 0</column>
 <column name="j7_fu_96">10, 0, 10, 0</column>
 <column name="v144_reg_426">32, 0, 32, 0</column>
@@ -168,9 +168,9 @@
 <column name="v151_reg_478">32, 0, 32, 0</column>
 <column name="v224_load_reg_453">32, 0, 32, 0</column>
 <column name="v225_load_reg_483">32, 0, 32, 0</column>
-<column name="zext_ln253_reg_431">10, 0, 64, 54</column>
+<column name="zext_ln244_reg_431">10, 0, 64, 54</column>
 <column name="j7_2_reg_412">64, 32, 10, 0</column>
-<column name="zext_ln253_reg_431">64, 32, 64, 54</column>
+<column name="zext_ln244_reg_431">64, 32, 64, 54</column>
 </table>
 </item>
 </section>
@@ -208,7 +208,7 @@
 <column name="v226_0_ce0">out, 1, ap_memory, v226_0, array</column>
 <column name="v226_0_we0">out, 1, ap_memory, v226_0, array</column>
 <column name="v226_0_d0">out, 32, ap_memory, v226_0, array</column>
-<column name="sub_ln256">in, 14, ap_none, sub_ln256, scalar</column>
+<column name="sub_ln247">in, 14, ap_none, sub_ln247, scalar</column>
 <column name="v115_address0">out, 14, ap_memory, v115, array</column>
 <column name="v115_ce0">out, 1, ap_memory, v115, array</column>
 <column name="v115_q0">in, 32, ap_memory, v115, array</column>

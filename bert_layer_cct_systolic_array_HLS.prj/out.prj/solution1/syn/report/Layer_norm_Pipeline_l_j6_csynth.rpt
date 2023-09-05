@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Layer_norm_Pipeline_l_j6'
 ================================================================
-* Date:           Mon Sep  4 10:15:47 2023
+* Date:           Mon Sep  4 23:58:30 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -85,10 +85,10 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln228_fu_178_p2     |         +|   0|  0|  13|          10|           1|
-    |add_ln230_fu_188_p2     |         +|   0|  0|  17|          14|          14|
-    |icmp_ln228_1_fu_199_p2  |      icmp|   0|  0|  11|          10|          10|
-    |icmp_ln228_fu_172_p2    |      icmp|   0|  0|  11|          10|          10|
+    |add_ln219_fu_178_p2     |         +|   0|  0|  13|          10|           1|
+    |add_ln221_fu_188_p2     |         +|   0|  0|  17|          14|          14|
+    |icmp_ln219_1_fu_199_p2  |      icmp|   0|  0|  11|          10|          10|
+    |icmp_ln219_fu_172_p2    |      icmp|   0|  0|  11|          10|          10|
     |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
     +------------------------+----------+----+---+----+------------+------------+
     |Total                   |          |   0|  0|  54|          45|          37|
@@ -148,8 +148,8 @@
     |ap_loop_exit_ready_pp0_iter5_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter6_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter7_reg  |   1|   0|    1|          0|
-    |icmp_ln228_1_reg_265              |   1|   0|    1|          0|
-    |icmp_ln228_reg_256                |   1|   0|    1|          0|
+    |icmp_ln219_1_reg_265              |   1|   0|    1|          0|
+    |icmp_ln219_reg_256                |   1|   0|    1|          0|
     |j6_fu_56                          |  10|   0|   10|          0|
     |v126_reg_269                      |  32|   0|   32|          0|
     |v127_fu_48                        |  32|   0|   32|          0|
@@ -163,9 +163,9 @@
     |v140_reg_322                      |  32|   0|   32|          0|
     |var_addr_reg_312                  |   4|   0|    4|          0|
     |var_addr_reg_312_pp0_iter7_reg    |   4|   0|    4|          0|
-    |zext_ln227_cast_reg_249           |   4|   0|   64|         60|
-    |icmp_ln228_1_reg_265              |  64|  32|    1|          0|
-    |icmp_ln228_reg_256                |  64|  32|    1|          0|
+    |zext_ln218_cast_reg_249           |   4|   0|   64|         60|
+    |icmp_ln219_1_reg_265              |  64|  32|    1|          0|
+    |icmp_ln219_reg_256                |  64|  32|    1|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             | 493|  64|  427|         60|
     +----------------------------------+----+----+-----+-----------+
@@ -204,7 +204,7 @@
 |var_ce0              |  out|    1|   ap_memory|                       var|         array|
 |var_we0              |  out|    1|   ap_memory|                       var|         array|
 |var_d0               |  out|   32|   ap_memory|                       var|         array|
-|zext_ln227           |   in|    4|     ap_none|                zext_ln227|        scalar|
+|zext_ln218           |   in|    4|     ap_none|                zext_ln218|        scalar|
 |mean2_address0       |  out|    4|   ap_memory|                     mean2|         array|
 |mean2_ce0            |  out|    1|   ap_memory|                     mean2|         array|
 |mean2_we0            |  out|    1|   ap_memory|                     mean2|         array|
@@ -213,7 +213,7 @@
 |mean_ce0             |  out|    1|   ap_memory|                      mean|         array|
 |mean_we0             |  out|    1|   ap_memory|                      mean|         array|
 |mean_d0              |  out|   32|   ap_memory|                      mean|         array|
-|sub_ln230            |   in|   14|     ap_none|                 sub_ln230|        scalar|
+|sub_ln221            |   in|   14|     ap_none|                 sub_ln221|        scalar|
 |v115_address0        |  out|   14|   ap_memory|                      v115|         array|
 |v115_ce0             |  out|    1|   ap_memory|                      v115|         array|
 |v115_q0              |   in|   32|   ap_memory|                      v115|         array|

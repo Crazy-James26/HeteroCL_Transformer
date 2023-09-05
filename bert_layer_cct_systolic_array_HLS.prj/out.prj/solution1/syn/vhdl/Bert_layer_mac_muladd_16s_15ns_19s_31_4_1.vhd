@@ -7,7 +7,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_2 is
+entity Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -19,7 +19,7 @@ port (
 
 end entity;
 
-architecture behav of Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_2 is
+architecture behav of Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -73,7 +73,7 @@ entity Bert_layer_mac_muladd_16s_15ns_19s_31_4_1 is
 end entity;
 
 architecture arch of Bert_layer_mac_muladd_16s_15ns_19s_31_4_1 is
-    component Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_2 is
+    component Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -87,7 +87,7 @@ architecture arch of Bert_layer_mac_muladd_16s_15ns_19s_31_4_1 is
 
 
 begin
-    Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_2_U :  component Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_2
+    Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0_U :  component Bert_layer_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0
     port map (
         clk => clk,
         rst => reset,

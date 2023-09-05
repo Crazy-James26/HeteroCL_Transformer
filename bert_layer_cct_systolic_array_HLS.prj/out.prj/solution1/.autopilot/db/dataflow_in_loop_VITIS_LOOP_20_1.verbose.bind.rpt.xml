@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_20_1'" level="0">
-<item name = "Date">Mon Sep  4 09:32:51 2023
+<item name = "Date">Mon Sep  4 23:09:26 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 13.291 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.268 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,27 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3105, 3105, 41.269 us, 41.269 us, 3081, 3081, dataflow</column>
+<column name="">3106, 3106, 31.060 us, 31.060 us, 3081, 3081, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_init_block_AB_proc35_fu_604">init_block_AB_proc35, 1537, 1537, 15.370 us, 15.370 us, 1537, 1537, no</column>
-<column name="grp_systolic_array_k_768_fu_682">systolic_array_k_768, 3103, 3103, 31.030 us, 31.030 us, 3081, 3081, dataflow</column>
-<column name="grp_store_block_C_proc36_fu_722">store_block_C_proc36, 143, 143, 1.901 us, 1.901 us, 143, 143, no</column>
+<column name="grp_init_block_AB_proc70_fu_428">init_block_AB_proc70, 772, 772, 7.720 us, 7.720 us, 772, 772, no</column>
+<column name="grp_systolic_array_k_768_fu_517">systolic_array_k_768, 3103, 3103, 31.030 us, 31.030 us, 3081, 3081, dataflow</column>
+<column name="grp_VITIS_LOOP_40_4_proc_fu_557">VITIS_LOOP_40_4_proc, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc71_fu_565">VITIS_LOOP_40_4_proc71, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc72_fu_573">VITIS_LOOP_40_4_proc72, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc73_fu_581">VITIS_LOOP_40_4_proc73, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc74_fu_589">VITIS_LOOP_40_4_proc74, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc75_fu_597">VITIS_LOOP_40_4_proc75, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc76_fu_605">VITIS_LOOP_40_4_proc76, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc77_fu_613">VITIS_LOOP_40_4_proc77, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc78_fu_621">VITIS_LOOP_40_4_proc78, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc79_fu_629">VITIS_LOOP_40_4_proc79, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc80_fu_637">VITIS_LOOP_40_4_proc80, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_VITIS_LOOP_40_4_proc81_fu_645">VITIS_LOOP_40_4_proc81, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

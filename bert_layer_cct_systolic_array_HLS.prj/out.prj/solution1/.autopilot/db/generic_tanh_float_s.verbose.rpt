@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'generic_tanh_float_s'
 ================================================================
-* Date:           Mon Sep  4 10:21:16 2023
+* Date:           Tue Sep  5 00:05:11 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -70,24 +70,24 @@
 
 + Detail: 
     * Instance: 
-    +-----------------------------------------+----------------------------------+---------+----+------+------+-----+
-    |                 Instance                |              Module              | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +-----------------------------------------+----------------------------------+---------+----+------+------+-----+
-    |dadd_64ns_64ns_64_7_full_dsp_1_x_U11492  |dadd_64ns_64ns_64_7_full_dsp_1_x  |        0|   3|   630|  1141|    0|
-    |grp_exp_generic_double_s_fu_89           |exp_generic_double_s              |        5|  16|  3668|  3506|    0|
-    |fadd_32ns_32ns_32_5_full_dsp_1_x_U11482  |fadd_32ns_32ns_32_5_full_dsp_1_x  |        0|   2|   205|   390|    0|
-    |fadd_32ns_32ns_32_5_full_dsp_1_x_U11484  |fadd_32ns_32ns_32_5_full_dsp_1_x  |        0|   2|   205|   390|    0|
-    |fadd_32ns_32ns_32_5_full_dsp_1_x_U11485  |fadd_32ns_32ns_32_5_full_dsp_1_x  |        0|   2|   205|   390|    0|
-    |fcmp_32ns_32ns_1_2_no_dsp_1_U11491       |fcmp_32ns_32ns_1_2_no_dsp_1       |        0|   0|     0|     0|    0|
-    |fdiv_32ns_32ns_32_16_no_dsp_1_x_U11488   |fdiv_32ns_32ns_32_16_no_dsp_1_x   |        0|   0|     0|     0|    0|
-    |fmul_32ns_32ns_32_4_max_dsp_1_x_U11487   |fmul_32ns_32ns_32_4_max_dsp_1_x   |        0|   3|   143|   321|    0|
-    |fpext_32ns_64_2_no_dsp_1_x_U11490        |fpext_32ns_64_2_no_dsp_1_x        |        0|   0|     0|     0|    0|
-    |fptrunc_64ns_32_2_no_dsp_1_x_U11489      |fptrunc_64ns_32_2_no_dsp_1_x      |        0|   0|     0|     0|    0|
-    |fsub_32ns_32ns_32_5_full_dsp_1_U11483    |fsub_32ns_32ns_32_5_full_dsp_1    |        0|   2|   205|   390|    0|
-    |fsub_32ns_32ns_32_5_full_dsp_1_U11486    |fsub_32ns_32ns_32_5_full_dsp_1    |        0|   2|   205|   390|    0|
-    +-----------------------------------------+----------------------------------+---------+----+------+------+-----+
-    |Total                                    |                                  |        5|  32|  5466|  6918|    0|
-    +-----------------------------------------+----------------------------------+---------+----+------+------+-----+
+    +----------------------------------------+----------------------------------+---------+----+------+------+-----+
+    |                Instance                |              Module              | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------+----------------------------------+---------+----+------+------+-----+
+    |dadd_64ns_64ns_64_7_full_dsp_1_x_U8223  |dadd_64ns_64ns_64_7_full_dsp_1_x  |        0|   3|   630|  1141|    0|
+    |grp_exp_generic_double_s_fu_89          |exp_generic_double_s              |        5|  16|  3668|  3506|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_x_U8213  |fadd_32ns_32ns_32_5_full_dsp_1_x  |        0|   2|   205|   390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_x_U8215  |fadd_32ns_32ns_32_5_full_dsp_1_x  |        0|   2|   205|   390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_x_U8216  |fadd_32ns_32ns_32_5_full_dsp_1_x  |        0|   2|   205|   390|    0|
+    |fcmp_32ns_32ns_1_2_no_dsp_1_U8222       |fcmp_32ns_32ns_1_2_no_dsp_1       |        0|   0|     0|     0|    0|
+    |fdiv_32ns_32ns_32_16_no_dsp_1_x_U8219   |fdiv_32ns_32ns_32_16_no_dsp_1_x   |        0|   0|     0|     0|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_x_U8218   |fmul_32ns_32ns_32_4_max_dsp_1_x   |        0|   3|   143|   321|    0|
+    |fpext_32ns_64_2_no_dsp_1_x_U8221        |fpext_32ns_64_2_no_dsp_1_x        |        0|   0|     0|     0|    0|
+    |fptrunc_64ns_32_2_no_dsp_1_x_U8220      |fptrunc_64ns_32_2_no_dsp_1_x      |        0|   0|     0|     0|    0|
+    |fsub_32ns_32ns_32_5_full_dsp_1_U8214    |fsub_32ns_32ns_32_5_full_dsp_1    |        0|   2|   205|   390|    0|
+    |fsub_32ns_32ns_32_5_full_dsp_1_U8217    |fsub_32ns_32ns_32_5_full_dsp_1    |        0|   2|   205|   390|    0|
+    +----------------------------------------+----------------------------------+---------+----+------+------+-----+
+    |Total                                   |                                  |        5|  32|  5466|  6918|    0|
+    +----------------------------------------+----------------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
@@ -533,16 +533,16 @@ ST_1 : Operation 87 [1/1] (2.44ns)   --->   "%icmp_ln1019_4 = icmp_eq  i23 %din_
 ST_1 : Operation 88 [1/1] (0.97ns)   --->   "%and_ln75 = and i1 %icmp_ln1019_3, i1 %icmp_ln1019_4" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:75]   --->   Operation 88 'and' 'and_ln75' <Predicate = (!icmp_ln1019 & !icmp_ln1035)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %and_ln75, void %if.else13, void %if.then12" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:75]   --->   Operation 89 'br' 'br_ln75' <Predicate = (!icmp_ln1019 & !icmp_ln1035)> <Delay = 0.00>
 ST_1 : Operation 90 [1/1] (2.44ns)   --->   "%icmp_ln80_1 = icmp_eq  i23 %trunc_ln80, i23 0" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 90 'icmp' 'icmp_ln80_1' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 2.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 91 [2/2] (5.43ns)   --->   "%tmp_3 = fcmp_olt  i32 %abst_in, i32 22" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 91 'fcmp' 'tmp_3' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 91 [2/2] (5.43ns)   --->   "%tmp_5 = fcmp_olt  i32 %abst_in, i32 22" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 91 'fcmp' 'tmp_5' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 92 [5/5] (7.25ns)   --->   "%add = fadd i32 %abst_in, i32 1" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:78]   --->   Operation 92 'fadd' 'add' <Predicate = (!icmp_ln1019 & and_ln75) | (!icmp_ln1019 & icmp_ln1035)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 93 [1/1] (2.44ns)   --->   "%icmp_ln1023 = icmp_ne  i23 %din_sig_V, i23 0"   --->   Operation 93 'icmp' 'icmp_ln1023' <Predicate = (icmp_ln1019)> <Delay = 2.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
 State 2 <SV = 1> <Delay = 7.25>
-ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 94 'partselect' 'tmp_2' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 0.00>
-ST_2 : Operation 95 [1/1] (1.55ns)   --->   "%icmp_ln80 = icmp_ne  i8 %tmp_2, i8 255" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 95 'icmp' 'icmp_ln80' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 94 'partselect' 'tmp_4' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (1.55ns)   --->   "%icmp_ln80 = icmp_ne  i8 %tmp_4, i8 255" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 95 'icmp' 'icmp_ln80' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node and_ln80)   --->   "%or_ln80 = or i1 %icmp_ln80_1, i1 %icmp_ln80" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 96 'or' 'or_ln80' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 97 [1/2] (5.43ns)   --->   "%tmp_3 = fcmp_olt  i32 %abst_in, i32 22" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 97 'fcmp' 'tmp_3' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 98 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln80 = and i1 %or_ln80, i1 %tmp_3" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 98 'and' 'and_ln80' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 97 [1/2] (5.43ns)   --->   "%tmp_5 = fcmp_olt  i32 %abst_in, i32 22" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 97 'fcmp' 'tmp_5' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 98 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln80 = and i1 %or_ln80, i1 %tmp_5" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:80]   --->   Operation 98 'and' 'and_ln80' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 99 [1/1] (1.55ns)   --->   "%icmp_ln1035_1 = icmp_ult  i8 %din_exp_V, i8 127"   --->   Operation 99 'icmp' 'icmp_ln1035_1' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75 & and_ln80)> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%or_ln84 = or i32 %p_Result_s, i32 2147483648" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:84]   --->   Operation 100 'or' 'or_ln84' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75 & and_ln80)> <Delay = 0.00>
 ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%bitcast_ln84 = bitcast i32 %or_ln84" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:84]   --->   Operation 101 'bitcast' 'bitcast_ln84' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75 & and_ln80)> <Delay = 0.00>
@@ -808,11 +808,11 @@ ST_72 : Operation 219 [1/1] (1.94ns)   --->   "%br_ln67 = br void %if.end38" [/w
 State 73 <SV = 72> <Delay = 2.93>
 ST_73 : Operation 220 [1/1] (1.94ns)   --->   "%br_ln0 = br void %if.end38"   --->   Operation 220 'br' 'br_ln0' <Predicate = (!icmp_ln1019 & !icmp_ln1035 & !and_ln75 & and_ln80 & !icmp_ln1035_1)> <Delay = 1.94>
 ST_73 : Operation 221 [1/1] (0.00ns)   --->   "%resultf_3 = phi i32 %resultf, void %if.then12, i32 %resultf_1, void %if.then25, i32 %resultf_2, void %if.else28, i32 %select_ln67, void %if.then, i32 1, void %if.else13"   --->   Operation 221 'phi' 'resultf_3' <Predicate = true> <Delay = 0.00>
-ST_73 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node select_ln108)   --->   "%tmp_117 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 222 'bitselect' 'tmp_117' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node select_ln108)   --->   "%tmp_24 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 222 'bitselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
 ST_73 : Operation 223 [1/1] (0.00ns) (grouped into LUT with out node select_ln108)   --->   "%bitcast_ln112 = bitcast i32 %resultf_3" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:112]   --->   Operation 223 'bitcast' 'bitcast_ln112' <Predicate = true> <Delay = 0.00>
 ST_73 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node select_ln108)   --->   "%xor_ln112 = xor i32 %bitcast_ln112, i32 2147483648" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:112]   --->   Operation 224 'xor' 'xor_ln112' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_73 : Operation 225 [1/1] (0.00ns) (grouped into LUT with out node select_ln108)   --->   "%bitcast_ln112_1 = bitcast i32 %xor_ln112" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:112]   --->   Operation 225 'bitcast' 'bitcast_ln112_1' <Predicate = true> <Delay = 0.00>
-ST_73 : Operation 226 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln108 = select i1 %tmp_117, i32 %bitcast_ln112_1, i32 %resultf_3" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:108]   --->   Operation 226 'select' 'select_ln108' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_73 : Operation 226 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln108 = select i1 %tmp_24, i32 %bitcast_ln112_1, i32 %resultf_3" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:108]   --->   Operation 226 'select' 'select_ln108' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_73 : Operation 227 [1/1] (0.00ns)   --->   "%ret_ln114 = ret i32 %select_ln108" [/wrk/ci/prod/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_tanh.h:114]   --->   Operation 227 'ret' 'ret_ln114' <Predicate = true> <Delay = 0.00>
 
 
@@ -855,10 +855,10 @@ and_ln75        (and           ) [ 011111111111111111111111111111111111111111111
 br_ln75         (br            ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 icmp_ln80_1     (icmp          ) [ 01100000000000000000000000000000000000000000000000000000000000000000000000]
 icmp_ln1023     (icmp          ) [ 01111111111111111111111111111111111111111111111111111111111111111111111110]
-tmp_2           (partselect    ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_4           (partselect    ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 icmp_ln80       (icmp          ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 or_ln80         (or            ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
-tmp_3           (fcmp          ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_5           (fcmp          ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 and_ln80        (and           ) [ 01111111111111111111111111111111111111111111111111111111111111111111111111]
 icmp_ln1035_1   (icmp          ) [ 01011111111111111111111111111111111111111111111111111111111111111111111111]
 or_ln84         (or            ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -895,7 +895,7 @@ select_ln67     (select        ) [ 010100000010000000000000000000000000000000000
 br_ln67         (br            ) [ 01010000001000000000000000000000000000000000000000000000000000000000100011]
 br_ln0          (br            ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 resultf_3       (phi           ) [ 01000000000000000000000000000000000000000000000000000000000000000000000001]
-tmp_117         (bitselect     ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_24          (bitselect     ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 bitcast_ln112   (bitcast       ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 xor_ln112       (xor           ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
 bitcast_ln112_1 (bitcast       ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -1340,7 +1340,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="fcmp(46) " fcode="fcmp"/>
-<opset="tmp_3/1 "/>
+<opset="tmp_5/1 "/>
 </bind>
 </comp>
 
@@ -1532,7 +1532,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="237" class="1004" name="tmp_2_fu_237">
+<comp id="237" class="1004" name="tmp_4_fu_237">
 <pin_list>
 <pin id="238" dir="0" index="0" bw="8" slack="0"/>
 <pin id="239" dir="0" index="1" bw="32" slack="1"/>
@@ -1542,7 +1542,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_2/2 "/>
+<opset="tmp_4/2 "/>
 </bind>
 </comp>
 
@@ -1726,7 +1726,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="332" class="1004" name="tmp_117_fu_332">
+<comp id="332" class="1004" name="tmp_24_fu_332">
 <pin_list>
 <pin id="333" dir="0" index="0" bw="1" slack="0"/>
 <pin id="334" dir="0" index="1" bw="32" slack="72"/>
@@ -1735,7 +1735,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_117/73 "/>
+<opset="tmp_24/73 "/>
 </bind>
 </comp>
 
@@ -2376,7 +2376,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 		and_ln75 : 3
 		br_ln75 : 3
 		icmp_ln80_1 : 2
-		tmp_3 : 4
+		tmp_5 : 4
 		add : 4
 		icmp_ln1023 : 2
 	State 2
@@ -2530,7 +2530,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 |   fcmp   |           grp_fu_139           |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
 |          |        din_exp_V_fu_159        |    0    |    0    |    0    |    0    |
-|partselect|          tmp_2_fu_237          |    0    |    0    |    0    |    0    |
+|partselect|          tmp_4_fu_237          |    0    |    0    |    0    |    0    |
 |          |         xs_exp_V_fu_288        |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
 |          |        din_sig_V_fu_169        |    0    |    0    |    0    |    0    |
@@ -2539,7 +2539,7 @@ ret_ln114       (ret           ) [ 000000000000000000000000000000000000000000000
 |----------|--------------------------------|---------|---------|---------|---------|
 |bitconcatenate|        p_Result_s_fu_181       |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
-| bitselect|         tmp_117_fu_332         |    0    |    0    |    0    |    0    |
+| bitselect|          tmp_24_fu_332         |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
 |   Total  |                                |    32   |  20.644 |   5192  |   6769  |
 |----------|--------------------------------|---------|---------|---------|---------|

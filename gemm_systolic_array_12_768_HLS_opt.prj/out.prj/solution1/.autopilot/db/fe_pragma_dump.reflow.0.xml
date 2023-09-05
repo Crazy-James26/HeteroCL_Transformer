@@ -4,8 +4,7 @@
 <pragma file="systolic_array.cpp" line="8" pragmaType="pipeline" parentfunction="PE" off="0" ii="1" rewind="0" style=""/>
 <pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
 <pragma file="systolic_array.cpp" line="28" pragmaType="dataflow" parentfunction="systolic_array" disable_start_propagation="0"/>
-<pragma file="systolic_array.cpp" line="59" pragmaType="unroll" parentfunction="systolic_array" factor="-1" skip_exit_check="0"/>
-<pragma file="systolic_array.cpp" line="61" pragmaType="pipeline" parentfunction="systolic_array" off="0" ii="1" rewind="0" style=""/>
+<pragma file="systolic_array.cpp" line="59" pragmaType="pipeline" parentfunction="systolic_array" off="0" ii="1" rewind="0" style=""/>
 <pragma file="systolic_array.cpp" line="49" pragmaType="pipeline" parentfunction="systolic_array" off="0" ii="1" rewind="0" style=""/>
 <pragma file="systolic_array.cpp" line="40" pragmaType="unroll" parentfunction="systolic_array" factor="-1" skip_exit_check="0"/>
 <pragma file="systolic_array.cpp" line="42" pragmaType="unroll" parentfunction="systolic_array" factor="-1" skip_exit_check="0"/>

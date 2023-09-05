@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'systolic_array_k_768_3_Loop_data_drain_C_proc'" level="0">
-<item name = "Date">Mon Sep  4 10:20:31 2023
+<item name = "Date">Tue Sep  5 00:03:52 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -62,18 +62,18 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_124_32_1_1_U9765">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9766">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9767">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9768">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9769">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9770">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9771">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9772">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9773">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9774">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9775">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_124_32_1_1_U9776">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7005">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7006">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7007">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7008">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7009">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7010">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7011">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7012">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7013">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7014">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7015">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_124_32_1_1_U7016">mux_124_32_1_1, 0, 0, 0, 65, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -134,7 +134,7 @@
 <column name="tmp_7_i_reg_1776">32, 0, 32, 0</column>
 <column name="tmp_8_i_reg_1781">32, 0, 32, 0</column>
 <column name="tmp_9_i_reg_1786">32, 0, 32, 0</column>
-<column name="tmp_i_108_reg_1791">32, 0, 32, 0</column>
+<column name="tmp_i_109_reg_1791">32, 0, 32, 0</column>
 <column name="tmp_i_reg_1741">32, 0, 32, 0</column>
 </table>
 </item>

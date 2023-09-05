@@ -16,20 +16,20 @@ set C_modelArgList {
 	{ mean2_load float 32 regular  }
 	{ mean_load float 32 regular  }
 	{ var float 32 regular {array 12 { 0 3 } 0 1 }  }
-	{ zext_ln227 int 4 regular  }
+	{ zext_ln218 int 4 regular  }
 	{ mean2 float 32 regular {array 12 { 0 3 } 0 1 }  }
 	{ mean float 32 regular {array 12 { 0 3 } 0 1 }  }
-	{ sub_ln230 int 14 regular  }
+	{ sub_ln221 int 14 regular  }
 	{ v115 float 32 regular {array 9216 { 1 3 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "mean2_load", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "mean_load", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "var", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "zext_ln227", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln218", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
  	{ "Name" : "mean2", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
  	{ "Name" : "mean", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "sub_ln230", "interface" : "wire", "bitwidth" : 14, "direction" : "READONLY"} , 
+ 	{ "Name" : "sub_ln221", "interface" : "wire", "bitwidth" : 14, "direction" : "READONLY"} , 
  	{ "Name" : "v115", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
 set portNum 38
@@ -46,7 +46,7 @@ set portList {
 	{ var_ce0 sc_out sc_logic 1 signal 2 } 
 	{ var_we0 sc_out sc_logic 1 signal 2 } 
 	{ var_d0 sc_out sc_lv 32 signal 2 } 
-	{ zext_ln227 sc_in sc_lv 4 signal 3 } 
+	{ zext_ln218 sc_in sc_lv 4 signal 3 } 
 	{ mean2_address0 sc_out sc_lv 4 signal 4 } 
 	{ mean2_ce0 sc_out sc_logic 1 signal 4 } 
 	{ mean2_we0 sc_out sc_logic 1 signal 4 } 
@@ -55,7 +55,7 @@ set portList {
 	{ mean_ce0 sc_out sc_logic 1 signal 5 } 
 	{ mean_we0 sc_out sc_logic 1 signal 5 } 
 	{ mean_d0 sc_out sc_lv 32 signal 5 } 
-	{ sub_ln230 sc_in sc_lv 14 signal 6 } 
+	{ sub_ln221 sc_in sc_lv 14 signal 6 } 
 	{ v115_address0 sc_out sc_lv 14 signal 7 } 
 	{ v115_ce0 sc_out sc_logic 1 signal 7 } 
 	{ v115_q0 sc_in sc_lv 32 signal 7 } 
@@ -86,7 +86,7 @@ set NewPortList {[
  	{ "name": "var_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "var", "role": "ce0" }} , 
  	{ "name": "var_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "var", "role": "we0" }} , 
  	{ "name": "var_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "var", "role": "d0" }} , 
- 	{ "name": "zext_ln227", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "zext_ln227", "role": "default" }} , 
+ 	{ "name": "zext_ln218", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "zext_ln218", "role": "default" }} , 
  	{ "name": "mean2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "mean2", "role": "address0" }} , 
  	{ "name": "mean2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mean2", "role": "ce0" }} , 
  	{ "name": "mean2_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mean2", "role": "we0" }} , 
@@ -95,7 +95,7 @@ set NewPortList {[
  	{ "name": "mean_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mean", "role": "ce0" }} , 
  	{ "name": "mean_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mean", "role": "we0" }} , 
  	{ "name": "mean_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mean", "role": "d0" }} , 
- 	{ "name": "sub_ln230", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "sub_ln230", "role": "default" }} , 
+ 	{ "name": "sub_ln221", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "sub_ln221", "role": "default" }} , 
  	{ "name": "v115_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "v115", "role": "address0" }} , 
  	{ "name": "v115_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "v115", "role": "ce0" }} , 
  	{ "name": "v115_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "v115", "role": "q0" }} , 
@@ -132,10 +132,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "mean2_load", "Type" : "None", "Direction" : "I"},
 			{"Name" : "mean_load", "Type" : "None", "Direction" : "I"},
 			{"Name" : "var", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "zext_ln227", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln218", "Type" : "None", "Direction" : "I"},
 			{"Name" : "mean2", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "mean", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "sub_ln230", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub_ln221", "Type" : "None", "Direction" : "I"},
 			{"Name" : "v115", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "l_j6", "PipelineType" : "UPC",
@@ -148,10 +148,10 @@ set ArgLastReadFirstWriteLatency {
 		mean2_load {Type I LastRead 0 FirstWrite -1}
 		mean_load {Type I LastRead 0 FirstWrite -1}
 		var {Type O LastRead -1 FirstWrite 33}
-		zext_ln227 {Type I LastRead 0 FirstWrite -1}
+		zext_ln218 {Type I LastRead 0 FirstWrite -1}
 		mean2 {Type O LastRead -1 FirstWrite 27}
 		mean {Type O LastRead -1 FirstWrite 22}
-		sub_ln230 {Type I LastRead 0 FirstWrite -1}
+		sub_ln221 {Type I LastRead 0 FirstWrite -1}
 		v115 {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
@@ -169,9 +169,9 @@ set Spec2ImplPortList {
 	mean2_load { ap_none {  { mean2_load in_data 0 32 } } }
 	mean_load { ap_none {  { mean_load in_data 0 32 } } }
 	var { ap_memory {  { var_address0 mem_address 1 4 }  { var_ce0 mem_ce 1 1 }  { var_we0 mem_we 1 1 }  { var_d0 mem_din 1 32 } } }
-	zext_ln227 { ap_none {  { zext_ln227 in_data 0 4 } } }
+	zext_ln218 { ap_none {  { zext_ln218 in_data 0 4 } } }
 	mean2 { ap_memory {  { mean2_address0 mem_address 1 4 }  { mean2_ce0 mem_ce 1 1 }  { mean2_we0 mem_we 1 1 }  { mean2_d0 mem_din 1 32 } } }
 	mean { ap_memory {  { mean_address0 mem_address 1 4 }  { mean_ce0 mem_ce 1 1 }  { mean_we0 mem_we 1 1 }  { mean_d0 mem_din 1 32 } } }
-	sub_ln230 { ap_none {  { sub_ln230 in_data 0 14 } } }
+	sub_ln221 { ap_none {  { sub_ln221 in_data 0 14 } } }
 	v115 { ap_memory {  { v115_address0 mem_address 1 14 }  { v115_ce0 mem_ce 1 1 }  { v115_q0 mem_dout 0 32 } } }
 }

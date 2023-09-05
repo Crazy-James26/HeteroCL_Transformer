@@ -136,7 +136,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7474_p_din0</name>
+<name>grp_fu_1402_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -147,7 +147,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7474_p_dout0</name>
+<name>grp_fu_1402_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -158,7 +158,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7474_p_ce</name>
+<name>grp_fu_1402_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -169,7 +169,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7477_p_din0</name>
+<name>grp_fu_1405_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -180,7 +180,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7477_p_dout0</name>
+<name>grp_fu_1405_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -191,7 +191,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7477_p_ce</name>
+<name>grp_fu_1405_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -202,7 +202,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7480_p_din0</name>
+<name>grp_fu_1408_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -213,7 +213,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7480_p_din1</name>
+<name>grp_fu_1408_p_din1</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -224,7 +224,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7480_p_dout0</name>
+<name>grp_fu_1408_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -235,7 +235,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7480_p_ce</name>
+<name>grp_fu_1408_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -246,7 +246,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7484_p_din0</name>
+<name>grp_fu_1412_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -257,7 +257,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7484_p_din1</name>
+<name>grp_fu_1412_p_din1</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -268,7 +268,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7484_p_opcode</name>
+<name>grp_fu_1412_p_opcode</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -279,7 +279,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7484_p_dout0</name>
+<name>grp_fu_1412_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -290,7 +290,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7484_p_ce</name>
+<name>grp_fu_1412_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -301,7 +301,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7466_p_din0</name>
+<name>grp_fu_1394_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -312,7 +312,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7466_p_din1</name>
+<name>grp_fu_1394_p_din1</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -323,7 +323,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7466_p_opcode</name>
+<name>grp_fu_1394_p_opcode</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -334,7 +334,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7466_p_dout0</name>
+<name>grp_fu_1394_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -345,7 +345,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7466_p_ce</name>
+<name>grp_fu_1394_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -356,7 +356,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7462_p_din0</name>
+<name>grp_fu_1390_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -367,7 +367,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7462_p_din1</name>
+<name>grp_fu_1390_p_din1</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -378,7 +378,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7462_p_dout0</name>
+<name>grp_fu_1390_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -389,7 +389,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7462_p_ce</name>
+<name>grp_fu_1390_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -400,7 +400,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7470_p_din0</name>
+<name>grp_fu_1398_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -411,7 +411,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7470_p_din1</name>
+<name>grp_fu_1398_p_din1</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -422,7 +422,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7470_p_dout0</name>
+<name>grp_fu_1398_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -433,7 +433,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7470_p_ce</name>
+<name>grp_fu_1398_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -444,7 +444,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7488_p_din0</name>
+<name>grp_fu_1416_p_din0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -455,7 +455,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7488_p_din1</name>
+<name>grp_fu_1416_p_din1</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -466,7 +466,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7488_p_opcode</name>
+<name>grp_fu_1416_p_opcode</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -477,7 +477,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7488_p_dout0</name>
+<name>grp_fu_1416_p_dout0</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -488,7 +488,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_7488_p_ce</name>
+<name>grp_fu_1416_p_ce</name>
 <Object>Layer_norm</Object>
 <Type>return value</Type>
 <Scope></Scope>

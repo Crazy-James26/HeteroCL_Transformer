@@ -11,7 +11,6 @@ void Linear_layer_qkv(
   #pragma HLS array_partition variable=v1 cyclic dim=1 factor=12
 
   #pragma HLS array_partition variable=v3 complete dim=1
-  #pragma HLS array_partition variable=v3 cyclic dim=2 factor=12
 
   l_bias_i: for (int i = 0; i < 12; i++) {	// L6
     l_j: for (int j = 0; j < 768; j++) {	// L7
@@ -35,7 +34,6 @@ void Attention_layer(
   #pragma HLS array_partition variable=v18 cyclic dim=1 factor=4
 
   #pragma HLS array_partition variable=v19 cyclic dim=1 factor=4
-  #pragma HLS array_partition variable=v19 cyclic dim=2 factor=4
 
   for (int v20 = 0; v20 < 12; v20++) {	// L7
     for (int v21 = 0; v21 < 12; v21++) {	// L7
@@ -60,7 +58,6 @@ void Softmax_layer(
   float v39[12][12]
 ) {	// L36
   #pragma HLS array_partition variable=v38 cyclic dim=1 factor=4
-  #pragma HLS array_partition variable=v38 cyclic dim=2 factor=4
 
   #pragma HLS array_partition variable=v39 cyclic dim=1 factor=4
 
@@ -81,6 +78,7 @@ void Softmax_layer(
     }
   }
   l_update_i4: for (int i4 = 0; i4 < 12; i4++) {	// L52
+  #pragma HLS UNROLL
     l_j3: for (int j3 = 0; j3 < 12; j3++) {	// L53
     #pragma HLS pipeline II=1
       float v51 = v38[i4][j3];	// L54
@@ -101,7 +99,6 @@ void Context_layer(
   #pragma HLS array_partition variable=v55 cyclic dim=2 factor=4
 
   #pragma HLS array_partition variable=v56 cyclic dim=1 factor=4
-  #pragma HLS array_partition variable=v56 cyclic dim=2 factor=4
 
   for (int v57 = 0; v57 < 12; v57++) {	// L65
     for (int v58 = 0; v58 < 64; v58++) {	// L65
@@ -120,13 +117,10 @@ void Self_attention(
   float v74[12][768]
 ) {	// L86
   #pragma HLS array_partition variable=v71 complete dim=1
-  #pragma HLS array_partition variable=v71 cyclic dim=2 factor=12
 
   #pragma HLS array_partition variable=v72 complete dim=1
-  #pragma HLS array_partition variable=v72 cyclic dim=2 factor=12
 
   #pragma HLS array_partition variable=v73 complete dim=1
-  #pragma HLS array_partition variable=v73 cyclic dim=2 factor=12
 
   #pragma HLS array_partition variable=v74 complete dim=1
 
@@ -172,7 +166,6 @@ void Linear_layer_ds0(
   #pragma HLS array_partition variable=v91 cyclic dim=1 factor=12
 
   #pragma HLS array_partition variable=v93 complete dim=1
-  #pragma HLS array_partition variable=v93 cyclic dim=2 factor=12
 
   l_bias_i5: for (int i5 = 0; i5 < 12; i5++) {	// L6
     l_j4: for (int j4 = 0; j4 < 768; j4++) {	// L7
@@ -192,7 +185,6 @@ void Res_layer0(
   float v109[12][768]
 ) {	// L4
   #pragma HLS array_partition variable=v107 complete dim=1
-  #pragma HLS array_partition variable=v107 cyclic dim=2 factor=12
 
   #pragma HLS array_partition variable=v108 complete dim=1
 
@@ -225,8 +217,9 @@ void Layer_norm(
   }
   float var[12];	// L10
   l_mean_var_i8: for (int i8 = 0; i8 < 12; i8++) {	// L11
+  #pragma HLS UNROLL
     l_j6: for (int j6 = 0; j6 < 768; j6++) {	// L12
-    #pragma HLS pipeline II=1
+    #pragma HLS pipeline II=5
       float v126 = v115[i8][j6];	// L13
       float v127 = mean[i8];	// L14
       float v128 = v127 + v126;	// L15
@@ -279,7 +272,6 @@ void Linear_layer_ds1(
   #pragma HLS array_partition variable=v155 cyclic dim=1 factor=12
 
   #pragma HLS array_partition variable=v157 complete dim=1
-  #pragma HLS array_partition variable=v157 cyclic dim=2 factor=12
 
   l_bias_i10: for (int i10 = 0; i10 < 12; i10++) {	// L6
     l_j8: for (int j8 = 0; j8 < 3072; j8++) {	// L7
@@ -298,7 +290,6 @@ void Gelu_layer(
   float v172[12][3072]
 ) {	// L3
   #pragma HLS array_partition variable=v171 complete dim=1
-  #pragma HLS array_partition variable=v171 cyclic dim=2 factor=12
 
   #pragma HLS array_partition variable=v172 complete dim=1
 
@@ -330,7 +321,6 @@ void Linear_layer_ds2(
   #pragma HLS array_partition variable=v185 cyclic dim=1 factor=12
 
   #pragma HLS array_partition variable=v187 complete dim=1
-  #pragma HLS array_partition variable=v187 cyclic dim=2 factor=12
 
   l_bias_i13: for (int i13 = 0; i13 < 12; i13++) {	// L6
     l_j10: for (int j10 = 0; j10 < 768; j10++) {	// L7
@@ -350,7 +340,6 @@ void Res_layer1(
   float v203[12][768]
 ) {	// L4
   #pragma HLS array_partition variable=v201 complete dim=1
-  #pragma HLS array_partition variable=v201 cyclic dim=2 factor=12
 
   #pragma HLS array_partition variable=v202 complete dim=1
 

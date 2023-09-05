@@ -14,7 +14,7 @@ set C_modelName {Layer_norm.1_Pipeline_l_j7}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ v226_0 int 32 regular {array 768 { 0 3 } 0 1 }  }
-	{ sub_ln256 int 14 regular  }
+	{ sub_ln247 int 14 regular  }
 	{ v115 float 32 regular {array 9216 { 1 3 } 1 1 }  }
 	{ v224 int 32 regular {array 768 { 1 3 } 1 1 }  }
 	{ v145 float 32 regular  }
@@ -35,7 +35,7 @@ set C_modelArgList {
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "v226_0", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "sub_ln256", "interface" : "wire", "bitwidth" : 14, "direction" : "READONLY"} , 
+ 	{ "Name" : "sub_ln247", "interface" : "wire", "bitwidth" : 14, "direction" : "READONLY"} , 
  	{ "Name" : "v115", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "v224", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "v145", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -66,7 +66,7 @@ set portList {
 	{ v226_0_ce0 sc_out sc_logic 1 signal 0 } 
 	{ v226_0_we0 sc_out sc_logic 1 signal 0 } 
 	{ v226_0_d0 sc_out sc_lv 32 signal 0 } 
-	{ sub_ln256 sc_in sc_lv 14 signal 1 } 
+	{ sub_ln247 sc_in sc_lv 14 signal 1 } 
 	{ v115_address0 sc_out sc_lv 14 signal 2 } 
 	{ v115_ce0 sc_out sc_logic 1 signal 2 } 
 	{ v115_q0 sc_in sc_lv 32 signal 2 } 
@@ -153,7 +153,7 @@ set NewPortList {[
  	{ "name": "v226_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "v226_0", "role": "ce0" }} , 
  	{ "name": "v226_0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "v226_0", "role": "we0" }} , 
  	{ "name": "v226_0_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "v226_0", "role": "d0" }} , 
- 	{ "name": "sub_ln256", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "sub_ln256", "role": "default" }} , 
+ 	{ "name": "sub_ln247", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "sub_ln247", "role": "default" }} , 
  	{ "name": "v115_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "v115", "role": "address0" }} , 
  	{ "name": "v115_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "v115", "role": "ce0" }} , 
  	{ "name": "v115_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "v115", "role": "q0" }} , 
@@ -246,7 +246,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "v226_0", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "sub_ln256", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub_ln247", "Type" : "None", "Direction" : "I"},
 			{"Name" : "v115", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "v224", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "v145", "Type" : "None", "Direction" : "I"},
@@ -273,7 +273,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	Layer_norm_1_Pipeline_l_j7 {
 		v226_0 {Type O LastRead -1 FirstWrite 32}
-		sub_ln256 {Type I LastRead 0 FirstWrite -1}
+		sub_ln247 {Type I LastRead 0 FirstWrite -1}
 		v115 {Type I LastRead 0 FirstWrite -1}
 		v224 {Type I LastRead 5 FirstWrite -1}
 		v145 {Type I LastRead 0 FirstWrite -1}
@@ -305,7 +305,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	v226_0 { ap_memory {  { v226_0_address0 mem_address 1 10 }  { v226_0_ce0 mem_ce 1 1 }  { v226_0_we0 mem_we 1 1 }  { v226_0_d0 mem_din 1 32 } } }
-	sub_ln256 { ap_none {  { sub_ln256 in_data 0 14 } } }
+	sub_ln247 { ap_none {  { sub_ln247 in_data 0 14 } } }
 	v115 { ap_memory {  { v115_address0 mem_address 1 14 }  { v115_ce0 mem_ce 1 1 }  { v115_q0 mem_dout 0 32 } } }
 	v224 { ap_memory {  { v224_address0 mem_address 1 10 }  { v224_ce0 mem_ce 1 1 }  { v224_q0 mem_dout 0 32 } } }
 	v145 { ap_none {  { v145 in_data 0 32 } } }

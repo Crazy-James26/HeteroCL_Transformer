@@ -66,11 +66,6 @@ void Attention_layer(
       outp[v25][v26] = v23;	// L8
     }
   }
-  for (int v27 = 0; v27 < 12; v27++) {	// L10
-    for (int v28 = 0; v28 < 12; v28++) {	// L10
-      v22[v27][v28] = 0.000000;	// L10
-    }
-  }
   l_gemm_i_outer: for (int i_outer = 0; i_outer < 3; i_outer++) {	// L11
     l_j_outer1: for (int j_outer1 = 0; j_outer1 < 3; j_outer1++) {	// L12
       l_k1: for (int k1 = 0; k1 < 64; k1++) {	// L13

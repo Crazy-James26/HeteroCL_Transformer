@@ -126,8 +126,8 @@ reg    block_C_drainer_3_blk_n;
 wire   [31:0] tmp_i_fu_222_p6;
 reg   [31:0] tmp_i_reg_309;
 reg    ap_block_pp0_stage0_11001;
-wire   [31:0] tmp_i_1395_fu_236_p6;
-reg   [31:0] tmp_i_1395_reg_314;
+wire   [31:0] tmp_i_1396_fu_236_p6;
+reg   [31:0] tmp_i_1396_reg_314;
 wire   [31:0] tmp_43_i_fu_250_p6;
 reg   [31:0] tmp_43_i_reg_319;
 wire   [31:0] tmp_44_i_fu_264_p6;
@@ -161,7 +161,7 @@ Bert_layer_mux_43_32_1_1 #(
     .din3_WIDTH( 32 ),
     .din4_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_43_32_1_1_U4459(
+mux_43_32_1_1_U3062(
     .din0(p_read),
     .din1(p_read1),
     .din2(p_read2),
@@ -179,13 +179,13 @@ Bert_layer_mux_43_32_1_1 #(
     .din3_WIDTH( 32 ),
     .din4_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_43_32_1_1_U4460(
+mux_43_32_1_1_U3063(
     .din0(p_read4),
     .din1(p_read5),
     .din2(p_read6),
     .din3(p_read7),
     .din4(ap_sig_allocacmp_n_6),
-    .dout(tmp_i_1395_fu_236_p6)
+    .dout(tmp_i_1396_fu_236_p6)
 );
 
 Bert_layer_mux_43_32_1_1 #(
@@ -197,7 +197,7 @@ Bert_layer_mux_43_32_1_1 #(
     .din3_WIDTH( 32 ),
     .din4_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_43_32_1_1_U4461(
+mux_43_32_1_1_U3064(
     .din0(p_read8),
     .din1(p_read9),
     .din2(p_read10),
@@ -215,7 +215,7 @@ Bert_layer_mux_43_32_1_1 #(
     .din3_WIDTH( 32 ),
     .din4_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_43_32_1_1_U4462(
+mux_43_32_1_1_U3065(
     .din0(p_read12),
     .din1(p_read13),
     .din2(p_read14),
@@ -286,7 +286,7 @@ always @ (posedge ap_clk) begin
     if (((icmp_ln212_fu_210_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         tmp_43_i_reg_319 <= tmp_43_i_fu_250_p6;
         tmp_44_i_reg_324 <= tmp_44_i_fu_264_p6;
-        tmp_i_1395_reg_314 <= tmp_i_1395_fu_236_p6;
+        tmp_i_1396_reg_314 <= tmp_i_1396_fu_236_p6;
         tmp_i_reg_309 <= tmp_i_fu_222_p6;
     end
 end
@@ -452,7 +452,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign block_C_drainer_0_din = tmp_i_reg_309;
 
-assign block_C_drainer_1_din = tmp_i_1395_reg_314;
+assign block_C_drainer_1_din = tmp_i_1396_reg_314;
 
 assign block_C_drainer_2_din = tmp_43_i_reg_319;
 

@@ -46,7 +46,7 @@ def top():
         Q_h: q_type[inp_num, head_len], K_h: q_type[inp_num, head_len]
     ) -> float32[inp_num, inp_num]:
         outp: q_type[inp_num, inp_num] = 0.0
-        outp_f: float32[inp_num, inp_num] = 0.0
+        outp_f: float32[inp_num, inp_num]
         for i, j, k in allo.grid(inp_num, inp_num, head_len, name="gemm"):
             outp[i, j] += Q_h[i, k] * K_h[j, k]
         for i, j in allo.grid(inp_num, inp_num, name="norm"):

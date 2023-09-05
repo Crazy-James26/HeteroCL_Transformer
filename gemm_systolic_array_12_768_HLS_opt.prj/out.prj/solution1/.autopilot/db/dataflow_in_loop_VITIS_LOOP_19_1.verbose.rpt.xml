@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_19_1'" level="0">
-<item name = "Date">Mon Sep  4 10:26:44 2023
+<item name = "Date">Mon Sep  4 22:08:52 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">out.prj</item>
@@ -34,17 +34,17 @@
 <column name="init_block_AB_proc_U0">init_block_AB_proc, 772, 772, 7.720 us, 7.720 us, 772, 772, no</column>
 <column name="systolic_array_U0">systolic_array, 3103, 3103, 31.030 us, 31.030 us, 3081, 3081, dataflow</column>
 <column name="VITIS_LOOP_39_4_proc_U0">VITIS_LOOP_39_4_proc, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc26_U0">VITIS_LOOP_39_4_proc26, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc27_U0">VITIS_LOOP_39_4_proc27, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc28_U0">VITIS_LOOP_39_4_proc28, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc29_U0">VITIS_LOOP_39_4_proc29, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc30_U0">VITIS_LOOP_39_4_proc30, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc31_U0">VITIS_LOOP_39_4_proc31, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc32_U0">VITIS_LOOP_39_4_proc32, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc33_U0">VITIS_LOOP_39_4_proc33, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc34_U0">VITIS_LOOP_39_4_proc34, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc35_U0">VITIS_LOOP_39_4_proc35, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
-<column name="VITIS_LOOP_39_4_proc36_U0">VITIS_LOOP_39_4_proc36, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc4_U0">VITIS_LOOP_39_4_proc4, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc5_U0">VITIS_LOOP_39_4_proc5, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc6_U0">VITIS_LOOP_39_4_proc6, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc7_U0">VITIS_LOOP_39_4_proc7, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc8_U0">VITIS_LOOP_39_4_proc8, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc9_U0">VITIS_LOOP_39_4_proc9, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc10_U0">VITIS_LOOP_39_4_proc10, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc11_U0">VITIS_LOOP_39_4_proc11, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc12_U0">VITIS_LOOP_39_4_proc12, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc13_U0">VITIS_LOOP_39_4_proc13, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="VITIS_LOOP_39_4_proc14_U0">VITIS_LOOP_39_4_proc14, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -63,12 +63,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 60, -</column>
 <column name="FIFO">-, -, 4752, 3264, -</column>
-<column name="Instance">-, 744, 127823, 174992, -</column>
+<column name="Instance">-, 744, 146756, 187378, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 117, -</column>
 <column name="Register">-, -, 13, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 338, 124, 335, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 338, 142, 358, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -76,19 +76,19 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="VITIS_LOOP_39_4_proc_U0">VITIS_LOOP_39_4_proc, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc26_U0">VITIS_LOOP_39_4_proc26, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc27_U0">VITIS_LOOP_39_4_proc27, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc28_U0">VITIS_LOOP_39_4_proc28, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc29_U0">VITIS_LOOP_39_4_proc29, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc30_U0">VITIS_LOOP_39_4_proc30, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc31_U0">VITIS_LOOP_39_4_proc31, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc32_U0">VITIS_LOOP_39_4_proc32, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc33_U0">VITIS_LOOP_39_4_proc33, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc34_U0">VITIS_LOOP_39_4_proc34, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc35_U0">VITIS_LOOP_39_4_proc35, 0, 2, 413, 568, 0</column>
-<column name="VITIS_LOOP_39_4_proc36_U0">VITIS_LOOP_39_4_proc36, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc10_U0">VITIS_LOOP_39_4_proc10, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc11_U0">VITIS_LOOP_39_4_proc11, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc12_U0">VITIS_LOOP_39_4_proc12, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc13_U0">VITIS_LOOP_39_4_proc13, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc14_U0">VITIS_LOOP_39_4_proc14, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc4_U0">VITIS_LOOP_39_4_proc4, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc5_U0">VITIS_LOOP_39_4_proc5, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc6_U0">VITIS_LOOP_39_4_proc6, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc7_U0">VITIS_LOOP_39_4_proc7, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc8_U0">VITIS_LOOP_39_4_proc8, 0, 2, 413, 568, 0</column>
+<column name="VITIS_LOOP_39_4_proc9_U0">VITIS_LOOP_39_4_proc9, 0, 2, 413, 568, 0</column>
 <column name="init_block_AB_proc_U0">init_block_AB_proc, 0, 0, 19, 646, 0</column>
-<column name="systolic_array_U0">systolic_array, 0, 720, 122848, 167530, 0</column>
+<column name="systolic_array_U0">systolic_array, 0, 720, 141781, 179916, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -153,68 +153,68 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="VITIS_LOOP_39_4_proc26_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc27_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc28_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc29_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc30_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc31_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc32_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc33_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc34_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc35_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="VITIS_LOOP_39_4_proc36_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc10_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc11_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc12_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc13_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc14_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc4_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc5_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc6_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc7_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc8_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="VITIS_LOOP_39_4_proc9_U0_ap_start">and, 0, 0, 2, 1, 1</column>
 <column name="VITIS_LOOP_39_4_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
 <column name="ap_idle">and, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_continue">and, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_done">and, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
 <column name="init_block_AB_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc26_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc27_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc28_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc29_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc30_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc31_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc32_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc33_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc34_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc35_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_VITIS_LOOP_39_4_proc36_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc10_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc11_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc12_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc13_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc14_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc4_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc5_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc6_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc7_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc8_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_VITIS_LOOP_39_4_proc9_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_VITIS_LOOP_39_4_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_init_block_AB_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc26_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc27_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc28_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc29_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc30_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc31_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc32_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc33_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc34_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc35_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc36_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc10_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc11_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc12_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc13_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc14_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc4_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc5_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc6_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc7_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc8_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc9_U0_ap_ready">9, 2, 1, 2</column>
 <column name="ap_sync_reg_VITIS_LOOP_39_4_proc_U0_ap_ready">9, 2, 1, 2</column>
 <column name="ap_sync_reg_init_block_AB_proc_U0_ap_ready">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc26_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc27_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc28_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc29_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc30_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc31_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc32_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc33_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc34_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc35_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_VITIS_LOOP_39_4_proc36_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc10_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc11_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc12_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc13_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc14_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc4_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc5_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc6_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc7_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc8_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_VITIS_LOOP_39_4_proc9_U0_ap_ready">1, 0, 1, 0</column>
 <column name="ap_sync_reg_VITIS_LOOP_39_4_proc_U0_ap_ready">1, 0, 1, 0</column>
 <column name="ap_sync_reg_init_block_AB_proc_U0_ap_ready">1, 0, 1, 0</column>
 </table>

@@ -109,7 +109,7 @@ entry:1 %C_out_out_0 = alloca i32 1
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_10_12, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0
+entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_10_12, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -124,7 +124,7 @@ entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_10_11, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_fifo_10_11, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -139,7 +139,7 @@ entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_11_11, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_11_11, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -154,7 +154,7 @@ entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_
 
 <Node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_11_10, void @empty_30, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20, i32 4294967295, i32 0
+entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_fifo_11_10, void @empty_17, i32 0, i32 0, void @empty_31, i32 0, i32 0, void @empty_31, void @empty_31, void @empty_31, i32 0, i32 0, i32 0, i32 0, void @empty_31, void @empty_31, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -377,10 +377,10 @@ for.inc.split:4 %tmp = bitcast i32 %A_fifo_11_10_read
 
 <Node id="26" bw="32" op_0_bw="32">
 <![CDATA[
-for.inc.split:6 %tmp_677 = bitcast i32 %B_fifo_10_11_read
+for.inc.split:6 %tmp_631 = bitcast i32 %B_fifo_10_11_read
 
 ]]></Node>
-<StgValue><ssdm name="tmp_677"/></StgValue>
+<StgValue><ssdm name="tmp_631"/></StgValue>
 </operation>
 
 <operation id="34" st_id="3" stage="4" lat="4">
@@ -393,7 +393,7 @@ for.inc.split:6 %tmp_677 = bitcast i32 %B_fifo_10_11_read
 
 <Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
+for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_631
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -412,7 +412,7 @@ for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
 
 <Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
+for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_631
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -430,7 +430,7 @@ for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
 
 <Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
+for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_631
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -448,7 +448,7 @@ for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
 
 <Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_677
+for.inc.split:7 %mul = fmul i32 %tmp, i32 %tmp_631
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -585,7 +585,7 @@ for.inc.split:8 %add = fadd i32 %C_out_out_0_load, i32 %mul
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.split:1 %specpipeline_ln8 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20
+for.inc.split:1 %specpipeline_ln8 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_31
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln8"/></StgValue>
@@ -600,7 +600,7 @@ for.inc.split:1 %specpipeline_ln8 = specpipeline void @_ssdm_op_SpecPipeline, i3
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:2 %specloopname_ln7 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4
+for.inc.split:2 %specloopname_ln7 = specloopname void @_ssdm_op_SpecLoopName, void @empty_42
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln7"/></StgValue>

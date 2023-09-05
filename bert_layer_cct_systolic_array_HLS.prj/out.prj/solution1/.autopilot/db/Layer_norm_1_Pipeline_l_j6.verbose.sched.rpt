@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Layer_norm_1_Pipeline_l_j6'
 ================================================================
-* Date:           Mon Sep  4 10:04:39 2023
+* Date:           Mon Sep  4 23:44:35 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        out.prj
@@ -120,165 +120,165 @@ State 1 <SV = 0> <Delay = 5.06>
 ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%v127 = alloca i32 1"   --->   Operation 37 'alloca' 'v127' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%v131 = alloca i32 1"   --->   Operation 38 'alloca' 'v131' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%j6 = alloca i32 1"   --->   Operation 39 'alloca' 'j6' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%sub_ln230_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %sub_ln230"   --->   Operation 40 'read' 'sub_ln230_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln227_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln227"   --->   Operation 41 'read' 'zext_ln227_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%sub_ln221_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %sub_ln221"   --->   Operation 40 'read' 'sub_ln221_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln218_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln218"   --->   Operation 41 'read' 'zext_ln218_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%mean_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mean_load"   --->   Operation 42 'read' 'mean_load_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%mean2_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mean2_load"   --->   Operation 43 'read' 'mean2_load_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln227_cast = zext i4 %zext_ln227_read"   --->   Operation 44 'zext' 'zext_ln227_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln218_cast = zext i4 %zext_ln218_read"   --->   Operation 44 'zext' 'zext_ln218_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 45 [1/1] (1.58ns)   --->   "%store_ln0 = store i10 0, i10 %j6"   --->   Operation 45 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 46 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mean2_load_read, i32 %v131"   --->   Operation 46 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 47 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mean_load_read, i32 %v127"   --->   Operation 47 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc35"   --->   Operation 48 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%j6_2 = load i10 %j6" [bert_layer.cpp:228]   --->   Operation 49 'load' 'j6_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 50 [1/1] (1.77ns)   --->   "%icmp_ln228 = icmp_eq  i10 %j6_2, i10 768" [bert_layer.cpp:228]   --->   Operation 50 'icmp' 'icmp_ln228' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 51 [1/1] (1.73ns)   --->   "%add_ln228 = add i10 %j6_2, i10 1" [bert_layer.cpp:228]   --->   Operation 51 'add' 'add_ln228' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln228 = br i1 %icmp_ln228, void %for.inc35.split, void %for.inc57.exitStub" [bert_layer.cpp:228]   --->   Operation 52 'br' 'br_ln228' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln230 = zext i10 %j6_2" [bert_layer.cpp:230]   --->   Operation 53 'zext' 'zext_ln230' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_1 : Operation 54 [1/1] (1.81ns)   --->   "%add_ln230 = add i14 %sub_ln230_read, i14 %zext_ln230" [bert_layer.cpp:230]   --->   Operation 54 'add' 'add_ln230' <Predicate = (!icmp_ln228)> <Delay = 1.81> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln230_2 = zext i14 %add_ln230" [bert_layer.cpp:230]   --->   Operation 55 'zext' 'zext_ln230_2' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%v115_addr = getelementptr i32 %v115, i64 0, i64 %zext_ln230_2" [bert_layer.cpp:230]   --->   Operation 56 'getelementptr' 'v115_addr' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_1 : Operation 57 [2/2] (3.25ns)   --->   "%v126 = load i14 %v115_addr" [bert_layer.cpp:230]   --->   Operation 57 'load' 'v126' <Predicate = (!icmp_ln228)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9216> <RAM>
-ST_1 : Operation 58 [1/1] (1.77ns)   --->   "%icmp_ln228_1 = icmp_eq  i10 %add_ln228, i10 768" [bert_layer.cpp:228]   --->   Operation 58 'icmp' 'icmp_ln228_1' <Predicate = (!icmp_ln228)> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln228 = br i1 %icmp_ln228_1, void %ifFalse, void %ifTrue" [bert_layer.cpp:228]   --->   Operation 59 'br' 'br_ln228' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_1 : Operation 60 [1/1] (1.58ns)   --->   "%store_ln228 = store i10 %add_ln228, i10 %j6" [bert_layer.cpp:228]   --->   Operation 60 'store' 'store_ln228' <Predicate = (!icmp_ln228)> <Delay = 1.58>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%j6_2 = load i10 %j6" [bert_layer.cpp:219]   --->   Operation 49 'load' 'j6_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (1.77ns)   --->   "%icmp_ln219 = icmp_eq  i10 %j6_2, i10 768" [bert_layer.cpp:219]   --->   Operation 50 'icmp' 'icmp_ln219' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (1.73ns)   --->   "%add_ln219 = add i10 %j6_2, i10 1" [bert_layer.cpp:219]   --->   Operation 51 'add' 'add_ln219' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln219 = br i1 %icmp_ln219, void %for.inc35.split, void %for.inc57.exitStub" [bert_layer.cpp:219]   --->   Operation 52 'br' 'br_ln219' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln221 = zext i10 %j6_2" [bert_layer.cpp:221]   --->   Operation 53 'zext' 'zext_ln221' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (1.81ns)   --->   "%add_ln221 = add i14 %sub_ln221_read, i14 %zext_ln221" [bert_layer.cpp:221]   --->   Operation 54 'add' 'add_ln221' <Predicate = (!icmp_ln219)> <Delay = 1.81> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln221_2 = zext i14 %add_ln221" [bert_layer.cpp:221]   --->   Operation 55 'zext' 'zext_ln221_2' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%v115_addr = getelementptr i32 %v115, i64 0, i64 %zext_ln221_2" [bert_layer.cpp:221]   --->   Operation 56 'getelementptr' 'v115_addr' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_1 : Operation 57 [2/2] (3.25ns)   --->   "%v126 = load i14 %v115_addr" [bert_layer.cpp:221]   --->   Operation 57 'load' 'v126' <Predicate = (!icmp_ln219)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9216> <RAM>
+ST_1 : Operation 58 [1/1] (1.77ns)   --->   "%icmp_ln219_1 = icmp_eq  i10 %add_ln219, i10 768" [bert_layer.cpp:219]   --->   Operation 58 'icmp' 'icmp_ln219_1' <Predicate = (!icmp_ln219)> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln219 = br i1 %icmp_ln219_1, void %ifFalse, void %ifTrue" [bert_layer.cpp:219]   --->   Operation 59 'br' 'br_ln219' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (1.58ns)   --->   "%store_ln219 = store i10 %add_ln219, i10 %j6" [bert_layer.cpp:219]   --->   Operation 60 'store' 'store_ln219' <Predicate = (!icmp_ln219)> <Delay = 1.58>
 
 State 2 <SV = 1> <Delay = 3.25>
-ST_2 : Operation 61 [1/2] (3.25ns)   --->   "%v126 = load i14 %v115_addr" [bert_layer.cpp:230]   --->   Operation 61 'load' 'v126' <Predicate = (!icmp_ln228)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9216> <RAM>
+ST_2 : Operation 61 [1/2] (3.25ns)   --->   "%v126 = load i14 %v115_addr" [bert_layer.cpp:221]   --->   Operation 61 'load' 'v126' <Predicate = (!icmp_ln219)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9216> <RAM>
 
 State 3 <SV = 2> <Delay = 7.25>
-ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%v127_load = load i32 %v127" [bert_layer.cpp:232]   --->   Operation 62 'load' 'v127_load' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_3 : Operation 63 [5/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:232]   --->   Operation 63 'fadd' 'v128' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 64 [4/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:235]   --->   Operation 64 'fmul' 'v130' <Predicate = (!icmp_ln228)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%v127_load = load i32 %v127" [bert_layer.cpp:223]   --->   Operation 62 'load' 'v127_load' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_3 : Operation 63 [5/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:223]   --->   Operation 63 'fadd' 'v128' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 64 [4/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:226]   --->   Operation 64 'fmul' 'v130' <Predicate = (!icmp_ln219)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 7.25>
-ST_4 : Operation 65 [4/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:232]   --->   Operation 65 'fadd' 'v128' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 66 [3/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:235]   --->   Operation 66 'fmul' 'v130' <Predicate = (!icmp_ln228)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [4/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:223]   --->   Operation 65 'fadd' 'v128' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 66 [3/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:226]   --->   Operation 66 'fmul' 'v130' <Predicate = (!icmp_ln219)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 7.25>
-ST_5 : Operation 67 [3/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:232]   --->   Operation 67 'fadd' 'v128' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 68 [2/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:235]   --->   Operation 68 'fmul' 'v130' <Predicate = (!icmp_ln228)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 67 [3/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:223]   --->   Operation 67 'fadd' 'v128' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 68 [2/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:226]   --->   Operation 68 'fmul' 'v130' <Predicate = (!icmp_ln219)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 7.25>
-ST_6 : Operation 69 [2/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:232]   --->   Operation 69 'fadd' 'v128' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 70 [1/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:235]   --->   Operation 70 'fmul' 'v130' <Predicate = (!icmp_ln228)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 69 [2/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:223]   --->   Operation 69 'fadd' 'v128' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 70 [1/4] (5.70ns)   --->   "%v130 = fmul i32 %v126, i32 %v126" [bert_layer.cpp:226]   --->   Operation 70 'fmul' 'v130' <Predicate = (!icmp_ln219)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 8.84>
-ST_7 : Operation 71 [1/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:232]   --->   Operation 71 'fadd' 'v128' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 72 [1/1] (1.58ns)   --->   "%store_ln232 = store i32 %v128, i32 %v127" [bert_layer.cpp:232]   --->   Operation 72 'store' 'store_ln232' <Predicate = (!icmp_ln228)> <Delay = 1.58>
+ST_7 : Operation 71 [1/5] (7.25ns)   --->   "%v128 = fadd i32 %v127_load, i32 %v126" [bert_layer.cpp:223]   --->   Operation 71 'fadd' 'v128' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 72 [1/1] (1.58ns)   --->   "%store_ln223 = store i32 %v128, i32 %v127" [bert_layer.cpp:223]   --->   Operation 72 'store' 'store_ln223' <Predicate = (!icmp_ln219)> <Delay = 1.58>
 
 State 8 <SV = 7> <Delay = 7.25>
-ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%v131_load = load i32 %v131" [bert_layer.cpp:237]   --->   Operation 73 'load' 'v131_load' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_8 : Operation 74 [5/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:237]   --->   Operation 74 'fadd' 'v132' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 75 [16/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 75 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%v131_load = load i32 %v131" [bert_layer.cpp:228]   --->   Operation 73 'load' 'v131_load' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_8 : Operation 74 [5/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:228]   --->   Operation 74 'fadd' 'v132' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 75 [16/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 75 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 9 <SV = 8> <Delay = 7.25>
-ST_9 : Operation 76 [4/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:237]   --->   Operation 76 'fadd' 'v132' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 77 [15/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 77 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 76 [4/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:228]   --->   Operation 76 'fadd' 'v132' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 77 [15/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 77 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 10 <SV = 9> <Delay = 7.25>
-ST_10 : Operation 78 [3/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:237]   --->   Operation 78 'fadd' 'v132' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 79 [14/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 79 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 78 [3/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:228]   --->   Operation 78 'fadd' 'v132' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 79 [14/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 79 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 7.25>
-ST_11 : Operation 80 [2/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:237]   --->   Operation 80 'fadd' 'v132' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 81 [13/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 81 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 80 [2/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:228]   --->   Operation 80 'fadd' 'v132' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 81 [13/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 81 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 11> <Delay = 8.84>
-ST_12 : Operation 82 [1/1] (0.00ns)   --->   "%specpipeline_ln229 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [bert_layer.cpp:229]   --->   Operation 82 'specpipeline' 'specpipeline_ln229' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_12 : Operation 83 [1/1] (0.00ns)   --->   "%specloopname_ln228 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [bert_layer.cpp:228]   --->   Operation 83 'specloopname' 'specloopname_ln228' <Predicate = (!icmp_ln228)> <Delay = 0.00>
-ST_12 : Operation 84 [1/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:237]   --->   Operation 84 'fadd' 'v132' <Predicate = (!icmp_ln228)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 85 [12/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 85 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 86 [1/1] (1.58ns)   --->   "%store_ln237 = store i32 %v132, i32 %v131" [bert_layer.cpp:237]   --->   Operation 86 'store' 'store_ln237' <Predicate = (!icmp_ln228)> <Delay = 1.58>
-ST_12 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc35"   --->   Operation 87 'br' 'br_ln0' <Predicate = (!icmp_ln228)> <Delay = 0.00>
+ST_12 : Operation 82 [1/1] (0.00ns)   --->   "%specpipeline_ln220 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_31" [bert_layer.cpp:220]   --->   Operation 82 'specpipeline' 'specpipeline_ln220' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_12 : Operation 83 [1/1] (0.00ns)   --->   "%specloopname_ln219 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [bert_layer.cpp:219]   --->   Operation 83 'specloopname' 'specloopname_ln219' <Predicate = (!icmp_ln219)> <Delay = 0.00>
+ST_12 : Operation 84 [1/5] (7.25ns)   --->   "%v132 = fadd i32 %v131_load, i32 %v130" [bert_layer.cpp:228]   --->   Operation 84 'fadd' 'v132' <Predicate = (!icmp_ln219)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 85 [12/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 85 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 86 [1/1] (1.58ns)   --->   "%store_ln228 = store i32 %v132, i32 %v131" [bert_layer.cpp:228]   --->   Operation 86 'store' 'store_ln228' <Predicate = (!icmp_ln219)> <Delay = 1.58>
+ST_12 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc35"   --->   Operation 87 'br' 'br_ln0' <Predicate = (!icmp_ln219)> <Delay = 0.00>
 
 State 13 <SV = 12> <Delay = 6.07>
-ST_13 : Operation 88 [11/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 88 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 89 [16/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 89 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 88 [11/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 88 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 89 [16/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 89 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 14 <SV = 13> <Delay = 6.07>
-ST_14 : Operation 90 [10/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 90 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_14 : Operation 91 [15/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 91 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 90 [10/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 90 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 91 [15/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 91 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 15 <SV = 14> <Delay = 6.07>
-ST_15 : Operation 92 [9/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 92 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_15 : Operation 93 [14/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 93 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 92 [9/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 92 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 93 [14/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 93 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 16 <SV = 15> <Delay = 6.07>
-ST_16 : Operation 94 [8/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 94 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_16 : Operation 95 [13/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 95 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 94 [8/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 94 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 95 [13/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 95 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 17 <SV = 16> <Delay = 6.07>
-ST_17 : Operation 96 [7/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 96 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_17 : Operation 97 [12/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 97 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 96 [7/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 96 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 97 [12/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 97 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 18 <SV = 17> <Delay = 6.07>
-ST_18 : Operation 98 [6/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 98 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_18 : Operation 99 [11/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 99 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 98 [6/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 98 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 99 [11/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 99 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 19 <SV = 18> <Delay = 6.07>
-ST_19 : Operation 100 [5/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 100 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_19 : Operation 101 [10/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 101 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 100 [5/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 100 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 101 [10/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 101 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 20 <SV = 19> <Delay = 6.07>
-ST_20 : Operation 102 [4/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 102 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 103 [9/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 103 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 102 [4/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 102 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 103 [9/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 103 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 21 <SV = 20> <Delay = 6.07>
-ST_21 : Operation 104 [3/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 104 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 105 [8/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 105 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 104 [3/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 104 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 105 [8/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 105 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 22 <SV = 21> <Delay = 6.07>
-ST_22 : Operation 106 [2/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 106 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_22 : Operation 107 [7/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 107 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 106 [2/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 106 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 107 [7/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 107 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 23 <SV = 22> <Delay = 8.39>
-ST_23 : Operation 108 [1/1] (0.00ns)   --->   "%mean_addr = getelementptr i32 %mean, i64 0, i64 %zext_ln227_cast"   --->   Operation 108 'getelementptr' 'mean_addr' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 109 [1/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:241]   --->   Operation 109 'fdiv' 'v134' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_23 : Operation 110 [1/1] (2.32ns)   --->   "%store_ln242 = store i32 %v134, i4 %mean_addr" [bert_layer.cpp:242]   --->   Operation 110 'store' 'store_ln242' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 12> <RAM>
-ST_23 : Operation 111 [6/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 111 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 108 [1/1] (0.00ns)   --->   "%mean_addr = getelementptr i32 %mean, i64 0, i64 %zext_ln218_cast"   --->   Operation 108 'getelementptr' 'mean_addr' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 109 [1/16] (6.07ns)   --->   "%v134 = fdiv i32 %v128, i32 768" [bert_layer.cpp:232]   --->   Operation 109 'fdiv' 'v134' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 110 [1/1] (2.32ns)   --->   "%store_ln233 = store i32 %v134, i4 %mean_addr" [bert_layer.cpp:233]   --->   Operation 110 'store' 'store_ln233' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 12> <RAM>
+ST_23 : Operation 111 [6/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 111 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 24 <SV = 23> <Delay = 6.07>
-ST_24 : Operation 112 [5/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 112 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_24 : Operation 113 [4/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:248]   --->   Operation 113 'fmul' 'v139' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 112 [5/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 112 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 113 [4/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:239]   --->   Operation 113 'fmul' 'v139' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 25 <SV = 24> <Delay = 6.07>
-ST_25 : Operation 114 [4/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 114 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_25 : Operation 115 [3/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:248]   --->   Operation 115 'fmul' 'v139' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 114 [4/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 114 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 115 [3/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:239]   --->   Operation 115 'fmul' 'v139' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 26 <SV = 25> <Delay = 6.07>
-ST_26 : Operation 116 [3/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 116 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_26 : Operation 117 [2/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:248]   --->   Operation 117 'fmul' 'v139' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 116 [3/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 116 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 117 [2/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:239]   --->   Operation 117 'fmul' 'v139' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 27 <SV = 26> <Delay = 6.07>
-ST_27 : Operation 118 [2/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 118 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_27 : Operation 119 [1/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:248]   --->   Operation 119 'fmul' 'v139' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 118 [2/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 118 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 119 [1/4] (5.70ns)   --->   "%v139 = fmul i32 %v134, i32 %v134" [bert_layer.cpp:239]   --->   Operation 119 'fmul' 'v139' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 28 <SV = 27> <Delay = 8.39>
-ST_28 : Operation 120 [1/1] (0.00ns)   --->   "%var_addr = getelementptr i32 %var, i64 0, i64 %zext_ln227_cast" [bert_layer.cpp:250]   --->   Operation 120 'getelementptr' 'var_addr' <Predicate = true> <Delay = 0.00>
-ST_28 : Operation 121 [1/1] (0.00ns)   --->   "%mean2_addr = getelementptr i32 %mean2, i64 0, i64 %zext_ln227_cast"   --->   Operation 121 'getelementptr' 'mean2_addr' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 120 [1/1] (0.00ns)   --->   "%var_addr = getelementptr i32 %var, i64 0, i64 %zext_ln218_cast" [bert_layer.cpp:241]   --->   Operation 120 'getelementptr' 'var_addr' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 121 [1/1] (0.00ns)   --->   "%mean2_addr = getelementptr i32 %mean2, i64 0, i64 %zext_ln218_cast"   --->   Operation 121 'getelementptr' 'mean2_addr' <Predicate = true> <Delay = 0.00>
 ST_28 : Operation 122 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 768, i64 768, i64 768"   --->   Operation 122 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_28 : Operation 123 [1/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:244]   --->   Operation 123 'fdiv' 'v136' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
-ST_28 : Operation 124 [1/1] (2.32ns)   --->   "%store_ln245 = store i32 %v136, i4 %mean2_addr" [bert_layer.cpp:245]   --->   Operation 124 'store' 'store_ln245' <Predicate = (!icmp_ln228 & icmp_ln228_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 12> <RAM>
+ST_28 : Operation 123 [1/16] (6.07ns)   --->   "%v136 = fdiv i32 %v132, i32 768" [bert_layer.cpp:235]   --->   Operation 123 'fdiv' 'v136' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 124 [1/1] (2.32ns)   --->   "%store_ln236 = store i32 %v136, i4 %mean2_addr" [bert_layer.cpp:236]   --->   Operation 124 'store' 'store_ln236' <Predicate = (!icmp_ln219 & icmp_ln219_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 12> <RAM>
 
 State 29 <SV = 28> <Delay = 7.25>
-ST_29 : Operation 125 [5/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:249]   --->   Operation 125 'fsub' 'v140' <Predicate = (icmp_ln228_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 125 [5/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:240]   --->   Operation 125 'fsub' 'v140' <Predicate = (icmp_ln219_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 30 <SV = 29> <Delay = 7.25>
-ST_30 : Operation 126 [4/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:249]   --->   Operation 126 'fsub' 'v140' <Predicate = (icmp_ln228_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_30 : Operation 132 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 132 'ret' 'ret_ln0' <Predicate = (icmp_ln228)> <Delay = 0.00>
+ST_30 : Operation 126 [4/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:240]   --->   Operation 126 'fsub' 'v140' <Predicate = (icmp_ln219_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 132 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 132 'ret' 'ret_ln0' <Predicate = (icmp_ln219)> <Delay = 0.00>
 
 State 31 <SV = 30> <Delay = 7.25>
-ST_31 : Operation 127 [3/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:249]   --->   Operation 127 'fsub' 'v140' <Predicate = (icmp_ln228_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 127 [3/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:240]   --->   Operation 127 'fsub' 'v140' <Predicate = (icmp_ln219_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 32 <SV = 31> <Delay = 7.25>
-ST_32 : Operation 128 [2/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:249]   --->   Operation 128 'fsub' 'v140' <Predicate = (icmp_ln228_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 128 [2/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:240]   --->   Operation 128 'fsub' 'v140' <Predicate = (icmp_ln219_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 33 <SV = 32> <Delay = 7.25>
-ST_33 : Operation 129 [1/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:249]   --->   Operation 129 'fsub' 'v140' <Predicate = (icmp_ln228_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 129 [1/5] (7.25ns)   --->   "%v140 = fsub i32 %v136, i32 %v139" [bert_layer.cpp:240]   --->   Operation 129 'fsub' 'v140' <Predicate = (icmp_ln219_1)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 34 <SV = 33> <Delay = 2.32>
-ST_34 : Operation 130 [1/1] (2.32ns)   --->   "%store_ln250 = store i32 %v140, i4 %var_addr" [bert_layer.cpp:250]   --->   Operation 130 'store' 'store_ln250' <Predicate = (icmp_ln228_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 12> <RAM>
-ST_34 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln0 = br void %ifFalse"   --->   Operation 131 'br' 'br_ln0' <Predicate = (icmp_ln228_1)> <Delay = 0.00>
+ST_34 : Operation 130 [1/1] (2.32ns)   --->   "%store_ln241 = store i32 %v140, i4 %var_addr" [bert_layer.cpp:241]   --->   Operation 130 'store' 'store_ln241' <Predicate = (icmp_ln219_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 12> <RAM>
+ST_34 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln0 = br void %ifFalse"   --->   Operation 131 'br' 'br_ln0' <Predicate = (icmp_ln219_1)> <Delay = 0.00>
 
 
 ============================================================
@@ -289,148 +289,148 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
  <State 1>: 5.07ns
 The critical path consists of the following:
 	'alloca' operation ('j6') [11]  (0 ns)
-	'load' operation ('j6', bert_layer.cpp:228) on local variable 'j6' [22]  (0 ns)
-	'add' operation ('add_ln230', bert_layer.cpp:230) [34]  (1.81 ns)
-	'getelementptr' operation ('v115_addr', bert_layer.cpp:230) [36]  (0 ns)
-	'load' operation ('v126', bert_layer.cpp:230) on array 'v115' [39]  (3.25 ns)
+	'load' operation ('j6', bert_layer.cpp:219) on local variable 'j6' [22]  (0 ns)
+	'add' operation ('add_ln221', bert_layer.cpp:221) [34]  (1.81 ns)
+	'getelementptr' operation ('v115_addr', bert_layer.cpp:221) [36]  (0 ns)
+	'load' operation ('v126', bert_layer.cpp:221) on array 'v115' [39]  (3.25 ns)
 
  <State 2>: 3.25ns
 The critical path consists of the following:
-	'load' operation ('v126', bert_layer.cpp:230) on array 'v115' [39]  (3.25 ns)
+	'load' operation ('v126', bert_layer.cpp:221) on array 'v115' [39]  (3.25 ns)
 
  <State 3>: 7.26ns
 The critical path consists of the following:
-	'load' operation ('v127_load', bert_layer.cpp:232) on local variable 'v127' [31]  (0 ns)
-	'fadd' operation ('v128', bert_layer.cpp:232) [40]  (7.26 ns)
+	'load' operation ('v127_load', bert_layer.cpp:223) on local variable 'v127' [31]  (0 ns)
+	'fadd' operation ('v128', bert_layer.cpp:223) [40]  (7.26 ns)
 
  <State 4>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('v128', bert_layer.cpp:232) [40]  (7.26 ns)
+	'fadd' operation ('v128', bert_layer.cpp:223) [40]  (7.26 ns)
 
  <State 5>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('v128', bert_layer.cpp:232) [40]  (7.26 ns)
+	'fadd' operation ('v128', bert_layer.cpp:223) [40]  (7.26 ns)
 
  <State 6>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('v128', bert_layer.cpp:232) [40]  (7.26 ns)
+	'fadd' operation ('v128', bert_layer.cpp:223) [40]  (7.26 ns)
 
  <State 7>: 8.84ns
 The critical path consists of the following:
-	'fadd' operation ('v128', bert_layer.cpp:232) [40]  (7.26 ns)
-	'store' operation ('store_ln232', bert_layer.cpp:232) of variable 'v128', bert_layer.cpp:232 on local variable 'v127' [57]  (1.59 ns)
+	'fadd' operation ('v128', bert_layer.cpp:223) [40]  (7.26 ns)
+	'store' operation ('store_ln223', bert_layer.cpp:223) of variable 'v128', bert_layer.cpp:223 on local variable 'v127' [57]  (1.59 ns)
 
  <State 8>: 7.26ns
 The critical path consists of the following:
-	'load' operation ('v131_load', bert_layer.cpp:237) on local variable 'v131' [32]  (0 ns)
-	'fadd' operation ('v132', bert_layer.cpp:237) [42]  (7.26 ns)
+	'load' operation ('v131_load', bert_layer.cpp:228) on local variable 'v131' [32]  (0 ns)
+	'fadd' operation ('v132', bert_layer.cpp:228) [42]  (7.26 ns)
 
  <State 9>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('v132', bert_layer.cpp:237) [42]  (7.26 ns)
+	'fadd' operation ('v132', bert_layer.cpp:228) [42]  (7.26 ns)
 
  <State 10>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('v132', bert_layer.cpp:237) [42]  (7.26 ns)
+	'fadd' operation ('v132', bert_layer.cpp:228) [42]  (7.26 ns)
 
  <State 11>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('v132', bert_layer.cpp:237) [42]  (7.26 ns)
+	'fadd' operation ('v132', bert_layer.cpp:228) [42]  (7.26 ns)
 
  <State 12>: 8.84ns
 The critical path consists of the following:
-	'fadd' operation ('v132', bert_layer.cpp:237) [42]  (7.26 ns)
-	'store' operation ('store_ln237', bert_layer.cpp:237) of variable 'v132', bert_layer.cpp:237 on local variable 'v131' [56]  (1.59 ns)
+	'fadd' operation ('v132', bert_layer.cpp:228) [42]  (7.26 ns)
+	'store' operation ('store_ln228', bert_layer.cpp:228) of variable 'v132', bert_layer.cpp:228 on local variable 'v131' [56]  (1.59 ns)
 
  <State 13>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 14>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 15>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 16>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 17>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 18>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 19>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 20>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 21>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 22>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
 
  <State 23>: 8.4ns
 The critical path consists of the following:
-	'fdiv' operation ('v134', bert_layer.cpp:241) [46]  (6.08 ns)
-	'store' operation ('store_ln242', bert_layer.cpp:242) of variable 'v134', bert_layer.cpp:241 on array 'mean' [47]  (2.32 ns)
+	'fdiv' operation ('v134', bert_layer.cpp:232) [46]  (6.08 ns)
+	'store' operation ('store_ln233', bert_layer.cpp:233) of variable 'v134', bert_layer.cpp:232 on array 'mean' [47]  (2.32 ns)
 
  <State 24>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v136', bert_layer.cpp:244) [48]  (6.08 ns)
+	'fdiv' operation ('v136', bert_layer.cpp:235) [48]  (6.08 ns)
 
  <State 25>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v136', bert_layer.cpp:244) [48]  (6.08 ns)
+	'fdiv' operation ('v136', bert_layer.cpp:235) [48]  (6.08 ns)
 
  <State 26>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v136', bert_layer.cpp:244) [48]  (6.08 ns)
+	'fdiv' operation ('v136', bert_layer.cpp:235) [48]  (6.08 ns)
 
  <State 27>: 6.08ns
 The critical path consists of the following:
-	'fdiv' operation ('v136', bert_layer.cpp:244) [48]  (6.08 ns)
+	'fdiv' operation ('v136', bert_layer.cpp:235) [48]  (6.08 ns)
 
  <State 28>: 8.4ns
 The critical path consists of the following:
-	'fdiv' operation ('v136', bert_layer.cpp:244) [48]  (6.08 ns)
-	'store' operation ('store_ln245', bert_layer.cpp:245) of variable 'v136', bert_layer.cpp:244 on array 'mean2' [49]  (2.32 ns)
+	'fdiv' operation ('v136', bert_layer.cpp:235) [48]  (6.08 ns)
+	'store' operation ('store_ln236', bert_layer.cpp:236) of variable 'v136', bert_layer.cpp:235 on array 'mean2' [49]  (2.32 ns)
 
  <State 29>: 7.26ns
 The critical path consists of the following:
-	'fsub' operation ('v140', bert_layer.cpp:249) [51]  (7.26 ns)
+	'fsub' operation ('v140', bert_layer.cpp:240) [51]  (7.26 ns)
 
  <State 30>: 7.26ns
 The critical path consists of the following:
-	'fsub' operation ('v140', bert_layer.cpp:249) [51]  (7.26 ns)
+	'fsub' operation ('v140', bert_layer.cpp:240) [51]  (7.26 ns)
 
  <State 31>: 7.26ns
 The critical path consists of the following:
-	'fsub' operation ('v140', bert_layer.cpp:249) [51]  (7.26 ns)
+	'fsub' operation ('v140', bert_layer.cpp:240) [51]  (7.26 ns)
 
  <State 32>: 7.26ns
 The critical path consists of the following:
-	'fsub' operation ('v140', bert_layer.cpp:249) [51]  (7.26 ns)
+	'fsub' operation ('v140', bert_layer.cpp:240) [51]  (7.26 ns)
 
  <State 33>: 7.26ns
 The critical path consists of the following:
-	'fsub' operation ('v140', bert_layer.cpp:249) [51]  (7.26 ns)
+	'fsub' operation ('v140', bert_layer.cpp:240) [51]  (7.26 ns)
 
  <State 34>: 2.32ns
 The critical path consists of the following:
-	'store' operation ('store_ln250', bert_layer.cpp:250) of variable 'v140', bert_layer.cpp:249 on array 'var' [52]  (2.32 ns)
+	'store' operation ('store_ln241', bert_layer.cpp:241) of variable 'v140', bert_layer.cpp:240 on array 'var' [52]  (2.32 ns)
 
 
 ============================================================

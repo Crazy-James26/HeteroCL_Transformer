@@ -41244,23 +41244,23 @@ void gemm_systolic_array_qkv(float A[inp_num][inp_len], float B[inp_len][inp_len
 
  init_block_AB:
    for(int k = 0; k < inp_len; k++){
-    VITIS_LOOP_26_2: for(int i = 0; i < block_size1; i++){
-#pragma HLS UNROLL
- block_A_loader[i].write(A[ii * block_size1 + i][k]);
+#pragma HLS PIPELINE II=1
+ VITIS_LOOP_27_2: for(int i = 0; i < block_size1; i++){
+     block_A_loader[i].write(A[ii * block_size1 + i][k]);
     }
     VITIS_LOOP_30_3: for(int j = 0; j < block_size1; j++){
-#pragma HLS UNROLL
- block_B_loader[j].write(B[jj * block_size1 + j][k]);
+     block_B_loader[j].write(B[jj * block_size1 + j][k]);
     }
    }
 
    systolic_array_k_768(block_A_loader, block_B_loader, block_C_drainer);
 
    store_block_C:
-   for(int j = 0; j < block_size1; j++){
+   for(int i = 0; i < block_size1; i++){
+#pragma HLS UNROLL
+ VITIS_LOOP_40_4: for(int j = 0; j < block_size1; j++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_41_4: for(int i = 0; i < block_size1; i++){
-     C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
+ C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
     }
    }
   }
@@ -41302,10 +41302,11 @@ void gemm_systolic_array_attn(float A[inp_num][head_len], float B[inp_num][head_
    systolic_array_k_64(block_A_loader, block_B_loader, block_C_drainer);
 
    store_block_C:
-   for(int j = 0; j < block_size2; j++){
+   for(int i = 0; i < block_size2; i++){
+#pragma HLS UNROLL
+ VITIS_LOOP_86_4: for(int j = 0; j < block_size2; j++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_86_4: for(int i = 0; i < block_size2; i++){
-     C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
+ C[ii * block_size2 + i][jj * block_size2 + j] += block_C_drainer[i].read();
     }
    }
   }
@@ -41329,17 +41330,17 @@ void gemm_systolic_array_cont(float A[inp_num][inp_num], float B[inp_num][head_l
 
  block_gemm:
  for(int ii = 0; ii < inp_num/block_size2; ii++){
-  VITIS_LOOP_111_1: for(int jj = 0; jj < head_len/block_size2; jj++){
+  VITIS_LOOP_112_1: for(int jj = 0; jj < head_len/block_size2; jj++){
 #pragma HLS LOOP_FLATTEN
 #pragma HLS DATAFLOW
 
  init_block_AB:
    for(int k = 0; k < inp_num; k++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_118_2: for(int i = 0; i < block_size2; i++){
+ VITIS_LOOP_119_2: for(int i = 0; i < block_size2; i++){
      block_A_loader[i].write(A[ii * block_size2 + i][k]);
     }
-    VITIS_LOOP_121_3: for(int j = 0; j < block_size2; j++){
+    VITIS_LOOP_122_3: for(int j = 0; j < block_size2; j++){
      block_B_loader[j].write(B[k][jj * block_size2 + j]);
     }
    }
@@ -41347,10 +41348,11 @@ void gemm_systolic_array_cont(float A[inp_num][inp_num], float B[inp_num][head_l
    systolic_array_k_12(block_A_loader, block_B_loader, block_C_drainer);
 
    store_block_C:
-   for(int j = 0; j < block_size2; j++){
+   for(int i = 0; i < block_size2; i++){
+#pragma HLS UNROLL
+ VITIS_LOOP_132_4: for(int j = 0; j < block_size2; j++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_131_4: for(int i = 0; i < block_size2; i++){
-     C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
+ C[ii * block_size2 + i][jj * block_size2 + j] += block_C_drainer[i].read();
     }
    }
   }
@@ -41374,17 +41376,17 @@ void gemm_systolic_array_ds0(float A[inp_num][inp_len], float B[inp_len][inp_len
 
  block_gemm:
  for(int ii = 0; ii < inp_num/block_size1; ii++){
-  VITIS_LOOP_156_1: for(int jj = 0; jj < inp_len/block_size1; jj++){
+  VITIS_LOOP_158_1: for(int jj = 0; jj < inp_len/block_size1; jj++){
 #pragma HLS LOOP_FLATTEN
 #pragma HLS DATAFLOW
 
  init_block_AB:
    for(int k = 0; k < inp_len; k++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_163_2: for(int i = 0; i < block_size1; i++){
+ VITIS_LOOP_165_2: for(int i = 0; i < block_size1; i++){
      block_A_loader[i].write(A[ii * block_size1 + i][k]);
     }
-    VITIS_LOOP_166_3: for(int j = 0; j < block_size1; j++){
+    VITIS_LOOP_168_3: for(int j = 0; j < block_size1; j++){
      block_B_loader[j].write(B[jj * block_size1 + j][k]);
     }
    }
@@ -41393,10 +41395,11 @@ void gemm_systolic_array_ds0(float A[inp_num][inp_len], float B[inp_len][inp_len
    systolic_array_k_768(block_A_loader, block_B_loader, block_C_drainer);
 
    store_block_C:
-   for(int j = 0; j < block_size1; j++){
+   for(int i = 0; i < block_size1; i++){
+#pragma HLS UNROLL
+ VITIS_LOOP_179_4: for(int j = 0; j < block_size1; j++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_177_4: for(int i = 0; i < block_size1; i++){
-     C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
+ C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
     }
    }
   }
@@ -41420,17 +41423,17 @@ void gemm_systolic_array_ds1(float A[inp_num][inp_len], float B[gelu_len][inp_le
 
  block_gemm:
  for(int ii = 0; ii < inp_num/block_size1; ii++){
-  VITIS_LOOP_202_1: for(int jj = 0; jj < gelu_len/block_size1; jj++){
+  VITIS_LOOP_205_1: for(int jj = 0; jj < gelu_len/block_size1; jj++){
 #pragma HLS LOOP_FLATTEN
 #pragma HLS DATAFLOW
 
  init_block_AB:
    for(int k = 0; k < inp_len; k++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_209_2: for(int i = 0; i < block_size1; i++){
+ VITIS_LOOP_212_2: for(int i = 0; i < block_size1; i++){
      block_A_loader[i].write(A[ii * block_size1 + i][k]);
     }
-    VITIS_LOOP_212_3: for(int j = 0; j < block_size1; j++){
+    VITIS_LOOP_215_3: for(int j = 0; j < block_size1; j++){
      block_B_loader[j].write(B[jj * block_size1 + j][k]);
     }
    }
@@ -41438,10 +41441,11 @@ void gemm_systolic_array_ds1(float A[inp_num][inp_len], float B[gelu_len][inp_le
    systolic_array_k_768(block_A_loader, block_B_loader, block_C_drainer);
 
    store_block_C:
-   for(int j = 0; j < block_size1; j++){
+   for(int i = 0; i < block_size1; i++){
+#pragma HLS UNROLL
+ VITIS_LOOP_225_4: for(int j = 0; j < block_size1; j++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_222_4: for(int i = 0; i < block_size1; i++){
-     C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
+ C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
     }
    }
   }
@@ -41465,17 +41469,17 @@ void gemm_systolic_array_ds2(float A[inp_num][gelu_len], float B[inp_len][gelu_l
 
  block_gemm:
  for(int ii = 0; ii < inp_num/block_size1; ii++){
-  VITIS_LOOP_247_1: for(int jj = 0; jj < inp_len/block_size1; jj++){
+  VITIS_LOOP_251_1: for(int jj = 0; jj < inp_len/block_size1; jj++){
 #pragma HLS LOOP_FLATTEN
 #pragma HLS DATAFLOW
 
  init_block_AB:
    for(int k = 0; k < gelu_len; k++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_254_2: for(int i = 0; i < block_size1; i++){
+ VITIS_LOOP_258_2: for(int i = 0; i < block_size1; i++){
      block_A_loader[i].write(A[ii * block_size1 + i][k]);
     }
-    VITIS_LOOP_257_3: for(int j = 0; j < block_size1; j++){
+    VITIS_LOOP_261_3: for(int j = 0; j < block_size1; j++){
      block_B_loader[j].write(B[jj * block_size1 + j][k]);
     }
    }
@@ -41483,10 +41487,11 @@ void gemm_systolic_array_ds2(float A[inp_num][gelu_len], float B[inp_len][gelu_l
    systolic_array_k_3072(block_A_loader, block_B_loader, block_C_drainer);
 
    store_block_C:
-   for(int j = 0; j < block_size1; j++){
+   for(int i = 0; i < block_size1; i++){
+#pragma HLS UNROLL
+ VITIS_LOOP_271_4: for(int j = 0; j < block_size1; j++){
 #pragma HLS PIPELINE II=1
- VITIS_LOOP_267_4: for(int i = 0; i < block_size1; i++){
-     C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
+ C[ii * block_size1 + i][jj * block_size1 + j] += block_C_drainer[i].read();
     }
    }
   }
