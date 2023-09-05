@@ -1,0 +1,21 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link
+	Log files: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary, at Tue Sep  5 15:11:05 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Sep  5 15:11:05 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html', at Tue Sep  5 15:11:06 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for software emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-645] kernel flags are '-g -I /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj -g'
+INFO: [v++ 60-586] Created ./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html
+	Steps Log File: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 46s
+INFO: [v++ 60-1653] Closing dispatch client.

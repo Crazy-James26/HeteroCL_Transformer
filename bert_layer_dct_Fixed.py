@@ -176,7 +176,7 @@ def top():
     return s
 
 if __name__ == '__main__':
-    target = "vhls"
+    target = "vitis_hls"
     s = top()
 
     if(target=="vhls"):
@@ -184,6 +184,11 @@ if __name__ == '__main__':
         print(f)
         mod = s.build(target="vhls", mode="csyn", project="bert_layer_dct_Fixed_24_16.prj")
         mod()
+
+    elif target=="vitis_hls":
+        f = s.build(target=target)
+        print(f)
+        mod = s.build(target="vitis_hls", mode="debug", project="bert_layer_dct_fixed_vitis.prj")
 
     else:
         f = s.build(target=target) 
