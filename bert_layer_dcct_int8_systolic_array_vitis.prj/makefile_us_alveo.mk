@@ -42,7 +42,7 @@ endif
 
 ############################## Setting up Project Variables ##############################
 TARGET := hw
-VPP_LDFLAGS :=
+VPP_LDFLAGS := --optimize 3
 include ./utils.mk
 
 TEMP_DIR := ./_x.$(TARGET).$(XSA)
@@ -88,9 +88,9 @@ build: check-vitis check-device $(BUILD_DIR)/Bert_layer.xclbin
 xclbin: build
 
 ############################## Setting Rules for Binary Containers (Building Kernels) ##############################
-$(TEMP_DIR)/Bert_layer.xo: kernel.cpp
+$(TEMP_DIR)/Bert_layer.xo: kernel.cpp gemm_systolic_array.cpp systolic_array.cpp
 	mkdir -p $(TEMP_DIR)
-	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k Bert_layer --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<'
+	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k Bert_layer --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' $^
 
 $(BUILD_DIR)/Bert_layer.xclbin: $(TEMP_DIR)/Bert_layer.xo
 	mkdir -p $(BUILD_DIR)

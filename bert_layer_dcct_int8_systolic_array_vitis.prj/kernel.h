@@ -10,6 +10,7 @@
 #include <stdint.h>
 
 using namespace std;
+extern "C" {
 const int inp_num = 12;
 const int inp_len = 768;
 const int head_num = 12;
@@ -178,5 +179,5 @@ void Bert_layer(
   float *v351,
   float *v352
 );
-
+}
 #endif

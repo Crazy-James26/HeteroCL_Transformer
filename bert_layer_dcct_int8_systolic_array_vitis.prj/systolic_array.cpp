@@ -1,6 +1,7 @@
 #include "kernel.h"
 
-extern "C" {\
+extern "C" {
+
 void PE_8_4(hls::stream<int8_t>& A_in, hls::stream<int8_t>& A_out,
         hls::stream<ap_int<4>>& B_in, hls::stream<ap_int<4>>& B_out,
 	    ap_int<24>& C_out, int k_size) {

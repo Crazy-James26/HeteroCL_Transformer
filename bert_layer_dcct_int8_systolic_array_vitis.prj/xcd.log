@@ -1,0 +1,93 @@
+Wed Sep  6 14:14:19 2023: Running xcd server. This server was built by gradle.
+Wed Sep  6 14:14:19 2023: Server was asked to start on port: '39067'
+Wed Sep  6 14:14:19 2023: Server is using token UUID: '809abb93-01a4-4ccb-a888-4ce6b5b46d35'
+Wed Sep  6 14:14:19 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Wed Sep  6 14:14:19 2023: Attempting to start server on port '39067'
+Wed Sep  6 14:14:19 2023: XCD main fifo: created main fifo '/tmp/xcdmain809abb93-01a4-4ccb-a888-4ce6b5b46d35', fd read = 13
+Wed Sep  6 14:14:19 2023: Running Dispatch Server
+Wed Sep  6 14:14:19 2023: Version 2.2.0
+Wed Sep  6 14:14:28 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep  6 14:14:28 2023: Starting Socket connection
+Wed Sep  6 14:14:28 2023: EXCHANGE_TOKEN received, server token: 809abb93-01a4-4ccb-a888-4ce6b5b46d35, passed token: 809abb93-01a4-4ccb-a888-4ce6b5b46d35
+Wed Sep  6 14:14:28 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Wed Sep  6 14:14:28 2023: SESSION_MGR: creating session with session uuid: 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' and name 'v++_compile_Bert_layer'
+Wed Sep  6 14:14:28 2023: KERNEL_SVC: creating session with uuid: 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' and name 'v++_compile_Bert_layer'
+Wed Sep  6 14:14:28 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' and name 'v++_compile_Bert_layer'
+Wed Sep  6 14:14:28 2023: SYSTEM_DIAGRAM: creating session with uuid: 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' and name 'v++_compile_Bert_layer'
+Wed Sep  6 14:16:10 2023: SESSION_MGR: closing session for UUID 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' with name 'v++_compile_Bert_layer'
+Wed Sep  6 14:16:10 2023: KERNEL_SVC: closing session for UUID 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' with name 'v++_compile_Bert_layer'
+Wed Sep  6 14:16:10 2023: GUIDANCE_SMGR: closing session for UUID 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' with name 'v++_compile_Bert_layer'
+Wed Sep  6 14:16:10 2023: SYSTEM_DIAGRAM: closing session for UUID 'b37b993d-f3e0-4746-9dce-366d0fb8e0d5' with name 'v++_compile_Bert_layer'
+Wed Sep  6 14:16:10 2023: STOP_SERVER received, server token: 809abb93-01a4-4ccb-a888-4ce6b5b46d35, passed token: 809abb93-01a4-4ccb-a888-4ce6b5b46d35
+Wed Sep  6 14:16:10 2023: Socket received request to stop server.
+Wed Sep  6 14:16:10 2023: Dispatch Server: do_await_stop
+Wed Sep  6 14:16:10 2023: Dispatch Server: stopping mainFifo_
+Wed Sep  6 14:16:10 2023: XCD main fifo: Stopping
+Wed Sep  6 14:16:10 2023: XCD main fifo: do_read error code: Operation canceled
+Wed Sep  6 14:16:10 2023: XCD main fifo: bytes_transferred: 0
+Wed Sep  6 14:16:10 2023: SERVER: destructor for server bound to port 39067
+Wed Sep  6 14:16:10 2023: XCD main fifo: Good unlink of /tmp/xcdmain809abb93-01a4-4ccb-a888-4ce6b5b46d35
+Wed Sep  6 14:16:10 2023: Server exiting with status 0.
+Wed Sep  6 14:16:10 2023: Closing log file.
+Wed Sep  6 14:16:14 2023: Running xcd server. This server was built by gradle.
+Wed Sep  6 14:16:14 2023: Server was asked to start on port: '45523'
+Wed Sep  6 14:16:14 2023: Server is using token UUID: '6b877356-1bd2-471e-9b3a-6b9e828c50ce'
+Wed Sep  6 14:16:14 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Wed Sep  6 14:16:14 2023: Attempting to start server on port '45523'
+Wed Sep  6 14:16:14 2023: XCD main fifo: created main fifo '/tmp/xcdmain6b877356-1bd2-471e-9b3a-6b9e828c50ce', fd read = 13
+Wed Sep  6 14:16:14 2023: Running Dispatch Server
+Wed Sep  6 14:16:14 2023: Version 2.2.0
+Wed Sep  6 14:16:22 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep  6 14:16:22 2023: Starting Socket connection
+Wed Sep  6 14:16:22 2023: EXCHANGE_TOKEN received, server token: 6b877356-1bd2-471e-9b3a-6b9e828c50ce, passed token: 6b877356-1bd2-471e-9b3a-6b9e828c50ce
+Wed Sep  6 14:16:23 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Wed Sep  6 14:16:23 2023: SESSION_MGR: creating session with session uuid: '7d336620-9897-4ec5-820d-2d47bc296439' and name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:23 2023: KERNEL_SVC: creating session with uuid: '7d336620-9897-4ec5-820d-2d47bc296439' and name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:23 2023: GUIDANCE_SMGR: creating guidance session with uuid: '7d336620-9897-4ec5-820d-2d47bc296439' and name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:23 2023: SYSTEM_DIAGRAM: creating session with uuid: '7d336620-9897-4ec5-820d-2d47bc296439' and name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:59 2023: SESSION_MGR: closing session for UUID '7d336620-9897-4ec5-820d-2d47bc296439' with name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:59 2023: KERNEL_SVC: closing session for UUID '7d336620-9897-4ec5-820d-2d47bc296439' with name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:59 2023: GUIDANCE_SMGR: closing session for UUID '7d336620-9897-4ec5-820d-2d47bc296439' with name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:59 2023: SYSTEM_DIAGRAM: closing session for UUID '7d336620-9897-4ec5-820d-2d47bc296439' with name 'v++_link_Bert_layer.link'
+Wed Sep  6 14:16:59 2023: STOP_SERVER received, server token: 6b877356-1bd2-471e-9b3a-6b9e828c50ce, passed token: 6b877356-1bd2-471e-9b3a-6b9e828c50ce
+Wed Sep  6 14:16:59 2023: Socket received request to stop server.
+Wed Sep  6 14:16:59 2023: Dispatch Server: do_await_stop
+Wed Sep  6 14:16:59 2023: Dispatch Server: stopping mainFifo_
+Wed Sep  6 14:16:59 2023: XCD main fifo: Stopping
+Wed Sep  6 14:16:59 2023: XCD main fifo: do_read error code: Operation canceled
+Wed Sep  6 14:16:59 2023: XCD main fifo: bytes_transferred: 0
+Wed Sep  6 14:16:59 2023: SERVER: destructor for server bound to port 45523
+Wed Sep  6 14:16:59 2023: XCD main fifo: Good unlink of /tmp/xcdmain6b877356-1bd2-471e-9b3a-6b9e828c50ce
+Wed Sep  6 14:16:59 2023: Server exiting with status 0.
+Wed Sep  6 14:16:59 2023: Closing log file.
+Wed Sep  6 14:17:03 2023: Running xcd server. This server was built by gradle.
+Wed Sep  6 14:17:03 2023: Server was asked to start on port: '42308'
+Wed Sep  6 14:17:03 2023: Server is using token UUID: 'ee36de0b-03fa-49ea-9994-bfd99a5a0d36'
+Wed Sep  6 14:17:03 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Wed Sep  6 14:17:03 2023: Attempting to start server on port '42308'
+Wed Sep  6 14:17:03 2023: XCD main fifo: created main fifo '/tmp/xcdmainee36de0b-03fa-49ea-9994-bfd99a5a0d36', fd read = 13
+Wed Sep  6 14:17:03 2023: Running Dispatch Server
+Wed Sep  6 14:17:03 2023: Version 2.2.0
+Wed Sep  6 14:17:11 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep  6 14:17:11 2023: Starting Socket connection
+Wed Sep  6 14:17:11 2023: EXCHANGE_TOKEN received, server token: ee36de0b-03fa-49ea-9994-bfd99a5a0d36, passed token: ee36de0b-03fa-49ea-9994-bfd99a5a0d36
+Wed Sep  6 14:17:12 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Wed Sep  6 14:17:12 2023: SESSION_MGR: creating session with session uuid: 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' and name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:12 2023: KERNEL_SVC: creating session with uuid: 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' and name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:12 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' and name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:12 2023: SYSTEM_DIAGRAM: creating session with uuid: 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' and name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:21 2023: SESSION_MGR: closing session for UUID 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' with name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:21 2023: KERNEL_SVC: closing session for UUID 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' with name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:21 2023: GUIDANCE_SMGR: closing session for UUID 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' with name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:21 2023: SYSTEM_DIAGRAM: closing session for UUID 'e2f93a4b-d405-4ada-9bc9-eea8f12fa8a6' with name 'v++_package_Bert_layer'
+Wed Sep  6 14:17:21 2023: STOP_SERVER received, server token: ee36de0b-03fa-49ea-9994-bfd99a5a0d36, passed token: ee36de0b-03fa-49ea-9994-bfd99a5a0d36
+Wed Sep  6 14:17:21 2023: Socket received request to stop server.
+Wed Sep  6 14:17:21 2023: Dispatch Server: do_await_stop
+Wed Sep  6 14:17:21 2023: Dispatch Server: stopping mainFifo_
+Wed Sep  6 14:17:21 2023: XCD main fifo: Stopping
+Wed Sep  6 14:17:21 2023: XCD main fifo: do_read error code: Operation canceled
+Wed Sep  6 14:17:21 2023: XCD main fifo: bytes_transferred: 0
+Wed Sep  6 14:17:21 2023: SERVER: destructor for server bound to port 42308
+Wed Sep  6 14:17:21 2023: XCD main fifo: Good unlink of /tmp/xcdmainee36de0b-03fa-49ea-9994-bfd99a5a0d36
+Wed Sep  6 14:17:21 2023: Server exiting with status 0.
+Wed Sep  6 14:17:21 2023: Closing log file.
