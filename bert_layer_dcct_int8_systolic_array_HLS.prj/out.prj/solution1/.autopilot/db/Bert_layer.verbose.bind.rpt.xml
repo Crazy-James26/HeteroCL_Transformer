@@ -1,0 +1,75 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Bert_layer'" level="0">
+<item name = "Date">Wed Sep  6 08:45:22 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">out_test.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.844 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">967680, 967680, 9.677 ms, 9.677 ms, 967681, 967681, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_float_to_int8_fu_1450">float_to_int8, 9225, 9225, 92.250 us, 92.250 us, 9225, 9225, no</column>
+<column name="grp_Bert_layer_Pipeline_l_bias_i10_l_j10_fu_1526">Bert_layer_Pipeline_l_bias_i10_l_j10, 9218, 9218, 92.180 us, 92.180 us, 9218, 9218, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_309_1_fu_1556">Bert_layer_Pipeline_VITIS_LOOP_309_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_314_2_fu_1562">Bert_layer_Pipeline_VITIS_LOOP_314_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Linear_layer_qkv_fu_1568">Linear_layer_qkv, 68018, 68018, 0.680 ms, 0.680 ms, 68018, 68018, no</column>
+<column name="grp_Self_attention_fu_1652">Self_attention, 67825, 67825, 0.678 ms, 0.678 ms, 67825, 67825, no</column>
+<column name="grp_gemm_systolic_array_ds0_fu_1710">gemm_systolic_array_ds0, 49564, 49564, 0.496 ms, 0.496 ms, 49564, 49564, no</column>
+<column name="grp_Bert_layer_Pipeline_l_scale_outp_i12_l_j12_fu_1762">Bert_layer_Pipeline_l_scale_outp_i12_l_j12, 9229, 9229, 92.290 us, 92.290 us, 9229, 9229, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_i_j_0_i13_l_j13_fu_1792">Bert_layer_Pipeline_l_S_i_j_0_i13_l_j13, 9224, 9224, 92.240 us, 92.240 us, 9224, 9224, no</column>
+<column name="grp_Bert_layer_Pipeline_l_mean_var_i15_fu_1844">Bert_layer_Pipeline_l_mean_var_i15, 40, 40, 0.400 us, 0.400 us, 40, 40, no</column>
+<column name="grp_Bert_layer_Pipeline_l_j14_fu_1851">Bert_layer_Pipeline_l_j14, 3082, 3082, 30.820 us, 30.820 us, 3082, 3082, no</column>
+<column name="grp_float_to_int8_1_fu_1873">float_to_int8_1, 9225, 9225, 92.250 us, 92.250 us, 9225, 9225, no</column>
+<column name="grp_Bert_layer_Pipeline_l_bias_i17_l_j16_fu_1925">Bert_layer_Pipeline_l_bias_i17_l_j16, 36866, 36866, 0.369 ms, 0.369 ms, 36866, 36866, no</column>
+<column name="grp_Bert_layer_Pipeline_l_bias_i21_l_j20_fu_1943">Bert_layer_Pipeline_l_bias_i21_l_j20, 9218, 9218, 92.180 us, 92.180 us, 9218, 9218, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_506_1_fu_1961">Bert_layer_Pipeline_VITIS_LOOP_506_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Bert_layer_Pipeline_VITIS_LOOP_511_2_fu_1966">Bert_layer_Pipeline_VITIS_LOOP_511_2, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_Bert_layer_Pipeline_l_j15_fu_1971">Bert_layer_Pipeline_l_j15, 801, 801, 8.010 us, 8.010 us, 801, 801, no</column>
+<column name="grp_gemm_systolic_array_ds1_fu_2006">gemm_systolic_array_ds1, 198172, 198172, 1.982 ms, 1.982 ms, 198172, 198172, no</column>
+<column name="grp_Bert_layer_Pipeline_l_scale_outp_i19_l_j18_fu_2058">Bert_layer_Pipeline_l_scale_outp_i19_l_j18, 36877, 36877, 0.369 ms, 0.369 ms, 36877, 36877, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_i_j_0_i20_l_j19_fu_2088">Bert_layer_Pipeline_l_S_i_j_0_i20_l_j19, 37073, 37073, 0.371 ms, 0.371 ms, 37073, 37073, no</column>
+<column name="grp_gemm_systolic_array_ds2_fu_2148">gemm_systolic_array_ds2, 197020, 197020, 1.970 ms, 1.970 ms, 197020, 197020, no</column>
+<column name="grp_Bert_layer_Pipeline_l_scale_outp_i23_l_j22_fu_2200">Bert_layer_Pipeline_l_scale_outp_i23_l_j22, 9229, 9229, 92.290 us, 92.290 us, 9229, 9229, no</column>
+<column name="grp_Bert_layer_Pipeline_l_S_i_j_0_i24_l_j23_fu_2230">Bert_layer_Pipeline_l_S_i_j_0_i24_l_j23, 9224, 9224, 92.240 us, 92.240 us, 9224, 9224, no</column>
+<column name="grp_Bert_layer_Pipeline_l_mean_var_i26_fu_2270">Bert_layer_Pipeline_l_mean_var_i26, 40, 40, 0.400 us, 0.400 us, 40, 40, no</column>
+<column name="grp_Bert_layer_Pipeline_l_j24_fu_2277">Bert_layer_Pipeline_l_j24, 3082, 3082, 30.820 us, 30.820 us, 3082, 3082, no</column>
+<column name="grp_Bert_layer_Pipeline_l_j25_fu_2299">Bert_layer_Pipeline_l_j25, 801, 801, 8.010 us, 8.010 us, 801, 801, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- l_sum_i14">37032, 37032, 3086, -, -, 12, no</column>
+<column name="- l_norm_i16">9960, 9960, 830, -, -, 12, no</column>
+<column name="- l_sum_i25">37032, 37032, 3086, -, -, 12, no</column>
+<column name="- l_norm_i27">9960, 9960, 830, -, -, 12, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
