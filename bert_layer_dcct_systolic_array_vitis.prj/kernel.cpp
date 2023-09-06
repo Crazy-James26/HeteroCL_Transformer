@@ -388,6 +388,26 @@ void Res_layer1(
   }
 }
 
+void Bert_layer(
+  float *v242, // ap_fixed<24, 8>
+  float *v243, // ap_fixed<24, 8>
+  float *v244, // ap_fixed<24, 8>
+  float *v245, // ap_fixed<24, 8>
+  float *v246, // ap_fixed<24, 8>
+  float *v247, // ap_fixed<24, 8>
+  float *v248, // ap_fixed<24, 8>
+  float *v249, // ap_fixed<24, 8>
+  float *v250, // ap_fixed<24, 8>
+  float *v251, // ap_fixed<24, 8>
+  float *v252, // ap_fixed<24, 8>
+  float *v253, // ap_fixed<24, 8>
+  float *v254, // ap_fixed<24, 8>
+  float *v255,
+  float *v256,
+  float *v257,
+  float *v258,
+  float *v259 // ap_fixed<24, 8>
+) {	// L343
   ap_fixed<24, 8> buf0[12][768];	//
   ap_fixed<24, 8> buf1[768][768];	//
   ap_fixed<24, 8> buf2[768];	//
@@ -417,27 +437,6 @@ void Res_layer1(
   ap_fixed<24, 8> v327[12][768];
   float v328[12][768];
   ap_fixed<24, 8> v329[12][768];
-
-void Bert_layer(
-  float *v242, // ap_fixed<24, 8>
-  float *v243, // ap_fixed<24, 8>
-  float *v244, // ap_fixed<24, 8>
-  float *v245, // ap_fixed<24, 8>
-  float *v246, // ap_fixed<24, 8>
-  float *v247, // ap_fixed<24, 8>
-  float *v248, // ap_fixed<24, 8>
-  float *v249, // ap_fixed<24, 8>
-  float *v250, // ap_fixed<24, 8>
-  float *v251, // ap_fixed<24, 8>
-  float *v252, // ap_fixed<24, 8>
-  float *v253, // ap_fixed<24, 8>
-  float *v254, // ap_fixed<24, 8>
-  float *v255,
-  float *v256,
-  float *v257,
-  float *v258,
-  float *v259 // ap_fixed<24, 8>
-) {	// L343
   
   #pragma HLS array_partition variable=buf0 complete dim=1
 
