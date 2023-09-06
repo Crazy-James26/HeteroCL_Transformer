@@ -1,0 +1,137 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_parent_loop_proc494'
+================================================================
+* Date:           Tue Sep  5 22:42:25 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.929 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    49561|    49561| 0.165 ms | 0.165 ms |  49561|  49561|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    49560|    49560|       799|          -|          -|    64|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 2, States = { 2 3 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.60>
+ST_1 : Operation 4 [1/1] (0.60ns)   --->   "%br_ln0 = br void %Linear_layer_qkv_.exit"   --->   Operation 4 'br' 'br_ln0' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.21>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "%indvars_iv28_0 = phi i7 %add_ln20, void %.split9.0, i7, void %newFuncRoot" [gemm_systolic_array.cpp:20]   --->   Operation 5 'phi' 'indvars_iv28_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.59ns)   --->   "%icmp_ln20 = icmp_eq  i7 %indvars_iv28_0, i7" [gemm_systolic_array.cpp:20]   --->   Operation 6 'icmp' 'icmp_ln20' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 7 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln20 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @dataflow_parent_loop_str, i7 %indvars_iv28_0, i7" [gemm_systolic_array.cpp:20]   --->   Operation 8 'specdataflowpipeline' 'specdataflowpipeline_ln20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.40ns)   --->   "%add_ln20 = add i7 %indvars_iv28_0, i7" [gemm_systolic_array.cpp:20]   --->   Operation 9 'add' 'add_ln20' <Predicate = true> <Delay = 0.40> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln20 = br i1 %icmp_ln20, void %.split9.0, void %gemm_systolic_array_qkv.exit.exitStub" [gemm_systolic_array.cpp:20]   --->   Operation 10 'br' 'br_ln20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [2/2] (1.21ns)   --->   "%call_ln20 = call void @dataflow_in_loop, i24 %v0_V, i24 %v0_1_V, i24 %v0_2_V, i24 %v0_3_V, i24 %v0_4_V, i24 %v0_5_V, i24 %v0_6_V, i24 %v0_7_V, i24 %v0_8_V, i24 %v0_9_V, i24 %v0_10_V, i24 %v0_11_V, i24 %v1_V, i7 %indvars_iv28_0, i24 %v1_1_V, i24 %v1_2_V, i24 %v1_3_V, i24 %v1_4_V, i24 %v1_5_V, i24 %v1_6_V, i24 %v1_7_V, i24 %v1_8_V, i24 %v1_9_V, i24 %v1_10_V, i24 %v1_11_V, i24 %v3_V" [gemm_systolic_array.cpp:20]   --->   Operation 11 'call' 'call_ln20' <Predicate = (!icmp_ln20)> <Delay = 1.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 12 'ret' 'ret_ln0' <Predicate = (icmp_ln20)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln20 = call void @dataflow_in_loop, i24 %v0_V, i24 %v0_1_V, i24 %v0_2_V, i24 %v0_3_V, i24 %v0_4_V, i24 %v0_5_V, i24 %v0_6_V, i24 %v0_7_V, i24 %v0_8_V, i24 %v0_9_V, i24 %v0_10_V, i24 %v0_11_V, i24 %v1_V, i7 %indvars_iv28_0, i24 %v1_1_V, i24 %v1_2_V, i24 %v1_3_V, i24 %v1_4_V, i24 %v1_5_V, i24 %v1_6_V, i24 %v1_7_V, i24 %v1_8_V, i24 %v1_9_V, i24 %v1_10_V, i24 %v1_11_V, i24 %v3_V" [gemm_systolic_array.cpp:20]   --->   Operation 13 'call' 'call_ln20' <Predicate = (!icmp_ln20)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln20 = br void %Linear_layer_qkv_.exit" [gemm_systolic_array.cpp:20]   --->   Operation 14 'br' 'br_ln20' <Predicate = (!icmp_ln20)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvars_iv28_0', gemm_systolic_array.cpp:20) with incoming values : ('add_ln20', gemm_systolic_array.cpp:20) [28]  (0.603 ns)
+
+ <State 2>: 1.22ns
+The critical path consists of the following:
+	'phi' operation ('indvars_iv28_0', gemm_systolic_array.cpp:20) with incoming values : ('add_ln20', gemm_systolic_array.cpp:20) [28]  (0 ns)
+	'call' operation ('call_ln20', gemm_systolic_array.cpp:20) to 'dataflow_in_loop' [35]  (1.22 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

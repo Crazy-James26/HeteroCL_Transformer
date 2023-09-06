@@ -1,0 +1,246 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_block_C_proc'
+================================================================
+* Date:           Tue Sep  5 22:47:43 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.929 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      290|      290| 0.967 us | 0.967 us |  290|  290|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- store_block_C_L  |      288|      288|         3|          2|          1|   144|    yes   |
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       62|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|       93|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      287|    -|
+|Register             |        -|     -|       93|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       93|      442|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------+---------------------------------+---------+----+---+----+-----+
+    |                Instance               |              Module             | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------------------------+---------------------------------+---------+----+---+----+-----+
+    |Bert_layer_add_11ns_11ns_11_1_1_U2098  |Bert_layer_add_11ns_11ns_11_1_1  |        0|   0|  0|  11|    0|
+    |Bert_layer_add_14s_14ns_14_1_1_U2099   |Bert_layer_add_14s_14ns_14_1_1   |        0|   0|  0|  14|    0|
+    |Bert_layer_add_24ns_24ns_24_1_1_U2101  |Bert_layer_add_24ns_24ns_24_1_1  |        0|   0|  0|  24|    0|
+    |Bert_layer_add_4ns_4ns_4_1_1_U2096     |Bert_layer_add_4ns_4ns_4_1_1     |        0|   0|  0|   6|    0|
+    |Bert_layer_add_4ns_4ns_4_1_1_U2100     |Bert_layer_add_4ns_4ns_4_1_1     |        0|   0|  0|   6|    0|
+    |Bert_layer_add_8ns_8ns_8_1_1_U2095     |Bert_layer_add_8ns_8ns_8_1_1     |        0|   0|  0|   8|    0|
+    |Bert_layer_sub_11ns_11ns_11_1_1_U2094  |Bert_layer_sub_11ns_11ns_11_1_1  |        0|   0|  0|  10|    0|
+    |Bert_layer_sub_14ns_14ns_14_1_1_U2097  |Bert_layer_sub_14ns_14ns_14_1_1  |        0|   0|  0|  14|    0|
+    +---------------------------------------+---------------------------------+---------+----+---+----+-----+
+    |Total                                  |                                 |        0|   0|  0|  93|    0|
+    +---------------------------------------+---------------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_pp0_stage1_11001         |    and   |   0|  0|   2|           1|           1|
+    |ap_condition_327                  |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op54_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op56_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op58_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op60_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op62_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op64_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op66_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op68_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op70_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op72_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |ap_predicate_op74_read_state3     |    and   |   0|  0|   2|           1|           1|
+    |icmp_ln38_fu_287_p2               |   icmp   |   0|  0|  11|           8|           8|
+    |icmp_ln40_fu_305_p2               |   icmp   |   0|  0|   9|           4|           4|
+    |ap_block_state1                   |    or    |   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0  |    or    |   0|  0|   2|           1|           1|
+    |ap_condition_182                  |    or    |   0|  0|   2|           1|           1|
+    |select_ln38_1_fu_319_p3           |  select  |   0|  0|   4|           1|           4|
+    |select_ln38_fu_311_p3             |  select  |   0|  0|   4|           1|           1|
+    |ap_enable_pp0                     |    xor   |   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  62|          31|          35|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                     | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                      |  27|          5|    1|          5|
+    |ap_done                                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                        |   9|          2|    1|          2|
+    |ap_phi_mux_indvar_flatten_phi_fu_199_p4        |   9|          2|    8|         16|
+    |ap_phi_mux_indvars_iv20_0_i_i_phi_fu_221_p4    |   9|          2|    4|          8|
+    |ap_phi_mux_indvars_iv24_0_t_i_i_phi_fu_210_p4  |   9|          2|    4|          8|
+    |ap_phi_reg_pp0_iter1_p_0_reg_228               |  56|         13|   24|        312|
+    |block_C_drainer_0_V_V25_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_10_V_V35_blk_n                 |   9|          2|    1|          2|
+    |block_C_drainer_11_V_V36_blk_n                 |   9|          2|    1|          2|
+    |block_C_drainer_1_V_V26_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_2_V_V27_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_3_V_V28_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_4_V_V29_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_5_V_V30_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_6_V_V31_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_7_V_V32_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_8_V_V33_blk_n                  |   9|          2|    1|          2|
+    |block_C_drainer_9_V_V34_blk_n                  |   9|          2|    1|          2|
+    |indvar_flatten_reg_195                         |   9|          2|    8|         16|
+    |indvars_iv20_0_i_i_reg_217                     |   9|          2|    4|          8|
+    |indvars_iv24_0_t_i_i_reg_206                   |   9|          2|    4|          8|
+    |indvars_iv28_0_blk_n                           |   9|          2|    1|          2|
+    |v3_V_address0                                  |  15|          3|   14|         42|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                          | 287|         63|   86|        453|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |add_ln38_1_reg_395                |   8|   0|    8|          0|
+    |add_ln40_reg_478                  |   4|   0|    4|          0|
+    |ap_CS_fsm                         |   4|   0|    4|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_p_0_reg_228  |  24|   0|   24|          0|
+    |empty_reg_386                     |  11|   0|   11|          0|
+    |icmp_ln38_reg_391                 |   1|   0|    1|          0|
+    |indvar_flatten_reg_195            |   8|   0|    8|          0|
+    |indvars_iv20_0_i_i_reg_217        |   4|   0|    4|          0|
+    |indvars_iv24_0_t_i_i_reg_206      |   4|   0|    4|          0|
+    |select_ln38_1_reg_406             |   4|   0|    4|          0|
+    |select_ln38_reg_400               |   4|   0|    4|          0|
+    |v3_V_addr_reg_473                 |  14|   0|   14|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             |  93|   0|   93|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                            |  in |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|ap_rst                            |  in |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|ap_start                          |  in |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|ap_done                           | out |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|ap_continue                       |  in |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|ap_idle                           | out |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|ap_ready                          | out |    1| ap_ctrl_hs |    store_block_C_proc    | return value |
+|indvars_iv28_0_dout               |  in |    6|   ap_fifo  |      indvars_iv28_0      |    pointer   |
+|indvars_iv28_0_empty_n            |  in |    1|   ap_fifo  |      indvars_iv28_0      |    pointer   |
+|indvars_iv28_0_read               | out |    1|   ap_fifo  |      indvars_iv28_0      |    pointer   |
+|v3_V_address0                     | out |   14|  ap_memory |           v3_V           |     array    |
+|v3_V_ce0                          | out |    1|  ap_memory |           v3_V           |     array    |
+|v3_V_we0                          | out |    1|  ap_memory |           v3_V           |     array    |
+|v3_V_d0                           | out |   24|  ap_memory |           v3_V           |     array    |
+|v3_V_q0                           |  in |   24|  ap_memory |           v3_V           |     array    |
+|block_C_drainer_0_V_V25_dout      |  in |   24|   ap_fifo  |  block_C_drainer_0_V_V25 |    pointer   |
+|block_C_drainer_0_V_V25_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_0_V_V25 |    pointer   |
+|block_C_drainer_0_V_V25_read      | out |    1|   ap_fifo  |  block_C_drainer_0_V_V25 |    pointer   |
+|block_C_drainer_1_V_V26_dout      |  in |   24|   ap_fifo  |  block_C_drainer_1_V_V26 |    pointer   |
+|block_C_drainer_1_V_V26_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_1_V_V26 |    pointer   |
+|block_C_drainer_1_V_V26_read      | out |    1|   ap_fifo  |  block_C_drainer_1_V_V26 |    pointer   |
+|block_C_drainer_2_V_V27_dout      |  in |   24|   ap_fifo  |  block_C_drainer_2_V_V27 |    pointer   |
+|block_C_drainer_2_V_V27_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_2_V_V27 |    pointer   |
+|block_C_drainer_2_V_V27_read      | out |    1|   ap_fifo  |  block_C_drainer_2_V_V27 |    pointer   |
+|block_C_drainer_3_V_V28_dout      |  in |   24|   ap_fifo  |  block_C_drainer_3_V_V28 |    pointer   |
+|block_C_drainer_3_V_V28_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_3_V_V28 |    pointer   |
+|block_C_drainer_3_V_V28_read      | out |    1|   ap_fifo  |  block_C_drainer_3_V_V28 |    pointer   |
+|block_C_drainer_4_V_V29_dout      |  in |   24|   ap_fifo  |  block_C_drainer_4_V_V29 |    pointer   |
+|block_C_drainer_4_V_V29_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_4_V_V29 |    pointer   |
+|block_C_drainer_4_V_V29_read      | out |    1|   ap_fifo  |  block_C_drainer_4_V_V29 |    pointer   |
+|block_C_drainer_5_V_V30_dout      |  in |   24|   ap_fifo  |  block_C_drainer_5_V_V30 |    pointer   |
+|block_C_drainer_5_V_V30_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_5_V_V30 |    pointer   |
+|block_C_drainer_5_V_V30_read      | out |    1|   ap_fifo  |  block_C_drainer_5_V_V30 |    pointer   |
+|block_C_drainer_6_V_V31_dout      |  in |   24|   ap_fifo  |  block_C_drainer_6_V_V31 |    pointer   |
+|block_C_drainer_6_V_V31_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_6_V_V31 |    pointer   |
+|block_C_drainer_6_V_V31_read      | out |    1|   ap_fifo  |  block_C_drainer_6_V_V31 |    pointer   |
+|block_C_drainer_7_V_V32_dout      |  in |   24|   ap_fifo  |  block_C_drainer_7_V_V32 |    pointer   |
+|block_C_drainer_7_V_V32_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_7_V_V32 |    pointer   |
+|block_C_drainer_7_V_V32_read      | out |    1|   ap_fifo  |  block_C_drainer_7_V_V32 |    pointer   |
+|block_C_drainer_8_V_V33_dout      |  in |   24|   ap_fifo  |  block_C_drainer_8_V_V33 |    pointer   |
+|block_C_drainer_8_V_V33_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_8_V_V33 |    pointer   |
+|block_C_drainer_8_V_V33_read      | out |    1|   ap_fifo  |  block_C_drainer_8_V_V33 |    pointer   |
+|block_C_drainer_9_V_V34_dout      |  in |   24|   ap_fifo  |  block_C_drainer_9_V_V34 |    pointer   |
+|block_C_drainer_9_V_V34_empty_n   |  in |    1|   ap_fifo  |  block_C_drainer_9_V_V34 |    pointer   |
+|block_C_drainer_9_V_V34_read      | out |    1|   ap_fifo  |  block_C_drainer_9_V_V34 |    pointer   |
+|block_C_drainer_10_V_V35_dout     |  in |   24|   ap_fifo  | block_C_drainer_10_V_V35 |    pointer   |
+|block_C_drainer_10_V_V35_empty_n  |  in |    1|   ap_fifo  | block_C_drainer_10_V_V35 |    pointer   |
+|block_C_drainer_10_V_V35_read     | out |    1|   ap_fifo  | block_C_drainer_10_V_V35 |    pointer   |
+|block_C_drainer_11_V_V36_dout     |  in |   24|   ap_fifo  | block_C_drainer_11_V_V36 |    pointer   |
+|block_C_drainer_11_V_V36_empty_n  |  in |    1|   ap_fifo  | block_C_drainer_11_V_V36 |    pointer   |
+|block_C_drainer_11_V_V36_read     | out |    1|   ap_fifo  | block_C_drainer_11_V_V36 |    pointer   |
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+

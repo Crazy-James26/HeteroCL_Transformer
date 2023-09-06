@@ -1,0 +1,263 @@
+
+
+================================================================
+== Vitis HLS Report for 'systolic_array_k_64'
+================================================================
+* Date:           Tue Sep  5 22:48:06 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.433 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       76|       76| 0.253 us | 0.253 us |   70|   70| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------+------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                   |                                                |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                      Instance                     |                     Module                     |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +---------------------------------------------------+------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |systolic_array_k_64_Loop_data_drain_C_proc308_U0   |systolic_array_k_64_Loop_data_drain_C_proc308   |        6|        6| 19.998 ns | 19.998 ns |    6|    6|   none  |
+        |PE_1291_U0                                         |PE_1291                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1292_U0                                         |PE_1292                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1295_U0                                         |PE_1295                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1293_U0                                         |PE_1293                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1296_U0                                         |PE_1296                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1299_U0                                         |PE_1299                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1294_U0                                         |PE_1294                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1297_U0                                         |PE_1297                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1300_U0                                         |PE_1300                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1303_U0                                         |PE_1303                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1298_U0                                         |PE_1298                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1301_U0                                         |PE_1301                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1304_U0                                         |PE_1304                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1302_U0                                         |PE_1302                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1305_U0                                         |PE_1305                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |PE_1306_U0                                         |PE_1306                                         |       69|       69|  0.230 us |  0.230 us |   69|   69|   none  |
+        |systolic_array_k_64_Loop_data_load_proc290_U0      |systolic_array_k_64_Loop_data_load_proc290      |       66|       66|  0.220 us |  0.220 us |   66|   66|   none  |
+        |systolic_array_k_64_Loop_data_drain_AB_proc307_U0  |systolic_array_k_64_Loop_data_drain_AB_proc307  |       66|       66|  0.220 us |  0.220 us |   66|   66|   none  |
+        +---------------------------------------------------+------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       10|    -|
+|FIFO                 |        0|     -|     5544|     3762|    -|
+|Instance             |        -|    32|     5473|     4244|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|        -|    -|
+|Register             |        -|     -|        -|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|    32|    11017|     8016|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     1|        1|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|  ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+    |                      Instance                     |                     Module                     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+    |PE_1291_U0                                         |PE_1291                                         |        0|   2|  310|  212|    0|
+    |PE_1292_U0                                         |PE_1292                                         |        0|   2|  310|  212|    0|
+    |PE_1293_U0                                         |PE_1293                                         |        0|   2|  310|  212|    0|
+    |PE_1294_U0                                         |PE_1294                                         |        0|   2|  310|  212|    0|
+    |PE_1295_U0                                         |PE_1295                                         |        0|   2|  309|  203|    0|
+    |PE_1296_U0                                         |PE_1296                                         |        0|   2|  309|  203|    0|
+    |PE_1297_U0                                         |PE_1297                                         |        0|   2|  310|  212|    0|
+    |PE_1298_U0                                         |PE_1298                                         |        0|   2|  310|  212|    0|
+    |PE_1299_U0                                         |PE_1299                                         |        0|   2|  310|  212|    0|
+    |PE_1300_U0                                         |PE_1300                                         |        0|   2|  309|  203|    0|
+    |PE_1301_U0                                         |PE_1301                                         |        0|   2|  309|  203|    0|
+    |PE_1302_U0                                         |PE_1302                                         |        0|   2|  310|  212|    0|
+    |PE_1303_U0                                         |PE_1303                                         |        0|   2|  310|  212|    0|
+    |PE_1304_U0                                         |PE_1304                                         |        0|   2|  310|  212|    0|
+    |PE_1305_U0                                         |PE_1305                                         |        0|   2|  309|  203|    0|
+    |PE_1306_U0                                         |PE_1306                                         |        0|   2|  309|  203|    0|
+    |systolic_array_k_64_Loop_data_drain_AB_proc307_U0  |systolic_array_k_64_Loop_data_drain_AB_proc307  |        0|   0|   14|  154|    0|
+    |systolic_array_k_64_Loop_data_drain_C_proc308_U0   |systolic_array_k_64_Loop_data_drain_C_proc308   |        0|   0|  490|  517|    0|
+    |systolic_array_k_64_Loop_data_load_proc290_U0      |systolic_array_k_64_Loop_data_load_proc290      |        0|   0|   15|  235|    0|
+    +---------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                              |                                                |        0|  32| 5473| 4244|    0|
+    +---------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |     Name     | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |A_fifo_0_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_0_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_0_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_0_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_0_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_1_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_1_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_1_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_1_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_1_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_2_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_2_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_2_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_2_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_2_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_3_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_3_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_3_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_3_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |A_fifo_3_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_0_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_0_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_0_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_0_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_0_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_1_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_1_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_1_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_1_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_1_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_2_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_2_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_2_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_2_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_2_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_3_0_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_3_1_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_3_2_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_3_3_U  |        0|  99|   0|    -|     2|   24|       48|
+    |B_fifo_3_4_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_0_0_V_c_U   |        0|  99|   0|    -|     8|   24|      192|
+    |C_0_1_V_c_U   |        0|  99|   0|    -|     7|   24|      168|
+    |C_0_2_V_c_U   |        0|  99|   0|    -|     6|   24|      144|
+    |C_0_3_V_c_U   |        0|  99|   0|    -|     5|   24|      120|
+    |C_1_0_V_c_U   |        0|  99|   0|    -|     7|   24|      168|
+    |C_1_1_V_c_U   |        0|  99|   0|    -|     6|   24|      144|
+    |C_1_2_V_c_U   |        0|  99|   0|    -|     5|   24|      120|
+    |C_1_3_V_c_U   |        0|  99|   0|    -|     4|   24|       96|
+    |C_2_0_V_c_U   |        0|  99|   0|    -|     6|   24|      144|
+    |C_2_1_V_c_U   |        0|  99|   0|    -|     5|   24|      120|
+    |C_2_2_V_c_U   |        0|  99|   0|    -|     4|   24|       96|
+    |C_2_3_V_c_U   |        0|  99|   0|    -|     3|   24|       72|
+    |C_3_0_V_c_U   |        0|  99|   0|    -|     5|   24|      120|
+    |C_3_1_V_c_U   |        0|  99|   0|    -|     4|   24|       96|
+    |C_3_2_V_c_U   |        0|  99|   0|    -|     3|   24|       72|
+    |C_3_3_V_c_U   |        0|  99|   0|    -|     2|   24|       48|
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |Total         |        0|5544|   0|    0|   160| 1344|     3840|
+    +--------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                        Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |PE_1294_U0_start_full_n                                     |    and   |   0|  0|   2|           1|           1|
+    |ap_idle                                                     |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_continue                                            |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_done                                                |    and   |   0|  0|   2|           1|           1|
+    |systolic_array_k_64_Loop_data_load_proc290_U0_start_full_n  |    and   |   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                       |          |   0|  0|  10|           5|           5|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------+-----+-----+------------+---------------------+--------------+
+|A_loader_V_V_dout       |  in |   24|   ap_fifo  |     A_loader_V_V    |    pointer   |
+|A_loader_V_V_empty_n    |  in |    1|   ap_fifo  |     A_loader_V_V    |    pointer   |
+|A_loader_V_V_read       | out |    1|   ap_fifo  |     A_loader_V_V    |    pointer   |
+|A_loader_1_V_V_dout     |  in |   24|   ap_fifo  |    A_loader_1_V_V   |    pointer   |
+|A_loader_1_V_V_empty_n  |  in |    1|   ap_fifo  |    A_loader_1_V_V   |    pointer   |
+|A_loader_1_V_V_read     | out |    1|   ap_fifo  |    A_loader_1_V_V   |    pointer   |
+|A_loader_2_V_V_dout     |  in |   24|   ap_fifo  |    A_loader_2_V_V   |    pointer   |
+|A_loader_2_V_V_empty_n  |  in |    1|   ap_fifo  |    A_loader_2_V_V   |    pointer   |
+|A_loader_2_V_V_read     | out |    1|   ap_fifo  |    A_loader_2_V_V   |    pointer   |
+|A_loader_3_V_V_dout     |  in |   24|   ap_fifo  |    A_loader_3_V_V   |    pointer   |
+|A_loader_3_V_V_empty_n  |  in |    1|   ap_fifo  |    A_loader_3_V_V   |    pointer   |
+|A_loader_3_V_V_read     | out |    1|   ap_fifo  |    A_loader_3_V_V   |    pointer   |
+|B_loader_V_V_dout       |  in |   24|   ap_fifo  |     B_loader_V_V    |    pointer   |
+|B_loader_V_V_empty_n    |  in |    1|   ap_fifo  |     B_loader_V_V    |    pointer   |
+|B_loader_V_V_read       | out |    1|   ap_fifo  |     B_loader_V_V    |    pointer   |
+|B_loader_1_V_V_dout     |  in |   24|   ap_fifo  |    B_loader_1_V_V   |    pointer   |
+|B_loader_1_V_V_empty_n  |  in |    1|   ap_fifo  |    B_loader_1_V_V   |    pointer   |
+|B_loader_1_V_V_read     | out |    1|   ap_fifo  |    B_loader_1_V_V   |    pointer   |
+|B_loader_2_V_V_dout     |  in |   24|   ap_fifo  |    B_loader_2_V_V   |    pointer   |
+|B_loader_2_V_V_empty_n  |  in |    1|   ap_fifo  |    B_loader_2_V_V   |    pointer   |
+|B_loader_2_V_V_read     | out |    1|   ap_fifo  |    B_loader_2_V_V   |    pointer   |
+|B_loader_3_V_V_dout     |  in |   24|   ap_fifo  |    B_loader_3_V_V   |    pointer   |
+|B_loader_3_V_V_empty_n  |  in |    1|   ap_fifo  |    B_loader_3_V_V   |    pointer   |
+|B_loader_3_V_V_read     | out |    1|   ap_fifo  |    B_loader_3_V_V   |    pointer   |
+|C_drainer_V_V_din       | out |   24|   ap_fifo  |    C_drainer_V_V    |    pointer   |
+|C_drainer_V_V_full_n    |  in |    1|   ap_fifo  |    C_drainer_V_V    |    pointer   |
+|C_drainer_V_V_write     | out |    1|   ap_fifo  |    C_drainer_V_V    |    pointer   |
+|C_drainer_1_V_V_din     | out |   24|   ap_fifo  |   C_drainer_1_V_V   |    pointer   |
+|C_drainer_1_V_V_full_n  |  in |    1|   ap_fifo  |   C_drainer_1_V_V   |    pointer   |
+|C_drainer_1_V_V_write   | out |    1|   ap_fifo  |   C_drainer_1_V_V   |    pointer   |
+|C_drainer_2_V_V_din     | out |   24|   ap_fifo  |   C_drainer_2_V_V   |    pointer   |
+|C_drainer_2_V_V_full_n  |  in |    1|   ap_fifo  |   C_drainer_2_V_V   |    pointer   |
+|C_drainer_2_V_V_write   | out |    1|   ap_fifo  |   C_drainer_2_V_V   |    pointer   |
+|C_drainer_3_V_V_din     | out |   24|   ap_fifo  |   C_drainer_3_V_V   |    pointer   |
+|C_drainer_3_V_V_full_n  |  in |    1|   ap_fifo  |   C_drainer_3_V_V   |    pointer   |
+|C_drainer_3_V_V_write   | out |    1|   ap_fifo  |   C_drainer_3_V_V   |    pointer   |
+|ap_clk                  |  in |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
+|ap_continue             |  in |    1| ap_ctrl_hs | systolic_array_k_64 | return value |
++------------------------+-----+-----+------------+---------------------+--------------+
+

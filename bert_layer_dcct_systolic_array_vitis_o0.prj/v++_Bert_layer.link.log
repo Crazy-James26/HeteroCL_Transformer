@@ -1,0 +1,240 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link
+	Log files: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary, at Tue Sep  5 22:13:53 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Sep  5 22:13:53 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html', at Tue Sep  5 22:13:54 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [22:15:36] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Sep  5 22:15:39 2023
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [22:15:42] build_xd_ip_db started: /opt/xilinx/2022.1/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/hw.hpfm -clkid 0 -ip /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/iprepo/xilinx_com_hls_Bert_layer_1_0,Bert_layer -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [22:15:51] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2420.504 ; gain = 0.000 ; free physical = 21225 ; free virtual = 193020
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [22:15:51] cfgen started: /opt/xilinx/2022.1/Vitis/2022.1/bin/cfgen -dmclkid 0 -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: Bert_layer, num: 1  {Bert_layer_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v242 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v243 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v244 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v245 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v246 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v247 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v248 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v249 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v250 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v251 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v252 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v253 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v254 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v255 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v256 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v257 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v258 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v259 to HBM[0]
+INFO: [SYSTEM_LINK 82-37] [22:16:04] cfgen finished successfully
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2420.504 ; gain = 0.000 ; free physical = 21203 ; free virtual = 192998
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [22:16:04] cf2bd started: /opt/xilinx/2022.1/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.xsd --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [22:16:09] cf2bd finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2420.504 ; gain = 0.000 ; free physical = 21196 ; free virtual = 192997
+INFO: [v++ 60-1441] [22:16:09] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 2334.938 ; gain = 0.000 ; free physical = 21237 ; free virtual = 193038
+INFO: [v++ 60-1443] [22:16:09] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/sdsl.dat -rtd /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw.rtd -nofilter /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw_full.rtd -xclbin /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [22:16:17] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2334.938 ; gain = 0.000 ; free physical = 21239 ; free virtual = 193042
+INFO: [v++ 60-1443] [22:16:17] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [22:16:19] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:01 . Memory (MB): peak = 2334.938 ; gain = 0.000 ; free physical = 21156 ; free virtual = 192959
+INFO: [v++ 60-1443] [22:16:19] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/.ipcache -s --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --log_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link --report_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link --config /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini -k /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link --no-info --iprepo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0 --messageDb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link/vpl.pb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+
+****** vpl v2022.1.2 (64-bit)
+  **** SW Build 3602371 on 2022-08-02-23:13:43
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [VPL 60-1032] Extracting hardware platform to /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform
+[22:16:44] Run vpl: Step create_project: Started
+Creating Vivado project.
+[22:16:50] Run vpl: Step create_project: Completed
+[22:16:50] Run vpl: Step create_bd: Started
+[22:17:34] Run vpl: Step create_bd: Completed
+[22:17:34] Run vpl: Step update_bd: Started
+[22:17:35] Run vpl: Step update_bd: Completed
+[22:17:35] Run vpl: Step generate_target: Started
+[22:18:42] Run vpl: Step generate_target: Completed
+[22:18:42] Run vpl: Step config_hw_runs: Started
+[22:18:45] Run vpl: Step config_hw_runs: Completed
+[22:18:45] Run vpl: Step synth: Started
+[22:19:16] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:19:46] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:20:16] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:20:47] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:21:17] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:21:47] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:22:17] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:22:47] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:23:17] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:23:47] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:24:18] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:24:48] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:25:18] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:25:48] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:26:18] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:26:48] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:27:18] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:27:48] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:28:19] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:28:49] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:29:19] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:29:49] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:30:19] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:30:49] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:31:19] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:31:50] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:32:20] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:32:50] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:33:20] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:33:50] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:34:20] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:34:51] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:35:21] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:35:51] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:36:21] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:36:51] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:37:21] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:37:51] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:38:22] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:38:52] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:39:22] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:39:52] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:40:22] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:40:52] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:41:22] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:41:53] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:42:23] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:42:53] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:43:23] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:43:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:44:24] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:44:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:45:24] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:45:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:46:25] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:46:55] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:47:25] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:47:55] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:48:26] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:48:56] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:49:26] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:49:56] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:50:27] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:50:57] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:51:27] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:51:57] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:52:27] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:52:58] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:53:28] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:53:58] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:54:28] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:54:58] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:55:29] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:55:59] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:56:29] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:56:59] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:57:30] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:58:00] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:58:30] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:59:00] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[22:59:30] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:00:01] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:00:31] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:01:01] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:01:31] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:02:02] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:02:32] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:03:02] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:03:32] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:04:02] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:04:33] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:05:03] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:05:33] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:06:03] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:06:34] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:07:04] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:07:34] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:08:04] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:08:34] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:09:05] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:09:35] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:10:05] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:10:35] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:11:06] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:11:36] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:12:06] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:12:36] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:13:06] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:13:37] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[23:14:07] Block-level synthesis in progress, 1 of 1 jobs complete, 0 jobs running.
+[23:14:37] Top-level synthesis in progress.
+[23:15:07] Top-level synthesis in progress.
+[23:15:38] Top-level synthesis in progress.
+[23:16:05] Run vpl: Step synth: Completed
+[23:16:05] Run vpl: Step impl: Started
+[23:33:45] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 17m 24s 
+
+[23:33:45] Starting logic optimization..
+[23:35:46] Phase 1 Retarget
+[23:36:16] Phase 2 Constant propagation
+[23:36:16] Phase 3 Sweep
+[23:37:17] Phase 4 BUFG optimization
+[23:37:47] Phase 5 Shift Register Optimization
+[23:37:47] Phase 6 Post Processing Netlist
+[23:41:19] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 07m 34s 
+
+[23:41:19] Starting logic placement..
+[23:42:30] Run vpl: Step impl: Failed
+[23:42:31] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while processing /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1 :
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Pblock pblock_dynamic_region (This design requires more RAMB18 and RAMB36/FIFO cells than are available in Pblock 'pblock_dynamic_region'. This design requires 11588 of such cell types but only 3552 compatible sites are available in Pblock 'pblock_dynamic_region'. Please consider increasing the span of Pblock 'pblock_dynamic_region' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 11979 of such cell types but only 4032 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Pblock pblock_dynamic_region (This design requires more RAMB36/FIFO cells than are available in Pblock 'pblock_dynamic_region'. This design requires 5794 of such cell types but only 1776 compatible sites are available in Pblock 'pblock_dynamic_region'. Please consider increasing the span of Pblock 'pblock_dynamic_region' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 5987 of such cell types but only 2016 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36E2 over-utilized in Pblock pblock_dynamic_region (This design requires more RAMB36E2 cells than are available in Pblock 'pblock_dynamic_region'. This design requires 5794 of such cell types but only 1776 compatible sites are available in Pblock 'pblock_dynamic_region'. Please consider increasing the span of Pblock 'pblock_dynamic_region' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36E2 over-utilized in Top Level Design (This design requires more RAMB36E2 cells than are available in the target device. This design requires 5987 of such cell types but only 2016 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [VPL 4-23] Error(s) found during DRC. Placer not run.
+ERROR: [VPL 60-773] In '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/runme.log', caught Tcl error:  problem implementing dynamic region, impl_1: place_design ERROR, please look at the run log file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+WARNING: [VPL 60-732] Link warning: No monitor points found for BD automation.
+WARNING: [VPL 60-732] Link warning: The available BRAMs may not be sufficient to accommodate the kernels
+ERROR: [VPL 60-704] Integration error, problem implementing dynamic region, impl_1: place_design ERROR, please look at the run log file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis_o0.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [23:42:32] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:00:42 ; elapsed = 01:26:13 . Memory (MB): peak = 2334.938 ; gain = 0.000 ; free physical = 4014 ; free virtual = 178597
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.

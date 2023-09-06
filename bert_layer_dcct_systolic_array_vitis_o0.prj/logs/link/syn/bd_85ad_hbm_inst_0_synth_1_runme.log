@@ -1,0 +1,582 @@
+
+*** Running vivado
+    with args -log bd_85ad_hbm_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_85ad_hbm_inst_0.tcl
+
+
+****** Vivado v2022.1.2 (64-bit)
+  **** SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+  **** IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source bd_85ad_hbm_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 46050
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/xilinx/2022.1/Vitis/2022.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2022.1/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axi_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axis_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:pipeline_reg:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/pipeline_reg_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/pipeline_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:shell_utils_build_info:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/shell_utils_build_info_v1_0' will take precedence over the same IP in the Xilinx installed IP.
+Command: synth_design -top bd_85ad_hbm_inst_0 -part xcu280-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18086
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3831.004 ; gain = 336.668 ; free physical = 10381 ; free virtual = 174732
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_hbm_inst_0' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/synth/bd_85ad_hbm_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hbm_v1_0_12' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_12.sv:66]
+INFO: [Synth 8-6157] synthesizing module 'hbm_top' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:81]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8650]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:493]
+INFO: [Synth 8-3876] $readmem data file 'xpm_internal_config_file_0.mem' is read successfully [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1132]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (0#1) [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8650]
+INFO: [Synth 8-6157] synthesizing module 'hbm_data_fetch' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8123]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_data_fetch' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8123]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_mst' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:6758]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_mst' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:6758]
+INFO: [Synth 8-6157] synthesizing module 'hbm_temp_rd' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:7274]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_temp_rd' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:7274]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_arbiter' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:7767]
+INFO: [Synth 8-226] default block is never used [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:7919]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_arbiter' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:7767]
+INFO: [Synth 8-6157] synthesizing module 'HBM_ONE_STACK_INTF' [/opt/xilinx/2022.1/Vivado/2022.1/scripts/rt/data/unisim_comp.v:49798]
+INFO: [Synth 8-6155] done synthesizing module 'HBM_ONE_STACK_INTF' (0#1) [/opt/xilinx/2022.1/Vivado/2022.1/scripts/rt/data/unisim_comp.v:49798]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_top' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:81]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_v1_0_12' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_12.sv:66]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_hbm_inst_0' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/synth/bd_85ad_hbm_inst_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element stall_rd_r_reg was removed.  [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8315]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_tran_r_reg was removed.  [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8329]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_wr_rd_r_reg was removed.  [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8330]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_addr_r_reg was removed.  [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8344]
+WARNING: [Synth 8-6014] Unused sequential element gen_apb_data_r_reg was removed.  [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:8345]
+WARNING: [Synth 8-6014] Unused sequential element timeout_cnt_r_reg was removed.  [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:6904]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1446]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1447]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1448]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1449]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1450]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1451]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1452]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1453]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1454]
+WARNING: [Synth 8-3848] Net AXI_16_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1455]
+WARNING: [Synth 8-3848] Net AXI_16_MC_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1456]
+WARNING: [Synth 8-3848] Net AXI_16_PHY_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1457]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1471]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1472]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1473]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1474]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1475]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1476]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1477]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1478]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1479]
+WARNING: [Synth 8-3848] Net AXI_17_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1480]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1494]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1495]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1496]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1497]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1498]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1499]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1500]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1501]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1502]
+WARNING: [Synth 8-3848] Net AXI_18_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1503]
+WARNING: [Synth 8-3848] Net AXI_18_MC_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1504]
+WARNING: [Synth 8-3848] Net AXI_18_PHY_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1505]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1519]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1520]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1521]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1522]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1523]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1524]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1525]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1526]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1527]
+WARNING: [Synth 8-3848] Net AXI_19_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1528]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1542]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1543]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1544]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1545]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1546]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1547]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1548]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1549]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1550]
+WARNING: [Synth 8-3848] Net AXI_20_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1551]
+WARNING: [Synth 8-3848] Net AXI_20_MC_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1552]
+WARNING: [Synth 8-3848] Net AXI_20_PHY_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1553]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1567]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1568]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1569]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1570]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1571]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1572]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1573]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1574]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1575]
+WARNING: [Synth 8-3848] Net AXI_21_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1576]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1590]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1591]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1592]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1593]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1594]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1595]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1596]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1597]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1598]
+WARNING: [Synth 8-3848] Net AXI_22_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1599]
+WARNING: [Synth 8-3848] Net AXI_22_MC_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1600]
+WARNING: [Synth 8-3848] Net AXI_22_PHY_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1601]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1615]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1616]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1617]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1618]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1619]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1620]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1621]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1622]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1623]
+WARNING: [Synth 8-3848] Net AXI_23_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1624]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_AW_AERR_N in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1638]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_CLK_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1639]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_DBI_BYTE_DISABLE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1640]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_DW_RDDATA_DBI in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1641]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_DW_RDDATA_DERR in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1642]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_DW_RDDATA_VALID in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1643]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_INIT_COMPLETE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1644]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_PHYUPD_REQ in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1645]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_PHY_LP_STATE in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1646]
+WARNING: [Synth 8-3848] Net AXI_24_DFI_RST_N_BUF in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1647]
+WARNING: [Synth 8-3848] Net AXI_24_MC_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1648]
+WARNING: [Synth 8-3848] Net AXI_24_PHY_STATUS in module/entity hbm_top does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/4810/hdl/hbm_v1_0_vl_rfs.sv:1649]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port pslverr in module hbm_temp_rd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pslverr in module hbm_apb_mst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rstb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port web[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[9] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_AW_AERR_N[1] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_AW_AERR_N[0] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_CLK_BUF in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[7] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[6] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[5] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[4] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[3] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[2] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[1] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DBI_BYTE_DISABLE[0] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[20] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[19] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[18] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[17] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[16] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[15] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[14] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[13] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[12] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[11] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[10] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[9] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[8] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[7] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[6] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[5] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[4] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[3] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[2] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[1] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DBI[0] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[7] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[6] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[5] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[4] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[3] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[2] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[1] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_DERR[0] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_VALID[1] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_DW_RDDATA_VALID[0] in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_INIT_COMPLETE in module hbm_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_16_DFI_PHYUPD_REQ in module hbm_top is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3923.543 ; gain = 429.207 ; free physical = 15146 ; free virtual = 179500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3941.352 ; gain = 447.016 ; free physical = 15142 ; free virtual = 179496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3941.352 ; gain = 447.016 ; free physical = 15142 ; free virtual = 179496
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3947.289 ; gain = 0.000 ; free physical = 14626 ; free virtual = 178980
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_85ad_hbm_inst_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_85ad_hbm_inst_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 4037.883 ; gain = 2.969 ; free physical = 11471 ; free virtual = 175840
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_85ad_hbm_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_85ad_hbm_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4037.883 ; gain = 0.000 ; free physical = 11480 ; free virtual = 175849
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  HBM_ONE_STACK_INTF => HBM_ONE_STACK_INTF (HBM_REF_CLK, HBM_SNGLBLI_INTF_APB, HBM_SNGLBLI_INTF_AXI(x16)): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4037.887 ; gain = 0.004 ; free physical = 11424 ; free virtual = 175793
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 4037.887 ; gain = 543.551 ; free physical = 11407 ; free virtual = 175755
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 4037.887 ; gain = 543.551 ; free physical = 11403 ; free virtual = 175751
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_85ad_hbm_inst_0_synth_1/dont_touch.xdc, line 6).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 4037.887 ; gain = 543.551 ; free physical = 11400 ; free virtual = 175747
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'hbm_apb_mst'
+INFO: [Synth 8-802] inferred FSM for state register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-802] inferred FSM for state register 'apb_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 14 for RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  C_IDLE |                              001 |                              001
+                 C_SETUP |                              010 |                              010
+                C_ACCESS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'curr_state_reg' in module 'hbm_apb_mst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              C_APB_IDLE |                              001 |                              001
+             C_APB_SETUP |                              010 |                              010
+            C_APB_ACCESS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'apb_fsm_curr_state_reg' in module 'hbm_temp_rd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  C_IDLE |                           000001 |                           000001
+           C_WAIT_INTRVL |                           000010 |                           000010
+           C_APB_ACC_REQ |                           000100 |                           000100
+     C_SEND_TEMP_ACC_CMD |                           001000 |                           001000
+  C_POLL_TEMP_ACC_CMD_ST |                           010000 |                           010000
+             C_READ_TEMP |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 4037.887 ; gain = 543.551 ; free physical = 10991 ; free virtual = 175340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 10    
+	               22 Bit    Registers := 9     
+	               11 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 38    
++---RAMs : 
+	              64K Bit	(2048 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 15    
+	   4 Input   32 Bit        Muxes := 1     
+	   5 Input   24 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 11    
+	   5 Input   22 Bit        Muxes := 1     
+	   4 Input   22 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   7 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 9     
+	   2 Input    2 Bit        Muxes := 8     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 76    
+	   5 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 4037.887 ; gain = 543.551 ; free physical = 10216 ; free virtual = 174598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 4322.582 ; gain = 828.246 ; free physical = 9347 ; free virtual = 173744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 4348.590 ; gain = 854.254 ; free physical = 9494 ; free virtual = 173891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/ONE_STACK.u_hbm_top/ONE_STACK_HBM.xpm_memory_spram_inst_0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ONE_STACK.u_hbm_top/ONE_STACK_HBM.xpm_memory_spram_inst_0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:16 . Memory (MB): peak = 4372.613 ; gain = 878.277 ; free physical = 6878 ; free virtual = 171262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin ONE_STACK.u_hbm_top/sl_oport1_inferred:in0[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13654 ; free virtual = 178047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13658 ; free virtual = 178051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13602 ; free virtual = 177994
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13580 ; free virtual = 177973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13510 ; free virtual = 177903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13388 ; free virtual = 177783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |CARRY8             |     7|
+|2     |HBM_ONE_STACK_INTF |     1|
+|3     |LUT1               |    36|
+|4     |LUT2               |    73|
+|5     |LUT3               |    61|
+|6     |LUT4               |   100|
+|7     |LUT5               |   167|
+|8     |LUT6               |   178|
+|9     |RAMB36E2           |     2|
+|11    |FDCE               |   409|
+|12    |FDPE               |     3|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.555 ; gain = 884.219 ; free physical = 13363 ; free virtual = 177759
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 31456 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 4378.555 ; gain = 787.684 ; free physical = 13076 ; free virtual = 177477
+Synthesis Optimization Complete : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 4378.559 ; gain = 884.219 ; free physical = 13070 ; free virtual = 177471
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 4378.559 ; gain = 0.000 ; free physical = 11368 ; free virtual = 175778
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4472.070 ; gain = 0.000 ; free physical = 12082 ; free virtual = 176487
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  HBM_ONE_STACK_INTF => HBM_ONE_STACK_INTF (HBM_REF_CLK, HBM_SNGLBLI_INTF_APB, HBM_SNGLBLI_INTF_AXI(x16)): 1 instance 
+
+Synth Design complete, checksum: e66ffa7e
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 213 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:45 . Memory (MB): peak = 4472.070 ; gain = 1411.281 ; free physical = 12289 ; free virtual = 176697
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_85ad_hbm_inst_0_synth_1/bd_85ad_hbm_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_85ad_hbm_inst_0, cache-ID = 4166252de216e742
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+INFO: [Common 17-1381] The checkpoint '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_85ad_hbm_inst_0_synth_1/bd_85ad_hbm_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_85ad_hbm_inst_0_utilization_synth.rpt -pb bd_85ad_hbm_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  5 17:59:38 2023...

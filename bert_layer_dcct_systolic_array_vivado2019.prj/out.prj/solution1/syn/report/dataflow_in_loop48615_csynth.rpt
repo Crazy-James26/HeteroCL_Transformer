@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop48615'
+================================================================
+* Date:           Tue Sep  5 22:48:08 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.929 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      130|      130| 0.433 us | 0.433 us |  131|  131| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+-------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                            |                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |          Instance          |          Module         |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +----------------------------+-------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |systolic_array_k_64_U0      |systolic_array_k_64      |       76|       76| 0.253 us | 0.253 us |   70|   70| dataflow |
+        |init_block_AB_proc48417_U0  |init_block_AB_proc48417  |      130|      130| 0.433 us | 0.433 us |  130|  130|   none   |
+        |store_block_C_proc485_U0    |store_block_C_proc485    |       34|       34| 0.113 us | 0.113 us |   34|   34|   none   |
+        +----------------------------+-------------------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       18|    -|
+|FIFO                 |        0|     -|     1386|      938|    -|
+|Instance             |        0|    32|    11230|     8633|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       36|    -|
+|Register             |        -|     -|        6|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|    32|    12622|     9625|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     1|        1|        2|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|  ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-------------------------+---------+----+-------+------+-----+
+    |          Instance          |          Module         | BRAM_18K| DSP|   FF  |  LUT | URAM|
+    +----------------------------+-------------------------+---------+----+-------+------+-----+
+    |init_block_AB_proc48417_U0  |init_block_AB_proc48417  |        0|   0|    138|   312|    0|
+    |store_block_C_proc485_U0    |store_block_C_proc485    |        0|   0|     75|   305|    0|
+    |systolic_array_k_64_U0      |systolic_array_k_64      |        0|  32|  11017|  8016|    0|
+    +----------------------------+-------------------------+---------+----+-------+------+-----+
+    |Total                       |                         |        0|  32|  11230|  8633|    0|
+    +----------------------------+-------------------------+---------+----+-------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------------+---------+----+----+-----+------+-----+---------+
+    |           Name          | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-------------------------+---------+----+----+-----+------+-----+---------+
+    |block_A_loader_0_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_A_loader_1_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_A_loader_2_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_A_loader_3_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_B_loader_0_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_B_loader_1_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_B_loader_2_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_B_loader_3_V_V_U   |        0|  99|   0|    -|     2|   24|       48|
+    |block_C_drainer_0_V_V_U  |        0|  99|   0|    -|     2|   24|       48|
+    |block_C_drainer_1_V_V_U  |        0|  99|   0|    -|     2|   24|       48|
+    |block_C_drainer_2_V_V_U  |        0|  99|   0|    -|     2|   24|       48|
+    |block_C_drainer_3_V_V_U  |        0|  99|   0|    -|     2|   24|       48|
+    |ii_c_U                   |        0|  99|   0|    -|     3|    2|        6|
+    |jj_c_U                   |        0|  99|   0|    -|     3|    2|        6|
+    +-------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                    |        0|1386|   0|    0|    30|  292|      588|
+    +-------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+    |                Variable Name                | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+    |init_block_AB_proc48417_U0_ap_ready_count    |     +    |   0|  0|   3|           2|           1|
+    |store_block_C_proc485_U0_ap_ready_count      |     +    |   0|  0|   3|           2|           1|
+    |ap_idle                                      |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_ready                                |    and   |   0|  0|   2|           1|           1|
+    |init_block_AB_proc48417_U0_ap_start          |    and   |   0|  0|   2|           1|           1|
+    |store_block_C_proc485_U0_ap_start            |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_init_block_AB_proc48417_U0_ap_ready  |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_store_block_C_proc485_U0_ap_ready    |    or    |   0|  0|   2|           1|           1|
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                        |          |   0|  0|  18|          10|           8|
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_init_block_AB_proc48417_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_store_block_C_proc485_U0_ap_ready    |   9|          2|    1|          2|
+    |init_block_AB_proc48417_U0_ap_ready_count        |   9|          2|    2|          4|
+    |store_block_C_proc485_U0_ap_ready_count          |   9|          2|    2|          4|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            |  36|          8|    6|         12|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------+---+----+-----+-----------+
+    |                       Name                      | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_init_block_AB_proc48417_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_store_block_C_proc485_U0_ap_ready    |  1|   0|    1|          0|
+    |init_block_AB_proc48417_U0_ap_ready_count        |  2|   0|    2|          0|
+    |store_block_C_proc485_U0_ap_ready_count          |  2|   0|    2|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |Total                                            |  6|   0|    6|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+-----------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------+-----+-----+------------+-----------------------+--------------+
+|v20_V_address0   | out |   10|  ap_memory |         v20_V         |     array    |
+|v20_V_ce0        | out |    1|  ap_memory |         v20_V         |     array    |
+|v20_V_d0         | out |   24|  ap_memory |         v20_V         |     array    |
+|v20_V_q0         |  in |   24|  ap_memory |         v20_V         |     array    |
+|v20_V_we0        | out |    1|  ap_memory |         v20_V         |     array    |
+|v20_V_address1   | out |   10|  ap_memory |         v20_V         |     array    |
+|v20_V_ce1        | out |    1|  ap_memory |         v20_V         |     array    |
+|v20_V_d1         | out |   24|  ap_memory |         v20_V         |     array    |
+|v20_V_q1         |  in |   24|  ap_memory |         v20_V         |     array    |
+|v20_V_we1        | out |    1|  ap_memory |         v20_V         |     array    |
+|ii               |  in |    2|   ap_none  |           ii          |    scalar    |
+|ii_ap_vld        |  in |    1|   ap_none  |           ii          |    scalar    |
+|v21_V_address0   | out |   10|  ap_memory |         v21_V         |     array    |
+|v21_V_ce0        | out |    1|  ap_memory |         v21_V         |     array    |
+|v21_V_d0         | out |   24|  ap_memory |         v21_V         |     array    |
+|v21_V_q0         |  in |   24|  ap_memory |         v21_V         |     array    |
+|v21_V_we0        | out |    1|  ap_memory |         v21_V         |     array    |
+|v21_V_address1   | out |   10|  ap_memory |         v21_V         |     array    |
+|v21_V_ce1        | out |    1|  ap_memory |         v21_V         |     array    |
+|v21_V_d1         | out |   24|  ap_memory |         v21_V         |     array    |
+|v21_V_q1         |  in |   24|  ap_memory |         v21_V         |     array    |
+|v21_V_we1        | out |    1|  ap_memory |         v21_V         |     array    |
+|jj               |  in |    2|   ap_none  |           jj          |    scalar    |
+|jj_ap_vld        |  in |    1|   ap_none  |           jj          |    scalar    |
+|outp_V_address0  | out |    8|  ap_memory |         outp_V        |     array    |
+|outp_V_ce0       | out |    1|  ap_memory |         outp_V        |     array    |
+|outp_V_d0        | out |   24|  ap_memory |         outp_V        |     array    |
+|outp_V_q0        |  in |   24|  ap_memory |         outp_V        |     array    |
+|outp_V_we0       | out |    1|  ap_memory |         outp_V        |     array    |
+|outp_V_address1  | out |    8|  ap_memory |         outp_V        |     array    |
+|outp_V_ce1       | out |    1|  ap_memory |         outp_V        |     array    |
+|outp_V_d1        | out |   24|  ap_memory |         outp_V        |     array    |
+|outp_V_q1        |  in |   24|  ap_memory |         outp_V        |     array    |
+|outp_V_we1       | out |    1|  ap_memory |         outp_V        |     array    |
+|ap_clk           |  in |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
+|ap_done          | out |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
+|ap_continue      |  in |    1| ap_ctrl_hs | dataflow_in_loop48615 | return value |
++-----------------+-----+-----+------------+-----------------------+--------------+
+

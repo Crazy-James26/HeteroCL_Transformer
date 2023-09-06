@@ -1,0 +1,242 @@
+
+
+================================================================
+== Vitis HLS Report for 'init_block_AB_proc487'
+================================================================
+* Date:           Tue Sep  5 22:48:12 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.375 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       26|       26| 86.658 ns | 86.658 ns |   26|   26|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- init_block_AB  |       24|       24|         3|          2|          1|    12|    yes   |
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       51|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|       62|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      222|    -|
+|Register             |        -|     -|      166|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      166|      335|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------+------------------------------+---------+----+---+----+-----+
+    |              Instance              |            Module            | BRAM_18K| DSP| FF| LUT| URAM|
+    +------------------------------------+------------------------------+---------+----+---+----+-----+
+    |Bert_layer_add_4ns_4ns_4_1_1_U2601  |Bert_layer_add_4ns_4ns_4_1_1  |        0|   0|  0|   6|    0|
+    |Bert_layer_add_8ns_8ns_8_1_1_U2602  |Bert_layer_add_8ns_8ns_8_1_1  |        0|   0|  0|   8|    0|
+    |Bert_layer_add_8ns_8ns_8_1_1_U2603  |Bert_layer_add_8ns_8ns_8_1_1  |        0|   0|  0|   8|    0|
+    |Bert_layer_add_8ns_8ns_8_1_1_U2604  |Bert_layer_add_8ns_8ns_8_1_1  |        0|   0|  0|   8|    0|
+    |Bert_layer_sub_8ns_8ns_8_1_1_U2598  |Bert_layer_sub_8ns_8ns_8_1_1  |        0|   0|  0|   8|    0|
+    |Bert_layer_sub_8ns_8ns_8_1_1_U2599  |Bert_layer_sub_8ns_8ns_8_1_1  |        0|   0|  0|   8|    0|
+    |Bert_layer_sub_8ns_8ns_8_1_1_U2600  |Bert_layer_sub_8ns_8ns_8_1_1  |        0|   0|  0|   8|    0|
+    |Bert_layer_sub_9ns_9ns_9_1_1_U2597  |Bert_layer_sub_9ns_9ns_9_1_1  |        0|   0|  0|   8|    0|
+    +------------------------------------+------------------------------+---------+----+---+----+-----+
+    |Total                               |                              |        0|   0|  0|  62|    0|
+    +------------------------------------+------------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_pp0_stage0_01001         |    and   |   0|  0|   2|           1|           1|
+    |icmp_ln117_fu_456_p2              |   icmp   |   0|  0|   9|           4|           4|
+    |ap_block_state1                   |    or    |   0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter1  |    or    |   0|  0|   2|           1|           1|
+    |or_ln120_1_fu_374_p2              |    or    |   0|  0|   4|           4|           2|
+    |or_ln120_2_fu_406_p2              |    or    |   0|  0|   4|           4|           2|
+    |or_ln120_3_fu_475_p2              |    or    |   0|  0|   4|           4|           4|
+    |or_ln120_fu_342_p2                |    or    |   0|  0|   4|           4|           1|
+    |or_ln123_1_fu_444_p2              |    or    |   0|  0|   6|           6|           2|
+    |or_ln123_2_fu_450_p2              |    or    |   0|  0|   6|           6|           2|
+    |or_ln123_fu_438_p2                |    or    |   0|  0|   6|           6|           1|
+    |ap_enable_pp0                     |    xor   |   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  51|          42|          23|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                   |  27|          5|    1|          5|
+    |ap_done                     |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1     |   9|          2|    1|          2|
+    |ap_phi_mux_k_phi_fu_283_p4  |   9|          2|    4|          8|
+    |block_A_loader_0_V_V_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_1_V_V_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_2_V_V_blk_n  |   9|          2|    1|          2|
+    |block_A_loader_3_V_V_blk_n  |   9|          2|    1|          2|
+    |block_B_loader_0_V_V_blk_n  |   9|          2|    1|          2|
+    |block_B_loader_1_V_V_blk_n  |   9|          2|    1|          2|
+    |block_B_loader_2_V_V_blk_n  |   9|          2|    1|          2|
+    |block_B_loader_3_V_V_blk_n  |   9|          2|    1|          2|
+    |ii_c_blk_n                  |   9|          2|    1|          2|
+    |jj_c_blk_n                  |   9|          2|    1|          2|
+    |k_reg_279                   |   9|          2|    4|          8|
+    |real_start                  |   9|          2|    1|          2|
+    |v66_V_address0              |  15|          3|    8|         24|
+    |v66_V_address1              |  15|          3|    8|         24|
+    |v67_V_address0              |  15|          3|   10|         30|
+    |v67_V_address1              |  15|          3|   10|         30|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 222|         47|   58|        155|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |add_ln117_reg_626        |   4|   0|    4|          0|
+    |ap_CS_fsm                |   4|   0|    4|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |empty_reg_581            |   4|   0|    4|          0|
+    |icmp_ln117_reg_622       |   1|   0|    1|          0|
+    |k_reg_279                |   4|   0|    4|          0|
+    |or_ln123_1_reg_612       |   4|   0|    6|          2|
+    |or_ln123_2_reg_617       |   4|   0|    6|          2|
+    |or_ln123_reg_607         |   4|   0|    6|          2|
+    |start_once_reg           |   1|   0|    1|          0|
+    |sub_ln120_1_reg_592      |   8|   0|    8|          0|
+    |sub_ln120_2_reg_597      |   8|   0|    8|          0|
+    |sub_ln120_3_reg_602      |   8|   0|    8|          0|
+    |sub_ln120_reg_586        |   9|   0|    9|          0|
+    |v66_V_load_1_reg_682     |  24|   0|   24|          0|
+    |v66_V_load_reg_677       |  24|   0|   24|          0|
+    |v67_V_load_1_reg_692     |  24|   0|   24|          0|
+    |v67_V_load_reg_687       |  24|   0|   24|          0|
+    |zext_ln120_5_reg_631     |   4|   0|    8|          4|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 166|   0|  176|         10|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|start_full_n                 |  in |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|ap_done                      | out |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|ap_continue                  |  in |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|start_out                    | out |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|start_write                  | out |    1| ap_ctrl_hs | init_block_AB_proc487 | return value |
+|v66_V_address0               | out |    8|  ap_memory |         v66_V         |     array    |
+|v66_V_ce0                    | out |    1|  ap_memory |         v66_V         |     array    |
+|v66_V_q0                     |  in |   24|  ap_memory |         v66_V         |     array    |
+|v66_V_address1               | out |    8|  ap_memory |         v66_V         |     array    |
+|v66_V_ce1                    | out |    1|  ap_memory |         v66_V         |     array    |
+|v66_V_q1                     |  in |   24|  ap_memory |         v66_V         |     array    |
+|ii                           |  in |    2|   ap_none  |           ii          |    scalar    |
+|block_A_loader_0_V_V_din     | out |   24|   ap_fifo  |  block_A_loader_0_V_V |    pointer   |
+|block_A_loader_0_V_V_full_n  |  in |    1|   ap_fifo  |  block_A_loader_0_V_V |    pointer   |
+|block_A_loader_0_V_V_write   | out |    1|   ap_fifo  |  block_A_loader_0_V_V |    pointer   |
+|block_A_loader_1_V_V_din     | out |   24|   ap_fifo  |  block_A_loader_1_V_V |    pointer   |
+|block_A_loader_1_V_V_full_n  |  in |    1|   ap_fifo  |  block_A_loader_1_V_V |    pointer   |
+|block_A_loader_1_V_V_write   | out |    1|   ap_fifo  |  block_A_loader_1_V_V |    pointer   |
+|block_A_loader_2_V_V_din     | out |   24|   ap_fifo  |  block_A_loader_2_V_V |    pointer   |
+|block_A_loader_2_V_V_full_n  |  in |    1|   ap_fifo  |  block_A_loader_2_V_V |    pointer   |
+|block_A_loader_2_V_V_write   | out |    1|   ap_fifo  |  block_A_loader_2_V_V |    pointer   |
+|block_A_loader_3_V_V_din     | out |   24|   ap_fifo  |  block_A_loader_3_V_V |    pointer   |
+|block_A_loader_3_V_V_full_n  |  in |    1|   ap_fifo  |  block_A_loader_3_V_V |    pointer   |
+|block_A_loader_3_V_V_write   | out |    1|   ap_fifo  |  block_A_loader_3_V_V |    pointer   |
+|v67_V_address0               | out |   10|  ap_memory |         v67_V         |     array    |
+|v67_V_ce0                    | out |    1|  ap_memory |         v67_V         |     array    |
+|v67_V_q0                     |  in |   24|  ap_memory |         v67_V         |     array    |
+|v67_V_address1               | out |   10|  ap_memory |         v67_V         |     array    |
+|v67_V_ce1                    | out |    1|  ap_memory |         v67_V         |     array    |
+|v67_V_q1                     |  in |   24|  ap_memory |         v67_V         |     array    |
+|jj                           |  in |    5|   ap_none  |           jj          |    scalar    |
+|block_B_loader_0_V_V_din     | out |   24|   ap_fifo  |  block_B_loader_0_V_V |    pointer   |
+|block_B_loader_0_V_V_full_n  |  in |    1|   ap_fifo  |  block_B_loader_0_V_V |    pointer   |
+|block_B_loader_0_V_V_write   | out |    1|   ap_fifo  |  block_B_loader_0_V_V |    pointer   |
+|block_B_loader_1_V_V_din     | out |   24|   ap_fifo  |  block_B_loader_1_V_V |    pointer   |
+|block_B_loader_1_V_V_full_n  |  in |    1|   ap_fifo  |  block_B_loader_1_V_V |    pointer   |
+|block_B_loader_1_V_V_write   | out |    1|   ap_fifo  |  block_B_loader_1_V_V |    pointer   |
+|block_B_loader_2_V_V_din     | out |   24|   ap_fifo  |  block_B_loader_2_V_V |    pointer   |
+|block_B_loader_2_V_V_full_n  |  in |    1|   ap_fifo  |  block_B_loader_2_V_V |    pointer   |
+|block_B_loader_2_V_V_write   | out |    1|   ap_fifo  |  block_B_loader_2_V_V |    pointer   |
+|block_B_loader_3_V_V_din     | out |   24|   ap_fifo  |  block_B_loader_3_V_V |    pointer   |
+|block_B_loader_3_V_V_full_n  |  in |    1|   ap_fifo  |  block_B_loader_3_V_V |    pointer   |
+|block_B_loader_3_V_V_write   | out |    1|   ap_fifo  |  block_B_loader_3_V_V |    pointer   |
+|ii_c_din                     | out |    2|   ap_fifo  |          ii_c         |    pointer   |
+|ii_c_full_n                  |  in |    1|   ap_fifo  |          ii_c         |    pointer   |
+|ii_c_write                   | out |    1|   ap_fifo  |          ii_c         |    pointer   |
+|jj_c_din                     | out |    4|   ap_fifo  |          jj_c         |    pointer   |
+|jj_c_full_n                  |  in |    1|   ap_fifo  |          jj_c         |    pointer   |
+|jj_c_write                   | out |    1|   ap_fifo  |          jj_c         |    pointer   |
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+

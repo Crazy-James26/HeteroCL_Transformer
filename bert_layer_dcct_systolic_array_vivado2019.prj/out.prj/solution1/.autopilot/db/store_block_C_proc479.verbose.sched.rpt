@@ -1,0 +1,292 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_block_C_proc479'
+================================================================
+* Date:           Tue Sep  5 22:43:07 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 3.547 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      290|      290| 1.029 us | 1.029 us |  290|  290|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- store_block_C_L  |      288|      288|         3|          2|          1|   144|    yes   |
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 5 3 
+3 --> 4 
+4 --> 2 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.74>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_0_V_V25, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_1_V_V26, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_2_V_V27, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_3_V_V28, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_4_V_V29, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_5_V_V30, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_6_V_V31, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_7_V_V32, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_8_V_V33, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_9_V_V34, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_10_V_V35, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_11_V_V36, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %indvars_iv47_0, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.21ns)   --->   "%indvars_iv47_0_read = read i8 @_ssdm_op_Read.ap_fifo.i8P, i8 %indvars_iv47_0" [gemm_systolic_array.cpp:205]   --->   Operation 19 'read' 'indvars_iv47_0_read' <Predicate = true> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_11_V_V36, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_10_V_V35, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_9_V_V34, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_8_V_V33, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_7_V_V32, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_6_V_V31, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_5_V_V30, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_4_V_V29, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_3_V_V28, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_2_V_V27, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_1_V_V26, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_0_V_V25, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_shl_i = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i8.i4, i8 %indvars_iv47_0_read, i4" [gemm_systolic_array.cpp:205]   --->   Operation 32 'bitconcatenate' 'p_shl_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_shl11_i = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i8.i2, i8 %indvars_iv47_0_read, i2" [gemm_systolic_array.cpp:205]   --->   Operation 33 'bitconcatenate' 'p_shl11_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_shl11_i_cast = zext i10 %p_shl11_i" [gemm_systolic_array.cpp:205]   --->   Operation 34 'zext' 'p_shl11_i_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.52ns)   --->   "%empty = sub i12 %p_shl_i, i12 %p_shl11_i_cast" [gemm_systolic_array.cpp:205]   --->   Operation 35 'sub' 'empty' <Predicate = true> <Delay = 0.52> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.60ns)   --->   "%br_ln0 = br void %.preheader543.i.i"   --->   Operation 36 'br' 'br_ln0' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i8, void %entry, i8 %add_ln223_1, void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i" [gemm_systolic_array.cpp:223]   --->   Operation 37 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%indvars_iv43_0_t367_i_i = phi i4, void %entry, i4 %select_ln223, void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i" [gemm_systolic_array.cpp:223]   --->   Operation 38 'phi' 'indvars_iv43_0_t367_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%indvars_iv39_0_i_i = phi i4, void %entry, i4 %add_ln225, void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i" [gemm_systolic_array.cpp:225]   --->   Operation 39 'phi' 'indvars_iv39_0_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln225 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_20" [gemm_systolic_array.cpp:225]   --->   Operation 40 'specpipeline' 'specpipeline_ln225' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.58ns)   --->   "%icmp_ln223 = icmp_eq  i8 %indvar_flatten, i8" [gemm_systolic_array.cpp:223]   --->   Operation 41 'icmp' 'icmp_ln223' <Predicate = true> <Delay = 0.58> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.48ns)   --->   "%add_ln223_1 = add i8 %indvar_flatten, i8" [gemm_systolic_array.cpp:223]   --->   Operation 42 'add' 'add_ln223_1' <Predicate = true> <Delay = 0.48> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln223 = br i1 %icmp_ln223, void %.preheader543.i.i.preheader, void %.exit" [gemm_systolic_array.cpp:223]   --->   Operation 43 'br' 'br_ln223' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.33ns)   --->   "%add_ln223 = add i4 %indvars_iv43_0_t367_i_i, i4" [gemm_systolic_array.cpp:223]   --->   Operation 44 'add' 'add_ln223' <Predicate = (!icmp_ln223)> <Delay = 0.33> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.65ns)   --->   "%icmp_ln225 = icmp_eq  i4 %indvars_iv39_0_i_i, i4" [gemm_systolic_array.cpp:225]   --->   Operation 45 'icmp' 'icmp_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.65> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.35ns)   --->   "%select_ln225 = select i1 %icmp_ln225, i4, i4 %indvars_iv39_0_i_i" [gemm_systolic_array.cpp:225]   --->   Operation 46 'select' 'select_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.35> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.35ns)   --->   "%select_ln223 = select i1 %icmp_ln225, i4 %add_ln223, i4 %indvars_iv43_0_t367_i_i" [gemm_systolic_array.cpp:223]   --->   Operation 47 'select' 'select_ln223' <Predicate = (!icmp_ln223)> <Delay = 0.35> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 48 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 10)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 49 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 9)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 50 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 8)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 51 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 7)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 52 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 6)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 53 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 5)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 54 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 4)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 55 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 3)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 56 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 2)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 57 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 1)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 58 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 0)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln657 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.038.i.i"   --->   Operation 59 'br' 'br_ln657' <Predicate = (!icmp_ln223 & select_ln223 == 15) | (!icmp_ln223 & select_ln223 == 14) | (!icmp_ln223 & select_ln223 == 13) | (!icmp_ln223 & select_ln223 == 12) | (!icmp_ln223 & select_ln223 == 11)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.68>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln225 = zext i4 %select_ln225" [gemm_systolic_array.cpp:225]   --->   Operation 60 'zext' 'zext_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (1.21ns)   --->   "%block_C_drainer_10_V_V35_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_10_V_V35" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 61 'read' 'block_C_drainer_10_V_V35_read' <Predicate = (!icmp_ln223 & select_ln223 == 10)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 62 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 62 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 10)> <Delay = 0.80>
+ST_3 : Operation 63 [1/1] (1.21ns)   --->   "%block_C_drainer_9_V_V34_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_9_V_V34" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 63 'read' 'block_C_drainer_9_V_V34_read' <Predicate = (!icmp_ln223 & select_ln223 == 9)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 64 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 64 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 9)> <Delay = 0.80>
+ST_3 : Operation 65 [1/1] (1.21ns)   --->   "%block_C_drainer_8_V_V33_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_8_V_V33" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 65 'read' 'block_C_drainer_8_V_V33_read' <Predicate = (!icmp_ln223 & select_ln223 == 8)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 66 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 66 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 8)> <Delay = 0.80>
+ST_3 : Operation 67 [1/1] (1.21ns)   --->   "%block_C_drainer_7_V_V32_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_7_V_V32" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 67 'read' 'block_C_drainer_7_V_V32_read' <Predicate = (!icmp_ln223 & select_ln223 == 7)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 68 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 68 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 7)> <Delay = 0.80>
+ST_3 : Operation 69 [1/1] (1.21ns)   --->   "%block_C_drainer_6_V_V31_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_6_V_V31" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 69 'read' 'block_C_drainer_6_V_V31_read' <Predicate = (!icmp_ln223 & select_ln223 == 6)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 70 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 70 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 6)> <Delay = 0.80>
+ST_3 : Operation 71 [1/1] (1.21ns)   --->   "%block_C_drainer_5_V_V30_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_5_V_V30" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 71 'read' 'block_C_drainer_5_V_V30_read' <Predicate = (!icmp_ln223 & select_ln223 == 5)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 72 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 72 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 5)> <Delay = 0.80>
+ST_3 : Operation 73 [1/1] (1.21ns)   --->   "%block_C_drainer_4_V_V29_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_4_V_V29" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 73 'read' 'block_C_drainer_4_V_V29_read' <Predicate = (!icmp_ln223 & select_ln223 == 4)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 74 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 74 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 4)> <Delay = 0.80>
+ST_3 : Operation 75 [1/1] (1.21ns)   --->   "%block_C_drainer_3_V_V28_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_3_V_V28" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 75 'read' 'block_C_drainer_3_V_V28_read' <Predicate = (!icmp_ln223 & select_ln223 == 3)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 76 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 76 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 3)> <Delay = 0.80>
+ST_3 : Operation 77 [1/1] (1.21ns)   --->   "%block_C_drainer_2_V_V27_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_2_V_V27" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 77 'read' 'block_C_drainer_2_V_V27_read' <Predicate = (!icmp_ln223 & select_ln223 == 2)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 78 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 78 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 2)> <Delay = 0.80>
+ST_3 : Operation 79 [1/1] (1.21ns)   --->   "%block_C_drainer_1_V_V26_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_1_V_V26" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 79 'read' 'block_C_drainer_1_V_V26_read' <Predicate = (!icmp_ln223 & select_ln223 == 1)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 80 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 80 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 1)> <Delay = 0.80>
+ST_3 : Operation 81 [1/1] (1.21ns)   --->   "%block_C_drainer_0_V_V25_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_0_V_V25" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 81 'read' 'block_C_drainer_0_V_V25_read' <Predicate = (!icmp_ln223 & select_ln223 == 0)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 82 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 82 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 0)> <Delay = 0.80>
+ST_3 : Operation 83 [1/1] (1.21ns)   --->   "%block_C_drainer_11_V_V36_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_11_V_V36" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 83 'read' 'block_C_drainer_11_V_V36_read' <Predicate = (!icmp_ln223 & select_ln223 == 15) | (!icmp_ln223 & select_ln223 == 14) | (!icmp_ln223 & select_ln223 == 13) | (!icmp_ln223 & select_ln223 == 12) | (!icmp_ln223 & select_ln223 == 11)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 84 [1/1] (0.80ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i.0380.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 84 'br' 'br_ln92' <Predicate = (!icmp_ln223 & select_ln223 == 15) | (!icmp_ln223 & select_ln223 == 14) | (!icmp_ln223 & select_ln223 == 13) | (!icmp_ln223 & select_ln223 == 12) | (!icmp_ln223 & select_ln223 == 11)> <Delay = 0.80>
+ST_3 : Operation 85 [1/1] (0.52ns)   --->   "%add_ln227 = add i12 %empty, i12 %zext_ln225" [gemm_systolic_array.cpp:227]   --->   Operation 85 'add' 'add_ln227' <Predicate = (!icmp_ln223)> <Delay = 0.52> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln657 = zext i12 %add_ln227"   --->   Operation 86 'zext' 'zext_ln657' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%outp1_0_V_addr = getelementptr i24 %outp1_0_V, i64, i64 %zext_ln657"   --->   Operation 87 'getelementptr' 'outp1_0_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%outp1_1_V_addr = getelementptr i24 %outp1_1_V, i64, i64 %zext_ln657"   --->   Operation 88 'getelementptr' 'outp1_1_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%outp1_2_V_addr = getelementptr i24 %outp1_2_V, i64, i64 %zext_ln657"   --->   Operation 89 'getelementptr' 'outp1_2_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%outp1_3_V_addr = getelementptr i24 %outp1_3_V, i64, i64 %zext_ln657"   --->   Operation 90 'getelementptr' 'outp1_3_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%outp1_4_V_addr = getelementptr i24 %outp1_4_V, i64, i64 %zext_ln657"   --->   Operation 91 'getelementptr' 'outp1_4_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%outp1_5_V_addr = getelementptr i24 %outp1_5_V, i64, i64 %zext_ln657"   --->   Operation 92 'getelementptr' 'outp1_5_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%outp1_6_V_addr = getelementptr i24 %outp1_6_V, i64, i64 %zext_ln657"   --->   Operation 93 'getelementptr' 'outp1_6_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%outp1_7_V_addr = getelementptr i24 %outp1_7_V, i64, i64 %zext_ln657"   --->   Operation 94 'getelementptr' 'outp1_7_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%outp1_8_V_addr = getelementptr i24 %outp1_8_V, i64, i64 %zext_ln657"   --->   Operation 95 'getelementptr' 'outp1_8_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%outp1_9_V_addr = getelementptr i24 %outp1_9_V, i64, i64 %zext_ln657"   --->   Operation 96 'getelementptr' 'outp1_9_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%outp1_10_V_addr = getelementptr i24 %outp1_10_V, i64, i64 %zext_ln657"   --->   Operation 97 'getelementptr' 'outp1_10_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%outp1_11_V_addr = getelementptr i24 %outp1_11_V, i64, i64 %zext_ln657"   --->   Operation 98 'getelementptr' 'outp1_11_V_addr' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_3 : Operation 99 [2/2] (1.15ns)   --->   "%outp1_0_V_load = load i12 %outp1_0_V_addr"   --->   Operation 99 'load' 'outp1_0_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 100 [2/2] (1.15ns)   --->   "%outp1_1_V_load = load i12 %outp1_1_V_addr"   --->   Operation 100 'load' 'outp1_1_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 101 [2/2] (1.15ns)   --->   "%outp1_2_V_load = load i12 %outp1_2_V_addr"   --->   Operation 101 'load' 'outp1_2_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 102 [2/2] (1.15ns)   --->   "%outp1_3_V_load = load i12 %outp1_3_V_addr"   --->   Operation 102 'load' 'outp1_3_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 103 [2/2] (1.15ns)   --->   "%outp1_4_V_load = load i12 %outp1_4_V_addr"   --->   Operation 103 'load' 'outp1_4_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 104 [2/2] (1.15ns)   --->   "%outp1_5_V_load = load i12 %outp1_5_V_addr"   --->   Operation 104 'load' 'outp1_5_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 105 [2/2] (1.15ns)   --->   "%outp1_6_V_load = load i12 %outp1_6_V_addr"   --->   Operation 105 'load' 'outp1_6_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 106 [2/2] (1.15ns)   --->   "%outp1_7_V_load = load i12 %outp1_7_V_addr"   --->   Operation 106 'load' 'outp1_7_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 107 [2/2] (1.15ns)   --->   "%outp1_8_V_load = load i12 %outp1_8_V_addr"   --->   Operation 107 'load' 'outp1_8_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 108 [2/2] (1.15ns)   --->   "%outp1_9_V_load = load i12 %outp1_9_V_addr"   --->   Operation 108 'load' 'outp1_9_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 109 [2/2] (1.15ns)   --->   "%outp1_10_V_load = load i12 %outp1_10_V_addr"   --->   Operation 109 'load' 'outp1_10_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 110 [2/2] (1.15ns)   --->   "%outp1_11_V_load = load i12 %outp1_11_V_addr"   --->   Operation 110 'load' 'outp1_11_V_load' <Predicate = (!icmp_ln223)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_3 : Operation 111 [1/1] (0.33ns)   --->   "%add_ln225 = add i4 %select_ln225, i4" [gemm_systolic_array.cpp:225]   --->   Operation 111 'add' 'add_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.33> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln225 = br void %.preheader543.i.i" [gemm_systolic_array.cpp:225]   --->   Operation 112 'br' 'br_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.54>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%specloopname_ln223 = specloopname void @_ssdm_op_SpecLoopName, void @store_block_C_L_str" [gemm_systolic_array.cpp:223]   --->   Operation 113 'specloopname' 'specloopname_ln223' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%empty_1183 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 114 'speclooptripcount' 'empty_1183' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%specpipeline_ln225 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_20" [gemm_systolic_array.cpp:225]   --->   Operation 115 'specpipeline' 'specpipeline_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (0.63ns)   --->   "%switch_ln92 = switch i4 %select_ln223, void %branch35.i.i, i4, void %branch24.i.i, i4, void %branch25.i.i, i4, void %branch26.i.i, i4, void %branch27.i.i, i4, void %branch28.i.i, i4, void %branch29.i.i, i4, void %branch30.i.i, i4, void %branch31.i.i, i4, void %branch32.i.i, i4, void %branch33.i.i, i4, void %branch34.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 116 'switch' 'switch_ln92' <Predicate = (!icmp_ln223)> <Delay = 0.63>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%p_0 = phi i24 %block_C_drainer_11_V_V36_read, void %branch35.i.i, i24 %block_C_drainer_10_V_V35_read, void %branch34.i.i, i24 %block_C_drainer_9_V_V34_read, void %branch33.i.i, i24 %block_C_drainer_8_V_V33_read, void %branch32.i.i, i24 %block_C_drainer_7_V_V32_read, void %branch31.i.i, i24 %block_C_drainer_6_V_V31_read, void %branch30.i.i, i24 %block_C_drainer_5_V_V30_read, void %branch29.i.i, i24 %block_C_drainer_4_V_V29_read, void %branch28.i.i, i24 %block_C_drainer_3_V_V28_read, void %branch27.i.i, i24 %block_C_drainer_2_V_V27_read, void %branch26.i.i, i24 %block_C_drainer_1_V_V26_read, void %branch25.i.i, i24 %block_C_drainer_0_V_V25_read, void %branch24.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 117 'phi' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 118 [1/2] (1.15ns)   --->   "%outp1_0_V_load = load i12 %outp1_0_V_addr"   --->   Operation 118 'load' 'outp1_0_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 119 [1/2] (1.15ns)   --->   "%outp1_1_V_load = load i12 %outp1_1_V_addr"   --->   Operation 119 'load' 'outp1_1_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 120 [1/2] (1.15ns)   --->   "%outp1_2_V_load = load i12 %outp1_2_V_addr"   --->   Operation 120 'load' 'outp1_2_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 121 [1/2] (1.15ns)   --->   "%outp1_3_V_load = load i12 %outp1_3_V_addr"   --->   Operation 121 'load' 'outp1_3_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 122 [1/2] (1.15ns)   --->   "%outp1_4_V_load = load i12 %outp1_4_V_addr"   --->   Operation 122 'load' 'outp1_4_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 123 [1/2] (1.15ns)   --->   "%outp1_5_V_load = load i12 %outp1_5_V_addr"   --->   Operation 123 'load' 'outp1_5_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 124 [1/2] (1.15ns)   --->   "%outp1_6_V_load = load i12 %outp1_6_V_addr"   --->   Operation 124 'load' 'outp1_6_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 125 [1/2] (1.15ns)   --->   "%outp1_7_V_load = load i12 %outp1_7_V_addr"   --->   Operation 125 'load' 'outp1_7_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 126 [1/2] (1.15ns)   --->   "%outp1_8_V_load = load i12 %outp1_8_V_addr"   --->   Operation 126 'load' 'outp1_8_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 127 [1/2] (1.15ns)   --->   "%outp1_9_V_load = load i12 %outp1_9_V_addr"   --->   Operation 127 'load' 'outp1_9_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 128 [1/2] (1.15ns)   --->   "%outp1_10_V_load = load i12 %outp1_10_V_addr"   --->   Operation 128 'load' 'outp1_10_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 129 [1/2] (1.15ns)   --->   "%outp1_11_V_load = load i12 %outp1_11_V_addr"   --->   Operation 129 'load' 'outp1_11_V_load' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 130 [1/1] (0.61ns)   --->   "%tmp = mux i24 @_ssdm_op_Mux.ap_auto.12i24.i4, i24 %outp1_0_V_load, i24 %outp1_1_V_load, i24 %outp1_2_V_load, i24 %outp1_3_V_load, i24 %outp1_4_V_load, i24 %outp1_5_V_load, i24 %outp1_6_V_load, i24 %outp1_7_V_load, i24 %outp1_8_V_load, i24 %outp1_9_V_load, i24 %outp1_10_V_load, i24 %outp1_11_V_load, i4 %select_ln223"   --->   Operation 130 'mux' 'tmp' <Predicate = true> <Delay = 0.61> <Core = "MuxnS">   --->   Core 17 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 131 [1/1] (0.61ns)   --->   "%add_ln657 = add i24 %p_0, i24 %tmp"   --->   Operation 131 'add' 'add_ln657' <Predicate = true> <Delay = 0.61> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 132 [1/1] (0.63ns)   --->   "%switch_ln657 = switch i4 %select_ln223, void %branch11.i.i, i4, void %branch0.i.i, i4, void %branch1.i.i, i4, void %branch2.i.i, i4, void %branch3.i.i, i4, void %branch4.i.i, i4, void %branch5.i.i, i4, void %branch6.i.i, i4, void %branch7.i.i, i4, void %branch8.i.i, i4, void %branch9.i.i, i4, void %branch10.i.i"   --->   Operation 132 'switch' 'switch_ln657' <Predicate = true> <Delay = 0.63>
+ST_4 : Operation 133 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_10_V_addr, i24 %outp1_10_V_load"   --->   Operation 133 'store' 'store_ln657' <Predicate = (select_ln223 == 10)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 134 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_9_V_addr, i24 %outp1_9_V_load"   --->   Operation 134 'store' 'store_ln657' <Predicate = (select_ln223 == 9)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 135 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_8_V_addr, i24 %outp1_8_V_load"   --->   Operation 135 'store' 'store_ln657' <Predicate = (select_ln223 == 8)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 136 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_7_V_addr, i24 %outp1_7_V_load"   --->   Operation 136 'store' 'store_ln657' <Predicate = (select_ln223 == 7)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 137 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_6_V_addr, i24 %outp1_6_V_load"   --->   Operation 137 'store' 'store_ln657' <Predicate = (select_ln223 == 6)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 138 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_5_V_addr, i24 %outp1_5_V_load"   --->   Operation 138 'store' 'store_ln657' <Predicate = (select_ln223 == 5)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 139 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_4_V_addr, i24 %outp1_4_V_load"   --->   Operation 139 'store' 'store_ln657' <Predicate = (select_ln223 == 4)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 140 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_3_V_addr, i24 %outp1_3_V_load"   --->   Operation 140 'store' 'store_ln657' <Predicate = (select_ln223 == 3)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 141 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_2_V_addr, i24 %outp1_2_V_load"   --->   Operation 141 'store' 'store_ln657' <Predicate = (select_ln223 == 2)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 142 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_1_V_addr, i24 %outp1_1_V_load"   --->   Operation 142 'store' 'store_ln657' <Predicate = (select_ln223 == 1)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 143 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_0_V_addr, i24 %outp1_0_V_load"   --->   Operation 143 'store' 'store_ln657' <Predicate = (select_ln223 == 0)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+ST_4 : Operation 144 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i12 %outp1_11_V_addr, i24 %outp1_11_V_load"   --->   Operation 144 'store' 'store_ln657' <Predicate = (select_ln223 == 15) | (select_ln223 == 14) | (select_ln223 == 13) | (select_ln223 == 12) | (select_ln223 == 11)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 3072> <RAM>
+
+State 5 <SV = 2> <Delay = 0.00>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 145 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.74ns
+The critical path consists of the following:
+	fifo read on port 'indvars_iv47_0' (gemm_systolic_array.cpp:205) [39]  (1.22 ns)
+	'sub' operation ('empty', gemm_systolic_array.cpp:205) [55]  (0.526 ns)
+
+ <State 2>: 1.01ns
+The critical path consists of the following:
+	'phi' operation ('indvars_iv39_0_i_i', gemm_systolic_array.cpp:225) with incoming values : ('add_ln225', gemm_systolic_array.cpp:225) [60]  (0 ns)
+	'icmp' operation ('icmp_ln225', gemm_systolic_array.cpp:225) [69]  (0.656 ns)
+	'select' operation ('select_ln225', gemm_systolic_array.cpp:225) [70]  (0.351 ns)
+
+ <State 3>: 1.68ns
+The critical path consists of the following:
+	'add' operation ('add_ln227', gemm_systolic_array.cpp:227) [113]  (0.526 ns)
+	'getelementptr' operation ('outp1_0_V_addr') [115]  (0 ns)
+	'load' operation ('outp1_0_V_load') on array 'outp1_0_V' [127]  (1.16 ns)
+
+ <State 4>: 3.55ns
+The critical path consists of the following:
+	'load' operation ('outp1_0_V_load') on array 'outp1_0_V' [127]  (1.16 ns)
+	'mux' operation ('tmp') [139]  (0.618 ns)
+	'add' operation ('add_ln657') [140]  (0.613 ns)
+	'store' operation ('store_ln657') of variable 'add_ln657' on array 'outp1_9_V' [146]  (1.16 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

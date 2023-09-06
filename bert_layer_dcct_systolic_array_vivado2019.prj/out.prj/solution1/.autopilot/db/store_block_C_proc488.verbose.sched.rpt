@@ -1,0 +1,205 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_block_C_proc488'
+================================================================
+* Date:           Tue Sep  5 22:42:53 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.929 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       34|       34| 0.113 us | 0.113 us |   34|   34|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- store_block_C_L  |       32|       32|         3|          2|          1|    16|    yes   |
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 5 3 
+3 --> 4 
+4 --> 2 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.21>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_0_V_V9, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_1_V_V10, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_2_V_V11, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_3_V_V12, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %ii, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %jj, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.21ns)   --->   "%jj_read = read i4 @_ssdm_op_Read.ap_fifo.i4P, i4 %jj" [gemm_systolic_array.cpp:112]   --->   Operation 12 'read' 'jj_read' <Predicate = true> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 3> <FIFO>
+ST_1 : Operation 13 [1/1] (1.21ns)   --->   "%ii_read = read i2 @_ssdm_op_Read.ap_fifo.i2P, i2 %ii" [gemm_systolic_array.cpp:111]   --->   Operation 13 'read' 'ii_read' <Predicate = true> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 3> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_3_V_V12, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_2_V_V11, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_1_V_V10, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %block_C_drainer_0_V_V9, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %jj_read, i2" [gemm_systolic_array.cpp:112]   --->   Operation 18 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i2.i2, i2 %ii_read, i2" [gemm_systolic_array.cpp:111]   --->   Operation 19 'bitconcatenate' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.60ns)   --->   "%br_ln0 = br void"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.43>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i5, void %entry, i5 %add_ln130_2, void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [gemm_systolic_array.cpp:130]   --->   Operation 21 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%i = phi i3, void %entry, i3 %select_ln130_1, void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [gemm_systolic_array.cpp:130]   --->   Operation 22 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%j = phi i3, void %entry, i3 %add_ln132, void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [gemm_systolic_array.cpp:132]   --->   Operation 23 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specpipeline_ln132 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_20" [gemm_systolic_array.cpp:132]   --->   Operation 24 'specpipeline' 'specpipeline_ln132' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.63ns)   --->   "%icmp_ln130 = icmp_eq  i5 %indvar_flatten, i5" [gemm_systolic_array.cpp:130]   --->   Operation 25 'icmp' 'icmp_ln130' <Predicate = true> <Delay = 0.63> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.34ns)   --->   "%add_ln130_2 = add i5 %indvar_flatten, i5" [gemm_systolic_array.cpp:130]   --->   Operation 26 'add' 'add_ln130_2' <Predicate = true> <Delay = 0.34> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln130 = br i1 %icmp_ln130, void %.reset, void %.exit" [gemm_systolic_array.cpp:130]   --->   Operation 27 'br' 'br_ln130' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.26ns)   --->   "%add_ln130 = add i3, i3 %i" [gemm_systolic_array.cpp:130]   --->   Operation 28 'add' 'add_ln130' <Predicate = (!icmp_ln130)> <Delay = 0.26> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.49ns)   --->   "%icmp_ln132 = icmp_eq  i3 %j, i3" [gemm_systolic_array.cpp:132]   --->   Operation 29 'icmp' 'icmp_ln132' <Predicate = (!icmp_ln130)> <Delay = 0.49> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.27ns)   --->   "%select_ln130 = select i1 %icmp_ln132, i3, i3 %j" [gemm_systolic_array.cpp:130]   --->   Operation 30 'select' 'select_ln130' <Predicate = (!icmp_ln130)> <Delay = 0.27> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.27ns)   --->   "%select_ln130_1 = select i1 %icmp_ln132, i3 %add_ln130, i3 %i" [gemm_systolic_array.cpp:130]   --->   Operation 31 'select' 'select_ln130_1' <Predicate = (!icmp_ln130)> <Delay = 0.27> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln130 = trunc i3 %select_ln130_1" [gemm_systolic_array.cpp:130]   --->   Operation 32 'trunc' 'trunc_ln130' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.65ns)   --->   "%switch_ln92 = switch i2 %trunc_ln130, void %branch3.i.i, i2, void %branch0.i.i, i2, void %branch1.i.i, i2, void %branch2.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 33 'switch' 'switch_ln92' <Predicate = (!icmp_ln130)> <Delay = 0.65>
+
+State 3 <SV = 2> <Delay = 1.59>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln130 = zext i3 %select_ln130_1" [gemm_systolic_array.cpp:130]   --->   Operation 34 'zext' 'zext_ln130' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.33ns)   --->   "%add_ln130_1 = add i4 %tmp_1, i4 %zext_ln130" [gemm_systolic_array.cpp:130]   --->   Operation 35 'add' 'add_ln130_1' <Predicate = (!icmp_ln130)> <Delay = 0.33> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln132 = zext i3 %select_ln130" [gemm_systolic_array.cpp:132]   --->   Operation 36 'zext' 'zext_ln132' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (1.21ns)   --->   "%block_C_drainer_2_V_V11_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_2_V_V11" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 37 'read' 'block_C_drainer_2_V_V11_read' <Predicate = (!icmp_ln130 & trunc_ln130 == 2)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 3> <FIFO>
+ST_3 : Operation 38 [1/1] (0.63ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 38 'br' 'br_ln92' <Predicate = (!icmp_ln130 & trunc_ln130 == 2)> <Delay = 0.63>
+ST_3 : Operation 39 [1/1] (1.21ns)   --->   "%block_C_drainer_1_V_V10_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_1_V_V10" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 39 'read' 'block_C_drainer_1_V_V10_read' <Predicate = (!icmp_ln130 & trunc_ln130 == 1)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 3> <FIFO>
+ST_3 : Operation 40 [1/1] (0.63ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 40 'br' 'br_ln92' <Predicate = (!icmp_ln130 & trunc_ln130 == 1)> <Delay = 0.63>
+ST_3 : Operation 41 [1/1] (1.21ns)   --->   "%block_C_drainer_0_V_V9_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_0_V_V9" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 41 'read' 'block_C_drainer_0_V_V9_read' <Predicate = (!icmp_ln130 & trunc_ln130 == 0)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 3> <FIFO>
+ST_3 : Operation 42 [1/1] (0.63ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 42 'br' 'br_ln92' <Predicate = (!icmp_ln130 & trunc_ln130 == 0)> <Delay = 0.63>
+ST_3 : Operation 43 [1/1] (1.21ns)   --->   "%block_C_drainer_3_V_V12_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P, i24 %block_C_drainer_3_V_V12" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 43 'read' 'block_C_drainer_3_V_V12_read' <Predicate = (!icmp_ln130 & trunc_ln130 == 3)> <Delay = 1.21> <Core = "FIFO">   --->   Core 19 'FIFO' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 3> <FIFO>
+ST_3 : Operation 44 [1/1] (0.63ns)   --->   "%br_ln92 = br void %_ZN13ap_fixed_baseILi25ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi24ELi8ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i63.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 44 'br' 'br_ln92' <Predicate = (!icmp_ln130 & trunc_ln130 == 3)> <Delay = 0.63>
+ST_3 : Operation 45 [1/1] (0.43ns)   --->   "%add_ln134 = add i6 %tmp, i6 %zext_ln132" [gemm_systolic_array.cpp:134]   --->   Operation 45 'add' 'add_ln134' <Predicate = (!icmp_ln130)> <Delay = 0.43> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i4.i6, i4 %add_ln130_1, i6 %add_ln134"   --->   Operation 46 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln657 = zext i10 %tmp_2"   --->   Operation 47 'zext' 'zext_ln657' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%v68_V_addr = getelementptr i24 %v68_V, i64, i64 %zext_ln657"   --->   Operation 48 'getelementptr' 'v68_V_addr' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 49 [2/2] (1.15ns)   --->   "%v68_V_load = load i10 %v68_V_addr"   --->   Operation 49 'load' 'v68_V_load' <Predicate = (!icmp_ln130)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 768> <RAM>
+ST_3 : Operation 50 [1/1] (0.26ns)   --->   "%add_ln132 = add i3 %select_ln130, i3" [gemm_systolic_array.cpp:132]   --->   Operation 50 'add' 'add_ln132' <Predicate = (!icmp_ln130)> <Delay = 0.26> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.92>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%specloopname_ln130 = specloopname void @_ssdm_op_SpecLoopName, void @store_block_C_L_str" [gemm_systolic_array.cpp:130]   --->   Operation 51 'specloopname' 'specloopname_ln130' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 52 'speclooptripcount' 'empty' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%specpipeline_ln132 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_20" [gemm_systolic_array.cpp:132]   --->   Operation 53 'specpipeline' 'specpipeline_ln132' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%p_0 = phi i24 %block_C_drainer_3_V_V12_read, void %branch3.i.i, i24 %block_C_drainer_2_V_V11_read, void %branch2.i.i, i24 %block_C_drainer_1_V_V10_read, void %branch1.i.i, i24 %block_C_drainer_0_V_V9_read, void %branch0.i.i" [/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vitis/2019.2/common/technology/autopilot/hls_stream_39.h:92]   --->   Operation 54 'phi' 'p_0' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_4 : Operation 55 [1/2] (1.15ns)   --->   "%v68_V_load = load i10 %v68_V_addr"   --->   Operation 55 'load' 'v68_V_load' <Predicate = (!icmp_ln130)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 768> <RAM>
+ST_4 : Operation 56 [1/1] (0.61ns)   --->   "%add_ln657 = add i24 %v68_V_load, i24 %p_0"   --->   Operation 56 'add' 'add_ln657' <Predicate = (!icmp_ln130)> <Delay = 0.61> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (1.15ns)   --->   "%store_ln657 = store i24 %add_ln657, i10 %v68_V_addr, i24 %v68_V_load"   --->   Operation 57 'store' 'store_ln657' <Predicate = (!icmp_ln130)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 768> <RAM>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln132 = br void" [gemm_systolic_array.cpp:132]   --->   Operation 58 'br' 'br_ln132' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 59 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.22ns
+The critical path consists of the following:
+	fifo read on port 'jj' (gemm_systolic_array.cpp:112) [14]  (1.22 ns)
+
+ <State 2>: 1.43ns
+The critical path consists of the following:
+	'phi' operation ('j', gemm_systolic_array.cpp:132) with incoming values : ('add_ln132', gemm_systolic_array.cpp:132) [26]  (0 ns)
+	'icmp' operation ('icmp_ln132', gemm_systolic_array.cpp:132) [35]  (0.5 ns)
+	'select' operation ('select_ln130_1', gemm_systolic_array.cpp:130) [37]  (0.278 ns)
+	blocking operation 0.656 ns on control path)
+
+ <State 3>: 1.59ns
+The critical path consists of the following:
+	'add' operation ('add_ln134', gemm_systolic_array.cpp:134) [58]  (0.434 ns)
+	'getelementptr' operation ('v68_V_addr') [61]  (0 ns)
+	'load' operation ('v68_V_load') on array 'v68_V' [62]  (1.16 ns)
+
+ <State 4>: 2.93ns
+The critical path consists of the following:
+	'load' operation ('v68_V_load') on array 'v68_V' [62]  (1.16 ns)
+	'add' operation ('add_ln657') [63]  (0.613 ns)
+	'store' operation ('store_ln657') of variable 'add_ln657' on array 'v68_V' [64]  (1.16 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
