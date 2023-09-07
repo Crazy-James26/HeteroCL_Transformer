@@ -1,0 +1,480 @@
+
+*** Running vivado
+    with args -log bd_58f6_xsdbm_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_58f6_xsdbm_0.tcl
+
+
+****** Vivado v2022.1.2 (64-bit)
+  **** SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+  **** IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source bd_58f6_xsdbm_0.tcl -notrace
+INFO: Dispatch client connection id - 38839
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/xilinx/2022.1/Vitis/2022.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2022.1/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axi_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axis_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:pipeline_reg:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/pipeline_reg_v1_0' will take precedence over the same IP in location /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/pipeline_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:shell_utils_build_info:1.0'. The one found in IP location '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/shell_utils_build_info_v1_0' will take precedence over the same IP in the Xilinx installed IP.
+Command: synth_design -top bd_58f6_xsdbm_0 -part xcu280-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13541
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/opt/xilinx/2022.1/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3816.285 ; gain = 333.703 ; free physical = 17413 ; free virtual = 177941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_58f6_xsdbm_0' [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/synth/bd_58f6_xsdbm_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [/opt/xilinx/2022.1/Vivado/2022.1/scripts/rt/data/unisim_comp.v:27836]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [/opt/xilinx/2022.1/Vivado/2022.1/scripts/rt/data/unisim_comp.v:27836]
+INFO: [Synth 8-6155] done synthesizing module 'bd_58f6_xsdbm_0' (0#1) [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/synth/bd_58f6_xsdbm_0.v:53]
+WARNING: [Synth 8-3848] Net update_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:1]
+WARNING: [Synth 8-3848] Net capture_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:2]
+WARNING: [Synth 8-3848] Net reset_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:3]
+WARNING: [Synth 8-3848] Net runtest_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:4]
+WARNING: [Synth 8-3848] Net tms_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:5]
+WARNING: [Synth 8-3848] Net tck_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:6]
+WARNING: [Synth 8-3848] Net tdi_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:7]
+WARNING: [Synth 8-3848] Net sel_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:8]
+WARNING: [Synth 8-3848] Net shift_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:9]
+WARNING: [Synth 8-3848] Net drck_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:10]
+WARNING: [Synth 8-3848] Net update_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:12]
+WARNING: [Synth 8-3848] Net capture_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:13]
+WARNING: [Synth 8-3848] Net reset_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:14]
+WARNING: [Synth 8-3848] Net runtest_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:15]
+WARNING: [Synth 8-3848] Net tms_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:16]
+WARNING: [Synth 8-3848] Net tck_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:17]
+WARNING: [Synth 8-3848] Net tdi_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:18]
+WARNING: [Synth 8-3848] Net sel_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:19]
+WARNING: [Synth 8-3848] Net shift_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:20]
+WARNING: [Synth 8-3848] Net drck_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:21]
+WARNING: [Synth 8-3848] Net update_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:23]
+WARNING: [Synth 8-3848] Net capture_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:24]
+WARNING: [Synth 8-3848] Net reset_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:25]
+WARNING: [Synth 8-3848] Net runtest_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:26]
+WARNING: [Synth 8-3848] Net tms_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:27]
+WARNING: [Synth 8-3848] Net tck_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:28]
+WARNING: [Synth 8-3848] Net tdi_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:29]
+WARNING: [Synth 8-3848] Net sel_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:30]
+WARNING: [Synth 8-3848] Net shift_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:31]
+WARNING: [Synth 8-3848] Net drck_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:32]
+WARNING: [Synth 8-3848] Net update_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:34]
+WARNING: [Synth 8-3848] Net capture_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:35]
+WARNING: [Synth 8-3848] Net reset_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:36]
+WARNING: [Synth 8-3848] Net runtest_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:37]
+WARNING: [Synth 8-3848] Net tms_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:38]
+WARNING: [Synth 8-3848] Net tck_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:39]
+WARNING: [Synth 8-3848] Net tdi_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:40]
+WARNING: [Synth 8-3848] Net sel_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:41]
+WARNING: [Synth 8-3848] Net shift_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:42]
+WARNING: [Synth 8-3848] Net drck_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:43]
+WARNING: [Synth 8-3848] Net update_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:45]
+WARNING: [Synth 8-3848] Net capture_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:46]
+WARNING: [Synth 8-3848] Net reset_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:47]
+WARNING: [Synth 8-3848] Net runtest_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:48]
+WARNING: [Synth 8-3848] Net tms_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:49]
+WARNING: [Synth 8-3848] Net tck_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:50]
+WARNING: [Synth 8-3848] Net tdi_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:51]
+WARNING: [Synth 8-3848] Net sel_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:52]
+WARNING: [Synth 8-3848] Net shift_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:53]
+WARNING: [Synth 8-3848] Net drck_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:54]
+WARNING: [Synth 8-3848] Net update_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:56]
+WARNING: [Synth 8-3848] Net capture_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:57]
+WARNING: [Synth 8-3848] Net reset_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:58]
+WARNING: [Synth 8-3848] Net runtest_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:59]
+WARNING: [Synth 8-3848] Net tms_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:60]
+WARNING: [Synth 8-3848] Net tck_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:61]
+WARNING: [Synth 8-3848] Net tdi_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:62]
+WARNING: [Synth 8-3848] Net sel_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:63]
+WARNING: [Synth 8-3848] Net shift_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:64]
+WARNING: [Synth 8-3848] Net drck_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:65]
+WARNING: [Synth 8-3848] Net update_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:67]
+WARNING: [Synth 8-3848] Net capture_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:68]
+WARNING: [Synth 8-3848] Net reset_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:69]
+WARNING: [Synth 8-3848] Net runtest_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:70]
+WARNING: [Synth 8-3848] Net tms_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:71]
+WARNING: [Synth 8-3848] Net tck_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:72]
+WARNING: [Synth 8-3848] Net tdi_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:73]
+WARNING: [Synth 8-3848] Net sel_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:74]
+WARNING: [Synth 8-3848] Net shift_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:75]
+WARNING: [Synth 8-3848] Net drck_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:76]
+WARNING: [Synth 8-3848] Net update_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:78]
+WARNING: [Synth 8-3848] Net capture_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:79]
+WARNING: [Synth 8-3848] Net reset_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:80]
+WARNING: [Synth 8-3848] Net runtest_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:81]
+WARNING: [Synth 8-3848] Net tms_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:82]
+WARNING: [Synth 8-3848] Net tck_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:83]
+WARNING: [Synth 8-3848] Net tdi_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:84]
+WARNING: [Synth 8-3848] Net sel_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:85]
+WARNING: [Synth 8-3848] Net shift_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:86]
+WARNING: [Synth 8-3848] Net drck_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:87]
+WARNING: [Synth 8-3848] Net update_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:89]
+WARNING: [Synth 8-3848] Net capture_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:90]
+WARNING: [Synth 8-3848] Net reset_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:91]
+WARNING: [Synth 8-3848] Net runtest_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:92]
+WARNING: [Synth 8-3848] Net tms_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:93]
+WARNING: [Synth 8-3848] Net tck_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:94]
+WARNING: [Synth 8-3848] Net tdi_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:95]
+WARNING: [Synth 8-3848] Net sel_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:96]
+WARNING: [Synth 8-3848] Net shift_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:97]
+WARNING: [Synth 8-3848] Net drck_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:98]
+WARNING: [Synth 8-3848] Net update_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:100]
+WARNING: [Synth 8-3848] Net capture_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:101]
+WARNING: [Synth 8-3848] Net reset_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:102]
+WARNING: [Synth 8-3848] Net runtest_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:103]
+WARNING: [Synth 8-3848] Net tms_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:104]
+WARNING: [Synth 8-3848] Net tck_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:105]
+WARNING: [Synth 8-3848] Net tdi_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:106]
+WARNING: [Synth 8-3848] Net sel_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:107]
+WARNING: [Synth 8-3848] Net shift_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:108]
+WARNING: [Synth 8-3848] Net drck_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/b205/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:109]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port update_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_0 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_1 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_2 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_3 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_4 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_5 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_6 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_7 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_8 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port capture_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port runtest_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shift_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+WARNING: [Synth 8-7129] Port drck_9 in module xsdbm_v3_0_0_xsdbm_id is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3981.133 ; gain = 498.551 ; free physical = 17028 ; free virtual = 177558
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3998.941 ; gain = 516.359 ; free physical = 17082 ; free virtual = 177612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3998.941 ; gain = 516.359 ; free physical = 17083 ; free virtual = 177613
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4004.879 ; gain = 0.000 ; free physical = 17085 ; free virtual = 177614
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/bd_58f6_xsdbm_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 4076.504 ; gain = 0.000 ; free physical = 17168 ; free virtual = 177707
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/bd_58f6_xsdbm_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/constraints/xsdbm_cc_early.xdc] for cell 'inst'
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/constraints/xsdbm_cc_early.xdc] for cell 'inst'
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_58f6_xsdbm_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_58f6_xsdbm_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/constraints/xsdbm_cc_late.xdc] for cell 'inst'
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/constraints/xsdbm_cc_late.xdc] for cell 'inst'
+Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/constraints/xsdbm_gc_late.xdc] for cell 'inst'
+Finished Parsing XDC File [/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_cmp_0/bd_2/ip/ip_0/constraints/xsdbm_gc_late.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4076.504 ; gain = 0.000 ; free physical = 17166 ; free virtual = 177705
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4076.508 ; gain = 0.004 ; free physical = 17164 ; free virtual = 177703
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 4076.508 ; gain = 593.926 ; free physical = 16550 ; free virtual = 177117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 4076.508 ; gain = 593.926 ; free physical = 16549 ; free virtual = 177116
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_58f6_xsdbm_0_synth_1/dont_touch.xdc, line 6).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 4076.508 ; gain = 593.926 ; free physical = 16545 ; free virtual = 177111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 4076.508 ; gain = 593.926 ; free physical = 16450 ; free virtual = 177017
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4076.508 ; gain = 593.926 ; free physical = 16070 ; free virtual = 176642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4269.914 ; gain = 787.332 ; free physical = 13802 ; free virtual = 174370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4269.914 ; gain = 787.332 ; free physical = 13801 ; free virtual = 174369
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4289.945 ; gain = 807.363 ; free physical = 13802 ; free virtual = 174370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin CAPTURE_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin UPDATE_temp_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin UPDATE_temp_i_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin UPDATE_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin SHIFT_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin RESET_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin TDI_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin SEL_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin DRCK_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin TDO_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin RUNTEST_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin TCK_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin TMS_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin bscanid_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin id_state_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin id_state_inferred:in0[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14739 ; free virtual = 175304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14739 ; free virtual = 175305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14738 ; free virtual = 175303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14738 ; free virtual = 175303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14737 ; free virtual = 175302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14736 ; free virtual = 175302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |    47|
+|2     |FDRE |    11|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.887 ; gain = 813.305 ; free physical = 14736 ; free virtual = 175301
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 994 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 4295.887 ; gain = 735.738 ; free physical = 14774 ; free virtual = 175337
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 4295.891 ; gain = 813.305 ; free physical = 14772 ; free virtual = 175336
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4295.891 ; gain = 0.000 ; free physical = 14754 ; free virtual = 175317
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4370.207 ; gain = 0.000 ; free physical = 15633 ; free virtual = 176188
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8809a943
+INFO: [Common 17-83] Releasing license: Synthesis
+73 Infos, 207 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 4370.207 ; gain = 1338.141 ; free physical = 16168 ; free virtual = 176724
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_58f6_xsdbm_0_synth_1/bd_58f6_xsdbm_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_58f6_xsdbm_0, cache-ID = f0be558c9642b975
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_100mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/bd_58f6_xsdbm_0_synth_1/bd_58f6_xsdbm_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_58f6_xsdbm_0_utilization_synth.rpt -pb bd_58f6_xsdbm_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  7 12:55:17 2023...
