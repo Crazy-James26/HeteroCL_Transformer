@@ -175,7 +175,7 @@ def top():
     return s
 
 if __name__ == '__main__':
-    target = "FPGA"
+    target = "llvm"
     s = top()
 
     if(target=="vhls"):
@@ -226,7 +226,10 @@ if __name__ == '__main__':
         to_file(test_outp, './results/bl_test_output.txt')
 
         # python computation
+        begin = time.time()
         golden_outp = bert_layer(inp, params)
+        end = time.time()
+        print("NumPy runtime: {} sec".format(end - begin))
         print("golden: \n", golden_outp)
         to_file(golden_outp, './results/bl_golden_output.txt')
 
