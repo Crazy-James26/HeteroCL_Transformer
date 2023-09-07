@@ -223,4 +223,3 @@ INFO: [v++ 60-586] Created _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.
 INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
     vitis_analyzer /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo.compile_summary 
 INFO: [v++ 60-791] Total elapsed time: 2h 29m 35s
-INFO: [v++ 60-1653] Closing dispatch client.
