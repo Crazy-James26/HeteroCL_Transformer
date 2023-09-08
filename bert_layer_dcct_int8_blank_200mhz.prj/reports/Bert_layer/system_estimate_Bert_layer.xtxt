@@ -1,0 +1,42 @@
+===============================================================================
+Version:    v++ v2022.1.2 (64-bit)
+Build:      SW Build 3602371 on 2022-08-02-23:13:43
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Sep  7 22:41:26 2023
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             Bert_layer
+Target Device:           xilinx:u280:gen3x16_xdma_1:202211.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+Bert_layer   c     fpga0:OCL_REGION_0  Bert_layer      1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     Bert_layer
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                                   Target Frequency  Estimated Frequency
+------------  -----------  ------------------------------------------------------------  ----------------  -------------------
+Bert_layer_1  Bert_layer   Bert_layer_Pipeline_l_S_result29_result29_l_0_l_result29_l_1  300.300293        411.015198
+Bert_layer_1  Bert_layer   Bert_layer                                                    300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                                   Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ------------------------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+Bert_layer_1  Bert_layer   Bert_layer_Pipeline_l_S_result29_result29_l_0_l_result29_l_1  9220            9220           9220          9220            30.730 us        30.730 us       30.730 us
+Bert_layer_1  Bert_layer   Bert_layer                                                    9292            9291           9291          9291            30.967 us        30.967 us       30.967 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                                   FF    LUT    DSP  BRAM  URAM
+------------  -----------  ------------------------------------------------------------  ----  -----  ---  ----  ----
+Bert_layer_1  Bert_layer   Bert_layer_Pipeline_l_S_result29_result29_l_0_l_result29_l_1  1484  1096   0    24    0
+Bert_layer_1  Bert_layer   Bert_layer                                                    8322  13402  0    24    0
+-------------------------------------------------------------------------------

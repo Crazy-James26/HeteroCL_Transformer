@@ -1,0 +1,581 @@
+<ENTRY>
+{
+ "thisFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:17 2023",
+ "timestampMillis": "1694140517746",
+ "buildStep": {
+  "cmdId": "63d48d54-a930-4754-8b36-f143f9d2407e",
+  "name": "v++",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/link.steps.log",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -g --save-temps --kernel_frequency 200 --optimize 3 -t sw_emu --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin _x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo ",
+  "args": [
+   "-l",
+   "-g",
+   "--save-temps",
+   "--kernel_frequency",
+   "200",
+   "--optimize",
+   "3",
+   "-t",
+   "sw_emu",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--temp_dir",
+   "./_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-o./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+   "_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:17 2023",
+ "timestampMillis": "1694140517747",
+ "status": {
+  "cmdId": "63d48d54-a930-4754-8b36-f143f9d2407e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Sep  7 22:35:26 2023",
+ "timestampMillis": "1694140526943",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_SW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "Bert_layer.link",
+    "file": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "Bert_layer",
+     "file": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/Bert_layer/Bert_layer/cpu_sources/kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "Bert_layer_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1.2. SW Build 3602371 on 2022-08-02-23:13:43"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Sep  7 22:35:27 2023",
+ "timestampMillis": "1694140527479",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:27 2023",
+ "timestampMillis": "1694140527481",
+ "buildStep": {
+  "cmdId": "037c05db-f5c2-42f8-88d8-ab357081e682",
+  "name": "regiongen",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_regiongen.log",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/../runtime/bin/regiongen_new -v -m /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.rtd -t alg -o xcl_top",
+  "args": [
+   "-v",
+   "-m",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml",
+   "-r",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.rtd",
+   "-t",
+   "alg",
+   "-o",
+   "xcl_top"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:27 2023",
+ "timestampMillis": "1694140527481",
+ "status": {
+  "cmdId": "037c05db-f5c2-42f8-88d8-ab357081e682",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:29 2023",
+ "timestampMillis": "1694140529298",
+ "status": {
+  "cmdId": "037c05db-f5c2-42f8-88d8-ab357081e682",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:29 2023",
+ "timestampMillis": "1694140529318",
+ "buildStep": {
+  "cmdId": "9aea532f-307a-4de3-bd67-b55a700a72a2",
+  "name": "gcc",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer/Bert_layer_kernel_gcc.log",
+  "commandLine": "/opt/xilinx/2022.1/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/gcc -I . -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../include -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl -I /opt/xilinx/2022.1/Vitis/2022.1/bin/../common/technology/autopilot/opencl -I /opt/xilinx/2022.1/Vitis/2022.1/bin/../data/emulation/include -std=c++14 -g -I /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj -g -fPIC -g -c -DHLS_STREAM_THREAD_SAFE -MD -MT obj/kernel.o -MP -MF obj/kernel.Cd /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/Bert_layer/Bert_layer/cpu_sources/kernel.cpp -o obj/kernel.o",
+  "args": [
+   "-I",
+   ".",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../include",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis/2022.1/bin/../data/emulation/include",
+   "-std=c++14",
+   "-g",
+   "-I",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj",
+   "-g",
+   "-fPIC",
+   "-g",
+   "-c",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-MD",
+   "-MT",
+   "obj/kernel.o",
+   "-MP",
+   "-MF",
+   "obj/kernel.Cd",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/Bert_layer/Bert_layer/cpu_sources/kernel.cpp",
+   "-o",
+   "obj/kernel.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:29 2023",
+ "timestampMillis": "1694140529319",
+ "status": {
+  "cmdId": "9aea532f-307a-4de3-bd67-b55a700a72a2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:38 2023",
+ "timestampMillis": "1694140538938",
+ "status": {
+  "cmdId": "9aea532f-307a-4de3-bd67-b55a700a72a2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:38 2023",
+ "timestampMillis": "1694140538939",
+ "buildStep": {
+  "cmdId": "4a8d054f-9792-458d-8291-1ecced4a5600",
+  "name": "ar",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer/Bert_layer_ar.log",
+  "commandLine": "/opt/xilinx/2022.1/Vivado/2022.1/tps/lnx64/binutils-2.26/bin/ar -cr /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer/Bert_layer.csim_cu.a /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer/obj/kernel.o",
+  "args": [
+   "-cr",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer/Bert_layer.csim_cu.a",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer/obj/kernel.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:38 2023",
+ "timestampMillis": "1694140538940",
+ "status": {
+  "cmdId": "4a8d054f-9792-458d-8291-1ecced4a5600",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:39 2023",
+ "timestampMillis": "1694140539026",
+ "status": {
+  "cmdId": "4a8d054f-9792-458d-8291-1ecced4a5600",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:39 2023",
+ "timestampMillis": "1694140539044",
+ "buildStep": {
+  "cmdId": "3bf23619-cc4e-4284-8e55-430cd9712fb3",
+  "name": "g++",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xcl_top_gpp.log",
+  "commandLine": "/opt/xilinx/2022.1/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/g++ -I . -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../include -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl -I /opt/xilinx/2022.1/Vitis/2022.1/bin/../common/technology/autopilot/opencl -I /opt/xilinx/2022.1/Vitis/2022.1/bin/../data/emulation/include -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include -fPIC -g -DHLS_STREAM_THREAD_SAFE -std=c++14 -fpermissive -c -MD -MT obj/xcl_top.o -MP -MF obj/xcl_top.CXXd xcl_top.cpp -o obj/xcl_top.o",
+  "args": [
+   "-I",
+   ".",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../include",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis/2022.1/bin/../data/emulation/include",
+   "-I",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include",
+   "-fPIC",
+   "-g",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-std=c++14",
+   "-fpermissive",
+   "-c",
+   "-MD",
+   "-MT",
+   "obj/xcl_top.o",
+   "-MP",
+   "-MF",
+   "obj/xcl_top.CXXd",
+   "xcl_top.cpp",
+   "-o",
+   "obj/xcl_top.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:39 2023",
+ "timestampMillis": "1694140539044",
+ "status": {
+  "cmdId": "3bf23619-cc4e-4284-8e55-430cd9712fb3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:40 2023",
+ "timestampMillis": "1694140540905",
+ "status": {
+  "cmdId": "3bf23619-cc4e-4284-8e55-430cd9712fb3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:40 2023",
+ "timestampMillis": "1694140540907",
+ "buildStep": {
+  "cmdId": "4ebdb2dd-3264-4017-9a19-3f623ff42842",
+  "name": "g++",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_top_gpp.log",
+  "commandLine": "/opt/xilinx/2022.1/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/g++ -fPIC -DHLS_STREAM_THREAD_SAFE -std=c++14 -Wall -shared -Wl,--whole-archive,-soname,Bert_layer.link.so -o Bert_layer.link.so Bert_layer/Bert_layer.csim_cu.a obj/xcl_top.o -Wl,--no-whole-archive -Wl,--as-needed -L /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lib/lnx64.o -lhlsmathsim -L /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0 -lgmp -lmpfr -lIp_floating_point_v7_0_bitacc_cmodel -Wl,-rpath,/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0 -L /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fft_v9_1 -lIp_xfft_v9_1_bitacc_cmodel -L /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fir_v7_0 -lgmp -lIp_fir_compiler_v7_2_bitacc_cmodel -L /opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/lib/csim -lhlsmc++-GCC46 -L /opt/xilinx/2022.1/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/6.2.0/ -lgcov",
+  "args": [
+   "-fPIC",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-std=c++14",
+   "-Wall",
+   "-shared",
+   "-Wl,--whole-archive,-soname,Bert_layer.link.so",
+   "-o",
+   "Bert_layer.link.so",
+   "Bert_layer/Bert_layer.csim_cu.a",
+   "obj/xcl_top.o",
+   "-Wl,--no-whole-archive",
+   "-Wl,--as-needed",
+   "-L",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lib/lnx64.o",
+   "-lhlsmathsim",
+   "-L",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0",
+   "-lgmp",
+   "-lmpfr",
+   "-lIp_floating_point_v7_0_bitacc_cmodel",
+   "-Wl,-rpath,/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0",
+   "-L",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fft_v9_1",
+   "-lIp_xfft_v9_1_bitacc_cmodel",
+   "-L",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/tools/fir_v7_0",
+   "-lgmp",
+   "-lIp_fir_compiler_v7_2_bitacc_cmodel",
+   "-L",
+   "/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/../lnx64/lib/csim",
+   "-lhlsmc++-GCC46",
+   "-L",
+   "/opt/xilinx/2022.1/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/6.2.0/",
+   "-lgcov"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:40 2023",
+ "timestampMillis": "1694140540907",
+ "status": {
+  "cmdId": "4ebdb2dd-3264-4017-9a19-3f623ff42842",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541316",
+ "status": {
+  "cmdId": "4ebdb2dd-3264-4017-9a19-3f623ff42842",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541526",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541531",
+ "buildStep": {
+  "cmdId": "c2783861-4351-40ac-abbe-8b053ba846b8",
+  "name": "xclbinutil",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xclbinutil.log",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/xclbinutil --add-section BITSTREAM:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.so --force --target sw_emu --add-section :JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.rtd --append-section :JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xml.rtd --add-section BUILD_METADATA:JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml --add-section DEBUG_DATA:RAW:/dev/null --add-section SYSTEM_METADATA:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/systemDiagramModel.json --output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.so",
+   "--force",
+   "--target",
+   "sw_emu",
+   "--add-section",
+   ":JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.rtd",
+   "--append-section",
+   ":JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml",
+   "--add-section",
+   "DEBUG_DATA:RAW:/dev/null",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/systemDiagramModel.json",
+   "--output",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541532",
+ "status": {
+  "cmdId": "c2783861-4351-40ac-abbe-8b053ba846b8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541899",
+ "status": {
+  "cmdId": "c2783861-4351-40ac-abbe-8b053ba846b8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541900",
+ "buildStep": {
+  "cmdId": "2eb6d7c8-50f3-4cea-b3bc-d3f8a67cc99b",
+  "name": "xclbinutil",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.info",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/xclbinutil --quiet --info --input /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "--input",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:41 2023",
+ "timestampMillis": "1694140541901",
+ "status": {
+  "cmdId": "2eb6d7c8-50f3-4cea-b3bc-d3f8a67cc99b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:42 2023",
+ "timestampMillis": "1694140542116",
+ "status": {
+  "cmdId": "2eb6d7c8-50f3-4cea-b3bc-d3f8a67cc99b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Sep  7 22:35:42 2023",
+ "timestampMillis": "1694140542268",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Sep  7 22:35:42 2023",
+ "timestampMillis": "1694140542270",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/v++_link_Bert_layer.link_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Sep  7 22:35:42 2023",
+ "timestampMillis": "1694140542272",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_blank_200mhz.prj/_x.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Sep  7 22:35:42 2023",
+ "timestampMillis": "1694140542273",
+ "status": {
+  "cmdId": "63d48d54-a930-4754-8b36-f143f9d2407e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
