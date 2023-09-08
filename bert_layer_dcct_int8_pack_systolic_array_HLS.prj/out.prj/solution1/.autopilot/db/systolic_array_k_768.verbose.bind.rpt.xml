@@ -1,0 +1,193 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'systolic_array_k_768'" level="0">
+<item name = "Date">Thu Sep  7 08:24:15 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">out.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.268 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">796, 796, 7.960 us, 7.960 us, 774, 774, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_systolic_array_k_768_Loop_data_load_proc13_fu_2262">systolic_array_k_768_Loop_data_load_proc13, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
+<column name="grp_PE_8_4_pack_fu_2338">PE_8_4_pack, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_4_fu_2346">PE_8_4_pack_4, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_15_fu_2354">PE_8_4_pack_15, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_5_fu_2362">PE_8_4_pack_5, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_16_fu_2370">PE_8_4_pack_16, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_27_fu_2378">PE_8_4_pack_27, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_6_fu_2386">PE_8_4_pack_6, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_17_fu_2394">PE_8_4_pack_17, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_28_fu_2402">PE_8_4_pack_28, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_39_fu_2410">PE_8_4_pack_39, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_7_fu_2418">PE_8_4_pack_7, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_18_fu_2426">PE_8_4_pack_18, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_29_fu_2434">PE_8_4_pack_29, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_40_fu_2442">PE_8_4_pack_40, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_51_fu_2450">PE_8_4_pack_51, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_8_fu_2458">PE_8_4_pack_8, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_19_fu_2466">PE_8_4_pack_19, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_30_fu_2474">PE_8_4_pack_30, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_41_fu_2482">PE_8_4_pack_41, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_52_fu_2490">PE_8_4_pack_52, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_63_fu_2498">PE_8_4_pack_63, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_9_fu_2506">PE_8_4_pack_9, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_20_fu_2514">PE_8_4_pack_20, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_31_fu_2522">PE_8_4_pack_31, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_42_fu_2530">PE_8_4_pack_42, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_53_fu_2538">PE_8_4_pack_53, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_64_fu_2546">PE_8_4_pack_64, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_75_fu_2554">PE_8_4_pack_75, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_10_fu_2562">PE_8_4_pack_10, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_21_fu_2570">PE_8_4_pack_21, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_32_fu_2578">PE_8_4_pack_32, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_43_fu_2586">PE_8_4_pack_43, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_54_fu_2594">PE_8_4_pack_54, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_65_fu_2602">PE_8_4_pack_65, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_76_fu_2610">PE_8_4_pack_76, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_87_fu_2618">PE_8_4_pack_87, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_11_fu_2626">PE_8_4_pack_11, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_22_fu_2634">PE_8_4_pack_22, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_33_fu_2642">PE_8_4_pack_33, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_44_fu_2650">PE_8_4_pack_44, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_55_fu_2658">PE_8_4_pack_55, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_66_fu_2666">PE_8_4_pack_66, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_77_fu_2674">PE_8_4_pack_77, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_88_fu_2682">PE_8_4_pack_88, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_99_fu_2690">PE_8_4_pack_99, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_12_fu_2698">PE_8_4_pack_12, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_23_fu_2706">PE_8_4_pack_23, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_34_fu_2714">PE_8_4_pack_34, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_45_fu_2722">PE_8_4_pack_45, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_56_fu_2730">PE_8_4_pack_56, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_67_fu_2738">PE_8_4_pack_67, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_78_fu_2746">PE_8_4_pack_78, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_89_fu_2754">PE_8_4_pack_89, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_100_fu_2762">PE_8_4_pack_100, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_111_fu_2770">PE_8_4_pack_111, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_13_fu_2778">PE_8_4_pack_13, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_24_fu_2786">PE_8_4_pack_24, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_35_fu_2794">PE_8_4_pack_35, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_46_fu_2802">PE_8_4_pack_46, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_57_fu_2810">PE_8_4_pack_57, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_68_fu_2818">PE_8_4_pack_68, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_79_fu_2826">PE_8_4_pack_79, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_90_fu_2834">PE_8_4_pack_90, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_101_fu_2842">PE_8_4_pack_101, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_112_fu_2850">PE_8_4_pack_112, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_123_fu_2858">PE_8_4_pack_123, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_14_fu_2866">PE_8_4_pack_14, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_25_fu_2874">PE_8_4_pack_25, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_36_fu_2882">PE_8_4_pack_36, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_47_fu_2890">PE_8_4_pack_47, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_58_fu_2898">PE_8_4_pack_58, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_69_fu_2906">PE_8_4_pack_69, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_80_fu_2914">PE_8_4_pack_80, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_91_fu_2922">PE_8_4_pack_91, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_102_fu_2930">PE_8_4_pack_102, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_113_fu_2938">PE_8_4_pack_113, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_124_fu_2946">PE_8_4_pack_124, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_135_fu_2954">PE_8_4_pack_135, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_26_fu_2962">PE_8_4_pack_26, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_37_fu_2970">PE_8_4_pack_37, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_48_fu_2978">PE_8_4_pack_48, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_59_fu_2986">PE_8_4_pack_59, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_70_fu_2994">PE_8_4_pack_70, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_81_fu_3002">PE_8_4_pack_81, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_92_fu_3010">PE_8_4_pack_92, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_103_fu_3018">PE_8_4_pack_103, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_114_fu_3026">PE_8_4_pack_114, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_125_fu_3034">PE_8_4_pack_125, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_136_fu_3042">PE_8_4_pack_136, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_38_fu_3050">PE_8_4_pack_38, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_49_fu_3058">PE_8_4_pack_49, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_60_fu_3066">PE_8_4_pack_60, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_71_fu_3074">PE_8_4_pack_71, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_82_fu_3082">PE_8_4_pack_82, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_93_fu_3090">PE_8_4_pack_93, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_104_fu_3098">PE_8_4_pack_104, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_115_fu_3106">PE_8_4_pack_115, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_126_fu_3114">PE_8_4_pack_126, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_137_fu_3122">PE_8_4_pack_137, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_50_fu_3130">PE_8_4_pack_50, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_61_fu_3138">PE_8_4_pack_61, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_72_fu_3146">PE_8_4_pack_72, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_83_fu_3154">PE_8_4_pack_83, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_94_fu_3162">PE_8_4_pack_94, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_105_fu_3170">PE_8_4_pack_105, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_116_fu_3178">PE_8_4_pack_116, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_127_fu_3186">PE_8_4_pack_127, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_138_fu_3194">PE_8_4_pack_138, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_62_fu_3202">PE_8_4_pack_62, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_73_fu_3210">PE_8_4_pack_73, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_84_fu_3218">PE_8_4_pack_84, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_95_fu_3226">PE_8_4_pack_95, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_106_fu_3234">PE_8_4_pack_106, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_117_fu_3242">PE_8_4_pack_117, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_128_fu_3250">PE_8_4_pack_128, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_139_fu_3258">PE_8_4_pack_139, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_74_fu_3266">PE_8_4_pack_74, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_85_fu_3274">PE_8_4_pack_85, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_96_fu_3282">PE_8_4_pack_96, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_107_fu_3290">PE_8_4_pack_107, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_118_fu_3298">PE_8_4_pack_118, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_129_fu_3306">PE_8_4_pack_129, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_140_fu_3314">PE_8_4_pack_140, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_86_fu_3322">PE_8_4_pack_86, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_97_fu_3330">PE_8_4_pack_97, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_108_fu_3338">PE_8_4_pack_108, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_119_fu_3346">PE_8_4_pack_119, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_130_fu_3354">PE_8_4_pack_130, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_141_fu_3362">PE_8_4_pack_141, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_98_fu_3370">PE_8_4_pack_98, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_109_fu_3378">PE_8_4_pack_109, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_120_fu_3386">PE_8_4_pack_120, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_131_fu_3394">PE_8_4_pack_131, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_142_fu_3402">PE_8_4_pack_142, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_110_fu_3410">PE_8_4_pack_110, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_121_fu_3418">PE_8_4_pack_121, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_132_fu_3426">PE_8_4_pack_132, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_143_fu_3434">PE_8_4_pack_143, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_122_fu_3442">PE_8_4_pack_122, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_133_fu_3450">PE_8_4_pack_133, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_144_fu_3458">PE_8_4_pack_144, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_134_fu_3466">PE_8_4_pack_134, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_145_fu_3474">PE_8_4_pack_145, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="grp_PE_8_4_pack_146_fu_3482">PE_8_4_pack_146, 773, 773, 7.730 us, 7.730 us, 773, 773, no</column>
+<column name="call_ret_systolic_array_k_768_Block_for_end127_proc_fu_3490">systolic_array_k_768_Block_for_end127_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_systolic_array_k_768_Loop_data_drain_AB_proc14_fu_3639">systolic_array_k_768_Loop_data_drain_AB_proc14, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
+<column name="grp_systolic_array_k_768_Loop_data_drain_C_proc_fu_3667">systolic_array_k_768_Loop_data_drain_C_proc, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

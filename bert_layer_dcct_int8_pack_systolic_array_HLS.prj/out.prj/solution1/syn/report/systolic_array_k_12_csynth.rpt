@@ -1,0 +1,354 @@
+
+
+================================================================
+== Vitis HLS Report for 'systolic_array_k_12'
+================================================================
+* Date:           Thu Sep  7 08:50:10 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.268 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       24|       24|  0.240 us|  0.240 us|   18|   18|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                  |                                               |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                     Instance                     |                     Module                    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +--------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |systolic_array_k_12_Loop_data_load_proc17_U0      |systolic_array_k_12_Loop_data_load_proc17      |       14|       14|   0.140 us|   0.140 us|   14|   14|       no|
+        |PE_8_8_162_U0                                     |PE_8_8_162                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_163_U0                                     |PE_8_8_163                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_166_U0                                     |PE_8_8_166                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_164_U0                                     |PE_8_8_164                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_167_U0                                     |PE_8_8_167                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_170_U0                                     |PE_8_8_170                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_165_U0                                     |PE_8_8_165                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_168_U0                                     |PE_8_8_168                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_171_U0                                     |PE_8_8_171                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_174_U0                                     |PE_8_8_174                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_169_U0                                     |PE_8_8_169                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_172_U0                                     |PE_8_8_172                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_175_U0                                     |PE_8_8_175                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_173_U0                                     |PE_8_8_173                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_176_U0                                     |PE_8_8_176                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |PE_8_8_177_U0                                     |PE_8_8_177                                     |       17|       17|   0.170 us|   0.170 us|   17|   17|       no|
+        |systolic_array_k_12_Block_for_end127_proc_U0      |systolic_array_k_12_Block_for_end127_proc      |        0|        0|       0 ns|       0 ns|    0|    0|       no|
+        |systolic_array_k_12_Loop_data_drain_AB_proc18_U0  |systolic_array_k_12_Loop_data_drain_AB_proc18  |       14|       14|   0.140 us|   0.140 us|   14|   14|       no|
+        |systolic_array_k_12_Loop_data_drain_C_proc_U0     |systolic_array_k_12_Loop_data_drain_C_proc     |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        +--------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     80|    -|
+|FIFO             |        -|    -|    7128|   4886|    -|
+|Instance         |        -|   16|    2592|   3351|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    144|    -|
+|Register         |        -|    -|      16|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|   16|    9736|   8461|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    7|       9|     15|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+    |                     Instance                     |                     Module                    | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+    |PE_8_8_162_U0                                     |PE_8_8_162                                     |        0|   1|  126|  161|    0|
+    |PE_8_8_163_U0                                     |PE_8_8_163                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_164_U0                                     |PE_8_8_164                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_165_U0                                     |PE_8_8_165                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_166_U0                                     |PE_8_8_166                                     |        0|   1|  126|  161|    0|
+    |PE_8_8_167_U0                                     |PE_8_8_167                                     |        0|   1|  126|  161|    0|
+    |PE_8_8_168_U0                                     |PE_8_8_168                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_169_U0                                     |PE_8_8_169                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_170_U0                                     |PE_8_8_170                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_171_U0                                     |PE_8_8_171                                     |        0|   1|  126|  161|    0|
+    |PE_8_8_172_U0                                     |PE_8_8_172                                     |        0|   1|  126|  161|    0|
+    |PE_8_8_173_U0                                     |PE_8_8_173                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_174_U0                                     |PE_8_8_174                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_175_U0                                     |PE_8_8_175                                     |        0|   1|  127|  170|    0|
+    |PE_8_8_176_U0                                     |PE_8_8_176                                     |        0|   1|  126|  161|    0|
+    |PE_8_8_177_U0                                     |PE_8_8_177                                     |        0|   1|  126|  161|    0|
+    |systolic_array_k_12_Block_for_end127_proc_U0      |systolic_array_k_12_Block_for_end127_proc      |        0|   0|  386|  155|    0|
+    |systolic_array_k_12_Loop_data_drain_AB_proc18_U0  |systolic_array_k_12_Loop_data_drain_AB_proc18  |        0|   0|    7|  138|    0|
+    |systolic_array_k_12_Loop_data_drain_C_proc_U0     |systolic_array_k_12_Loop_data_drain_C_proc     |        0|   0|  102|  180|    0|
+    |systolic_array_k_12_Loop_data_load_proc17_U0      |systolic_array_k_12_Loop_data_load_proc17      |        0|   0|   72|  221|    0|
+    +--------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                             |                                               |        0|  16| 2592| 3351|    0|
+    +--------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+    |            Name            | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+    |A_fifo_0_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_0_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_0_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_0_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_0_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_1_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_1_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_1_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_1_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_1_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_2_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_2_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_2_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_2_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_2_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_3_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_3_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_3_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_3_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |A_fifo_3_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_0_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_0_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_0_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_0_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_0_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_1_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_1_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_1_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_1_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_1_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_2_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_2_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_2_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_2_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_2_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_3_0_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_3_1_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_3_2_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_3_3_U                |        0|  99|   0|    -|     2|    8|       16|
+    |B_fifo_3_4_U                |        0|  99|   0|    -|     2|    8|       16|
+    |C_V_588_U                   |        0|  99|   0|    -|     7|   24|      168|
+    |C_V_588_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_589_U                   |        0|  99|   0|    -|     6|   24|      144|
+    |C_V_589_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_590_U                   |        0|  99|   0|    -|     5|   24|      120|
+    |C_V_590_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_591_U                   |        0|  99|   0|    -|     7|   24|      168|
+    |C_V_591_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_592_U                   |        0|  99|   0|    -|     6|   24|      144|
+    |C_V_592_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_593_U                   |        0|  99|   0|    -|     5|   24|      120|
+    |C_V_593_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_594_U                   |        0|  99|   0|    -|     4|   24|       96|
+    |C_V_594_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_595_U                   |        0|  99|   0|    -|     6|   24|      144|
+    |C_V_595_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_596_U                   |        0|  99|   0|    -|     5|   24|      120|
+    |C_V_596_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_597_U                   |        0|  99|   0|    -|     4|   24|       96|
+    |C_V_597_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_598_U                   |        0|  99|   0|    -|     3|   24|       72|
+    |C_V_598_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_599_U                   |        0|  99|   0|    -|     5|   24|      120|
+    |C_V_599_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_600_U                   |        0|  99|   0|    -|     4|   24|       96|
+    |C_V_600_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_601_U                   |        0|  99|   0|    -|     3|   24|       72|
+    |C_V_601_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_602_U                   |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_602_load_loc_channel_U  |        0|  99|   0|    -|     2|   24|       48|
+    |C_V_U                       |        0|  99|   0|    -|     8|   24|      192|
+    |C_V_load_loc_channel_U      |        0|  99|   0|    -|     2|   24|       48|
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                       |        0|7128|   0|    0|   192| 1088|     3328|
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                       Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------------------------+----------+----+---+----+------------+------------+
+    |PE_8_8_165_U0_start_full_n                                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_588_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_589_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_590_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_591_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_592_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_593_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_594_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_595_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_596_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_597_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_598_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_599_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_600_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_601_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_602_load_loc_channel                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_C_V_load_loc_channel                       |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                    |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                                           |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                                               |       and|   0|  0|   2|           1|           1|
+    |systolic_array_k_12_Block_for_end127_proc_U0_ap_continue   |       and|   0|  0|   2|           1|           1|
+    |systolic_array_k_12_Block_for_end127_proc_U0_ap_start      |       and|   0|  0|   2|           1|           1|
+    |systolic_array_k_12_Loop_data_drain_C_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
+    |systolic_array_k_12_Loop_data_load_proc17_U0_start_full_n  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_588_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_589_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_590_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_591_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_592_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_593_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_594_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_595_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_596_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_597_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_598_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_599_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_600_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_601_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_602_load_loc_channel             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_C_V_load_loc_channel                 |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                      |          |   0|  0|  80|          40|          40|
+    +-----------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_C_V_588_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_589_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_590_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_591_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_592_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_593_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_594_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_595_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_596_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_597_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_598_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_599_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_600_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_601_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_602_load_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_C_V_load_loc_channel      |   9|          2|    1|          2|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               | 144|         32|   16|         32|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------+---+----+-----+-----------+
+    |                        Name                        | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_C_V_588_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_589_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_590_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_591_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_592_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_593_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_594_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_595_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_596_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_597_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_598_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_599_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_600_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_601_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_602_load_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_C_V_load_loc_channel      |  1|   0|    1|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |Total                                               | 16|   0|   16|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+---------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++--------------------------+-----+-----+------------+---------------------+--------------+
+|block_A_loader_0_dout     |   in|    8|     ap_fifo|     block_A_loader_0|       pointer|
+|block_A_loader_0_empty_n  |   in|    1|     ap_fifo|     block_A_loader_0|       pointer|
+|block_A_loader_0_read     |  out|    1|     ap_fifo|     block_A_loader_0|       pointer|
+|block_A_loader_1_dout     |   in|    8|     ap_fifo|     block_A_loader_1|       pointer|
+|block_A_loader_1_empty_n  |   in|    1|     ap_fifo|     block_A_loader_1|       pointer|
+|block_A_loader_1_read     |  out|    1|     ap_fifo|     block_A_loader_1|       pointer|
+|block_A_loader_2_dout     |   in|    8|     ap_fifo|     block_A_loader_2|       pointer|
+|block_A_loader_2_empty_n  |   in|    1|     ap_fifo|     block_A_loader_2|       pointer|
+|block_A_loader_2_read     |  out|    1|     ap_fifo|     block_A_loader_2|       pointer|
+|block_A_loader_3_dout     |   in|    8|     ap_fifo|     block_A_loader_3|       pointer|
+|block_A_loader_3_empty_n  |   in|    1|     ap_fifo|     block_A_loader_3|       pointer|
+|block_A_loader_3_read     |  out|    1|     ap_fifo|     block_A_loader_3|       pointer|
+|block_B_loader_0_dout     |   in|    8|     ap_fifo|     block_B_loader_0|       pointer|
+|block_B_loader_0_empty_n  |   in|    1|     ap_fifo|     block_B_loader_0|       pointer|
+|block_B_loader_0_read     |  out|    1|     ap_fifo|     block_B_loader_0|       pointer|
+|block_B_loader_1_dout     |   in|    8|     ap_fifo|     block_B_loader_1|       pointer|
+|block_B_loader_1_empty_n  |   in|    1|     ap_fifo|     block_B_loader_1|       pointer|
+|block_B_loader_1_read     |  out|    1|     ap_fifo|     block_B_loader_1|       pointer|
+|block_B_loader_2_dout     |   in|    8|     ap_fifo|     block_B_loader_2|       pointer|
+|block_B_loader_2_empty_n  |   in|    1|     ap_fifo|     block_B_loader_2|       pointer|
+|block_B_loader_2_read     |  out|    1|     ap_fifo|     block_B_loader_2|       pointer|
+|block_B_loader_3_dout     |   in|    8|     ap_fifo|     block_B_loader_3|       pointer|
+|block_B_loader_3_empty_n  |   in|    1|     ap_fifo|     block_B_loader_3|       pointer|
+|block_B_loader_3_read     |  out|    1|     ap_fifo|     block_B_loader_3|       pointer|
+|block_C_drainer_0_din     |  out|   24|     ap_fifo|    block_C_drainer_0|       pointer|
+|block_C_drainer_0_full_n  |   in|    1|     ap_fifo|    block_C_drainer_0|       pointer|
+|block_C_drainer_0_write   |  out|    1|     ap_fifo|    block_C_drainer_0|       pointer|
+|block_C_drainer_1_din     |  out|   24|     ap_fifo|    block_C_drainer_1|       pointer|
+|block_C_drainer_1_full_n  |   in|    1|     ap_fifo|    block_C_drainer_1|       pointer|
+|block_C_drainer_1_write   |  out|    1|     ap_fifo|    block_C_drainer_1|       pointer|
+|block_C_drainer_2_din     |  out|   24|     ap_fifo|    block_C_drainer_2|       pointer|
+|block_C_drainer_2_full_n  |   in|    1|     ap_fifo|    block_C_drainer_2|       pointer|
+|block_C_drainer_2_write   |  out|    1|     ap_fifo|    block_C_drainer_2|       pointer|
+|block_C_drainer_3_din     |  out|   24|     ap_fifo|    block_C_drainer_3|       pointer|
+|block_C_drainer_3_full_n  |   in|    1|     ap_fifo|    block_C_drainer_3|       pointer|
+|block_C_drainer_3_write   |  out|    1|     ap_fifo|    block_C_drainer_3|       pointer|
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|  systolic_array_k_12|  return value|
++--------------------------+-----+-----+------------+---------------------+--------------+
+
