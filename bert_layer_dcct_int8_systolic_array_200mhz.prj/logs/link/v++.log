@@ -1,0 +1,306 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link
+	Log files: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary, at Thu Sep  7 17:58:32 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Sep  7 17:58:32 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html', at Thu Sep  7 17:58:33 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [18:00:26] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Thu Sep  7 18:00:28 2023
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [18:00:32] build_xd_ip_db started: /opt/xilinx/2022.1/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/hw.hpfm -clkid 0 -ip /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/iprepo/xilinx_com_hls_Bert_layer_1_0,Bert_layer -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [18:00:41] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2433.266 ; gain = 0.000 ; free physical = 25914 ; free virtual = 195489
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [18:00:41] cfgen started: /opt/xilinx/2022.1/Vitis/2022.1/bin/cfgen -dmclkid 0 -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: Bert_layer, num: 1  {Bert_layer_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v323 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v324 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v325 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v326 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v327 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v328 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v329 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v330 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v331 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v332 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v333 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v334 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v335 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v336 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v337 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v338 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v339 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v340 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v341 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v342 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v343 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v344 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v345 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v346 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v347 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v348 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v349 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v350 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v351 to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument Bert_layer_1.v352 to HBM[0]
+INFO: [SYSTEM_LINK 82-37] [18:00:53] cfgen finished successfully
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2433.266 ; gain = 0.000 ; free physical = 25414 ; free virtual = 194989
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [18:00:53] cf2bd started: /opt/xilinx/2022.1/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.xsd --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [18:01:00] cf2bd finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2433.266 ; gain = 0.000 ; free physical = 25166 ; free virtual = 194746
+INFO: [v++ 60-1441] [18:01:00] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:34 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 25209 ; free virtual = 194789
+INFO: [v++ 60-1443] [18:01:00] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/sdsl.dat -rtd /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw.rtd -nofilter /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw_full.rtd -xclbin /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [18:01:09] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 25112 ; free virtual = 194693
+INFO: [v++ 60-1443] [18:01:09] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [18:01:10] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:02 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 25010 ; free virtual = 194591
+INFO: [v++ 60-1443] [18:01:10] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --kernel_frequency 200 --remote_ip_cache /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/.ipcache -s --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --log_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link --report_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link --config /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini -k /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link --no-info --iprepo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0 --messageDb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link/vpl.pb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+
+****** vpl v2022.1.2 (64-bit)
+  **** SW Build 3602371 on 2022-08-02-23:13:43
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [VPL 60-1032] Extracting hardware platform to /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/.local/hw_platform
+[18:01:32] Run vpl: Step create_project: Started
+Creating Vivado project.
+[18:01:38] Run vpl: Step create_project: Completed
+[18:01:38] Run vpl: Step create_bd: Started
+[18:02:21] Run vpl: Step create_bd: Completed
+[18:02:21] Run vpl: Step update_bd: Started
+[18:02:22] Run vpl: Step update_bd: Completed
+[18:02:22] Run vpl: Step generate_target: Started
+[18:03:23] Run vpl: Step generate_target: Completed
+[18:03:23] Run vpl: Step config_hw_runs: Started
+[18:03:27] Run vpl: Step config_hw_runs: Completed
+[18:03:27] Run vpl: Step synth: Started
+[18:04:27] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[18:04:58] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+[18:05:28] Block-level synthesis in progress, 1 of 1 jobs complete, 0 jobs running.
+[18:05:35] Run vpl: Step synth: Completed
+[18:05:35] Run vpl: Step impl: Started
+[18:20:11] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 18m 58s 
+
+[18:20:11] Starting logic optimization..
+[18:21:41] Phase 1 Retarget
+[18:22:12] Phase 2 Constant propagation
+[18:22:42] Phase 3 Sweep
+[18:23:42] Phase 4 BUFG optimization
+[18:23:42] Phase 5 Shift Register Optimization
+[18:24:12] Phase 6 Post Processing Netlist
+[18:27:13] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 07m 02s 
+
+[18:27:13] Starting logic placement..
+[18:27:44] Phase 1 Placer Initialization
+[18:27:44] Phase 1.1 Placer Initialization Netlist Sorting
+[18:32:46] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[18:33:46] Phase 1.3 Build Placer Netlist Model
+[18:37:17] Phase 1.4 Constrain Clocks/Macros
+[18:38:18] Phase 2 Global Placement
+[18:38:18] Phase 2.1 Floorplanning
+[18:40:18] Phase 2.1.1 Partition Driven Placement
+[18:40:18] Phase 2.1.1.1 PBP: Partition Driven Placement
+[18:44:21] Phase 2.1.1.2 PBP: Clock Region Placement
+[18:45:52] Phase 2.1.1.3 PBP: Discrete Incremental
+[18:45:52] Phase 2.1.1.4 PBP: Compute Congestion
+[18:46:23] Phase 2.1.1.5 PBP: Macro Placement
+[18:46:23] Phase 2.1.1.6 PBP: UpdateTiming
+[18:46:53] Phase 2.1.1.7 PBP: Add part constraints
+[18:47:23] Phase 2.2 Physical Synthesis After Floorplan
+[18:47:54] Phase 2.3 Update Timing before SLR Path Opt
+[18:48:25] Phase 2.4 Post-Processing in Floorplanning
+[18:48:25] Phase 2.5 Global Placement Core
+[19:05:10] Phase 2.5.1 Physical Synthesis In Placer
+[19:09:44] Phase 3 Detail Placement
+[19:10:14] Phase 3.1 Commit Multi Column Macros
+[19:10:14] Phase 3.2 Commit Most Macros & LUTRAMs
+[19:12:47] Phase 3.3 Small Shape DP
+[19:12:47] Phase 3.3.1 Small Shape Clustering
+[19:13:17] Phase 3.3.2 Flow Legalize Slice Clusters
+[19:13:17] Phase 3.3.3 Slice Area Swap
+[19:13:48] Phase 3.3.3.1 Slice Area Swap Initial
+[19:15:19] Phase 3.4 Place Remaining
+[19:15:49] Phase 3.5 Re-assign LUT pins
+[19:16:20] Phase 3.6 Pipeline Register Optimization
+[19:16:20] Phase 3.7 Fast Optimization
+[19:18:21] Phase 4 Post Placement Optimization and Clean-Up
+[19:18:21] Phase 4.1 Post Commit Optimization
+[19:21:24] Phase 4.1.1 Post Placement Optimization
+[19:21:24] Phase 4.1.1.1 BUFG Insertion
+[19:21:24] Phase 1 Physical Synthesis Initialization
+[19:22:56] Phase 4.1.1.2 BUFG Replication
+[19:23:26] Phase 4.1.1.3 Post Placement Timing Optimization
+[19:29:32] Phase 4.1.1.4 Replication
+[19:31:34] Phase 4.2 Post Placement Cleanup
+[19:32:04] Phase 4.3 Placer Reporting
+[19:32:04] Phase 4.3.1 Print Estimated Congestion
+[19:32:35] Phase 4.4 Final Placement Cleanup
+[19:53:54] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 26m 40s 
+
+[19:53:54] Starting logic routing..
+[19:55:26] Phase 1 Build RT Design
+[19:58:59] Phase 2 Router Initialization
+[19:58:59] Phase 2.1 Fix Topology Constraints
+[19:59:29] Phase 2.2 Pre Route Cleanup
+[20:00:00] Phase 2.3 Global Clock Net Routing
+[20:01:01] Phase 2.4 Update Timing
+[20:05:35] Phase 2.5 Update Timing for Bus Skew
+[20:05:35] Phase 2.5.1 Update Timing
+[20:07:37] Phase 3 Initial Routing
+[20:07:37] Phase 3.1 Global Routing
+[20:09:39] Phase 4 Rip-up And Reroute
+[20:09:39] Phase 4.1 Global Iteration 0
+[20:22:21] Phase 4.2 Global Iteration 1
+[20:25:54] Phase 4.3 Global Iteration 2
+[20:27:25] Phase 5 Delay and Skew Optimization
+[20:27:25] Phase 5.1 Delay CleanUp
+[20:27:25] Phase 5.1.1 Update Timing
+[20:29:27] Phase 5.1.2 Update Timing
+[20:30:58] Phase 5.2 Clock Skew Optimization
+[20:31:59] Phase 6 Post Hold Fix
+[20:31:59] Phase 6.1 Hold Fix Iter
+[20:31:59] Phase 6.1.1 Update Timing
+[20:34:32] Phase 7 Leaf Clock Prog Delay Opt
+[20:39:06] Phase 7.1 Delay CleanUp
+[20:39:06] Phase 7.1.1 Update Timing
+[20:40:37] Phase 7.1.2 Update Timing
+[20:42:39] Phase 7.2 Hold Fix Iter
+[20:42:39] Phase 7.2.1 Update Timing
+[20:47:13] Phase 8 Route finalize
+[20:47:44] Phase 9 Verifying routed nets
+[20:48:14] Phase 10 Depositing Routes
+[20:49:45] Phase 11 Resolve XTalk
+[20:50:16] Phase 12 Post Router Timing
+[20:51:47] Phase 13 Physical Synthesis in Router
+[20:51:47] Phase 13.1 Physical Synthesis Initialization
+[20:54:50] Phase 13.2 Critical Path Optimization
+[20:56:21] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 01h 02m 27s 
+
+[20:56:21] Starting bitstream generation..
+Starting optional post-route physical design optimization.
+[21:08:32] Phase 1 Physical Synthesis Initialization
+[21:14:38] Phase 2 Critical Path Optimization
+Finished optional post-route physical design optimization.
+[21:47:38] Creating bitmap...
+[21:58:18] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[21:58:18] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 01h 01m 56s 
+[21:58:29] Run vpl: Step impl: Completed
+[21:58:31] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [21:58:31] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:03:04 ; elapsed = 03:57:21 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 19435 ; free virtual = 178204
+INFO: [v++ 60-1443] [21:58:32] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 154
+INFO: [v++ 60-1453] Command Line: cf2sw -a /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/address_map.xml -sdsl /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/sdsl.dat -xclbin /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.xml -rtd /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.rtd -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [21:58:39] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 19525 ; free virtual = 178294
+INFO: [v++ 60-1443] [21:58:39] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.rtd --append-section :JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xml.rtd --add-section BUILD_METADATA:JSON:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml --add-section SYSTEM_METADATA:RAW:/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+XRT Build Version: 2.13.479 (2022.1)
+       Build Date: 2022-06-25 09:05:04
+          Hash ID: 5e92a513c6950e79638b1a879ddb882da34fc683
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 66959796 bytes
+Format : RAW
+File   : '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 6368 bytes
+Format : JSON
+File   : '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 1379246 bytes
+Format : RAW
+File   : '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/Bert_layer.link.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 40244 bytes
+Format : RAW
+File   : '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (68424577 bytes) to the output file: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [21:58:40] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.54 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 19563 ; free virtual = 178397
+INFO: [v++ 60-1443] [21:58:40] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.info --input /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [21:58:41] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:00.95 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 20426 ; free virtual = 179261
+INFO: [v++ 60-1443] [21:58:41] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link
+INFO: [v++ 60-1441] [21:58:41] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2338.680 ; gain = 0.000 ; free physical = 20446 ; free virtual = 179281
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/system_estimate_Bert_layer.link.xtxt
+INFO: [v++ 60-586] Created /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.ltx
+INFO: [v++ 60-586] Created ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html
+	Timing Report: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link/vivado.log
+	Steps Log File: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_200mhz.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 4h 0m 20s
