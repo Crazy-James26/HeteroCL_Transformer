@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html>
+<!-- Styles -->
+<style>
+    #chartdiv {
+      width: 100%;
+      height: 1000px;
+    }
+</style>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>OPTraceViewer</title>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/serial.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/gantt.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js">
+  </script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+  <form name="userInputForm" action="javascript:userInputFormCallback()">
+    <fieldset>
+    <legend>Graph Filters:</legend>
+    <table style="width:100%">
+      <col width="50"></col>
+      <col width="20"></col>
+      <col width="60"></col>
+      <tr>
+        <td style="text-align: center"; colspan="3"><input type="number" name="userDurationFilterSecInput" id="userDurationFilterSecInput" value="2" min="0" max="6000" step="1"> sec</td>
+        <td>Filter out run durations lower than this value</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td style="text-align: center"><input type="checkbox" name="userGroupPidSortSelected" id="userGroupPidSortSelected"></td>
+        <td>Group sort by process ID</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#0099ff"></td>
+        <td style="text-align: center"><input type="checkbox" name="userRollupSelected" id="userRollupSelected"></td>
+        <td>Show rollup entries</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#8dc49f"></td>
+        <td style="text-align: center"><input type="checkbox" name="userIndividualEntrySelected" id="userIndividualEntrySelected"></td>
+        <td>Show individual entries</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#cd82ad"></td>
+        <td style="text-align: center"><input type="checkbox" name="userCheckpointEntrySelected" id="userCheckpointEntrySelected"></td>
+        <td>Show checkpoints entry</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td bgcolor="#b9783f"></td>
+        <td style="text-align: center"><input type="checkbox" name="userReportEntrySelected" id="userReportEntrySelected"></td>
+        <td>Show report entry</td>
+      </tr>
+
+    </table>
+    <br>
+    <input name="Submit" type="submit" value="Update Graph">
+    </fieldset>
+  </form> 
+
+  <div id="chartdiv">
+  </div>
+
+  <script>
+  </script>
+
+</head>
+
+
+<body>
+<table id="myDynamicTable" cellpadding="2" cellspacing="2" border="1" onclick="tester()">
+  <tr>
+  <td>Task</td>
+  <td>Start</td>
+  <td>Duration</td>
+  </tr>
+</table>
+<script>
+  // Default User Selected variables
+  var m_secondFilter = 1;
+  var m_groupPidSort = true;
+  var m_showRollup = true;
+  var m_showIndividualEntry = false;
+  var m_showCheckpointEntry = false;
+  var m_showReportEntry = false;
+
+  function SetDefaultUserValues()
+  {
+    document.getElementById("userDurationFilterSecInput").value = m_secondFilter;
+    document.getElementById("userGroupPidSortSelected").checked = m_groupPidSort;
+    document.getElementById("userRollupSelected").checked = m_showRollup;
+    document.getElementById("userIndividualEntrySelected").checked = m_showIndividualEntry;
+    document.getElementById("userCheckpointEntrySelected").checked = m_showCheckpointEntry;
+    document.getElementById("userReportEntrySelected").checked = m_showReportEntry;
+  }
+
+  window.onload = function(){
+    SetDefaultUserValues();
+  }
+
+
+
+
+  // Header
+  var header = "Keyword|pid|Entry|SrcFile|Catagory|TimeStampMSec|Action|Task|Tags|Misc";
+                         
+  // Insert Raw Data Here
+  // Note: Do not change the following signature. 
+  var csvData =    [
+      "[OPTRACE]|154003|10|run|cpp|1694123734963|START|OCL_LINK|",
+      "[OPTRACE]|154003|11|setupBinaryForLink|cpp|1694123734963|START|Create Binary|",
+      "[OPTRACE]|154003|12||cpp|1694123734964|END|Create Binary|",
+      "[OPTRACE]|154003|13|setupBinaryForLink|cpp|1694123734964|START|Extract Kernels|",
+      "[OPTRACE]|154003|14||cpp|1694123835149|END|Extract Kernels|",
+      "[OPTRACE]|154003|15|launchStep_|cpp|1694123836948|START|Launch Step: system_link|",
+      "[OPTRACE]|154003|16||cpp|1694123870785|END|Launch Step: system_link|",
+      "[OPTRACE]|154003|170||cpp|1694150312028|END|Launch Step: vpl|",
+      "[OPTRACE]|154003|171||cpp|1694150312029|END|OCL_LINK|",
+      "[OPTRACE]|154003|172||cpp|1694150312199|END|v++|",
+      "[OPTRACE]|154003|17|launchStep_|cpp|1694123870787|START|Launch Step: cf2sw|",
+      "[OPTRACE]|154003|18||cpp|1694123879290|END|Launch Step: cf2sw|",
+      "[OPTRACE]|154003|19|launchStep_|cpp|1694123879290|START|Launch Step: rtd2_system_diagram|",
+      "[OPTRACE]|154003|1|main|cpp|1694123715024|START|v++|ROLLUP_0",
+      "[OPTRACE]|154003|20||cpp|1694123880644|END|Launch Step: rtd2_system_diagram|",
+      "[OPTRACE]|154003|21|launchStep_|cpp|1694123880645|START|Launch Step: vpl|",
+      "[OPTRACE]|154003|2|run|cpp|1694123715024|START|Validate Kernels|",
+      "[OPTRACE]|154003|3||cpp|1694123715629|END|Validate Kernels|",
+      "[OPTRACE]|154003|4|prepareProject|cpp|1694123715656|START|Create Solution|",
+      "[OPTRACE]|154003|5||cpp|1694123727956|END|Create Solution|",
+      "[OPTRACE]|154003|6|prepareProject|cpp|1694123727956|START|Add Device|",
+      "[OPTRACE]|154003|7|addDevice|cpp|1694123727956|START|Find & Load Device|",
+      "[OPTRACE]|154003|8||cpp|1694123732712|END|Find & Load Device|",
+      "[OPTRACE]|154003|9||cpp|1694123734946|END|Add Device|",
+      "[OPTRACE]|157535|166|runPlatformLinker|cpp|1694150311997|START|Generate Resource Availability Report|",
+      "[OPTRACE]|157535|167||cpp|1694150311998|END|Generate Resource Availability Report|",
+      "[OPTRACE]|157535|168||cpp|1694150311998|END|runPlatformLinker|",
+      "[OPTRACE]|157535|169||cpp|1694150312000|END|vpl|",
+      "[OPTRACE]|157535|22|main|cpp|1694123882860|START|vpl|",
+      "[OPTRACE]|157535|23|runPlatformLinker|cpp|1694123882890|START|runPlatformLinker|",
+      "[OPTRACE]|157535|24|setupBinaryForLink|cpp|1694123882890|START|Create Solution|",
+      "[OPTRACE]|157535|25||cpp|1694123882896|END|Create Solution|",
+      "[OPTRACE]|157535|26|setupBinaryForLink|cpp|1694123882896|START|Add platform|",
+      "[OPTRACE]|157535|27||cpp|1694123890626|END|Add platform|",
+      "[OPTRACE]|157535|28|setupBinaryForLink|cpp|1694123890627|START|Create Binary|",
+      "[OPTRACE]|157535|29||cpp|1694123890627|END|Create Binary|",
+      "[OPTRACE]|157535|30|setupBinaryForLink|cpp|1694123890627|START|Create Kernels|",
+      "[OPTRACE]|157535|31||cpp|1694123891001|END|Create Kernels|",
+      "[OPTRACE]|157535|32|runPlatformLinker|cpp|1694123891091|START|Process Kernels|",
+      "[OPTRACE]|157535|33|runPlatformLinker|cpp|1694123891092|START|Set Board Repo Paths and Connections|",
+      "[OPTRACE]|157535|34||cpp|1694123891092|END|Set Board Repo Paths and Connections|",
+      "[OPTRACE]|157535|35|runPlatformLinker|cpp|1694123891092|START|Process Kernel Profiles|",
+      "[OPTRACE]|157535|36||cpp|1694123891092|END|Process Kernel Profiles|",
+      "[OPTRACE]|157535|37|runPlatformLinker|cpp|1694123891092|START|Process Trace Memory|",
+      "[OPTRACE]|157535|38||cpp|1694123891092|END|Process Trace Memory|",
+      "[OPTRACE]|157535|39||cpp|1694123891092|END|Process Kernels|",
+      "[OPTRACE]|157535|40|runPlatformLinker|cpp|1694123891092|START|Process Kernel Debug|",
+      "[OPTRACE]|157535|41||cpp|1694123891092|END|Process Kernel Debug|",
+      "[OPTRACE]|157535|42|runPlatformLinker|cpp|1694123891092|START|Set Kernel Debug|",
+      "[OPTRACE]|157535|43||cpp|1694123891092|END|Set Kernel Debug|",
+      "[OPTRACE]|157535|44|runPlatformLinker|cpp|1694123891092|START|Set Miscellaneous|",
+      "[OPTRACE]|157535|45||cpp|1694123891092|END|Set Miscellaneous|",
+      "[OPTRACE]|157535|46|run|cpp|1694123891093|START|Extract Platform|",
+      "[OPTRACE]|157535|47||cpp|1694123891628|END|Extract Platform|",
+      "[OPTRACE]|157995|165|ipirun.tcl|vpl|1694150310762|END|Implementation|",
+      "[OPTRACE]|157995|48|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/vpl.tcl|vivado_impl|1694123906561|START|Implementation|ROLLUP_1",
+      "[OPTRACE]|157995|49|ipirun.tcl|vpl|1694123906596|START|ipirun|ROLLUP_0",
+      "[OPTRACE]|157995|50|ipirun.tcl|vpl|1694123906597|END|ipirun|",
+      "[OPTRACE]|157995|51|ipirun.tcl|vpl|1694123906619|START|Source pre_sys_link Tcl script|",
+      "[OPTRACE]|157995|52|ipirun.tcl|vpl|1694123906620|END|Source pre_sys_link Tcl script|",
+      "[OPTRACE]|157995|53|ipirun.tcl|vpl|1694123906620|START|Create project|",
+      "[OPTRACE]|157995|54|ipirun.tcl|vpl|1694123912377|END|Create project|",
+      "[OPTRACE]|157995|55|ipirun.tcl|vpl|1694123912384|START|Create IP caching environment|",
+      "[OPTRACE]|157995|56|ipirun.tcl|vpl|1694123914613|END|Create IP caching environment|",
+      "[OPTRACE]|157995|57|ipirun.tcl|vpl|1694123914613|START|Import/add dynamic BD|",
+      "[OPTRACE]|157995|58|ipirun.tcl|vpl|1694123924913|END|Import/add dynamic BD|",
+      "[OPTRACE]|157995|59|ipirun.tcl|vpl|1694123924913|START|Open BD and insert kernels|",
+      "[OPTRACE]|157995|60|ipirun.tcl|vpl|1694123956404|END|Open BD and insert kernels|",
+      "[OPTRACE]|157995|61|ipirun.tcl|vpl|1694123956406|START|Add debug/profiling support|",
+      "[OPTRACE]|157995|62|ipirun.tcl|vpl|1694123956656|END|Add debug/profiling support|",
+      "[OPTRACE]|157995|63|ipirun.tcl|vpl|1694123956656|START|IPI address assignments|",
+      "[OPTRACE]|157995|64|ipirun.tcl|vpl|1694123956681|END|IPI address assignments|",
+      "[OPTRACE]|157995|65|ipirun.tcl|vpl|1694123956682|START|Source hardware platform post_sys_link Tcl script|",
+      "[OPTRACE]|157995|66|ipirun.tcl|vpl|1694123956835|END|Source hardware platform post_sys_link Tcl script|",
+      "[OPTRACE]|157995|67|ipirun.tcl|vpl|1694123956842|START|Save BD|",
+      "[OPTRACE]|157995|68|ipirun.tcl|vpl|1694123957052|END|Save BD|",
+      "[OPTRACE]|157995|69|ipirun.tcl|vpl|1694123957053|START|Create address map and debug IP profile files|",
+      "[OPTRACE]|157995|70|ipirun.tcl|vpl|1694123957079|END|Create address map and debug IP profile files|",
+      "[OPTRACE]|157995|71|ipirun.tcl|vpl|1694123957079|START|Collect BD interface connectivity and write automation summary report|",
+      "[OPTRACE]|157995|72|ipirun.tcl|vpl|1694123957089|END|Collect BD interface connectivity and write automation summary report|",
+      "[OPTRACE]|157995|73|ipirun.tcl|vpl|1694123957090|START|Generate output products|",
+      "[OPTRACE]|157995|74|ipirun.tcl|vpl|1694124019734|END|Generate output products|",
+      "[OPTRACE]|157995|75|ipirun.tcl|vpl|1694124019740|START|Source report_commands_tcl|",
+      "[OPTRACE]|157995|76|ipirun.tcl|vpl|1694124019962|END|Source report_commands_tcl|",
+      "[OPTRACE]|157995|77|ipirun.tcl|vpl|1694124019963|START|Source synth_props_tcl|",
+      "[OPTRACE]|157995|78|ipirun.tcl|vpl|1694124023476|END|Source synth_props_tcl|",
+      "[OPTRACE]|157995|79|ipirun.tcl|vpl|1694124023502|START|Source impl_props_tcl|",
+      "[OPTRACE]|157995|80|ipirun.tcl|vpl|1694124023678|END|Source impl_props_tcl|",
+      "[OPTRACE]|157995|81|ipirun.tcl|vpl|1694124023682|START|Synthesis|ROLLUP_1,SYNTH",
+      "[OPTRACE]|157995|94|ipirun.tcl|vpl|1694124152594|END|Synthesis|",
+      "[OPTRACE]|160952|82|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124053688|START|my_rm_synth_1|ROLLUP_AUTO",
+      "[OPTRACE]|160952|83|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124053689|START|Creating in-memory project|",
+      "[OPTRACE]|160952|84|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124061246|END|Creating in-memory project|",
+      "[OPTRACE]|160952|85|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124061247|START|Adding files|",
+      "[OPTRACE]|160952|86|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124072880|END|Adding files|",
+      "[OPTRACE]|160952|87|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124072915|START|synth_design|",
+      "[OPTRACE]|160952|88|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124138555|END|synth_design|",
+      "[OPTRACE]|160952|89|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124138573|START|write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|160952|90|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124139530|END|write_checkpoint|",
+      "[OPTRACE]|160952|91|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124139531|START|synth reports|REPORT",
+      "[OPTRACE]|160952|92|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124139531|END|synth reports|",
+      "[OPTRACE]|160952|93|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/my_rm_synth_1/ulp.tcl|vivado_synth|1694124140788|END|my_rm_synth_1|",
+      "[OPTRACE]|307|100|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124173775|END|create in-memory project|",
+      "[OPTRACE]|307|101|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124173776|START|set parameters|",
+      "[OPTRACE]|307|102|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124175899|END|set parameters|",
+      "[OPTRACE]|307|103|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124175899|START|add files|",
+      "[OPTRACE]|307|104|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124188206|START|read constraints: implementation|",
+      "[OPTRACE]|307|105|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124188207|END|read constraints: implementation|",
+      "[OPTRACE]|307|106|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124188210|END|add files|",
+      "[OPTRACE]|307|107|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124188210|START|link_design|",
+      "[OPTRACE]|307|108|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124987446|END|link_design|",
+      "[OPTRACE]|307|109|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124987446|START|gray box cells|",
+      "[OPTRACE]|307|110|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124987446|END|gray box cells|",
+      "[OPTRACE]|307|111|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124987446|START|Design Initialization: post hook|",
+      "[OPTRACE]|307|112|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029969|END|Design Initialization: post hook|",
+      "[OPTRACE]|307|113|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029969|START|init_design_reports|REPORT",
+      "[OPTRACE]|307|114|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029970|END|init_design_reports|",
+      "[OPTRACE]|307|115|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029970|START|init_design_write_hwdef|",
+      "[OPTRACE]|307|116|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029970|END|init_design_write_hwdef|",
+      "[OPTRACE]|307|117|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029971|END|Phase: Init Design|",
+      "[OPTRACE]|307|118|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029971|START|Phase: Opt Design|ROLLUP_AUTO",
+      "[OPTRACE]|307|119|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125029971|START|Opt Design: pre hook|",
+      "[OPTRACE]|307|120|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125092838|END|Opt Design: pre hook|",
+      "[OPTRACE]|307|121|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125092838|START|read constraints: opt_design|",
+      "[OPTRACE]|307|122|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125092839|END|read constraints: opt_design|",
+      "[OPTRACE]|307|123|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125092839|START|opt_design|",
+      "[OPTRACE]|307|124|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441650|END|opt_design|",
+      "[OPTRACE]|307|125|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441650|START|read constraints: opt_design_post|",
+      "[OPTRACE]|307|126|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441650|END|read constraints: opt_design_post|",
+      "[OPTRACE]|307|127|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441650|START|Opt Design: post hook|",
+      "[OPTRACE]|307|128|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441689|END|Opt Design: post hook|",
+      "[OPTRACE]|307|129|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441689|START|opt_design reports|REPORT",
+      "[OPTRACE]|307|130|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441689|END|opt_design reports|",
+      "[OPTRACE]|307|131|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441690|END|Phase: Opt Design|",
+      "[OPTRACE]|307|132|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441690|START|Phase: Place Design|ROLLUP_AUTO",
+      "[OPTRACE]|307|133|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441691|START|Place Design: pre hook|",
+      "[OPTRACE]|307|134|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441735|END|Place Design: pre hook|",
+      "[OPTRACE]|307|135|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441735|START|read constraints: place_design|",
+      "[OPTRACE]|307|136|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441735|END|read constraints: place_design|",
+      "[OPTRACE]|307|137|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441735|START|implement_debug_core|",
+      "[OPTRACE]|307|138|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441813|END|implement_debug_core|",
+      "[OPTRACE]|307|139|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694125441813|START|place_design|",
+      "[OPTRACE]|307|140|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129727073|END|place_design|",
+      "[OPTRACE]|307|141|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129727073|START|read constraints: place_design_post|",
+      "[OPTRACE]|307|142|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129727073|END|read constraints: place_design_post|",
+      "[OPTRACE]|307|143|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129727073|START|Place Design: post hook|",
+      "[OPTRACE]|307|144|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881192|END|Place Design: post hook|",
+      "[OPTRACE]|307|145|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881193|START|place_design reports|REPORT",
+      "[OPTRACE]|307|146|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881193|END|place_design reports|",
+      "[OPTRACE]|307|147|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881194|END|Phase: Place Design|",
+      "[OPTRACE]|307|148|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881194|START|Phase: Physical Opt Design|ROLLUP_AUTO",
+      "[OPTRACE]|307|149|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881194|START|read constraints: phys_opt_design|",
+      "[OPTRACE]|307|150|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881194|END|read constraints: phys_opt_design|",
+      "[OPTRACE]|307|151|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694129881194|START|phys_opt_design|",
+      "[OPTRACE]|307|152|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723386|END|phys_opt_design|",
+      "[OPTRACE]|307|153|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723387|START|read constraints: phys_opt_design_post|",
+      "[OPTRACE]|307|154|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723387|END|read constraints: phys_opt_design_post|",
+      "[OPTRACE]|307|155|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723387|START|phys_opt_design report|REPORT",
+      "[OPTRACE]|307|156|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723387|END|phys_opt_design report|",
+      "[OPTRACE]|307|157|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723388|END|Phase: Physical Opt Design|",
+      "[OPTRACE]|307|158|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723388|START|Phase: Route Design|ROLLUP_AUTO",
+      "[OPTRACE]|307|159|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723391|START|read constraints: route_design|",
+      "[OPTRACE]|307|160|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723391|END|read constraints: route_design|",
+      "[OPTRACE]|307|161|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694130723391|START|route_design|",
+      "[OPTRACE]|307|162|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694150180829|START|route_design write_checkpoint|CHECKPOINT",
+      "[OPTRACE]|307|163|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694150180830|END|route_design write_checkpoint|",
+      "[OPTRACE]|307|164|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694150310322|END|impl_1|",
+      "[OPTRACE]|307|95|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124168818|START|impl_1|ROLLUP_1",
+      "[OPTRACE]|307|96|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124168818|START|Phase: Init Design|ROLLUP_AUTO",
+      "[OPTRACE]|307|97|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124168819|START|Design Initialization: pre hook|",
+      "[OPTRACE]|307|98|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124168845|END|Design Initialization: pre hook|",
+      "[OPTRACE]|307|99|/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_systolic_array_250mhz.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper.tcl|vivado_impl|1694124168846|START|create in-memory project|"
+      ];
+
+  var legendData = [
+  { "title": "Report Generation",
+    "color": "#b9783f"
+  }, {
+    "title": "Write Checkpoint",
+    "color": "#cd82ad"
+  },
+  {
+    "title": "Incomplete Data",
+    "color": "#cc4748"
+  } ];
+
+  // -- Convert Raw data into something we can use ---------------------------
+  console.log("Convert log data (%s entries) to Javascript 'JSON' objects...", csvData.length);
+  var jsonData = csvArrayToJSON(header, csvData, "|");
+
+  // -- Clean up the JSON objects --------------------------------------------
+  for (var i = 0; i < jsonData.length; i++) {
+    jsonData[i].Action = jsonData[i].Action.toUpperCase();
+    jsonData[i].Tags = jsonData[i].Tags.toUpperCase();
+    jsonData[i].Tags = jsonData[i].Tags.trim();
+    jsonData[i].TimeStampMSec = parseInt(jsonData[i].TimeStampMSec, 10);
+    jsonData[i].pid = parseInt(jsonData[i].pid, 10);
+  }
+
+  // -- Sort JSON array ------------------------------------------------------
+  console.log("Sorting JSON objects (%s objects) according to timestamps...", jsonData.length);
+  jsonData.sort(compareByTimeStamp);
+
+  // Record the PID grouping order
+  var pidOrder = new Map();
+  for (var i = 0; i < jsonData.length; i++) {
+    if (pidOrder.has(jsonData[i].pid) == false) {
+      pidOrder.set(jsonData[i].pid, i);    // Simple ordering (lower is first)
+    }
+  }
+
+  // -- Create secondary data array for the chart data array -----------------
+  console.log("Preparing graph data...");
+
+  // Task limits
+  var m_startTS = 0;      // Earliest Timestamp
+  var m_endTS = 0;        // Latest Timestamp
+
+  if (jsonData.length > 0) {
+    m_startTS = jsonData[0].TimeStampMSec;
+    m_endTS = jsonData[jsonData.length - 1].TimeStampMSec;
+  }
+
+
+  var chartData = [ ];   // Empty JSON array
+
+
+  populateChartData();
+  tableCreate( chartData );
+
+  filterChartEntries();
+
+  // -- Search for "holes"
+  // -- Sort by common PID
+  // -- Create groupings by process
+
+  console.log("done");
+
+  var chart = AmCharts.makeChart("chartdiv", {
+    "type": "gantt",
+    "theme": "light",
+    "titles": [
+    { "text": "OPTrace", "size": 15}],
+    "marginRight": 70,
+    "period": "fff",                                     // X-Axis
+    "balloonDateFormat": "JJ:NN:SS",
+    "columnWidth": 0.5,                                 // Bar thickness
+    "valueAxis": {
+      "type": "numeric",
+      "title": "Time [HH:MM:SS]",
+      "duration": "ss",
+      "durationUnits": { DD: 'd. ', hh: ':', mm: ':', ss: '' },
+    },
+    "brightnessStep": 10,
+    "graph": {
+      "fillAlphas": 1,
+      "labelFunction": barLabelCallBack,
+      "labelText": " ",
+      "labelPosition": "right",
+      "balloonFunction": ballonLabelCallBack,
+      "balloonText": "<p align='left'> Task: [[task]]<br/>Start:[[start]]<br/>End:[[end]]<br/>Duration:[[duration]]</p>",
+      "bulletField": "bullet",
+      "bulletSize": 8
+    },
+    "rotate": true,
+    "categoryField": "category",
+    "segmentsField": "segments",
+    "colorField": "color",
+    "startDate": "2015-01-01 00:00:00",
+    "startField": "start",
+    "endField": "end",
+    "durationField": "duration",
+    "dataProvider": chartData,
+    "valueScrollbar": {
+      "autoGridCount": true
+    },
+    "chartScrollbar": {
+      "enable": true
+    },
+    "chartCursor": {
+      "cursorColor": "#55bb76",
+      "valueBalloonsEnabled": false,
+      "cursorAlpha": 0.1,
+      "valueLineAlpha": 0.5,
+      "valueLineBalloonEnabled": true,
+      "valueLineEnabled": true,
+      "zoomable": true,
+      "valueZoomable": true,
+      "fullWidth": true
+    },
+    "legend": {
+      "data": legendData,
+    },
+    "export": {
+      "enabled": true
+    }
+  });
+
+  // =========================================================================
+  // Call back methods
+  // =========================================================================
+function ballonLabelCallBack( _graphDataItem )
+{
+  var start = _graphDataItem.values.open;
+  var end = _graphDataItem.values.value;
+  var duration = end - start;
+
+  var result = "<p align='left'>Task: " + _graphDataItem.category + "<br/>Start: " + secondsToHHMMSS(start) + "<br/>End: " + secondsToHHMMSS( end ) + "<br/>Duration: " + secondsToHHMMSS( duration ) + "</p>";
+  return result;
+}
+
+
+function barLabelCallBack( _graphDataItem )
+{
+   var duration = _graphDataItem.values.value - _graphDataItem.values.open;
+
+   return secondsToHHMMSS( duration);
+}
+
+
+function userInputFormCallback()
+{
+  // Second filter
+  m_secondFilter = document.getElementById("userDurationFilterSecInput").value;
+  console.log("Setting second filter to: " + m_secondFilter + " seconds");
+
+  // Group PID Sort
+  m_groupPidSort = document.getElementById("userGroupPidSortSelected").checked;
+  console.log("Group PID filter is set to: " + m_groupPidSort);
+
+  // Rollup filter
+  m_showRollup = document.getElementById("userRollupSelected").checked;
+  console.log("Rollup filter is set to: " + m_showRollup);
+
+  // Individual filter
+  m_showIndividualEntry = document.getElementById("userIndividualEntrySelected").checked;
+  console.log("Individual filter is set to: " + m_showIndividualEntry);
+
+  // Checkpoint Report Entries filter
+  m_showCheckpointEntry = document.getElementById("userCheckpointEntrySelected").checked;
+  console.log("Checkpoint Entry filter is set to: " + m_showCheckpointEntry);
+
+  // Checkpoint Report Entries filter
+  m_showReportEntry = document.getElementById("userReportEntrySelected").checked;
+  console.log("Report Entry filter is set to: " + m_showReportEntry);
+
+  populateChartData();
+  filterChartEntries()
+  chart.dataProvider = chartData;
+  chart.validateData();
+}
+
+  // =========================================================================
+  // Utilities
+  // =========================================================================
+
+
+function populateChartData()
+{
+  chartData = [ ];
+  if (m_groupPidSort == false) {
+    jsonData.sort(compareByTimeStamp);
+  } else {
+    jsonData.sort(compareByGroupTimeStamp);
+  }
+
+  for (var i = 0; i < jsonData.length; i++) {
+    var timestamp = parseInt(jsonData[0].TimeStampMSec, 10);
+
+    if (m_startTS > timestamp) m_startTS = timestamp;
+    if (m_endTS < timestamp) m_endTS = timestamp;
+
+    for (var i = 0; i < jsonData.length; i++) {
+      switch (jsonData[i].Action) {
+      case "START":
+        var categoryEntry = { };
+        categoryEntry["category"] = jsonData[i].Task;
+        categoryEntry["pid"] = jsonData[i].pid;
+
+        var segmentEntry = { };
+        // Normalize entry and convert to seconds
+        segmentEntry["start"] = (jsonData[i].TimeStampMSec - m_startTS) / 1000;
+        segmentEntry["color"] = getTaskBarColor(jsonData[i].Tags)
+        segmentEntry["task"] = jsonData[i].Task;
+        segmentEntry["tags"] = jsonData[i].Tags;
+        segmentEntry["duration"] = -1;
+
+        categoryEntry["segments"] = [ ];
+        categoryEntry["segments"].push(segmentEntry);
+        chartData.push(categoryEntry);
+        break;
+
+      case "END":
+        var catagory = findCatagory(jsonData[i].pid, jsonData[i].Task, chartData);
+        if (catagory != null) {
+          var segmentsEntry = catagory.segments[0];
+          segmentsEntry["end"] = (jsonData[i].TimeStampMSec - m_startTS) / 1000;
+          segmentsEntry["duration"] = segmentsEntry.end - segmentsEntry.start;
+        } else {
+          console.log("Null entry found: pid:%s, Task: %s", jsonData[i].pid, jsonData[i].Task);
+        }
+
+        break;
+
+      default:
+        console.log("Default");
+        break;
+      }
+    }
+  }
+}
+
+function filterChartEntries()
+{
+  for(var i = chartData.length - 1; i >= 0; i--) {
+    var segment = chartData[i].segments[0];
+
+    // -- Remove entries less than 1 seconds
+    if ( segment["duration"] == -1) {
+      segment["bullet"] = "xError";
+      segment["color"] = "#cc4748";
+      segment["duration"] = ((m_endTS - m_startTS) / 1000) - segment["start"];
+    } else if (segment["duration"] <  m_secondFilter) {
+      chartData.splice(i, 1);
+      continue;
+    }
+  
+
+    // Filter by tags
+    var bHasRollup = false;
+    var bHasCheckpoint = false;
+    var bHasReport = false;
+
+    var tags = segment["tags"];
+    console.log("Tag: " + tags);
+    if (tags.search(/ROLLUP_/i) != -1) { bHasRollup = true; }
+    if (tags.search(/CHECKPOINT/i) != -1) { bHasCheckpoint = true; }
+    if (tags.search(/REPORT/i) != -1) { bHasReport = true; }
+
+    var bRemoveEntry = false;
+
+    // Remove rollups
+    if ((m_showRollup == false) && (bHasRollup == true)) {
+      bRemoveEntry = true;
+    }
+    
+    // Remove checkpoints    
+    if ((m_showCheckpointEntry == false) && (bHasCheckpoint == true)) {
+      bRemoveEntry = true;
+    }
+
+    // Remove reports
+    if ((m_showReportEntry == false) && (bHasReport == true)) {
+      bRemoveEntry = true;
+    }
+
+    // Remove individual entry
+    if (((m_showIndividualEntry == false) && 
+         ((bHasRollup == false) &&
+          (bHasCheckpoint == false) &&
+          (bHasReport == false)))) {
+      bRemoveEntry = true;
+    }
+
+    if (bRemoveEntry == true) {
+      chartData.splice(i, 1);
+      continue;
+    }
+  }
+
+  console.log("ChartData.length: " + chartData.length);
+}
+
+
+function getTaskBarColor( _tags )
+{
+  if (_tags == null)
+    return "#8dc49f";
+
+  if (_tags.search(/ROLLUP_AUTO/i) != -1){ return "#0099ff"; }
+  if (_tags.search(/ROLLUP_0/i) != -1)   { return "#006699"; }
+  if (_tags.search(/ROLLUP_1/i) != -1)   { return "#009933"; }
+  if (_tags.search(/ROLLUP_2/i) != -1)   { return "#66ccff"; }
+  if (_tags.search(/REPORT/i) != -1)     { return "#b9783f"; }
+  if (_tags.search(/CHECKPOINT/i) != -1) { return "#cd82ad"; }
+
+  return "#8dc49f"
+}
+
+
+function tableCreate( _chartData ){
+    var myTableDiv = document.getElementById("myDynamicTable");
+
+
+    for ( var i = 0; i < _chartData.length; i++) {
+      var tr = myTableDiv.insertRow();
+
+      var td_task = tr.insertCell();
+      td_task.appendChild(document.createTextNode( _chartData[i].category ));
+
+      var segmentEntry = _chartData[i].segments;
+      var td_start = tr.insertCell();
+      td_start.appendChild(document.createTextNode( secondsToHHMMSS(segmentEntry[0].start) ));
+
+      var td_duration = tr.insertCell();
+      td_duration.appendChild(document.createTextNode( secondsToHHMMSS(segmentEntry[0].duration) ));
+
+    }
+}
+
+function secondsToHHMMSS( _seconds )
+{
+  var hours = Math.floor(_seconds / 3600);
+  var minutes = Math.floor(_seconds % 3600 / 60);
+  var seconds = Math.floor(_seconds % 3600 % 60);
+
+  var result = hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds; 
+
+  return result;
+}
+
+
+  function findCatagory(_pid, _category, _catagoryArray) {
+    for (var i = (_catagoryArray.length - 1); i >= 0; i--) {
+      if (_pid == _catagoryArray[i].pid) {
+        if (_catagoryArray[i].category == _category) {
+          return  _catagoryArray[i];
+        }
+      }
+    }
+    return null;
+  }
+
+
+  // Compares the timestamps between to JSON objects
+  function compareByTimeStamp(_a, _b) {
+    if (_a.TimeStampMSec < _b.TimeStampMSec) return -1;
+    if (_a.TimeStampMSec > _b.TimeStampMSec) return 1;
+
+    if (_a.pid == _b.pid) {
+      if ((_a.Action == "START") && (_b.Action == "END")) return -1;
+      if ((_a.Action == "END") && (_b.Action == "START")) return 1;
+
+      if(_a.Entry < _b.Entry) return -1;
+      if(_a.Entry > _b.Entry) return 1;
+    }
+
+    return 0;
+  }
+
+
+  // Compares the timestamps between to JSON objects
+  function compareByGroupTimeStamp(_a, _b) {
+    if (pidOrder.get(_a.pid) < pidOrder.get(_b.pid)) return -1;
+
+    if (pidOrder.get(_a.pid) > pidOrder.get(_b.pid)) return 1;
+
+    return compareByTimeStamp(_a, _b);
+  }
+
+
+  // Return array of string values, or NULL if CSV string not well formed.
+  function CSVtoArray(_text, _sep) {
+    // Regex expressions
+    var re_valid_default = /^\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*(?:,\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*)*$/;
+    var re_value_default = /(?!\s*$)\s*(?:'([^'\\]*(?:\\[\S\s][^'\\]*)*)'|"([^"\\]*(?:\\[\S\s][^"\\]*)*)"|([^,'"\s\\]*(?:\s+[^,'"\s\\]+)*))\s*(?:,|$)/g;
+    var re_special_default = /,\s*$/;
+
+    // Algorithm:
+    //   1) Convert regex expression to a string.
+    //   2) Remove leading regex escape character (e.g., '\')
+    //   3) Remove training regex escape character(s) (e.g., '\' or "\g")
+    //   4) Replace the comma (',') character witht he new delimiter character
+    //   5) Build the regex command
+
+    // Check delimiter, if special insert escapes
+    if (_sep == "|") _sep = "\\|";
+
+    var re_valid = new RegExp(re_valid_default.toString().substr(1).slice(0, -1).replace(/,/g, _sep));
+    var re_value = new RegExp(re_value_default.toString().substr(1).slice(0, -2).replace(/,/g, _sep), 'g');
+    var re_special = new RegExp(re_special_default.toString().substr(1).slice(0, -1).replace(/,/g, _sep));
+
+    // Validate the input string to determine if it is well formed
+    if (!re_valid.test(_text)) return null;
+
+    var a = [ ];                     // Initialize array to receive values.
+    _text.replace(re_value,           // "Walk" the string using replace with callback.
+                  function(m0, m1, m2, m3) {
+                      // Remove backslash from \' in single quoted values.
+                      if      (m1 !== undefined) a.push(m1.replace(/\\'/g, "'"));
+                      // Remove backslash from \" in double quoted values.
+                      else if (m2 !== undefined) a.push(m2.replace(/\\"/g, '"'));
+                      else if (m3 !== undefined) a.push(m3);
+                      return ''; // Return empty string.
+                  });
+
+    // Handle special case of empty last value.
+    if (re_special.test(_text)) a.push('');
+
+    return a;
+  };
+
+
+  // Converts the given CSV array & header into a JSON array
+  function csvArrayToJSON(_header, _csvArray, _sep) {
+    var result = [ ];
+    var headers = CSVtoArray(_header, _sep);
+
+    for (var i = 0; i < _csvArray.length; i++) {
+
+      var obj = { };
+      var currentline = CSVtoArray(_csvArray[i], _sep);
+
+      for (var j = 0; j < headers.length; j++) {
+        obj[headers[j]] = currentline[j];
+      }
+
+      result.push(obj);
+
+    }
+
+    return result; //JavaScript object
+  }
+
+
+</script>
+</body>
+
+</html>
+
