@@ -1,7 +1,7 @@
 #include "kernel.h"
 
 extern "C" {
-void gemm_systolic_array_qkv(int8_t A[inp_num][inp_len], int8_t B[pack_inp_len][inp_len], ap_int<48> C[inp_num][pack_inp_len]){
+void gemm_systolic_array_qkv(int8_t A[inp_num][inp_len], const int8_t B[pack_inp_len][inp_len], ap_int<48> C[inp_num][pack_inp_len]){
 
 	#pragma HLS ARRAY_PARTITION variable = A cyclic factor = block_size1 dim = 1
     #pragma HLS ARRAY_PARTITION variable = B cyclic factor = block_size1 dim = 1
@@ -47,7 +47,7 @@ void gemm_systolic_array_qkv(int8_t A[inp_num][inp_len], int8_t B[pack_inp_len][
 }
 
 
-void gemm_systolic_array_attn(int8_t A[inp_num][head_len], int8_t B[inp_num][head_len], ap_int<24> C[inp_num][inp_num]){
+void gemm_systolic_array_attn(int8_t A[inp_num][head_len], const int8_t B[inp_num][head_len], ap_int<24> C[inp_num][inp_num]){
 
 	#pragma HLS ARRAY_PARTITION variable = A cyclic factor = block_size2 dim = 1
     #pragma HLS ARRAY_PARTITION variable = B cyclic factor = block_size2 dim = 1
@@ -93,7 +93,7 @@ void gemm_systolic_array_attn(int8_t A[inp_num][head_len], int8_t B[inp_num][hea
 }
 
 
-void gemm_systolic_array_cont(int8_t A[inp_num][inp_num], int8_t B[inp_num][head_len], ap_int<24> C[inp_num][head_len]){
+void gemm_systolic_array_cont(int8_t A[inp_num][inp_num], const int8_t B[inp_num][head_len], ap_int<24> C[inp_num][head_len]){
 
 	#pragma HLS ARRAY_PARTITION variable = A cyclic factor = block_size2 dim = 1
     #pragma HLS ARRAY_PARTITION variable = B cyclic factor = block_size2 dim = 2
@@ -139,7 +139,7 @@ void gemm_systolic_array_cont(int8_t A[inp_num][inp_num], int8_t B[inp_num][head
 }
 
 
-void gemm_systolic_array_ds0(int8_t A[inp_num][inp_len], int8_t B[pack_inp_len][inp_len], ap_int<48> C[inp_num][pack_inp_len]){
+void gemm_systolic_array_ds0(int8_t A[inp_num][inp_len], const int8_t B[pack_inp_len][inp_len], ap_int<48> C[inp_num][pack_inp_len]){
 
 	#pragma HLS ARRAY_PARTITION variable = A cyclic factor = block_size1 dim = 1
     #pragma HLS ARRAY_PARTITION variable = B cyclic factor = block_size1 dim = 1
@@ -186,7 +186,7 @@ void gemm_systolic_array_ds0(int8_t A[inp_num][inp_len], int8_t B[pack_inp_len][
 }
 
 
-void gemm_systolic_array_ds1(int8_t A[inp_num][inp_len], int8_t B[pack_gelu_len][inp_len], ap_int<48> C[inp_num][pack_gelu_len]){
+void gemm_systolic_array_ds1(int8_t A[inp_num][inp_len], const int8_t B[pack_gelu_len][inp_len], ap_int<48> C[inp_num][pack_gelu_len]){
 
 	#pragma HLS ARRAY_PARTITION variable = A cyclic factor = block_size1 dim = 1
     #pragma HLS ARRAY_PARTITION variable = B cyclic factor = block_size1 dim = 1
@@ -232,7 +232,7 @@ void gemm_systolic_array_ds1(int8_t A[inp_num][inp_len], int8_t B[pack_gelu_len]
 }
 
 
-void gemm_systolic_array_ds2(int8_t A[inp_num][gelu_len], int8_t B[pack_inp_len][gelu_len], ap_int<48> C[inp_num][pack_inp_len]){
+void gemm_systolic_array_ds2(int8_t A[inp_num][gelu_len], const int8_t B[pack_inp_len][gelu_len], ap_int<48> C[inp_num][pack_inp_len]){
 
 	#pragma HLS ARRAY_PARTITION variable = A cyclic factor = block_size1 dim = 1
     #pragma HLS ARRAY_PARTITION variable = B cyclic factor = block_size1 dim = 1

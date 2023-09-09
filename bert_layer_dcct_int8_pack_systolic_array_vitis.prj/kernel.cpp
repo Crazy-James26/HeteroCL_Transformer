@@ -14,7 +14,7 @@ extern "C" {
 
 void float_to_int8(
   float v0[12][768],
-  float v1[12],
+  const float v1[12],
   int8_t v2[12][768]
 ) {     // L2
   #pragma HLS array_partition variable=v0 complete dim=1
@@ -37,9 +37,9 @@ void float_to_int8(
 
 void Linear_layer_qkv(
   int8_t v9[12][768],
-  int8_t v10[384][768],
-  ap_int<12> v11[768],
-  float v12[12],
+  const int8_t v10[384][768],
+  const ap_int<12> v11[768],
+  const float v12[12],
   int8_t v13[12][768]
 ) {     // L15
   #pragma HLS array_partition variable=v9 complete dim=1
@@ -80,8 +80,8 @@ void Linear_layer_qkv(
 
 void Attention_layer(
   int8_t v37[12][64],
-  int8_t v38[12][64],
-  float v39[12],
+  const int8_t v38[12][64],
+  const float v39[12],
   float v40[12][12]
 ) {     // L52
   #pragma HLS array_partition variable=v37 cyclic dim=1 factor=4
@@ -117,7 +117,7 @@ void Attention_layer(
 
 void Softmax_layer(
   float v62[12][12],
-  float v63[12],
+  const float v63[12],
   int8_t v64[12][12]
 ) {     // L86
   #pragma HLS array_partition variable=v62 cyclic dim=1 factor=4
@@ -157,8 +157,8 @@ void Softmax_layer(
 
 void Context_layer(
   int8_t v82[12][12],
-  int8_t v83[12][64],
-  float v84[12],
+  const int8_t v83[12][64],
+  const float v84[12],
   int8_t v85[12][64]
 ) {     // L115
   #pragma HLS array_partition variable=v82 cyclic dim=1 factor=4
@@ -194,11 +194,11 @@ void Context_layer(
 
 void Self_attention(
   int8_t v107[12][768],
-  int8_t v108[12][768],
-  int8_t v109[12][768],
-  float v110[12],
-  float v111[12],
-  float v112[12],
+  const int8_t v108[12][768],
+  const int8_t v109[12][768],
+  const float v110[12],
+  const float v111[12],
+  const float v112[12],
   int8_t v113[12][768]
 ) {     // L148
   #pragma HLS array_partition variable=v107 complete dim=1
@@ -242,9 +242,9 @@ void Self_attention(
 
 void Linear_layer_ds0(
   int8_t v129[12][768],
-  int8_t v130[384][768],
-  ap_int<12> v131[768],
-  float v132[12],
+  const int8_t v130[384][768],
+  const ap_int<12> v131[768],
+  const float v132[12],
   float v133[12][768]
 ) {     // L176
   #pragma HLS array_partition variable=v129 complete dim=1
@@ -307,8 +307,8 @@ void Res_layer0(
 
 void Layer_norm0(
   float v164[12][768],
-  float v165[768],
-  float v166[768],
+  const float v165[768],
+  const float v166[768],
   float v167[12][768]
 ) {     // L224
   #pragma HLS array_partition variable=v164 complete dim=1
@@ -375,9 +375,9 @@ void Layer_norm0(
 
 void Linear_layer_ds1(
   int8_t v204[12][768],
-  int8_t v205[1536][768],
-  ap_int<12> v206[3072],
-  float v207[12],
+  const int8_t v205[1536][768],
+  const ap_int<12> v206[3072],
+  const float v207[12],
   float v208[12][3072]
 ) {     // L284
   #pragma HLS array_partition variable=v204 complete dim=1
@@ -418,7 +418,7 @@ void Linear_layer_ds1(
 
 void Gelu_layer(
   float v231[12][3072],
-  float v232[12],
+  const float v232[12],
   int8_t v233[12][3072]
 ) {     // L320
   #pragma HLS array_partition variable=v231 complete dim=1
@@ -447,9 +447,9 @@ void Gelu_layer(
 
 void Linear_layer_ds2(
   int8_t v248[12][3072],
-  int8_t v249[384][3072],
-  ap_int<12> v250[768],
-  float v251[12],
+  const int8_t v249[384][3072],
+  const ap_int<12> v250[768],
+  const float v251[12],
   float v252[12][768]
 ) {     // L348
   #pragma HLS array_partition variable=v248 complete dim=1
@@ -512,8 +512,8 @@ void Res_layer1(
 
 void Layer_norm1(
   float v283[12][768],
-  float v284[768],
-  float v285[768],
+  const float v284[768],
+  const float v285[768],
   float v286[12][768]
 ) {     // L396
   #pragma HLS array_partition variable=v283 complete dim=1
@@ -578,40 +578,53 @@ void Layer_norm1(
   }
 }
 
+#include "const/buf1.h"
+#include "const/buf2.h"
+#include "const/buf3.h"
+#include "const/buf4.h"
+#include "const/buf5.h"
+#include "const/buf6.h"
+#include "const/buf7.h"
+#include "const/buf8.h"
+#include "const/buf9.h"
+#include "const/buf10.h"
+#include "const/buf11.h"
+#include "const/buf12.h"
+#include "const/buf13.h"
+#include "const/buf14.h"
+#include "const/buf15.h"
+#include "const/buf16.h"
+#include "const/buf17.h"
+#include "const/buf18.h"
+#include "const/buf19.h"
+#include "const/buf20.h"
+#include "const/buf21.h"
+#include "const/buf22.h"
+#include "const/buf23.h"
+#include "const/buf24.h"
+#include "const/buf25.h"
+#include "const/buf26.h"
+#include "const/buf27.h"
+#include "const/buf28.h"
+
 void Bert_layer(
   float *v323,
-  int8_t *v324,
-  int16_t *v325,
-  int8_t *v326,
-  int16_t *v327,
-  int8_t *v328,
-  int16_t *v329,
-  int8_t *v330,
-  int16_t *v331,
-  int8_t *v332,
-  int16_t *v333,
-  int8_t *v334,
-  int16_t *v335,
-  float *v336,
-  float *v337,
-  float *v338,
-  float *v339,
-  float *v340,
-  float *v341,
-  float *v342,
-  float *v343,
-  float *v344,
-  float *v345,
-  float *v346,
-  float *v347,
-  float *v348,
-  float *v349,
-  float *v350,
-  float *v351,
   float *v352
 ) {	// L456
   float buf0[12][768];	//
   #pragma HLS array_partition variable=buf0 complete dim=1
+
+  #pragma HLS array_partition variable=buf1 cyclic dim=1 factor=12
+
+  #pragma HLS array_partition variable=buf3 cyclic dim=1 factor=12
+
+  #pragma HLS array_partition variable=buf5 cyclic dim=1 factor=12
+
+  #pragma HLS array_partition variable=buf7 cyclic dim=1 factor=12
+
+  #pragma HLS array_partition variable=buf9 cyclic dim=1 factor=12
+
+  #pragma HLS array_partition variable=buf11 cyclic dim=1 factor=12
   l_S_buf0_buf0_l_0: for (int buf0_l_0 = 0; buf0_l_0 < 12; buf0_l_0++) {	//
     l_buf0_l_1: for (int buf0_l_1 = 0; buf0_l_1 < 768; buf0_l_1++) {	//
     #pragma HLS pipeline II=1
@@ -619,221 +632,6 @@ void Bert_layer(
       buf0[buf0_l_0][buf0_l_1] = v356;	//
     }
   }
-
-  int8_t buf1[384][768];	//
-  #pragma HLS array_partition variable=buf1 cyclic dim=1 factor=12
-  l_S_buf1_buf1_l_0: for (int buf1_l_0 = 0; buf1_l_0 < 384; buf1_l_0++) {	//
-    l_buf1_l_1: for (int buf1_l_1 = 0; buf1_l_1 < 768; buf1_l_1++) {	//
-    #pragma HLS pipeline II=1
-      int8_t v360 = v324[((buf1_l_0 * 768) + buf1_l_1)];	//
-      buf1[buf1_l_0][buf1_l_1] = v360;	//
-    }
-  }
-
-  ap_int<12> buf2[768];	//
-  l_S_buf2_buf2_l_0: for (int buf2_l_0 = 0; buf2_l_0 < 768; buf2_l_0++) {	//
-  #pragma HLS pipeline II=1
-    ap_int<12> v363 = v325[buf2_l_0];	//
-    buf2[buf2_l_0] = v363;	//
-  }
-
-  int8_t buf3[384][768];	//
-  #pragma HLS array_partition variable=buf3 cyclic dim=1 factor=12
-  l_S_buf3_buf3_l_0: for (int buf3_l_0 = 0; buf3_l_0 < 384; buf3_l_0++) {	//
-    l_buf3_l_1: for (int buf3_l_1 = 0; buf3_l_1 < 768; buf3_l_1++) {	//
-    #pragma HLS pipeline II=1
-      int8_t v367 = v326[((buf3_l_0 * 768) + buf3_l_1)];	//
-      buf3[buf3_l_0][buf3_l_1] = v367;	//
-    }
-  }
-
-  ap_int<12> buf4[768];	//
-  l_S_buf4_buf4_l_0: for (int buf4_l_0 = 0; buf4_l_0 < 768; buf4_l_0++) {	//
-  #pragma HLS pipeline II=1
-    ap_int<12> v370 = v327[buf4_l_0];	//
-    buf4[buf4_l_0] = v370;	//
-  }
-
-  int8_t buf5[384][768];	//
-  #pragma HLS array_partition variable=buf5 cyclic dim=1 factor=12
-  l_S_buf5_buf5_l_0: for (int buf5_l_0 = 0; buf5_l_0 < 384; buf5_l_0++) {	//
-    l_buf5_l_1: for (int buf5_l_1 = 0; buf5_l_1 < 768; buf5_l_1++) {	//
-    #pragma HLS pipeline II=1
-      int8_t v374 = v328[((buf5_l_0 * 768) + buf5_l_1)];	//
-      buf5[buf5_l_0][buf5_l_1] = v374;	//
-    }
-  }
-
-  ap_int<12> buf6[768];	//
-  l_S_buf6_buf6_l_0: for (int buf6_l_0 = 0; buf6_l_0 < 768; buf6_l_0++) {	//
-  #pragma HLS pipeline II=1
-    ap_int<12> v377 = v329[buf6_l_0];	//
-    buf6[buf6_l_0] = v377;	//
-  }
-
-  int8_t buf7[384][768];	//
-  #pragma HLS array_partition variable=buf7 cyclic dim=1 factor=12
-  l_S_buf7_buf7_l_0: for (int buf7_l_0 = 0; buf7_l_0 < 384; buf7_l_0++) {	//
-    l_buf7_l_1: for (int buf7_l_1 = 0; buf7_l_1 < 768; buf7_l_1++) {	//
-    #pragma HLS pipeline II=1
-      int8_t v381 = v330[((buf7_l_0 * 768) + buf7_l_1)];	//
-      buf7[buf7_l_0][buf7_l_1] = v381;	//
-    }
-  }
-
-  ap_int<12> buf8[768];	//
-  l_S_buf8_buf8_l_0: for (int buf8_l_0 = 0; buf8_l_0 < 768; buf8_l_0++) {	//
-  #pragma HLS pipeline II=1
-    ap_int<12> v384 = v331[buf8_l_0];	//
-    buf8[buf8_l_0] = v384;	//
-  }
-
-  int8_t buf9[1536][768];	//
-  #pragma HLS array_partition variable=buf9 cyclic dim=1 factor=12
-  l_S_buf9_buf9_l_0: for (int buf9_l_0 = 0; buf9_l_0 < 1536; buf9_l_0++) {	//
-    l_buf9_l_1: for (int buf9_l_1 = 0; buf9_l_1 < 768; buf9_l_1++) {	//
-    #pragma HLS pipeline II=1
-      int8_t v388 = v332[((buf9_l_0 * 768) + buf9_l_1)];	//
-      buf9[buf9_l_0][buf9_l_1] = v388;	//
-    }
-  }
-
-  ap_int<12> buf10[3072];	//
-  l_S_buf10_buf10_l_0: for (int buf10_l_0 = 0; buf10_l_0 < 3072; buf10_l_0++) {	//
-  #pragma HLS pipeline II=1
-    ap_int<12> v391 = v333[buf10_l_0];	//
-    buf10[buf10_l_0] = v391;	//
-  }
-
-  int8_t buf11[384][3072];	//
-  #pragma HLS array_partition variable=buf11 cyclic dim=1 factor=12
-  l_S_buf11_buf11_l_0: for (int buf11_l_0 = 0; buf11_l_0 < 384; buf11_l_0++) {	//
-    l_buf11_l_1: for (int buf11_l_1 = 0; buf11_l_1 < 3072; buf11_l_1++) {	//
-    #pragma HLS pipeline II=1
-      int8_t v395 = v334[((buf11_l_0 * 3072) + buf11_l_1)];	//
-      buf11[buf11_l_0][buf11_l_1] = v395;	//
-    }
-  }
-
-  ap_int<12> buf12[768];	//
-  l_S_buf12_buf12_l_0: for (int buf12_l_0 = 0; buf12_l_0 < 768; buf12_l_0++) {	//
-  #pragma HLS pipeline II=1
-    ap_int<12> v398 = v335[buf12_l_0];	//
-    buf12[buf12_l_0] = v398;	//
-  }
-
-  float buf13[768];	//
-  l_S_buf13_buf13_l_0: for (int buf13_l_0 = 0; buf13_l_0 < 768; buf13_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v401 = v336[buf13_l_0];	//
-    buf13[buf13_l_0] = v401;	//
-  }
-
-  float buf14[768];	//
-  l_S_buf14_buf14_l_0: for (int buf14_l_0 = 0; buf14_l_0 < 768; buf14_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v404 = v337[buf14_l_0];	//
-    buf14[buf14_l_0] = v404;	//
-  }
-
-  float buf15[768];	//
-  l_S_buf15_buf15_l_0: for (int buf15_l_0 = 0; buf15_l_0 < 768; buf15_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v407 = v338[buf15_l_0];	//
-    buf15[buf15_l_0] = v407;	//
-  }
-
-  float buf16[768];	//
-  l_S_buf16_buf16_l_0: for (int buf16_l_0 = 0; buf16_l_0 < 768; buf16_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v410 = v339[buf16_l_0];	//
-    buf16[buf16_l_0] = v410;	//
-  }
-
-  float buf17[12];	//
-  l_S_buf17_buf17_l_0: for (int buf17_l_0 = 0; buf17_l_0 < 12; buf17_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v413 = v340[buf17_l_0];	//
-    buf17[buf17_l_0] = v413;	//
-  }
-
-  float buf18[12];	//
-  l_S_buf18_buf18_l_0: for (int buf18_l_0 = 0; buf18_l_0 < 12; buf18_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v416 = v341[buf18_l_0];	//
-    buf18[buf18_l_0] = v416;	//
-  }
-
-  float buf19[12];	//
-  l_S_buf19_buf19_l_0: for (int buf19_l_0 = 0; buf19_l_0 < 12; buf19_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v419 = v342[buf19_l_0];	//
-    buf19[buf19_l_0] = v419;	//
-  }
-
-  float buf20[12];	//
-  l_S_buf20_buf20_l_0: for (int buf20_l_0 = 0; buf20_l_0 < 12; buf20_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v422 = v343[buf20_l_0];	//
-    buf20[buf20_l_0] = v422;	//
-  }
-
-  float buf21[12];	//
-  l_S_buf21_buf21_l_0: for (int buf21_l_0 = 0; buf21_l_0 < 12; buf21_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v425 = v344[buf21_l_0];	//
-    buf21[buf21_l_0] = v425;	//
-  }
-
-  float buf22[12];	//
-  l_S_buf22_buf22_l_0: for (int buf22_l_0 = 0; buf22_l_0 < 12; buf22_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v428 = v345[buf22_l_0];	//
-    buf22[buf22_l_0] = v428;	//
-  }
-
-  float buf23[12];	//
-  l_S_buf23_buf23_l_0: for (int buf23_l_0 = 0; buf23_l_0 < 12; buf23_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v431 = v346[buf23_l_0];	//
-    buf23[buf23_l_0] = v431;	//
-  }
-
-  float buf24[12];	//
-  l_S_buf24_buf24_l_0: for (int buf24_l_0 = 0; buf24_l_0 < 12; buf24_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v434 = v347[buf24_l_0];	//
-    buf24[buf24_l_0] = v434;	//
-  }
-
-  float buf25[12];	//
-  l_S_buf25_buf25_l_0: for (int buf25_l_0 = 0; buf25_l_0 < 12; buf25_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v437 = v348[buf25_l_0];	//
-    buf25[buf25_l_0] = v437;	//
-  }
-
-  float buf26[12];	//
-  l_S_buf26_buf26_l_0: for (int buf26_l_0 = 0; buf26_l_0 < 12; buf26_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v440 = v349[buf26_l_0];	//
-    buf26[buf26_l_0] = v440;	//
-  }
-
-  float buf27[12];	//
-  l_S_buf27_buf27_l_0: for (int buf27_l_0 = 0; buf27_l_0 < 12; buf27_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v443 = v350[buf27_l_0];	//
-    buf27[buf27_l_0] = v443;	//
-  }
-
-  float buf28[12];	//
-  l_S_buf28_buf28_l_0: for (int buf28_l_0 = 0; buf28_l_0 < 12; buf28_l_0++) {	//
-  #pragma HLS pipeline II=1
-    float v446 = v351[buf28_l_0];	//
-    buf28[buf28_l_0] = v446;	//
-  }
-
   int8_t v447[12][768];
   float_to_int8(buf0, buf17, v447);	// L457
   int8_t v448[12][768];
