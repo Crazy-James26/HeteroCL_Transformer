@@ -52,7 +52,7 @@ void input_loader_kv(
   float inp[inp_num][inp_len],
   const float s[inp_num],
   hls::stream<int8_t> inp_k[inp_num],
-  hls::stream<int8_t> inp_v[inp_num],
+  hls::stream<int8_t> inp_v[inp_num]
 );
 
 void Linear_layer_k(
@@ -72,19 +72,19 @@ void Linear_layer_v(
 );
 
 void K_writer(
-  hls::stream<float> inp[inp_num],
-  int8_t K[head_num][inp_num][head_len],
+  hls::stream<int8_t> inp[inp_num],
+  int8_t K[head_num][inp_num][head_len]
 );
 
 void V_writer(
-  hls::stream<float> inp[inp_num],
-  int8_t V[head_num][inp_num][head_len],
+  hls::stream<int8_t> inp[inp_num],
+  int8_t V[head_num][inp_num][head_len]
 );
 
 void input_loader_q(
   float inp[inp_num][inp_len],
   const float s[inp_num],
-  hls::stream<int8_t> inp_q[inp_num],
+  hls::stream<int8_t> inp_q[inp_num]
 );
 
 void Linear_layer_q(
@@ -96,25 +96,23 @@ void Linear_layer_q(
 );
 
 void Attention_layer(
-  hls::stream<int8_t> inp[inp_num],
+  hls::stream<int8_t> inp[head_num][inp_num],
   const int8_t W[head_num][inp_num][head_len],
   const float s[inp_num],
-  hls::stream<float> outp[inp_num],
-  int head_id,
+  hls::stream<float> outp[head_num][inp_num]
 );
 
 void Softmax_layer(
-  hls::stream<float> inp[inp_num],
+  hls::stream<float> inp[head_num][inp_num],
   const float s[inp_num],
-  hls::stream<int8_t> outp[inp_num],
+  hls::stream<int8_t> outp[head_num][inp_num]
 );
 
 void Context_layer(
-  hls::stream<int8_t> inp[inp_num],
+  hls::stream<int8_t> inp[head_num][inp_num],
   const int8_t W[head_num][inp_num][head_len],
   const float s[inp_num],
-  hls::stream<int8_t> outp[inp_num][head_len],
-  int head_id,
+  hls::stream<int8_t> outp[head_num][inp_num]
 );
 
 void Self_attention(
@@ -124,7 +122,7 @@ void Self_attention(
   const float s_attn[inp_num],
   const float s_sfm[inp_num],
   const float s_cont[inp_num],
-  hls::stream<int8_t> outp[inp_num][inp_len]
+  hls::stream<int8_t> outp[inp_num]
 );
 
 void Linear_layer_ds0(
@@ -137,27 +135,27 @@ void Linear_layer_ds0(
 
 void input_loader_res0(
   float inp[inp_num][inp_len],
-  hls::stream<int8_t> inp_res[inp_num],
+  hls::stream<float> inp_res[inp_num]
 );
 
 void Res_layer0(
   hls::stream<float> inp_direct[inp_num],
   hls::stream<float> inp_shortcut[inp_num],
-  hls::stream<float> outp[inp_num],
+  hls::stream<float> outp[inp_num]
 );
 
 void Layer_norm0(
   hls::stream<float> inp[inp_num],
   const float gamma[inp_len],
   const float beta[inp_len],
-  hls::stream<float> outp[inp_num],
+  hls::stream<float> outp[inp_num]
 );
 
 void input_loader_ds1_res1(
   hls::stream<float> inp[inp_num],
   const float s[inp_num],
   hls::stream<float> inp_res[inp_num],
-  hls::stream<int8_t> inp_ds[inp_num],
+  hls::stream<int8_t> inp_ds[inp_num]
 );
 
 void Linear_layer_ds1(
@@ -171,7 +169,7 @@ void Linear_layer_ds1(
 void Gelu_layer(
   hls::stream<float> inp[inp_num],
   const float s[inp_num],
-  hls::stream<int8_t> outp[inp_num],
+  hls::stream<int8_t> outp[inp_num]
 );
 
 void Linear_layer_ds2(
@@ -185,24 +183,37 @@ void Linear_layer_ds2(
 void Res_layer1(
   hls::stream<float> inp_direct[inp_num],
   hls::stream<float> inp_shortcut[inp_num],
-  hls::stream<float> outp[inp_num],
+  hls::stream<float> outp[inp_num]
 );
 
 void Layer_norm1(
   hls::stream<float> inp[inp_num],
   const float gamma[inp_len],
   const float beta[inp_len],
-  hls::stream<float> outp[inp_num],
+  hls::stream<float> outp[inp_num]
 );
 
 void output_writer(
   hls::stream<float> inp[inp_num],
-  float outp[inp_num][inp_len],
-)
+  float outp[inp_num][inp_len]
+);
+
+void Bert_layer_dataflow_region_1(
+  float inp[inp_num][inp_len],
+  int8_t K[head_num][inp_num][head_len],
+  int8_t V[head_num][inp_num][head_len]
+);
+
+void Bert_layer_dataflow_region_2(
+  float inp[inp_num][inp_len],
+  int8_t K[head_num][inp_num][head_len],
+  int8_t V[head_num][inp_num][head_len],
+  float outp[inp_num][inp_len]
+);
 
 void Bert_layer(
   float *inp_addr,
-  float *outp_addr,
+  float *outp_addr
 );
 
 }
