@@ -1,0 +1,124 @@
+<ENTRY>
+{
+ "thisFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xclbin.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Sep  9 15:41:44 2023",
+ "timestampMillis": "1694288504788",
+ "buildStep": {
+  "cmdId": "f2ece4ac-abe6-43a0-ad23-0422d3890390",
+  "name": "v++",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj/_x/package/package.steps.log",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -p ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --package.out_dir ./package.hw -o ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xclbin ",
+  "args": [
+   "-p",
+   "./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--package.out_dir",
+   "./package.hw",
+   "-o",
+   "./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Sep  9 15:41:44 2023",
+ "timestampMillis": "1694288504788",
+ "status": {
+  "cmdId": "f2ece4ac-abe6-43a0-ad23-0422d3890390",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Sep  9 15:41:54 2023",
+ "timestampMillis": "1694288514304",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_PACKAGE",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "Bert_layer",
+    "file": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1.2. SW Build 3602371 on 2022-08-02-23:13:43",
+  "inputBinaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "Bert_layer.link",
+    "file": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+    "reports": [],
+    "uuid": "f7aeca05-c4d1-4ed5-b515-832030203132"
+   },
+   "kernels": []
+  }
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Sep  9 15:41:55 2023",
+ "timestampMillis": "1694288515021",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj/_x/reports/package/v++_package_Bert_layer_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Sep  9 15:41:55 2023",
+ "timestampMillis": "1694288515022",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_systolic_array_vitis_250mhz.prj/_x/v++_package_Bert_layer_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Sep  9 15:41:55 2023",
+ "timestampMillis": "1694288515022",
+ "status": {
+  "cmdId": "f2ece4ac-abe6-43a0-ad23-0422d3890390",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
