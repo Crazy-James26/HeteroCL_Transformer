@@ -1,0 +1,216 @@
+
+
+================================================================
+== Vitis HLS Report for 'Bert_layer_Pipeline_l_read_inp_j'
+================================================================
+* Date:           Thu Sep 14 02:07:20 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out_test3.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.805 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      770|      770|  2.564 us|  2.564 us|  770|  770|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- l_read_inp_j  |      768|      768|         1|          1|          1|   768|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       28|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       27|    -|
+|Register             |        -|     -|       12|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       12|       55|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln646_fu_432_p2   |         +|   0|  0|  17|          10|           1|
+    |icmp_ln646_fu_426_p2  |      icmp|   0|  0|  11|          10|          10|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  28|          20|          11|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_done_int            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_17  |   9|          2|   10|         20|
+    |j_fu_94                |   9|          2|   10|         20|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  27|          6|   21|         42|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |   1|   0|    1|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |j_fu_94      |  10|   0|   10|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  12|   0|   12|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+----------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  Bert_layer_Pipeline_l_read_inp_j|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  Bert_layer_Pipeline_l_read_inp_j|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  Bert_layer_Pipeline_l_read_inp_j|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  Bert_layer_Pipeline_l_read_inp_j|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  Bert_layer_Pipeline_l_read_inp_j|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  Bert_layer_Pipeline_l_read_inp_j|  return value|
+|inp_data_0_15_address0  |  out|   10|   ap_memory|                     inp_data_0_15|         array|
+|inp_data_0_15_ce0       |  out|    1|   ap_memory|                     inp_data_0_15|         array|
+|inp_data_0_15_we0       |  out|    1|   ap_memory|                     inp_data_0_15|         array|
+|inp_data_0_15_d0        |  out|   32|   ap_memory|                     inp_data_0_15|         array|
+|inp_data_0_14_address0  |  out|   10|   ap_memory|                     inp_data_0_14|         array|
+|inp_data_0_14_ce0       |  out|    1|   ap_memory|                     inp_data_0_14|         array|
+|inp_data_0_14_we0       |  out|    1|   ap_memory|                     inp_data_0_14|         array|
+|inp_data_0_14_d0        |  out|   32|   ap_memory|                     inp_data_0_14|         array|
+|inp_data_0_13_address0  |  out|   10|   ap_memory|                     inp_data_0_13|         array|
+|inp_data_0_13_ce0       |  out|    1|   ap_memory|                     inp_data_0_13|         array|
+|inp_data_0_13_we0       |  out|    1|   ap_memory|                     inp_data_0_13|         array|
+|inp_data_0_13_d0        |  out|   32|   ap_memory|                     inp_data_0_13|         array|
+|inp_data_0_12_address0  |  out|   10|   ap_memory|                     inp_data_0_12|         array|
+|inp_data_0_12_ce0       |  out|    1|   ap_memory|                     inp_data_0_12|         array|
+|inp_data_0_12_we0       |  out|    1|   ap_memory|                     inp_data_0_12|         array|
+|inp_data_0_12_d0        |  out|   32|   ap_memory|                     inp_data_0_12|         array|
+|inp_data_0_11_address0  |  out|   10|   ap_memory|                     inp_data_0_11|         array|
+|inp_data_0_11_ce0       |  out|    1|   ap_memory|                     inp_data_0_11|         array|
+|inp_data_0_11_we0       |  out|    1|   ap_memory|                     inp_data_0_11|         array|
+|inp_data_0_11_d0        |  out|   32|   ap_memory|                     inp_data_0_11|         array|
+|inp_data_0_10_address0  |  out|   10|   ap_memory|                     inp_data_0_10|         array|
+|inp_data_0_10_ce0       |  out|    1|   ap_memory|                     inp_data_0_10|         array|
+|inp_data_0_10_we0       |  out|    1|   ap_memory|                     inp_data_0_10|         array|
+|inp_data_0_10_d0        |  out|   32|   ap_memory|                     inp_data_0_10|         array|
+|inp_data_0_9_address0   |  out|   10|   ap_memory|                      inp_data_0_9|         array|
+|inp_data_0_9_ce0        |  out|    1|   ap_memory|                      inp_data_0_9|         array|
+|inp_data_0_9_we0        |  out|    1|   ap_memory|                      inp_data_0_9|         array|
+|inp_data_0_9_d0         |  out|   32|   ap_memory|                      inp_data_0_9|         array|
+|inp_data_0_8_address0   |  out|   10|   ap_memory|                      inp_data_0_8|         array|
+|inp_data_0_8_ce0        |  out|    1|   ap_memory|                      inp_data_0_8|         array|
+|inp_data_0_8_we0        |  out|    1|   ap_memory|                      inp_data_0_8|         array|
+|inp_data_0_8_d0         |  out|   32|   ap_memory|                      inp_data_0_8|         array|
+|inp_data_0_7_address0   |  out|   10|   ap_memory|                      inp_data_0_7|         array|
+|inp_data_0_7_ce0        |  out|    1|   ap_memory|                      inp_data_0_7|         array|
+|inp_data_0_7_we0        |  out|    1|   ap_memory|                      inp_data_0_7|         array|
+|inp_data_0_7_d0         |  out|   32|   ap_memory|                      inp_data_0_7|         array|
+|inp_data_0_6_address0   |  out|   10|   ap_memory|                      inp_data_0_6|         array|
+|inp_data_0_6_ce0        |  out|    1|   ap_memory|                      inp_data_0_6|         array|
+|inp_data_0_6_we0        |  out|    1|   ap_memory|                      inp_data_0_6|         array|
+|inp_data_0_6_d0         |  out|   32|   ap_memory|                      inp_data_0_6|         array|
+|inp_data_0_5_address0   |  out|   10|   ap_memory|                      inp_data_0_5|         array|
+|inp_data_0_5_ce0        |  out|    1|   ap_memory|                      inp_data_0_5|         array|
+|inp_data_0_5_we0        |  out|    1|   ap_memory|                      inp_data_0_5|         array|
+|inp_data_0_5_d0         |  out|   32|   ap_memory|                      inp_data_0_5|         array|
+|inp_data_0_4_address0   |  out|   10|   ap_memory|                      inp_data_0_4|         array|
+|inp_data_0_4_ce0        |  out|    1|   ap_memory|                      inp_data_0_4|         array|
+|inp_data_0_4_we0        |  out|    1|   ap_memory|                      inp_data_0_4|         array|
+|inp_data_0_4_d0         |  out|   32|   ap_memory|                      inp_data_0_4|         array|
+|inp_data_0_3_address0   |  out|   10|   ap_memory|                      inp_data_0_3|         array|
+|inp_data_0_3_ce0        |  out|    1|   ap_memory|                      inp_data_0_3|         array|
+|inp_data_0_3_we0        |  out|    1|   ap_memory|                      inp_data_0_3|         array|
+|inp_data_0_3_d0         |  out|   32|   ap_memory|                      inp_data_0_3|         array|
+|inp_data_0_2_address0   |  out|   10|   ap_memory|                      inp_data_0_2|         array|
+|inp_data_0_2_ce0        |  out|    1|   ap_memory|                      inp_data_0_2|         array|
+|inp_data_0_2_we0        |  out|    1|   ap_memory|                      inp_data_0_2|         array|
+|inp_data_0_2_d0         |  out|   32|   ap_memory|                      inp_data_0_2|         array|
+|inp_data_0_1_address0   |  out|   10|   ap_memory|                      inp_data_0_1|         array|
+|inp_data_0_1_ce0        |  out|    1|   ap_memory|                      inp_data_0_1|         array|
+|inp_data_0_1_we0        |  out|    1|   ap_memory|                      inp_data_0_1|         array|
+|inp_data_0_1_d0         |  out|   32|   ap_memory|                      inp_data_0_1|         array|
+|inp_data_0_address0     |  out|   10|   ap_memory|                        inp_data_0|         array|
+|inp_data_0_ce0          |  out|    1|   ap_memory|                        inp_data_0|         array|
+|inp_data_0_we0          |  out|    1|   ap_memory|                        inp_data_0|         array|
+|inp_data_0_d0           |  out|   32|   ap_memory|                        inp_data_0|         array|
+|bitcast_ln648           |   in|   32|     ap_none|                     bitcast_ln648|        scalar|
+|bitcast_ln648_1         |   in|   32|     ap_none|                   bitcast_ln648_1|        scalar|
+|bitcast_ln648_2         |   in|   32|     ap_none|                   bitcast_ln648_2|        scalar|
+|bitcast_ln648_3         |   in|   32|     ap_none|                   bitcast_ln648_3|        scalar|
+|bitcast_ln648_4         |   in|   32|     ap_none|                   bitcast_ln648_4|        scalar|
+|bitcast_ln648_5         |   in|   32|     ap_none|                   bitcast_ln648_5|        scalar|
+|bitcast_ln648_6         |   in|   32|     ap_none|                   bitcast_ln648_6|        scalar|
+|bitcast_ln648_7         |   in|   32|     ap_none|                   bitcast_ln648_7|        scalar|
+|bitcast_ln648_8         |   in|   32|     ap_none|                   bitcast_ln648_8|        scalar|
+|bitcast_ln648_9         |   in|   32|     ap_none|                   bitcast_ln648_9|        scalar|
+|bitcast_ln648_10        |   in|   32|     ap_none|                  bitcast_ln648_10|        scalar|
+|bitcast_ln648_11        |   in|   32|     ap_none|                  bitcast_ln648_11|        scalar|
+|bitcast_ln648_12        |   in|   32|     ap_none|                  bitcast_ln648_12|        scalar|
+|bitcast_ln648_13        |   in|   32|     ap_none|                  bitcast_ln648_13|        scalar|
+|bitcast_ln648_14        |   in|   32|     ap_none|                  bitcast_ln648_14|        scalar|
+|bitcast_ln648_15        |   in|   32|     ap_none|                  bitcast_ln648_15|        scalar|
++------------------------+-----+-----+------------+----------------------------------+--------------+
+

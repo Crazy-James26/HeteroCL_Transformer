@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vitis HLS Report for 'l_bias_scale_j_proc'
+================================================================
+* Date:           Thu Sep 14 03:44:43 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out_test.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.373 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       47|       47|  0.157 us|  0.157 us|   47|   47|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                        |                                             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                        Instance                        |                    Module                   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_l_bias_scale_j_proc_Pipeline_l_bias_scale_j_fu_267  |l_bias_scale_j_proc_Pipeline_l_bias_scale_j  |       45|       45|  0.150 us|  0.150 us|   45|   45|       no|
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      242|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|    48|     5288|     9373|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       47|    -|
+|Register             |        -|     -|      517|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|    48|     5805|     9662|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     1|       ~0|        2|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------+---------------------------------------------+---------+----+------+------+-----+
+    |                        Instance                        |                    Module                   | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+------+------+-----+
+    |grp_l_bias_scale_j_proc_Pipeline_l_bias_scale_j_fu_267  |l_bias_scale_j_proc_Pipeline_l_bias_scale_j  |        0|  48|  5288|  9373|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+------+------+-----+
+    |Total                                                   |                                             |        0|  48|  5288|  9373|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |add36_10_fu_414_p2  |         +|   0|  0|  16|           9|           4|
+    |add36_11_fu_425_p2  |         +|   0|  0|  16|           9|           4|
+    |add36_12_fu_436_p2  |         +|   0|  0|  16|           9|           4|
+    |add36_13_fu_447_p2  |         +|   0|  0|  16|           9|           4|
+    |add36_14_fu_458_p2  |         +|   0|  0|  16|           9|           4|
+    |add36_15_fu_469_p2  |         +|   0|  0|  16|           9|           4|
+    |add36_1_fu_315_p2   |         +|   0|  0|  16|           9|           1|
+    |add36_2_fu_326_p2   |         +|   0|  0|  16|           9|           2|
+    |add36_3_fu_337_p2   |         +|   0|  0|  16|           9|           2|
+    |add36_4_fu_348_p2   |         +|   0|  0|  16|           9|           3|
+    |add36_5_fu_359_p2   |         +|   0|  0|  16|           9|           3|
+    |add36_6_fu_370_p2   |         +|   0|  0|  16|           9|           3|
+    |add36_7_fu_381_p2   |         +|   0|  0|  16|           9|           3|
+    |add36_8_fu_392_p2   |         +|   0|  0|  16|           9|           4|
+    |add36_9_fu_403_p2   |         +|   0|  0|  16|           9|           4|
+    |ap_block_state1     |        or|   0|  0|   2|           1|           1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |Total               |          |   0|  0| 242|         136|          50|
+    +--------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  20|          4|    1|          4|
+    |ap_done                |   9|          2|    1|          2|
+    |block_C_drainer3_read  |   9|          2|    1|          2|
+    |outp_q_write           |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  47|         10|    4|         10|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                            |   3|   0|    3|          0|
+    |ap_done_reg                                                          |   1|   0|    1|          0|
+    |grp_l_bias_scale_j_proc_Pipeline_l_bias_scale_j_fu_267_ap_start_reg  |   1|   0|    1|          0|
+    |s_load_10_reg_615                                                    |  32|   0|   32|          0|
+    |s_load_11_reg_620                                                    |  32|   0|   32|          0|
+    |s_load_12_reg_625                                                    |  32|   0|   32|          0|
+    |s_load_13_reg_630                                                    |  32|   0|   32|          0|
+    |s_load_14_reg_635                                                    |  32|   0|   32|          0|
+    |s_load_15_reg_640                                                    |  32|   0|   32|          0|
+    |s_load_1_reg_570                                                     |  32|   0|   32|          0|
+    |s_load_2_reg_575                                                     |  32|   0|   32|          0|
+    |s_load_3_reg_580                                                     |  32|   0|   32|          0|
+    |s_load_4_reg_585                                                     |  32|   0|   32|          0|
+    |s_load_5_reg_590                                                     |  32|   0|   32|          0|
+    |s_load_6_reg_595                                                     |  32|   0|   32|          0|
+    |s_load_7_reg_600                                                     |  32|   0|   32|          0|
+    |s_load_8_reg_605                                                     |  32|   0|   32|          0|
+    |s_load_9_reg_610                                                     |  32|   0|   32|          0|
+    |s_load_reg_565                                                       |  32|   0|   32|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                | 517|   0|  517|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+---------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++---------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|ap_continue                      |   in|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|  l_bias_scale_j_proc|  return value|
+|block_C_drainer3_dout            |   in|  768|     ap_fifo|     block_C_drainer3|       pointer|
+|block_C_drainer3_num_data_valid  |   in|    3|     ap_fifo|     block_C_drainer3|       pointer|
+|block_C_drainer3_fifo_cap        |   in|    3|     ap_fifo|     block_C_drainer3|       pointer|
+|block_C_drainer3_empty_n         |   in|    1|     ap_fifo|     block_C_drainer3|       pointer|
+|block_C_drainer3_read            |  out|    1|     ap_fifo|     block_C_drainer3|       pointer|
+|jj                               |   in|    5|     ap_none|                   jj|        scalar|
+|bias_address0                    |  out|   10|   ap_memory|                 bias|         array|
+|bias_ce0                         |  out|    1|   ap_memory|                 bias|         array|
+|bias_q0                          |   in|   12|   ap_memory|                 bias|         array|
+|s_address0                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce0                            |  out|    1|   ap_memory|                    s|         array|
+|s_q0                             |   in|   32|   ap_memory|                    s|         array|
+|s_address1                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce1                            |  out|    1|   ap_memory|                    s|         array|
+|s_q1                             |   in|   32|   ap_memory|                    s|         array|
+|s_address2                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce2                            |  out|    1|   ap_memory|                    s|         array|
+|s_q2                             |   in|   32|   ap_memory|                    s|         array|
+|s_address3                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce3                            |  out|    1|   ap_memory|                    s|         array|
+|s_q3                             |   in|   32|   ap_memory|                    s|         array|
+|s_address4                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce4                            |  out|    1|   ap_memory|                    s|         array|
+|s_q4                             |   in|   32|   ap_memory|                    s|         array|
+|s_address5                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce5                            |  out|    1|   ap_memory|                    s|         array|
+|s_q5                             |   in|   32|   ap_memory|                    s|         array|
+|s_address6                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce6                            |  out|    1|   ap_memory|                    s|         array|
+|s_q6                             |   in|   32|   ap_memory|                    s|         array|
+|s_address7                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce7                            |  out|    1|   ap_memory|                    s|         array|
+|s_q7                             |   in|   32|   ap_memory|                    s|         array|
+|s_address8                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce8                            |  out|    1|   ap_memory|                    s|         array|
+|s_q8                             |   in|   32|   ap_memory|                    s|         array|
+|s_address9                       |  out|    9|   ap_memory|                    s|         array|
+|s_ce9                            |  out|    1|   ap_memory|                    s|         array|
+|s_q9                             |   in|   32|   ap_memory|                    s|         array|
+|s_address10                      |  out|    9|   ap_memory|                    s|         array|
+|s_ce10                           |  out|    1|   ap_memory|                    s|         array|
+|s_q10                            |   in|   32|   ap_memory|                    s|         array|
+|s_address11                      |  out|    9|   ap_memory|                    s|         array|
+|s_ce11                           |  out|    1|   ap_memory|                    s|         array|
+|s_q11                            |   in|   32|   ap_memory|                    s|         array|
+|s_address12                      |  out|    9|   ap_memory|                    s|         array|
+|s_ce12                           |  out|    1|   ap_memory|                    s|         array|
+|s_q12                            |   in|   32|   ap_memory|                    s|         array|
+|s_address13                      |  out|    9|   ap_memory|                    s|         array|
+|s_ce13                           |  out|    1|   ap_memory|                    s|         array|
+|s_q13                            |   in|   32|   ap_memory|                    s|         array|
+|s_address14                      |  out|    9|   ap_memory|                    s|         array|
+|s_ce14                           |  out|    1|   ap_memory|                    s|         array|
+|s_q14                            |   in|   32|   ap_memory|                    s|         array|
+|s_address15                      |  out|    9|   ap_memory|                    s|         array|
+|s_ce15                           |  out|    1|   ap_memory|                    s|         array|
+|s_q15                            |   in|   32|   ap_memory|                    s|         array|
+|pack_seq_offset                  |   in|    9|     ap_none|      pack_seq_offset|        scalar|
+|outp_q_din                       |  out|  128|     ap_fifo|               outp_q|       pointer|
+|outp_q_num_data_valid            |   in|    3|     ap_fifo|               outp_q|       pointer|
+|outp_q_fifo_cap                  |   in|    3|     ap_fifo|               outp_q|       pointer|
+|outp_q_full_n                    |   in|    1|     ap_fifo|               outp_q|       pointer|
+|outp_q_write                     |  out|    1|     ap_fifo|               outp_q|       pointer|
++---------------------------------+-----+-----+------------+---------------------+--------------+
+
