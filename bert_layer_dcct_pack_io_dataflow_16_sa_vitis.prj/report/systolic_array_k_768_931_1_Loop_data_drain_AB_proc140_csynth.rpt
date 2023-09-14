@@ -1,0 +1,335 @@
+
+
+================================================================
+== Vitis HLS Report for 'systolic_array_k_768_931_1_Loop_data_drain_AB_proc140'
+================================================================
+* Date:           Wed Sep 13 02:16:02 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out_test.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.215 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      770|      770|  2.564 us|  2.564 us|  770|  770|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- data_drain_AB  |      768|      768|         2|          1|          1|   768|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       36|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      324|    -|
+|Register             |        -|     -|       13|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       13|      360|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |k_4_fu_304_p2                     |         +|   0|  0|  17|          10|           1|
+    |ap_condition_357                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln66_fu_298_p2               |      icmp|   0|  0|  11|          10|          10|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  36|          24|          16|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |A_fifo_0_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_10_16_blk_n       |   9|          2|    1|          2|
+    |A_fifo_11_16_blk_n       |   9|          2|    1|          2|
+    |A_fifo_12_16_blk_n       |   9|          2|    1|          2|
+    |A_fifo_13_16_blk_n       |   9|          2|    1|          2|
+    |A_fifo_14_16_blk_n       |   9|          2|    1|          2|
+    |A_fifo_15_16_blk_n       |   9|          2|    1|          2|
+    |A_fifo_1_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_2_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_3_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_4_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_5_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_6_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_7_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_8_16_blk_n        |   9|          2|    1|          2|
+    |A_fifo_9_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_0_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_10_16_blk_n       |   9|          2|    1|          2|
+    |B_fifo_11_16_blk_n       |   9|          2|    1|          2|
+    |B_fifo_12_16_blk_n       |   9|          2|    1|          2|
+    |B_fifo_13_16_blk_n       |   9|          2|    1|          2|
+    |B_fifo_14_16_blk_n       |   9|          2|    1|          2|
+    |B_fifo_15_16_blk_n       |   9|          2|    1|          2|
+    |B_fifo_1_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_2_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_3_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_4_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_5_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_6_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_7_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_8_16_blk_n        |   9|          2|    1|          2|
+    |B_fifo_9_16_blk_n        |   9|          2|    1|          2|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_k_3     |   9|          2|   10|         20|
+    |k_fu_94                  |   9|          2|   10|         20|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 324|         72|   54|        108|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |k_fu_94                  |  10|   0|   10|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  13|   0|   13|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |                     Source Object                     |    C Type    |
++-----------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|ap_continue                  |   in|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|  systolic_array_k_768.931.1_Loop_data_drain_AB_proc140|  return value|
+|A_fifo_0_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_0_16|       pointer|
+|A_fifo_0_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_0_16|       pointer|
+|A_fifo_0_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_0_16|       pointer|
+|A_fifo_0_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_0_16|       pointer|
+|A_fifo_0_16_read             |  out|    1|     ap_fifo|                                            A_fifo_0_16|       pointer|
+|A_fifo_1_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_1_16|       pointer|
+|A_fifo_1_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_1_16|       pointer|
+|A_fifo_1_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_1_16|       pointer|
+|A_fifo_1_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_1_16|       pointer|
+|A_fifo_1_16_read             |  out|    1|     ap_fifo|                                            A_fifo_1_16|       pointer|
+|A_fifo_2_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_2_16|       pointer|
+|A_fifo_2_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_2_16|       pointer|
+|A_fifo_2_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_2_16|       pointer|
+|A_fifo_2_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_2_16|       pointer|
+|A_fifo_2_16_read             |  out|    1|     ap_fifo|                                            A_fifo_2_16|       pointer|
+|A_fifo_3_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_3_16|       pointer|
+|A_fifo_3_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_3_16|       pointer|
+|A_fifo_3_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_3_16|       pointer|
+|A_fifo_3_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_3_16|       pointer|
+|A_fifo_3_16_read             |  out|    1|     ap_fifo|                                            A_fifo_3_16|       pointer|
+|A_fifo_4_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_4_16|       pointer|
+|A_fifo_4_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_4_16|       pointer|
+|A_fifo_4_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_4_16|       pointer|
+|A_fifo_4_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_4_16|       pointer|
+|A_fifo_4_16_read             |  out|    1|     ap_fifo|                                            A_fifo_4_16|       pointer|
+|A_fifo_5_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_5_16|       pointer|
+|A_fifo_5_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_5_16|       pointer|
+|A_fifo_5_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_5_16|       pointer|
+|A_fifo_5_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_5_16|       pointer|
+|A_fifo_5_16_read             |  out|    1|     ap_fifo|                                            A_fifo_5_16|       pointer|
+|A_fifo_6_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_6_16|       pointer|
+|A_fifo_6_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_6_16|       pointer|
+|A_fifo_6_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_6_16|       pointer|
+|A_fifo_6_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_6_16|       pointer|
+|A_fifo_6_16_read             |  out|    1|     ap_fifo|                                            A_fifo_6_16|       pointer|
+|A_fifo_7_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_7_16|       pointer|
+|A_fifo_7_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_7_16|       pointer|
+|A_fifo_7_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_7_16|       pointer|
+|A_fifo_7_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_7_16|       pointer|
+|A_fifo_7_16_read             |  out|    1|     ap_fifo|                                            A_fifo_7_16|       pointer|
+|A_fifo_8_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_8_16|       pointer|
+|A_fifo_8_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_8_16|       pointer|
+|A_fifo_8_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_8_16|       pointer|
+|A_fifo_8_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_8_16|       pointer|
+|A_fifo_8_16_read             |  out|    1|     ap_fifo|                                            A_fifo_8_16|       pointer|
+|A_fifo_9_16_dout             |   in|    8|     ap_fifo|                                            A_fifo_9_16|       pointer|
+|A_fifo_9_16_num_data_valid   |   in|    2|     ap_fifo|                                            A_fifo_9_16|       pointer|
+|A_fifo_9_16_fifo_cap         |   in|    2|     ap_fifo|                                            A_fifo_9_16|       pointer|
+|A_fifo_9_16_empty_n          |   in|    1|     ap_fifo|                                            A_fifo_9_16|       pointer|
+|A_fifo_9_16_read             |  out|    1|     ap_fifo|                                            A_fifo_9_16|       pointer|
+|A_fifo_10_16_dout            |   in|    8|     ap_fifo|                                           A_fifo_10_16|       pointer|
+|A_fifo_10_16_num_data_valid  |   in|    2|     ap_fifo|                                           A_fifo_10_16|       pointer|
+|A_fifo_10_16_fifo_cap        |   in|    2|     ap_fifo|                                           A_fifo_10_16|       pointer|
+|A_fifo_10_16_empty_n         |   in|    1|     ap_fifo|                                           A_fifo_10_16|       pointer|
+|A_fifo_10_16_read            |  out|    1|     ap_fifo|                                           A_fifo_10_16|       pointer|
+|A_fifo_11_16_dout            |   in|    8|     ap_fifo|                                           A_fifo_11_16|       pointer|
+|A_fifo_11_16_num_data_valid  |   in|    2|     ap_fifo|                                           A_fifo_11_16|       pointer|
+|A_fifo_11_16_fifo_cap        |   in|    2|     ap_fifo|                                           A_fifo_11_16|       pointer|
+|A_fifo_11_16_empty_n         |   in|    1|     ap_fifo|                                           A_fifo_11_16|       pointer|
+|A_fifo_11_16_read            |  out|    1|     ap_fifo|                                           A_fifo_11_16|       pointer|
+|A_fifo_12_16_dout            |   in|    8|     ap_fifo|                                           A_fifo_12_16|       pointer|
+|A_fifo_12_16_num_data_valid  |   in|    2|     ap_fifo|                                           A_fifo_12_16|       pointer|
+|A_fifo_12_16_fifo_cap        |   in|    2|     ap_fifo|                                           A_fifo_12_16|       pointer|
+|A_fifo_12_16_empty_n         |   in|    1|     ap_fifo|                                           A_fifo_12_16|       pointer|
+|A_fifo_12_16_read            |  out|    1|     ap_fifo|                                           A_fifo_12_16|       pointer|
+|A_fifo_13_16_dout            |   in|    8|     ap_fifo|                                           A_fifo_13_16|       pointer|
+|A_fifo_13_16_num_data_valid  |   in|    2|     ap_fifo|                                           A_fifo_13_16|       pointer|
+|A_fifo_13_16_fifo_cap        |   in|    2|     ap_fifo|                                           A_fifo_13_16|       pointer|
+|A_fifo_13_16_empty_n         |   in|    1|     ap_fifo|                                           A_fifo_13_16|       pointer|
+|A_fifo_13_16_read            |  out|    1|     ap_fifo|                                           A_fifo_13_16|       pointer|
+|A_fifo_14_16_dout            |   in|    8|     ap_fifo|                                           A_fifo_14_16|       pointer|
+|A_fifo_14_16_num_data_valid  |   in|    2|     ap_fifo|                                           A_fifo_14_16|       pointer|
+|A_fifo_14_16_fifo_cap        |   in|    2|     ap_fifo|                                           A_fifo_14_16|       pointer|
+|A_fifo_14_16_empty_n         |   in|    1|     ap_fifo|                                           A_fifo_14_16|       pointer|
+|A_fifo_14_16_read            |  out|    1|     ap_fifo|                                           A_fifo_14_16|       pointer|
+|A_fifo_15_16_dout            |   in|    8|     ap_fifo|                                           A_fifo_15_16|       pointer|
+|A_fifo_15_16_num_data_valid  |   in|    2|     ap_fifo|                                           A_fifo_15_16|       pointer|
+|A_fifo_15_16_fifo_cap        |   in|    2|     ap_fifo|                                           A_fifo_15_16|       pointer|
+|A_fifo_15_16_empty_n         |   in|    1|     ap_fifo|                                           A_fifo_15_16|       pointer|
+|A_fifo_15_16_read            |  out|    1|     ap_fifo|                                           A_fifo_15_16|       pointer|
+|B_fifo_0_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_0_16|       pointer|
+|B_fifo_0_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_0_16|       pointer|
+|B_fifo_0_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_0_16|       pointer|
+|B_fifo_0_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_0_16|       pointer|
+|B_fifo_0_16_read             |  out|    1|     ap_fifo|                                            B_fifo_0_16|       pointer|
+|B_fifo_1_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_1_16|       pointer|
+|B_fifo_1_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_1_16|       pointer|
+|B_fifo_1_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_1_16|       pointer|
+|B_fifo_1_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_1_16|       pointer|
+|B_fifo_1_16_read             |  out|    1|     ap_fifo|                                            B_fifo_1_16|       pointer|
+|B_fifo_2_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_2_16|       pointer|
+|B_fifo_2_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_2_16|       pointer|
+|B_fifo_2_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_2_16|       pointer|
+|B_fifo_2_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_2_16|       pointer|
+|B_fifo_2_16_read             |  out|    1|     ap_fifo|                                            B_fifo_2_16|       pointer|
+|B_fifo_3_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_3_16|       pointer|
+|B_fifo_3_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_3_16|       pointer|
+|B_fifo_3_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_3_16|       pointer|
+|B_fifo_3_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_3_16|       pointer|
+|B_fifo_3_16_read             |  out|    1|     ap_fifo|                                            B_fifo_3_16|       pointer|
+|B_fifo_4_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_4_16|       pointer|
+|B_fifo_4_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_4_16|       pointer|
+|B_fifo_4_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_4_16|       pointer|
+|B_fifo_4_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_4_16|       pointer|
+|B_fifo_4_16_read             |  out|    1|     ap_fifo|                                            B_fifo_4_16|       pointer|
+|B_fifo_5_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_5_16|       pointer|
+|B_fifo_5_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_5_16|       pointer|
+|B_fifo_5_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_5_16|       pointer|
+|B_fifo_5_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_5_16|       pointer|
+|B_fifo_5_16_read             |  out|    1|     ap_fifo|                                            B_fifo_5_16|       pointer|
+|B_fifo_6_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_6_16|       pointer|
+|B_fifo_6_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_6_16|       pointer|
+|B_fifo_6_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_6_16|       pointer|
+|B_fifo_6_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_6_16|       pointer|
+|B_fifo_6_16_read             |  out|    1|     ap_fifo|                                            B_fifo_6_16|       pointer|
+|B_fifo_7_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_7_16|       pointer|
+|B_fifo_7_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_7_16|       pointer|
+|B_fifo_7_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_7_16|       pointer|
+|B_fifo_7_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_7_16|       pointer|
+|B_fifo_7_16_read             |  out|    1|     ap_fifo|                                            B_fifo_7_16|       pointer|
+|B_fifo_8_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_8_16|       pointer|
+|B_fifo_8_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_8_16|       pointer|
+|B_fifo_8_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_8_16|       pointer|
+|B_fifo_8_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_8_16|       pointer|
+|B_fifo_8_16_read             |  out|    1|     ap_fifo|                                            B_fifo_8_16|       pointer|
+|B_fifo_9_16_dout             |   in|    8|     ap_fifo|                                            B_fifo_9_16|       pointer|
+|B_fifo_9_16_num_data_valid   |   in|    2|     ap_fifo|                                            B_fifo_9_16|       pointer|
+|B_fifo_9_16_fifo_cap         |   in|    2|     ap_fifo|                                            B_fifo_9_16|       pointer|
+|B_fifo_9_16_empty_n          |   in|    1|     ap_fifo|                                            B_fifo_9_16|       pointer|
+|B_fifo_9_16_read             |  out|    1|     ap_fifo|                                            B_fifo_9_16|       pointer|
+|B_fifo_10_16_dout            |   in|    8|     ap_fifo|                                           B_fifo_10_16|       pointer|
+|B_fifo_10_16_num_data_valid  |   in|    2|     ap_fifo|                                           B_fifo_10_16|       pointer|
+|B_fifo_10_16_fifo_cap        |   in|    2|     ap_fifo|                                           B_fifo_10_16|       pointer|
+|B_fifo_10_16_empty_n         |   in|    1|     ap_fifo|                                           B_fifo_10_16|       pointer|
+|B_fifo_10_16_read            |  out|    1|     ap_fifo|                                           B_fifo_10_16|       pointer|
+|B_fifo_11_16_dout            |   in|    8|     ap_fifo|                                           B_fifo_11_16|       pointer|
+|B_fifo_11_16_num_data_valid  |   in|    2|     ap_fifo|                                           B_fifo_11_16|       pointer|
+|B_fifo_11_16_fifo_cap        |   in|    2|     ap_fifo|                                           B_fifo_11_16|       pointer|
+|B_fifo_11_16_empty_n         |   in|    1|     ap_fifo|                                           B_fifo_11_16|       pointer|
+|B_fifo_11_16_read            |  out|    1|     ap_fifo|                                           B_fifo_11_16|       pointer|
+|B_fifo_12_16_dout            |   in|    8|     ap_fifo|                                           B_fifo_12_16|       pointer|
+|B_fifo_12_16_num_data_valid  |   in|    2|     ap_fifo|                                           B_fifo_12_16|       pointer|
+|B_fifo_12_16_fifo_cap        |   in|    2|     ap_fifo|                                           B_fifo_12_16|       pointer|
+|B_fifo_12_16_empty_n         |   in|    1|     ap_fifo|                                           B_fifo_12_16|       pointer|
+|B_fifo_12_16_read            |  out|    1|     ap_fifo|                                           B_fifo_12_16|       pointer|
+|B_fifo_13_16_dout            |   in|    8|     ap_fifo|                                           B_fifo_13_16|       pointer|
+|B_fifo_13_16_num_data_valid  |   in|    2|     ap_fifo|                                           B_fifo_13_16|       pointer|
+|B_fifo_13_16_fifo_cap        |   in|    2|     ap_fifo|                                           B_fifo_13_16|       pointer|
+|B_fifo_13_16_empty_n         |   in|    1|     ap_fifo|                                           B_fifo_13_16|       pointer|
+|B_fifo_13_16_read            |  out|    1|     ap_fifo|                                           B_fifo_13_16|       pointer|
+|B_fifo_14_16_dout            |   in|    8|     ap_fifo|                                           B_fifo_14_16|       pointer|
+|B_fifo_14_16_num_data_valid  |   in|    2|     ap_fifo|                                           B_fifo_14_16|       pointer|
+|B_fifo_14_16_fifo_cap        |   in|    2|     ap_fifo|                                           B_fifo_14_16|       pointer|
+|B_fifo_14_16_empty_n         |   in|    1|     ap_fifo|                                           B_fifo_14_16|       pointer|
+|B_fifo_14_16_read            |  out|    1|     ap_fifo|                                           B_fifo_14_16|       pointer|
+|B_fifo_15_16_dout            |   in|    8|     ap_fifo|                                           B_fifo_15_16|       pointer|
+|B_fifo_15_16_num_data_valid  |   in|    2|     ap_fifo|                                           B_fifo_15_16|       pointer|
+|B_fifo_15_16_fifo_cap        |   in|    2|     ap_fifo|                                           B_fifo_15_16|       pointer|
+|B_fifo_15_16_empty_n         |   in|    1|     ap_fifo|                                           B_fifo_15_16|       pointer|
+|B_fifo_15_16_read            |  out|    1|     ap_fifo|                                           B_fifo_15_16|       pointer|
++-----------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+
