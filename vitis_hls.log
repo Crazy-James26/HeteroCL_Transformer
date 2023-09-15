@@ -6,9 +6,9 @@
 
 source /opt/xilinx/2022.1/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/xilinx/2022.1/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'jz2292' on host 'en-ec-zhang-21.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Tue Sep 05 02:21:16 EDT 2023
+INFO: [HLS 200-10] For user 'jz2292' on host 'en-ec-zhang-21.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Mon Sep 11 01:38:29 EDT 2023
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
 INFO: [HLS 200-10] In directory '/home/jz2292/project/transformer/heterocl_file'
 ERROR [AP-1] Could not read script 'run.tcl'.
-INFO: [HLS 200-112] Total CPU user time: 0.27 seconds. Total CPU system time: 0.1 seconds. Total elapsed time: 0.61 seconds; peak allocated memory: 0.008 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Tue Sep  5 02:21:16 2023...
+INFO: [HLS 200-112] Total CPU user time: 0.27 seconds. Total CPU system time: 0.11 seconds. Total elapsed time: 1.2 seconds; peak allocated memory: 0.008 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 11 01:38:29 2023...
