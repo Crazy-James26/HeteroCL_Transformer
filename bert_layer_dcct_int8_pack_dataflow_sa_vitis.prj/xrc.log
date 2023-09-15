@@ -1,10 +1,13 @@
-Fri Sep  8 22:57:35 2023: Server was asked to start on port: '41733'
-Fri Sep  8 22:57:35 2023: Server is using token UUID: '8457be9f-fb7a-46b6-9416-b4058c8905b6'
-Fri Sep  8 22:57:35 2023: Attempting to start server on port '41733'
-Fri Sep  8 22:57:35 2023: XRC main fifo: created main fifo '/tmp/xrcmain8457be9f-fb7a-46b6-9416-b4058c8905b6', fd read = 13
-Fri Sep  8 22:57:35 2023: Running Rule Check Server
-Fri Sep  8 22:57:35 2023: Version 1.6.1
-Fri Sep  8 22:57:36 2023: Rule Check Server: Accepted socket connection from client
-Fri Sep  8 22:57:36 2023: EXCHANGE_TOKEN received, server token: 8457be9f-fb7a-46b6-9416-b4058c8905b6, passed token: 8457be9f-fb7a-46b6-9416-b4058c8905b6
-Fri Sep  8 22:57:36 2023: SESSION_MGR: creating session with session uuid: '21a0cb81-b670-4207-82d3-29b231ae7baf' and name 'v++_package_Bert_layer'
-Fri Sep  8 22:57:44 2023: SESSION_MGR: closing session for UUID '21a0cb81-b670-4207-82d3-29b231ae7baf' with name 'v++_package_Bert_layer'
+Wed Sep 13 07:18:55 2023: Server was asked to start on port: '36486'
+Wed Sep 13 07:18:55 2023: Server is using token UUID: '8c73c8da-0511-4c7e-b3d8-a3c5d4f8693e'
+Wed Sep 13 07:18:55 2023: Attempting to start server on port '36486'
+Wed Sep 13 07:18:55 2023: XRC main fifo: created main fifo '/tmp/xrcmain8c73c8da-0511-4c7e-b3d8-a3c5d4f8693e', fd read = 13
+Wed Sep 13 07:18:55 2023: Running Rule Check Server
+Wed Sep 13 07:18:55 2023: Version 1.6.1
+Wed Sep 13 07:18:55 2023: Rule Check Server: Accepted socket connection from client
+Wed Sep 13 07:18:55 2023: EXCHANGE_TOKEN received, server token: 8c73c8da-0511-4c7e-b3d8-a3c5d4f8693e, passed token: 8c73c8da-0511-4c7e-b3d8-a3c5d4f8693e
+Wed Sep 13 07:18:55 2023: SESSION_MGR: creating session with session uuid: '8f1e8e59-603e-4ff5-bcb0-4dc43cf272c4' and name 'v++_link_Bert_layer.link'
+Wed Sep 13 07:44:48 2023: Rule Check Server: Accepted socket connection from client
+Wed Sep 13 07:46:15 2023: Rule Check Server: Accepted socket connection from client
+Wed Sep 13 12:59:27 2023: Rule Check Server: Accepted socket connection from client
+Wed Sep 13 20:09:07 2023: SESSION_MGR: closing session for UUID '8f1e8e59-603e-4ff5-bcb0-4dc43cf272c4' with name 'v++_link_Bert_layer.link'
