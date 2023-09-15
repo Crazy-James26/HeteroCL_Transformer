@@ -1,0 +1,226 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/Bert_layer
+	Log files: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/Bert_layer
+INFO: [v++ 60-1548] Creating build summary session with primary output /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo.compile_summary, at Mon Sep 11 13:03:59 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon Sep 11 13:03:59 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/Bert_layer/v++_compile_Bert_layer_guidance.html', at Mon Sep 11 13:04:02 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-242] Creating kernel: 'Bert_layer'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: Bert_layer Log file: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer/Bert_layer/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'l_read_inp_i_l_read_inp_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'l_read_inp_i_l_read_inp_j'
+INFO: [v++ 204-61] Pipelining function '__hls_fptosi_float_i8'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function '__hls_fptosi_float_i8'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'l_j'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'l_j1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'l_j1'
+INFO: [v++ 204-61] Pipelining loop 'init_block_AB'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'init_block_AB'
+INFO: [v++ 204-61] Pipelining loop 'data_load'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'data_load'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'PE_LOOP'.
+INFO: [v++ 17-14] Message 'v++ 204-61' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'PE_LOOP'
+INFO: [v++ 17-14] Message 'v++ 200-1470' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 384.82 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/Bert_layer/system_estimate_Bert_layer.xtxt
+INFO: [v++ 60-586] Created _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_int8_pack_dataflow_sa_vitis.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 42h 14m 46s
+INFO: [v++ 60-1653] Closing dispatch client.

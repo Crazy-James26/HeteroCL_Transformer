@@ -1,0 +1,545 @@
+Fri Sep  8 22:40:20 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:40:20 2023: Server was asked to start on port: '42203'
+Fri Sep  8 22:40:20 2023: Server is using token UUID: '3a65b5b1-cbef-4aa1-83ca-986512e6d71f'
+Fri Sep  8 22:40:20 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:40:20 2023: Attempting to start server on port '42203'
+Fri Sep  8 22:40:20 2023: XCD main fifo: created main fifo '/tmp/xcdmain3a65b5b1-cbef-4aa1-83ca-986512e6d71f', fd read = 13
+Fri Sep  8 22:40:20 2023: Running Dispatch Server
+Fri Sep  8 22:40:20 2023: Version 2.2.0
+Fri Sep  8 22:40:29 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:40:29 2023: Starting Socket connection
+Fri Sep  8 22:40:29 2023: EXCHANGE_TOKEN received, server token: 3a65b5b1-cbef-4aa1-83ca-986512e6d71f, passed token: 3a65b5b1-cbef-4aa1-83ca-986512e6d71f
+Fri Sep  8 22:40:29 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:40:29 2023: SESSION_MGR: creating session with session uuid: '6a1401dc-233c-45f9-b045-d8d0c8a33c32' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:40:29 2023: KERNEL_SVC: creating session with uuid: '6a1401dc-233c-45f9-b045-d8d0c8a33c32' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:40:29 2023: GUIDANCE_SMGR: creating guidance session with uuid: '6a1401dc-233c-45f9-b045-d8d0c8a33c32' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:40:29 2023: SYSTEM_DIAGRAM: creating session with uuid: '6a1401dc-233c-45f9-b045-d8d0c8a33c32' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:41:45 2023: SESSION_MGR: closing session for UUID '6a1401dc-233c-45f9-b045-d8d0c8a33c32' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:41:45 2023: KERNEL_SVC: closing session for UUID '6a1401dc-233c-45f9-b045-d8d0c8a33c32' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:41:45 2023: GUIDANCE_SMGR: closing session for UUID '6a1401dc-233c-45f9-b045-d8d0c8a33c32' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:41:45 2023: SYSTEM_DIAGRAM: closing session for UUID '6a1401dc-233c-45f9-b045-d8d0c8a33c32' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:41:45 2023: STOP_SERVER received, server token: 3a65b5b1-cbef-4aa1-83ca-986512e6d71f, passed token: 3a65b5b1-cbef-4aa1-83ca-986512e6d71f
+Fri Sep  8 22:41:45 2023: Socket received request to stop server.
+Fri Sep  8 22:41:45 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:41:45 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:41:45 2023: XCD main fifo: Stopping
+Fri Sep  8 22:41:45 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:41:45 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:41:45 2023: SERVER: destructor for server bound to port 42203
+Fri Sep  8 22:41:45 2023: XCD main fifo: Good unlink of /tmp/xcdmain3a65b5b1-cbef-4aa1-83ca-986512e6d71f
+Fri Sep  8 22:41:45 2023: Server exiting with status 0.
+Fri Sep  8 22:41:45 2023: Closing log file.
+Fri Sep  8 22:45:17 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:45:17 2023: Server was asked to start on port: '38237'
+Fri Sep  8 22:45:17 2023: Server is using token UUID: 'a37828d4-275a-46bd-9944-1ad79e696bca'
+Fri Sep  8 22:45:17 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:45:17 2023: Attempting to start server on port '38237'
+Fri Sep  8 22:45:17 2023: XCD main fifo: created main fifo '/tmp/xcdmaina37828d4-275a-46bd-9944-1ad79e696bca', fd read = 13
+Fri Sep  8 22:45:17 2023: Running Dispatch Server
+Fri Sep  8 22:45:17 2023: Version 2.2.0
+Fri Sep  8 22:45:26 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:45:26 2023: Starting Socket connection
+Fri Sep  8 22:45:26 2023: EXCHANGE_TOKEN received, server token: a37828d4-275a-46bd-9944-1ad79e696bca, passed token: a37828d4-275a-46bd-9944-1ad79e696bca
+Fri Sep  8 22:45:26 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:45:26 2023: SESSION_MGR: creating session with session uuid: '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:45:26 2023: KERNEL_SVC: creating session with uuid: '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:45:26 2023: GUIDANCE_SMGR: creating guidance session with uuid: '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:45:26 2023: SYSTEM_DIAGRAM: creating session with uuid: '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:46:53 2023: SESSION_MGR: closing session for UUID '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:46:53 2023: KERNEL_SVC: closing session for UUID '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:46:53 2023: GUIDANCE_SMGR: closing session for UUID '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:46:53 2023: SYSTEM_DIAGRAM: closing session for UUID '8fa8b2ef-dfa7-4baa-a077-578c49f5f47c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:46:53 2023: STOP_SERVER received, server token: a37828d4-275a-46bd-9944-1ad79e696bca, passed token: a37828d4-275a-46bd-9944-1ad79e696bca
+Fri Sep  8 22:46:53 2023: Socket received request to stop server.
+Fri Sep  8 22:46:53 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:46:53 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:46:53 2023: XCD main fifo: Stopping
+Fri Sep  8 22:46:53 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:46:53 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:46:53 2023: SERVER: destructor for server bound to port 38237
+Fri Sep  8 22:46:53 2023: XCD main fifo: Good unlink of /tmp/xcdmaina37828d4-275a-46bd-9944-1ad79e696bca
+Fri Sep  8 22:46:53 2023: Server exiting with status 0.
+Fri Sep  8 22:46:53 2023: Closing log file.
+Fri Sep  8 22:48:40 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:48:40 2023: Server was asked to start on port: '43931'
+Fri Sep  8 22:48:40 2023: Server is using token UUID: 'fd688696-79a0-4e32-aba7-7ff352608a1f'
+Fri Sep  8 22:48:40 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:48:40 2023: Attempting to start server on port '43931'
+Fri Sep  8 22:48:40 2023: XCD main fifo: created main fifo '/tmp/xcdmainfd688696-79a0-4e32-aba7-7ff352608a1f', fd read = 13
+Fri Sep  8 22:48:40 2023: Running Dispatch Server
+Fri Sep  8 22:48:40 2023: Version 2.2.0
+Fri Sep  8 22:48:48 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:48:48 2023: Starting Socket connection
+Fri Sep  8 22:48:48 2023: EXCHANGE_TOKEN received, server token: fd688696-79a0-4e32-aba7-7ff352608a1f, passed token: fd688696-79a0-4e32-aba7-7ff352608a1f
+Fri Sep  8 22:48:49 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:48:49 2023: SESSION_MGR: creating session with session uuid: 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:48:49 2023: KERNEL_SVC: creating session with uuid: 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:48:49 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:48:49 2023: SYSTEM_DIAGRAM: creating session with uuid: 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:49:32 2023: SESSION_MGR: closing session for UUID 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:49:32 2023: KERNEL_SVC: closing session for UUID 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:49:32 2023: GUIDANCE_SMGR: closing session for UUID 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:49:32 2023: SYSTEM_DIAGRAM: closing session for UUID 'd19eb39f-79bf-42a0-bd33-e5efab2d0400' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:49:32 2023: STOP_SERVER received, server token: fd688696-79a0-4e32-aba7-7ff352608a1f, passed token: fd688696-79a0-4e32-aba7-7ff352608a1f
+Fri Sep  8 22:49:32 2023: Socket received request to stop server.
+Fri Sep  8 22:49:32 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:49:32 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:49:32 2023: XCD main fifo: Stopping
+Fri Sep  8 22:49:32 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:49:32 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:49:32 2023: SERVER: destructor for server bound to port 43931
+Fri Sep  8 22:49:32 2023: XCD main fifo: Good unlink of /tmp/xcdmainfd688696-79a0-4e32-aba7-7ff352608a1f
+Fri Sep  8 22:49:32 2023: Server exiting with status 0.
+Fri Sep  8 22:49:32 2023: Closing log file.
+Fri Sep  8 22:51:39 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:51:39 2023: Server was asked to start on port: '43609'
+Fri Sep  8 22:51:39 2023: Server is using token UUID: 'd59480cd-8287-4141-bf47-5606e5a0c291'
+Fri Sep  8 22:51:39 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:51:39 2023: Attempting to start server on port '43609'
+Fri Sep  8 22:51:39 2023: XCD main fifo: created main fifo '/tmp/xcdmaind59480cd-8287-4141-bf47-5606e5a0c291', fd read = 13
+Fri Sep  8 22:51:39 2023: Running Dispatch Server
+Fri Sep  8 22:51:39 2023: Version 2.2.0
+Fri Sep  8 22:51:48 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:51:48 2023: Starting Socket connection
+Fri Sep  8 22:51:48 2023: EXCHANGE_TOKEN received, server token: d59480cd-8287-4141-bf47-5606e5a0c291, passed token: d59480cd-8287-4141-bf47-5606e5a0c291
+Fri Sep  8 22:51:48 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:51:48 2023: SESSION_MGR: creating session with session uuid: '529c3406-2d65-4278-8f8d-f14ef4a779b4' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:51:48 2023: KERNEL_SVC: creating session with uuid: '529c3406-2d65-4278-8f8d-f14ef4a779b4' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:51:48 2023: GUIDANCE_SMGR: creating guidance session with uuid: '529c3406-2d65-4278-8f8d-f14ef4a779b4' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:51:48 2023: SYSTEM_DIAGRAM: creating session with uuid: '529c3406-2d65-4278-8f8d-f14ef4a779b4' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:52:57 2023: SESSION_MGR: closing session for UUID '529c3406-2d65-4278-8f8d-f14ef4a779b4' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:52:57 2023: KERNEL_SVC: closing session for UUID '529c3406-2d65-4278-8f8d-f14ef4a779b4' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:52:57 2023: GUIDANCE_SMGR: closing session for UUID '529c3406-2d65-4278-8f8d-f14ef4a779b4' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:52:57 2023: SYSTEM_DIAGRAM: closing session for UUID '529c3406-2d65-4278-8f8d-f14ef4a779b4' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:52:57 2023: STOP_SERVER received, server token: d59480cd-8287-4141-bf47-5606e5a0c291, passed token: d59480cd-8287-4141-bf47-5606e5a0c291
+Fri Sep  8 22:52:57 2023: Socket received request to stop server.
+Fri Sep  8 22:52:57 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:52:57 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:52:57 2023: XCD main fifo: Stopping
+Fri Sep  8 22:52:57 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:52:57 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:52:57 2023: SERVER: destructor for server bound to port 43609
+Fri Sep  8 22:52:57 2023: XCD main fifo: Good unlink of /tmp/xcdmaind59480cd-8287-4141-bf47-5606e5a0c291
+Fri Sep  8 22:52:57 2023: Server exiting with status 0.
+Fri Sep  8 22:52:57 2023: Closing log file.
+Fri Sep  8 22:53:37 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:53:37 2023: Server was asked to start on port: '42066'
+Fri Sep  8 22:53:37 2023: Server is using token UUID: '63b3fd78-9295-4ab2-9c71-c6fd0dce2719'
+Fri Sep  8 22:53:37 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:53:37 2023: Attempting to start server on port '42066'
+Fri Sep  8 22:53:37 2023: XCD main fifo: created main fifo '/tmp/xcdmain63b3fd78-9295-4ab2-9c71-c6fd0dce2719', fd read = 13
+Fri Sep  8 22:53:37 2023: Running Dispatch Server
+Fri Sep  8 22:53:37 2023: Version 2.2.0
+Fri Sep  8 22:53:46 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:53:46 2023: Starting Socket connection
+Fri Sep  8 22:53:46 2023: EXCHANGE_TOKEN received, server token: 63b3fd78-9295-4ab2-9c71-c6fd0dce2719, passed token: 63b3fd78-9295-4ab2-9c71-c6fd0dce2719
+Fri Sep  8 22:53:46 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:53:46 2023: SESSION_MGR: creating session with session uuid: 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:53:46 2023: KERNEL_SVC: creating session with uuid: 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:53:46 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:53:46 2023: SYSTEM_DIAGRAM: creating session with uuid: 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' and name 'v++_compile_Bert_layer'
+Fri Sep  8 22:56:19 2023: SESSION_MGR: closing session for UUID 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:56:19 2023: KERNEL_SVC: closing session for UUID 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:56:19 2023: GUIDANCE_SMGR: closing session for UUID 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:56:19 2023: SYSTEM_DIAGRAM: closing session for UUID 'c6309ddd-2ca5-4559-8f34-6f2ecd9b292c' with name 'v++_compile_Bert_layer'
+Fri Sep  8 22:56:19 2023: STOP_SERVER received, server token: 63b3fd78-9295-4ab2-9c71-c6fd0dce2719, passed token: 63b3fd78-9295-4ab2-9c71-c6fd0dce2719
+Fri Sep  8 22:56:19 2023: Socket received request to stop server.
+Fri Sep  8 22:56:19 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:56:19 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:56:19 2023: XCD main fifo: Stopping
+Fri Sep  8 22:56:19 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:56:19 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:56:19 2023: SERVER: destructor for server bound to port 42066
+Fri Sep  8 22:56:19 2023: XCD main fifo: Good unlink of /tmp/xcdmain63b3fd78-9295-4ab2-9c71-c6fd0dce2719
+Fri Sep  8 22:56:19 2023: Server exiting with status 0.
+Fri Sep  8 22:56:19 2023: Closing log file.
+Fri Sep  8 22:56:23 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:56:23 2023: Server was asked to start on port: '46068'
+Fri Sep  8 22:56:23 2023: Server is using token UUID: 'aa38dc86-94d2-4039-b7a4-b6cec810efe3'
+Fri Sep  8 22:56:23 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:56:23 2023: Attempting to start server on port '46068'
+Fri Sep  8 22:56:23 2023: XCD main fifo: created main fifo '/tmp/xcdmainaa38dc86-94d2-4039-b7a4-b6cec810efe3', fd read = 13
+Fri Sep  8 22:56:23 2023: Running Dispatch Server
+Fri Sep  8 22:56:23 2023: Version 2.2.0
+Fri Sep  8 22:56:31 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:56:31 2023: Starting Socket connection
+Fri Sep  8 22:56:31 2023: EXCHANGE_TOKEN received, server token: aa38dc86-94d2-4039-b7a4-b6cec810efe3, passed token: aa38dc86-94d2-4039-b7a4-b6cec810efe3
+Fri Sep  8 22:56:32 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:56:32 2023: SESSION_MGR: creating session with session uuid: 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' and name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:56:32 2023: KERNEL_SVC: creating session with uuid: 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' and name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:56:32 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' and name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:56:32 2023: SYSTEM_DIAGRAM: creating session with uuid: 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' and name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:57:21 2023: SESSION_MGR: closing session for UUID 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' with name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:57:21 2023: KERNEL_SVC: closing session for UUID 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' with name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:57:21 2023: GUIDANCE_SMGR: closing session for UUID 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' with name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:57:21 2023: SYSTEM_DIAGRAM: closing session for UUID 'eb4c5b80-7ad0-4f96-9b86-59c3966497a4' with name 'v++_link_Bert_layer.link'
+Fri Sep  8 22:57:21 2023: STOP_SERVER received, server token: aa38dc86-94d2-4039-b7a4-b6cec810efe3, passed token: aa38dc86-94d2-4039-b7a4-b6cec810efe3
+Fri Sep  8 22:57:21 2023: Socket received request to stop server.
+Fri Sep  8 22:57:21 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:57:21 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:57:21 2023: XCD main fifo: Stopping
+Fri Sep  8 22:57:21 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:57:21 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:57:21 2023: SERVER: destructor for server bound to port 46068
+Fri Sep  8 22:57:21 2023: XCD main fifo: Good unlink of /tmp/xcdmainaa38dc86-94d2-4039-b7a4-b6cec810efe3
+Fri Sep  8 22:57:21 2023: Server exiting with status 0.
+Fri Sep  8 22:57:21 2023: Closing log file.
+Fri Sep  8 22:57:24 2023: Running xcd server. This server was built by gradle.
+Fri Sep  8 22:57:24 2023: Server was asked to start on port: '42268'
+Fri Sep  8 22:57:24 2023: Server is using token UUID: '6256c870-edec-4526-bc02-72e36efbbda9'
+Fri Sep  8 22:57:24 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep  8 22:57:24 2023: Attempting to start server on port '42268'
+Fri Sep  8 22:57:24 2023: XCD main fifo: created main fifo '/tmp/xcdmain6256c870-edec-4526-bc02-72e36efbbda9', fd read = 13
+Fri Sep  8 22:57:24 2023: Running Dispatch Server
+Fri Sep  8 22:57:24 2023: Version 2.2.0
+Fri Sep  8 22:57:33 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep  8 22:57:33 2023: Starting Socket connection
+Fri Sep  8 22:57:33 2023: EXCHANGE_TOKEN received, server token: 6256c870-edec-4526-bc02-72e36efbbda9, passed token: 6256c870-edec-4526-bc02-72e36efbbda9
+Fri Sep  8 22:57:33 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep  8 22:57:33 2023: SESSION_MGR: creating session with session uuid: 'fb347238-01ee-4334-8a2f-e0ea73ab678f' and name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:33 2023: KERNEL_SVC: creating session with uuid: 'fb347238-01ee-4334-8a2f-e0ea73ab678f' and name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:33 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'fb347238-01ee-4334-8a2f-e0ea73ab678f' and name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:33 2023: SYSTEM_DIAGRAM: creating session with uuid: 'fb347238-01ee-4334-8a2f-e0ea73ab678f' and name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:44 2023: SESSION_MGR: closing session for UUID 'fb347238-01ee-4334-8a2f-e0ea73ab678f' with name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:44 2023: KERNEL_SVC: closing session for UUID 'fb347238-01ee-4334-8a2f-e0ea73ab678f' with name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:44 2023: GUIDANCE_SMGR: closing session for UUID 'fb347238-01ee-4334-8a2f-e0ea73ab678f' with name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:44 2023: SYSTEM_DIAGRAM: closing session for UUID 'fb347238-01ee-4334-8a2f-e0ea73ab678f' with name 'v++_package_Bert_layer'
+Fri Sep  8 22:57:44 2023: STOP_SERVER received, server token: 6256c870-edec-4526-bc02-72e36efbbda9, passed token: 6256c870-edec-4526-bc02-72e36efbbda9
+Fri Sep  8 22:57:44 2023: Socket received request to stop server.
+Fri Sep  8 22:57:44 2023: Dispatch Server: do_await_stop
+Fri Sep  8 22:57:44 2023: Dispatch Server: stopping mainFifo_
+Fri Sep  8 22:57:44 2023: XCD main fifo: Stopping
+Fri Sep  8 22:57:44 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep  8 22:57:44 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep  8 22:57:44 2023: SERVER: destructor for server bound to port 42268
+Fri Sep  8 22:57:44 2023: XCD main fifo: Good unlink of /tmp/xcdmain6256c870-edec-4526-bc02-72e36efbbda9
+Fri Sep  8 22:57:44 2023: Server exiting with status 0.
+Fri Sep  8 22:57:44 2023: Closing log file.
+Mon Sep 11 13:03:50 2023: Running xcd server. This server was built by gradle.
+Mon Sep 11 13:03:50 2023: Server was asked to start on port: '38229'
+Mon Sep 11 13:03:50 2023: Server is using token UUID: 'fe3ba795-de3e-47de-bce2-a8da4f019dc3'
+Mon Sep 11 13:03:50 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Mon Sep 11 13:03:50 2023: Attempting to start server on port '38229'
+Mon Sep 11 13:03:50 2023: XCD main fifo: created main fifo '/tmp/xcdmainfe3ba795-de3e-47de-bce2-a8da4f019dc3', fd read = 13
+Mon Sep 11 13:03:50 2023: Running Dispatch Server
+Mon Sep 11 13:03:50 2023: Version 2.2.0
+Mon Sep 11 13:03:59 2023: Dispatch Server: Accepted socket connection from client
+Mon Sep 11 13:03:59 2023: Starting Socket connection
+Mon Sep 11 13:03:59 2023: EXCHANGE_TOKEN received, server token: fe3ba795-de3e-47de-bce2-a8da4f019dc3, passed token: fe3ba795-de3e-47de-bce2-a8da4f019dc3
+Mon Sep 11 13:03:59 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Mon Sep 11 13:03:59 2023: SESSION_MGR: creating session with session uuid: '017e8cc7-432a-40a4-9595-b47012e1a271' and name 'v++_compile_Bert_layer'
+Mon Sep 11 13:03:59 2023: KERNEL_SVC: creating session with uuid: '017e8cc7-432a-40a4-9595-b47012e1a271' and name 'v++_compile_Bert_layer'
+Mon Sep 11 13:03:59 2023: GUIDANCE_SMGR: creating guidance session with uuid: '017e8cc7-432a-40a4-9595-b47012e1a271' and name 'v++_compile_Bert_layer'
+Mon Sep 11 13:03:59 2023: SYSTEM_DIAGRAM: creating session with uuid: '017e8cc7-432a-40a4-9595-b47012e1a271' and name 'v++_compile_Bert_layer'
+Wed Sep 13 07:18:38 2023: SESSION_MGR: closing session for UUID '017e8cc7-432a-40a4-9595-b47012e1a271' with name 'v++_compile_Bert_layer'
+Wed Sep 13 07:18:38 2023: KERNEL_SVC: closing session for UUID '017e8cc7-432a-40a4-9595-b47012e1a271' with name 'v++_compile_Bert_layer'
+Wed Sep 13 07:18:38 2023: GUIDANCE_SMGR: closing session for UUID '017e8cc7-432a-40a4-9595-b47012e1a271' with name 'v++_compile_Bert_layer'
+Wed Sep 13 07:18:38 2023: SYSTEM_DIAGRAM: closing session for UUID '017e8cc7-432a-40a4-9595-b47012e1a271' with name 'v++_compile_Bert_layer'
+Wed Sep 13 07:18:38 2023: STOP_SERVER received, server token: fe3ba795-de3e-47de-bce2-a8da4f019dc3, passed token: fe3ba795-de3e-47de-bce2-a8da4f019dc3
+Wed Sep 13 07:18:38 2023: Socket received request to stop server.
+Wed Sep 13 07:18:38 2023: Dispatch Server: do_await_stop
+Wed Sep 13 07:18:38 2023: Dispatch Server: stopping mainFifo_
+Wed Sep 13 07:18:38 2023: XCD main fifo: Stopping
+Wed Sep 13 07:18:38 2023: XCD main fifo: do_read error code: Operation canceled
+Wed Sep 13 07:18:38 2023: XCD main fifo: bytes_transferred: 0
+Wed Sep 13 07:18:38 2023: SERVER: destructor for server bound to port 38229
+Wed Sep 13 07:18:38 2023: XCD main fifo: Good unlink of /tmp/xcdmainfe3ba795-de3e-47de-bce2-a8da4f019dc3
+Wed Sep 13 07:18:38 2023: Server exiting with status 0.
+Wed Sep 13 07:18:38 2023: Closing log file.
+Wed Sep 13 07:18:44 2023: Running xcd server. This server was built by gradle.
+Wed Sep 13 07:18:44 2023: Server was asked to start on port: '37855'
+Wed Sep 13 07:18:44 2023: Server is using token UUID: '88e01325-8cf1-4df9-bf3d-88acc88a1fcb'
+Wed Sep 13 07:18:44 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Wed Sep 13 07:18:44 2023: Attempting to start server on port '37855'
+Wed Sep 13 07:18:44 2023: XCD main fifo: created main fifo '/tmp/xcdmain88e01325-8cf1-4df9-bf3d-88acc88a1fcb', fd read = 13
+Wed Sep 13 07:18:44 2023: Running Dispatch Server
+Wed Sep 13 07:18:44 2023: Version 2.2.0
+Wed Sep 13 07:18:53 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:18:53 2023: Starting Socket connection
+Wed Sep 13 07:18:53 2023: EXCHANGE_TOKEN received, server token: 88e01325-8cf1-4df9-bf3d-88acc88a1fcb, passed token: 88e01325-8cf1-4df9-bf3d-88acc88a1fcb
+Wed Sep 13 07:18:53 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Wed Sep 13 07:18:53 2023: SESSION_MGR: creating session with session uuid: '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' and name 'v++_link_Bert_layer.link'
+Wed Sep 13 07:18:53 2023: KERNEL_SVC: creating session with uuid: '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' and name 'v++_link_Bert_layer.link'
+Wed Sep 13 07:18:53 2023: GUIDANCE_SMGR: creating guidance session with uuid: '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' and name 'v++_link_Bert_layer.link'
+Wed Sep 13 07:18:53 2023: SYSTEM_DIAGRAM: creating session with uuid: '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' and name 'v++_link_Bert_layer.link'
+Wed Sep 13 07:45:49 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:45:49 2023: Starting Socket connection
+Wed Sep 13 07:46:15 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:46:15 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:49:57 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:49:57 2023: Starting Socket connection
+Wed Sep 13 07:51:30 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:30 2023: Starting Socket connection
+Wed Sep 13 07:51:30 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:30 2023: Starting Socket connection
+Wed Sep 13 07:51:35 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:35 2023: Starting Socket connection
+Wed Sep 13 07:51:35 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:35 2023: Starting Socket connection
+Wed Sep 13 07:51:38 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:38 2023: Starting Socket connection
+Wed Sep 13 07:51:38 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:38 2023: Starting Socket connection
+Wed Sep 13 07:51:43 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:43 2023: Starting Socket connection
+Wed Sep 13 07:51:52 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:51:52 2023: Starting Socket connection
+Wed Sep 13 07:53:03 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:03 2023: Starting Socket connection
+Wed Sep 13 07:53:11 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:11 2023: Starting Socket connection
+Wed Sep 13 07:53:12 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:12 2023: Starting Socket connection
+Wed Sep 13 07:53:14 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:14 2023: Starting Socket connection
+Wed Sep 13 07:53:17 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:17 2023: Starting Socket connection
+Wed Sep 13 07:53:28 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:28 2023: Starting Socket connection
+Wed Sep 13 07:53:43 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:53:43 2023: Starting Socket connection
+Wed Sep 13 07:54:13 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:54:13 2023: Starting Socket connection
+Wed Sep 13 07:54:13 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:54:13 2023: Starting Socket connection
+Wed Sep 13 07:54:42 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:54:42 2023: Starting Socket connection
+Wed Sep 13 07:54:53 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:54:53 2023: Starting Socket connection
+Wed Sep 13 07:55:04 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:55:04 2023: Starting Socket connection
+Wed Sep 13 07:55:13 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:55:13 2023: Starting Socket connection
+Wed Sep 13 07:55:13 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:55:13 2023: Starting Socket connection
+Wed Sep 13 07:55:29 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:55:29 2023: Starting Socket connection
+Wed Sep 13 07:55:35 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:55:35 2023: Starting Socket connection
+Wed Sep 13 07:55:40 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:55:40 2023: Starting Socket connection
+Wed Sep 13 07:56:35 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:56:35 2023: Starting Socket connection
+Wed Sep 13 07:56:39 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:56:39 2023: Starting Socket connection
+Wed Sep 13 07:56:51 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:56:51 2023: Starting Socket connection
+Wed Sep 13 07:57:00 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:57:00 2023: Starting Socket connection
+Wed Sep 13 07:57:04 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:57:04 2023: Starting Socket connection
+Wed Sep 13 07:57:05 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:57:05 2023: Starting Socket connection
+Wed Sep 13 07:57:16 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:57:16 2023: Starting Socket connection
+Wed Sep 13 07:57:17 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:57:17 2023: Starting Socket connection
+Wed Sep 13 07:57:17 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:57:17 2023: Starting Socket connection
+Wed Sep 13 07:58:29 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:29 2023: Starting Socket connection
+Wed Sep 13 07:58:29 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:29 2023: Starting Socket connection
+Wed Sep 13 07:58:39 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:39 2023: Starting Socket connection
+Wed Sep 13 07:58:40 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:40 2023: Starting Socket connection
+Wed Sep 13 07:58:44 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:44 2023: Starting Socket connection
+Wed Sep 13 07:58:51 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:51 2023: Starting Socket connection
+Wed Sep 13 07:58:51 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:51 2023: Starting Socket connection
+Wed Sep 13 07:58:59 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:58:59 2023: Starting Socket connection
+Wed Sep 13 07:59:21 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:59:21 2023: Starting Socket connection
+Wed Sep 13 07:59:21 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:59:21 2023: Starting Socket connection
+Wed Sep 13 07:59:32 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:59:32 2023: Starting Socket connection
+Wed Sep 13 07:59:42 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:59:42 2023: Starting Socket connection
+Wed Sep 13 07:59:50 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:59:50 2023: Starting Socket connection
+Wed Sep 13 07:59:50 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 07:59:50 2023: Starting Socket connection
+Wed Sep 13 08:00:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:07 2023: Starting Socket connection
+Wed Sep 13 08:00:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:07 2023: Starting Socket connection
+Wed Sep 13 08:00:12 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:12 2023: Starting Socket connection
+Wed Sep 13 08:00:17 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:17 2023: Starting Socket connection
+Wed Sep 13 08:00:20 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:20 2023: Starting Socket connection
+Wed Sep 13 08:00:20 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:20 2023: Starting Socket connection
+Wed Sep 13 08:00:25 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:25 2023: Starting Socket connection
+Wed Sep 13 08:00:38 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:38 2023: Starting Socket connection
+Wed Sep 13 08:00:38 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:38 2023: Starting Socket connection
+Wed Sep 13 08:00:43 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:00:43 2023: Starting Socket connection
+Wed Sep 13 08:01:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:01:07 2023: Starting Socket connection
+Wed Sep 13 08:01:55 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:01:55 2023: Starting Socket connection
+Wed Sep 13 08:01:55 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:01:55 2023: Starting Socket connection
+Wed Sep 13 08:01:55 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:01:55 2023: Starting Socket connection
+Wed Sep 13 08:02:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:07 2023: Starting Socket connection
+Wed Sep 13 08:02:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:07 2023: Starting Socket connection
+Wed Sep 13 08:02:18 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:18 2023: Starting Socket connection
+Wed Sep 13 08:02:26 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:26 2023: Starting Socket connection
+Wed Sep 13 08:02:36 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:36 2023: Starting Socket connection
+Wed Sep 13 08:02:37 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:37 2023: Starting Socket connection
+Wed Sep 13 08:02:42 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:42 2023: Starting Socket connection
+Wed Sep 13 08:02:48 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:48 2023: Starting Socket connection
+Wed Sep 13 08:02:58 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:02:58 2023: Starting Socket connection
+Wed Sep 13 08:03:06 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:06 2023: Starting Socket connection
+Wed Sep 13 08:03:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:07 2023: Starting Socket connection
+Wed Sep 13 08:03:11 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:11 2023: Starting Socket connection
+Wed Sep 13 08:03:17 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:17 2023: Starting Socket connection
+Wed Sep 13 08:03:23 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:23 2023: Starting Socket connection
+Wed Sep 13 08:03:29 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:29 2023: Starting Socket connection
+Wed Sep 13 08:03:36 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:36 2023: Starting Socket connection
+Wed Sep 13 08:03:37 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:37 2023: Starting Socket connection
+Wed Sep 13 08:03:40 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:40 2023: Starting Socket connection
+Wed Sep 13 08:03:41 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:41 2023: Starting Socket connection
+Wed Sep 13 08:03:52 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:03:52 2023: Starting Socket connection
+Wed Sep 13 08:04:02 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:02 2023: Starting Socket connection
+Wed Sep 13 08:04:06 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:06 2023: Starting Socket connection
+Wed Sep 13 08:04:07 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:07 2023: Starting Socket connection
+Wed Sep 13 08:04:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:10 2023: Starting Socket connection
+Wed Sep 13 08:04:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:10 2023: Starting Socket connection
+Wed Sep 13 08:04:21 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:21 2023: Starting Socket connection
+Wed Sep 13 08:04:32 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:32 2023: Starting Socket connection
+Wed Sep 13 08:04:34 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:34 2023: Starting Socket connection
+Wed Sep 13 08:04:36 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:36 2023: Starting Socket connection
+Wed Sep 13 08:04:36 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:36 2023: Starting Socket connection
+Wed Sep 13 08:04:40 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:40 2023: Starting Socket connection
+Wed Sep 13 08:04:45 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:04:45 2023: Starting Socket connection
+Wed Sep 13 08:05:19 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:05:19 2023: Starting Socket connection
+Wed Sep 13 08:05:46 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:05:46 2023: Starting Socket connection
+Wed Sep 13 08:05:50 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:05:50 2023: Starting Socket connection
+Wed Sep 13 08:05:56 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:05:56 2023: Starting Socket connection
+Wed Sep 13 08:06:06 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:06 2023: Starting Socket connection
+Wed Sep 13 08:06:09 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:09 2023: Starting Socket connection
+Wed Sep 13 08:06:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:10 2023: Starting Socket connection
+Wed Sep 13 08:06:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:10 2023: Starting Socket connection
+Wed Sep 13 08:06:16 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:16 2023: Starting Socket connection
+Wed Sep 13 08:06:16 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:16 2023: Starting Socket connection
+Wed Sep 13 08:06:23 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:23 2023: Starting Socket connection
+Wed Sep 13 08:06:25 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:25 2023: Starting Socket connection
+Wed Sep 13 08:06:37 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:37 2023: Starting Socket connection
+Wed Sep 13 08:06:39 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:39 2023: Starting Socket connection
+Wed Sep 13 08:06:40 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:40 2023: Starting Socket connection
+Wed Sep 13 08:06:40 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:40 2023: Starting Socket connection
+Wed Sep 13 08:06:45 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:45 2023: Starting Socket connection
+Wed Sep 13 08:06:46 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:06:46 2023: Starting Socket connection
+Wed Sep 13 08:08:02 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:02 2023: Starting Socket connection
+Wed Sep 13 08:08:02 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:02 2023: Starting Socket connection
+Wed Sep 13 08:08:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:10 2023: Starting Socket connection
+Wed Sep 13 08:08:13 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:13 2023: Starting Socket connection
+Wed Sep 13 08:08:14 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:14 2023: Starting Socket connection
+Wed Sep 13 08:08:14 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:14 2023: Starting Socket connection
+Wed Sep 13 08:08:26 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:26 2023: Starting Socket connection
+Wed Sep 13 08:08:28 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:28 2023: Starting Socket connection
+Wed Sep 13 08:08:32 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:32 2023: Starting Socket connection
+Wed Sep 13 08:08:41 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:41 2023: Starting Socket connection
+Wed Sep 13 08:08:42 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:42 2023: Starting Socket connection
+Wed Sep 13 08:08:44 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:08:44 2023: Starting Socket connection
+Wed Sep 13 08:10:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:10:10 2023: Starting Socket connection
+Wed Sep 13 08:10:10 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 08:10:10 2023: Starting Socket connection
+Wed Sep 13 12:57:22 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 12:57:22 2023: Starting Socket connection
+Wed Sep 13 12:59:27 2023: Dispatch Server: Accepted socket connection from client
+Wed Sep 13 12:59:27 2023: Starting Socket connection
+Wed Sep 13 20:09:08 2023: SESSION_MGR: closing session for UUID '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' with name 'v++_link_Bert_layer.link'
+Wed Sep 13 20:09:08 2023: KERNEL_SVC: closing session for UUID '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' with name 'v++_link_Bert_layer.link'
+Wed Sep 13 20:09:08 2023: GUIDANCE_SMGR: closing session for UUID '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' with name 'v++_link_Bert_layer.link'
+Wed Sep 13 20:09:08 2023: SYSTEM_DIAGRAM: closing session for UUID '6b9c02e4-dc95-4afc-895e-f6287a5c99ec' with name 'v++_link_Bert_layer.link'
+Wed Sep 13 20:09:08 2023: STOP_SERVER received, server token: 88e01325-8cf1-4df9-bf3d-88acc88a1fcb, passed token: 88e01325-8cf1-4df9-bf3d-88acc88a1fcb
