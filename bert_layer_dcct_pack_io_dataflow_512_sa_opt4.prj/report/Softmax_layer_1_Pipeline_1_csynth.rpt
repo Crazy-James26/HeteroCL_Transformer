@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'Softmax_layer_1_Pipeline_1'
+================================================================
+* Date:           Fri Sep 15 08:15:09 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out_test.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.094 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       18|       18|  59.940 ns|  59.940 ns|   18|   18|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       16|       16|         1|          1|          1|    16|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       22|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       27|    -|
+|Register             |        -|     -|        7|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|        7|       49|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |empty_5209_fu_280_p2   |         +|   0|  0|  12|           5|           1|
+    |exitcond353_fu_274_p2  |      icmp|   0|  0|  10|           5|           6|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  22|          10|           7|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_sig_allocacmp_p_load  |   9|          2|    5|         10|
+    |empty_fu_86              |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  27|          6|   11|         22|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |empty_fu_86  |  5|   0|    5|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  7|   0|    7|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+----------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++--------------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  Softmax_layer.1_Pipeline_1|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  Softmax_layer.1_Pipeline_1|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  Softmax_layer.1_Pipeline_1|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  Softmax_layer.1_Pipeline_1|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  Softmax_layer.1_Pipeline_1|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  Softmax_layer.1_Pipeline_1|  return value|
+|inp_sumRow_15_out         |  out|   32|      ap_vld|           inp_sumRow_15_out|       pointer|
+|inp_sumRow_15_out_ap_vld  |  out|    1|      ap_vld|           inp_sumRow_15_out|       pointer|
+|inp_sumRow_14_out         |  out|   32|      ap_vld|           inp_sumRow_14_out|       pointer|
+|inp_sumRow_14_out_ap_vld  |  out|    1|      ap_vld|           inp_sumRow_14_out|       pointer|
+|inp_sumRow_13_out         |  out|   32|      ap_vld|           inp_sumRow_13_out|       pointer|
+|inp_sumRow_13_out_ap_vld  |  out|    1|      ap_vld|           inp_sumRow_13_out|       pointer|
+|inp_sumRow_12_out         |  out|   32|      ap_vld|           inp_sumRow_12_out|       pointer|
+|inp_sumRow_12_out_ap_vld  |  out|    1|      ap_vld|           inp_sumRow_12_out|       pointer|
+|inp_sumRow_11_out         |  out|   32|      ap_vld|           inp_sumRow_11_out|       pointer|
+|inp_sumRow_11_out_ap_vld  |  out|    1|      ap_vld|           inp_sumRow_11_out|       pointer|
+|inp_sumRow_10_out         |  out|   32|      ap_vld|           inp_sumRow_10_out|       pointer|
+|inp_sumRow_10_out_ap_vld  |  out|    1|      ap_vld|           inp_sumRow_10_out|       pointer|
+|inp_sumRow_9_out          |  out|   32|      ap_vld|            inp_sumRow_9_out|       pointer|
+|inp_sumRow_9_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_9_out|       pointer|
+|inp_sumRow_8_out          |  out|   32|      ap_vld|            inp_sumRow_8_out|       pointer|
+|inp_sumRow_8_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_8_out|       pointer|
+|inp_sumRow_7_out          |  out|   32|      ap_vld|            inp_sumRow_7_out|       pointer|
+|inp_sumRow_7_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_7_out|       pointer|
+|inp_sumRow_6_out          |  out|   32|      ap_vld|            inp_sumRow_6_out|       pointer|
+|inp_sumRow_6_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_6_out|       pointer|
+|inp_sumRow_5_out          |  out|   32|      ap_vld|            inp_sumRow_5_out|       pointer|
+|inp_sumRow_5_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_5_out|       pointer|
+|inp_sumRow_4_out          |  out|   32|      ap_vld|            inp_sumRow_4_out|       pointer|
+|inp_sumRow_4_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_4_out|       pointer|
+|inp_sumRow_3_out          |  out|   32|      ap_vld|            inp_sumRow_3_out|       pointer|
+|inp_sumRow_3_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_3_out|       pointer|
+|inp_sumRow_2_out          |  out|   32|      ap_vld|            inp_sumRow_2_out|       pointer|
+|inp_sumRow_2_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_2_out|       pointer|
+|inp_sumRow_1_out          |  out|   32|      ap_vld|            inp_sumRow_1_out|       pointer|
+|inp_sumRow_1_out_ap_vld   |  out|    1|      ap_vld|            inp_sumRow_1_out|       pointer|
+|inp_sumRow_out            |  out|   32|      ap_vld|              inp_sumRow_out|       pointer|
+|inp_sumRow_out_ap_vld     |  out|    1|      ap_vld|              inp_sumRow_out|       pointer|
++--------------------------+-----+-----+------------+----------------------------+--------------+
+
