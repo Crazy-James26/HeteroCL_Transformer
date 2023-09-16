@@ -9,6 +9,8 @@
 #include <random>
 #include <vector>
 #include <iomanip>
+#define seq_num 512
+#define inp_num 16
 
 typedef struct{
   int8_t data[inp_num];

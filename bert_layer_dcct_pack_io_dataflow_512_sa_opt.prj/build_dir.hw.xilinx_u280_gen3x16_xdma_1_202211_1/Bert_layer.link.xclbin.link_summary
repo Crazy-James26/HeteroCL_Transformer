@@ -1,0 +1,1693 @@
+<ENTRY>
+{
+ "thisFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Sep 15 04:09:06 2023",
+ "timestampMillis": "1694765346850",
+ "buildStep": {
+  "cmdId": "9ca74d42-18d9-4bea-86f4-b7986deda9cd",
+  "name": "v++",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/link.steps.log",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l --save-temps --kernel_frequency 200 --optimize 3 -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo ",
+  "args": [
+   "-l",
+   "--save-temps",
+   "--kernel_frequency",
+   "200",
+   "--optimize",
+   "3",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--temp_dir",
+   "./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+   "_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:09:06 2023",
+ "timestampMillis": "1694765346850",
+ "status": {
+  "cmdId": "9ca74d42-18d9-4bea-86f4-b7986deda9cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Sep 15 04:16:01 2023",
+ "timestampMillis": "1694765761654",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "Bert_layer.link",
+    "file": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.link.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "Bert_layer",
+     "file": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/Bert_layer/Bert_layer/cpu_sources/systolic_array.cpp",
+     "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/Bert_layer/Bert_layer/cpu_sources/gemm_systolic_array.cpp",
+     "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/Bert_layer/Bert_layer/cpu_sources/kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "Bert_layer_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1.2. SW Build 3602371 on 2022-08-02-23:13:43"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 15 04:16:05 2023",
+ "timestampMillis": "1694765765260",
+ "buildStep": {
+  "cmdId": "cb898c17-09be-413e-b01a-91d5e6086d17",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link",
+  "args": [
+   "--xo",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/Bert_layer.xo",
+   "-keep",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int",
+   "--temp_dir",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/sys_link"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:05 2023",
+ "timestampMillis": "1694765765261",
+ "status": {
+  "cmdId": "cb898c17-09be-413e-b01a-91d5e6086d17",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:42 2023",
+ "timestampMillis": "1694765802549",
+ "status": {
+  "cmdId": "cb898c17-09be-413e-b01a-91d5e6086d17",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 15 04:16:42 2023",
+ "timestampMillis": "1694765802556",
+ "buildStep": {
+  "cmdId": "ac738d69-147e-41ed-a774-4cc31ba0db03",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/sdsl.dat -rtd /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw.rtd -nofilter /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw_full.rtd -xclbin /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.xml -o /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/sdsl.dat",
+   "-rtd",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.xml",
+   "-o",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:42 2023",
+ "timestampMillis": "1694765802557",
+ "status": {
+  "cmdId": "ac738d69-147e-41ed-a774-4cc31ba0db03",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:51 2023",
+ "timestampMillis": "1694765811916",
+ "status": {
+  "cmdId": "ac738d69-147e-41ed-a774-4cc31ba0db03",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 15 04:16:51 2023",
+ "timestampMillis": "1694765811926",
+ "buildStep": {
+  "cmdId": "67f6101c-945e-4a47-a1d3-cd241bd76d2d",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:51 2023",
+ "timestampMillis": "1694765811926",
+ "status": {
+  "cmdId": "67f6101c-945e-4a47-a1d3-cd241bd76d2d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 04:16:54 2023",
+ "timestampMillis": "1694765814304",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:54 2023",
+ "timestampMillis": "1694765814305",
+ "status": {
+  "cmdId": "67f6101c-945e-4a47-a1d3-cd241bd76d2d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 15 04:16:54 2023",
+ "timestampMillis": "1694765814310",
+ "buildStep": {
+  "cmdId": "309a6064-5419-4af9-a7c3-7ad2b445d97e",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --kernel_frequency 200 --remote_ip_cache /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/.ipcache -s --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --log_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link --report_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link --config /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini -k /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link --no-info --iprepo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0 --messageDb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link/vpl.pb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--kernel_frequency",
+   "200",
+   "--remote_ip_cache",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/.ipcache",
+   "-s",
+   "--output_dir",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int",
+   "--log_dir",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link",
+   "--report_dir",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link",
+   "--config",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini",
+   "-k",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link",
+   "--no-info",
+   "--iprepo",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0",
+   "--messageDb",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link/vpl.pb",
+   "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj\nmisc=BinaryName=Bert_layer.link\n\n[connectivity]\nnk=Bert_layer:1:Bert_layer_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:54 2023",
+ "timestampMillis": "1694765814310",
+ "status": {
+  "cmdId": "309a6064-5419-4af9-a7c3-7ad2b445d97e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Sep 15 04:16:56 2023",
+ "timestampMillis": "1694765816352",
+ "buildStep": {
+  "cmdId": "9f2f0c0b-d840-468c-8e39-ed94ecc5afc8",
+  "name": "vpl",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/link.steps.log",
+  "commandLine": "/opt/xilinx/2022.1/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --kernel_frequency 200 --remote_ip_cache /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/.ipcache -s --output_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int --log_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/link --report_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link --config /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/vplConfig.ini -k /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link --no-info --iprepo /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/xo/ip_repo/xilinx_com_hls_Bert_layer_1_0 --messageDb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link/vpl.pb /scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:16:56 2023",
+ "timestampMillis": "1694765816352",
+ "status": {
+  "cmdId": "9f2f0c0b-d840-468c-8e39-ed94ecc5afc8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Sep 15 04:17:05 2023",
+ "timestampMillis": "1694765825277",
+ "vivadoProject": {
+  "openDir": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 15 04:17:05 2023",
+ "timestampMillis": "1694765825279",
+ "buildStep": {
+  "cmdId": "d3600c78-ceba-47ac-a7a9-796c4710ced1",
+  "name": "vivado",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 04:17:05 2023",
+ "timestampMillis": "1694765825279",
+ "status": {
+  "cmdId": "d3600c78-ceba-47ac-a7a9-796c4710ced1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 04:18:13 2023",
+ "timestampMillis": "1694765893614",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Sep 15 07:59:47 2023",
+ "timestampMillis": "1694779187780",
+ "buildStep": {
+  "cmdId": "44c1cad9-7e1b-4c51-8c5f-dfa8feebe398",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 07:59:47 2023",
+ "timestampMillis": "1694779187780",
+ "status": {
+  "cmdId": "44c1cad9-7e1b-4c51-8c5f-dfa8feebe398",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Sep 15 07:59:47 2023",
+ "timestampMillis": "1694779187781",
+ "buildStep": {
+  "cmdId": "086b11f2-a341-4c32-bf6b-17e6d1918f80",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 07:59:47 2023",
+ "timestampMillis": "1694779187781",
+ "status": {
+  "cmdId": "086b11f2-a341-4c32-bf6b-17e6d1918f80",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 08:58:49 2023",
+ "timestampMillis": "1694782729380",
+ "status": {
+  "cmdId": "d3600c78-ceba-47ac-a7a9-796c4710ced1",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730177",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730178",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730179",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730180",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730183",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_ii_level0_wire_0_synth_1_ulp_ii_level0_wire_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730184",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_ulp_cmp_0_synth_1_ulp_ulp_cmp_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730184",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_hmss_0_0_synth_1_ulp_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730185",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_axi_vip_data_0_synth_1_ulp_axi_vip_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730186",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_ulp_ucs_0_synth_1_ulp_ulp_ucs_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730187",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_ctrl_slr0_0_synth_1_ulp_proc_sys_reset_ctrl_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730187",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_ctrl_slr1_0_synth_1_ulp_proc_sys_reset_ctrl_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730188",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_ctrl_slr2_0_synth_1_ulp_proc_sys_reset_ctrl_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730189",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_kernel_slr0_0_synth_1_ulp_proc_sys_reset_kernel_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730189",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_kernel_slr1_0_synth_1_ulp_proc_sys_reset_kernel_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730190",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_kernel_slr2_0_synth_1_ulp_proc_sys_reset_kernel_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730191",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_kernel2_slr0_0_synth_1_ulp_proc_sys_reset_kernel2_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730191",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_kernel2_slr1_0_synth_1_ulp_proc_sys_reset_kernel2_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730192",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_kernel2_slr2_0_synth_1_ulp_proc_sys_reset_kernel2_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730193",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_freerun_slr0_0_synth_1_ulp_proc_sys_reset_freerun_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730193",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_freerun_slr1_0_synth_1_ulp_proc_sys_reset_freerun_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730194",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_proc_sys_reset_freerun_slr2_0_synth_1_ulp_proc_sys_reset_freerun_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730195",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_axi_gpio_null_0_synth_1_ulp_axi_gpio_null_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730195",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_axi_vip_ctrl_userpf_0_synth_1_ulp_axi_vip_ctrl_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730196",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_regslice_control_userpf_0_synth_1_ulp_regslice_control_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730197",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_regslice_control_userpf_1_synth_1_ulp_regslice_control_userpf_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730198",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_regslice_control_userpf_2_synth_1_ulp_regslice_control_userpf_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730200",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_58f6_xsdbm_0_synth_1_bd_58f6_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730200",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_097b_user_debug_hub_0_synth_1_bd_097b_user_debug_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730201",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_7cf0_bs_switch_1_0_synth_1_bd_7cf0_bs_switch_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730201",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_7cf0_bsip_0_synth_1_bd_7cf0_bsip_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730202",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_7cf0_axi_jtag_0_synth_1_bd_7cf0_axi_jtag_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730203",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_fanout_aresetn_ctrl_slr2_4_0_synth_1_bd_22c0_fanout_aresetn_ctrl_slr2_4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730203",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clk_hbm_adapt_0_synth_1_bd_22c0_clk_hbm_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730204",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clkwiz_hbm_0_synth_1_bd_22c0_clkwiz_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730204",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_fanout_aresetn_hbm_0_synth_1_bd_22c0_fanout_aresetn_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730205",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_psreset_hbm_0_synth_1_bd_22c0_psreset_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730206",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_xbar_1_synth_1_bd_22c0_xbar_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730207",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_frequency_counter_aclk_0_synth_1_bd_22c0_frequency_counter_aclk_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730208",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_frequency_counter_aclk_hbm_0_synth_1_bd_22c0_frequency_counter_aclk_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730209",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_frequency_counter_aclk_kernel_00_0_synth_1_bd_22c0_frequency_counter_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730210",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_psreset_aclk_freerun_0_synth_1_bd_22c0_psreset_aclk_freerun_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730211",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_aclk_kernel_00_adapt_0_synth_1_bd_22c0_aclk_kernel_00_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730211",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clkwiz_aclk_kernel_00_0_synth_1_bd_22c0_clkwiz_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730212",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_097b_user_debug_bridge_0_synth_1_bd_097b_user_debug_bridge_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730213",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_097b_build_info_0_synth_1_bd_097b_build_info_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730214",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clkwiz_aclk_kernel_01_0_synth_1_bd_22c0_clkwiz_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730214",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clock_throttling_aclk_kernel_01_0_synth_1_bd_22c0_clock_throttling_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730215",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_fanout_aresetn_kernel_01_slr0_1_0_synth_1_bd_22c0_fanout_aresetn_kernel_01_slr0_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730217",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_psreset_kernel_01_0_synth_1_bd_22c0_psreset_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730218",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clock_throttling_aclk_kernel_00_0_synth_1_bd_22c0_clock_throttling_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730218",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_fanout_aresetn_kernel_00_slr0_1_0_synth_1_bd_22c0_fanout_aresetn_kernel_00_slr0_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730220",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_psreset_kernel_00_0_synth_1_bd_22c0_psreset_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730221",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_aclk_kernel_01_adapt_0_synth_1_bd_22c0_aclk_kernel_01_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730221",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clock_throttling_avg_0_synth_1_bd_22c0_clock_throttling_avg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730222",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_gpio_ucs_control_status_0_synth_1_bd_22c0_gpio_ucs_control_status_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730223",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_clock_shutdown_latch_0_synth_1_bd_22c0_clock_shutdown_latch_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730223",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_fanout_aresetn_pcie_slr0_1_0_synth_1_bd_22c0_fanout_aresetn_pcie_slr0_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730225",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_interconnect1_0_0_synth_1_bd_85ad_interconnect1_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730225",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_gpio_gapping_demand_0_synth_1_bd_22c0_gpio_gapping_demand_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730226",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_gapping_demand_update_0_synth_1_bd_22c0_gapping_demand_update_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730227",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_58f6_lut_buffer_0_synth_1_bd_58f6_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730227",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_gapping_demand_toggle_0_synth_1_bd_22c0_gapping_demand_toggle_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730228",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_build_info_0_synth_1_bd_22c0_build_info_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730229",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_xbar_0_synth_1_bd_22c0_xbar_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730229",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_xbar_0_synth_1_ulp_xbar_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730230",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_Bert_layer_1_0_synth_1_ulp_Bert_layer_1_0_utilization_synth.rpt",
+  "name": "Bert_layer",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730230",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_xbar_1_synth_1_ulp_xbar_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730232",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_slice0_1_0_synth_1_bd_85ad_slice0_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730233",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_init_reduce_0_synth_1_bd_85ad_init_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730233",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_auto_cc_3_synth_1_ulp_auto_cc_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730234",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_s00_regslice_17_synth_1_ulp_s00_regslice_17_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730235",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_22c0_auto_cc_0_synth_1_bd_22c0_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730235",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_s00_regslice_15_synth_1_ulp_s00_regslice_15_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730236",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_m00_regslice_0_synth_1_ulp_m00_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730237",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_m01_regslice_0_synth_1_ulp_m01_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730237",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/ulp_auto_cc_1_synth_1_ulp_auto_cc_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730238",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_hbm_reset_sync_SLR0_0_synth_1_bd_85ad_hbm_reset_sync_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730239",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_vip_S00_0_synth_1_bd_85ad_vip_S00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730239",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_axi_apb_bridge_inst_0_synth_1_bd_85ad_axi_apb_bridge_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730240",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_hbm_inst_0_synth_1_bd_85ad_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730240",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_slice1_0_0_synth_1_bd_85ad_slice1_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730241",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/syn/bd_85ad_interconnect0_1_0_synth_1_bd_85ad_interconnect0_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730246",
+ "status": {
+  "cmdId": "9f2f0c0b-d840-468c-8e39-ed94ecc5afc8",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730300",
+ "status": {
+  "cmdId": "309a6064-5419-4af9-a7c3-7ad2b445d97e",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730491",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/link/v++_link_Bert_layer.link_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730492",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/v++_link_Bert_layer.link_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730513",
+ "report": {
+  "path": "/scratch/users/hc676/HeteroCL_Transformer/bert_layer_dcct_pack_io_dataflow_512_sa_opt.prj/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 15 08:58:50 2023",
+ "timestampMillis": "1694782730514",
+ "status": {
+  "cmdId": "9ca74d42-18d9-4bea-86f4-b7986deda9cd",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>

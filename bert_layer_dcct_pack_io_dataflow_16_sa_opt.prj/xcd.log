@@ -215,3 +215,331 @@ Fri Sep  8 22:57:44 2023: SERVER: destructor for server bound to port 42268
 Fri Sep  8 22:57:44 2023: XCD main fifo: Good unlink of /tmp/xcdmain6256c870-edec-4526-bc02-72e36efbbda9
 Fri Sep  8 22:57:44 2023: Server exiting with status 0.
 Fri Sep  8 22:57:44 2023: Closing log file.
+Thu Sep 14 20:09:28 2023: Running xcd server. This server was built by gradle.
+Thu Sep 14 20:09:28 2023: Server was asked to start on port: '38154'
+Thu Sep 14 20:09:28 2023: Server is using token UUID: 'f026e5d5-0784-4d6a-b515-24769a360f50'
+Thu Sep 14 20:09:28 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Thu Sep 14 20:09:28 2023: Attempting to start server on port '38154'
+Thu Sep 14 20:09:28 2023: XCD main fifo: created main fifo '/tmp/xcdmainf026e5d5-0784-4d6a-b515-24769a360f50', fd read = 13
+Thu Sep 14 20:09:28 2023: Running Dispatch Server
+Thu Sep 14 20:09:28 2023: Version 2.2.0
+Thu Sep 14 20:09:37 2023: Dispatch Server: Accepted socket connection from client
+Thu Sep 14 20:09:37 2023: Starting Socket connection
+Thu Sep 14 20:09:37 2023: EXCHANGE_TOKEN received, server token: f026e5d5-0784-4d6a-b515-24769a360f50, passed token: f026e5d5-0784-4d6a-b515-24769a360f50
+Thu Sep 14 20:09:37 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Thu Sep 14 20:09:37 2023: SESSION_MGR: creating session with session uuid: '968dc794-2465-4329-a8a4-be0c2416efdd' and name 'v++_compile_Bert_layer'
+Thu Sep 14 20:09:37 2023: KERNEL_SVC: creating session with uuid: '968dc794-2465-4329-a8a4-be0c2416efdd' and name 'v++_compile_Bert_layer'
+Thu Sep 14 20:09:37 2023: GUIDANCE_SMGR: creating guidance session with uuid: '968dc794-2465-4329-a8a4-be0c2416efdd' and name 'v++_compile_Bert_layer'
+Thu Sep 14 20:09:37 2023: SYSTEM_DIAGRAM: creating session with uuid: '968dc794-2465-4329-a8a4-be0c2416efdd' and name 'v++_compile_Bert_layer'
+Fri Sep 15 13:20:33 2023: SESSION_MGR: closing session for UUID '968dc794-2465-4329-a8a4-be0c2416efdd' with name 'v++_compile_Bert_layer'
+Fri Sep 15 13:20:33 2023: KERNEL_SVC: closing session for UUID '968dc794-2465-4329-a8a4-be0c2416efdd' with name 'v++_compile_Bert_layer'
+Fri Sep 15 13:20:33 2023: GUIDANCE_SMGR: closing session for UUID '968dc794-2465-4329-a8a4-be0c2416efdd' with name 'v++_compile_Bert_layer'
+Fri Sep 15 13:20:33 2023: SYSTEM_DIAGRAM: closing session for UUID '968dc794-2465-4329-a8a4-be0c2416efdd' with name 'v++_compile_Bert_layer'
+Fri Sep 15 13:20:33 2023: STOP_SERVER received, server token: f026e5d5-0784-4d6a-b515-24769a360f50, passed token: f026e5d5-0784-4d6a-b515-24769a360f50
+Fri Sep 15 13:20:33 2023: Socket received request to stop server.
+Fri Sep 15 13:20:33 2023: Dispatch Server: do_await_stop
+Fri Sep 15 13:20:33 2023: Dispatch Server: stopping mainFifo_
+Fri Sep 15 13:20:33 2023: XCD main fifo: Stopping
+Fri Sep 15 13:20:33 2023: XCD main fifo: do_read error code: Operation canceled
+Fri Sep 15 13:20:33 2023: XCD main fifo: bytes_transferred: 0
+Fri Sep 15 13:20:33 2023: SERVER: destructor for server bound to port 38154
+Fri Sep 15 13:20:33 2023: XCD main fifo: Good unlink of /tmp/xcdmainf026e5d5-0784-4d6a-b515-24769a360f50
+Fri Sep 15 13:20:33 2023: Server exiting with status 0.
+Fri Sep 15 13:20:33 2023: Closing log file.
+Fri Sep 15 13:20:38 2023: Running xcd server. This server was built by gradle.
+Fri Sep 15 13:20:38 2023: Server was asked to start on port: '39631'
+Fri Sep 15 13:20:38 2023: Server is using token UUID: '12ed0b54-af26-4ec3-b05e-1eab513aa3a6'
+Fri Sep 15 13:20:38 2023: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Sep 15 13:20:38 2023: Attempting to start server on port '39631'
+Fri Sep 15 13:20:38 2023: XCD main fifo: created main fifo '/tmp/xcdmain12ed0b54-af26-4ec3-b05e-1eab513aa3a6', fd read = 13
+Fri Sep 15 13:20:38 2023: Running Dispatch Server
+Fri Sep 15 13:20:38 2023: Version 2.2.0
+Fri Sep 15 13:20:47 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:20:47 2023: Starting Socket connection
+Fri Sep 15 13:20:47 2023: EXCHANGE_TOKEN received, server token: 12ed0b54-af26-4ec3-b05e-1eab513aa3a6, passed token: 12ed0b54-af26-4ec3-b05e-1eab513aa3a6
+Fri Sep 15 13:20:47 2023: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Sep 15 13:20:47 2023: SESSION_MGR: creating session with session uuid: 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' and name 'v++_link_Bert_layer.link'
+Fri Sep 15 13:20:47 2023: KERNEL_SVC: creating session with uuid: 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' and name 'v++_link_Bert_layer.link'
+Fri Sep 15 13:20:47 2023: GUIDANCE_SMGR: creating guidance session with uuid: 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' and name 'v++_link_Bert_layer.link'
+Fri Sep 15 13:20:47 2023: SYSTEM_DIAGRAM: creating session with uuid: 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' and name 'v++_link_Bert_layer.link'
+Fri Sep 15 13:28:46 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:28:46 2023: Starting Socket connection
+Fri Sep 15 13:29:10 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:29:10 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:32:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:32:25 2023: Starting Socket connection
+Fri Sep 15 13:34:01 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:01 2023: Starting Socket connection
+Fri Sep 15 13:34:01 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:01 2023: Starting Socket connection
+Fri Sep 15 13:34:01 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:01 2023: Starting Socket connection
+Fri Sep 15 13:34:01 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:01 2023: Starting Socket connection
+Fri Sep 15 13:34:02 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:02 2023: Starting Socket connection
+Fri Sep 15 13:34:02 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:02 2023: Starting Socket connection
+Fri Sep 15 13:34:02 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:02 2023: Starting Socket connection
+Fri Sep 15 13:34:17 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:17 2023: Starting Socket connection
+Fri Sep 15 13:34:28 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:28 2023: Starting Socket connection
+Fri Sep 15 13:34:28 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:28 2023: Starting Socket connection
+Fri Sep 15 13:34:44 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:44 2023: Starting Socket connection
+Fri Sep 15 13:34:55 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:34:55 2023: Starting Socket connection
+Fri Sep 15 13:35:29 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:35:29 2023: Starting Socket connection
+Fri Sep 15 13:35:29 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:35:29 2023: Starting Socket connection
+Fri Sep 15 13:35:30 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:35:30 2023: Starting Socket connection
+Fri Sep 15 13:35:35 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:35:35 2023: Starting Socket connection
+Fri Sep 15 13:35:43 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:35:43 2023: Starting Socket connection
+Fri Sep 15 13:35:54 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:35:54 2023: Starting Socket connection
+Fri Sep 15 13:36:18 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:36:18 2023: Starting Socket connection
+Fri Sep 15 13:36:27 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:36:27 2023: Starting Socket connection
+Fri Sep 15 13:37:01 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:01 2023: Starting Socket connection
+Fri Sep 15 13:37:07 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:07 2023: Starting Socket connection
+Fri Sep 15 13:37:11 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:11 2023: Starting Socket connection
+Fri Sep 15 13:37:15 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:15 2023: Starting Socket connection
+Fri Sep 15 13:37:27 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:27 2023: Starting Socket connection
+Fri Sep 15 13:37:35 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:35 2023: Starting Socket connection
+Fri Sep 15 13:37:53 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:37:53 2023: Starting Socket connection
+Fri Sep 15 13:38:04 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:38:04 2023: Starting Socket connection
+Fri Sep 15 13:38:06 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:38:06 2023: Starting Socket connection
+Fri Sep 15 13:38:41 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:38:41 2023: Starting Socket connection
+Fri Sep 15 13:38:45 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:38:45 2023: Starting Socket connection
+Fri Sep 15 13:38:50 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:38:50 2023: Starting Socket connection
+Fri Sep 15 13:39:04 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:39:04 2023: Starting Socket connection
+Fri Sep 15 13:39:13 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:39:13 2023: Starting Socket connection
+Fri Sep 15 13:39:14 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:39:14 2023: Starting Socket connection
+Fri Sep 15 13:39:40 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:39:40 2023: Starting Socket connection
+Fri Sep 15 13:39:40 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:39:40 2023: Starting Socket connection
+Fri Sep 15 13:39:43 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:39:43 2023: Starting Socket connection
+Fri Sep 15 13:40:07 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:07 2023: Starting Socket connection
+Fri Sep 15 13:40:08 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:08 2023: Starting Socket connection
+Fri Sep 15 13:40:10 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:10 2023: Starting Socket connection
+Fri Sep 15 13:40:17 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:17 2023: Starting Socket connection
+Fri Sep 15 13:40:23 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:23 2023: Starting Socket connection
+Fri Sep 15 13:40:35 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:35 2023: Starting Socket connection
+Fri Sep 15 13:40:37 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:37 2023: Starting Socket connection
+Fri Sep 15 13:40:46 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:40:46 2023: Starting Socket connection
+Fri Sep 15 13:41:05 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:05 2023: Starting Socket connection
+Fri Sep 15 13:41:14 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:14 2023: Starting Socket connection
+Fri Sep 15 13:41:33 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:33 2023: Starting Socket connection
+Fri Sep 15 13:41:33 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:33 2023: Starting Socket connection
+Fri Sep 15 13:41:41 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:41 2023: Starting Socket connection
+Fri Sep 15 13:41:46 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:46 2023: Starting Socket connection
+Fri Sep 15 13:41:46 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:46 2023: Starting Socket connection
+Fri Sep 15 13:41:55 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:55 2023: Starting Socket connection
+Fri Sep 15 13:41:59 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:41:59 2023: Starting Socket connection
+Fri Sep 15 13:42:00 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:00 2023: Starting Socket connection
+Fri Sep 15 13:42:07 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:07 2023: Starting Socket connection
+Fri Sep 15 13:42:13 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:13 2023: Starting Socket connection
+Fri Sep 15 13:42:14 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:14 2023: Starting Socket connection
+Fri Sep 15 13:42:23 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:23 2023: Starting Socket connection
+Fri Sep 15 13:42:26 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:26 2023: Starting Socket connection
+Fri Sep 15 13:42:26 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:26 2023: Starting Socket connection
+Fri Sep 15 13:42:34 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:34 2023: Starting Socket connection
+Fri Sep 15 13:42:41 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:41 2023: Starting Socket connection
+Fri Sep 15 13:42:49 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:49 2023: Starting Socket connection
+Fri Sep 15 13:42:52 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:52 2023: Starting Socket connection
+Fri Sep 15 13:42:52 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:42:52 2023: Starting Socket connection
+Fri Sep 15 13:43:01 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:43:01 2023: Starting Socket connection
+Fri Sep 15 13:43:08 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:43:08 2023: Starting Socket connection
+Fri Sep 15 13:43:10 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:43:10 2023: Starting Socket connection
+Fri Sep 15 13:43:12 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:43:12 2023: Starting Socket connection
+Fri Sep 15 13:43:41 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:43:41 2023: Starting Socket connection
+Fri Sep 15 13:43:46 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:43:46 2023: Starting Socket connection
+Fri Sep 15 13:44:08 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:08 2023: Starting Socket connection
+Fri Sep 15 13:44:13 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:13 2023: Starting Socket connection
+Fri Sep 15 13:44:25 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:25 2023: Starting Socket connection
+Fri Sep 15 13:44:27 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:27 2023: Starting Socket connection
+Fri Sep 15 13:44:34 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:34 2023: Starting Socket connection
+Fri Sep 15 13:44:34 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:34 2023: Starting Socket connection
+Fri Sep 15 13:44:42 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:42 2023: Starting Socket connection
+Fri Sep 15 13:44:43 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:43 2023: Starting Socket connection
+Fri Sep 15 13:44:44 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:44 2023: Starting Socket connection
+Fri Sep 15 13:44:51 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:51 2023: Starting Socket connection
+Fri Sep 15 13:44:53 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:44:53 2023: Starting Socket connection
+Fri Sep 15 13:45:00 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:00 2023: Starting Socket connection
+Fri Sep 15 13:45:03 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:03 2023: Starting Socket connection
+Fri Sep 15 13:45:09 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:09 2023: Starting Socket connection
+Fri Sep 15 13:45:09 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:09 2023: Starting Socket connection
+Fri Sep 15 13:45:10 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:10 2023: Starting Socket connection
+Fri Sep 15 13:45:18 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:18 2023: Starting Socket connection
+Fri Sep 15 13:45:20 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:20 2023: Starting Socket connection
+Fri Sep 15 13:45:27 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:27 2023: Starting Socket connection
+Fri Sep 15 13:45:29 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:29 2023: Starting Socket connection
+Fri Sep 15 13:45:35 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:35 2023: Starting Socket connection
+Fri Sep 15 13:45:36 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:36 2023: Starting Socket connection
+Fri Sep 15 13:45:37 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:37 2023: Starting Socket connection
+Fri Sep 15 13:45:55 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:55 2023: Starting Socket connection
+Fri Sep 15 13:45:55 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:55 2023: Starting Socket connection
+Fri Sep 15 13:45:56 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:45:56 2023: Starting Socket connection
+Fri Sep 15 13:46:04 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:46:04 2023: Starting Socket connection
+Fri Sep 15 13:46:54 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:46:54 2023: Starting Socket connection
+Fri Sep 15 13:47:05 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:05 2023: Starting Socket connection
+Fri Sep 15 13:47:11 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:11 2023: Starting Socket connection
+Fri Sep 15 13:47:22 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:22 2023: Starting Socket connection
+Fri Sep 15 13:47:28 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:28 2023: Starting Socket connection
+Fri Sep 15 13:47:39 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:39 2023: Starting Socket connection
+Fri Sep 15 13:47:50 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:50 2023: Starting Socket connection
+Fri Sep 15 13:47:55 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:47:55 2023: Starting Socket connection
+Fri Sep 15 13:48:30 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:48:30 2023: Starting Socket connection
+Fri Sep 15 13:48:39 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:48:39 2023: Starting Socket connection
+Fri Sep 15 13:48:45 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:48:45 2023: Starting Socket connection
+Fri Sep 15 13:48:59 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:48:59 2023: Starting Socket connection
+Fri Sep 15 13:49:02 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:49:02 2023: Starting Socket connection
+Fri Sep 15 13:49:06 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:49:06 2023: Starting Socket connection
+Fri Sep 15 13:49:12 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:49:12 2023: Starting Socket connection
+Fri Sep 15 13:49:23 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:49:23 2023: Starting Socket connection
+Fri Sep 15 13:49:27 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:49:27 2023: Starting Socket connection
+Fri Sep 15 13:50:07 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:50:07 2023: Starting Socket connection
+Fri Sep 15 13:50:17 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:50:17 2023: Starting Socket connection
+Fri Sep 15 13:50:32 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:50:32 2023: Starting Socket connection
+Fri Sep 15 13:50:35 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:50:35 2023: Starting Socket connection
+Fri Sep 15 13:50:50 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:50:50 2023: Starting Socket connection
+Fri Sep 15 13:51:08 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:51:08 2023: Starting Socket connection
+Fri Sep 15 13:51:50 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:51:50 2023: Starting Socket connection
+Fri Sep 15 13:51:50 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:51:50 2023: Starting Socket connection
+Fri Sep 15 13:51:50 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 13:51:50 2023: Starting Socket connection
+Fri Sep 15 17:05:45 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 17:05:45 2023: Starting Socket connection
+Fri Sep 15 17:07:47 2023: Dispatch Server: Accepted socket connection from client
+Fri Sep 15 17:07:47 2023: Starting Socket connection
+Sat Sep 16 01:44:04 2023: SESSION_MGR: closing session for UUID 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' with name 'v++_link_Bert_layer.link'
+Sat Sep 16 01:44:04 2023: KERNEL_SVC: closing session for UUID 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' with name 'v++_link_Bert_layer.link'
+Sat Sep 16 01:44:04 2023: GUIDANCE_SMGR: closing session for UUID 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' with name 'v++_link_Bert_layer.link'
+Sat Sep 16 01:44:04 2023: SYSTEM_DIAGRAM: closing session for UUID 'a71a4baf-de30-41bd-8df3-51be6ed0dd70' with name 'v++_link_Bert_layer.link'
+Sat Sep 16 01:44:04 2023: STOP_SERVER received, server token: 12ed0b54-af26-4ec3-b05e-1eab513aa3a6, passed token: 12ed0b54-af26-4ec3-b05e-1eab513aa3a6
