@@ -41,7 +41,7 @@ endif
 
 ############################## Setting up Project Variables ##############################
 TARGET := hw
-VPP_LDFLAGS := --kernel_frequency 300 --optimize 3
+VPP_LDFLAGS := --kernel_frequency 200 --optimize 3
 include ./utils.mk
 
 TEMP_DIR := ./_x.$(TARGET).$(XSA)
