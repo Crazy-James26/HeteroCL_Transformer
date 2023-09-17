@@ -1,3 +1,0 @@
-systolic_fadd_32nbkb
-systolic_fmul_32ncud
-systolic
