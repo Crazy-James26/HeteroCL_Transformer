@@ -1,0 +1,262 @@
+
+
+================================================================
+== Vitis HLS Report for 'Linear_layer_q_1'
+================================================================
+* Date:           Sun Sep 17 02:35:09 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out_test.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.431 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |    19387|    19387|  64.559 us|  64.559 us|  19387|  19387|       no|
+    +---------+---------+-----------+-----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+--------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                                           |                                |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |                  Instance                 |             Module             |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +-------------------------------------------+--------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |grp_Linear_layer_q_1_Pipeline_l_j1_fu_160  |Linear_layer_q_1_Pipeline_l_j1  |      770|      770|   2.564 us|   2.564 us|    770|    770|       no|
+        |grp_gemm_systolic_array_qkv_1_fu_182       |gemm_systolic_array_qkv_1       |    18613|    18613|  61.981 us|  61.981 us|  18613|  18613|       no|
+        +-------------------------------------------+--------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        6|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        0|   304|   121433|   122328|    -|
+|Memory               |       81|     -|      256|      264|    0|
+|Multiplexer          |        -|     -|        -|      659|    -|
+|Register             |        -|     -|       20|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       81|   304|   121709|   123257|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        6|    10|       14|       28|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        2|     3|        4|        9|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+--------------------------------+---------+-----+--------+--------+-----+
+    |                  Instance                 |             Module             | BRAM_18K| DSP |   FF   |   LUT  | URAM|
+    +-------------------------------------------+--------------------------------+---------+-----+--------+--------+-----+
+    |grp_Linear_layer_q_1_Pipeline_l_j1_fu_160  |Linear_layer_q_1_Pipeline_l_j1  |        0|    0|      23|      77|    0|
+    |grp_gemm_systolic_array_qkv_1_fu_182       |gemm_systolic_array_qkv_1       |        0|  304|  121410|  122251|    0|
+    +-------------------------------------------+--------------------------------+---------+-----+--------+--------+-----+
+    |Total                                      |                                |        0|  304|  121433|  122328|    0|
+    +-------------------------------------------+--------------------------------+---------+-----+--------+--------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------+---------------------------------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |       Memory      |                    Module                   | BRAM_18K| FF | LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +-------------------+---------------------------------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |buf5_data_0_U      |Linear_layer_q_1_buf5_data_0_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_10_U     |Linear_layer_q_1_buf5_data_10_ROM_AUTO_1R    |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_11_U     |Linear_layer_q_1_buf5_data_11_ROM_AUTO_1R    |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_12_U     |Linear_layer_q_1_buf5_data_12_ROM_AUTO_1R    |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_13_U     |Linear_layer_q_1_buf5_data_13_ROM_AUTO_1R    |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_14_U     |Linear_layer_q_1_buf5_data_14_ROM_AUTO_1R    |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_15_U     |Linear_layer_q_1_buf5_data_15_ROM_AUTO_1R    |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_1_U      |Linear_layer_q_1_buf5_data_1_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_2_U      |Linear_layer_q_1_buf5_data_2_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_3_U      |Linear_layer_q_1_buf5_data_3_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_4_U      |Linear_layer_q_1_buf5_data_4_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_5_U      |Linear_layer_q_1_buf5_data_5_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_6_U      |Linear_layer_q_1_buf5_data_6_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_7_U      |Linear_layer_q_1_buf5_data_7_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_8_U      |Linear_layer_q_1_buf5_data_8_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf5_data_9_U      |Linear_layer_q_1_buf5_data_9_ROM_AUTO_1R     |        4|   0|   0|    0|  18432|    8|     1|       147456|
+    |buf6_V_U           |Linear_layer_q_1_buf6_V_ROM_AUTO_1R          |        1|   0|   0|    0|    768|   12|     1|         9216|
+    |inp_buf_data_U     |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_16_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_17_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_18_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_19_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_20_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_21_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_22_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_23_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_24_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_25_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_26_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_27_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_28_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_29_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |inp_buf_data_30_U  |Linear_layer_q_1_inp_buf_data_RAM_AUTO_1R1W  |        1|   0|   0|    0|    768|    8|     1|         6144|
+    |p_ZL5buf20_0_U     |Linear_layer_q_1_p_ZL5buf20_0_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_1_U     |Linear_layer_q_1_p_ZL5buf20_1_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_2_U     |Linear_layer_q_1_p_ZL5buf20_2_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_3_U     |Linear_layer_q_1_p_ZL5buf20_3_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_4_U     |Linear_layer_q_1_p_ZL5buf20_4_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_5_U     |Linear_layer_q_1_p_ZL5buf20_5_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_6_U     |Linear_layer_q_1_p_ZL5buf20_6_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    |p_ZL5buf20_7_U     |Linear_layer_q_1_p_ZL5buf20_7_ROM_AUTO_1R    |        0|  32|  33|    0|     64|   32|     1|         2048|
+    +-------------------+---------------------------------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |Total              |                                             |       81| 256| 264|    0| 308480|  524|    41|      2483200|
+    +-------------------+---------------------------------------------+---------+----+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                     Variable Name                     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1                                        |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_gemm_systolic_array_qkv_1_fu_182_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_gemm_systolic_array_qkv_1_fu_182_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                  |          |   0|  0|   6|           3|           3|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  31|          6|    1|          6|
+    |ap_done                   |   9|          2|    1|          2|
+    |inp_buf_data_16_address0  |  14|          3|   10|         30|
+    |inp_buf_data_16_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_16_we0       |   9|          2|    1|          2|
+    |inp_buf_data_17_address0  |  14|          3|   10|         30|
+    |inp_buf_data_17_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_17_we0       |   9|          2|    1|          2|
+    |inp_buf_data_18_address0  |  14|          3|   10|         30|
+    |inp_buf_data_18_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_18_we0       |   9|          2|    1|          2|
+    |inp_buf_data_19_address0  |  14|          3|   10|         30|
+    |inp_buf_data_19_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_19_we0       |   9|          2|    1|          2|
+    |inp_buf_data_20_address0  |  14|          3|   10|         30|
+    |inp_buf_data_20_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_20_we0       |   9|          2|    1|          2|
+    |inp_buf_data_21_address0  |  14|          3|   10|         30|
+    |inp_buf_data_21_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_21_we0       |   9|          2|    1|          2|
+    |inp_buf_data_22_address0  |  14|          3|   10|         30|
+    |inp_buf_data_22_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_22_we0       |   9|          2|    1|          2|
+    |inp_buf_data_23_address0  |  14|          3|   10|         30|
+    |inp_buf_data_23_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_23_we0       |   9|          2|    1|          2|
+    |inp_buf_data_24_address0  |  14|          3|   10|         30|
+    |inp_buf_data_24_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_24_we0       |   9|          2|    1|          2|
+    |inp_buf_data_25_address0  |  14|          3|   10|         30|
+    |inp_buf_data_25_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_25_we0       |   9|          2|    1|          2|
+    |inp_buf_data_26_address0  |  14|          3|   10|         30|
+    |inp_buf_data_26_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_26_we0       |   9|          2|    1|          2|
+    |inp_buf_data_27_address0  |  14|          3|   10|         30|
+    |inp_buf_data_27_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_27_we0       |   9|          2|    1|          2|
+    |inp_buf_data_28_address0  |  14|          3|   10|         30|
+    |inp_buf_data_28_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_28_we0       |   9|          2|    1|          2|
+    |inp_buf_data_29_address0  |  14|          3|   10|         30|
+    |inp_buf_data_29_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_29_we0       |   9|          2|    1|          2|
+    |inp_buf_data_30_address0  |  14|          3|   10|         30|
+    |inp_buf_data_30_ce0       |  14|          3|    1|          3|
+    |inp_buf_data_30_we0       |   9|          2|    1|          2|
+    |inp_buf_data_address0     |  14|          3|   10|         30|
+    |inp_buf_data_ce0          |  14|          3|    1|          3|
+    |inp_buf_data_we0          |   9|          2|    1|          2|
+    |inp_q1_read               |   9|          2|    1|          2|
+    |outp_q2_write             |   9|          2|    1|          2|
+    |ps_id_blk_n               |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 659|        142|  197|        574|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------+---+----+-----+-----------+
+    |                            Name                           | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                  |  5|   0|    5|          0|
+    |ap_done_reg                                                |  1|   0|    1|          0|
+    |ap_sync_reg_grp_gemm_systolic_array_qkv_1_fu_182_ap_done   |  1|   0|    1|          0|
+    |ap_sync_reg_grp_gemm_systolic_array_qkv_1_fu_182_ap_ready  |  1|   0|    1|          0|
+    |grp_Linear_layer_q_1_Pipeline_l_j1_fu_160_ap_start_reg     |  1|   0|    1|          0|
+    |grp_gemm_systolic_array_qkv_1_fu_182_ap_start_reg          |  1|   0|    1|          0|
+    |ps_id_read_reg_263                                         |  5|   0|    5|          0|
+    |shl_ln_reg_268                                             |  5|   0|    9|          4|
+    +-----------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                      | 20|   0|   24|          4|
+    +-----------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  Linear_layer_q.1|  return value|
+|inp_q1_dout             |   in|  128|     ap_fifo|            inp_q1|       pointer|
+|inp_q1_num_data_valid   |   in|    3|     ap_fifo|            inp_q1|       pointer|
+|inp_q1_fifo_cap         |   in|    3|     ap_fifo|            inp_q1|       pointer|
+|inp_q1_empty_n          |   in|    1|     ap_fifo|            inp_q1|       pointer|
+|inp_q1_read             |  out|    1|     ap_fifo|            inp_q1|       pointer|
+|outp_q2_din             |  out|  128|     ap_fifo|           outp_q2|       pointer|
+|outp_q2_num_data_valid  |   in|    3|     ap_fifo|           outp_q2|       pointer|
+|outp_q2_fifo_cap        |   in|    3|     ap_fifo|           outp_q2|       pointer|
+|outp_q2_full_n          |   in|    1|     ap_fifo|           outp_q2|       pointer|
+|outp_q2_write           |  out|    1|     ap_fifo|           outp_q2|       pointer|
+|ps_id_dout              |   in|    5|     ap_fifo|             ps_id|       pointer|
+|ps_id_num_data_valid    |   in|    2|     ap_fifo|             ps_id|       pointer|
+|ps_id_fifo_cap          |   in|    2|     ap_fifo|             ps_id|       pointer|
+|ps_id_empty_n           |   in|    1|     ap_fifo|             ps_id|       pointer|
+|ps_id_read              |  out|    1|     ap_fifo|             ps_id|       pointer|
++------------------------+-----+-----+------------+------------------+--------------+
+
