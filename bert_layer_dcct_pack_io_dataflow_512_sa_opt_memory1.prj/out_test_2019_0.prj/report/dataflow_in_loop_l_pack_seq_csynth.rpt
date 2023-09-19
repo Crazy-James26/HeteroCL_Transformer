@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_l_pack_seq'
+================================================================
+* Date:           Mon Sep 18 11:32:00 2023
+
+* Version:        2019.2.1 (Build 2729669 on Thu Dec 05 05:13:00 MST 2019)
+* Project:        out_test_2019_0.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.431 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-------+-------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline |
+    |   min   |   max   |    min    |    max    |  min  |  max  |   Type   |
+    +---------+---------+-----------+-----------+-------+-------+----------+
+    |    24639|    24639| 82.048 us | 82.048 us |  24613|  24613| dataflow |
+    +---------+---------+-----------+-----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+--------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                       |                    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |        Instance       |       Module       |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +-----------------------+--------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |Linear_layer_ds0_1_U0  |Linear_layer_ds0_1  |    19381|    19381| 64.539 us | 64.539 us |  19381|  19381|   none  |
+        |Gelu_layer_1_U0        |Gelu_layer_1        |    24612|    24612| 81.958 us | 81.958 us |  24612|  24612|   none  |
+        |input_loader_1_U0      |input_loader_1      |      776|      776|  2.584 us |  2.584 us |    776|    776|   none  |
+        |output_writer_1_U0     |output_writer_1     |      770|      770|  2.564 us |  2.564 us |    770|    770|   none  |
+        +-----------------------+--------------------+---------+---------+-----------+-----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |       30|     -|      690|      350|    -|
+|Instance             |      443|   416|   168337|   134032|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|        -|    -|
+|Register             |        -|     -|        -|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |      473|   416|   169027|   134384|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       35|    13|       19|       30|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       11|     4|        6|       10|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+--------------------+---------+-----+--------+--------+-----+
+    |        Instance       |       Module       | BRAM_18K| DSP |   FF   |   LUT  | URAM|
+    +-----------------------+--------------------+---------+-----+--------+--------+-----+
+    |Gelu_layer_1_U0        |Gelu_layer_1        |        8|   64|   20208|   10343|    0|
+    |Linear_layer_ds0_1_U0  |Linear_layer_ds0_1  |      427|  304|  144534|  122115|    0|
+    |input_loader_1_U0      |input_loader_1      |        8|   48|    3548|    1439|    0|
+    |output_writer_1_U0     |output_writer_1     |        0|    0|      47|     135|    0|
+    +-----------------------+--------------------+---------+-----+--------+--------+-----+
+    |Total                  |                    |      443|  416|  168337|  134032|    0|
+    +-----------------------+--------------------+---------+-----+--------+--------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------+---------+-----+----+-----+------+-----+---------+
+    |        Name       | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-------------------+---------+-----+----+-----+------+-----+---------+
+    |ds_channel182_U    |       15|  147|   0|    -|     4|  512|     2048|
+    |inp_channel171_U   |        0|   99|   0|    -|     4|  128|      512|
+    |outp_channel193_U  |       15|  147|   0|    -|     4|  512|     2048|
+    |ps_id_c1_U         |        0|   99|   0|    -|     2|    5|       10|
+    |ps_id_c2_U         |        0|   99|   0|    -|     2|    5|       10|
+    |ps_id_c_U          |        0|   99|   0|    -|     2|    5|       10|
+    +-------------------+---------+-----+----+-----+------+-----+---------+
+    |Total              |       30|  690|   0|    0|    18| 1167|     4638|
+    +-------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +--------------+----------+----+---+----+------------+------------+
+    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+----+---+----+------------+------------+
+    |ap_idle       |    and   |   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+    |Total         |          |   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+-----------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++-----------------+-----+-----+------------+-----------------------------+--------------+
+|inp_V_address0   | out |   15|  ap_memory |            inp_V            |     array    |
+|inp_V_ce0        | out |    1|  ap_memory |            inp_V            |     array    |
+|inp_V_d0         | out |  512|  ap_memory |            inp_V            |     array    |
+|inp_V_q0         |  in |  512|  ap_memory |            inp_V            |     array    |
+|inp_V_we0        | out |    1|  ap_memory |            inp_V            |     array    |
+|inp_V_address1   | out |   15|  ap_memory |            inp_V            |     array    |
+|inp_V_ce1        | out |    1|  ap_memory |            inp_V            |     array    |
+|inp_V_d1         | out |  512|  ap_memory |            inp_V            |     array    |
+|inp_V_q1         |  in |  512|  ap_memory |            inp_V            |     array    |
+|inp_V_we1        | out |    1|  ap_memory |            inp_V            |     array    |
+|ps_id            |  in |    6|   ap_none  |            ps_id            |    scalar    |
+|ps_id_ap_vld     |  in |    1|   ap_none  |            ps_id            |    scalar    |
+|outp_V_address0  | out |   15|  ap_memory |            outp_V           |     array    |
+|outp_V_ce0       | out |    1|  ap_memory |            outp_V           |     array    |
+|outp_V_d0        | out |  512|  ap_memory |            outp_V           |     array    |
+|outp_V_q0        |  in |  512|  ap_memory |            outp_V           |     array    |
+|outp_V_we0       | out |    1|  ap_memory |            outp_V           |     array    |
+|outp_V_address1  | out |   15|  ap_memory |            outp_V           |     array    |
+|outp_V_ce1       | out |    1|  ap_memory |            outp_V           |     array    |
+|outp_V_d1        | out |  512|  ap_memory |            outp_V           |     array    |
+|outp_V_q1        |  in |  512|  ap_memory |            outp_V           |     array    |
+|outp_V_we1       | out |    1|  ap_memory |            outp_V           |     array    |
+|ap_clk           |  in |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
+|ap_start         |  in |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
+|ap_done          | out |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
+|ap_ready         | out |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
+|ap_idle          | out |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
+|ap_continue      |  in |    1| ap_ctrl_hs | dataflow_in_loop_l_pack_seq | return value |
++-----------------+-----+-----+------------+-----------------------------+--------------+
+

@@ -7,7 +7,7 @@
 # @brief: A Tcl script for synthesizing the design.
 
 # Project name
-set hls_prj out.prj
+set hls_prj out_2019.prj
 
 # Open/reset the project
 open_project ${hls_prj} -reset

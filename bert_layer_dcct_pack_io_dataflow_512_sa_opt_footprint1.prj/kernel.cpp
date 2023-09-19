@@ -556,20 +556,21 @@ void Bert_layer_dataflow_region_1(
   io_pack_int8 K[pack_seq_num][inp_len],
   io_pack_int8 V[seq_num][pack_inp_len]
 ){
+  hls::stream<io_pack_int8> inp_k;
+  #pragma HLS STREAM variable=inp_k depth=4
+  hls::stream<io_pack_int8> inp_v;
+  #pragma HLS STREAM variable=inp_v depth=4
+  hls::stream<io_pack_int8> outp_k;
+  #pragma HLS STREAM variable=outp_k depth=4
+  hls::stream<io_pack_int8> outp_v;
+  #pragma HLS STREAM variable=outp_v depth=4
+
   l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
   #pragma HLS DATAFLOW
     int ps_offset = ps_id * inp_num;
-    hls::stream<io_pack_int8> inp_k;
-    #pragma HLS STREAM variable=inp_k depth=4
-    hls::stream<io_pack_int8> inp_v;
-    #pragma HLS STREAM variable=inp_v depth=4
     input_loader_kv(inp, buf17, inp_k, inp_v, ps_id, ps_offset);	// L457
-    hls::stream<io_pack_int8> outp_k;
-    #pragma HLS STREAM variable=outp_k depth=4
     Linear_layer_k(inp_k, buf1, buf2, buf18, outp_k, ps_offset);	// L458
     K_writer(outp_k, K, ps_id);
-    hls::stream<io_pack_int8> outp_v;
-    #pragma HLS STREAM variable=outp_v depth=4
     Linear_layer_v(inp_v, buf3, buf4, buf19, outp_v, ps_offset);	// L459
     V_writer(outp_v, V, ps_offset);
   }
@@ -583,14 +584,15 @@ void Bert_layer_dataflow_region_2_1(
   hls::stream<io_pack_int8>& outp_sfa,
   hls::stream<io_pack_float>& inp_res0
 ){
+  hls::stream<io_pack_int8> inp_q;
+  #pragma HLS STREAM variable=inp_q depth=4
+  hls::stream<io_pack_int8> outp_q;
+  #pragma HLS STREAM variable=outp_q depth=4
+
   l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
   #pragma HLS DATAFLOW
     int ps_offset = ps_id * inp_num;
-    hls::stream<io_pack_int8> inp_q;
-    #pragma HLS STREAM variable=inp_q depth=4
     input_loader_q_res0(inp, buf17, inp_res0, inp_q, ps_id, ps_offset);
-    hls::stream<io_pack_int8> outp_q;
-    #pragma HLS STREAM variable=outp_q depth=4
     Linear_layer_q(inp_q, buf5, buf6, buf20, outp_q, ps_offset);	// L460
     Self_attention(outp_q, K, V, buf21, buf22, buf23, outp_sfa, ps_offset);	// L461
   }
@@ -602,37 +604,38 @@ void Bert_layer_dataflow_region_2_2(
   hls::stream<io_pack_float>& inp_res0,
   io_pack_float outp[pack_seq_num][inp_len]
 ){
+  hls::stream<io_pack_float> outp_ds0;
+  #pragma HLS STREAM variable=outp_ds0 depth=4
+  hls::stream<io_pack_float> outp_res0;
+  #pragma HLS STREAM variable=outp_res0 depth=4
+  hls::stream<io_pack_float> outp_ln0;
+  #pragma HLS STREAM variable=outp_ln0 depth=4
+  hls::stream<io_pack_float> inp_res1;
+  #pragma HLS STREAM variable=inp_res1 depth=768
+  hls::stream<io_pack_int8> inp_ds1;
+  #pragma HLS STREAM variable=inp_ds1 depth=4
+  hls::stream<io_pack_float> outp_ds1;
+  #pragma HLS STREAM variable=outp_ds1 depth=4
+  hls::stream<io_pack_int8> outp_gelu;
+  #pragma HLS STREAM variable=outp_gelu depth=4
+  hls::stream<io_pack_float> outp_ds2;
+  #pragma HLS STREAM variable=outp_ds2 depth=4
+  hls::stream<io_pack_float> outp_res1;
+  #pragma HLS STREAM variable=outp_res1 depth=4
+  hls::stream<io_pack_float> outp_ln1;
+  #pragma HLS STREAM variable=outp_ln1 depth=4
+
   l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
   #pragma HLS DATAFLOW
     int ps_offset = ps_id * inp_num;
-    hls::stream<io_pack_float> outp_ds0;
-    #pragma HLS STREAM variable=outp_ds0 depth=4
     Linear_layer_ds0(outp_sfa, buf7, buf8, buf24, outp_ds0, ps_offset);	// L462
-    hls::stream<io_pack_float> outp_res0;
-    #pragma HLS STREAM variable=outp_res0 depth=4
     Res_layer0(outp_ds0, inp_res0, outp_res0);	// L463
-    hls::stream<io_pack_float> outp_ln0;
-    #pragma HLS STREAM variable=outp_ln0 depth=4
     Layer_norm0(outp_res0, buf13, buf14, outp_ln0);	// L464
-    hls::stream<io_pack_float> inp_res1;
-    #pragma HLS STREAM variable=inp_res1 depth=768
-    hls::stream<io_pack_int8> inp_ds1;
-    #pragma HLS STREAM variable=inp_ds1 depth=4
     input_loader_ds1_res1(outp_ln0, buf25, inp_res1, inp_ds1, ps_offset);
-    hls::stream<io_pack_float> outp_ds1;
-    #pragma HLS STREAM variable=outp_ds1 depth=4
     Linear_layer_ds1(inp_ds1, buf9, buf10, buf26, outp_ds1, ps_offset);	// L466
-    hls::stream<io_pack_int8> outp_gelu;
-    #pragma HLS STREAM variable=outp_gelu depth=4
     Gelu_layer(outp_ds1, buf27, outp_gelu, ps_offset);	// L467
-    hls::stream<io_pack_float> outp_ds2;
-    #pragma HLS STREAM variable=outp_ds2 depth=4
     Linear_layer_ds2(outp_gelu, buf11, buf12, buf28, outp_ds2, ps_offset);	// L468
-    hls::stream<io_pack_float> outp_res1;
-    #pragma HLS STREAM variable=outp_res1 depth=4
     Res_layer1(outp_ds2, inp_res1, outp_res1);	// L469
-    hls::stream<io_pack_float> outp_ln1;
-    #pragma HLS STREAM variable=outp_ln1 depth=4
     Layer_norm1(outp_res1, buf15, buf16, outp_ln1);	// L470
     output_writer(outp_ln1, outp, ps_id);
   }
