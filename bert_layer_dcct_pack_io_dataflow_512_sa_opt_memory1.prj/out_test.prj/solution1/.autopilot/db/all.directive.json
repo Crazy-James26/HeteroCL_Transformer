@@ -1,0 +1,50 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "Bert_layer",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/jz2292\/project\/transformer\/heterocl_file\/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj\/run.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "Bert_layer"
+              }]
+          }
+        },
+        {
+          "functionName": "Bert_layer",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/jz2292\/project\/transformer\/heterocl_file\/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj\/run.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "Bert_layer"
+              }]
+          }
+        },
+        {
+          "functionName": "Bert_layer",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "\/home\/jz2292\/project\/transformer\/heterocl_file\/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj\/run.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "Bert_layer"
+              }]
+          }
+        }
+      ]
+    }]}

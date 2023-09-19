@@ -17,6 +17,14 @@ void gemm_systolic_array_ds0(
 	hls::stream<io_pack_int48> block_C_drainer;
 	#pragma HLS STREAM variable=block_C_drainer depth=4
 
+	float s_temp[inp_num];
+	#pragma HLS array_partition variable=s_temp complete
+	init_s: for (int i = 0; i < block_size; i++) {
+	#pragma HLS PIPELINE II=1
+		s_temp[i] = s[pack_seq_offset + i];
+	}
+
+
 	block_gemm:
 	for(int jj = 0; jj < pack2_inp_len; jj++){
 	#pragma HLS LOOP_FLATTEN
@@ -42,8 +50,8 @@ void gemm_systolic_array_ds0(
 				int24_t outp1_dp = outp_temp.range(23, 0) + int24_t(bias[(jj * block_size + j) * 2 + 1]);
 				converter_t outp0;
 				converter_t outp1;
-				outp0.f = outp0_dp * s[pack_seq_offset + i];
-				outp1.f = outp1_dp * s[pack_seq_offset + i];
+				outp0.f = outp0_dp * s_temp[i];
+				outp1.f = outp1_dp * s_temp[i];
 				outp_data_pack_0.range(i*32 + 31, i*32) = outp0.i;
 				outp_data_pack_1.range(i*32 + 31, i*32) = outp1.i;
 			}

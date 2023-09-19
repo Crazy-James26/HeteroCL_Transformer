@@ -1,0 +1,226 @@
+INFO-FLOW: Workspace /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1 opened at Mon Sep 18 21:59:04 EDT 2023
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+Execute       config_interface -m_axi_latency=0 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute     set_top Bert_layer 
+INFO: [HLS 200-1510] Running: set_top Bert_layer 
+Execute     add_files kernel.h 
+INFO: [HLS 200-1510] Running: add_files kernel.h 
+INFO: [HLS 200-10] Adding design file 'kernel.h' to the project
+Execute     add_files kernel_test.cpp 
+INFO: [HLS 200-1510] Running: add_files kernel_test.cpp 
+INFO: [HLS 200-10] Adding design file 'kernel_test.cpp' to the project
+Execute     add_files gemm_systolic_array.cpp 
+INFO: [HLS 200-1510] Running: add_files gemm_systolic_array.cpp 
+INFO: [HLS 200-10] Adding design file 'gemm_systolic_array.cpp' to the project
+Execute     add_files systolic_array.cpp 
+INFO: [HLS 200-1510] Running: add_files systolic_array.cpp 
+INFO: [HLS 200-10] Adding design file 'systolic_array.cpp' to the project
+Execute     add_files -tb host.cpp -cflags -std=gnu++0x 
+INFO: [HLS 200-1510] Running: add_files -tb host.cpp -cflags -std=gnu++0x 
+INFO: [HLS 200-10] Adding test bench file 'host.cpp' to the project
+Execute     open_solution solution1 
+INFO: [HLS 200-1510] Running: open_solution solution1 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1 opened at Mon Sep 18 21:59:04 EDT 2023
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute       send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=0 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+Execute       config_interface -m_axi_latency=0 
+Execute     set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /opt/xilinx/2022.1/Vitis_HLS/2022.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/xilinx/2022.1/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command       create_platform done; 4.93 sec.
+Execute       source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 5.07 sec.
+Execute     create_clock -period 3.33 
+INFO: [HLS 200-1510] Running: create_clock -period 3.33 
+Execute       ap_set_clock -name default -period 3.33 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.33ns.
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -hw_syn 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-10] Analyzing design file 'systolic_array.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling systolic_array.cpp as C++
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang systolic_array.cpp -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.cpp.clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.cpp.clang.err.log 
+Command         ap_eval done; 0.25 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute         set_directive_top Bert_layer -name=Bert_layer 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 2.89 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.97 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.76 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 3.04 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 5.8 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 5.52 sec.
+Execute           source /opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 5.93 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 2.89 sec.
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (systolic_array.cpp:42:9)
+WARNING: [HLS 214-169] There are a total of 5 such instances of non-canonical statements in the dataflow region (systolic_array.cpp:42:9)
+Execute         send_msg_by_id WARNING @200-471@%s%s 2 systolic_array.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file systolic_array.cpp
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.bc -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/systolic_array.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 2.81 sec.
+INFO: [HLS 200-10] Analyzing design file 'gemm_systolic_array.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling gemm_systolic_array.cpp as C++
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang gemm_systolic_array.cpp -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.cpp.clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.cpp.clang.err.log 
+Command         ap_eval done; 0.17 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute         set_directive_top Bert_layer -name=Bert_layer 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 2.73 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.86 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.74 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.76 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 5.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 5.33 sec.
+Command         clang_tidy done; 5.7 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 2.69 sec.
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (gemm_systolic_array.cpp:32:24)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (gemm_systolic_array.cpp:32:40)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (gemm_systolic_array.cpp:32:56)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (gemm_systolic_array.cpp:23:9)
+Execute         send_msg_by_id WARNING @200-471@%s%s 4 gemm_systolic_array.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file gemm_systolic_array.cpp
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.bc -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/gemm_systolic_array.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 2.88 sec.
+INFO: [HLS 200-10] Analyzing design file 'kernel_test.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling kernel_test.cpp as C++
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang kernel_test.cpp -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/xilinx/2022.1/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.cpp.clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.cpp.clang.err.log 
+Command         ap_eval done; 0.3 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute         set_directive_top Bert_layer -name=Bert_layer 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 76.79 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 76.78 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 86.22 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 76.4 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 162.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 93.65 sec.
+Command         clang_tidy done; 94.04 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 75.22 sec.
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:145:18)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:145:23)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:145:30)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:146:22)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:146:35)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:146:41)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:146:47)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:146:54)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:147:16)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:147:28)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:147:35)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:148:19)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (kernel_test.cpp:148:33)
+Execute         send_msg_by_id WARNING @200-471@%s%s 13 kernel_test.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 13 issue(s) in file kernel_test.cpp
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/xilinx/2022.1/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.bc -hls-platform-db-name=/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.clang.out.log 2> /home/jz2292/project/transformer/heterocl_file/bert_layer_dcct_pack_io_dataflow_512_sa_opt_memory1.prj/out_test.prj/solution1/.autopilot/db/kernel_test.pp.0.cpp.clang.err.log 
